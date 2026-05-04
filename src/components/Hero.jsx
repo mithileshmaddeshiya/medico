@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="pt-24 md:pt-20 bg-gradient-to-b from-green-50 to-white">
+    <section className="pt-24 md:pt-30 bg-gradient-to-b from-green-50 to-white">
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
@@ -13,31 +13,33 @@ export default function Hero() {
         <div className="order-2 md:order-1 text-center md:text-left">
 
           {/* Mobile Card Wrapper */}
-          <div className="bg-green-50 md:bg-transparent p-5 md:p-0 rounded-2xl md:rounded-none shadow-sm md:shadow-none">
+          <div className="md:bg-transparent p-5 md:p-0 rounded-2xl md:rounded-none ">
 
             {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Ghar baithe medicine delivery
-              <span className="text-green-600"> Deoria me</span>
+            <h1 className="text-2xl sm:text-4xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Medicine ghar par mangao
+              <span className="block text-green-600"> Deoria me</span>
             </h1>
 
             {/* Description */}
-            <p className="hidden md:block mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Fast, trusted aur same-day medicine delivery in Deoria.
-              WhatsApp par order kare aur apni medicines ghar par paye.
+            <p className="mt-3 text-base sm:text-lg text-gray-600 leading-relaxed">
+              Bas WhatsApp par apni medicine bhejein aur ghar baithe delivery paayein.
+              Fast service, trusted pharmacy.
             </p>
 
             {/* TRUST POINTS */}
-            <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+            <div className="mt-5 flex justify-center md:justify-start gap-3 sm:gap-4">
 
-              <div className="flex items-center gap-2 bg-white md:bg-transparent px-3 py-1.5 rounded-md shadow-sm md:shadow-none text-sm text-gray-700">
+              {/* Delivery */}
+              <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full text-sm font-medium text-green-700 shadow-sm hover:shadow-md transition">
                 <Truck className="w-4 h-4 text-green-600" />
-                <span>Same Day Delivery</span>
+                <span>Fast Delivery</span>
               </div>
 
-              <div className="flex items-center gap-2 bg-white md:bg-transparent px-3 py-1.5 rounded-md shadow-sm md:shadow-none text-sm text-gray-700">
-                <CheckCircle className="w-4 h-4 text-green-600" />
-                <span>Trusted Pharmacy</span>
+              {/* Trusted */}
+              <div className="flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full text-sm font-medium text-blue-700 shadow-sm hover:shadow-md transition">
+                <CheckCircle className="w-4 h-4 text-blue-600" />
+                <span>Trusted Store</span>
               </div>
 
             </div>
@@ -66,7 +68,7 @@ export default function Hero() {
           {/* Image */}
           <div className="relative w-52 sm:w-64 md:w-full max-w-xs sm:max-w-sm md:max-w-md">
             <Image
-              src="/heroimage/medihero.png"
+              src="/heroimage/rmimg.png"
               alt="Medicine Delivery Deoria"
               width={400}
               height={400}
