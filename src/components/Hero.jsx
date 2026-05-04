@@ -58,10 +58,10 @@ export default function Hero() {
           <div className="absolute w-40 h-40 md:w-72 md:h-72 bg-green-100 rounded-full blur-3xl opacity-50"></div>
 
           {/* Image */}
-          <div className="relative w-52 sm:w-64 md:w-full max-w-xs sm:max-w-sm md:max-w-md">
+          <div className="relative w-52 sm:w-64 md:w-full max-w-xs sm:max-w-sm md:max-w-md ">
             <Image
               src="/heroimage/medihero.png"
-              alt="Medicine Delivery"
+              alt="Medicine Delivery deoria"
               width={400}
               height={400}
               className="w-full h-auto object-contain"
