@@ -8,6 +8,7 @@ export default function HowItWorks() {
       icon: <Upload className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
       title: "Send Prescription",
       desc: "Medicine name ya prescription WhatsApp par bhejein",
+      link: "https://wa.me/917303995446?text=Hello%20I%20want%20to%20order%20medicine",
     },
     {
       icon: <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
@@ -25,7 +26,6 @@ export default function HowItWorks() {
     <section className="py-5 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
-        {/* Heading */}
         <h2 className="text-xl md:text-3xl font-bold text-gray-900 leading-snug">
           How MedicoBharat Works in Deoria
         </h2>
@@ -34,27 +34,33 @@ export default function HowItWorks() {
           Medicine order karna ab aur bhi easy hai — bas 3 simple steps me ghar baithe delivery paayein.
         </p>
 
-        {/* Steps */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-8 md:mt-10">
 
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="bg-green-50 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition duration-300 hover:scale-[1.02]"
-            >
-              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mx-auto bg-white rounded-full shadow mb-3 md:mb-4">
-                {step.icon}
+          {steps.map((step, index) => {
+            const Card = (
+              <div className="bg-green-50 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition duration-300 hover:scale-[1.02] cursor-pointer">
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mx-auto bg-white rounded-full shadow mb-3 md:mb-4">
+                  {step.icon}
+                </div>
+
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base">
+                  {step.title}
+                </h3>
+
+                <p className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
+                  {step.desc}
+                </p>
               </div>
+            );
 
-              <h3 className="font-semibold text-gray-900 text-sm md:text-base">
-                {step.title}
-              </h3>
-
-              <p className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
-                {step.desc}
-              </p>
-            </div>
-          ))}
+            return step.link ? (
+              <a key={index} href={step.link} target="_blank" rel="noopener noreferrer">
+                {Card}
+              </a>
+            ) : (
+              <div key={index}>{Card}</div>
+            );
+          })}
 
         </div>
 

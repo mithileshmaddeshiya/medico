@@ -2,7 +2,7 @@
 
 export default function FinalCTA() {
   return (
-    <section className="py-10 bg-gradient-to-b from-green-20 to-green-100 text-center">
+    <section className="py-10 bg-gradient-to-b from-green-20 to-green-50 text-center">
 
       <div className="max-w-5xl mx-auto px-6">
 

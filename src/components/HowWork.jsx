@@ -53,16 +53,23 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          {/* Support */}
-          <div className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
-            <PhoneCall className="w-8 h-8 text-green-600 mx-auto" />
-            <h3 className="mt-3 font-semibold text-gray-900 text-sm md:text-base">
-              Easy Ordering
-            </h3>
-            <p className="mt-1 text-xs text-gray-600">
-              WhatsApp support
-            </p>
-          </div>
+          <a
+            href="https://wa.me/917303995446"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition cursor-pointer">
+              <PhoneCall className="w-8 h-8 text-green-600 mx-auto" />
+
+              <h3 className="mt-3 font-semibold text-gray-900 text-sm md:text-base">
+                Easy Ordering
+              </h3>
+
+              <p className="mt-1 text-xs text-gray-600">
+                WhatsApp: +91 7303995446
+              </p>
+            </div>
+          </a>
 
         </div>
 
