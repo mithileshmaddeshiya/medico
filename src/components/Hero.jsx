@@ -28,17 +28,25 @@ export default function Hero() {
             </p>
 
             {/* TRUST POINTS */}
-            <div className="mt-5 flex justify-center md:justify-start gap-3 sm:gap-4">
+            <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3">
 
               {/* Delivery */}
-              <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full text-sm font-medium text-green-700 shadow-sm hover:shadow-md transition">
-                <Truck className="w-4 h-4 text-green-600" />
+              <div className="flex items-center gap-1.5 bg-green-50 border border-green-200 
+  px-3 py-1.5 sm:px-4 sm:py-2 rounded-full 
+  text-[11px] sm:text-sm font-medium text-green-700 
+  shadow-sm hover:shadow-md transition">
+
+                <Truck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600" />
                 <span>Fast Delivery</span>
               </div>
 
               {/* Trusted */}
-              <div className="flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full text-sm font-medium text-blue-700 shadow-sm hover:shadow-md transition">
-                <CheckCircle className="w-4 h-4 text-blue-600" />
+              <div className="flex items-center gap-1.5 bg-blue-50 border border-blue-200 
+  px-3 py-1.5 sm:px-4 sm:py-2 rounded-full 
+  text-[11px] sm:text-sm font-medium text-blue-700 
+  shadow-sm hover:shadow-md transition">
+
+                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
                 <span>Trusted Store</span>
               </div>
 

@@ -12,25 +12,25 @@ const reviews = [
     name: "Ravi Kumar",
     role: "Verified Customer • Deoria",
     text: "Bahut fast service thi. Maine subah order kiya aur 2–3 ghante me medicine mil gayi. Packaging bhi achhi thi aur medicines genuine thi.",
-    img: "/user1.jpg",
+    img: "/user/rohit.webp",
   },
   {
     name: "Pooja Singh",
     role: "Verified Customer • Deoria",
     text: "WhatsApp se order karna bahut easy tha. Prescription bhejne ke baad turant response mila. Service reliable lagi.",
-    img: "/user2.jpg",
+    img: "/user/priya.webp",
   },
   {
     name: "Amit Verma",
     role: "Verified Customer • Deoria",
     text: "Emergency me order kiya tha aur same-day delivery mil gayi. Local service hone ki wajah se kaafi fast hai.",
-    img: "/user3.jpg",
+    img: "/user/amitsingh.webp",
   },
   {
     name: "Neha Gupta",
     role: "Verified Customer • Deoria",
     text: "Medicobharat se pehli baar order kiya aur experience kaafi smooth raha. Future me bhi use karungi.",
-    img: "/user4.jpg",
+    img: "/user/neha1.webp",
   },
 ]
 

@@ -1,6 +1,7 @@
 'use client'
 
 import { Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -10,13 +11,17 @@ export default function Footer() {
 
         {/* BRAND */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900">
-            Medicobharat
-          </h3>
+          <Image
+            src="/navbar/navbg.png"
+            alt="MedicoBharat Logo"
+            width={140}
+            height={40}
+            className="object-contain"
+          />
 
-          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+          <p className="mt-3 text-[16px] text-gray-600 leading-relaxed">
             Trusted medicine delivery service in Deoria.
-            Order easily via WhatsApp and get medicines delivered to your home.
+            Order easily via WhatsApp and get medicines delivered to your doorstep.
           </p>
         </div>
 
@@ -43,12 +48,12 @@ export default function Footer() {
 
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-green-600" />
-              <span>+91 73039 95446</span>
+              <span>+91 6392108234</span>
             </div>
 
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-green-600" />
-              <span>mithileshmaddeshiya3@gmail.com</span>
+              <span>mithileshmaddeshiya123@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-2">

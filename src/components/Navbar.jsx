@@ -12,7 +12,7 @@ export default function Navbar() {
                 {/* LOGO */}
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/navbar/navlogo.png"
+                        src="/navbar/navbg.png"
                         alt="Medicobharat Logo"
                         width={180}
                         height={80}
