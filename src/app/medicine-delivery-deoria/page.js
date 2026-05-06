@@ -91,6 +91,20 @@ export async function generateMetadata() {
 const page = () => {
   return (
     <div className='pt-25'>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Pharmacy",
+            name: "MedicoBharat",
+            url: "https://www.medicobharat.com/deoria",
+            areaServed: "Deoria",
+            description:
+              "Online medicine delivery service in Deoria",
+          }),
+        }}
+      />
       <StatBanner />
       <HowItWorks />
       <HeroImage />
