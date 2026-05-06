@@ -39,7 +39,7 @@ export default function CityHero() {
           </span>
 
           {/* Heading */}
-          <h1 className="text-md md:text-3xl font-bold leading-tight max-w-xs md:max-w-xl">
+          <h2 className="text-md md:text-3xl font-bold leading-tight max-w-xs md:max-w-xl">
             {/* Mobile text */}
             <span className="block md:hidden">
               Ghar Baithe Medicine 💊 <br /> 30–60 Min Delivery
@@ -49,7 +49,7 @@ export default function CityHero() {
             <span className="hidden md:block">
               Fast & Trusted Medicine <br /> Delivery in Deoria 💊
             </span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="mt-2 text-xs md:text-base text-gray-200 max-w-xs md:max-w-md">

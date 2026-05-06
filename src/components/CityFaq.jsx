@@ -1,79 +1,155 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
-export default function FAQDeoria() {
-    const [openIndex, setOpenIndex] = useState(null);
+export default function DeoriaFAQSection() {
+  const [openIndex, setOpenIndex] = useState(null);
 
-    const faqs = [
-        {
-            q: "Kya MedicoBharat Deoria me medicine delivery karta hai?",
-            a: "Haan, MedicoBharat Deoria me fast medicine delivery provide karta hai. Aap WhatsApp par order bhej kar 30–60 minutes me delivery paa sakte hain.",
-        },
-        {
-            q: "Deoria me delivery kitne time me milti hai?",
-            a: "Usually 30–60 minutes ke andar aapke ghar tak medicine deliver kar di jati hai, location aur availability par depend karta hai.",
-        },
-        {
-            q: "Kya prescription dena zaruri hai?",
-            a: "Haan, kuch medicines ke liye valid prescription zaruri hota hai. Aap WhatsApp par apna prescription upload kar sakte hain.",
-        },
-        {
-            q: "Payment kaise kar sakte hain?",
-            a: "Aap UPI, cash on delivery (COD) ya online payment ke through payment kar sakte hain.",
-        },
-        {
-            q: "Kya MedicoBharat original medicines deta hai?",
-            a: "Haan, hum sirf verified pharmacies se original aur genuine medicines deliver karte hain.",
-        },
-        {
-            q: "Kaun kaun si medicines Deoria me available hain?",
-            a: "Fever, diabetes, BP, pain relief aur prescription medicines sab available hain, availability stock par depend karti hai.",
-        },
-    ];
+  const faqs = [
+    {
+      question:
+        "Deoria me online medicine delivery kitne time me hoti hai?",
+      answer:
+        "MedicoBharat Deoria me fast medicine delivery service provide karta hai. City areas aur nearby locations me quick doorstep delivery support available hota hai.",
+    },
+    {
+      question:
+        "Kya MedicoBharat genuine medicines provide karta hai?",
+      answer:
+        "Haan, MedicoBharat trusted pharmacy partners aur verified suppliers ke through genuine medicines aur healthcare products provide karta hai.",
+    },
+    {
+      question:
+        "Kya prescription medicines order karne ke liye prescription zaroori hai?",
+      answer:
+        "Haan, prescription medicines order karne ke liye valid doctor prescription upload karna zaroori hota hai.",
+    },
+    {
+      question:
+        "Kya Deoria ke nearby villages me bhi medicine delivery available hai?",
+      answer:
+        "Haan, MedicoBharat Deoria city ke saath nearby towns aur villages me bhi medicine delivery support provide karta hai.",
+    },
+    {
+      question:
+        "Deoria me best online pharmacy kaunsi hai?",
+      answer:
+        "MedicoBharat Deoria me trusted online pharmacy services provide karta hai jahan users medicines, healthcare products aur wellness essentials online order kar sakte hain.",
+    },
+    {
+      question:
+        "Kya online medicine order karna safe hai?",
+      answer:
+        "Haan, MedicoBharat verified pharmacy partners ke through safe aur trusted medicine ordering experience provide karta hai.",
+    },
+  ];
 
-    return (
-        <section className="pt-5 bg-white">
-            <div className="max-w-4xl mx-auto px-6">
+  return (
+    <>
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
 
-                <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
-                    Frequently Asked Questions
-                </h2>
+      {/* FAQ Section */}
+<section className="w-full bg-gradient-to-b from-white via-green-50/20 to-white py-5 md:py-1">
+  <div className="max-w-4xl mx-auto px-4 sm:px-5">
 
-                <div className="mt-10 space-y-4">
+    {/* Heading */}
+    <div className="text-center mb-7 sm:mb-9">
+      <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+        ❓ FAQ - MedicoBharat Deoria
+      </span>
 
-                    {faqs.map((item, index) => (
-                        <div
-                            key={index}
-                            className="border border-gray-200 rounded-lg"
-                        >
-                            <button
-                                onClick={() =>
-                                    setOpenIndex(openIndex === index ? null : index)
-                                }
-                                className="w-full flex items-center justify-between px-4 py-3 text-left"
-                            >
-                                <span className="font-medium text-gray-800">
-                                    {item.q}
-                                </span>
-                                <ChevronDown
-                                    className={`w-5 h-5 transition ${openIndex === index ? "rotate-180" : ""
-                                        }`}
-                                />
-                            </button>
+      <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+        Frequently Asked Questions
+      </h2>
 
-                            {openIndex === index && (
-                                <p className="px-4 pb-4 text-sm text-gray-600">
-                                    {item.a}
-                                </p>
-                            )}
-                        </div>
-                    ))}
+      <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+        Common questions related to online medicine delivery in Deoria.
+      </p>
+    </div>
 
+    {/* FAQ Items */}
+    <div className="space-y-3">
+
+      {faqs.map((faq, index) => {
+        const isOpen = openIndex === index;
+
+        return (
+          <div
+            key={index}
+            className="bg-white border border-green-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+          >
+
+            {/* Question */}
+            <button
+              onClick={() =>
+                setOpenIndex(isOpen ? null : index)
+              }
+              className="w-full flex items-center justify-between gap-3 text-left px-4 sm:px-5 py-4"
+            >
+
+              <div className="flex items-start gap-3">
+
+                {/* Icon */}
+                <div className="min-w-[30px] h-[30px] rounded-lg bg-green-100 text-green-700 flex items-center justify-center font-bold text-sm">
+                  ?
                 </div>
 
+                {/* Question Text */}
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 leading-snug">
+                  {faq.question}
+                </h3>
+              </div>
+
+              {/* Arrow */}
+              <ChevronDown
+                className={`min-w-[18px] text-green-700 transition-transform duration-300 ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {/* Answer */}
+            <div
+              className={`grid transition-all duration-300 ease-in-out ${
+                isOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 sm:px-5 pb-4 pl-[48px]">
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
             </div>
-        </section>
-    );
+          </div>
+        );
+      })}
+
+    </div>
+  </div>
+</section>
+
+    </>
+  );
 }

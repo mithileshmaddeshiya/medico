@@ -15,16 +15,15 @@ export default function StatBanner() {
                         className="w-full h-full object-cover"
                     />
 
-
                     {/* Dark Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/10 to-transparent rounded-xl"></div>
 
                     {/* Text Content */}
                     <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-10 text-white">
 
-                        <h2 className="text-xl md:text-3xl font-bold drop-shadow-lg">
+                        <h1 className="text-xl md:text-3xl font-bold drop-shadow-lg">
                             Deoria mein 500+ <br />logon ka trusted choice
-                        </h2>
+                        </h1>
 
                         <p className="text-sm md:text-base mt-2 text-green-200 font-medium drop-shadow-md">
                             Fast Delivery • Genuine Medicines • Reliable Service
