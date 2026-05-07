@@ -69,7 +69,7 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Medicobharat. All rights reserved.
+        © {new Date().getFullYear()} Medicobharat | All rights reserved .
       </div>
 
     </footer>
