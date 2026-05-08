@@ -36,7 +36,7 @@ export default function DeoriaLongSEOContent() {
             in Deoria
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+          <p className="hidden md:block mt-5 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
             MedicoBharat provides fast, trusted and reliable online medicine
             delivery services in Deoria with genuine medicines, healthcare
             products and quick doorstep delivery support.
@@ -99,11 +99,10 @@ export default function DeoriaLongSEOContent() {
 
         {/* Expanded Content */}
         <div
-          className={`transition-all duration-700 ease-in-out overflow-hidden ${
-            showMore
+          className={`transition-all duration-700 ease-in-out overflow-hidden ${showMore
               ? "max-h-[10000px] opacity-100 mt-8 sm:mt-10"
               : "max-h-0 opacity-0"
-          }`}
+            }`}
         >
 
           {/* Section Grid */}
@@ -225,9 +224,14 @@ export default function DeoriaLongSEOContent() {
                 fast medicine delivery services.
               </p>
 
-              <button className="bg-white text-green-700 hover:bg-green-50 transition-all duration-300 font-semibold px-7 py-3.5 rounded-2xl shadow-lg text-sm sm:text-base">
+              <a
+                href="https://wa.me/917303995446"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-green-700 hover:bg-green-50 transition-all duration-300 font-semibold px-7 py-3.5 rounded-2xl shadow-lg text-sm sm:text-base"
+              >
                 Order Medicines Now
-              </button>
+              </a>
             </div>
           </div>
 

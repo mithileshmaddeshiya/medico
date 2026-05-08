@@ -50,7 +50,7 @@ export default function Reviews() {
         </p>
 
         {/* Swiper */}
-        <div className="mt-10">
+        <div >
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={20}

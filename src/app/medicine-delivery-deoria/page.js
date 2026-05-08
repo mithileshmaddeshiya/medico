@@ -13,10 +13,10 @@ import React from 'react'
 export async function generateMetadata() {
   return {
     title:
-      "Online Medicine Delivery in Deoria | Fast Home Delivery - MedicoBharat",
+      "Online Medicine Delivery in Deoria | 24x7 Pharmacy - MedicoBharat",
 
     description:
-      "Order genuine medicines online in Deoria with fast home delivery. MedicoBharat provides trusted pharmacy services, prescription medicines, healthcare products, and 24x7 medicine delivery in Deoria.",
+      "Order genuine medicines online in Deoria with fast home delivery. MedicoBharat offers 24x7 online pharmacy services, prescription medicines, healthcare products, and doorstep medicine delivery in Deoria.",
 
     keywords: [
       "Online Medicine Delivery in Deoria",
@@ -90,18 +90,23 @@ export async function generateMetadata() {
 
 const page = () => {
   return (
-    <div className='pt-25'>
+    <div className='pt-20'>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Pharmacy",
-            name: "MedicoBharat",
-            url: "https://www.medicobharat.com/deoria",
-            areaServed: "Deoria",
-            description:
-              "Online medicine delivery service in Deoria",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How fast is medicine delivery in Deoria?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most orders are delivered within 30-60 minutes depending on location.",
+                },
+              },
+            ],
           }),
         }}
       />
