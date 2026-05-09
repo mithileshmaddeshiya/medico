@@ -10,16 +10,16 @@ import {
 
 export default function DeoriaHeroSection() {
     return (
-        <section className="relative overflow-hidden bg-white py-4 sm:py-8 lg:py-12">
+        <section className="relative overflow-hidden bg-white py-6 sm:py-8 lg:py-12">
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
 
                 {/* HERO CONTAINER */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative overflow-hidden rounded-[20px] sm:rounded-[32px] lg:rounded-[42px] h-screen min-h-[100vh] sm:min-h-[700px] lg:h-[100vh] shadow-2xl flex items-center"
+                    className="relative overflow-hidden rounded-[20px] sm:rounded-[32px] lg:rounded-[42px] h-screen min-h-[100vh] sm:min-h-[700px] lg:h-[100vh]  flex items-center"
                 >
 
                     {/* DESKTOP BG IMAGE */}
@@ -31,7 +31,7 @@ export default function DeoriaHeroSection() {
 
                     {/* MOBILE BG IMAGE */}
                     <img
-                        src="/images/deoria-mobile.jpg"
+                        src="/cityHeroimg/heroimgcity.png"
                         alt="Medicine Delivery in Deoria"
                         className="absolute inset-0 block sm:hidden w-full h-full object-cover object-center"
                     />
