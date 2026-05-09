@@ -1,4 +1,5 @@
 import BannerImage from '@/components/BannerImage'
+import CityInterlinking from '@/components/cityData'
 import FinalCTA from '@/components/Cta'
 import FAQ from '@/components/Faq'
 import Hero from '@/components/Hero'
@@ -88,10 +89,11 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <TrustSection />
+      <CityInterlinking />
       <BannerImage />
       <Reviews />
       <FinalCTA />
+      <TrustSection />
       <FAQ />
     </div>
   )

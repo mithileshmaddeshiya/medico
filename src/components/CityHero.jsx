@@ -10,7 +10,7 @@ export default function CityHero() {
 
         {/* Desktop Image */}
         <Image
-          src="/short/bannerimg.png"
+          src="/citybn/medicoimg.png"
           alt="Medicine Delivery in Deoria"
           fill
           priority
@@ -27,7 +27,7 @@ export default function CityHero() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/10 to-transparent"></div>
 
         {/* ================= DESKTOP CONTENT ================= */}
         <div className="hidden md:flex absolute inset-0 z-20 flex-col justify-center px-10 text-white">
@@ -67,41 +67,49 @@ export default function CityHero() {
         </div>
 
         {/* ================= MOBILE CONTENT ================= */}
-        <div className="flex md:hidden absolute inset-0 z-20 flex-col justify-center p-5 text-white">
+        <div className="flex md:hidden absolute inset-0 z-20 flex-col justify-center p-5">
 
-          {/* Mobile Badge */}
-          <span
-            className="inline-flex items-center gap-1 px-2 py-1 rounded-full 
-            bg-green-500/90 text-white text-[10px] font-medium mb-2 shadow
-            self-start"
-          >
-            ⚡ Fast Delivery
-          </span>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/45 rounded-2xl"></div>
 
-          {/* Mobile Heading */}
-          <h2 className="text-[12px] font-bold leading-snug max-w-[220px]">
-            Ghar Baithe
-            Medicine Order Karein 💊
-          </h2>
+          {/* Content */}
+          <div className="relative z-10">
 
-          {/* Mobile Subtext */}
-          <p className="mt-2 text-xs text-gray-200 max-w-[230px] leading-relaxed">
-            WhatsApp par order karein aur <br />
-            30–60 minute mein delivery paayein.
-          </p>
-
-          {/* Mobile CTA */}
-          <div className="mt-4">
-            <Link
-              href="https://wa.me/917303995446"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-xs font-semibold shadow inline-block"
+            {/* Mobile Badge */}
+            <span
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full 
+      bg-green-500 text-white text-[11px] font-semibold mb-3 shadow-lg"
             >
-              Order Now
-            </Link>
-          </div>
+              ⚡ Fast Medicine Delivery
+            </span>
 
+            {/* Mobile Heading */}
+            <h2 className="text-[18px] font-extrabold leading-tight text-white drop-shadow-lg max-w-[260px]">
+              Ghar Baithe Medicine <br /> Order Karein 💊
+            </h2>
+
+            {/* Mobile Subtext */}
+            <p className="mt-3 text-[12px] text-gray-100 leading-relaxed max-w-[260px] drop-shadow">
+              WhatsApp par medicine order karein <br /> aur
+              <span className="font-semibold text-green-300">
+                {" "}30–60 minute
+              </span>{" "}
+              mein fast delivery paayein.
+            </p>
+
+            {/* Mobile CTA */}
+            <div className="mt-5">
+              <Link
+                href="https://wa.me/917303995446"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 px-5 py-2.5 rounded-xl text-sm font-bold shadow-xl inline-block text-white transition"
+              >
+                Order Now →
+              </Link>
+            </div>
+
+          </div>
         </div>
 
       </div>

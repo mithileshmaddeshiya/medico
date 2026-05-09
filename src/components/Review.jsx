@@ -45,7 +45,7 @@ export default function Reviews() {
           Trusted by Customers ❤️
         </h2>
 
-        <p className="mt-2 text-gray-600 text-sm sm:text-base">
+        <p className="mt-2 text-gray-600 mb-3 text-sm sm:text-base">
           Deoria ke log Medicobharat par bharosa karte hain
         </p>
 

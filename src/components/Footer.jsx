@@ -16,7 +16,13 @@ export default function Footer() {
             alt="MedicoBharat Logo"
             width={140}
             height={40}
-            className="object-contain"
+            className="object-contain cursor-pointer"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
           />
 
           <p className="mt-3 text-[16px] text-gray-600 leading-relaxed">
@@ -46,12 +52,12 @@ export default function Footer() {
 
           <div className="space-y-3 text-sm text-gray-600">
 
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-green-600" />
+            <div className="flex  cursor-pointer items-center gap-2">
+              <Phone className=" w-4 h-4 text-green-600" />
               <span>+91 6392108234</span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex cursor-pointer items-center gap-2">
               <Mail className="w-4 h-4 text-green-600" />
               <span>mithileshmaddeshiya123@gmail.com</span>
             </div>

@@ -90,7 +90,7 @@ export async function generateMetadata() {
 
 const page = () => {
   return (
-    <div className='pt-20'>
+    <div className='pt-15'>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

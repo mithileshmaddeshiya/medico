@@ -71,7 +71,7 @@ export default function DeoriaFAQSection() {
   <div className="max-w-4xl mx-auto px-4 sm:px-5">
 
     {/* Heading */}
-    <div className="text-center mb-7 sm:mb-9">
+    <div className="text-center mb-5">
       <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
         ❓ FAQ - MedicoBharat Deoria
       </span>
@@ -80,7 +80,7 @@ export default function DeoriaFAQSection() {
         Frequently Asked Questions
       </h2>
 
-      <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+      <p className="mt-2 text-gray-600 text-[12px] sm:text-base leading-relaxed max-w-xl mx-auto">
         Common questions related to online medicine delivery in Deoria.
       </p>
     </div>
@@ -102,7 +102,7 @@ export default function DeoriaFAQSection() {
               onClick={() =>
                 setOpenIndex(isOpen ? null : index)
               }
-              className="w-full flex items-center justify-between gap-3 text-left px-4 sm:px-5 py-4"
+              className="w-full cursor-pointer flex items-center justify-between gap-3 text-left px-4 sm:px-5 py-4"
             >
 
               <div className="flex items-start gap-3">

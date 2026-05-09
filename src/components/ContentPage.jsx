@@ -23,22 +23,22 @@ export default function DeoriaLongSEOContent() {
 
   return (
     <section className="w-full bg-gradient-to-b from-white via-green-50/30 to-white py-2 md:py-5 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-14">
+        <div className="text-center max-w-4xl mx-auto mb-5">
           <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
             💚 Trusted Online Pharmacy in Deoria
           </span>
 
-          <h2 className="mt-5 text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 leading-tight">
+          <h2 className="mt-2 text-[18px] md:text-3xl font-bold text-gray-900 leading-tight">
             Online Medicine Delivery <br className="hidden sm:block" />
             in Deoria
           </h2>
 
-          <p className="hidden md:block mt-5 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+          <p className="hidden md:block mt-2 text-[14px] text-gray-600 leading-relaxed">
             MedicoBharat provides fast, trusted and reliable online medicine
-            delivery services in Deoria with genuine medicines, healthcare
+            delivery services in Deoria <br /> with genuine medicines, healthcare
             products and quick doorstep delivery support.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function DeoriaLongSEOContent() {
               <div className="mt-7">
                 <button
                   onClick={() => setShowMore(true)}
-                  className="group inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 sm:px-7 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+                  className="group cursor-pointer inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 sm:px-7 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
                 >
                   Read More
                   <span className="group-hover:translate-x-1 transition">
@@ -239,12 +239,13 @@ export default function DeoriaLongSEOContent() {
           <div className="flex justify-center mt-7">
             <button
               onClick={() => setShowMore(false)}
-              className="text-green-700 hover:text-green-800 font-semibold text-sm sm:text-base transition-all duration-300"
+              className="text-green-700 cursor-pointer hover:text-green-800 font-semibold text-sm sm:text-base transition-all duration-300"
             >
               Read Less ↑
             </button>
           </div>
         </div>
+        
       </div>
     </section>
   );
