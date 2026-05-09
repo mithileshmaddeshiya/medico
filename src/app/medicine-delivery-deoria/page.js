@@ -1,8 +1,10 @@
+import PremiumCitySlider from '@/components/cityData'
 import FAQDeoria from '@/components/CityFaq'
 import HeroImage from '@/components/CityHero'
 import StatBanner from '@/components/CityStatsimg'
 import DeoriaSEOContent from '@/components/ContentPage'
 import FinalCTA from '@/components/Cta'
+import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowCity'
 import MedicoBharatSEOSection from '@/components/MetakeyDeoria'
 import Reviews from '@/components/Review'
@@ -55,14 +57,14 @@ export async function generateMetadata() {
     },
 
     alternates: {
-      canonical: "https://www.medicobharat.com/deoria",
+      canonical: "https://www.medicobharat.com/medicine-delivery-deoria",
     },
 
     openGraph: {
       title:
         "Online Medicine Delivery in Deoria | MedicoBharat",
       description:
-        "Fast and trusted medicine delivery service in Deoria. Order genuine medicines, healthcare products, and prescription medicines online with MedicoBharat.",
+        "Order genuine medicines online in Deoria with fast doorstep delivery. MedicoBharat offers 24x7 pharmacy and healthcare products.",
       url: "https://www.medicobharat.com/deoria",
       siteName: "MedicoBharat",
       locale: "en_IN",
@@ -90,7 +92,7 @@ export async function generateMetadata() {
 
 const page = () => {
   return (
-    <div className='pt-15'>
+    <div >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -110,12 +112,13 @@ const page = () => {
           }),
         }}
       />
-      <StatBanner />
-      <HowItWorks />
+      <Hero />
+      <PremiumCitySlider />
       <HeroImage />
       <Reviews />
-      <FinalCTA />
+      <HowItWorks />
       <MedicoBharatSEOSection />
+      <FinalCTA />
       <DeoriaSEOContent />
       <FAQDeoria />
     </div>
