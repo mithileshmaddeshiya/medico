@@ -76,7 +76,7 @@ export default function Hero() {
           {/* Image */}
           <div className="relative w-52 sm:w-64 md:w-full max-w-xs sm:max-w-sm md:max-w-md">
             <Image
-              src="/heroimage/rmimg.png"
+              src="/heroimage/medihero.webp"
               alt="Medicine Delivery Deoria"
               width={400}
               height={400}

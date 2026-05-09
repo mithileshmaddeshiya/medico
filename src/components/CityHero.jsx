@@ -10,7 +10,7 @@ export default function CityHero() {
 
         {/* Desktop Image */}
         <Image
-          src="/citybn/medicoimg.png"
+          src="/citybn/medicoimg.webp"
           alt="Medicine Delivery in Deoria"
           fill
           priority
@@ -19,7 +19,8 @@ export default function CityHero() {
 
         {/* Mobile Image */}
         <Image
-          src="/short/mobileimg1.png"
+          src="/short/mobileimg1.webp
+          "
           alt="Medicine Delivery in Deoria"
           fill
           priority

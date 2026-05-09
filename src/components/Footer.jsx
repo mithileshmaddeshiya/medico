@@ -12,7 +12,7 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <Image
-            src="/navbar/navbg.png"
+            src="/navbar/navbg.webp"
             alt="MedicoBharat Logo"
             width={140}
             height={40}

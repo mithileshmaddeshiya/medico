@@ -10,7 +10,7 @@ export default function BannerImage() {
         <div className="relative w-full h-[180px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm">
 
           <Image
-            src="/short/statsimg.png" // 👉 yaha apni generated image ka path daalo
+            src="/short/statsimg.webp" // 👉 yaha apni generated image ka path daalo
             alt="Medicine delivery banner"
             fill
             priority
