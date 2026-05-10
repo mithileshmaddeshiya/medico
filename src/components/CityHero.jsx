@@ -39,7 +39,7 @@ export default function CityHero() {
             bg-green-500/90 text-white text-xs font-medium mb-3 shadow backdrop-blur-sm
             self-start"
           >
-            🚚 30 – 60 Min Delivery • Deoria
+            🚚 30 - 60 Min Delivery • Deoria and nearby areas
           </span>
 
           {/* Heading */}
