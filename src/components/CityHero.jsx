@@ -50,7 +50,7 @@ export default function CityHero() {
           {/* Subtext */}
           <p className="mt-2 text-base text-gray-200 max-w-md">
             Ghar baithe genuine medicines paayein. <br />
-            Local verified pharmacies se direct delivery.
+            Local verified pharmacies se direct delivery. 
           </p>
 
           {/* CTA */}
