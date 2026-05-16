@@ -44,7 +44,7 @@ export default function DeoriaLongSEOContent() {
         </div>
 
         {/* Preview Card */}
-        <div className="relative bg-white border border-green-100 rounded-[28px] sm:rounded-[36px] p-5 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+        <div className="relative bg-white border border-green-100 rounded-[12px] sm:rounded-[8px] p-5 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
 
           {/* Gradient Glow */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-green-100 rounded-full blur-3xl opacity-40"></div>
@@ -100,8 +100,8 @@ export default function DeoriaLongSEOContent() {
         {/* Expanded Content */}
         <div
           className={`transition-all duration-700 ease-in-out overflow-hidden ${showMore
-              ? "max-h-[10000px] opacity-100 mt-8 sm:mt-10"
-              : "max-h-0 opacity-0"
+            ? "max-h-[10000px] opacity-100 mt-8 sm:mt-10"
+            : "max-h-0 opacity-0"
             }`}
         >
 
@@ -245,7 +245,7 @@ export default function DeoriaLongSEOContent() {
             </button>
           </div>
         </div>
-        
+
       </div>
     </section>
   );

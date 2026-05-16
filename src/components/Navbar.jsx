@@ -31,7 +31,7 @@ export default function Navbar() {
                     </Link>
 
                     <Link href="#how" className="hover:text-green-600 transition">
-                        How it Works
+                        About us
                     </Link>
 
                     <Link href="#contact" className="hover:text-green-600 transition">

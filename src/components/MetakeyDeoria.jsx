@@ -36,7 +36,7 @@ export default function MedicoBharatSEOSection() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="bg-white rounded-[24px] sm:rounded-[32px] border border-green-100 p-5 sm:p-6 md:p-8 shadow-sm">
+        <div className="bg-white rounded-[12px] sm:rounded-[8px] border border-green-100 p-5 sm:p-6 md:p-8 shadow-sm">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
 
             <div className="max-w-3xl">

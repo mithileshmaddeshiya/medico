@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function CityHero() {
   return (
     <section className="w-full bg-gradient-to-t from-green-50 to-white px-4 md:px-6">
-      <div className="relative max-w-6xl mx-auto h-[260px] md:h-[320px] rounded-2xl overflow-hidden">
+      <div className="relative max-w-6xl mx-auto h-[260px] md:h-[320px] rounded-[8px] overflow-hidden">
 
         {/* Desktop Image */}
         <Image

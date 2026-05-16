@@ -118,7 +118,7 @@ export default function PremiumCitySlider() {
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2 }}
-                    className="group relative rounded-[22px] sm:rounded-3xl border border-green-100 bg-white p-3 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer min-h-[190px] sm:min-h-[230px] flex flex-col justify-between overflow-hidden"
+                    className="group relative rounded-[12px] sm:rounded-[8px] border border-green-100 bg-white p-3 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer min-h-[190px] sm:min-h-[230px] flex flex-col justify-between overflow-hidden"
                   >
 
                     {/* Glow */}
