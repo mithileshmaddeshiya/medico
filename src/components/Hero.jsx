@@ -17,7 +17,7 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="text-2xl sm:text-4xl md:text-4xl font-bold text-gray-900 leading-tight">
-              {/* Medicine ghar par mangao */} dsfjdhfihik
+              Medicine ghar par mangao
               <span className="block text-green-600"> Deoria me</span>
             </h1>
 
