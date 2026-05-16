@@ -74,6 +74,8 @@ export async function generateMetadata() {
       ],
     },
 
+    
+
     twitter: {
       card: "summary_large_image",
       title:
@@ -88,6 +90,42 @@ export async function generateMetadata() {
 const page = () => {
   return (
     <div>
+
+      {/* MEDICAL BUSINESS SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "MedicalBusiness",
+
+            name: "MedicoBharat",
+
+            url: "https://www.medicobharat.com",
+
+            image: "https://www.medicobharat.com/logo.png",
+
+            description:
+              "Online medicine delivery platform providing fast home delivery of medicines and healthcare products.",
+
+            priceRange: "₹₹",
+
+            openingHours: "Mo-Su 00:00-23:59",
+
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+
+            sameAs: [
+              "https://www.instagram.com/medicobharat",
+              "https://www.facebook.com/medicobharat",
+            ],
+          }),
+        }}
+      />
+
       <Hero />
       <CityInterlinking />
       <BannerImage />
@@ -95,8 +133,8 @@ const page = () => {
       <FinalCTA />
       <TrustSection />
       <FAQ />
+
     </div>
   )
 }
-
 export default page

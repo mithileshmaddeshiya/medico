@@ -65,7 +65,7 @@ export async function generateMetadata() {
         "Online Medicine Delivery in Deoria | MedicoBharat",
       description:
         "Order genuine medicines online in Deoria with fast doorstep delivery. MedicoBharat offers 24x7 pharmacy and healthcare products.",
-      url: "https://www.medicobharat.com/deoria",
+      url: "https://www.medicobharat.com/medicine-delivery-deoria",
       siteName: "MedicoBharat",
       locale: "en_IN",
       type: "website",
@@ -92,19 +92,25 @@ export async function generateMetadata() {
 
 const page = () => {
   return (
-    <div >
+    <div>
+
+      {/* FAQ SCHEMA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
+
             mainEntity: [
               {
                 "@type": "Question",
+
                 name: "How fast is medicine delivery in Deoria?",
+
                 acceptedAnswer: {
                   "@type": "Answer",
+
                   text: "Most orders are delivered within 30-60 minutes depending on location.",
                 },
               },
@@ -112,6 +118,55 @@ const page = () => {
           }),
         }}
       />
+
+      {/* MEDICAL BUSINESS SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "MedicalBusiness",
+
+            name: "MedicoBharat",
+
+            url: "https://www.medicobharat.com/medicine-delivery-deoria",
+
+            image: "https://www.medicobharat.com/logo.png",
+
+            description:
+              "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
+
+            telephone: "+916392108234",
+
+            priceRange: "₹₹",
+
+            openingHours: "Mo-Su 00:00-23:59",
+
+            address: {
+              "@type": "PostalAddress",
+
+              addressLocality: "Deoria",
+
+              addressRegion: "Uttar Pradesh",
+
+              addressCountry: "IN",
+            },
+
+            areaServed: {
+              "@type": "City",
+
+              name: "Deoria",
+            },
+
+            sameAs: [
+              "https://www.instagram.com/medicobharat",
+              "https://www.facebook.com/medicobharat",
+            ],
+          }),
+        }}
+      />
+
       <Hero />
       <PremiumCitySlider />
       <HeroImage />
@@ -121,6 +176,7 @@ const page = () => {
       <FinalCTA />
       <DeoriaSEOContent />
       <FAQDeoria />
+
     </div>
   )
 }
