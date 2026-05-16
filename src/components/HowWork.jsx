@@ -70,8 +70,6 @@ Our team will assist you in few minutes.`
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Order on WhatsApp"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <div className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition cursor-pointer">
               <PhoneCall className="w-8 h-8 text-green-600 mx-auto" />
