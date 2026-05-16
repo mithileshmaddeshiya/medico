@@ -40,8 +40,8 @@ export async function generateMetadata() {
     publisher: "MedicoBharat",
 
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
       googleBot: {
         index: true,
         follow: true,

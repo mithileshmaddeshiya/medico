@@ -21,9 +21,7 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  verification: {
-    google: "LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8",
-  },
+ 
 
   icons: {
     icon: "/favicon/favicon2.png",
@@ -36,6 +34,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />
+      </head>
       <body className="min-h-full flex flex-col">
 
         {/* ORGANIZATION SCHEMA */}
