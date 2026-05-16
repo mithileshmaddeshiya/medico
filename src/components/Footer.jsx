@@ -120,7 +120,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-green-600" />
-              <span>mithileshmaddeshiya123@gmail.com</span>
+              <span>medicobharat@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -134,7 +134,7 @@ export default function Footer() {
       </div>
 
       {/* LOCAL SEO TEXT */}
-      <div className="max-w-5xl mx-auto px-6 pb-5 text-center text-sm text-gray-500 leading-relaxed">
+      <div className="max-w-3xl mx-auto px-6 pb-5 text-center text-[12px] text-gray-500 leading-relaxed">
         MedicoBharat offers fast online medicine delivery in Deoria,
         medicine home delivery services, healthcare products,
         prescription medicines and trusted pharmacy support across
