@@ -19,7 +19,7 @@ export default function MedicoBharatSEOSection() {
   ];
 
   return (
-    <section className="w-full py-3 sm:py-5 bg-gradient-to-b from-green-1 via-white to-green-50">
+    <section className="w-full py-3 sm:py-5 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6">
 
         {/* Top Heading */}
