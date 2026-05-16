@@ -55,9 +55,22 @@ export default function Hero() {
             {/* CTA */}
             <div className="mt-6 md:mt-8 flex justify-center md:justify-start">
               <a
-                href="https://wa.me/917303995446?text=Hi%20Medicobharat%0AName:%0AAddress:%0AMedicine:%0APrescription:"
-                target="_blank"
-                rel="noopener noreferrer"
+                            href={`https://wa.me/917303995446?text=${encodeURIComponent(
+                        `Hi MedicoBharat 👋
+
+Please share your details
+
+Full Name:
+Mobile Number:
+Delivery Address:
+Medicine Name:
+Prescription (if available):
+
+Our team will assist you in few minutes.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Order on WhatsApp"
                 className="inline-flex items-center justify-center bg-green-600 text-white px-5 py-3 rounded-lg text-sm md:text-base font-medium hover:bg-green-700 transition w-full sm:w-auto"
               >
                 Place your Order
