@@ -8,7 +8,7 @@ export default function CityHero() {
     <section className="w-full  px-4 md:px-6 py-4">
       
       {/* MAX WIDTH CONTAINER */}
-      <div className="max-w-6xl mx-12">
+      <div className="max-w-6xl mx-1 md:mx-12">
 
         {/* HERO WRAPPER */}
         <div className="relative w-full h-[260px] md:h-[320px] rounded-[8px] overflow-hidden">
