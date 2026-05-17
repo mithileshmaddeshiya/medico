@@ -24,7 +24,7 @@ export const metadata = {
  
 
   icons: {
-    icon: "/favicon/favicon1.webp",
+    icon: "/favicon/favpan.png",
   },
 };
 
