@@ -34,8 +34,16 @@ export default function Navbar() {
                         About us
                     </Link>
 
-                    <Link href="#contact" className="hover:text-green-600 transition">
+                    <Link href="/contact" className="hover:text-green-600 transition">
                         Contact
+                    </Link>
+
+                    <Link href="/privacy" className="hover:text-green-600 transition">
+                        Privacy Policy
+                    </Link>
+
+                    <Link href="/terms" className="hover:text-green-600 transition">
+                        Term & Condition
                     </Link>
 
                 </div>

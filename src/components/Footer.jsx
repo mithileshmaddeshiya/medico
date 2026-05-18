@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-10">
 
-      <div className="max-w-6xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* BRAND */}
         <div className="flex flex-col items-start">
@@ -26,9 +26,9 @@ export default function Footer() {
             }}
           />
 
-          <p className="text-[15px] text-gray-600 leading-relaxed">
+          <p className="text-sm text-gray-600 leading-7">
             MedicoBharat provides trusted online medicine delivery in Deoria
-            with fast doorstep delivery, genuine medicines and easy online
+            with fast doorstep delivery, genuine medicines, and easy online
             ordering support.
           </p>
 
@@ -36,7 +36,8 @@ export default function Footer() {
 
         {/* SEO LINKS */}
         <div>
-          <h4 className="text-sm font-semibold text-gray-900 mb-3">
+
+          <h4 className="text-sm font-semibold text-gray-900 mb-4">
             Popular Searches
           </h4>
 
@@ -88,62 +89,115 @@ export default function Footer() {
             </li>
 
           </ul>
+
         </div>
 
-        {/* WHY CHOOSE */}
+        {/* QUICK LINKS */}
         <div>
-          <h4 className="text-sm font-semibold text-gray-900 mb-3">
-            Why Choose Us
+
+          <h4 className="text-sm font-semibold text-gray-900 mb-4">
+            Quick Links
           </h4>
 
           <ul className="space-y-2 text-sm text-gray-600">
-            <li>✔ Genuine Medicines</li>
-            <li>✔ Fast Doorstep Delivery</li>
-            <li>✔ Trusted Online Pharmacy</li>
-            <li>✔ Easy Prescription Upload</li>
-            <li>✔ Customer Support</li>
+
+            <li>
+              <a
+                href="/"
+                className="hover:text-green-600 transition"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/about"
+                className="hover:text-green-600 transition"
+              >
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/contact"
+                className="hover:text-green-600 transition"
+              >
+                Contact
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/privacy"
+                className="hover:text-green-600 transition"
+              >
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/terms"
+                className="hover:text-green-600 transition"
+              >
+                Terms & Conditions
+              </a>
+            </li>
+
           </ul>
+
         </div>
 
         {/* CONTACT */}
         <div>
-          <h4 className="text-sm font-semibold text-gray-900 mb-3">
+
+          <h4 className="text-sm font-semibold text-gray-900 mb-4">
             Contact
           </h4>
 
           <div className="space-y-3 text-sm text-gray-600">
 
             <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-green-600" />
+              <Phone className="w-4 h-4 text-green-600 shrink-0" />
               <span>+91 6392108234</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-green-600" />
-              <span>medicobharat@gmail.com</span>
+              <Mail className="w-4 h-4 text-green-600 shrink-0" />
+              <span className="break-all">
+                medicobharat@gmail.com
+              </span>
             </div>
 
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-600" />
+              <MapPin className="w-4 h-4 text-green-600 shrink-0" />
               <span>Deoria, Uttar Pradesh</span>
             </div>
 
           </div>
+
         </div>
 
       </div>
 
       {/* LOCAL SEO TEXT */}
-      <div className="max-w-3xl mx-auto px-6 pb-5 text-center text-[12px] text-gray-500 leading-relaxed">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-5 text-center text-[12px] text-gray-500 leading-6">
+
         MedicoBharat offers fast online medicine delivery in Deoria,
         medicine home delivery services, healthcare products,
-        prescription medicines and trusted pharmacy support across
-        Civil Lines, Station Road, Saket Nagar, Rudrapur Road and nearby areas.
+        prescription medicines, and trusted pharmacy support across
+        Civil Lines, Station Road, Saket Nagar, Rudrapur Road,
+        and nearby areas.
+
       </div>
 
       {/* BOTTOM */}
-      <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500">
+      <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500 px-4">
+
         © {new Date().getFullYear()} MedicoBharat | All rights reserved.
+
       </div>
 
     </footer>
