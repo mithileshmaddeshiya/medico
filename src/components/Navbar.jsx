@@ -30,7 +30,7 @@ export default function Navbar() {
                         Home
                     </Link>
 
-                    <Link href="#how" className="hover:text-green-600 transition">
+                    <Link href="/about" className="hover:text-green-600 transition">
                         About us
                     </Link>
 
