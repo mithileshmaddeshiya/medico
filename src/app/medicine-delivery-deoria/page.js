@@ -15,27 +15,41 @@ import React from 'react'
 export async function generateMetadata() {
   return {
     title:
-      "Online Medicine Delivery in Deoria | 24x7 Pharmacy - MedicoBharat",
+      "Online Medicine Delivery in Deoria | MedicoBharat",
 
     description:
-      "Order genuine medicines online in Deoria with fast home delivery. MedicoBharat offers 24x7 online pharmacy services, prescription medicines, healthcare products, and doorstep medicine delivery in Deoria.",
+      "MedicoBharat provides fast online medicine delivery in Deoria with genuine medicines, prescription support, healthcare products, and doorstep pharmacy delivery services across Deoria.",
 
     keywords: [
+      // PRIMARY KEYWORDS
       "Online Medicine Delivery in Deoria",
+      "Medicine Delivery Deoria",
       "Medicine Home Delivery Deoria",
-      "Best Pharmacy in Deoria",
       "Online Pharmacy Deoria",
       "Medical Store in Deoria",
+      "Chemist Home Delivery Deoria",
+
+      // HIGH INTENT KEYWORDS
       "Buy Medicines Online Deoria",
       "Prescription Medicine Delivery Deoria",
       "24x7 Medicine Delivery Deoria",
-      "Healthcare Products Deoria",
-      "Fast Medicine Delivery Deoria",
-      "Genuine Medicines in Deoria",
-      "OTC Medicines Deoria",
-      "Deoria Pharmacy",
+      "Pharmacy Delivery in Deoria",
       "Medicine Delivery Near Me Deoria",
-      "Trusted Medical Store Deoria",
+      "Online Medical Store Deoria",
+
+      // TRUST & SUPPORT KEYWORDS
+      "Genuine Medicines in Deoria",
+      "Trusted Pharmacy Support",
+      "Fast Medicine Delivery Deoria",
+      "Healthcare Products Deoria",
+      "Doorstep Medicine Delivery",
+      "Best Pharmacy in Deoria",
+
+      // LOCAL SEO KEYWORDS
+      "Medicine Delivery Civil Lines Deoria",
+      "Medicine Delivery Station Road Deoria",
+      "Online Pharmacy Saket Nagar Deoria",
+      "Medical Store Rudrapur Road Deoria",
     ],
 
     authors: [{ name: "MedicoBharat" }],
@@ -44,9 +58,12 @@ export async function generateMetadata() {
 
     publisher: "MedicoBharat",
 
+    metadataBase: new URL("https://www.medicobharat.com"),
+
     robots: {
       index: true,
       follow: true,
+
       googleBot: {
         index: true,
         follow: true,
@@ -57,35 +74,61 @@ export async function generateMetadata() {
     },
 
     alternates: {
-      canonical: "https://www.medicobharat.com/medicine-delivery-deoria",
+      canonical:
+        "https://www.medicobharat.com/medicine-delivery-deoria",
     },
 
     openGraph: {
       title:
         "Online Medicine Delivery in Deoria | MedicoBharat",
+
       description:
-        "Order genuine medicines online in Deoria with fast doorstep delivery. MedicoBharat offers 24x7 pharmacy and healthcare products.",
-      url: "https://www.medicobharat.com/medicine-delivery-deoria",
+        "Order genuine medicines online in Deoria with fast doorstep delivery, prescription support, healthcare products, and trusted pharmacy assistance.",
+
+      url:
+        "https://www.medicobharat.com/medicine-delivery-deoria",
+
       siteName: "MedicoBharat",
+
       locale: "en_IN",
+
       type: "website",
+
       images: [
         {
           url: "/images/deoria-medicobharat.jpg",
+
           width: 1200,
+
           height: 630,
-          alt: "MedicoBharat Deoria Medicine Delivery",
+
+          alt:
+            "Online Medicine Delivery in Deoria - MedicoBharat",
         },
       ],
     },
 
     twitter: {
       card: "summary_large_image",
+
       title:
         "Online Medicine Delivery in Deoria | MedicoBharat",
+
       description:
-        "Trusted online pharmacy and medicine home delivery service in Deoria.",
+        "Fast online pharmacy and medicine home delivery service in Deoria with genuine medicines and healthcare support.",
+
       images: ["/images/deoria-medicobharat.jpg"],
+    },
+
+    category: "Healthcare",
+
+    classification:
+      "Online Pharmacy & Medicine Delivery",
+
+    other: {
+      locality: "Deoria",
+      region: "Uttar Pradesh",
+      country: "India",
     },
   };
 }
