@@ -162,53 +162,6 @@ const page = () => {
         }}
       />
 
-      {/* MEDICAL BUSINESS SCHEMA */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-
-            "@type": "MedicalBusiness",
-
-            name: "MedicoBharat",
-
-            url: "https://www.medicobharat.com/medicine-delivery-deoria",
-
-            image: "https://www.medicobharat.com/logo.png",
-
-            description:
-              "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
-
-            telephone: "+916392108234",
-
-            priceRange: "₹₹",
-
-            openingHours: "Mo-Su 00:00-23:59",
-
-            address: {
-              "@type": "PostalAddress",
-
-              addressLocality: "Deoria",
-
-              addressRegion: "Uttar Pradesh",
-
-              addressCountry: "IN",
-            },
-
-            areaServed: {
-              "@type": "City",
-
-              name: "Deoria",
-            },
-
-            sameAs: [
-              "https://www.instagram.com/medicobharat",
-              "https://www.facebook.com/medicobharat",
-            ],
-          }),
-        }}
-      />
 
       <Hero />
       <PremiumCitySlider />
