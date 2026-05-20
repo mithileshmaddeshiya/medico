@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/80 border-b border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
 
-            <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-6xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
 
                 {/* LOGO */}
                 <Link
@@ -17,14 +17,14 @@ export default function Navbar() {
                         src="/navbar/navbg.webp"
                         alt="Medicobharat Logo"
                         width={180}
-                        height={80}
+                        height={120}
                         className="h-10 w-auto object-contain"
                         priority
                     />
                 </Link>
 
                 {/* NAV LINKS */}
-                <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <div className="hidden md:flex items-center gap-5 text-[14px] font-medium text-gray-600">
 
                     <Link href="/" className="hover:text-green-600 transition">
                         Home
@@ -45,6 +45,8 @@ export default function Navbar() {
                     <Link href="/terms" className="hover:text-green-600 transition">
                         Term & Condition
                     </Link>
+
+                   
 
                 </div>
 

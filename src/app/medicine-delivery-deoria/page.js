@@ -1,7 +1,6 @@
 import PremiumCitySlider from '@/components/cityData'
 import FAQDeoria from '@/components/CityFaq'
 import HeroImage from '@/components/CityHero'
-import StatBanner from '@/components/CityStatsimg'
 import DeoriaSEOContent from '@/components/ContentPage'
 import FinalCTA from '@/components/Cta'
 import Hero from '@/components/Hero'
@@ -164,6 +163,7 @@ const page = () => {
 
 
       <Hero />
+      
       <PremiumCitySlider />
       <HeroImage />
       <Reviews />
