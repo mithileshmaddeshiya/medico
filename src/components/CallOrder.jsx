@@ -4,7 +4,7 @@ export default function CallOrderBanner() {
   return (
      <section className="w-full py-3 px-5 rounded-2xl bg-[#eef5fb]">
 
-      <a href="tel:6392108234" className="block">
+      <a href="tel:9891233525" className="block">
         <div className="max-w-md mx-auto overflow-hidden rounded-2xl">
           <Image
             src="/callimg/contactimg.webp"

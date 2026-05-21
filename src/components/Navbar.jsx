@@ -46,14 +46,14 @@ export default function Navbar() {
                         Term & Condition
                     </Link>
 
-                   
+
 
                 </div>
 
                 {/* Right */}
 
                 <a
-                    href={`https://wa.me/917303995446?text=${encodeURIComponent(
+                    href={`https://wa.me/919891233525?text=${encodeURIComponent(
                         `Hi MedicoBharat 👋
 
 Please share your details

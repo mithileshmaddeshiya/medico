@@ -65,7 +65,7 @@ export default function Hero() {
             {/* CTA */}
             <div className="mt-5 md:mt-8 flex justify-center md:justify-start">
               <a
-                href={`https://wa.me/917303995446?text=${encodeURIComponent(
+                href={`https://wa.me/919891233525?text=${encodeURIComponent(
                   `Hi MedicoBharat 👋
 
 Please share your details

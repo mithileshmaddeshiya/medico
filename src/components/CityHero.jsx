@@ -60,7 +60,7 @@ export default function CityHero() {
             {/* CTA */}
             <div className="mt-5">
               <Link
-                href="https://wa.me/917303995446"
+                href="https://wa.me/919891233525"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-md text-sm font-semibold shadow inline-block"
@@ -105,7 +105,7 @@ export default function CityHero() {
               {/* Mobile CTA */}
               <div className="mt-5">
                 <Link
-                  href="https://wa.me/917303995446"
+                  href="https://wa.me/919891233525"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 px-5 py-2.5 rounded-xl text-sm font-bold shadow-xl inline-block text-white transition"
