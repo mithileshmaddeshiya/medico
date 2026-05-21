@@ -63,9 +63,9 @@ export default function MobileSlider() {
   };
 
   return (
-    <div className="w-full md:hidden px-2 mt-2">
+    <div className="w-full md:hidden px-4 mt-2">
       <div
-        className="relative overflow-hidden rounded-2xl"
+        className="relative overflow-hidden rounded-[14px]"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
