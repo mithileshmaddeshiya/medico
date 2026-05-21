@@ -6,22 +6,23 @@ import MobileSlider from "./HeroMoblie"
 import CallOrderBanner from "./CallOrder"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
+import ShopCategories from "./SlideCat"
 
 export default function Hero() {
   return (
     <section className="pt-20 md:pt-30 bg-gradient-to-b from-green-50 to-white overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-2 md:gap-12 items-center">
 
         {/* LEFT CONTENT */}
         <div className="order-2 md:order-1 text-center md:text-left">
 
-          <div className="p-3 md:p-0">
+          <div>
 
             {/* Heading */}
-            <h1 className="text-[16px] sm:text-4xl md:text-4xl font-bold text-gray-900 leading-snug">
-              Medicine ghar par mangao
-              <span className="block text-green-600">
+            <h1 className="text-[14px] sm:text-4xl md:text-4xl font-bold text-gray-900 leading-snug">
+              Medicine ghar par mangao-
+              <span className="text-green-600">
                 Deoria me
               </span>
             </h1>
@@ -107,55 +108,19 @@ export default function Hero() {
             <MobileSlider />
           </div>
 
-          {/* Medicine Box Swiper */}
-          <div className="flex justify-center mt-2">
+          {/* Medicine Box Image */}
+          {/* <div className="flex justify-center mt-2">
+            <Image
+              src="/heroimage/medihero.webp"
+              alt="Medicine Delivery"
+              width={120}
+              height={90}
+              className="w-full max-w-[170px] h-auto object-contain"
+              priority
+            />
+          </div> */}
 
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={10}
-              slidesPerView={1}
-              loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              className="w-full max-w-[170px]"
-            >
-
-              <SwiperSlide>
-                <Image
-                  src="/heroimage/medihero.webp"
-                  alt="Medicine Delivery"
-                  width={120}
-                  height={90}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Image
-                  src="/heroimage/medihero.webp"
-                  alt="Medicine Delivery"
-                  width={120}
-                  height={90}
-                  className="w-full h-auto object-contain"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Image
-                  src="/heroimage/medihero.webp"
-                  alt="Medicine Delivery"
-                  width={120}
-                  height={90}
-                  className="w-full h-auto object-contain"
-                />
-              </SwiperSlide>
-
-            </Swiper>
-
-          </div>
+          <ShopCategories />
 
         </div>
 
