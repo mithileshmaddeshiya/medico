@@ -38,7 +38,7 @@ export default function ShopCategories() {
           </h2>
         </div>
 
-        
+
 
       </div>
 
@@ -53,10 +53,12 @@ export default function ShopCategories() {
           >
 
             {/* Circle */}
-            <div
+            <a
+              href="https://wa.me/919891233525"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`w-[74px] h-[50px] rounded-[6px] ${item.bg} flex items-center justify-center shadow-sm group-hover:scale-105 transition duration-300`}
             >
-
               <Image
                 src={item.image}
                 alt={item.title}
@@ -64,8 +66,7 @@ export default function ShopCategories() {
                 height={100}
                 className="object-contain"
               />
-
-            </div>
+            </a>
 
             {/* Text */}
             <p className="mt-2 text-[11px] leading-[14px] font-medium text-center text-[#333] max-w-[70px]">
