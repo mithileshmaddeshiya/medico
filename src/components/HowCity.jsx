@@ -8,7 +8,7 @@ export default function HowItWorks() {
       icon: <Upload className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
       title: "Send Prescription",
       desc: "Medicine name ya prescription WhatsApp par bhejein",
-      link: "https://wa.me/919891233525?text=Hello%20I%20want%20to%20order%20medicine",
+      link: "https://wa.me/919891233525",
     },
     {
       icon: <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,

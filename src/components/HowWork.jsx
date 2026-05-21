@@ -54,19 +54,7 @@ export default function WhyChooseUs() {
           </div>
 
           <a
-                       href={`https://wa.me/919891233525?text=${encodeURIComponent(
-    `Hi MedicoBharat 👋
-
-Please share your details
-
-Full Name:
-Mobile Number:
-Delivery Address:
-Medicine Name:
-Prescription (if available):
-
-Our team will assist you in few minutes.`
-)}`}
+                       href="https://wa.me/919891233525"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Order on WhatsApp"

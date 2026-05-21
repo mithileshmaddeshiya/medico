@@ -65,7 +65,7 @@ export default function MedicoBharatSEOSection() {
             {/* CTA */}
             <div className="flex flex-col items-center justify-center gap-3">
               <Link
-                href="https://wa.me/919891233525?text=Hello%20MedicoBharat%2C%20I%20want%20to%20order%20medicines."
+                href="https://wa.me/919891233525"
                 target="_blank"
                 rel="noopener noreferrer"
               >
