@@ -133,6 +133,46 @@ export async function generateMetadata() {
 }
 
 const page = () => {
+
+  let FaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast is medicine delivery in Deoria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most medicine orders in Deoria are delivered within 30 to 90 minutes depending on medicine availability and location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I order prescription medicines online in Deoria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, customers can upload valid doctor prescriptions and order prescription medicines online in Deoria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does MedicoBharat provide genuine medicines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, MedicoBharat provides genuine medicines and healthcare products through trusted pharmacy partners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is medicine delivery available in nearby villages of Deoria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, medicine delivery support is available in Deoria and nearby villages depending on service availability."
+        }
+      }
+    ]
+  }
+
   return (
     <div>
 
@@ -140,24 +180,7 @@ const page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-
-            mainEntity: [
-              {
-                "@type": "Question",
-
-                name: "How fast is medicine delivery in Deoria?",
-
-                acceptedAnswer: {
-                  "@type": "Answer",
-
-                  text: "Most orders are delivered within 30-60 minutes depending on location.",
-                },
-              },
-            ],
-          }),
+          __html: JSON.stringify(FaqSchema),
         }}
       />
 
