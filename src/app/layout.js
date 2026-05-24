@@ -176,52 +176,34 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-
               "@type": "Pharmacy",
-
-              name: "MedicoBharat",
-
-              url: "https://www.medicobharat.com",
-
-              image: "https://www.medicobharat.com/logo.png",
-
-              description:
-                "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
-
-              telephone: "+916392108234",
-
-              priceRange: "₹₹",
-
-              openingHours: "Mo-Su 00:00-23:59",
-
-              address: {
+              "name": "MedicoBharat",
+              "url": "https://www.medicobharat.com",
+              "image": "https://www.medicobharat.com/navbar/navbg.webp",
+              "description": "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
+              "telephone": "+916392108234",
+              "priceRange": "₹₹",
+              "openingHours": "Mo-Su 00:00-23:59",
+              "address": {
                 "@type": "PostalAddress",
-
-                addressLocality: "Deoria",
-
-                addressRegion: "Uttar Pradesh",
-
-                postalCode: "274001",
-
-                addressCountry: "IN",
+                "addressLocality": "Deoria",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "274001",
+                "addressCountry": "IN"
               },
-
-              geo: {
+              "geo": {
                 "@type": "GeoCoordinates",
-                latitude: "26.5017",
-                longitude: "83.7794",
+                "latitude": "26.5017",
+                "longitude": "83.7794"
               },
-
-              areaServed: {
+              "areaServed": {
                 "@type": "City",
-
-                name: "Deoria",
+                "name": "Deoria"
               },
-
-              sameAs: [
+              "sameAs": [
                 "https://www.instagram.com/medicobharat",
-                "https://www.facebook.com/medicobharat",
-              ],
+                "https://www.facebook.com/medicobharat"
+              ]
             }),
           }}
         />

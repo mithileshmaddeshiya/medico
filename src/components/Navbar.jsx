@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link
                     href="/"
                     className="flex items-center gap-2">
-                    <Image
+                    <img
                         src="/navbar/navbg.webp"
                         alt="Medicobharat Logo"
                         width={180}

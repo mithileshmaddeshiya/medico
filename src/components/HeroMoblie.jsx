@@ -1,66 +1,88 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const banners = [
-    "/heromobile/cashback.webp",
-    "/heromobile/vitamins1.webp",
-    "/heromobile/viks.webp",
-    "/heromobile/cetaphile1.webp",
+  "/heromobile/cashback.webp",
+  "/heromobile/vitamins1.webp",
+  "/heromobile/viks.webp",
+  "/heromobile/cetaphile1.webp",
 ];
 
 export default function MobileSlider() {
+  // ✅ HYDRATION SAFE
+  const [mounted, setMounted] = useState(false);
+
+  // ✅ CURRENT SLIDE
   const [current, setCurrent] = useState(0);
 
+  // ✅ TOUCH REFERENCES
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  // Auto Slide
+  /* ================= MOUNT ================= */
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  /* ================= AUTO SLIDE ================= */
+  useEffect(() => {
+    if (!mounted) return;
+
     const interval = setInterval(() => {
-      nextSlide();
+      setCurrent((prev) =>
+        prev === banners.length - 1 ? 0 : prev + 1
+      );
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [current]);
+  }, [mounted]);
 
-  // Next Slide
+  /* ================= NEXT ================= */
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % banners.length);
+    setCurrent((prev) =>
+      prev === banners.length - 1 ? 0 : prev + 1
+    );
   };
 
-  // Prev Slide
+  /* ================= PREV ================= */
   const prevSlide = () => {
     setCurrent((prev) =>
       prev === 0 ? banners.length - 1 : prev - 1
     );
   };
 
-  // Swipe Start
+  /* ================= TOUCH START ================= */
   const handleTouchStart = (e) => {
     touchStartX.current = e.changedTouches[0].screenX;
   };
 
-  // Swipe End
+  /* ================= TOUCH END ================= */
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
+
     handleSwipe();
   };
 
-  // Swipe Logic
+  /* ================= SWIPE ================= */
   const handleSwipe = () => {
-    const distance = touchStartX.current - touchEndX.current;
+    const distance =
+      touchStartX.current - touchEndX.current;
 
-    // Left Swipe
+    // LEFT
     if (distance > 50) {
       nextSlide();
     }
 
-    // Right Swipe
+    // RIGHT
     if (distance < -50) {
       prevSlide();
     }
   };
+
+  // ✅ PREVENT HYDRATION MISMATCH
+  if (!mounted) return null;
 
   return (
     <div className="w-full md:hidden px-4 mt-2">
@@ -69,7 +91,7 @@ export default function MobileSlider() {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Slides */}
+        {/* SLIDER */}
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
@@ -77,25 +99,34 @@ export default function MobileSlider() {
           }}
         >
           {banners.map((img, index) => (
-            <img
+            <div
               key={index}
-              src={img}
-              alt={`banner-${index}`}
-              className="w-full h-[140px] object-cover flex-shrink-0 rounded-[6px]"
-            />
+              className="min-w-full flex-shrink-0"
+            >
+              <Image
+                src={img}
+                alt={`Medicine Banner ${index + 1}`}
+                width={800}
+                height={300}
+                priority={index === 0}
+                className="w-full h-[140px] object-cover rounded-[6px]"
+              />
+            </div>
           ))}
         </div>
 
-        {/* Dots */}
+        {/* DOTS */}
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
           {banners.map((_, index) => (
-            <div
+            <button
               key={index}
+              onClick={() => setCurrent(index)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 current === index
                   ? "w-5 bg-white"
                   : "w-2 bg-white/60"
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>

@@ -1,9 +1,10 @@
 const cities = [
   "deoria",
-  
+  "salempur",
 ];
 
 export default function sitemap() {
+
   const cityPages = cities.map((city) => ({
     url: `https://www.medicobharat.com/medicine-delivery-${city}`,
     lastModified: new Date(),
