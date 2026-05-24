@@ -51,7 +51,7 @@ export async function generateMetadata() {
 
     authors: [{ name: "MedicoBharat" }],
 
-    creator: "MedicoBharat",
+    creator: "MedicoBharat ",
 
     publisher: "MedicoBharat",
 
