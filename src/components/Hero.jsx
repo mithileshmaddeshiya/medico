@@ -8,7 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import ShopCategories from "./SlideCat"
 
-export default function Hero() {
+export default function Hero({data}) {
+
+  console.log(data?.city);
+  
   return (
     <section className="pt-20 md:pt-30 bg-gradient-to-b from-green-50 to-white overflow-hidden">
 
@@ -23,14 +26,14 @@ export default function Hero() {
             <h1 className="text-[14px] sm:text-4xl md:text-4xl font-bold text-gray-900 leading-snug">
               Medicine ghar par mangao-
               <span className="text-green-600">
-                Deoria me
+                {data?.city}
               </span>
             </h1>
 
             {/* Description */}
-            <p className="mt-2 hidden md:block text-[11px] sm:text-lg text-gray-600 leading-normal max-w-md mx-auto md:mx-0">
+            <p className="mt-2 hidden md:block text-[8px] sm:text-lg text-gray-600 leading-normal max-w-md mx-auto md:mx-0">
               Bas WhatsApp par apni medicine bhejein aur ghar baithe delivery paayein.
-              Fast service, trusted pharmacy.
+              Fast service, trusted pharmacy {data?.city} me.
             </p>
 
             {/* MOBILE CALL BANNER */}
@@ -107,18 +110,6 @@ export default function Hero() {
           <div className="w-screen -mx-4 sm:-mx-6">
             <MobileSlider />
           </div>
-
-          {/* Medicine Box Image */}
-          {/* <div className="flex justify-center mt-2">
-            <Image
-              src="/heroimage/medihero.webp"
-              alt="Medicine Delivery"
-              width={120}
-              height={90}
-              className="w-full max-w-[170px] h-auto object-contain"
-              priority
-            />
-          </div> */}
 
           <ShopCategories />
 

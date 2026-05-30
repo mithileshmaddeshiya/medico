@@ -1,15 +1,12 @@
-const cities = [
-  "deoria",
-  "salempur",
-];
+import { cityData } from "@/data/cityData";
 
 export default function sitemap() {
 
-  const cityPages = cities.map((city) => ({
-    url: `https://www.medicobharat.com/medicine-delivery-${city}`,
+  const cityPages = Object.values(cityData).map((city) => ({
+    url: `https://www.medicobharat.com/medicine-delivery/${city.slug}`,
     lastModified: new Date(),
-    changeFrequency: "daily",
-    priority: 0.9,
+    changeFrequency: "weekly",
+    priority: city.slug === "deoria" ? 1.0 : 0.9,
   }));
 
   return [

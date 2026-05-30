@@ -17,16 +17,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const cities = [
-  "medicine-delivery-deoria",
-  "medicine-delivery-gorakhpur",
-  "medicine-delivery-lucknow",
-  "medicine-delivery-varanasi",
-  "medicine-delivery-delhi",
-  "medicine-delivery-mumbai",
-  "medicine-delivery-noida",
-  "medicine-delivery-patna",
-  "medicine-delivery-kanpur",
-  "medicine-delivery-prayagraj",
+  "medicine-delivery/deoria",
+  "medicine-delivery/bhatni",
+  "medicine-delivery/salempur",
+  "medicine-delivery/barhaj",
+  "medicine-delivery/lar",
+  // "medicine-delivery-bhatpar rani",
+  // "medicine-delivery-gauri bazar",
+  // "medicine-delivery-pathardeva",
+  // "medicine-delivery-rampur karkhana",
+  // "medicine-delivery-tarkulwa",
+  // "medicine-delivery-bankata",
+  // "medicine-delivery-bhaluani",
+  // "medicine-delivery-bhagalpur",
+  // "medicine-delivery-baitalpur",
+  // "medicine-delivery-desahi deoria",
 ];
 
 export default function PremiumCitySlider() {

@@ -2,7 +2,7 @@
 
 import { Upload, CheckCircle, Truck } from "lucide-react";
 
-export default function HowItWorks() {
+export default function HowItWorks({data}) {
   const steps = [
     {
       icon: <Upload className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
@@ -27,7 +27,7 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         <h2 className="text-xl md:text-3xl font-bold text-gray-900 leading-snug">
-          How MedicoBharat Works in Deoria
+          How MedicoBharat Works in {data?.city}
         </h2>
 
         <p className="text-sm md:text-base text-gray-600 mt-2 max-w-xl mx-auto">

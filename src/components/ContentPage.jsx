@@ -1,82 +1,205 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
-export default function DeoriaLongSEOContent() {
+export default function CitySEOContent({ data }) {
+
+
+
+
   const [showMore, setShowMore] = useState(false);
-
-  const features = [
-    "100% genuine medicines from trusted pharmacy partners",
-    "Fast medicine delivery support in Deoria",
-    "Easy prescription upload and ordering process",
-    "Trusted healthcare products and wellness essentials",
-    "Simple and customer-friendly experience",
-  ];
-
-  const benefits = [
-    "Save time with doorstep delivery",
-    "Avoid visiting multiple medical stores physically",
-    "Easy healthcare product access",
-    "Reliable medicine ordering support",
-    "Trusted online pharmacy experience",
-  ];
 
   return (
     <section className="w-full bg-gradient-to-b from-white via-green-50/30 to-white py-2 md:py-5 overflow-hidden">
-      
+
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="bg-white border border-green-100 rounded-[13px] p-6 sm:p-10 shadow-sm hover:shadow-lg transition-all duration-300 mb-10">
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Best Online Pharmacy & Medicine Delivery in Deoria
-          </h2>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+            Best Online Pharmacy & Medicine Delivery in {data?.city}
+          </h3>
 
           {/* CONTENT */}
           <div
-            className={`overflow-hidden transition-all duration-500 ${
-              showMore ? "max-h-[2000px]" : "max-h-[260px]"
-            }`}
+            className={`overflow-hidden transition-all duration-500 ${showMore ? "max-h-[5000px]" : "max-h-[260px]"
+              }`}
           >
             <div className="space-y-5 text-gray-700 text-sm sm:text-base leading-relaxed">
 
-              <p>
-                MedicoBharat is one of the trusted platforms for online medicine delivery in Deoria.
-                Customers searching for medicine home delivery in Deoria, online pharmacy in Deoria,
-                medical store near me or fast medicine delivery services can easily order medicines online
-                through MedicoBharat.
-              </p>
 
-              <p>
-                The platform helps customers order prescription medicines, OTC medicines, healthcare
-                products, baby care products, wellness supplements and daily healthcare essentials
-                online with doorstep delivery support.
-              </p>
+              <h3>
+                Online Medicine Delivery in {data?.city} | Trusted Pharmacy Support
+              </h3>
+              <div
+                className={`overflow-hidden transition-all duration-500 ${showMore ? "max-h-[5000px]" : "max-h-[260px]"
+                  }`}
+              >
+                <div className="space-y-6 text-gray-700 text-sm sm:text-base leading-relaxed">
 
-              <p>
-                MedicoBharat provides fast online medicine delivery across Civil Lines, Station Road,
-                Malviya Road, Raghav Nagar, Saket Nagar, Hanuman Mandir Area, Rudrapur Road,
-                Subhash Chowk and nearby areas of Deoria.
-              </p>
+                  {/* INTRO */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Online Medicine Delivery in {data?.city}
+                    </h3>
 
-              <p>
-                Customers looking for trusted medical stores in Deoria can upload prescriptions online,
-                search medicines easily and place medicine orders from home without visiting multiple
-                pharmacy stores physically.
-              </p>
+                    <p>{data?.seoContent?.intro}</p>
+                  </div>
 
-              <p>
-                Online medicine ordering helps save time and provides easy access to healthcare products,
-                genuine medicines and wellness essentials. MedicoBharat focuses on customer-friendly
-                service, fast support and reliable medicine delivery experience in Deoria.
-              </p>
+                  {/* SERVICES */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Services Available in {data?.city}
+                    </h3>
 
-              <p>
-                Many customers search for 24x7 medicine delivery in Deoria, emergency medicine delivery,
-                online pharmacy near me and medicine delivery near railway station area. MedicoBharat
-                aims to provide trusted online pharmacy support and convenient medicine ordering
-                experience for customers in Deoria and nearby locations.
-              </p>
+                    <ul className="grid sm:grid-cols-2 gap-2">
+                      {data?.seoContent?.services?.map((service, index) => (
+                        <li key={index}>
+                          • {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* AREAS */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Areas We Serve in {data?.city}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-2">
+                      {data?.seoContent?.areas?.map((area, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-sm text-blue-700"
+                        >
+                          {area}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="mt-4">
+                      MedicoBharat provides medicine ordering support across
+                      {" "}
+                      {data?.seoContent?.areas?.join(", ")}
+                      {" "}
+                      and nearby locations in {data?.city}.
+                    </p>
+                  </div>
+
+                  {/* BENEFITS */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Benefits of Online Medicine Ordering
+                    </h3>
+
+                    <ul className="grid sm:grid-cols-2 gap-2">
+                      {data?.seoContent?.benefits?.map((benefit, index) => (
+                        <li key={index}>
+                          • {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* POPULAR SEARCHES */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Popular Searches in {data?.city}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-2">
+                      {data?.highlights?.map((item, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs text-green-700"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* EMERGENCY SUPPORT */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Emergency Medicine Support in {data?.city}
+                    </h3>
+
+                    <p>{data?.seoContent?.emergencySupport}</p>
+                  </div>
+
+                  {/* PRESCRIPTION */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Prescription Medicine Ordering
+                    </h3>
+
+                    <p>{data?.seoContent?.prescriptionSupport}</p>
+                  </div>
+
+                  {/* HEALTHCARE PRODUCTS */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Healthcare Products Available
+                    </h3>
+
+                    <p>{data?.seoContent?.healthcareProducts}</p>
+                  </div>
+
+                  {/* TRUST */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Why Choose MedicoBharat in {data?.city}
+                    </h3>
+
+                    <p>{data?.seoContent?.trustSection}</p>
+                  </div>
+
+                  {/* NEARBY CITIES */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Medicine Delivery in Nearby Cities
+                    </h3>
+
+                    <div className="flex flex-wrap gap-2">
+                      <Link
+                        href="/medicine-delivery/salempur"
+                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
+                        Salempur
+                      </Link>
+
+                      <Link
+                        href="/medicine-delivery/bhatni"
+                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
+                        Bhatni
+                      </Link>
+
+                      <Link
+                        href="/medicine-delivery/barhaj"
+                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
+                        Barhaj
+                      </Link>
+
+                      <Link
+                        href="/medicine-delivery/lar"
+                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
+                        Lar
+                      </Link>
+
+                      <Link
+                        href="/medicine-delivery/bhatpar"
+                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
+                        Bhatpar Rani
+                      </Link>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
 
             </div>
           </div>
@@ -91,9 +214,8 @@ export default function DeoriaLongSEOContent() {
                 {showMore ? "Read Less" : "Read More"}
 
                 <svg
-                  className={`h-4 w-4 transition-transform duration-300 ${
-                    showMore ? "rotate-180" : ""
-                  }`}
+                  className={`h-4 w-4 transition-transform duration-300 ${showMore ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"

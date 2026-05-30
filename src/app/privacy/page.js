@@ -3,7 +3,7 @@ export const metadata = {
     "Privacy Policy - MedicoBharat | Customer Data & Healthcare",
 
   description:
-    "Read the Privacy Policy of MedicoBharat to understand how we collect, use, and protect customer information and healthcare-related data.",
+    "Read the Privacy Policy of MedicoBharat to understand how we collect, use, and protect customer information and healthcare-related.",
 
   keywords: [
     "MedicoBharat privacy policy",

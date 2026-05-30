@@ -34,7 +34,10 @@ const reviews = [
   },
 ]
 
-export default function Reviews() {
+export default function Reviews({data}) {
+
+
+
   return (
     <section className="py-2 bg-white">
 
@@ -46,7 +49,7 @@ export default function Reviews() {
         </h2>
 
         <p className="mt-2 text-gray-600 mb-3 text-sm sm:text-base">
-          Deoria ke log Medicobharat par bharosa karte hain
+          {data?.city} ke log Medicobharat par bharosa karte hain
         </p>
 
         {/* Swiper */}

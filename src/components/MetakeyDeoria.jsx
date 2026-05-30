@@ -1,23 +1,9 @@
 import Link from "next/link";
 
 
-export default function MedicoBharatSEOSection() {
+export default function MedicoBharatSEOSection( {data} ) {
 
-  const relatedTerms = [
-    "Online Medicine Delivery in Deoria",
-    "Best Pharmacy in Deoria",
-    "Medicine Home Delivery Deoria",
-    "Online Pharmacy Deoria",
-    "Medical Store in Deoria",
-    "Buy Medicines Online Deoria",
-    "Prescription Medicine Delivery Deoria",
-    "Healthcare Products Deoria",
-    "24x7 Medicine Delivery Deoria",
-    "Fast Medicine Delivery Deoria",
-    "Genuine Medicines in Deoria",
-    "OTC Medicines Deoria",
-  ];
-
+  
   return (
     <section className="w-full py-3 sm:py-5 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6">
@@ -25,13 +11,13 @@ export default function MedicoBharatSEOSection() {
         {/* Top Heading */}
         <div className="text-center mb-5">
           <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
-            💚 Trusted Healthcare Partner in Deoria
+            💚 Trusted Healthcare Partner in {data?.city}
           </span>
 
           <h2 className="mt-4 text-2xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
             Fast & Trusted Online Medicine
             <br className="hidden sm:block" />
-            Delivery in Deoria
+            Delivery in {data?.city}
           </h2>
         </div>
 
@@ -41,16 +27,16 @@ export default function MedicoBharatSEOSection() {
 
             <div className="max-w-3xl">
               <h3 className="text-xl text-center sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                Popular Searches in Deoria
+                Popular Searches in {data?.city}
               </h3>
 
               <p className="text-sm text-center sm:text-base text-gray-600 leading-relaxed mb-4">
                 Users frequently search for online pharmacy, medicine home
-                delivery aur healthcare products in Deoria.
+                delivery aur healthcare products in {data?.city}.
               </p>
 
               <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
-                {relatedTerms.map((term, index) => (
+                {data?.highlights.map((term, index) => (
                   <span
                     key={index}
                     className="px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs sm:text-sm font-medium text-green-700 hover:bg-green-100 transition text-center"

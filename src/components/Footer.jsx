@@ -2,8 +2,11 @@
 
 import { Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ data }) {
+
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-10">
 
@@ -27,7 +30,7 @@ export default function Footer() {
           />
 
           <p className="text-sm text-gray-600 leading-7">
-            MedicoBharat provides trusted online medicine delivery in Deoria
+            MedicoBharat provides trusted online medicine delivery in {data?.city} <br />
             with fast doorstep delivery, genuine medicines, and easy online
             ordering support.
           </p>
@@ -44,48 +47,39 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-600">
 
             <li>
-              <a
-                href="/medicine-delivery-deoria"
+              <Link
+                href="/"
                 className="hover:text-green-600 transition"
               >
-                Online Medicine Delivery in Deoria
-              </a>
+                Medicine Home Delivery {data?.city}
+              </Link>
             </li>
 
             <li>
-              <a
-                href="/medicine-delivery-deoria"
+              <Link
+                href="/"
                 className="hover:text-green-600 transition"
               >
-                Medicine Home Delivery Deoria
-              </a>
+                Online Pharmacy {data?.city}
+              </Link>
             </li>
 
             <li>
-              <a
-                href="/medicine-delivery-deoria"
+              <Link
+                href="/"
                 className="hover:text-green-600 transition"
               >
-                Online Pharmacy Deoria
-              </a>
+                Medical Store in {data?.city}
+              </Link>
             </li>
 
             <li>
-              <a
-                href="/medicine-delivery-deoria"
+              <Link
+                href="/"
                 className="hover:text-green-600 transition"
               >
-                Medical Store in Deoria
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/medicine-delivery-deoria"
-                className="hover:text-green-600 transition"
-              >
-                24x7 Medicine Delivery Deoria
-              </a>
+                24x7 Medicine Delivery {data?.city}
+              </Link>
             </li>
 
           </ul>
@@ -173,7 +167,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-green-600 shrink-0" />
-              <span>Deoria, Uttar Pradesh</span>
+              <span>{data?.city}, Uttar Pradesh</span>
             </div>
 
           </div>
@@ -185,7 +179,7 @@ export default function Footer() {
       {/* LOCAL SEO TEXT */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-5 text-center text-[12px] text-gray-500 leading-6">
 
-        MedicoBharat offers fast online medicine delivery in Deoria,
+        MedicoBharat offers fast online medicine delivery in {data?.city},
         medicine home delivery services, healthcare products,
         prescription medicines, and trusted pharmacy support across
         Civil Lines, Station Road, Saket Nagar, Rudrapur Road,
