@@ -98,7 +98,7 @@ export default function MobileSlider() {
             transform: `translateX(-${current * 100}%)`,
           }}
         >
-          {banners.map((img, index) => (
+          {banners?.map((img, index) => (
             <div
               key={index}
               className="min-w-full flex-shrink-0"

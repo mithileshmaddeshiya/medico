@@ -2,137 +2,125 @@ import BannerImage from '@/components/BannerImage'
 import CityInterlinking from '@/components/cityData'
 import FinalCTA from '@/components/Cta'
 import FAQ from '@/components/Faq'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import TrustSection from '@/components/HowWork'
 import Reviews from '@/components/Review'
 import React from 'react'
+import { homeData } from '@/data/homeData'
+import HowItWorks from '@/components/HowCity'
+import MedicoBharatSEOSection from '@/components/MetakeyDeoria'
+import CitySEOContent from '@/components/ContentPage'
 
-export async function generateMetadata() {
-  return {
-    title:
-      "Online Medicine Delivery in Deoria | Fast Medicine Home Delivery",
-
-    description:
-      "Order medicines online in Deoria with fast home delivery. MedicoBharat provides genuine medicines, trusted pharmacy services, healthcare products and quick doorstep medicine delivery.",
-
-    keywords: [
-      "Online Medicine Delivery",
-      "Medicine Home Delivery",
-      "Online Pharmacy",
-      "Best Pharmacy in Deoria",
-      "Medical Store Near Me",
-      "Medicine Delivery Deoria",
-      "Buy Medicines Online",
-      "Healthcare Products",
-      "Prescription Medicines",
-      "Fast Medicine Delivery",
-      "Trusted Pharmacy",
-      "OTC Medicines",
-      "Online Medical Store",
-      "Medicine Delivery Near Me",
-      "24x7 Medicine Delivery",
-    ],
-
-    authors: [{ name: "MedicoBharat" }],
-
-    creator: "MedicoBharat",
-
-    publisher: "MedicoBharat",
-
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
-
-    alternates: {
-      canonical: "https://www.medicobharat.com",
-    },
-
-    openGraph: {
-      title:
-        "Online Medicine Delivery | MedicoBharat",
-      description:
-        "Fast and trusted online medicine delivery service with genuine medicines and healthcare products.",
-      url: "https://www.medicobharat.com",
-      siteName: "MedicoBharat",
-      locale: "en_IN",
-      type: "website",
-      images: [
-        {
-          url: "/images/medicobharat-home.jpg",
-          width: 1200,
-          height: 630,
-          alt: "MedicoBharat Online Medicine Delivery",
-        },
-      ],
-    },
-
-    
-
-    twitter: {
-      card: "summary_large_image",
-      title:
-        "Online Medicine Delivery | MedicoBharat",
-      description:
-        "Trusted online pharmacy and fast medicine home delivery service.",
-      images: ["/images/medicobharat-home.jpg"],
-    },
-  };
-}
 
 const page = () => {
+
+  const data = homeData;
+
+  console.log(data);
+
+
+
+
   return (
     <div>
 
-      {/* MEDICAL BUSINESS SCHEMA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-
-            "@type": "MedicalBusiness",
-
-            name: "MedicoBharat",
-
-            url: "https://www.medicobharat.com",
-
-            image: "https://www.medicobharat.com/logo.png",
-
-            description:
-              "Online medicine delivery platform providing fast home delivery of medicines and healthcare products.",
-
-            priceRange: "₹₹",
-
-            openingHours: "Mo-Su 00:00-23:59",
-
-            areaServed: {
-              "@type": "Country",
-              name: "India",
-            },
-
-            sameAs: [
-              "https://www.instagram.com/medicobharat",
-              "https://www.facebook.com/medicobharat",
-            ],
+            "@graph": [
+              {
+                "@type": "Pharmacy",
+                "@id": "https://www.medicobharat.com/#pharmacy",
+                "name": "MedicoBharat",
+                "url": "https://www.medicobharat.com",
+                "logo": "https://www.medicobharat.com/images/logo.png",
+                "description": "MedicoBharat is the leading online medicine delivery service in Deoria, Uttar Pradesh. Order medicines online and get fast doorstep delivery across Deoria district including Salempur, Bhatni, Barhaj, and Lar.",
+                "telephone": "+91-9891233525",
+                "priceRange": "₹",
+                "image": "https://www.medicobharat.com/images/short/statsimg.webp",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Main Road, Near Chowk",
+                  "addressLocality": "Deoria",
+                  "addressRegion": "Uttar Pradesh",
+                  "postalCode": "274501",
+                  "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "26.5024",
+                  "longitude": "83.7781"
+                },
+                "openingHoursSpecification": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
+                  "opens": "08:00",
+                  "closes": "22:00"
+                },
+                "areaServed": [
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Deoria"
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Salempur"
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Bhatni"
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Barhaj"
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Lar"
+                  }
+                ]
+              },
+              {
+                "@type": "DeliveryService",
+                "@id": "https://www.medicobharat.com/#delivery",
+                "name": "MedicoBharat Medicine Delivery",
+                "provider": {
+                  "@id": "https://www.medicobharat.com/#pharmacy"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Deoria District"
+                }
+              }
+            ]
           }),
         }}
       />
 
-      <Hero />
+
+
+      <Hero data={data} />
       <CityInterlinking />
       <BannerImage />
       <Reviews />
-      <FinalCTA />
+      <HowItWorks data={data} />
+      <MedicoBharatSEOSection data={data} />
+      <FinalCTA data={data} />
+      <CitySEOContent data={data} />
       <TrustSection />
-      <FAQ />
+      <FAQ data={data} />
+      <Footer />
 
     </div>
   )

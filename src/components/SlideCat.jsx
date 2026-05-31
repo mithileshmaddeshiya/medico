@@ -6,6 +6,7 @@ import {
   Pill,
   Activity,
 } from "lucide-react"
+import Link from "next/link"
 
 const categories = [
   {
