@@ -316,7 +316,4 @@ export const homeData = {
             "MedicoBharat ka lakshya Deoria district ke har parivar ke liye healthcare ko zyada accessible aur convenient banana hai. Deoria Sadar se Salempur tak, Bhatni se Barhaj tak aur Lar se Gauri Bazar tak hum medicine delivery aur healthcare support pahunchane ke liye pratibaddh hain. Genuine medicines, prescription compliance, customer-focused service aur reliable ordering process ke saath MedicoBharat Deoria ke sabse bharosemand online medicine delivery platforms me se ek banne ki disha me kaam kar raha hai.",
     },
 
-
-
-
 };

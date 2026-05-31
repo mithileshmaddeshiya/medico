@@ -42,7 +42,7 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <section className="w-full overflow-hidden bg-gradient-to-b from-white to-green-50/30 py-6 md:py-10 px-4">
+    <section className="w-full overflow-hidden bg-gradient-to-b from-white to-green-50/30 py-20 md:py-20 px-4">
 
       <div className="max-w-6xl mx-auto">
 
