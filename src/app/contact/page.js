@@ -141,10 +141,10 @@ export default function Page() {
               </p>
 
               <a
-                href="tel:+917303995446"
+                href="tel:+919891233525"
                 className="text-green-600 font-semibold text-sm hover:underline"
               >
-                +91 7303995446
+                +91 989-123-3525
               </a>
 
             </div>

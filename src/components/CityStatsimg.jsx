@@ -136,7 +136,7 @@ export default function DeoriaHeroSection() {
                                 </button>
 
                                 <a
-                                    href="tel:+919311587730"
+                                    href="tel:+919891233525"
                                     className="group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-6 sm:px-8 py-4 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 active:scale-95 flex items-center justify-center gap-3 shadow-lg"
                                 >
 

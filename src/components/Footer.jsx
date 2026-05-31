@@ -190,7 +190,7 @@ export default function Footer({ data }) {
       {/* BOTTOM */}
       <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500 px-4">
 
-        © {new Date().getFullYear()} MedicoBharat | All rights reserved.
+        © {new Date().getFullYear()} | Orders are fulfilled by licensed pharmacy partners | MedicoBharat | All rights reserved.
 
       </div>
 

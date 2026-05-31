@@ -36,7 +36,7 @@ export default function HowItWorks({data}) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-5">
 
-          {steps.map((step, index) => {
+          {steps?.map((step, index) => {
             const Card = (
               <div className="bg-green-50 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition duration-300 hover:scale-[1.02] cursor-pointer">
                 <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mx-auto bg-white rounded-full shadow mb-3 md:mb-4">
