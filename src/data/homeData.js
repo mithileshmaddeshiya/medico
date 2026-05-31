@@ -227,7 +227,7 @@ export const homeData = {
                 "Haan. MedicoBharat sirf genuine aur trusted sources se medicines provide karta hai. Hamara focus customer safety aur authentic medicines ki pahunch par hai.",
         },
         {
-            question: "Deoria ke alawa MedicoBharat kahan-kahan deliver karta hai?",
+            question: "Deoria ke alawa MedicoBharat kahan-kahan deliver karta hai? ",
             answer:
                 "MedicoBharat Deoria district ke sabhit ilakon mein service deta hai jisme Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani, Pathardeva, Rampur Karkhana, Gauri Bazar, Rudrapur aur nearby towns aur villages shaamil hain.",
         },
