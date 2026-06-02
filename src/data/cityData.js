@@ -16,16 +16,17 @@ export const cityData = {
             "Order medicines online in Deoria with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.",
 
         hero: {
-            heading:   "Medicine ghar par mangao- Deoria me",
+            heading: "Medicine ghar par mangao- Deoria me",
             subheading: "Bas WhatsApp par apni medicine bhejein aur ghar baithe delivery paayein. Fast service, trusted pharmacy.",
             buttonText: "Place your Order",
-            image:      "/heroimage/medihero.webp",
+            image: "/heroimage/medihero.webp",
         },
 
         keywords: [
             // Primary
             "Online Medicine Delivery in Deoria",
             "Medicine Delivery Deoria",
+            "Medicine in Deoria",
             "Online Pharmacy Deoria",
             "Medical Store in Deoria",
 
@@ -57,56 +58,56 @@ export const cityData = {
             "Prescription Upload Pharmacy Deoria",
         ],
 
-        image: "/images/deoria-medicobharat.jpg",
+        image: "/cityimg/deoriaimg.webp",
 
         faqs: [
             {
                 question: "How can I order medicines online in Deoria?",
-                answer:   "Customers can order medicines online in Deoria by sharing their medicine requirements or uploading a valid doctor's prescription. MedicoBharat helps customers access medicines and healthcare products conveniently from home.",
+                answer: "Customers can order medicines online in Deoria by sharing their medicine requirements or uploading a valid doctor's prescription. MedicoBharat helps customers access medicines and healthcare products conveniently from home.",
             },
             {
                 question: "Is online medicine delivery available across Deoria district?",
-                answer:   "Yes, medicine ordering support is available across Deoria district including Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Deoria Sadar, Subhash Chowk, Raghav Nagar and nearby areas.",
+                answer: "Yes, medicine ordering support is available across Deoria district including Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Deoria Sadar, Subhash Chowk, Raghav Nagar and nearby areas.",
             },
             {
                 question: "Can I get medicine home delivery in Deoria?",
-                answer:   "Yes, customers can access medicine home delivery support in Deoria for prescription medicines, OTC medicines, healthcare products and wellness essentials depending on availability.",
+                answer: "Yes, customers can access medicine home delivery support in Deoria for prescription medicines, OTC medicines, healthcare products and wellness essentials depending on availability.",
             },
             {
                 question: "Do I need a prescription to order medicines online in Deoria?",
-                answer:   "Prescription medicines require a valid doctor's prescription. Customers can upload their prescription online and receive assistance with their medicine requirements.",
+                answer: "Prescription medicines require a valid doctor's prescription. Customers can upload their prescription online and receive assistance with their medicine requirements.",
             },
             {
                 question: "Can I order prescription medicines online in Deoria?",
-                answer:   "Yes, MedicoBharat supports prescription medicine ordering in Deoria. Customers can upload a valid prescription and receive assistance with their medicine requirements.",
+                answer: "Yes, MedicoBharat supports prescription medicine ordering in Deoria. Customers can upload a valid prescription and receive assistance with their medicine requirements.",
             },
             {
                 question: "What types of medicines can be ordered online in Deoria?",
-                answer:   "Customers can access prescription medicines, OTC medicines, wellness products, personal care essentials, healthcare accessories and daily healthcare products depending on availability.",
+                answer: "Customers can access prescription medicines, OTC medicines, wellness products, personal care essentials, healthcare accessories and daily healthcare products depending on availability.",
             },
             {
                 question: "Does MedicoBharat provide healthcare products in Deoria?",
-                answer:   "Yes, customers can access healthcare products, wellness supplements, nutrition products, baby care products, personal care essentials and daily healthcare items in Deoria.",
+                answer: "Yes, customers can access healthcare products, wellness supplements, nutrition products, baby care products, personal care essentials and daily healthcare items in Deoria.",
             },
             {
                 question: "Is emergency medicine delivery support available in Deoria?",
-                answer:   "Customers looking for urgent medicine requirements in Deoria can use MedicoBharat for convenient medicine ordering assistance and healthcare support.",
+                answer: "Customers looking for urgent medicine requirements in Deoria can use MedicoBharat for convenient medicine ordering assistance and healthcare support.",
             },
             {
                 question: "Can senior citizens order medicines online in Deoria?",
-                answer:   "Yes, senior citizens and their family members can conveniently order medicines online in Deoria and manage regular healthcare requirements from home.",
+                answer: "Yes, senior citizens and their family members can conveniently order medicines online in Deoria and manage regular healthcare requirements from home.",
             },
             {
                 question: "Which areas of Deoria are covered by MedicoBharat?",
-                answer:   "Medicine ordering support is available across Civil Lines, Station Road, Saket Nagar, Rudrapur Road, Malviya Road, Deoria Sadar, Bhatpar Rani, Pathardeva, Rampur Karkhana, Gauri Bazar and nearby locations.",
+                answer: "Medicine ordering support is available across Civil Lines, Station Road, Saket Nagar, Rudrapur Road, Malviya Road, Deoria Sadar, Bhatpar Rani, Pathardeva, Rampur Karkhana, Gauri Bazar and nearby locations.",
             },
             {
                 question: "Does MedicoBharat support nearby towns of Deoria?",
-                answer:   "Yes, MedicoBharat supports customers across Deoria district and nearby locations including Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani and surrounding regions.",
+                answer: "Yes, MedicoBharat supports customers across Deoria district and nearby locations including Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani and surrounding regions.",
             },
             {
                 question: "Why choose MedicoBharat for online medicine delivery in Deoria?",
-                answer:   "MedicoBharat focuses on customer convenience, prescription support, healthcare product availability, trusted pharmacy assistance and a reliable medicine ordering experience across Deoria district.",
+                answer: "MedicoBharat focuses on customer convenience, prescription support, healthcare product availability, trusted pharmacy assistance and a reliable medicine ordering experience across Deoria district.",
             },
         ],
 
@@ -129,8 +130,9 @@ export const cityData = {
 
         seoContent: {
 
+
             intro:
-                "MedicoBharat provides online medicine delivery services in Deoria, helping customers order medicines, healthcare products, wellness essentials, and prescription medicines from the comfort of their homes. Our medicine ordering support is available across major areas of Deoria including Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Subhash Chowk, Raghav Nagar, Hanuman Mandir Area, Malviya Road, Deoria Sadar and nearby locations. Whether you need daily medicines, prescription refills, healthcare products, or wellness supplements, MedicoBharat aims to make healthcare access more convenient for families across Deoria district.",
+                "MedicoBharat provides trusted online medicine delivery services in Deoria, Uttar Pradesh, helping customers order prescription medicines, healthcare products, wellness supplements, diabetes care products, blood pressure medicines, baby care essentials, and daily healthcare needs from the comfort of their homes. Our medicine delivery support covers major locations across Deoria including Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Subhash Chowk, Raghav Nagar, Hanuman Mandir Area, Malviya Road, Deoria Sadar, Pathardeva, Rampur Karkhana, Gauri Bazar, Bhaluani, Bankata, Majhauli Raj, and nearby villages. Whether you need regular medicines, prescription refills, healthcare products, or wellness essentials, MedicoBharat aims to improve healthcare accessibility and convenience for families across Deoria district.",
 
             areas: [
                 "Civil Lines",
@@ -142,59 +144,68 @@ export const cityData = {
                 "Hanuman Mandir Area",
                 "Malviya Road",
                 "Deoria Sadar",
-                "Bhatpar Rani",
                 "Pathardeva",
                 "Rampur Karkhana",
                 "Gauri Bazar",
                 "Bhaluani",
                 "Bankata",
                 "Majhauli Raj",
+                "Bhatpar Rani",
+                "Salempur",
+                "Bhatni",
+                "Lar",
+                "Barhaj"
             ],
 
             services: [
                 "Online medicine ordering",
                 "Prescription medicine delivery",
-                "OTC medicine ordering",
-                "Healthcare product delivery",
-                "Diabetes care products",
-                "Blood pressure medicine support",
-                "Wellness supplements",
-                "Personal care products",
-                "Baby care products",
-                "Senior citizen healthcare support",
-                "Emergency medicine assistance",
-                "Daily healthcare essentials",
-                "Online pharmacy support",
                 "Medicine refill assistance",
+                "Healthcare product delivery",
+                "OTC medicine ordering",
+                "Diabetes medicine support",
+                "Blood pressure medicine support",
+                "Heart care medicine assistance",
+                "Thyroid medicine ordering",
+                "Baby care products",
+                "Personal care products",
+                "Nutrition supplements",
+                "Wellness products",
+                "Healthcare accessories",
+                "Senior citizen healthcare support",
+                "Online pharmacy assistance"
             ],
 
             benefits: [
-                "Convenient medicine ordering from home",
+                "Easy online medicine ordering",
+                "Convenient healthcare access from home",
                 "Prescription upload support",
-                "Trusted pharmacy assistance",
-                "Access to genuine medicines",
-                "Healthcare products in one place",
-                "Easy online ordering process",
-                "Support for regular medicine requirements",
-                "Customer-friendly experience",
+                "Support for long-term treatments",
+                "Access to genuine healthcare products",
+                "Medicine refill convenience",
+                "Time-saving healthcare solution",
                 "Reduced need to visit multiple pharmacies",
-                "Quick assistance for medicine availability",
-                "Healthcare access across Deoria district",
-                "Reliable support for families and senior citizens",
+                "Customer-friendly ordering process",
+                "Healthcare support across Deoria district",
+                "Support for senior citizens and families",
+                "Easy access to wellness and healthcare essentials"
             ],
 
             emergencySupport:
-                "Customers searching for emergency medicine delivery in Deoria can use MedicoBharat for convenient medicine ordering support. Whether medicines are needed urgently for daily treatment, prescription continuation, or healthcare requirements, customers across Deoria and nearby locations can access assistance through a simple online process. Medicine ordering support is available for residents of Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Deoria Sadar, and surrounding areas.",
+                "Customers searching for emergency medicine delivery in Deoria can use MedicoBharat for convenient medicine ordering support. Whether medicines are required for ongoing treatment, prescription continuation, diabetes management, blood pressure care, or urgent healthcare requirements, MedicoBharat helps simplify access to medicines and healthcare products across Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Deoria Sadar, and nearby areas. The platform is designed to improve healthcare accessibility while providing a simple and convenient ordering experience.",
 
             prescriptionSupport:
-                "MedicoBharat supports prescription medicine ordering in Deoria through a simple prescription upload process. Customers can upload a valid doctor's prescription and receive assistance with ordering required medicines. This service helps patients manage long-term treatments, regular medicine refills, diabetes medications, blood pressure medicines, heart care medicines, and other prescription-based healthcare requirements without unnecessary travel.",
+                "MedicoBharat supports prescription medicine ordering in Deoria through an easy prescription upload process. Customers can upload a valid doctor’s prescription and receive assistance with ordering required medicines. This support is useful for patients managing diabetes, blood pressure, thyroid disorders, heart conditions, neurological treatments, orthopedic care, and other long-term healthcare requirements that require regular prescription refills.",
 
             healthcareProducts:
-                "In addition to medicines, MedicoBharat supports access to a wide range of healthcare products including wellness supplements, nutrition products, personal care essentials, baby care products, immunity support products, healthcare accessories, and daily medical necessities. Customers across Deoria district can conveniently explore healthcare essentials through a single platform designed to improve accessibility and convenience.",
+                "In addition to medicines, MedicoBharat supports access to a wide range of healthcare products including wellness supplements, nutrition products, immunity support products, personal care essentials, baby care products, healthcare accessories, hygiene products, and daily healthcare necessities. Customers across Deoria district can conveniently explore healthcare essentials through a single platform designed to improve accessibility and convenience.",
 
             trustSection:
-                "MedicoBharat focuses on providing a trusted healthcare experience for customers across Deoria district. By supporting medicine ordering in Deoria, Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani, Pathardeva, Rampur Karkhana, and nearby regions, MedicoBharat aims to improve healthcare accessibility through customer-friendly service, prescription support, healthcare product availability, and reliable pharmacy assistance. Our focus remains on convenience, trust, accessibility, and a seamless medicine ordering experience for every customer.",
+                "MedicoBharat focuses on providing a trusted healthcare experience for customers across Deoria district. By supporting medicine ordering in Deoria, Salempur, Bhatni, Barhaj, Lar, Pathardeva, Rampur Karkhana, Gauri Bazar, Bhaluani, Bankata, and nearby locations, MedicoBharat aims to improve healthcare accessibility through customer-friendly service, prescription support, healthcare product availability, and reliable pharmacy assistance. Our focus remains on convenience, trust, accessibility, and a seamless medicine ordering experience for every customer."
+
+
         },
+
     },
 
 
@@ -214,10 +225,10 @@ export const cityData = {
             "Order medicines online in Salempur with MedicoBharat. Get prescription medicines, OTC products, and healthcare essentials delivered at your doorstep across Salempur town and nearby areas.",
 
         hero: {
-            heading:    "Medicine ghar par mangao- Salempur me",
+            heading: "Medicine ghar par mangao- Salempur me",
             subheading: "Salempur me prescription upload karein aur apni zaroorat ki medicines aasani se ghar baithe mangaayein.",
             buttonText: "Place your Order",
-            image:      "/heroimage/medihero.webp",
+            image: "/cityimg/salempurimg.webp",
         },
 
         keywords: [
@@ -260,43 +271,43 @@ export const cityData = {
         faqs: [
             {
                 question: "How can I order medicines online in Salempur?",
-                answer:   "Residents of Salempur can place medicine orders by sharing their requirements or uploading a valid doctor's prescription through MedicoBharat. Medicines and healthcare products can be accessed conveniently without stepping out of home.",
+                answer: "Residents of Salempur can place medicine orders by sharing their requirements or uploading a valid doctor's prescription through MedicoBharat. Medicines and healthcare products can be accessed conveniently without stepping out of home.",
             },
             {
                 question: "Is medicine delivery available across Salempur town?",
-                answer:   "Yes, medicine ordering support is available across Salempur town including Salempur Bazar, Railway Station Area, Deoria Road, and nearby localities within Salempur block.",
+                answer: "Yes, medicine ordering support is available across Salempur town including Salempur Bazar, Railway Station Area, Deoria Road, and nearby localities within Salempur block.",
             },
             {
                 question: "Can I get medicines delivered at home in Salempur?",
-                answer:   "Yes, customers in Salempur can receive medicine delivery support for prescription medicines, OTC medicines, and daily healthcare essentials depending on availability in the area.",
+                answer: "Yes, customers in Salempur can receive medicine delivery support for prescription medicines, OTC medicines, and daily healthcare essentials depending on availability in the area.",
             },
             {
                 question: "Is a prescription required to order medicines in Salempur?",
-                answer:   "Prescription-based medicines require a valid doctor's prescription. Customers in Salempur can upload their prescription and get assistance with their medicine requirements conveniently.",
+                answer: "Prescription-based medicines require a valid doctor's prescription. Customers in Salempur can upload their prescription and get assistance with their medicine requirements conveniently.",
             },
             {
                 question: "What medicines and products can I order in Salempur?",
-                answer:   "Customers in Salempur can order prescription medicines, OTC medicines, wellness supplements, personal care products, healthcare accessories, and daily medical necessities depending on availability.",
+                answer: "Customers in Salempur can order prescription medicines, OTC medicines, wellness supplements, personal care products, healthcare accessories, and daily medical necessities depending on availability.",
             },
             {
                 question: "Can I get healthcare products delivered in Salempur?",
-                answer:   "Yes, along with medicines, customers in Salempur can access nutrition supplements, baby care products, personal care essentials, immunity boosters, and daily healthcare items through MedicoBharat.",
+                answer: "Yes, along with medicines, customers in Salempur can access nutrition supplements, baby care products, personal care essentials, immunity boosters, and daily healthcare items through MedicoBharat.",
             },
             {
                 question: "Does MedicoBharat serve areas near Salempur?",
-                answer:   "Yes, MedicoBharat supports customers in Salempur and nearby locations including Barhaj, Deoria, Lar, and other towns and villages within Salempur tehsil and surrounding areas.",
+                answer: "Yes, MedicoBharat supports customers in Salempur and nearby locations including Barhaj, Deoria, Lar, and other towns and villages within Salempur tehsil and surrounding areas.",
             },
             {
                 question: "Can elderly patients in Salempur use MedicoBharat?",
-                answer:   "Absolutely. Senior citizens and patients managing long-term health conditions in Salempur can conveniently manage their medicine requirements from home without visiting a pharmacy in person.",
+                answer: "Absolutely. Senior citizens and patients managing long-term health conditions in Salempur can conveniently manage their medicine requirements from home without visiting a pharmacy in person.",
             },
             {
                 question: "Is urgent medicine support available in Salempur?",
-                answer:   "Customers in Salempur with urgent medicine requirements can reach out to MedicoBharat for quick ordering assistance and healthcare support as per availability.",
+                answer: "Customers in Salempur with urgent medicine requirements can reach out to MedicoBharat for quick ordering assistance and healthcare support as per availability.",
             },
             {
                 question: "Why should Salempur residents choose MedicoBharat?",
-                answer:   "MedicoBharat offers Salempur residents a reliable, customer-friendly platform to access genuine medicines, upload prescriptions, and get healthcare products delivered at home — reducing the need to travel to distant pharmacies.",
+                answer: "MedicoBharat offers Salempur residents a reliable, customer-friendly platform to access genuine medicines, upload prescriptions, and get healthcare products delivered at home — reducing the need to travel to distant pharmacies.",
             },
         ],
 
@@ -320,65 +331,75 @@ export const cityData = {
         seoContent: {
 
             intro:
-                "MedicoBharat brings reliable online medicine delivery support to Salempur, helping residents order prescription medicines, OTC products, and essential healthcare items without leaving their homes. Medicine ordering assistance is accessible across Salempur town, Salempur Bazar, Railway Station Area, Deoria Road, and surrounding localities within Salempur block. Families, senior citizens, and patients managing chronic conditions in Salempur can now get their healthcare essentials more conveniently through a trusted medicine ordering platform.",
+                "MedicoBharat offers reliable online medicine delivery services in Salempur, Uttar Pradesh, helping residents access medicines, prescription healthcare products, wellness supplements, baby care essentials, personal care products, and daily healthcare needs conveniently from their homes. Salempur is one of the important towns of Deoria district, and many families, senior citizens, students, and working professionals depend on regular medicines for healthcare management. MedicoBharat aims to simplify healthcare accessibility by providing a convenient medicine ordering experience across Salempur and nearby locations. Whether customers require diabetes medicines, blood pressure medicines, thyroid medicines, prescription refills, immunity support products, or wellness essentials, MedicoBharat helps improve convenience through a customer-friendly online platform. Our medicine ordering support extends across Salempur town, Railway Station Area, Majhauli Raj Road, Bankata Road, Bhatni Road, local markets, residential colonies, and nearby villages.",
 
             areas: [
-                "Salempur Town",
                 "Salempur Bazar",
-                "Railway Station Area Salempur",
-                "Deoria Road Salempur",
-                "Salempur Block Headquarters",
+                "Salempur Railway Station Area",
+                "Majhauli Raj Road",
+                "Bankata Road",
+                "Bhatni Road",
+                "Lar Road Connectivity Area",
+                "Town Market Area",
+                "Main Road Salempur",
+                "Bus Stand Area",
+                "Residential Colonies",
+                "Nearby Villages",
+                "Majhauli Raj",
                 "Bankata",
-                "Bhaluani",
-                "Pipra Bazar",
-                "Daudpur",
-                "Kauri Ram",
-                "Majhauli",
-                "Rudrapur",
-                "Chillupar",
-                "Hata Road Area",
+                "Bhatni",
+                "Lar",
+                "Barhaj"
             ],
 
             services: [
-                "Online medicine ordering in Salempur",
-                "Prescription medicine delivery",
-                "OTC medicine assistance",
-                "Healthcare product access",
-                "Diabetes and chronic disease medicine support",
-                "Wellness and nutrition supplement ordering",
-                "Baby care and personal care product delivery",
-                "Senior citizen medicine management",
-                "Urgent medicine ordering support",
-                "Online prescription upload",
-                "Daily healthcare essentials",
+                "Online medicine ordering support",
+                "Prescription medicine assistance",
                 "Medicine refill support",
+                "Diabetes medicine ordering",
+                "Blood pressure medicine support",
+                "Thyroid medicine assistance",
+                "Heart care medicine support",
+                "OTC medicine ordering",
+                "Healthcare product delivery",
+                "Wellness supplement support",
+                "Baby care essentials",
+                "Personal care products",
+                "Senior citizen healthcare assistance",
+                "Healthcare accessories",
+                "Daily healthcare essentials",
+                "Online pharmacy support"
             ],
 
             benefits: [
-                "No need to travel to district headquarters for medicines",
-                "Simple prescription upload process",
-                "Access to genuine medicines in Salempur",
-                "Wide range of healthcare products available",
-                "Convenient for families managing long-term illnesses",
-                "Helpful for elderly patients and caregivers",
-                "Reliable medicine ordering support at the block level",
-                "Reduced dependence on limited local pharmacy stock",
-                "Easy-to-use online ordering process",
-                "Support for regular prescription refills",
+                "Convenient healthcare access in Salempur",
+                "Easy online medicine ordering process",
+                "Prescription upload assistance",
+                "Support for long-term treatment plans",
+                "Access to healthcare essentials from home",
+                "Reduced need to visit multiple pharmacies",
+                "Reliable support for regular medicine requirements",
+                "Customer-friendly healthcare experience",
+                "Healthcare accessibility for nearby villages",
+                "Time-saving medicine ordering solution",
+                "Convenient healthcare support for families",
+                "Improved accessibility for senior citizens"
             ],
 
             emergencySupport:
-                "Patients in Salempur facing urgent medicine requirements can use MedicoBharat for quick medicine ordering assistance. Residents across Salempur town and nearby villages can get support for prescription refills, daily treatment medicines, and essential healthcare items without having to travel to Deoria or other towns. MedicoBharat aims to bridge the healthcare accessibility gap for Salempur residents through a simple and convenient online process.",
+                "Residents searching for emergency medicine delivery in Salempur often require quick access to medicines for ongoing treatments, seasonal illnesses, prescription continuation, and urgent healthcare requirements. MedicoBharat helps simplify medicine ordering by providing a convenient platform for accessing healthcare products and medicines. Customers across Salempur Bazar, Railway Station Area, Main Road, Bus Stand Area, Majhauli Raj Road, Bankata Road, and nearby villages can conveniently explore healthcare solutions through a simple online process designed to improve accessibility and convenience.",
 
             prescriptionSupport:
-                "MedicoBharat enables prescription medicine ordering for Salempur customers through an easy prescription upload process. Patients managing diabetes, hypertension, heart conditions, thyroid disorders, and other long-term health issues in Salempur can upload their doctor's prescription and receive ordering assistance for required medicines. This removes the inconvenience of frequent visits to pharmacies located far from home.",
+                "MedicoBharat supports prescription medicine ordering in Salempur through a straightforward prescription upload process. Customers can upload a valid prescription issued by a registered medical practitioner and receive assistance with ordering required medicines. This support is beneficial for patients managing diabetes, blood pressure conditions, thyroid disorders, heart care requirements, neurological treatments, orthopedic care, and other healthcare needs that require regular medicine refills and long-term treatment management.",
 
             healthcareProducts:
-                "Beyond medicines, MedicoBharat helps Salempur residents access a curated range of healthcare products including protein supplements, vitamin tablets, nutritional health drinks, baby care essentials, personal hygiene products, healthcare monitoring accessories, and daily wellness items. Customers in Salempur and surrounding areas can explore these products conveniently through a single online platform.",
+                "In addition to medicines, MedicoBharat supports access to a broad range of healthcare products including immunity support supplements, wellness products, nutrition supplements, personal care essentials, baby care products, healthcare accessories, hygiene products, and daily healthcare necessities. Customers across Salempur and nearby areas can conveniently explore healthcare essentials through a single platform designed to improve convenience and healthcare accessibility.",
 
             trustSection:
-                "MedicoBharat is committed to making healthcare more accessible for the people of Salempur and surrounding regions. Covering Salempur town, Bankata, Bhaluani, Chillupar, Hata Road Area, and nearby localities, MedicoBharat focuses on genuine medicines, trusted pharmacy support, and a convenient ordering experience. Our goal is to ensure that every family in Salempur has reliable access to medicines and healthcare products from the comfort of their home.",
+                "MedicoBharat focuses on building a trusted healthcare experience for customers across Salempur and nearby locations. By supporting medicine ordering in Salempur, Majhauli Raj, Bankata, Bhatni, Lar, Barhaj, and surrounding villages, MedicoBharat aims to improve healthcare accessibility through reliable support, prescription assistance, healthcare product availability, and customer-focused service. Our commitment is centered on convenience, accessibility, trust, and helping residents of Salempur access healthcare products and medicines more efficiently."
+
         },
+
     },
 
 
@@ -398,10 +419,10 @@ export const cityData = {
             "Get medicines delivered at home in Bhatni with MedicoBharat. Order prescription medicines, OTC products, and healthcare essentials with easy prescription upload support.",
 
         hero: {
-            heading:    "Medicine ghar par mangao- Bhatni me",
+            heading: "Medicine ghar par mangao- Bhatni me",
             subheading: "Bhatni me apni prescription ya medicine list bhejein aur seedha ghar par delivery paayein. Simple aur fast process.",
             buttonText: "Place your Order",
-            image:      "/heroimage/medihero.webp",
+            image: "/cityimg/bhatniimg.webp",
         },
 
         keywords: [
@@ -444,43 +465,43 @@ export const cityData = {
         faqs: [
             {
                 question: "Can I order medicines online from Bhatni?",
-                answer:   "Yes, customers in Bhatni can order medicines online through MedicoBharat by sharing their medicine list or uploading a valid prescription. Doorstep delivery support is available across Bhatni and surrounding localities.",
+                answer: "Yes, customers in Bhatni can order medicines online through MedicoBharat by sharing their medicine list or uploading a valid prescription. Doorstep delivery support is available across Bhatni and surrounding localities.",
             },
             {
                 question: "Which areas of Bhatni are covered by MedicoBharat?",
-                answer:   "Medicine ordering support is available in Bhatni Junction Area, Bhatni Bazar, areas near Bhatni Railway Station, and nearby villages and localities within Bhatni block.",
+                answer: "Medicine ordering support is available in Bhatni Junction Area, Bhatni Bazar, areas near Bhatni Railway Station, and nearby villages and localities within Bhatni block.",
             },
             {
                 question: "Is home delivery of medicines available in Bhatni?",
-                answer:   "Yes, customers in Bhatni can access medicine home delivery support for prescription medicines, OTC products, and daily healthcare essentials as per availability.",
+                answer: "Yes, customers in Bhatni can access medicine home delivery support for prescription medicines, OTC products, and daily healthcare essentials as per availability.",
             },
             {
                 question: "Do I need a prescription to order medicines in Bhatni?",
-                answer:   "Prescription medicines require a valid doctor's prescription. Customers in Bhatni can upload their prescription digitally and receive assistance with their medicine orders without visiting a pharmacy.",
+                answer: "Prescription medicines require a valid doctor's prescription. Customers in Bhatni can upload their prescription digitally and receive assistance with their medicine orders without visiting a pharmacy.",
             },
             {
                 question: "What kind of medicines can Bhatni customers order?",
-                answer:   "Bhatni customers can order prescription medicines, over-the-counter (OTC) medicines, chronic disease medications, wellness supplements, and daily healthcare products through MedicoBharat.",
+                answer: "Bhatni customers can order prescription medicines, over-the-counter (OTC) medicines, chronic disease medications, wellness supplements, and daily healthcare products through MedicoBharat.",
             },
             {
                 question: "Are healthcare products available for delivery in Bhatni?",
-                answer:   "Yes, in addition to medicines, customers in Bhatni can access wellness products, nutrition supplements, baby care items, personal care essentials, and other healthcare accessories through MedicoBharat.",
+                answer: "Yes, in addition to medicines, customers in Bhatni can access wellness products, nutrition supplements, baby care items, personal care essentials, and other healthcare accessories through MedicoBharat.",
             },
             {
                 question: "Does MedicoBharat cover villages near Bhatni?",
-                answer:   "Yes, customers in Bhatni and nearby villages including areas within Bhatni block and towns close to Bhatni Junction can use MedicoBharat for medicine ordering support.",
+                answer: "Yes, customers in Bhatni and nearby villages including areas within Bhatni block and towns close to Bhatni Junction can use MedicoBharat for medicine ordering support.",
             },
             {
                 question: "Can patients with chronic illnesses in Bhatni order regular medicines?",
-                answer:   "Yes, patients in Bhatni managing diabetes, hypertension, thyroid, or other long-term conditions can regularly order their prescription medicines through a simple upload process on MedicoBharat.",
+                answer: "Yes, patients in Bhatni managing diabetes, hypertension, thyroid, or other long-term conditions can regularly order their prescription medicines through a simple upload process on MedicoBharat.",
             },
             {
                 question: "Is emergency medicine ordering possible in Bhatni?",
-                answer:   "Customers in Bhatni with urgent medicine requirements can contact MedicoBharat for prompt ordering assistance and healthcare support based on availability.",
+                answer: "Customers in Bhatni with urgent medicine requirements can contact MedicoBharat for prompt ordering assistance and healthcare support based on availability.",
             },
             {
                 question: "Why is MedicoBharat a good option for Bhatni residents?",
-                answer:   "Bhatni residents benefit from MedicoBharat's convenient online ordering process, prescription support, genuine medicines, and access to healthcare products — especially useful for those with limited access to well-stocked local pharmacies.",
+                answer: "Bhatni residents benefit from MedicoBharat's convenient online ordering process, prescription support, genuine medicines, and access to healthcare products — especially useful for those with limited access to well-stocked local pharmacies.",
             },
         ],
 
@@ -504,63 +525,76 @@ export const cityData = {
         seoContent: {
 
             intro:
-                "MedicoBharat extends online medicine delivery support to Bhatni, a key town in Deoria district known for its railway junction. Residents of Bhatni can now access prescription medicines, OTC products, wellness supplements, and essential healthcare items through a simple online ordering process. Medicine support is available across Bhatni Bazar, Bhatni Junction Area, Railway Station locality, and surrounding villages within Bhatni block. MedicoBharat helps families, senior citizens, and patients with chronic conditions in Bhatni manage their healthcare needs conveniently from home.",
+                "MedicoBharat provides trusted online medicine delivery support in Bhatni, Uttar Pradesh, helping residents access prescription medicines, healthcare products, wellness supplements, personal care essentials, and daily healthcare requirements conveniently from their homes. Bhatni is an important town in Deoria district and serves nearby villages and surrounding communities. Many families, working professionals, senior citizens, and patients undergoing long-term treatment depend on timely access to medicines and healthcare products. MedicoBharat aims to simplify medicine ordering through an easy and customer-friendly platform that improves healthcare accessibility across Bhatni. Whether customers require diabetes medicines, blood pressure medicines, thyroid treatments, heart care medicines, wellness supplements, immunity support products, or prescription refills, MedicoBharat helps make healthcare access more convenient. Our support extends across Bhatni Junction Area, Railway Station Road, Main Market, Hospital Road, residential colonies, nearby villages, and surrounding locations connected to Bhatni town.",
 
             areas: [
                 "Bhatni Junction Area",
-                "Bhatni Bazar",
-                "Railway Station Locality Bhatni",
-                "Bhatni Block",
-                "Gauri Bazar",
-                "Rampur Karkhana",
-                "Pathardeva Road",
-                "Pratappur",
-                "Tarwa",
-                "Kaptanganj",
-                "Bishunpur",
-                "Kushinagar Road Area",
+                "Railway Station Road",
+                "Main Market Bhatni",
+                "Hospital Road",
+                "Bus Stand Area",
+                "Civil Area Bhatni",
+                "Residential Colonies",
+                "Town Center",
+                "Market Road",
+                "Nearby Villages",
+                "Salempur Road",
+                "Bankata Road",
+                "Lar Road",
+                "Majhauli Raj Connectivity Area",
+                "Barhaj Road",
+                "Rural Bhatni Region"
             ],
 
             services: [
-                "Online medicine ordering in Bhatni",
-                "Prescription medicine support",
-                "OTC medicine delivery assistance",
-                "Chronic disease medicine ordering",
-                "Diabetes and blood pressure medicine support",
-                "Healthcare and wellness product ordering",
-                "Baby care product delivery",
-                "Senior citizen medicine support",
-                "Nutrition and immunity supplement ordering",
-                "Prescription upload and processing",
+                "Online medicine ordering support",
+                "Prescription medicine assistance",
+                "Regular medicine refill support",
+                "Diabetes medicine ordering",
+                "Blood pressure medicine support",
+                "Heart care medicine assistance",
+                "Thyroid medicine ordering",
+                "Healthcare product access",
+                "OTC medicine ordering",
+                "Wellness supplement support",
+                "Personal care products",
+                "Baby care essentials",
+                "Senior citizen healthcare support",
+                "Healthcare accessories",
                 "Daily healthcare essentials",
-                "Medicine refill management",
+                "Online pharmacy assistance"
             ],
 
             benefits: [
-                "Convenient access to medicines in a semi-urban town",
-                "No dependency on limited local pharmacy stock",
-                "Easy prescription upload without travel",
-                "Support for patients managing multiple medicines",
-                "Genuine medicines from trusted pharmacy network",
-                "Accessible healthcare products in one platform",
-                "Helpful for families in and around Bhatni block",
-                "Reliable support for daily and emergency medicine needs",
-                "Simple ordering process suitable for all age groups",
-                "Regular medicine refill without repeated pharmacy visits",
+                "Convenient medicine ordering from home",
+                "Easy prescription upload process",
+                "Support for long-term treatments",
+                "Access to healthcare products in one place",
+                "Improved healthcare accessibility in Bhatni",
+                "Reduced need for multiple pharmacy visits",
+                "Customer-friendly medicine ordering experience",
+                "Support for senior citizens and families",
+                "Convenient healthcare access for nearby villages",
+                "Time-saving medicine ordering solution",
+                "Reliable support for regular medicine needs",
+                "Access to wellness and healthcare essentials"
             ],
 
             emergencySupport:
-                "Patients and families in Bhatni needing medicines urgently can use MedicoBharat for fast medicine ordering assistance. Whether the requirement is for ongoing treatment, prescription continuation, or sudden illness needs, customers in Bhatni Junction Area, Bhatni Bazar, and nearby localities can get prompt support through a straightforward online process.",
+                "Customers searching for emergency medicine delivery in Bhatni often require timely access to medicines for ongoing treatment, seasonal illnesses, prescription continuation, and urgent healthcare requirements. MedicoBharat helps simplify healthcare access by providing convenient medicine ordering support across Bhatni Junction Area, Main Market, Railway Station Road, Hospital Road, Bus Stand Area, and surrounding villages. Whether customers require prescription medicines, wellness products, or healthcare essentials, the platform is designed to improve convenience and accessibility during urgent situations.",
 
             prescriptionSupport:
-                "MedicoBharat makes prescription medicine ordering accessible for Bhatni customers. Patients dealing with long-term conditions such as diabetes, cardiovascular disease, joint pain, or respiratory issues can upload their doctor's prescription and get their medicines ordered without traveling to Deoria or other towns. This is especially beneficial for elderly patients and those managing multiple prescription medicines in Bhatni.",
+                "MedicoBharat supports prescription medicine ordering in Bhatni through a simple prescription upload process. Customers can upload a valid doctor’s prescription and receive assistance with ordering required medicines. This support is beneficial for patients managing diabetes, blood pressure conditions, thyroid disorders, heart care treatments, neurological conditions, orthopedic care requirements, and other healthcare needs that require regular medicine refills and long-term treatment support. The goal is to help patients access healthcare products conveniently while maintaining treatment continuity.",
 
             healthcareProducts:
-                "MedicoBharat also helps Bhatni customers access a broad range of healthcare products beyond medicines. Customers can explore nutrition supplements, health drinks, baby care products, personal care essentials, healthcare monitoring tools, immunity support items, and daily wellness products. This all-in-one healthcare access is designed to serve the specific needs of residents in Bhatni and surrounding rural areas.",
+                "Apart from medicines, MedicoBharat supports access to a wide range of healthcare and wellness products including nutrition supplements, immunity boosters, wellness essentials, personal care products, baby care items, healthcare accessories, hygiene products, and daily healthcare necessities. Customers across Bhatni and nearby locations can conveniently explore healthcare products through a single platform designed to improve accessibility and convenience. Access to healthcare essentials in one place helps families manage their healthcare requirements more efficiently.",
 
             trustSection:
-                "MedicoBharat is dedicated to improving healthcare access for the people of Bhatni and surrounding regions of Deoria district. Serving Bhatni Bazar, Bhatni Junction, Gauri Bazar, Rampur Karkhana, Pathardeva Road, and nearby areas, MedicoBharat focuses on providing a trusted, convenient, and reliable medicine ordering experience. Our commitment is to make healthcare simpler and more accessible for every family in Bhatni.",
+                "MedicoBharat focuses on delivering a trusted healthcare experience for customers across Bhatni and nearby regions. By supporting medicine ordering in Bhatni Junction Area, Main Market, Railway Station Road, Salempur Road, Bankata Road, Lar Road, nearby villages, and surrounding locations, MedicoBharat aims to improve healthcare accessibility through reliable support, prescription assistance, healthcare product availability, and customer-focused service. Our commitment is centered on trust, convenience, accessibility, and helping residents of Bhatni access medicines and healthcare products through a seamless online experience. Customers looking for online pharmacy support, prescription medicine ordering, wellness products, and healthcare essentials in Bhatni can rely on MedicoBharat for a convenient and customer-friendly healthcare solution."
+
+
         },
+
     },
 
 
@@ -580,10 +614,10 @@ export const cityData = {
             "Order medicines online in Barhaj with MedicoBharat. Prescription support, genuine medicines, healthcare products, and doorstep delivery across Barhaj and nearby areas.",
 
         hero: {
-            heading:    "Medicine ghar par mangao- Barhaj me",
+            heading: "Medicine ghar par mangao- Barhaj me",
             subheading: "Barhaj me medicine mangana ab aur bhi aasaan. Prescription share karein aur ghar par delivery paayein.",
             buttonText: "Place your Order",
-            image:      "/heroimage/medihero.webp",
+            image: "/cityimg/bharhajimg.webp",
         },
 
         keywords: [
@@ -626,43 +660,43 @@ export const cityData = {
         faqs: [
             {
                 question: "Is online medicine delivery available in Barhaj?",
-                answer:   "Yes, MedicoBharat provides online medicine ordering and delivery support in Barhaj. Customers can place orders by sharing their prescription or medicine list and receive healthcare essentials at home.",
+                answer: "Yes, MedicoBharat provides online medicine ordering and delivery support in Barhaj. Customers can place orders by sharing their prescription or medicine list and receive healthcare essentials at home.",
             },
             {
                 question: "Which localities in Barhaj are served by MedicoBharat?",
-                answer:   "MedicoBharat covers Barhaj town, Barhaj Bazar, Barhaj Block headquarters area, and nearby villages and localities in and around Barhaj tehsil.",
+                answer: "MedicoBharat covers Barhaj town, Barhaj Bazar, Barhaj Block headquarters area, and nearby villages and localities in and around Barhaj tehsil.",
             },
             {
                 question: "How do I get medicines delivered at home in Barhaj?",
-                answer:   "Customers in Barhaj can simply upload their doctor's prescription or share their medicine requirements through MedicoBharat and get doorstep delivery support for medicines and healthcare products.",
+                answer: "Customers in Barhaj can simply upload their doctor's prescription or share their medicine requirements through MedicoBharat and get doorstep delivery support for medicines and healthcare products.",
             },
             {
                 question: "Is a valid prescription needed to order medicines in Barhaj?",
-                answer:   "Yes, prescription medicines require a valid doctor's prescription. Barhaj customers can upload the prescription online and receive assistance with their medicine orders without visiting a pharmacy in person.",
+                answer: "Yes, prescription medicines require a valid doctor's prescription. Barhaj customers can upload the prescription online and receive assistance with their medicine orders without visiting a pharmacy in person.",
             },
             {
                 question: "Can patients with chronic diseases in Barhaj order regular medicines?",
-                answer:   "Yes, patients in Barhaj managing long-term health conditions like diabetes, blood pressure, or thyroid disorders can use MedicoBharat for regular prescription refills without repeated trips to pharmacies.",
+                answer: "Yes, patients in Barhaj managing long-term health conditions like diabetes, blood pressure, or thyroid disorders can use MedicoBharat for regular prescription refills without repeated trips to pharmacies.",
             },
             {
                 question: "What healthcare products are available in Barhaj through MedicoBharat?",
-                answer:   "Customers in Barhaj can access medicines along with health supplements, nutrition products, baby care essentials, personal hygiene products, and daily healthcare accessories through MedicoBharat.",
+                answer: "Customers in Barhaj can access medicines along with health supplements, nutrition products, baby care essentials, personal hygiene products, and daily healthcare accessories through MedicoBharat.",
             },
             {
                 question: "Does MedicoBharat support villages near Barhaj?",
-                answer:   "Yes, in addition to Barhaj town, MedicoBharat extends support to customers in nearby villages and localities within Barhaj block and neighbouring areas of Deoria district.",
+                answer: "Yes, in addition to Barhaj town, MedicoBharat extends support to customers in nearby villages and localities within Barhaj block and neighbouring areas of Deoria district.",
             },
             {
                 question: "Is there support for elderly patients in Barhaj?",
-                answer:   "Yes, senior citizens in Barhaj and their family members can easily manage medicine requirements from home using MedicoBharat, avoiding the need to travel for medicines frequently.",
+                answer: "Yes, senior citizens in Barhaj and their family members can easily manage medicine requirements from home using MedicoBharat, avoiding the need to travel for medicines frequently.",
             },
             {
                 question: "Can I get urgent medicines delivered in Barhaj?",
-                answer:   "Customers in Barhaj with urgent medicine requirements can contact MedicoBharat for prompt assistance with medicine ordering based on availability.",
+                answer: "Customers in Barhaj with urgent medicine requirements can contact MedicoBharat for prompt assistance with medicine ordering based on availability.",
             },
             {
                 question: "Why is MedicoBharat useful for Barhaj residents?",
-                answer:   "Barhaj is a growing town with limited pharmacy infrastructure. MedicoBharat bridges this gap by providing reliable medicine ordering support, genuine products, and prescription assistance for residents across the area.",
+                answer: "Barhaj is a growing town with limited pharmacy infrastructure. MedicoBharat bridges this gap by providing reliable medicine ordering support, genuine products, and prescription assistance for residents across the area.",
             },
         ],
 
@@ -686,63 +720,76 @@ export const cityData = {
         seoContent: {
 
             intro:
-                "MedicoBharat offers convenient online medicine delivery services for residents of Barhaj, a town located in Deoria district of Uttar Pradesh. Customers in Barhaj can order prescription medicines, OTC products, wellness supplements, and essential healthcare items through a simple online process. Medicine ordering support covers Barhaj Bazar, Barhaj Block headquarters, and surrounding villages and localities. MedicoBharat is a dependable option for families, working individuals, and patients with chronic conditions who need regular medicines but face limited access to fully stocked pharmacies in Barhaj.",
+                "MedicoBharat provides convenient online medicine delivery support in Barhaj, Uttar Pradesh, helping residents access medicines, healthcare products, wellness supplements, prescription medicines, personal care products, and daily healthcare essentials from the comfort of their homes. Barhaj is one of the well-known towns of Deoria district and serves many nearby villages and surrounding communities. Families, senior citizens, working professionals, and patients undergoing long-term treatment often require reliable access to medicines and healthcare products. MedicoBharat aims to improve healthcare accessibility in Barhaj through a simple and customer-friendly medicine ordering experience. Whether customers need prescription refills, diabetes medicines, blood pressure medicines, thyroid medicines, heart care products, wellness supplements, immunity support products, or healthcare essentials, MedicoBharat helps make healthcare access more convenient across Barhaj and nearby locations.",
 
             areas: [
-                "Barhaj Town",
-                "Barhaj Bazar",
-                "Barhaj Block Headquarters",
-                "Barhaj Tehsil Area",
-                "Gauri Bazar",
-                "Lar Road Barhaj",
-                "Salempur Road Area",
-                "Nautan Bazar",
-                "Mirzapur Nizamat",
-                "Kauriram",
-                "Mairwa Area",
-                "Sirsiya",
+                "Barhaj Bazaar",
+                "Main Market Barhaj",
+                "Bus Stand Area",
+                "Hospital Road",
+                "Ghaghara River Area",
+                "Town Center",
+                "Residential Colonies",
+                "Market Road",
+                "Civil Area",
+                "School Road",
+                "Nearby Villages",
+                "Lar Road Connectivity Area",
+                "Bhatni Road",
+                "Salempur Road",
+                "Rural Barhaj Region",
+                "Barhaj Town Limits"
             ],
 
             services: [
-                "Online medicine ordering in Barhaj",
-                "Prescription medicine delivery",
-                "OTC and general medicine support",
-                "Chronic disease medicine management",
-                "Diabetes and hypertension medicine delivery",
-                "Healthcare and personal care product ordering",
-                "Wellness and nutrition supplement access",
-                "Baby care and maternity product support",
-                "Senior citizen medicine delivery",
-                "Prescription upload and processing",
-                "Emergency medicine ordering assistance",
+                "Online medicine ordering support",
+                "Prescription medicine assistance",
                 "Regular medicine refill support",
+                "Diabetes medicine ordering",
+                "Blood pressure medicine support",
+                "Heart care medicine assistance",
+                "Thyroid medicine ordering",
+                "Healthcare product access",
+                "OTC medicine ordering",
+                "Wellness supplement support",
+                "Personal care products",
+                "Baby care essentials",
+                "Senior citizen healthcare support",
+                "Healthcare accessories",
+                "Daily healthcare essentials",
+                "Online pharmacy assistance"
             ],
 
             benefits: [
-                "Access to medicines without traveling to Deoria",
-                "Convenient prescription upload from any device",
-                "Reliable source for genuine medicines in Barhaj",
-                "Wide selection of healthcare products available",
-                "Supports patients managing multiple medications",
-                "Helpful for senior citizens and homebound patients",
-                "Reduces dependence on limited local pharmacy options",
-                "Easy online process suitable for all users",
-                "Consistent support for chronic disease management",
-                "Covers both Barhaj town and surrounding villages",
+                "Convenient medicine ordering from home",
+                "Simple prescription upload process",
+                "Support for long-term treatments",
+                "Access to healthcare products in one place",
+                "Improved healthcare accessibility in Barhaj",
+                "Reduced travel for medicine requirements",
+                "Customer-friendly healthcare experience",
+                "Support for families and senior citizens",
+                "Convenient access for nearby villages",
+                "Time-saving medicine ordering solution",
+                "Reliable support for recurring medicine needs",
+                "Access to wellness and healthcare essentials"
             ],
 
             emergencySupport:
-                "Residents of Barhaj who need medicines urgently can use MedicoBharat for quick ordering assistance. Whether the need arises from an ongoing treatment plan, a sudden health issue, or a prescription refill requirement, customers across Barhaj town, Barhaj Bazar, and surrounding localities can get timely medicine ordering support through a simple and accessible process.",
+                "Customers searching for emergency medicine delivery in Barhaj often need quick access to medicines for ongoing treatment, prescription continuation, seasonal illnesses, and urgent healthcare requirements. MedicoBharat supports convenient medicine ordering across Barhaj Bazaar, Main Market, Hospital Road, Bus Stand Area, Ghaghara River Area, residential colonies, and nearby villages. Whether customers require healthcare products, prescription medicines, or wellness essentials, the platform helps improve accessibility and convenience during healthcare emergencies.",
 
             prescriptionSupport:
-                "MedicoBharat supports prescription-based medicine ordering for patients in Barhaj. Customers dealing with conditions such as diabetes, cardiac issues, arthritis, neurological conditions, or respiratory ailments can upload their doctor's prescription and receive assistance with required medicines. This service is particularly valuable for patients in Barhaj who would otherwise need to travel to Deoria or Gorakhpur for specialised medicines.",
+                "MedicoBharat supports prescription medicine ordering in Barhaj through an easy prescription upload process. Customers can upload a valid prescription issued by a registered medical practitioner and receive assistance with medicine ordering. This service is beneficial for patients managing diabetes, hypertension, thyroid disorders, heart conditions, orthopedic treatments, neurological conditions, and other healthcare requirements that require regular medicine refills. By simplifying medicine access, MedicoBharat helps patients maintain continuity in their healthcare journey.",
 
             healthcareProducts:
-                "MedicoBharat enables Barhaj customers to access a diverse range of healthcare products along with medicines. From multivitamins and protein supplements to diabetic care kits, blood pressure monitors, baby care products, and personal hygiene essentials — customers in Barhaj can explore and order multiple healthcare items through a single, trusted platform.",
+                "Apart from medicines, MedicoBharat supports access to a wide range of healthcare products including nutrition supplements, immunity boosters, personal care essentials, baby care products, hygiene products, healthcare accessories, wellness supplements, and daily healthcare necessities. Customers across Barhaj and nearby areas can conveniently access healthcare products through a single platform designed to improve convenience and healthcare accessibility. Easy access to healthcare essentials helps families better manage their daily healthcare requirements.",
 
             trustSection:
-                "MedicoBharat is focused on improving healthcare accessibility for the people of Barhaj and surrounding areas of Deoria district. By serving Barhaj Bazar, Barhaj Block, Gauri Bazar, Nautan Bazar, Lar Road area, and nearby villages, MedicoBharat ensures that genuine medicines and quality healthcare products are within reach of every household. Our commitment to customer convenience, prescription support, and reliable service makes MedicoBharat a trusted name for medicine delivery in Barhaj.",
+                "MedicoBharat focuses on providing a trusted healthcare experience for customers across Barhaj and nearby regions. By supporting medicine ordering in Barhaj Bazaar, Main Market, Hospital Road, Bus Stand Area, Ghaghara River Area, residential locations, nearby villages, and surrounding communities, MedicoBharat aims to improve healthcare accessibility through reliable service, prescription support, healthcare product availability, and customer-focused assistance. Our commitment is centered on convenience, trust, accessibility, and helping residents of Barhaj access medicines and healthcare products through a seamless online experience. Customers searching for online pharmacy support, prescription medicine ordering, wellness products, and healthcare essentials in Barhaj can rely on MedicoBharat for a convenient healthcare solution."
+
+
         },
+
     },
 
 
@@ -762,10 +809,10 @@ export const cityData = {
             "MedicoBharat brings online medicine delivery to Lar with prescription support, genuine medicines, and healthcare product access for residents across Lar town and nearby areas.",
 
         hero: {
-            heading:    "Medicine ghar par mangao- Lar me",
+            heading: "Medicine ghar par mangao- Lar me",
             subheading: "Lar me apni zaroorat ki medicines aur healthcare products ghar baithe order karein. Prescription upload karna bhi easy hai.",
             buttonText: "Place your Order",
-            image:      "/heroimage/medihero.webp",
+            image: "/cityimg/larimg.webp",
         },
 
         keywords: [
@@ -808,43 +855,43 @@ export const cityData = {
         faqs: [
             {
                 question: "Can I order medicines online in Lar?",
-                answer:   "Yes, MedicoBharat makes online medicine ordering available for residents of Lar. Customers can share their prescription or medicine requirements and get healthcare products delivered at home.",
+                answer: "Yes, MedicoBharat makes online medicine ordering available for residents of Lar. Customers can share their prescription or medicine requirements and get healthcare products delivered at home.",
             },
             {
                 question: "Which areas in Lar are covered for medicine delivery?",
-                answer:   "Medicine ordering support is available across Lar town, Lar Bazar, Lar Block headquarters, and nearby villages and localities within Lar tehsil of Deoria district.",
+                answer: "Medicine ordering support is available across Lar town, Lar Bazar, Lar Block headquarters, and nearby villages and localities within Lar tehsil of Deoria district.",
             },
             {
                 question: "How does home medicine delivery work in Lar?",
-                answer:   "Customers in Lar can upload their doctor's prescription or share their medicine list through MedicoBharat and receive ordering assistance for doorstep delivery of medicines and healthcare products.",
+                answer: "Customers in Lar can upload their doctor's prescription or share their medicine list through MedicoBharat and receive ordering assistance for doorstep delivery of medicines and healthcare products.",
             },
             {
                 question: "Do I need to upload a prescription to order medicines in Lar?",
-                answer:   "For prescription-based medicines, a valid doctor's prescription is required. Customers in Lar can upload it digitally and receive medicine ordering assistance without visiting a pharmacy.",
+                answer: "For prescription-based medicines, a valid doctor's prescription is required. Customers in Lar can upload it digitally and receive medicine ordering assistance without visiting a pharmacy.",
             },
             {
                 question: "What types of medicines are available for delivery in Lar?",
-                answer:   "Customers in Lar can access prescription medicines, OTC medicines, chronic disease medications, wellness supplements, and daily healthcare products depending on availability.",
+                answer: "Customers in Lar can access prescription medicines, OTC medicines, chronic disease medications, wellness supplements, and daily healthcare products depending on availability.",
             },
             {
                 question: "Can I get healthcare products in Lar through MedicoBharat?",
-                answer:   "Yes, in addition to medicines, Lar customers can access nutrition supplements, baby care products, personal care essentials, healthcare monitoring products, and daily wellness items through MedicoBharat.",
+                answer: "Yes, in addition to medicines, Lar customers can access nutrition supplements, baby care products, personal care essentials, healthcare monitoring products, and daily wellness items through MedicoBharat.",
             },
             {
                 question: "Does MedicoBharat cover villages near Lar?",
-                answer:   "Yes, customers in Lar and nearby villages and localities within Lar block and adjacent areas of Deoria district can use MedicoBharat for medicine ordering support.",
+                answer: "Yes, customers in Lar and nearby villages and localities within Lar block and adjacent areas of Deoria district can use MedicoBharat for medicine ordering support.",
             },
             {
                 question: "Is there medicine support for patients with long-term illnesses in Lar?",
-                answer:   "Yes, patients in Lar managing diabetes, blood pressure, thyroid, respiratory conditions, or other chronic diseases can regularly order prescription medicines through MedicoBharat without repeated pharmacy visits.",
+                answer: "Yes, patients in Lar managing diabetes, blood pressure, thyroid, respiratory conditions, or other chronic diseases can regularly order prescription medicines through MedicoBharat without repeated pharmacy visits.",
             },
             {
                 question: "Can elderly residents of Lar use MedicoBharat?",
-                answer:   "Absolutely. Senior citizens in Lar and their caregivers can manage regular medicine requirements from home using MedicoBharat, avoiding frequent trips to pharmacies in Deoria or other towns.",
+                answer: "Absolutely. Senior citizens in Lar and their caregivers can manage regular medicine requirements from home using MedicoBharat, avoiding frequent trips to pharmacies in Deoria or other towns.",
             },
             {
                 question: "Why should Lar residents use MedicoBharat for medicines?",
-                answer:   "Lar residents benefit from MedicoBharat's simple ordering process, prescription upload support, genuine medicines, and healthcare product availability — making it easier to manage health needs without depending solely on local pharmacy options.",
+                answer: "Lar residents benefit from MedicoBharat's simple ordering process, prescription upload support, genuine medicines, and healthcare product availability — making it easier to manage health needs without depending solely on local pharmacy options.",
             },
         ],
 
@@ -867,66 +914,78 @@ export const cityData = {
 
         seoContent: {
 
+
             intro:
-                "MedicoBharat provides online medicine delivery services for residents of Lar, a prominent town and block headquarters in Deoria district, Uttar Pradesh. Customers in Lar can conveniently order prescription medicines, OTC products, healthcare accessories, and wellness essentials from home. Medicine ordering support is available across Lar town, Lar Bazar, Lar Block area, and surrounding villages and localities. MedicoBharat serves as a reliable healthcare ordering platform for working families, elderly patients, and individuals managing chronic conditions who need regular access to medicines in Lar without unnecessary travel.",
+                "MedicoBharat provides trusted online medicine delivery support in Lar, Uttar Pradesh, helping residents access prescription medicines, healthcare products, wellness supplements, baby care essentials, personal care products, and daily healthcare necessities without the need to visit multiple pharmacies. Lar is an important town in Deoria district with a growing population that depends on convenient healthcare access. Families, senior citizens, students, working professionals, and patients undergoing long-term treatments often require regular medicines and healthcare products. MedicoBharat aims to simplify medicine ordering in Lar through a customer-friendly platform designed to improve healthcare accessibility and convenience. Whether customers need diabetes medicines, blood pressure medicines, thyroid treatments, prescription refills, wellness products, immunity support supplements, or healthcare essentials, MedicoBharat helps make healthcare access easier across Lar town and nearby villages.",
 
             areas: [
                 "Lar Town",
-                "Lar Bazar",
-                "Lar Block Headquarters",
-                "Lar Tehsil Area",
-                "Barhaj Road Lar",
-                "Salempur Road Lar",
-                "Deoria Road Lar",
-                "Pipraich Area",
-                "Khadda Road",
-                "Bhagalpur",
-                "Ratanpur",
-                "Tikri Bazar",
-                "Rampur Bazar",
-                "Parauli",
+                "Lar Main Market",
+                "Station Road Lar",
+                "Bus Stand Area",
+                "Hospital Road",
+                "Town Center",
+                "Market Area",
+                "Residential Colonies",
+                "School Road",
+                "Civil Area",
+                "Nearby Villages",
+                "Salempur Road",
+                "Bhatni Road",
+                "Barhaj Connectivity Area",
+                "Rural Lar Region",
+                "Lar Nagar Area"
             ],
 
             services: [
-                "Online medicine ordering in Lar",
-                "Prescription medicine delivery",
-                "OTC medicine access",
-                "Chronic and lifestyle disease medicine support",
-                "Diabetes and cardiac medicine ordering",
-                "Wellness and nutrition supplement delivery",
-                "Baby and maternity care product access",
-                "Personal care and hygiene product ordering",
+                "Online medicine ordering support",
+                "Prescription medicine assistance",
+                "Regular medicine refill support",
+                "Diabetes medicine ordering",
+                "Blood pressure medicine support",
+                "Heart care medicine assistance",
+                "Thyroid medicine ordering",
+                "Healthcare product access",
+                "OTC medicine ordering",
+                "Wellness supplement support",
+                "Personal care products",
+                "Baby care essentials",
                 "Senior citizen healthcare support",
-                "Prescription upload and processing",
-                "Urgent medicine ordering assistance",
-                "Regular prescription refill support",
+                "Healthcare accessories",
+                "Daily healthcare essentials",
+                "Online pharmacy assistance"
             ],
 
             benefits: [
-                "Access to medicines within Lar without going to Deoria",
-                "Simple and quick prescription upload process",
-                "Genuine medicines from a trusted pharmacy network",
-                "Broad range of healthcare products available",
-                "Convenient for patients managing multiple prescriptions",
-                "Supports senior citizens and bedridden patients",
-                "Reduces travel burden for rural and semi-urban residents",
-                "Single platform for medicines and healthcare products",
-                "Consistent support for regular medicine needs",
-                "Covers Lar town and villages across Lar block",
+                "Convenient medicine ordering from home",
+                "Easy prescription upload process",
+                "Support for long-term treatments",
+                "Access to healthcare products in one place",
+                "Improved healthcare accessibility in Lar",
+                "Reduced travel for medicine requirements",
+                "Customer-friendly healthcare experience",
+                "Support for families and senior citizens",
+                "Convenient healthcare access for nearby villages",
+                "Time-saving medicine ordering solution",
+                "Reliable support for recurring medicine needs",
+                "Access to wellness and healthcare essentials"
             ],
 
             emergencySupport:
-                "Residents of Lar with urgent medicine requirements can rely on MedicoBharat for prompt ordering support. Customers across Lar town, Lar Bazar, Barhaj Road, and nearby localities can access medicine ordering assistance for ongoing treatments, sudden health needs, or prescription refills through a simple and accessible online process — without having to travel to Deoria city.",
+                "Residents searching for emergency medicine delivery in Lar often require quick access to medicines for ongoing treatment, seasonal illnesses, prescription continuation, and urgent healthcare needs. MedicoBharat helps simplify medicine ordering across Lar Main Market, Station Road, Bus Stand Area, Hospital Road, residential colonies, and nearby villages. Whether customers require prescription medicines, healthcare products, wellness supplements, or daily healthcare essentials, the platform is designed to improve convenience and healthcare accessibility during urgent situations.",
 
             prescriptionSupport:
-                "MedicoBharat facilitates prescription medicine ordering for patients in Lar through a hassle-free upload process. Individuals managing conditions like hypertension, diabetes, asthma, neurological disorders, kidney disease, or orthopaedic conditions can upload their doctor's prescription and get ordering support for required medicines. This service is especially beneficial for patients in Lar block who face difficulties accessing specialised medicines locally.",
+                "MedicoBharat supports prescription medicine ordering in Lar through a simple prescription upload process. Customers can upload a valid doctor's prescription and receive assistance with ordering required medicines. This service supports patients managing diabetes, hypertension, thyroid disorders, heart conditions, orthopedic treatments, neurological conditions, and other healthcare requirements that require regular medicine refills. By improving access to prescription medicines, MedicoBharat helps patients continue their treatment plans without unnecessary inconvenience.",
 
             healthcareProducts:
-                "MedicoBharat also connects Lar customers with a wide selection of healthcare products. From vitamin and mineral supplements to diabetic monitoring kits, baby care essentials, skin care products, immunity boosters, and fitness support products — customers in Lar and nearby areas can access these healthcare items conveniently through a single trusted platform without multiple store visits.",
+                "Apart from medicines, MedicoBharat supports access to a wide range of healthcare products including immunity support supplements, nutrition products, personal care essentials, baby care items, wellness supplements, hygiene products, healthcare accessories, and daily healthcare necessities. Customers across Lar and surrounding areas can conveniently explore healthcare essentials through a single platform designed to improve accessibility and convenience. Easy access to healthcare products helps families manage their healthcare requirements more efficiently.",
 
             trustSection:
-                "MedicoBharat is committed to making healthcare more accessible for families across Lar and Deoria district. By supporting medicine delivery in Lar town, Lar Bazar, Tikri Bazar, Rampur Bazar, Barhaj Road, Salempur Road, and surrounding villages, MedicoBharat ensures that residents have a dependable option for genuine medicines and quality healthcare products. Our focus on prescription support, reliable ordering, and customer convenience makes MedicoBharat a trusted healthcare partner for the people of Lar.",
+                "MedicoBharat focuses on delivering a trusted healthcare experience for customers across Lar and nearby regions. By supporting medicine ordering in Lar Town, Main Market, Station Road, Hospital Road, Bus Stand Area, residential locations, nearby villages, and surrounding communities, MedicoBharat aims to improve healthcare accessibility through reliable support, prescription assistance, healthcare product availability, and customer-focused service. Our commitment is centered on trust, convenience, accessibility, and helping residents of Lar access medicines and healthcare products through a seamless online experience. Customers searching for online pharmacy support, prescription medicine ordering, wellness products, and healthcare essentials in Lar can rely on MedicoBharat for a convenient and customer-friendly healthcare solution."
+
+
         },
+
     },
 
 };

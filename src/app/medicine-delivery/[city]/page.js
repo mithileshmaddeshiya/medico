@@ -143,7 +143,7 @@
                 <FinalCTA />
                 <DeoriaLongSEOContent data={data} />
                 <FAQ data={data} />
-                <Footer data={data} />
+                <Footer  />
 
             </div>
 

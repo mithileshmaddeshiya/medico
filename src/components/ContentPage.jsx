@@ -60,6 +60,7 @@ export default function CitySEOContent({ data }) {
                         </li>
                       ))}
                     </ul>
+
                   </div>
 
                   {/* AREAS */}
@@ -86,6 +87,36 @@ export default function CitySEOContent({ data }) {
                       {" "}
                       and nearby locations in {data?.city}.
                     </p>
+
+                    <div className="mt-10 rounded-xl border p-6">
+                      <h2 className="text-xl font-bold mb-4">
+                        Medicine Delivery in Nearby Cities
+                      </h2>
+
+                      <div className="grid md:grid-cols-2 gap-3">
+
+                        <Link href="/medicine-delivery/deoria">
+                          Medicine Delivery in Deoria
+                        </Link>
+
+                        <Link href="/medicine-delivery/salempur">
+                          Medicine Delivery in Salempur
+                        </Link>
+
+                        <Link href="/medicine-delivery/bhatni">
+                          Medicine Delivery in Bhatni
+                        </Link>
+
+                        <Link href="/medicine-delivery/barhaj">
+                          Medicine Delivery in Barhaj
+                        </Link>
+
+                        <Link href="/medicine-delivery/lar">
+                          Medicine Delivery in Lar
+                        </Link>
+
+                      </div>
+                    </div>
                   </div>
 
                   {/* BENEFITS */}
@@ -195,6 +226,131 @@ export default function CitySEOContent({ data }) {
                       </Link>
                     </div>
                   </div>
+
+                  {data?.seoContent?.localHealthcare && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Healthcare Accessibility in Deoria
+                      </h3>
+                      <p>{data?.seoContent?.localHealthcare}</p>
+                    </div>
+                  )}
+
+                  {data?.seoContent?.whyOnlinePharmacy && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Why Choose an Online Pharmacy
+                      </h3>
+                      <p>{data?.seoContent?.whyOnlinePharmacy}</p>
+                    </div>
+                  )}
+
+                  {data?.seoContent?.medicineCategories && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Medicine & Healthcare Categories
+                      </h3>
+                      <p>{data?.seoContent?.medicineCategories}</p>
+                    </div>
+                  )}
+
+                  {data?.seoContent?.customerFocus && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Customer First Approach
+                      </h3>
+                      <p>{data?.seoContent?.customerFocus}</p>
+                    </div>
+                  )}
+
+                  {data?.seoContent?.nearbyCities && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Serving Nearby Cities & Towns
+                      </h3>
+                      <p>{data?.seoContent?.nearbyCities}</p>
+                    </div>
+                  )}
+
+                  {/* LOCAL HEALTHCARE */}
+                  {data?.seoContent?.localHealthcare && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Healthcare Accessibility in Deoria
+                      </h3>
+                      <p>{data?.seoContent?.localHealthcare}</p>
+                    </div>
+                  )}
+
+                  {/* WHY ONLINE PHARMACY */}
+                  {data?.seoContent?.whyOnlinePharmacy && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Why Choose an Online Pharmacy?
+                      </h3>
+                      <p>{data?.seoContent?.whyOnlinePharmacy}</p>
+                    </div>
+                  )}
+
+                  {/* MEDICINE CATEGORIES */}
+                  {data?.seoContent?.medicineCategories && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Medicine & Healthcare Categories
+                      </h3>
+                      <p>{data?.seoContent?.medicineCategories}</p>
+                    </div>
+                  )}
+
+                  {/* CUSTOMER FOCUS */}
+                  {data?.seoContent?.customerFocus && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Customer First Approach
+                      </h3>
+                      <p>{data?.seoContent?.customerFocus}</p>
+                    </div>
+                  )}
+
+                  {/* NEARBY CITIES */}
+                  {data?.seoContent?.nearbyCities && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Serving Deoria & Nearby Cities
+                      </h3>
+                      <p>{data?.seoContent?.nearbyCities}</p>
+                    </div>
+                  )}
+
+                  {/* HEALTHCARE ACCESSIBILITY */}
+                  {data?.seoContent?.healthcareAccessibility && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Improving Healthcare Accessibility
+                      </h3>
+                      <p>{data?.seoContent?.healthcareAccessibility}</p>
+                    </div>
+                  )}
+
+                  {/* FAMILY HEALTHCARE */}
+                  {data?.seoContent?.familyHealthcare && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Healthcare Support for Families
+                      </h3>
+                      <p>{data?.seoContent?.familyHealthcare}</p>
+                    </div>
+                  )}
+
+                  {/* FUTURE VISION */}
+                  {data?.seoContent?.futureVision && (
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                        Our Vision for Healthcare in Deoria
+                      </h3>
+                      <p>{data?.seoContent?.futureVision}</p>
+                    </div>
+                  )}
 
 
                 </div>

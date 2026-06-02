@@ -2,9 +2,11 @@
 
 import Image from "next/image"
 
-export default function BannerImage() {
+export default function BannerImage({ data }) {
+
+  
   return (
-    <section className="py-3">
+    <section className="py-2">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="relative w-full h-[180px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm">

@@ -9,7 +9,6 @@ export default function Footer({ data }) {
   const city = data?.city || "Deoria";
 
 
-
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-10">
 
@@ -32,7 +31,7 @@ export default function Footer({ data }) {
             }}
           />
 
-          <p className="text-sm text-gray-600 leading-7">
+          <p className="text-[13px] text-gray-600 leading-7">
             MedicoBharat provides trusted online medicine delivery in {city} <br />
             with fast doorstep delivery, genuine medicines, and easy online
             ordering support.
@@ -42,51 +41,43 @@ export default function Footer({ data }) {
 
         {/* SEO LINKS */}
         <div>
-
           <h4 className="text-sm font-semibold text-gray-900 mb-4">
-            Popular Searches
+            Nearby Cities
           </h4>
 
           <ul className="space-y-2 text-sm text-gray-600">
 
             <li>
-              <Link
-                href="/"
-                className="hover:text-green-600 transition"
-              >
-                Medicine Home Delivery {city}
+              <Link href="/medicine-delivery/deoria">
+                Medicine Delivery Deoria
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/"
-                className="hover:text-green-600 transition"
-              >
-                Online Pharmacy {city}
+              <Link href="/medicine-delivery/salempur">
+                Medicine Delivery Salempur
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/"
-                className="hover:text-green-600 transition"
-              >
-                Medical Store in {city}
+              <Link href="/medicine-delivery/bhatni">
+                Medicine Delivery Bhatni
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/"
-                className="hover:text-green-600 transition"
-              >
-                24x7 Medicine Delivery {city}
+              <Link href="/medicine-delivery/barhaj">
+                Medicine Delivery Barhaj
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/medicine-delivery/lar">
+                Medicine Delivery Lar
               </Link>
             </li>
 
           </ul>
-
         </div>
 
         {/* QUICK LINKS */}
