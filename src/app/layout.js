@@ -138,11 +138,11 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon/favpan.png",
+    icon: "/favicon/medicofav.ico",
 
-    shortcut: "/favicon/favpan.png",
+    shortcut: "/favicon/medicofav.ico",
 
-    apple: "/favicon/favpan.png",
+    apple: "/favicon/medicofav.ico",
   },
 
   other: {

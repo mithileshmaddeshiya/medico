@@ -18,7 +18,6 @@ const page = () => {
   const data = homeData;
 
   
-
   return (
     <div>
 
@@ -109,7 +108,7 @@ const page = () => {
 
       <Hero data={data} />
       <CityInterlinking />
-      <BannerImage />
+      <BannerImage data={data} />
       <Reviews />
       <HowItWorks data={data} />
       <MedicoBharatSEOSection data={data} />

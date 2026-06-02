@@ -4,15 +4,12 @@ import { CheckCircle, Truck } from "lucide-react"
 import Image from "next/image"
 import MobileSlider from "./HeroMoblie"
 import CallOrderBanner from "./CallOrder"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper/modules"
 import ShopCategories from "./SlideCat"
 
-export default function Hero({data}) {
+export default function Hero({ data }) {
 
-  console.log(data?.city);
   return (
-    
+
     <section className="pt-20 md:pt-30 bg-gradient-to-b from-green-50 to-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-2 md:gap-12 items-center">
@@ -22,11 +19,10 @@ export default function Hero({data}) {
 
           <div>
 
-            {/* Heading */}
-            <h1 className="text-[14px] sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-              Medicine ghar par mangao-
-              <span className="text-green-600">
-                {data?.city}
+            <h1 className="text-[12px] md:text-3xl font-bold text-gray-900 leading-tight">
+              <span className="text-green-600">{data?.city}</span> se
+              <span className="block mt-1">
+                Ghar Tak Medicine Delivery
               </span>
             </h1>
 

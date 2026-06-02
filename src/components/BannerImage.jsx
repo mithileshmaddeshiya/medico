@@ -2,7 +2,9 @@
 
 import Image from "next/image"
 
-export default function BannerImage() {
+export default function BannerImage({ data }) {
+
+  
   return (
     <section className="py-3">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">

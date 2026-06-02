@@ -58,7 +58,7 @@ export const cityData = {
             "Prescription Upload Pharmacy Deoria",
         ],
 
-        image: "/images/deoria-medicobharat.jpg",
+        image: "/cityimg/deoriaimg.webp",
 
         faqs: [
             {
@@ -228,7 +228,7 @@ export const cityData = {
             heading: "Medicine ghar par mangao- Salempur me",
             subheading: "Salempur me prescription upload karein aur apni zaroorat ki medicines aasani se ghar baithe mangaayein.",
             buttonText: "Place your Order",
-            image: "/heroimage/medihero.webp",
+            image: "/cityimg/salempurimg.webp",
         },
 
         keywords: [
@@ -422,7 +422,7 @@ export const cityData = {
             heading: "Medicine ghar par mangao- Bhatni me",
             subheading: "Bhatni me apni prescription ya medicine list bhejein aur seedha ghar par delivery paayein. Simple aur fast process.",
             buttonText: "Place your Order",
-            image: "/heroimage/medihero.webp",
+            image: "/cityimg/bhatniimg.webp",
         },
 
         keywords: [
@@ -617,7 +617,7 @@ export const cityData = {
             heading: "Medicine ghar par mangao- Barhaj me",
             subheading: "Barhaj me medicine mangana ab aur bhi aasaan. Prescription share karein aur ghar par delivery paayein.",
             buttonText: "Place your Order",
-            image: "/heroimage/medihero.webp",
+            image: "/cityimg/bharhajimg.webp",
         },
 
         keywords: [
@@ -812,7 +812,7 @@ export const cityData = {
             heading: "Medicine ghar par mangao- Lar me",
             subheading: "Lar me apni zaroorat ki medicines aur healthcare products ghar baithe order karein. Prescription upload karna bhi easy hai.",
             buttonText: "Place your Order",
-            image: "/heroimage/medihero.webp",
+            image: "/cityimg/larimg.webp",
         },
 
         keywords: [
