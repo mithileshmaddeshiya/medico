@@ -17,10 +17,7 @@ const page = () => {
 
   const data = homeData;
 
-  console.log(data);
-
-
-
+  
 
   return (
     <div>
@@ -37,7 +34,7 @@ const page = () => {
                 "name": "MedicoBharat",
                 "url": "https://www.medicobharat.com",
                 "logo": "https://www.medicobharat.com/images/logo.png",
-                "description": "MedicoBharat is the leading online medicine delivery service in Deoria, Uttar Pradesh. Order medicines online and get fast doorstep delivery across Deoria district including Salempur, Bhatni, Barhaj, and Lar.",
+                "description": data?.description,
                 "telephone": "+91-9891233525",
                 "priceRange": "₹",
                 "image": "https://www.medicobharat.com/images/short/statsimg.webp",
@@ -120,7 +117,7 @@ const page = () => {
       <CitySEOContent data={data} />
       <TrustSection />
       <FAQ data={data} />
-      <Footer />
+      <Footer data={data} />
 
     </div>
   )
