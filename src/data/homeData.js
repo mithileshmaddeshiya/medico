@@ -314,6 +314,30 @@ export const homeData = {
 
         trustSection:
             "MedicoBharat ka lakshya Deoria district ke har parivar ke liye healthcare ko zyada accessible aur convenient banana hai. Deoria Sadar se Salempur tak, Bhatni se Barhaj tak aur Lar se Gauri Bazar tak hum medicine delivery aur healthcare support pahunchane ke liye pratibaddh hain. Genuine medicines, prescription compliance, customer-focused service aur reliable ordering process ke saath MedicoBharat Deoria ke sabse bharosemand online medicine delivery platforms me se ek banne ki disha me kaam kar raha hai.",
+
+        localHealthcare:
+            "Deoria district me healthcare accessibility har parivar ke liye mahatvapurn hai. Kai residents diabetes, blood pressure, thyroid disorders, heart care aur long-term treatments ke liye regular medicines par nirbhar rehte hain. MedicoBharat ka uddeshya Deoria ke logon ko medicines aur healthcare products tak aasaan pahunch dena hai taki unhe baar-baar alag medical stores par jaane ki zaroorat na pade. Deoria Sadar, Civil Lines, Station Road, Rudrapur Road, Saket Nagar, Subhash Chowk, Malviya Road, Gauri Bazar, Pathardeva, Rampur Karkhana aur district ke anya ilakon ke customers healthcare support ke liye MedicoBharat ka upyog kar sakte hain.",
+
+        whyOnlinePharmacy:
+            "Aaj ke digital yug me online pharmacy services healthcare ko adhik convenient aur accessible bana rahi hain. MedicoBharat Deoria ke customers ko ghar baithe medicines aur healthcare products order karne ki suvidha deta hai. Isse working professionals, senior citizens aur regular treatment lene wale patients ko samay ki bachat hoti hai aur healthcare requirements ko manage karna aasaan ho jata hai. Easy prescription upload process aur customer-friendly ordering experience MedicoBharat ko Deoria me ek trusted online pharmacy platform banate hain.",
+
+        medicineCategories:
+            "MedicoBharat ke madhyam se customers healthcare categories ki wide range tak pahunch bana sakte hain. Isme diabetes medicines, blood pressure medicines, thyroid medicines, heart care medicines, respiratory care products, wellness supplements, immunity support products, nutrition supplements, baby care essentials, personal care products, healthcare accessories aur daily healthcare necessities shamil hain. Ek hi platform par multiple healthcare categories ki availability customers ke liye healthcare management ko aur convenient banati hai.",
+
+        customerFocus:
+            "Customer satisfaction aur convenience MedicoBharat ki pramukh priority hai. Hum Deoria district ke urban aur rural dono regions ke customers ko healthcare accessibility support provide karne par focus karte hain. Chahe customer Deoria city, Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani, Bankata, Bhaluani, Gauri Bazar ya kisi nearby village me ho, MedicoBharat healthcare products aur medicine ordering ke liye ek reliable aur customer-friendly platform provide karta hai.",
+
+        nearbyCities:
+            "MedicoBharat ki healthcare support services Deoria city ke saath-saath district ke anya mahatvapurn regions tak bhi pahunchti hain. Hum Salempur, Bhatni, Barhaj, Lar, Bhatpar Rani, Pathardeva, Rampur Karkhana, Gauri Bazar, Rudrapur, Bankata, Bhaluani, Majhauli Raj aur nearby locations ke customers ko healthcare accessibility support provide karte hain. Is regional presence ki wajah se MedicoBharat Deoria district me online medicine delivery aur healthcare support ke liye ek trusted naam ke roop me ubhar raha hai.",
+
+        healthcareAccessibility:
+            "Deoria district ke kai rural aur semi-urban regions me healthcare accessibility ek important challenge ho sakta hai. MedicoBharat ka objective healthcare products aur medicines tak pahunch ko aasaan banana hai. Chahe customer Deoria city me ho ya district ke kisi nearby area me, healthcare requirements ko conveniently manage karne ke liye ek reliable platform available hona zaroori hai. MedicoBharat isi objective ke saath healthcare accessibility ko support karta hai.",
+
+        familyHealthcare:
+            "Har parivar ki healthcare requirements alag hoti hain. Kuch families ko regular diabetes medicines ki zaroorat hoti hai, kuch ko blood pressure medicines, thyroid medicines, baby care products ya wellness supplements ki. MedicoBharat families ko ek aise platform ka access deta hai jahan healthcare categories ki wide range available ho aur medicines aur healthcare products ko conveniently manage kiya ja sake.",
+
+        futureVision:
+            "MedicoBharat ka long-term vision Deoria district me healthcare accessibility ko aur behtar banana hai. Hum technology aur customer-focused healthcare support ke madhyam se residents ko medicines aur healthcare products tak aasaan pahunch dene ke liye kaam kar rahe hain. Hamara focus trust, convenience, transparency aur customer satisfaction par hai, taki Deoria district ke log healthcare requirements ko adhik aasani se manage kar saken."
     },
 
 };

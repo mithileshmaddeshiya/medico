@@ -8,10 +8,6 @@ export default function Footer({ data }) {
 
   const city = data?.city || "Deoria";
 
-  console.log(city);
-  
-
-
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-10">
@@ -35,7 +31,7 @@ export default function Footer({ data }) {
             }}
           />
 
-          <p className="text-sm text-gray-600 leading-7">
+          <p className="text-[13px] text-gray-600 leading-7">
             MedicoBharat provides trusted online medicine delivery in {city} <br />
             with fast doorstep delivery, genuine medicines, and easy online
             ordering support.
