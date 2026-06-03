@@ -1,0 +1,222 @@
+import { blogs } from "@/data/blogData";
+import Link from "next/link";
+
+
+export async function generateStaticParams() {
+    return blogs.map((blog) => ({
+        category: blog.category,
+        city: blog.city,
+    }));
+}
+
+export async function generateMetadata({ params }) {
+    const { category, city } = await params;
+
+    const blog = blogs.find(
+        (item) =>
+            item.category === category &&
+            item.city === city
+    );
+
+    if (!blog) return {};
+
+    return {
+        title: blog.title,
+        description: blog.description,
+
+        keywords: blog.keywords,
+
+        robots: blog.robots,
+
+        alternates: {
+            canonical: blog.canonical,
+        },
+
+        openGraph: {
+            title: blog.title,
+            description: blog.description,
+            url: blog.canonical,
+            images: [blog.image],
+            type: "article",
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: blog.title,
+            description: blog.description,
+            images: [blog.image],
+        },
+    };
+}
+
+
+export default async function BlogPage({ params }) {
+    const { category, city } = await params;
+
+    const blog = blogs.find(
+        (item) =>
+            item.category === category &&
+            item.city === city
+    );
+
+    if (!blog) {
+        return <h1>Blog Not Found</h1>;
+    }
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+
+        headline: blog.title,
+        description: blog.description,
+        image: [blog.image],
+
+        datePublished: blog.publishedAt,
+        dateModified: blog.updatedAt,
+
+        author: {
+            "@type": "Organization",
+            name: blog.author.name,
+            url: blog.author.url,
+        },
+
+        publisher: {
+            "@type": "Organization",
+            name: blog.publisher.name,
+
+            logo: {
+                "@type": "ImageObject",
+                url: blog.publisher.logo,
+            },
+        },
+
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": blog.canonical,
+        },
+    };
+
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+
+        mainEntity: blog.faqs?.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+            },
+        })) || [],
+    };
+
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(schema),
+                }}
+            />
+
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(faqSchema),
+                }}
+            />
+
+            <article className="max-w-5xl mx-auto px-4 md:px-6 pt-32 pb-16">
+                {/* Header */} <div className="mb-10 border-b pb-6"> <span className="inline-block bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full mb-4">
+                    Medicine Delivery </span>
+
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                        {blog.title}
+                    </h1>
+
+                    <p className="text-lg text-gray-600 mt-4 leading-relaxed">
+                        {blog.description}
+                    </p>
+                </div>
+
+                {/* Blog Content */}
+                <div className="space-y-10">
+                    {blog.sections.map((section, index) => (
+                        <section key={index}>
+                            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                                {section.heading}
+                            </h2>
+
+                            <p className="text-gray-700 leading-8 text-lg">
+                                {section.content}
+                            </p>
+                        </section>
+                    ))}
+                </div>
+
+                {/* CTA */}
+                <div className="mt-16 bg-green-50 border border-green-100 rounded-2xl p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        Order Medicines Online with MedicoBharat
+                    </h3>
+
+                    <p className="text-gray-600 mb-5">
+                        Get medicines delivered to your doorstep across Deoria and nearby
+                        areas. Share your prescription and place your order easily.
+                    </p>
+
+                    <a
+                        href="/medicine-delivery/deoria"
+                        className="inline-flex items-center px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition"
+                    >
+                        Order Now
+                    </a>
+                </div>
+
+
+                <div className="mt-16">
+                    <h3 className="text-2xl font-bold mb-6">
+                        Related Articles
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <Link href="/medicine-delivery/deoria">
+                            Medicine Delivery in Deoria
+                        </Link>
+
+                    </div>
+                </div>
+
+                {blog.faqs?.length > 0 && (
+                    <div className="mt-16">
+                        <h2 className="text-3xl font-bold mb-8">
+                            Frequently Asked Questions
+                        </h2>
+
+                        <div className="space-y-6">
+                            {blog.faqs.map((faq, index) => (
+                                <div
+                                    key={index}
+                                    className="border rounded-xl p-5"
+                                >
+                                    <h3 className="font-semibold text-lg mb-2">
+                                        {faq.question}
+                                    </h3>
+
+                                    <p className="text-gray-600">
+                                        {faq.answer}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+            </article>
+        </>
+    );
+}
