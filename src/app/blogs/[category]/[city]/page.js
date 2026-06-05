@@ -1,6 +1,6 @@
 import { blogs } from "@/data/blogData";
 import Link from "next/link";
-
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
     return blogs.map((blog) => ({
@@ -59,8 +59,9 @@ export default async function BlogPage({ params }) {
             item.city === city
     );
 
+
     if (!blog) {
-        return <h1>Blog Not Found</h1>;
+        notFound();
     }
 
     const schema = {
@@ -111,6 +112,12 @@ export default async function BlogPage({ params }) {
             },
         })) || [],
     };
+
+    const relatedBlogs = blogs.filter(
+        (item) =>
+            item.city === city &&
+            item.category !== category
+    );
 
 
     return (
@@ -177,17 +184,27 @@ export default async function BlogPage({ params }) {
                     </a>
                 </div>
 
-
                 <div className="mt-16">
                     <h3 className="text-2xl font-bold mb-6">
                         Related Articles
                     </h3>
 
                     <div className="grid md:grid-cols-2 gap-4">
-                        <Link href="/medicine-delivery/deoria">
-                            Medicine Delivery in Deoria
-                        </Link>
+                        {relatedBlogs.map((item) => (
+                            <Link
+                                key={`${item.category}-${item.city}`}
+                                href={`/blogs/${item.category}/${item.city}`}
+                                className="border rounded-lg p-4 hover:bg-gray-50"
+                            >
+                                <h4 className="font-semibold">
+                                    {item.title}
+                                </h4>
 
+                                <p className="text-sm text-gray-600 mt-2">
+                                    {item.description}
+                                </p>
+                            </Link>
+                        ))}
                     </div>
                 </div>
 
