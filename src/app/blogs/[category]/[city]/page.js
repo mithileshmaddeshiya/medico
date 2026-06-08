@@ -137,6 +137,16 @@ export default async function BlogPage({ params }) {
                 }}
             />
 
+
+            <div className="mt-10">
+                <Link
+                    href={`/medicine-delivery/${city}`}
+                    className="text-green-600 font-semibold hover:underline"
+                >
+                    View Medicine Delivery in {city}
+                </Link>
+            </div>
+
             <article className="max-w-5xl mx-auto px-4 md:px-6 pt-32 pb-16">
                 {/* Header */} <div className="mb-10 border-b pb-6"> <span className="inline-block bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full mb-4">
                     Medicine Delivery </span>
@@ -165,6 +175,9 @@ export default async function BlogPage({ params }) {
                     ))}
                 </div>
 
+
+
+
                 {/* CTA */}
                 <div className="mt-16 bg-green-50 border border-green-100 rounded-2xl p-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -172,16 +185,15 @@ export default async function BlogPage({ params }) {
                     </h3>
 
                     <p className="text-gray-600 mb-5">
-                        Get medicines delivered to your doorstep across Deoria and nearby
-                        areas. Share your prescription and place your order easily.
+                        Get medicines delivered to your doorstep across {city} and nearby areas..
                     </p>
 
-                    <a
-                        href="/medicine-delivery/deoria"
+                    <Link
+                        href={`/medicine-delivery/${city}`}
                         className="inline-flex items-center px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition"
                     >
                         Order Now
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="mt-16">
@@ -207,6 +219,7 @@ export default async function BlogPage({ params }) {
                         ))}
                     </div>
                 </div>
+
 
                 {blog.faqs?.length > 0 && (
                     <div className="mt-16">

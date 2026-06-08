@@ -498,5 +498,4 @@ export const blogs = [
         ]
 
     },
-
 ]; 
