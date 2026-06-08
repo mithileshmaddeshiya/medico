@@ -11,6 +11,7 @@ import { homeData } from '@/data/homeData'
 import HowItWorks from '@/components/HowCity'
 import MedicoBharatSEOSection from '@/components/MetakeyDeoria'
 import CitySEOContent from '@/components/ContentPage'
+import LatestBlogs from '@/components/LatestBlogs'
 
 
 const page = () => {
@@ -108,6 +109,7 @@ const page = () => {
 
       <Hero data={data} />
       <CityInterlinking />
+      <LatestBlogs />
       <BannerImage data={data} />
       <Reviews />
       <HowItWorks data={data} />
