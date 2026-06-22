@@ -8,6 +8,9 @@ import ShopCategories from "./SlideCat"
 
 export default function Hero({ data }) {
 
+  // console.log(data);
+
+
   return (
 
     <section className="pt-20 md:pt-30 bg-gradient-to-b from-green-50 to-white overflow-hidden">
@@ -19,17 +22,13 @@ export default function Hero({ data }) {
 
           <div>
 
-            <h1 className="text-[12px] md:text-3xl font-bold text-gray-900 leading-tight">
-              <span className="text-green-600">{data?.city}</span> se
-              <span className="block mt-1">
-                Ghar Tak Medicine Delivery
-              </span>
+            <h1 className="text-[12px] md:text-3xl font-bold leading-tight">
+              {data?.hero?.heading}
             </h1>
 
             {/* Description */}
-            <p className="mt-2 hidden md:block text-[8px] sm:text-lg text-gray-600 leading-normal max-w-md mx-auto md:mx-0">
-              Bas WhatsApp par apni medicine bhejein aur ghar baithe delivery paayein.
-              Fast service, trusted pharmacy {data?.city} me.
+            <p className="md:text-[16px]  hidden md:block mt-4 text-lg text-gray-600">
+              {data?.hero?.subheading}
             </p>
 
             {/* MOBILE CALL BANNER */}

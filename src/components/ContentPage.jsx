@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function CitySEOContent({ data }) {
 
 
-
+  // console.log(data)
 
   const [showMore, setShowMore] = useState(false);
 
@@ -18,7 +18,7 @@ export default function CitySEOContent({ data }) {
         <div className="bg-white border border-green-100 rounded-[13px] p-6 sm:p-10 shadow-sm hover:shadow-lg transition-all duration-300 mb-10">
 
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-            Best Online Pharmacy & Medicine Delivery in {data?.city}
+            {data?.seoContent?.titles?.areas}
           </h3>
 
           {/* CONTENT */}
@@ -30,8 +30,9 @@ export default function CitySEOContent({ data }) {
 
 
               <h3>
-                Online Medicine Delivery in {data?.city} | Trusted Pharmacy Support
+                {data?.seoContent?.titles?.benefits}
               </h3>
+
               <div
                 className={`overflow-hidden transition-all duration-500 ${showMore ? "max-h-[5000px]" : "max-h-[260px]"
                   }`}
@@ -41,7 +42,7 @@ export default function CitySEOContent({ data }) {
                   {/* INTRO */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Online Medicine Delivery in {data?.city}
+                      {data?.seoContent?.titles?.intro}
                     </h3>
 
                     <p>{data?.seoContent?.intro}</p>
@@ -50,7 +51,7 @@ export default function CitySEOContent({ data }) {
                   {/* SERVICES */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Services Available in {data?.city}
+                      {data?.seoContent?.titles?.customerFocus}
                     </h3>
 
                     <ul className="grid sm:grid-cols-2 gap-2">
@@ -66,7 +67,7 @@ export default function CitySEOContent({ data }) {
                   {/* AREAS */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Areas We Serve in {data?.city}
+                      {data?.seoContent?.titles?.areas}
                     </h3>
 
                     <div className="flex flex-wrap gap-2">
@@ -90,7 +91,7 @@ export default function CitySEOContent({ data }) {
 
                     <div className="mt-10 rounded-xl border p-6">
                       <h2 className="text-xl font-bold mb-4">
-                        Medicine Delivery in Nearby Cities
+                        {data?.seoContent?.titles?.nearby}
                       </h2>
 
                       <div className="grid md:grid-cols-2 gap-3">
@@ -122,7 +123,7 @@ export default function CitySEOContent({ data }) {
                   {/* BENEFITS */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Benefits of Online Medicine Ordering
+                      {data?.seoContent?.titles?.benefits}
                     </h3>
 
                     <ul className="grid sm:grid-cols-2 gap-2">
@@ -137,11 +138,11 @@ export default function CitySEOContent({ data }) {
                   {/* POPULAR SEARCHES */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Popular Searches in {data?.city}
+                      {data?.seoContent?.titles?.popularSearch}
                     </h3>
 
                     <div className="flex flex-wrap gap-2">
-                      {data?.highlights?.map((item, index) => (
+                      {data?.seoSection?.highlights?.map((item, index) => (
                         <span
                           key={index}
                           className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs text-green-700"
@@ -155,7 +156,7 @@ export default function CitySEOContent({ data }) {
                   {/* EMERGENCY SUPPORT */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Emergency Medicine Support in {data?.city}
+                      {data?.seoContent?.titles?.emergency}
                     </h3>
 
                     <p>{data?.seoContent?.emergencySupport}</p>
@@ -164,7 +165,7 @@ export default function CitySEOContent({ data }) {
                   {/* PRESCRIPTION */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Prescription Medicine Ordering
+                      {data?.seoContent?.titles?.prescription}
                     </h3>
 
                     <p>{data?.seoContent?.prescriptionSupport}</p>
@@ -173,7 +174,7 @@ export default function CitySEOContent({ data }) {
                   {/* HEALTHCARE PRODUCTS */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Healthcare Products Available
+                      {data?.seoContent?.titles?.products}
                     </h3>
 
                     <p>{data?.seoContent?.healthcareProducts}</p>
@@ -182,7 +183,7 @@ export default function CitySEOContent({ data }) {
                   {/* TRUST */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Why Choose MedicoBharat in {data?.city}
+                      {data?.seoContent?.titles?.trust}
                     </h3>
 
                     <p>{data?.seoContent?.trustSection}</p>
@@ -191,7 +192,7 @@ export default function CitySEOContent({ data }) {
                   {/* NEARBY CITIES */}
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                      Medicine Delivery in Nearby Cities
+                      {data?.seoContent?.titles?.onlinePharmacy}
                     </h3>
 
                     <div className="flex flex-wrap gap-2">
@@ -358,6 +359,7 @@ export default function CitySEOContent({ data }) {
 
 
             </div>
+
           </div>
 
           {/* BUTTON */}

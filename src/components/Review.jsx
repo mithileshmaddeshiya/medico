@@ -7,36 +7,16 @@ import "swiper/css/pagination"
 
 import { Star } from "lucide-react"
 
-const reviews = [
-  {
-    name: "Ravi Kumar",
-    role: "Verified Customer • Deoria",
-    text: "Bahut fast service thi. Maine subah order kiya aur 2–3 ghante me medicine mil gayi. Packaging bhi achhi thi aur medicines genuine thi.",
-    img: "/user/rohit.webp",
-  },
-  {
-    name: "Pooja Singh",
-    role: "Verified Customer • Deoria",
-    text: "WhatsApp se order karna bahut easy tha. Prescription bhejne ke baad turant response mila. Service reliable lagi.",
-    img: "/user/priya.webp",
-  },
-  {
-    name: "Amit Verma",
-    role: "Verified Customer • Deoria",
-    text: "Emergency me order kiya tha aur same-day delivery mil gayi. Local service hone ki wajah se kaafi fast hai.",
-    img: "/user/amitsingh.webp",
-  },
-  {
-    name: "Neha Gupta",
-    role: "Verified Customer • Deoria",
-    text: "Medicobharat se pehli baar order kiya aur experience kaafi smooth raha. Future me bhi use karungi.",
-    img: "/user/neha1.webp",
-  },
-]
-
-export default function Reviews({data}) {
 
 
+export default function Reviews({ data }) {
+
+
+  const reviews = data?.reviews || [];
+
+  // console.log(data);
+  
+  
 
   return (
     <section className="py-2 bg-white">
@@ -49,7 +29,7 @@ export default function Reviews({data}) {
         </h2>
 
         <p className="mt-2 text-gray-600 mb-3 text-sm sm:text-base">
-          {data?.city} ke log Medicobharat par bharosa karte hain
+          {data?.testimonialSubheading}
         </p>
 
         {/* Swiper */}
@@ -72,38 +52,35 @@ export default function Reviews({data}) {
           >
             {reviews.map((review, i) => (
               <SwiperSlide key={i}>
-                <div className="h-full bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-left flex flex-col justify-between">
+                <div className="h-full bg-gray-50 p-6 rounded-2xl shadow-sm">
 
-                  {/* Top */}
-                  <div>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={review.img}
+                      alt={review.name}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
 
-                    {/* User */}
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={review.img}
-                        alt=""
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div>
-                        <p className="font-semibold text-gray-900 text-sm">
-                          {review.name}
-                        </p>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        {review.name}
+                      </p>
 
-                        {/* Stars */}
-                        <div className="flex gap-1 text-yellow-500">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-yellow-400" />
-                          ))}
-                        </div>
+                      <p className="text-xs text-gray-500">
+                        {review.role}
+                      </p>
+
+                      <div className="flex gap-1 text-yellow-500">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-400" />
+                        ))}
                       </div>
                     </div>
-
-                    {/* Review Text */}
-                    <p className="mt-4 text-sm text-gray-700 leading-relaxed">
-                      “{review.text}”
-                    </p>
-
                   </div>
+
+                  <p className="mt-4 text-sm text-gray-700 leading-relaxed">
+                    "{review.text}"
+                  </p>
 
                 </div>
               </SwiperSlide>

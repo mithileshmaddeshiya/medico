@@ -1,6 +1,5 @@
 export const cityData = {
 
-
     // ============================================================
     //  DEORIA — Complete Updated Entry
     // ============================================================
@@ -17,10 +16,62 @@ export const cityData = {
             "Order medicines online in Deoria with MedicoBharat. Prescription support from Maharshi Devraha Baba Medical College, District Hospital, Mangalam Hospital. Doorstep delivery across Civil Lines, Station Road, Subhash Chowk, Raghav Nagar and nearby villages.",
 
         hero: {
-            heading: "Medicine ghar par mangao- Deoria me",
+            heading: "Deoria Mein Online Medicine Delivery – Ghar Tak Dawaiyaan",
             subheading: "Station Road ki bheed ho ya Civil Lines ka rush — ab Deoria mein prescription upload karo aur medicines seedha ghar par paao. Hospital ke baad bhi store dhoondhne ki zaroorat nahi.",
             buttonText: "Place your Order",
             image: "/heroimage/medihero.webp",
+
+        },
+
+        otherCitiesSection: {
+            badge: "District-Wide Medicine Delivery",
+            heading: "Explore Nearby Cities We Serve Across Deoria District"
+        },
+
+        testimonialSubheading:
+            "Deoria ke hazaron parivaar apni medicine delivery ke liye Medicobharat par bharosa karte hain",
+
+        reviews: [
+            {
+                name: "Ravi Singh",
+                img: "/user/amitsingh.webp",
+                text: "District Hospital se prescription milne ke baad medicines ghar par mil gayi. Bahut convenient service hai."
+            },
+            {
+                name: "Pooja Verma",
+                img: "/user/neha1.webp",
+                text: "Civil Lines me rehte hain, ab medical store ki line me lagna nahi padta."
+            },
+            {
+                name: "Ankit Mishra",
+                img: "/user/rohit.webp",
+                text: "BP medicines ki monthly refill time par mil jaati hai."
+            },
+            {
+                name: "Neha Gupta",
+                img: "/user/priya.webp",
+                text: "Emergency medicine order ki thi, delivery expected time se pehle mil gayi."
+            }
+        ],
+
+        howItWorks: {
+            heading: "Online Medicine Delivery in Deoria Made Simple",
+            description:
+                "Deoria ke busy parivaron aur senior citizens ke liye medicine order karna ab pehle se zyada convenient ho gaya hai.",
+            steps: [
+                {
+                    title: "Prescription WhatsApp Karein",
+                    desc: "Doctor ka prescription ya medicine list hume WhatsApp par bhejein."
+                },
+                {
+                    title: "Medicine Availability Check",
+                    desc: "Hamari team medicines ki availability aur discount details batati hai."
+                },
+                {
+                    title: "Same-Day Delivery",
+                    desc: "Deoria ke kai areas me medicines jaldi ghar tak pahunchayi jaati hain."
+                }
+            ]
         },
 
         keywords: [
@@ -112,24 +163,71 @@ export const cityData = {
             },
         ],
 
-        highlights: [
-            "Medicine Delivery in Deoria",
-            "Online Pharmacy near Maharshi Devraha Baba Medical College",
-            "Prescription Support from District Hospital Deoria",
-            "Doorstep Delivery across Deoria",
-            "Medicine Delivery Civil Lines & Station Road Deoria",
-            "Specialized Medicine Delivery Deoria",
-            "Village Delivery — Pathardeva, Rasauli, Pipra Madangopal",
-            "BP & Diabetes Medicine Refill Deoria",
-            "Senior Citizen Medicine Support Deoria",
-            "Late Evening Medicine Support Deoria",
-            "Sunday Medicine Ordering Deoria",
-            "Genuine Medicines in Deoria",
-            "Online Medical Store Deoria",
-            "Prescription Upload Pharmacy Deoria",
-        ],
+        seoSection: {
+            trustBadge: "Trusted Healthcare Partner in Deoria",
+
+            heading: "Fast & Trusted Online Medicine Delivery in Deoria",
+
+            popularSearchTitle: "Popular Searches in Deoria",
+
+            popularSearchDescription:
+                "Users frequently search for online pharmacy, medicine home delivery aur healthcare products in Deoria.",
+
+            highlights: [
+                "Medicine Delivery in Deoria",
+                "Online Pharmacy near Maharshi Devaraha Baba Medical College",
+                "Prescription Support from District Hospital Deoria",
+                "Doorstep Delivery across Deoria",
+                "Medicine Delivery Civil Lines & Station Road Deoria",
+                "Specialized Medicine Delivery Deoria",
+                "Village Delivery — Pathardeva, Rasauli, Pipra Madangopal",
+                "BP & Diabetes Medicine Refill Deoria",
+                "Senior Citizen Medicine Support Deoria",
+                "Late Evening Medicine Support Deoria",
+                "Sunday Medicine Ordering Deoria",
+                "Genuine Medicines in Deoria",
+                "Online Medical Store Deoria",
+                "Prescription Upload Pharmacy Deoria"
+            ]
+        },
 
         seoContent: {
+
+            titles: {
+                intro: "Online Medicine Delivery in Deoria",
+
+                services: "Healthcare Services Available in Deoria",
+
+                areas: "Areas We Serve Across Deoria",
+
+                benefits: "Why Deoria Residents Prefer Online Medicine Ordering",
+
+                popularSearch: "Popular Healthcare Searches in Deoria",
+
+                emergency: "Emergency Medicine Support Across Deoria",
+
+                prescription: "Prescription Medicine Ordering in Deoria",
+
+                products: "Healthcare Products Available in Deoria",
+
+                trust: "Why Thousands of Families Trust MedicoBharat in Deoria",
+
+                nearby: "Medicine Delivery Across Nearby Areas of Deoria",
+
+                localHealthcare: "Healthcare Accessibility in Deoria",
+
+                onlinePharmacy: "Why Choose an Online Pharmacy in Deoria",
+
+                medicineCategories: "Medicine & Healthcare Categories in Deoria",
+
+                customerFocus: "Customer First Healthcare Support in Deoria",
+
+                healthcareAccessibility: "Improving Healthcare Accessibility in Deoria",
+
+                familyHealthcare: "Healthcare Support for Families in Deoria",
+
+                futureVision: "Our Vision for Healthcare in Deoria"
+            },
 
             intro:
                 "Deoria, Uttar Pradesh ka ek important district headquarter — aur yahan healthcare infrastructure sach mein kafi mazboot hai. Maharshi Devraha Baba Medical College, District Hospital Deoria, Mangalam Hospital, Savitri Hospital, Lalmati Superspeciality Hospital — itne bade centers ek saath. Lekin yahi ek ajeeb irony bhi hai: itni badi medical facilities ke hote hue bhi, sahi medicine sahi waqt par dhundh paana Deoria ke aam marez ke liye aasaan nahi.Station Road ya Civil Lines par kisi bhi weekday ko jaao — peak hours mein medical stores par bheed aisi hoti hai ki ek simple medicine lena bhi adha ghanta le leta hai. Specialist ne koi uncommon brand likhi ho toh alag store, alag brand — kai chakkar lagane padte hain. Late evening ya Sunday — phir ek nai mushkil.Aur jo log Pipra Madangopal, Pathardeva, Narayanpur Tiwari, Khairatia, Rasauli, Gauri Buzurg jaise gaanvon se aate hain — unke liye sirf medicines ke liye Deoria city tak ek baar aana matlab poora din kharaab.MedicoBharat yeh takleef khatam karta hai. Dr. N.K. Singh, Dr. J.P. Jaiswal, Dr. Abhinav Jaiswal ya Deoria ke kisi bhi registered doctor ki prescription upload karein — BP ki monthly refill ho, diabetes ki doses ho, thyroid treatment ho, ya hospital discharge ke baad ki turant zaroorat — MedicoBharat Civil Lines, Subhash Chowk, Raghav Nagar, Saket Nagar, Rudrapur Road se lekar aaspaas ke villages tak pahunchane ki koshish karta hai.",
@@ -217,8 +315,16 @@ export const cityData = {
 
         },
 
-    },
+        finalCTA: {
+            heading: "Need Medicines in Deoria?",
+            description:
+                "Share your prescription on WhatsApp and get medicines delivered across Deoria without visiting a medical store.",
+            buttonText: "Order Medicines in Deoria",
+            bottomText:
+                "Fast delivery • Genuine medicines • Trusted local support"
+        },
 
+    },
 
     // ============================================================
     //  SALEMPUR — Complete Updated Entry
@@ -236,10 +342,61 @@ export const cityData = {
             "Order medicines online in Salempur with MedicoBharat. Prescription support from J.K. Hospital, Jeevan Jyoti Hospital, CHC Salempur. Doorstep delivery across Gandhi Chowk, Sohnag Road, Majhauli Raj, Bankata and nearby villages.",
 
         hero: {
-            heading: "Medicine ghar par mangao- Salempur me",
+            heading: "Salempur ke liye online medicine order karein",
             subheading: "Gandhi Chowk ho ya Sohnag Road — Salempur me ab prescription upload karo aur medicines seedha ghar par paao. Baar baar Deoria jaane ki zaroorat nahi.",
             buttonText: "Place your Order",
             image: "/cityimg/salempurimg.webp",
+        },
+
+        otherCitiesSection: {
+            badge: "Medicine Delivery Network",
+            heading: "Explore Nearby Areas Served Around Salempur"
+        },
+
+        testimonialSubheading:
+            "Salempur ke log fast aur reliable medicine delivery ke liye Medicobharat par bharosa karte hain",
+
+        reviews: [
+            {
+                name: "Sandeep Yadav",
+                img: "/user/amitsingh.webp",
+                text: "Salempur me medicine delivery service kaafi helpful hai, especially senior citizens ke liye."
+            },
+            {
+                name: "Ritu Sharma",
+                img: "/user/neha1.webp",
+                text: "Prescription upload karte hi medicines confirm ho gayi aur same day delivery mil gayi."
+            },
+            {
+                name: "Amit Tiwari",
+                img: "/user/rohit.webp",
+                text: "Regular diabetes medicines ghar par mil jaati hain, bahut time bach jata hai."
+            },
+            {
+                name: "Kiran Singh",
+                img: "/user/priya.webp",
+                text: "Customer support ne medicine availability aur dosage dono me help ki."
+            }
+        ],
+
+        howItWorks: {
+            heading: "Get Medicines Delivered Across Salempur",
+            description:
+                "Salempur me ab medicine lene ke liye market jaane ki zarurat nahi, sab kuch online ho sakta hai.",
+            steps: [
+                {
+                    title: "Medicine Requirement Share Karein",
+                    desc: "Prescription ya medicine name WhatsApp par bhej dijiye."
+                },
+                {
+                    title: "Order Details Receive Karein",
+                    desc: "Price aur stock availability ki jankari turant di jaati hai."
+                },
+                {
+                    title: "Delivery Ghar Tak",
+                    desc: "Salempur me medicines directly aapke address par bheji jaati hain."
+                }
+            ]
         },
 
         keywords: [
@@ -289,65 +446,112 @@ export const cityData = {
 
         faqs: [
             {
-                question: "J.K. Hospital ya CHC Salempur se prescription milne ke baad medicines kaise order karein?",
-                answer: "J.K. Hospital, Jeevan Jyoti Hospital, CHC Salempur, ya Buddha Hospital se prescription milne ke baad aap MedicoBharat par prescription ki photo upload karein ya WhatsApp par share karein. Hamaari team aapki prescription verify karke medicine order process karti hai — aapko dobara medical store tak jaane ki zaroorat nahi.",
+                question: "Kya Salempur mein doctor ki prescription par medicines online order ki ja sakti hain?",
+                answer: "Haan, Salempur ke kisi bhi registered doctor ya healthcare center ki valid prescription upload karke medicines order ki ja sakti hain. Prescription verify hone ke baad medicine arrangement process shuru kiya jata hai."
             },
             {
-                question: "Kya Majhauli Raj, Bankata, Khukhundu aur Haraiya ke villages mein bhi medicine delivery milti hai?",
-                answer: "Haan, MedicoBharat Salempur ke aaspaas ke villages including Majhauli Raj, Bankata, Pipra Madan Gopal, Belthara Road, Chhapia, Rampur Buzurg, Bhagalpur, Mahui Sri Kant, Khukhundu, aur Haraiya mein bhi medicine ordering support provide karta hai.",
+                question: "Kya CHC Salempur aur J.K. Hospital ki prescription accept ki jaati hai?",
+                answer: "Bilkul. CHC Salempur, J.K. Hospital, Jeevan Jyoti Hospital, Buddha Hospital aur anya registered healthcare providers ki prescriptions ke aadhar par medicine ordering support diya jata hai."
             },
             {
-                question: "Kya BP aur diabetes ki monthly medicines Salempur mein ghar baithe order ho sakti hain?",
-                answer: "Bilkul. Gandhi Chowk, Sohnag Road, ya Deoria-Salempur Road ke paas rehne waale jo senior citizens ya chronic patients har mahine refill ke liye market jaate hain, unke liye MedicoBharat ek convenient solution hai — prescription ek baar upload karein aur regular refills ghar par paayein.",
+                question: "Kya Gandhi Chowk aur Sohnag Road area mein medicine delivery support available hai?",
+                answer: "Haan, Gandhi Chowk, Sohnag Road, Salempur Bazar, Railway Station Area, Tempo Stand Area aur aas-paas ke residential locations mein medicine ordering support available hai."
             },
             {
-                question: "Kya Dr. Rakesh Kumar Gupta ya Dr. J K Gupta ki prescription par medicines order ho sakti hain?",
-                answer: "Haan, Salempur ke kisi bhi registered doctor — chahe Mangalam Clinic ho, Dr. Rakesh Kumar Gupta Clinic ho, MAA VAISHNO SKIN AND LASER CLINIC ho, ya Dr. J K Gupta ka prescription — sabhi valid prescriptions par MedicoBharat medicine ordering mein madad karta hai.",
+                question: "Kya Bankata aur Majhauli Raj ke log bhi medicines order kar sakte hain?",
+                answer: "Haan, Bankata, Majhauli Raj, Khukhundu, Haraiya, Chhapia, Rampur Buzurg aur aas-paas ke villages ke residents bhi medicine ordering support ka fayda utha sakte hain."
             },
             {
-                question: "Kya Salempur Bazar ya Tempo Stand ke paas ke customers bhi order kar sakte hain?",
-                answer: "Haan, Salempur Bazar, Tempo Stand Area, Salempur Railway Station Area, CHC Salempur Road, Gandhi Chowk, Sohnag Road — Salempur ke sabhi main areas mein medicine ordering support available hai.",
+                question: "Kya Salempur mein BP aur diabetes ki monthly refill medicines ghar baithe mil sakti hain?",
+                answer: "Haan, chronic disease patients apni BP, diabetes, thyroid aur heart care medicines ke liye prescription upload karke regular refill support le sakte hain."
             },
             {
-                question: "Salempur mein emergency medicine ki zaroorat ho toh kya karein?",
-                answer: "Salempur mein urgent medicine ki zaroorat hone par MedicoBharat par apni requirement share karein. Raat ko medical store band hone par ya specific brand local dukaan par available na hone par bhi MedicoBharat se ordering assistance li ja sakti hai.",
+                question: "Kya Salempur mein unavailable ya difficult-to-find medicines bhi arrange ki ja sakti hain?",
+                answer: "Kai baar specific brands ya specialist medicines local stores par available nahi hoti. Aise cases mein medicine availability check karke arrangement karne ki koshish ki jaati hai."
             },
             {
-                question: "Kya Salempur mein senior citizens ke liye ghar baithe medicine order karna possible hai?",
-                answer: "Haan, Salempur ke buzurg log ya unke pariwar ke sadasya MedicoBharat ke zariye ghar baithe medicines order kar sakte hain. Baar baar Deoria tak jaane ki zaroorat khatam hoti hai — sirf prescription share karein aur delivery ghar par paayein.",
+                question: "Kya Salempur ke senior citizens ke liye online medicine ordering faydemand hai?",
+                answer: "Haan, senior citizens ko baar-baar market jaane ki zaroorat kam ho jaati hai. Family members bhi prescription share karke medicines order kar sakte hain."
             },
             {
-                question: "Kya Salempur mein prescription medicines ke alawa healthcare products bhi milte hain?",
-                answer: "Haan, MedicoBharat ke zariye Salempur ke customers nutrition supplements, immunity boosters, baby care products, diabetes monitoring kits, blood pressure monitoring accessories, personal care essentials, aur daily healthcare products bhi order kar sakte hain.",
+                question: "Kya medicines ke saath healthcare products bhi order kiye ja sakte hain?",
+                answer: "Haan, healthcare essentials, wellness supplements, personal care products, immunity boosters aur daily health products bhi order kiye ja sakte hain."
             },
             {
-                question: "Kya skin ya laser clinic ki prescription par bhi medicine order ho sakti hai Salempur mein?",
-                answer: "Haan, MAA VAISHNO SKIN AND LASER CLINIC ya Salempur ke kisi bhi registered dermatologist ya specialist doctor ki prescription par MedicoBharat se medicines order ki ja sakti hain.",
+                question: "Kya Salempur ke railway station aur bus stand area ke customers bhi service ka use kar sakte hain?",
+                answer: "Bilkul. Railway Station Area, Bus Stand Area, Tempo Stand aur Deoria-Salempur Road ke aas-paas rehne wale customers bhi medicine ordering support le sakte hain."
             },
             {
-                question: "MedicoBharat ko Salempur ke liye kyun choose karein?",
-                answer: "Salempur mein specific brand ki medicines har local dukaan par available nahi hoti aur senior citizens ke liye baar baar Deoria jaana mushkil hota hai. MedicoBharat yeh problem solve karta hai — genuine medicines, prescription support, aur Gandhi Chowk se lekar Majhauli Raj tak doorstep delivery ke saath ek convenient healthcare solution deta hai.",
-            },
+                question: "Salempur ke log online medicine ordering ko kyun prefer kar rahe hain?",
+                answer: "Online medicine ordering se time bachta hai, regular medicines manage karna aasaan hota hai aur patients ko har baar local medical stores par jaane ki zaroorat nahi padti."
+            }
         ],
 
-        highlights: [
-            "Medicine Delivery in Salempur",
-            "Online Pharmacy near CHC Salempur",
-            "Prescription Support from JK Hospital Salempur",
-            "Doorstep Delivery across Salempur",
-            "Medicine Delivery Gandhi Chowk Salempur",
-            "Healthcare Products in Salempur",
-            "Village Delivery — Majhauli Raj, Bankata, Haraiya",
-            "BP & Diabetes Medicine Refill Salempur",
-            "Senior Citizen Medicine Support Salempur",
-            "Same Day Medicine Support Salempur",
-            "24x7 Medicine Ordering Salempur",
-            "Genuine Medicines in Salempur",
-            "Online Medical Store Salempur",
-            "Prescription Upload Pharmacy Salempur",
-        ],
+        seoSection: {
+            trustBadge: "Reliable Medicine Delivery Service in Salempur",
+
+            heading: "Quick Medicine Delivery & Online Pharmacy in Salempur",
+
+            popularSearchTitle: "Trending Healthcare Searches in Salempur",
+
+            popularSearchDescription:
+                "Residents of Salempur frequently search for online pharmacy services, prescription medicines, healthcare essentials and same-day medicine delivery.",
+
+            highlights: [
+                "Crop Season Healthcare Support",
+                "Family Medicine Home Delivery",
+                "CHC Salempur Prescription Fulfillment",
+                "Village Healthcare Access",
+                "Medicine Support for Farmers",
+                "Monsoon Illness Medicine Delivery",
+                "Rural Healthcare Essentials",
+                "Children's Fever Medicine Service",
+                "Women Healthcare Product Availability",
+                "Monthly Treatment Medicine Refills",
+                "Healthcare Access in Remote Areas",
+                "Medical Supplies for Elderly Patients",
+                "Prescription Collection Assistance",
+                "Same-Day Rural Medicine Support"
+            ]
+        },
 
         seoContent: {
+
+            titles: {
+                intro: "Online Medicine Delivery in Salempur – Medicines at Your Doorstep",
+
+                services: "Medicine Delivery & Healthcare Services in Salempur",
+
+                areas: "Serving Gandhi Chowk, Sohnag Road & Nearby Areas of Salempur",
+
+                benefits: "Benefits of Ordering Medicines Online in Salempur",
+
+                popularSearch: "Popular Medicine & Healthcare Searches in Salempur",
+
+                emergency: "Emergency Medicine Assistance for Salempur Residents",
+
+                prescription: "Prescription Refill Support Across Salempur",
+
+                products: "Healthcare Essentials Available in Salempur",
+
+                trust: "Why Salempur Families Choose MedicoBharat",
+
+                nearby: "Medicine Delivery in Salempur & Nearby Villages",
+
+                localHealthcare: "Improving Healthcare Accessibility in Salempur",
+
+                onlinePharmacy: "Why an Online Pharmacy is Useful for Salempur Residents",
+
+                medicineCategories: "Medicines, Wellness & Healthcare Categories in Salempur",
+
+                customerFocus: "Dedicated Healthcare Support for Salempur Customers",
+
+                healthcareAccessibility: "Making Healthcare More Accessible in Salempur",
+
+                familyHealthcare: "Healthcare Solutions for Families in Salempur",
+
+                futureVision: "Building a Better Healthcare Experience in Salempur"
+            },
 
             intro:
                 "Salempur mein doctor tak pahunchna mushkil nahi — J.K. Hospital, Jeevan Jyoti Hospital, CHC Salempur, Buddha Hospital, yeh sab maujood hain. Mushkil tab shuru hoti hai jab doctor ke baad prescription lekar medical store jaao aur pata chale ki woh specific brand yahan nahi milti.Gandhi Chowk ya Sohnag Road ke paas rehne waale logon ko bhi chhoti zaroorat ke liye kaafi chakkar lagane padte hain. Aur jo patients diabetes, BP ya thyroid ke liye Deoria-Salempur Road par har mahine safar karte hain — khaaskar senior citizens ke liye yeh routine ek thakaan ban jaati hai.Majhauli Raj, Bankata, Pipra Madan Gopal, Belthara Road, Chhapia, Rampur Buzurg, Bhagalpur, Mahui Sri Kant, Khukhundu, Haraiya — in villages se aane waale logon ke liye toh Salempur aana aur phir wahan medicines na milna — dono milke poora din barbaad kar dete hain.MedicoBharat yahi routine todta hai. Dr. Rakesh Kumar Gupta, Dr. J.K. Gupta, ya Salempur ke kisi bhi registered doctor ki prescription upload karein — diabetes ki refill ho, BP ki monthly dose ho, thyroid ka regular course ho — medicines ghar tak pahunchangi.",
@@ -421,8 +625,19 @@ export const cityData = {
 
         },
 
-    },
+        finalCTA: {
+            heading: "Salempur me medicines ki zarurat hai?",
 
+            description:
+                "Prescription WhatsApp par bhejiye aur Salempur ke kisi bhi area me ghar baithe medicine delivery paaiye.",
+
+            buttonText: "Salempur Me Order Kare",
+
+            bottomText:
+                "Fast delivery • Easy ordering • Trusted medicine support"
+        },
+
+    },
 
     // ============================================================
     //  BHATNI — Complete Updated Entry
@@ -440,10 +655,62 @@ export const cityData = {
             "Order medicines online in Bhatni with MedicoBharat. Prescription support from CHC Bhatni, Triveni Hospital, Kushmawati Chikitsalaya. Doorstep delivery across Bhatni Junction, Nakahani Chauraha, Bhatni Bazar and nearby villages like Bankata, Khukhundu, Nonapar.",
 
         hero: {
-            heading: "Medicine ghar par mangao- Bhatni me",
+            heading: "Bhatni me fast medicine delivery service",
             subheading: "Bhatni Junction ke paas ho ya Nakahani Chauraha — prescription share karo aur medicines seedha ghar par paao. Deoria ya Gorakhpur jaane ki zaroorat nahi.",
             buttonText: "Place your Order",
             image: "/cityimg/bhatniimg.webp",
+        },
+
+        otherCitiesSection: {
+            badge: "Nearby Service Areas",
+            heading: "Other Cities We Serve Near Bhatni"
+        },
+
+        testimonialSubheading:
+            "Bhatni ke residents ghar baithe medicine delivery aur healthcare products ke liye Medicobharat ko pasand karte hain",
+
+
+        reviews: [
+            {
+                name: "Vikas Kumar",
+                img: "/user/rohit.webp",
+                text: "Bhatni me itni fast medicine delivery ki umeed nahi thi."
+            },
+            {
+                name: "Shalini Rai",
+                img: "/user/neha1.webp",
+                text: "Doctor ki prescribed medicines ek hi order me mil gayi."
+            },
+            {
+                name: "Manoj Gupta",
+                img: "/user/priya.webp",
+                text: "Medicine quality aur packaging dono bahut achhi thi."
+            },
+            {
+                name: "Priya Verma",
+                img: "/user/amitsingh.webp",
+                text: "Late evening order karne ke baad bhi next day medicines mil gayi."
+            }
+        ],
+
+        howItWorks: {
+            heading: "Fast Medicine Ordering Process in Bhatni",
+            description:
+                "Bhatni ke log ab ghar baithe medicines order kar sakte hain bina medical store ki line me lage.",
+            steps: [
+                {
+                    title: "Prescription Upload Karein",
+                    desc: "Doctor ka prescription WhatsApp par share karein."
+                },
+                {
+                    title: "Verification Process",
+                    desc: "Order verify hone ke baad confirmation bheja jata hai."
+                },
+                {
+                    title: "Quick Medicine Delivery",
+                    desc: "Bhatni me medicines safe packaging ke saath deliver ki jaati hain."
+                }
+            ]
         },
 
         keywords: [
@@ -494,65 +761,103 @@ export const cityData = {
 
         faqs: [
             {
-                question: "CHC Bhatni ya Triveni Hospital se prescription milne ke baad medicines kaise order karein?",
-                answer: "CHC Bhatni, Primary Health Center Bhatni, Triveni Hospital, Govt. Hospital, ya Kushmawati Chikitsalaya se prescription milne ke baad MedicoBharat par prescription ki photo upload karein ya WhatsApp par share karein. Hamaari team aapki prescription verify karke medicine order process mein madad karti hai — treatment ke baad bhi stores dhoondhne ki zaroorat nahi.",
+                question: "Bhatni Junction ke paas rehte hain aur urgent medicine chahiye ho to kya karein?",
+                answer: "Bhatni Junction area mein rehne wale log apni medicine requirement aur prescription share kar sakte hain. Availability ke hisaab se medicines arrange karne mein madad ki jaati hai, jisse multiple stores par jaane ki zaroorat kam ho jaati hai."
             },
             {
-                question: "Kya Bhatni mein specialist medicines bhi ghar par mil sakti hain?",
-                answer: "Bhatni mein specialist healthcare limited hai aur serious cases Deoria ya Gorakhpur refer hote hain — aise mein wahan se mili prescription ki medicines Bhatni ke local stores par har baar nahi milti. MedicoBharat aisi prescription medicines arrange karne mein madad karta hai taaki referral ke baad bhi patients ko alag jagah bhaagna na pare.",
+                question: "Deoria ya Gorakhpur se treatment karwane ke baad Bhatni mein medicines kaise mil sakti hain?",
+                answer: "Kaafi patients specialist treatment ke liye Deoria ya Gorakhpur jaate hain. Wahan se mili prescription ko upload karke medicines ki availability check karwai ja sakti hai aur ordering support liya ja sakta hai."
             },
             {
-                question: "Kya Bhatni Junction, Nakahani Chauraha aur Bhatni Bazar mein medicine delivery milti hai?",
-                answer: "Haan, MedicoBharat Bhatni ke sabhi main areas mein medicine ordering support provide karta hai — Bhatni Junction Railway Station, Railway Station Road, Nakahani Chauraha, Bhatni Bazar, Main Market, Hospital Road, Bus Stand Area, Thana Road, Salempur Road, Bankata Road, Lar Road, Majhauli Raj Road, Purani Bazar Area, Civil Area, Block Road, Post Office Road, aur Shiv Mandir Chowk tak.",
+                question: "Kya Bhatni ke rural belt mein rehne wale patients bhi online medicine service ka use kar sakte hain?",
+                answer: "Haan, Uska, Sohanpar, Nonapar, Khukhundu, Bankata aur aas-paas ke rural areas ke log bhi apni medicine requirements online share kar sakte hain."
             },
             {
-                question: "Kya Uska, Sohanpar, Khukhundu, Nonapar jaise gaon ke log bhi MedicoBharat se order kar sakte hain?",
-                answer: "Haan, Bhatni ke aaspaas ke villages jaise Uska, Sohanpar, Khukhundu, Bankata, Majhauli Raj, Nonapar, Parsia Chandaur, Belwa Babu, Jigna Mishra, aur Bakhra ke log bhi MedicoBharat se medicines order kar sakte hain. Pehle inhein Bhatni market ya Deoria tak aana padta tha — ab yeh zaroorat nahi.",
+                question: "Kya Bhatni mein long-term treatment lene wale patients ke liye medicine management aasaan ho sakta hai?",
+                answer: "Diabetes, hypertension, thyroid aur heart care jaise long-term treatments mein regular medicines ki zaroorat hoti hai. Online ordering se patients ko har baar market jaane ki zaroorat kam ho sakti hai."
             },
             {
-                question: "Kya BP, diabetes aur thyroid ki monthly medicines Bhatni mein ghar baithe order ho sakti hain?",
-                answer: "Bilkul. S.C. Clinic (Dr. P.M. Tiwari), Jansewa Clinic, S.S. Clinic & Eye Care Centre, Dr. Satish Chandra Srivastava, ya kisi bhi registered Bhatni doctor ki prescription par BP, diabetes, thyroid ya kisi bhi chronic disease ki monthly medicines MedicoBharat se order ki ja sakti hain — bina baar baar market gaye.",
+                question: "Kya Bhatni mein specialist medicines arrange karne mein madad mil sakti hai?",
+                answer: "Agar kisi doctor ne uncommon ya specialist medicine prescribe ki hai aur local stores par availability limited hai, to prescription share karke medicine availability check ki ja sakti hai."
             },
             {
-                question: "Bhatni Junction par travellers ya transient population ke liye urgent medicine ka kya option hai?",
-                answer: "Bhatni Junction railway town hone ki wajah se yahaan se guzarne wale travellers ko bhi kabhi kabhi urgent medicines ki zaroorat padti hai. MedicoBharat se medicine ordering request submit ki ja sakti hai — availability ke hisaab se hamaari team jaldi se jaldi madad karne ki koshish karti hai.",
+                question: "Bhatni Bazar mein bheed se bachkar medicines kaise order karein?",
+                answer: "Bhatni Bazar aur Main Market mein busy hours ke dauraan bheed rehti hai. Online ordering option patients ko market visits kam karne mein madad karta hai."
             },
             {
-                question: "Kya Dr. P.M. Tiwari ya Dr. Satish Chandra Srivastava ki prescription par medicines order ho sakti hain?",
-                answer: "Haan, Bhatni ke kisi bhi registered doctor — S.C. Clinic ke Dr. P.M. Tiwari, Jansewa Clinic, S.S. Clinic & Eye Care Centre, Dr. Satish Chandra Srivastava, Ashirvad Dental Hospital ke Dr. J.K. Gupta, ya kisi bhi aur specialist ki prescription par MedicoBharat medicine ordering mein assist karta hai.",
+                question: "Kya Bhatni ke senior citizens ke liye medicine ordering convenient hai?",
+                answer: "Haan, buzurg patients ya unke family members ghar baithe prescription share kar sakte hain aur regular medicines ke liye ordering support le sakte hain."
             },
             {
-                question: "Kya Nonapar aur Bankata side ke rural belt ke log MedicoBharat use kar sakte hain?",
-                answer: "Haan, Nonapar, Bankata, Belwa Babu, Parsia Chandaur jaise rural areas ke log jo transport aur distance ki wajah se medicine ke liye Bhatni town tak aane mein problem feel karte hain, woh bhi MedicoBharat se medicine ordering support le sakte hain.",
+                question: "Railway employees aur daily commuters ke liye medicine ordering ka kya fayda hai?",
+                answer: "Bhatni Junction par kaam karne wale railway staff aur daily commuters apni busy schedule ke beech medicines ki requirement online share karke time bacha sakte hain."
             },
             {
-                question: "Kya Bhatni mein senior citizens ke liye ghar baithe medicine order karna possible hai?",
-                answer: "Haan, Bhatni ke buzurg log ya unke pariwar ke sadasya MedicoBharat ke zariye ghar baithe medicines order kar sakte hain. Bhatni Bazar ya Nakahani Chauraha tak baar baar jaane ki zaroorat nahi — sirf prescription share karein aur medicines ghar par paayein.",
+                question: "Kya Bhatni mein healthcare products bhi medicines ke saath order kiye ja sakte hain?",
+                answer: "Haan, healthcare essentials, wellness supplements, personal care products aur monitoring devices jaise healthcare products bhi order kiye ja sakte hain."
             },
             {
-                question: "MedicoBharat ko Bhatni ke liye kyun choose karein?",
-                answer: "Bhatni ek Junction town hai lekin specialist medicines aur specific brands har local store par available nahi hote. Serious cases Deoria ya Gorakhpur refer hote hain aur wahan ki prescription ki medicines Bhatni mein arrange karna mushkil hota hai. Uska, Sohanpar, Nonapar jaise villages ke log sirf medicines ke liye Bhatni tak aate hain. MedicoBharat yeh saari problems solve karta hai — genuine medicines, prescription support, aur Bhatni Junction se lekar rural belt tak medicine pahunchane ki koshish.",
-            },
+                question: "Bhatni ke patients online medicine ordering ko kyun choose kar rahe hain?",
+                answer: "Online medicine ordering se specific medicines dhoondhne ka samay bachta hai, regular refills manage karna aasaan hota hai aur rural areas ke patients ko baar-baar town aane ki zaroorat kam padti hai."
+            }
         ],
+        seoSection: {
+            trustBadge: "Trusted Pharmacy Service in Bhatni",
 
-        highlights: [
-            "Medicine Delivery in Bhatni",
-            "Online Pharmacy near CHC Bhatni",
-            "Prescription Support from Triveni Hospital Bhatni",
-            "Doorstep Delivery across Bhatni",
-            "Medicine Delivery Bhatni Junction & Nakahani Chauraha",
-            "Specialist Medicine Delivery Bhatni",
-            "Village Delivery — Khukhundu, Bankata, Nonapar, Uska",
-            "BP & Diabetes Medicine Refill Bhatni",
-            "Senior Citizen Medicine Support Bhatni",
-            "Rural Belt Medicine Delivery Bhatni",
-            "Railway Junction Area Medicine Support",
-            "Genuine Medicines in Bhatni",
-            "Online Medical Store Bhatni",
-            "Prescription Upload Pharmacy Bhatni",
-        ],
+            heading: "Online Medicine Store & Fast Delivery in Bhatni",
+
+            popularSearchTitle: "Healthcare Searches in Bhatni",
+
+            popularSearchDescription:
+                "People in Bhatni regularly search for genuine medicines, healthcare products, prescription support and doorstep medicine delivery services.",
+
+            highlights: [
+                "Railway Employee Medicine Support",
+                "Medicine Delivery Near Bhatni Junction",
+                "Traveler Emergency Medicine Access",
+                "Fast Pharmacy Service Around Station Area",
+                "Healthcare Essentials for Daily Commuters",
+                "Prescription Refill Assistance",
+                "Long-Term Treatment Medicine Supply",
+                "Quick Access to Genuine Medicines",
+                "Family Healthcare Product Delivery",
+                "Senior Citizen Medical Support",
+                "Doctor Prescribed Medicine Ordering",
+                "Medical Care for Working Professionals",
+                "Child Healthcare Essentials",
+                "Doorstep Healthcare Convenience"
+            ]
+        },
 
         seoContent: {
+
+            titles: {
+                intro: "Online Medicine Delivery in Bhatni – Healthcare Made Easier",
+
+                services: "Healthcare Services Available Across Bhatni",
+
+                areas: "Areas We Serve in Bhatni & Nearby Villages",
+
+                benefits: "Why Bhatni Residents Prefer Online Medicine Ordering",
+
+                popularSearch: "Popular Healthcare Searches in Bhatni",
+
+                emergency: "Emergency Medicine Support in Bhatni",
+
+                prescription: "Prescription Medicine Refill Support in Bhatni",
+
+                products: "Healthcare Products Available in Bhatni",
+
+                trust: "Why Families in Bhatni Trust MedicoBharat",
+
+                nearby: "Medicine Delivery in Nearby Areas Around Bhatni",
+
+                healthcareAccessibility: "Improving Healthcare Access Across Bhatni",
+
+                familyHealthcare: "Healthcare Support for Families in Bhatni",
+
+                futureVision: "Our Vision for Better Healthcare in Bhatni"
+            },
 
             intro:
                 "Bhatni Junction — trains aati hain, jaati hain, log aate hain, jaate hain. Lekin jo yahan rehte hain — ya aaspaas ke gaanvon se yahan healthcare ke liye depend karte hain — unke liye ek aam takleef hai jo kaafi time se chal rahi hai.CHC Bhatni, Primary Health Center, Govt. Hospital, Triveni Hospital, Kushmawati Chikitsalaya — bunyaadi ilaaj ki suvidha maujood hai. Lekin jab koi serious case ho — cardiology, neurology, ya kuch aur specialist — toh Deoria ya Gorakhpur refer hona padta hai. Wahan se doctor jo prescription likhta hai, woh medicines Bhatni ke local stores par milti hain — yeh pakka nahi.Uska, Sohanpar, Khukhundu, Bankata, Majhauli Raj, Nonapar, Parsia Chandaur, Belwa Babu, Jigna Mishra, Bakhra — in gaanvon ke log pehle Bhatni aate hain, aur agar yahan specific brand na mile toh Deoria tak ka ek aur chakkar. Do safar, ek medicine ke liye.MedicoBharat yahi double-trip khatam karta hai. S.C. Clinic ke Dr. P.M. Tiwari, Jansewa Clinic, S.S. Clinic & Eye Care Centre, Dr. Satish Chandra Srivastava, ya kisi bhi registered doctor ki prescription upload karein — BP, diabetes, thyroid, ya Deoria/Gorakhpur referral ki koi bhi medicines — Bhatni Junction se lekar rural belt tak ghar pahunchegi.",
@@ -638,8 +943,19 @@ export const cityData = {
 
         },
 
-    },
+        finalCTA: {
+            heading: "Bhatni me medicine order karna hua aur aasaan",
 
+            description:
+                "Railway Station Road se lekar aas-paas ke villages tak medicines aur healthcare products ghar tak pahunchaye jaate hain.",
+
+            buttonText: "Bhatni Me Order Kare",
+
+            bottomText:
+                "Genuine medicines • Quick support • Doorstep delivery"
+        },
+
+    },
 
     // ============================================================
     //  BARHAJ
@@ -657,10 +973,61 @@ export const cityData = {
             "Order medicines online in Barhaj with MedicoBharat. Prescription support from CHC Barhaj, PHC Barhaj, PHC Paina, Dr. Chand Clinic, Pratigya Clinic. Doorstep delivery across Barhaj Bazar, Hospital Road, Ghaghara Ghat Area and nearby villages like Paina, Mahen, Gaura, Khukhundu, Pipra Madan Gopal.",
 
         hero: {
-            heading: "Medicine ghar par mangao — Barhaj mein",
+            heading: "Barhaj ke har mohalla tak medicine delivery",
             subheading: "Barhaj Bazar ke paas ho ya Ghaghara Ghat area — prescription share karo aur medicines seedha ghar par paao. Deoria ya Salempur jaane ki zaroorat nahi.",
             buttonText: "Place your Order",
             image: "/cityimg/barhajimg.webp",
+        },
+
+        otherCitiesSection: {
+            badge: "Trusted Delivery Coverage",
+            heading: "Discover Nearby Service Areas Around Barhaj"
+        },
+
+        testimonialSubheading:
+            "Barhaj ke parivaar timely medicine delivery aur trusted service ke liye Medicobharat par vishwas karte hain",
+
+        reviews: [
+            {
+                name: "Ashutosh Mishra",
+                img: "/user/rohit.webp",
+                text: "Barhaj me medicine delivery service ka experience bahut achha raha."
+            },
+            {
+                name: "Sakshi Singh",
+                img: "/user/priya.webp",
+                text: "Online order karna easy tha aur medicines time par mil gayi."
+            },
+            {
+                name: "Rakesh Yadav",
+                img: "/user/amitsingh.webp",
+                text: "Chronic medicines ki regular delivery ka option bahut useful hai."
+            },
+            {
+                name: "Pallavi Gupta",
+                img: "/user/neha1.webp",
+                text: "Customer support team ne order process me achhi guidance di."
+            }
+        ],
+
+        howItWorks: {
+            heading: "Order Medicines Online in Barhaj",
+            description:
+                "Barhaj ke customers ke liye online medicine delivery service healthcare ko aur aasan banati hai.",
+            steps: [
+                {
+                    title: "Health Prescription Share Karein",
+                    desc: "Required medicines ya prescription ki photo bhejein."
+                },
+                {
+                    title: "Order Processing",
+                    desc: "Hamari team medicines arrange karke order confirm karti hai."
+                },
+                {
+                    title: "Receive Medicines at Home",
+                    desc: "Barhaj ke kai locations par doorstep delivery di jaati hai."
+                }
+            ]
         },
 
         keywords: [
@@ -715,65 +1082,112 @@ export const cityData = {
 
         faqs: [
             {
-                question: "CHC Barhaj ya PHC Barhaj se prescription milne ke baad medicines kaise order karein?",
-                answer: "CHC Barhaj, PHC Barhaj, PHC Paina, ya PHC Mahen se prescription milne ke baad MedicoBharat par prescription ki photo upload karein ya WhatsApp par share karein. Hamaari team aapki prescription verify karke medicine order process mein madad karti hai — treatment ke baad bhi stores dhoondhne ki zaroorat nahi.",
+                question: "Kya Barhaj ke Ghaghara Ghat area ke log ghar baithe medicines order kar sakte hain?",
+                answer: "Haan, Ghaghara Ghat aur uske aas-paas ke areas mein rehne wale log apni prescription share karke medicines arrange karwa sakte hain. Isse unhe medicines ke liye Barhaj Bazar ya Deoria city tak baar-baar travel karne ki zaroorat nahi padti."
             },
             {
-                question: "Kya Barhaj mein specialist medicines bhi ghar par mil sakti hain?",
-                answer: "Barhaj mein specialist healthcare limited hai aur serious cases Deoria ya bade cities refer hote hain — aise mein wahan se mili prescription ki medicines Barhaj ke local stores par har baar nahi milti. MedicoBharat aisi prescription medicines arrange karne mein madad karta hai taaki referral ke baad bhi patients ko alag jagah bhaagna na pare.",
+                question: "Barhaj ke patients jo treatment ke liye Deoria jaate hain, unke liye MedicoBharat kaise useful hai?",
+                answer: "Barhaj ke kai patients specialist treatment ke liye Deoria Medical College ya private hospitals jaate hain. Wahan se milne wali prescriptions ke aadhar par medicines arrange karna aur regular refills manage karna MedicoBharat ke through aasaan ho sakta hai."
             },
             {
-                question: "Kya Barhaj Bazar, Hospital Road aur Ghaghara Ghat Area mein medicine delivery milti hai?",
-                answer: "Haan, MedicoBharat Barhaj ke sabhi main areas mein medicine ordering support provide karta hai — Barhaj Bazar, Main Market, Hospital Road, Bus Stand Area, Gaura Road, Paina Road, Mahen Road, Barhaj Railway Station Area, Town Area Barhaj, Block Road, Tehsil Road, CHC Barhaj Road, Ghaghara Ghat Area, Civil Area, Market Road, Nagar Palika Area, School Road, aur Barhaj-Salempur Road tak.",
+                question: "Kya Barhaj mein flood season ke dauran regular medicines manage karna possible hai?",
+                answer: "Monsoon aur flood season ke dauran kai river belt villages mein transportation prabhavit hota hai. Aise samay mein patients apni medicine requirements pehle se plan karke medicines arrange kar sakte hain."
             },
             {
-                question: "Kya Paina, Mahen, Gaura, Khukhundu jaise gaon ke log bhi MedicoBharat se order kar sakte hain?",
-                answer: "Haan, Barhaj ke aaspaas ke villages jaise Paina, Mahen, Gaura, Parsia Devar, Karayal Shukla, Kothibhar, Bhaluani, Khukhundu, Karmaha, aur Pipra Madan Gopal ke log bhi MedicoBharat se medicines order kar sakte hain. Pehle inhein Barhaj market ya Deoria tak aana padta tha — ab yeh zaroorat nahi.",
+                question: "Kya Barhaj ke Paina aur Mahen area ke log bhi medicine ordering support le sakte hain?",
+                answer: "Haan, Paina, Mahen aur Barhaj ke aas-paas ke rural villages ke residents bhi apni healthcare requirements online share karke medicine ordering support le sakte hain."
             },
             {
-                question: "Kya BP, diabetes aur thyroid ki monthly medicines Barhaj mein ghar baithe order ho sakti hain?",
-                answer: "Bilkul. Dr. Chand Clinic, Pratigya Clinic, CHC Barhaj, ya kisi bhi registered Barhaj doctor ki prescription par BP, diabetes, thyroid ya kisi bhi chronic disease ki monthly medicines MedicoBharat se order ki ja sakti hain — bina baar baar market gaye.",
+                question: "Kya Barhaj mein heart, BP aur diabetes patients ke liye regular refill support mil sakta hai?",
+                answer: "Bilkul. Long-term treatment lene wale patients apni regular prescriptions ke saath medicines ki monthly requirements ko aasani se manage kar sakte hain."
             },
             {
-                question: "Monsoon aur flood season mein Ghaghara river belt ke villages ke liye medicine access kaisi rehti hai?",
-                answer: "Barhaj Ghaghara (Saryu) river ke kinare basa hua town hai, aur monsoon/flood season mein river-belt villages ke liye Barhaj town tak travel aur medicine access kabhi-kabhi kaafi challenging ho jaati hai. MedicoBharat in situations mein ek convenient ordering option deta hai — Paina, Mahen, Gaura, Khukhundu jaise flood-prone belt ke log apni medicine requirements ke liye order submit kar sakte hain.",
+                question: "Kya Barhaj Bazar mein unavailable medicines ke liye help mil sakti hai?",
+                answer: "Agar kisi prescribed medicine ki local availability kam hai, to prescription share karke us medicine ki availability aur arrangement ke baare mein jankari li ja sakti hai."
             },
             {
-                question: "Kya Dr. Chand Clinic ya Pratigya Clinic ki prescription par medicines order ho sakti hain?",
-                answer: "Haan, Barhaj ke kisi bhi registered doctor — Dr. Chand Clinic (Main Road), Pratigya Clinic, Maa Mansa Ano Rectal Clinic, Barhaj Dental Clinic, CHC Barhaj, ya kisi bhi aur specialist ki prescription par MedicoBharat medicine ordering mein assist karta hai.",
+                question: "Kya Barhaj ke senior citizens ke liye medicine ordering faydemand hai?",
+                answer: "Haan, buzurg patients ko market tak travel karne ki zaroorat kam padti hai aur unke family members bhi unke behalf par medicines order kar sakte hain."
             },
             {
-                question: "Kya Ghaghara river belt ke rural villages ke log MedicoBharat use kar sakte hain?",
-                answer: "Haan, Ghaghara river belt ke gaon jaise Khukhundu, Pipra Madan Gopal, Bhaluani, Karmaha, Kothibhar jaise rural areas ke log jo transport aur distance ki wajah se medicine ke liye Barhaj town tak aane mein problem feel karte hain, woh bhi MedicoBharat se medicine ordering support le sakte hain.",
+                question: "Kya Barhaj mein healthcare products aur wellness items bhi mil sakte hain?",
+                answer: "Medicines ke saath-saath healthcare essentials, nutritional supplements, personal care products aur wellness items bhi arrange kiye ja sakte hain."
             },
             {
-                question: "Kya Barhaj mein senior citizens ke liye ghar baithe medicine order karna possible hai?",
-                answer: "Haan, Barhaj ke buzurg log ya unke pariwar ke sadasya MedicoBharat ke zariye ghar baithe medicines order kar sakte hain. Barhaj Bazar ya Hospital Road tak baar baar jaane ki zaroorat nahi — sirf prescription share karein aur medicines ghar par paayein.",
+                question: "Kya Barhaj ke rural patients specialist medicines bhi mangwa sakte hain?",
+                answer: "Haan, agar kisi doctor ne specific ya specialist medicine prescribe ki hai, to prescription verify karke medicine availability check ki ja sakti hai."
             },
             {
-                question: "MedicoBharat ko Barhaj ke liye kyun choose karein?",
-                answer: "Barhaj ek river-belt tehsil town hai jahan Ghaghara ke kinare bade aur kaafi gaon healthcare ke liye depend karte hain — lekin specialist medicines aur specific brands har local store par available nahi hote. Serious cases Deoria refer hote hain aur wahan ki prescription ki medicines Barhaj mein arrange karna mushkil hota hai. Monsoon mein river-belt villages ka travel aur bhi tough ho jaata hai. MedicoBharat yeh saari problems solve karta hai — genuine medicines, prescription support, aur Barhaj Bazar se lekar Ghaghara river belt tak medicine pahunchane ki koshish.",
-            },
+                question: "Barhaj ke log MedicoBharat ko kyun choose kar rahe hain?",
+                answer: "Barhaj ke patients ko kai baar medicines ke liye Deoria ya multiple stores visit karne padte hain. MedicoBharat unhe ek convenient platform deta hai jahan se prescription-based medicines aur healthcare products ko manage karna aasaan ho jata hai."
+            }
         ],
 
-        highlights: [
-            "Medicine Delivery in Barhaj",
-            "Online Pharmacy near CHC Barhaj",
-            "Prescription Support from PHC Barhaj & PHC Paina",
-            "Doorstep Delivery across Barhaj",
-            "Medicine Delivery Barhaj Bazar & Ghaghara Ghat Area",
-            "Specialist Medicine Delivery Barhaj",
-            "Village Delivery — Paina, Mahen, Gaura, Khukhundu, Pipra Madan Gopal",
-            "BP & Diabetes Medicine Refill Barhaj",
-            "Senior Citizen Medicine Support Barhaj",
-            "Flood Season Medicine Access Barhaj River Belt",
-            "Ghaghara River Belt Village Medicine Delivery",
-            "Genuine Medicines in Barhaj",
-            "Online Medical Store Barhaj",
-            "Prescription Upload Pharmacy Barhaj",
-        ],
+        seoSection: {
+            trustBadge: "Your Local Healthcare Partner in Barhaj",
+
+            heading: "Trusted Online Pharmacy & Medicine Delivery in Barhaj",
+
+            popularSearchTitle: "Most Searched Medicines in Barhaj",
+
+            popularSearchDescription:
+                "Residents of Barhaj often search for prescription medicine support, healthcare products, emergency medicines and fast home delivery services.",
+
+            highlights: [
+                "Healthcare Support Near Barhaj Ghat",
+                "Rural Patient Medicine Access",
+                "Seasonal Fever Medicine Availability",
+                "Medicine Delivery Across River Belt Areas",
+                "Healthcare Products for Village Families",
+                "Emergency Pharmacy Support",
+                "Cardiac Patient Medicine Assistance",
+                "Chronic Disease Treatment Refills",
+                "Village Health Service Connectivity",
+                "Women Wellness Product Delivery",
+                "Essential Medicine Access for Elderly",
+                "Healthcare Needs During Flood Season",
+                "Local Clinic Prescription Support",
+                "Reliable Rural Medicine Network"
+            ]
+        },
 
         seoContent: {
+
+            titles: {
+                intro: "Online Medicine Delivery in Barhaj – Medicines Delivered to Your Doorstep",
+
+                services: "Medicine Delivery Services Across Barhaj",
+
+                areas: "Serving Barhaj Bazar, Hospital Road & Nearby Villages",
+
+                benefits: "Benefits of Ordering Medicines Online in Barhaj",
+
+                popularSearch: "Popular Healthcare Searches by Barhaj Residents",
+
+                emergency: "Emergency Medicine Assistance in Barhaj",
+
+                prescription: "Prescription Refill Support for Barhaj Patients",
+
+                products: "Healthcare Essentials Available in Barhaj",
+
+                trust: "Why Barhaj Families Choose MedicoBharat",
+
+                nearby: "Medicine Delivery in Barhaj & Nearby Areas",
+
+                localHealthcare: "Improving Healthcare Accessibility in Barhaj",
+
+                onlinePharmacy: "Why an Online Pharmacy is Useful for Barhaj Residents",
+
+                medicineCategories: "Medicines, Wellness & Healthcare Categories in Barhaj",
+
+                customerFocus: "Dedicated Healthcare Support for Customers in Barhaj",
+
+                healthcareAccessibility: "Making Healthcare More Accessible in Barhaj",
+
+                familyHealthcare: "Healthcare Solutions for Families in Barhaj",
+
+                futureVision: "Building a Better Healthcare Experience in Barhaj"
+            },
 
             intro:
                 "MedicoBharat Barhaj ke niwaasiyon ke liye ek bharosemand online medicine delivery platform hGhaghara (Saryu) river ke kinare basa Barhaj — ek aisaa tehsil town jiska itihas river-trade se juda hua hai. Barhaj Ghat ka zamaana ek taraf, lekin aaj bhi Paina, Mahen, Gaura, Khukhundu, Karmaha, Pipra Madan Gopal — in tamam nadee-kinare gaanvon ka sahara Barhaj par hai. Khaana-peena, bazaar, banking, healthcare — sab kuch Barhaj se.CHC Barhaj, PHC Barhaj, PHC Paina, PHC Mahen — sarkari sehat ki suvidha hai. Dr. Chand Clinic, Pratigya Clinic jaise local centers bhi kaam kar rahe hain. Lekin jab koi serious case ho, toh Deoria ya bade shehar refer hona padta hai — aur wahan se doctor jo prescription likhta hai, woh medicines Barhaj ke local stores mein milti hain, pakka nahi.BP, diabetes, thyroid ke regular patients ke liye monthly refill bhi ek tay routine ban jaati hai — Barhaj Bazar, Hospital Road, Market Road pe chakkar, aur agar specific brand na mili toh aur aage ka safar.Aur jab Ghaghara ubhalti hai — monsoon mein, baadh ke waqt — tab Paina, Mahen, Gaura, Khukhundu, Karmaha ke logon ke liye Barhaj town tak pahunchna hi ek kaam ho jaata hai. Medicine uske baad dhundhhna alag baat.MedicoBharat yahi cycle todta hai. Dr. Chand Clinic, Pratigya Clinic, CHC Barhaj, ya kisi bhi registered doctor ki prescription upload karein — Barhaj Bazar se lekar Ghaghara river belt tak, baadh ho ya na ho, dawa ghar pahunchegi.",
@@ -861,8 +1275,19 @@ export const cityData = {
 
         },
 
-    },
+        finalCTA: {
+            heading: "Barhaj me ab medical store jaane ki zarurat nahi",
 
+            description:
+                "Regular medicines, BP medicines aur healthcare essentials Barhaj me directly ghar par mangwaiye.",
+
+            buttonText: "Barhaj Me Order Kare",
+
+            bottomText:
+                "Safe ordering • Same day support • Reliable service"
+        },
+
+    },
 
     // ============================================================
     //  LAR
@@ -880,10 +1305,61 @@ export const cityData = {
             "Order medicines online in Lar with MedicoBharat. Prescription support from CHC Lar Deoria, PHC Rewali, PHC Kukurghati, Dr. A.K. Barnwal, Rachit Hospital. Doorstep delivery across Lar Bazar, Chowk Road, Station Road and nearby villages like Raksa, Mehrouna, Churiya, Pindi, Ropan Chhapra.",
 
         hero: {
-            heading: "Medicine ghar par mangao — Lar mein",
+            heading: "Lar me prescription aur OTC medicines ghar tak",
             subheading: "Lar Bazar ke paas ho ya Salempur–Deoria Road — prescription share karo aur medicines seedha ghar par paao. Deoria ya Gorakhpur jaane ki zaroorat nahi.",
             buttonText: "Place your Order",
             image: "/cityimg/larimg.webp",
+        },
+
+        otherCitiesSection: {
+            badge: "Available Service Locations",
+            heading: "Cities and Towns We Serve Near Lar"
+        },
+
+        testimonialSubheading:
+            "Lar ke log apni regular aur emergency medicines ke liye Medicobharat par bharosa karte hain",
+
+        reviews: [
+            {
+                name: "Deepak Sharma",
+                img: "/user/rohit.webp",
+                text: "Lar me ghar baithe medicines mil jana bahut convenient hai."
+            },
+            {
+                name: "Nidhi Verma",
+                img: "/user/neha1.webp",
+                text: "Medicine availability aur delivery speed dono impressive rahe."
+            },
+            {
+                name: "Rahul Singh",
+                img: "/user/amitsingh.webp",
+                text: "Monthly medicines ke liye ab baar-baar market nahi jana padta."
+            },
+            {
+                name: "Komal Gupta",
+                img: "/user/priya.webp",
+                text: "Prescription verification process fast tha aur order jaldi dispatch ho gaya."
+            }
+        ],
+
+        howItWorks: {
+            heading: "Lar Me Medicines Mangwana Ab Hua Easy",
+            description:
+                "Lar ke residents ke liye online medicine ordering ek fast aur reliable option hai.",
+            steps: [
+                {
+                    title: "WhatsApp Par Order Karein",
+                    desc: "Medicine list ya prescription hume bhej dijiye."
+                },
+                {
+                    title: "Confirmation Message Paayein",
+                    desc: "Availability aur order amount confirm kiya jata hai."
+                },
+                {
+                    title: "Doorstep Service Ka Labh Uthaiye",
+                    desc: "Medicines Lar me aapke ghar tak pahunchayi jaati hain."
+                }
+            ]
         },
 
         keywords: [
@@ -938,65 +1414,114 @@ export const cityData = {
 
         faqs: [
             {
-                question: "CHC Lar ya PHC Rewali se prescription milne ke baad medicines kaise order karein?",
-                answer: "CHC Lar Deoria, PHC Rewali, PHC Kukurghati, ya CHC Salempur se prescription milne ke baad MedicoBharat par prescription ki photo upload karein ya WhatsApp par share karein. Hamaari team aapki prescription verify karke medicine order process mein madad karti hai — treatment ke baad bhi stores dhoondhne ki zaroorat nahi.",
+                question: "Kya Lar ke Main Market aur Station Road area mein medicines order ki ja sakti hain?",
+                answer: "Haan, Lar Main Market, Station Road, Bus Stand Area aur aas-paas ke residential locations ke residents prescription upload karke medicines ki availability check kar sakte hain aur ordering support le sakte hain."
             },
             {
-                question: "Kya Lar mein cardiology, neurology ya surgery ki specialist medicines bhi ghar par mil sakti hain?",
-                answer: "Lar mein CHC level tak basic aur secondary care available hai, lekin cardiology, neurology, advanced surgery, cancer care ya high-risk pregnancy ke liye patients aksar Deoria, Gorakhpur ya Siwan (Bihar) refer hote hain. Wahan se milne waali prescription ki medicines Lar ke local stores par har baar nahi milti. MedicoBharat aisi specialist prescription medicines arrange karne mein madad karta hai taaki referral ke baad bhi alag jagah bhaagna na pare.",
+                question: "Kya Lar ke patients ko medicines ke liye baar-baar Deoria jana padta hai?",
+                answer: "Lar ke kai patients specialist consultation ke liye Deoria ya Gorakhpur jaate hain. Aise patients ke liye prescription-based medicines ko arrange karna aur regular refills manage karna kaafi convenient ho sakta hai."
             },
             {
-                question: "Kya Lar Bazar, Chowk Road aur Station Road par medicine delivery milti hai?",
-                answer: "Haan, MedicoBharat Lar ke sabhi main areas mein medicine ordering support provide karta hai — Chowk Road, Station Road, Lar Road Railway Station area, Lar Sabji Mandi area, CHC Lar Deoria area, Town Area Office Lar, aur Salempur–Deoria Main Road tak.",
+                question: "Kya Lar aur aas-paas ke villages ke log bhi medicine ordering support le sakte hain?",
+                answer: "Haan, Lar ke aas-paas ke gaonon mein rehne wale log bhi apni healthcare requirements online share karke medicines aur healthcare products ki availability ke baare mein jankari le sakte hain."
             },
             {
-                question: "Kya Raksa, Mehrouna, Churiya, Pindi jaise gaon ke log bhi MedicoBharat se order kar sakte hain?",
-                answer: "Haan, Lar ke aaspaas ke villages jaise Raksa, Thakur Gauri, Ramnagar, Ropan Chhapra, Chordiha, Churiya, Pindi, Mehrouna, Ajana, Babhanauli, Bharauli, Dumari, Sahjaur, Ratanpura, aur Rawatpar Amethia ke log bhi MedicoBharat se medicines order kar sakte hain. Pehle inhein Lar Bazar ya Deoria tak aana padta tha — ab yeh zaroorat nahi.",
+                question: "Kya Lar mein school teachers, government employees aur working professionals ke liye online medicine ordering useful hai?",
+                answer: "Bilkul. Busy schedule ki wajah se market jaane ka samay na milne par working professionals aur government employees apni medicine requirements ko aasani se manage kar sakte hain."
             },
             {
-                question: "Kya BP, diabetes aur thyroid ki monthly medicines Lar mein ghar baithe order ho sakti hain?",
-                answer: "Bilkul. Dr. A.K. Barnwal (Public Health Care Clinic), Dr. Ravi Rai (Rachit Hospital), CHC Lar, ya kisi bhi registered Lar doctor ki prescription par BP, diabetes, thyroid ya kisi bhi chronic disease ki monthly medicines MedicoBharat se order ki ja sakti hain — bina baar baar Lar Bazar gaye.",
+                question: "Kya Lar mein BP, diabetes aur thyroid patients ke liye regular medicine support available hai?",
+                answer: "Haan, long-term treatment lene wale patients apni regular prescriptions ke saath monthly medicine requirements ko aasani se manage kar sakte hain aur refill support le sakte hain."
             },
             {
-                question: "Bihar border ke paas ke logon ke liye bhi kya MedicoBharat kaam karta hai?",
-                answer: "Haan. Lar ka market UP aur Bihar dono taraf ke logon ko serve karta hai — Bhojpuri belt ke woh log jo Lar Bazar par depend karte hain, chahe UP ki taraf se hoon ya Bihar border ke paas se, MedicoBharat se medicine ordering support le sakte hain. Lar Road Railway Station se aane wale travellers bhi urgent medicine ki zaroorat ke liye order submit kar sakte hain.",
+                question: "Kya Lar ke senior citizens ke liye ghar baithe medicines arrange karna possible hai?",
+                answer: "Haan, buzurg patients aur unke family members prescription share karke medicines ki availability check kar sakte hain. Isse unhe baar-baar market jaane ki zaroorat kam padti hai."
             },
             {
-                question: "Kya Dr. A.K. Barnwal ya Dr. Ravi Rai ki prescription par medicines order ho sakti hain?",
-                answer: "Haan, Lar ke kisi bhi registered doctor — Dr. A.K. Barnwal (Public Health Care Clinic), Dr. Ravi Rai (Rachit Hospital), Dr. Mohd. Adil Jamshed (Family Super Dental Clinic), Dr. Nadeem (Madina Homeo Clinic), Dr. Avijit Sarkari, Dr. Chhavi Sarkari, ya CHC Lar ke kisi bhi doctor ki prescription par MedicoBharat medicine ordering mein assist karta hai.",
+                question: "Kya Lar mein children's medicines aur family healthcare products bhi mil sakte hain?",
+                answer: "Haan, medicines ke saath family healthcare essentials, pediatric care products, wellness items aur personal care products bhi arrange kiye ja sakte hain."
             },
             {
-                question: "Flood ya waterlogging ke baad Lar aur aaspaas ke villages mein medicines ki zaroorat zyada kyun hoti hai?",
-                answer: "Lar block ke kaafi gaon Chhoti Gandak aur Ghaghara nadi ke kinare hain. Flood ya waterlogging ke baad viral fever, diarrhea, stomach infection, skin diseases, cold-cough aur eye-ear infections ke cases badhte hain. In situations mein travel mushkil ho jaati hai aur medicines ki demand badh jaati hai. MedicoBharat aise waqt mein Lar aur aaspaas ke village patients ke liye ek convenient ordering option deta hai.",
+                question: "Kya Lar ke patients specialist medicines ke liye bhi support le sakte hain?",
+                answer: "Agar kisi doctor ne specific ya uncommon medicine prescribe ki hai, to prescription verify karke medicine availability aur arrangement ke options check kiye ja sakte hain."
             },
             {
-                question: "Kya Lar mein senior citizens ke liye ghar baithe medicine order karna possible hai?",
-                answer: "Haan, Lar ke buzurg log ya unke pariwar ke sadasya MedicoBharat ke zariye ghar baithe medicines order kar sakte hain. Lar Bazar ya Chowk Road tak baar baar jaane ki zaroorat nahi — sirf prescription share karein aur medicines ghar par paayein.",
+                question: "Kya Lar mein festival season aur market rush ke dauran bhi medicines manage karna aasaan hai?",
+                answer: "Festival season aur busy market days mein bhi patients apni medicine requirements pehle se plan karke prescriptions share kar sakte hain, jisse last-minute pareshani kam ho sakti hai."
             },
             {
-                question: "MedicoBharat ko Lar ke liye kyun choose karein?",
-                answer: "Lar ek regional trading hub hai jahan UP aur Bihar dono taraf ke logon ki healthcare zarooratein poori hoti hain — lekin specialist medicines aur specific brands har local store par available nahi hote. Serious cases Deoria, Gorakhpur ya Siwan refer hote hain aur wahan ki prescription ki medicines Lar mein arrange karna mushkil hota hai. Raksa, Mehrouna, Churiya, Pindi jaise villages ke log medicine ke liye pehle Lar aate hain. MedicoBharat yeh saari problems solve karta hai — genuine medicines, prescription support, aur Lar Bazar se lekar Bihar border belt tak medicine pahunchane ki koshish.",
-            },
-        ],
+                question: "Lar ke log MedicoBharat ko kyun choose kar rahe hain?",
+                answer: "Lar ke families ko regular medicines, healthcare products aur prescription-based requirements ko manage karne ke liye ek convenient platform milta hai. Isse market visits kam hoti hain aur healthcare needs ko organize karna aasaan ho jata hai."
+            }
+        ]
+        ,
 
-        highlights: [
-            "Medicine Delivery in Lar",
-            "Online Pharmacy near CHC Lar Deoria",
-            "Prescription Support from PHC Rewali & PHC Kukurghati",
-            "Doorstep Delivery across Lar",
-            "Medicine Delivery Lar Bazar & Chowk Road",
-            "Specialist Medicine Delivery Lar",
-            "Village Delivery — Raksa, Mehrouna, Churiya, Pindi, Ropan Chhapra",
-            "BP & Diabetes Medicine Refill Lar",
-            "Senior Citizen Medicine Support Lar",
-            "Flood Season Medicine Access Lar Villages",
-            "UP–Bihar Border Belt Medicine Delivery",
-            "Genuine Medicines in Lar",
-            "Online Medical Store Lar",
-            "Prescription Upload Pharmacy Lar",
-        ],
+        seoSection: {
+            trustBadge: "Healthcare Support Across Lar",
+
+            heading: "Fast Medicine Delivery Service in Lar",
+
+            popularSearchTitle: "Popular Medical Searches in Lar",
+
+            popularSearchDescription:
+                "People in Lar frequently look for online medicine ordering, healthcare products, prescription medicines and pharmacy delivery services.",
+
+            highlights: [
+                "Small Town Healthcare Delivery",
+                "Medicine Support for Nearby Villages",
+                "Daily Healthcare Essentials",
+                "Prescription-Based Medicine Ordering",
+                "Affordable Pharmacy Services",
+                "Family Wellness Product Supply",
+                "Medicine Access in Semi-Rural Areas",
+                "Healthcare Support for Senior Citizens",
+                "Regular Treatment Medicine Refills",
+                "Women's Personal Care Products",
+                "Child Wellness Medicine Availability",
+                "Trusted Local Healthcare Network",
+                "Quick Access to Genuine Medicines",
+                "Doorstep Pharmacy Convenience"
+            ]
+        },
 
         seoContent: {
+
+
+            titles: {
+                intro: "Online Medicine Delivery in Lar – Medicines Delivered to Your Doorstep",
+
+                services: "Medicine Delivery Services Across Lar",
+
+                areas: "Serving Lar Town, Main Market & Nearby Villages",
+
+                benefits: "Benefits of Ordering Medicines Online in Lar",
+
+                popularSearch: "Popular Healthcare Searches by Lar Residents",
+
+                emergency: "Emergency Medicine Assistance in Lar",
+
+                prescription: "Prescription Refill Support for Lar Patients",
+
+                products: "Healthcare Essentials Available in Lar",
+
+                trust: "Why Lar Families Choose MedicoBharat",
+
+                nearby: "Medicine Delivery in Lar & Nearby Areas",
+
+                localHealthcare: "Improving Healthcare Accessibility in Lar",
+
+                onlinePharmacy: "Why an Online Pharmacy is Useful for Lar Residents",
+
+                medicineCategories: "Medicines, Wellness & Healthcare Categories in Lar",
+
+                customerFocus: "Dedicated Healthcare Support for Customers in Lar",
+
+                healthcareAccessibility: "Making Healthcare More Accessible in Lar",
+
+                familyHealthcare: "Healthcare Solutions for Families in Lar",
+
+                futureVision: "Building a Better Healthcare Experience in Lar"
+            },
 
             intro:
                 "Lar Bazar — UP aur Bihar dono taraf ke Bhojpuri belt ka ek shared address. Degree colleges, inter colleges, madrasas, bazaar, banking — darjanon gaanvon ke log Lar par depend karte hain. Ek aisi regional identity jo sirf ek block town ki nahi, ek poore ilaake ki zarorat ki jagah hai.Lekin Lar ki ek khaas baat hai jo yahan rehne waale jaante hain — railway station seedha town mein nahi hai. Lar Road Railway Station karib 3 km door hai. Yani jo bahar se aata hai, usse pehle station, phir town, phir zaroorat. Aur healthcare ke liye bhi yahi haal — CHC Lar Deoria, PHC Rewali, PHC Kukurghati, CHC Salempur, CHC Bhatpar Rani sab hain, lekin cardiology, neurology, advanced surgery, cancer care ke liye Deoria, Gorakhpur, ya kabhi-kabhi Siwan (Bihar) jaana padta hai. Wahan se mili prescription ki medicines Lar ke local stores mein dhundhhna ek alag challenge hai.Aur ek aur layer hai — Lar block ke gaon Chhoti Gandak aur Ghaghara ke kinare baste hain. Flood ya waterlogging ke waqt Raksa, Mehrouna, Churiya, Pindi, Ropan Chhapra ke logon ke liye Lar tak pahunchna bhi aasaan nahi rehta.MedicoBharat teeno challenges ko ek saath address karta hai. Dr. A.K. Barnwal, Dr. Ravi Rai (Rachit Hospital), Dr. Mohd. Adil Jamshed, ya Lar ke kisi bhi registered doctor ki prescription upload karein — Lar Bazar se Bihar border belt tak, baadh ho ya na ho, medicines ghar pahunchti hain.",
@@ -1078,6 +1603,18 @@ export const cityData = {
             trustSection:
                 "Lar ko sirf map par dekhna uski poori kahani nahi batata. Yeh woh town hai jahan 1857 ki azaadi ki ladaai ka bhi ek ring hai, jahan Majhauli Raj ka historical background hai, jahan degree colleges aur madrasas ek saath kaam karte hain — aur jahan UP aur Bihar dono taraf ka Bhojpuri cultural cross-section roz milta hai Lar Bazar mein.Is sab ke beech, healthcare ki ek seedhi si haqeeqat hai — CHC Lar, PHC Rewali, PHC Kukurghati ne primary zarooratein poori karne ki koshish ki hai, lekin specialist care ke liye Deoria, Gorakhpur ya Siwan refer hona padta hai. Wahan ki prescription ki medicines Lar mein milna guaranteed nahi. Flood season mein Chhoti Gandak aur Ghaghara belt ke Raksa, Thakur Gauri, Ramnagar, Ropan Chhapra, Churiya, Pindi, Mehrouna, Ajana, Babhanauli, Bharauli, Dumari, Sahjaur, Ratanpura, Rawatpar Amethia ke logon ka safar bhi ruk jaata hai.MedicoBharat ne yeh samjha ki Lar ki zaroorat ek unique mix hai — geography, cross-border patients, referral prescriptions, aur flood vulnerability sab ek saath. Lar Bazar, Chowk Road, Station Road se lekar in tamam gaanvon tak genuine medicines pahunchane ki koshish. Senior citizens ke liye, chronic patients ke liye, aur UP-Bihar border ke un logon ke liye jo Lar Bazar ko apna healthcare pata maante hain. Focus ek hi hai — trust, convenience, aur ghar baithe ek seamless experience."
 
+        },
+
+        finalCTA: {
+            heading: "Lar me ghar baithe medicines mangwaiye",
+
+            description:
+                "Prescription upload kijiye aur Lar ke aas-paas ke areas me fast medicine delivery ka fayda uthaiye.",
+
+            buttonText: "Lar Me Order Kare",
+
+            bottomText:
+                "No app needed • Fast assistance • Genuine medicines"
         },
 
     },
