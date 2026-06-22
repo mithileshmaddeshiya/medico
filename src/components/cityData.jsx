@@ -22,19 +22,13 @@ const cities = [
   "medicine-delivery/salempur",
   "medicine-delivery/barhaj",
   "medicine-delivery/lar",
-  // "medicine-delivery-bhatpar rani",
-  // "medicine-delivery-gauri bazar",
-  // "medicine-delivery-pathardeva",
-  // "medicine-delivery-rampur karkhana",
-  // "medicine-delivery-tarkulwa",
-  // "medicine-delivery-bankata",
-  // "medicine-delivery-bhaluani",
-  // "medicine-delivery-bhagalpur",
-  // "medicine-delivery-baitalpur",
-  // "medicine-delivery-desahi deoria",
 ];
 
-export default function PremiumCitySlider() {
+export default function PremiumCitySlider({data}) {
+
+  // console.log(data);
+  
+
   return (
     <section className="relative py-5 md:py-10 bg-gradient-to-b from-white via-green-50/40 to-white overflow-hidden">
 
@@ -47,11 +41,11 @@ export default function PremiumCitySlider() {
           <div>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-[11px] sm:text-xs font-semibold mb-3">
               <MapPin size={13} />
-              Available Cities
+              {data?.otherCitiesSection?.badge}
             </span>
 
-            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 leading-tight">
-              Explore Other Cities
+            <h2 className="text-[12px] md:text-2xl font-bold text-gray-900 leading-tight">
+              {data?.otherCitiesSection?.heading}
             </h2>
           </div>
 

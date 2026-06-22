@@ -1,64 +1,57 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   metadataBase: new URL("https://www.medicobharat.com"),
 
   title: {
     default:
-      "MedicoBharat | Online Medicine Delivery in Deoria",
-
+      "MedicoBharat | Online Medicine Delivery & Trusted Pharmacy Services",
     template: "%s | MedicoBharat",
   },
 
   description:
-    "MedicoBharat provides fast online medicine delivery in Deoria with genuine medicines, healthcare products, prescription support, and doorstep pharmacy delivery services.",
+    "MedicoBharat is a trusted online medicine delivery platform providing genuine medicines, prescription support, healthcare products, and fast doorstep pharmacy delivery across Deoria and nearby cities.",
 
   keywords: [
-    // PRIMARY SEO
-    "Online Medicine Delivery in Deoria",
-    "Medicine Delivery Deoria",
-    "Online Pharmacy Deoria",
-    "Medical Store in Deoria",
-    "Medicine Home Delivery Deoria",
-
-    // HIGH INTENT
-    "Buy Medicines Online",
-    "24x7 Medicine Delivery",
-    "Prescription Medicine Delivery",
-    "Emergency Medicine Delivery",
-    "Healthcare Products Online",
-
     // BRAND
     "MedicoBharat",
-    "Medico Bharat Pharmacy",
-    "Trusted Pharmacy in Deoria",
+    "Medico Bharat",
+    "MedicoBharat Pharmacy",
 
-    // LOCAL SEO
-    "Best Pharmacy in Deoria",
-    "Chemist Home Delivery Deoria",
+    // PRIMARY
+    "Online Medicine Delivery",
+    "Online Pharmacy",
+    "Medicine Home Delivery",
+    "Online Medical Store",
+    "Buy Medicines Online",
+
+    // HIGH INTENT
+    "Prescription Medicine Delivery",
+    "Emergency Medicine Delivery",
     "Doorstep Medicine Delivery",
-    "Online Medical Store Uttar Pradesh",
+    "24x7 Medicine Delivery",
+    "Healthcare Products Online",
 
-    // HEALTHCARE
-    "Online Healthcare Platform",
+    // LOCAL
+    "Medicine Delivery in Deoria",
+    "Online Pharmacy Deoria",
+    "Medical Store Deoria",
+    "Medicine Delivery Uttar Pradesh",
+
+    // TRUST
+    "Trusted Online Pharmacy",
     "Genuine Medicines",
     "Fast Pharmacy Delivery",
+    "Healthcare Platform India",
   ],
 
-  authors: [{ name: "MedicoBharat" }],
+  authors: [
+    {
+      name: "MedicoBharat",
+    },
+  ],
 
   creator: "MedicoBharat",
 
@@ -69,21 +62,19 @@ export const metadata = {
   category: "Healthcare",
 
   classification:
-    "Online Pharmacy & Medicine Delivery Platform",
+    "Online Pharmacy, Medicine Delivery & Healthcare Platform",
 
   robots: {
     index: true,
     follow: true,
 
-    nocache: false,
-
     googleBot: {
       index: true,
       follow: true,
       noimageindex: false,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 
@@ -96,26 +87,22 @@ export const metadata = {
 
     url: "https://www.medicobharat.com",
 
-    title:
-      "MedicoBharat | Online Medicine Delivery in Deoria",
-
-    description:
-      "Order genuine medicines online in Deoria with fast doorstep delivery, prescription support, and trusted pharmacy services.",
-
     siteName: "MedicoBharat",
 
     locale: "en_IN",
 
+    title:
+      "MedicoBharat | Online Medicine Delivery & Trusted Pharmacy",
+
+    description:
+      "Order genuine medicines online with fast doorstep delivery, prescription support, and trusted pharmacy services from MedicoBharat.",
+
     images: [
       {
-        url: "/images/og-image.jpg",
-
+        url: "https://www.medicobharat.com/images/og-image.jpg",
         width: 1200,
-
         height: 630,
-
-        alt:
-          "MedicoBharat - Online Medicine Delivery Platform",
+        alt: "MedicoBharat - Online Medicine Delivery",
       },
     ],
   },
@@ -124,12 +111,14 @@ export const metadata = {
     card: "summary_large_image",
 
     title:
-      "MedicoBharat | Online Medicine Delivery in Deoria",
+      "MedicoBharat | Online Medicine Delivery & Pharmacy",
 
     description:
-      "Fast online pharmacy and medicine delivery service in Deoria with genuine medicines and healthcare support.",
+      "Trusted online pharmacy with genuine medicines, prescription support, and fast doorstep medicine delivery.",
 
-    images: ["/images/og-image.jpg"],
+    images: [
+      "https://www.medicobharat.com/images/og-image.jpg",
+    ],
   },
 
   verification: {
@@ -139,23 +128,17 @@ export const metadata = {
 
   icons: {
     icon: "/favicon/medicofav.ico",
-
     shortcut: "/favicon/medicofav.ico",
-
     apple: "/favicon/medicofav.ico",
   },
 
   other: {
     locality: "Deoria",
-
     region: "Uttar Pradesh",
-
     country: "India",
-
-    coverage: "Deoria",
-
+    coverage: "India",
     target:
-      "Online Medicine Delivery Users in Deoria",
+      "Online Medicine Delivery & Healthcare Users",
   },
 };
 
@@ -166,7 +149,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <head>
         <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />

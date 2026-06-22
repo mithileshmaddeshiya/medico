@@ -1,152 +1,143 @@
-    import PremiumCitySlider from "@/components/cityData";
-    import DeoriaLongSEOContent from "@/components/ContentPage";
-    import FinalCTA from "@/components/Cta";
-    import FAQ from "@/components/Faq";
-    import Footer from "@/components/Footer";
-    import Hero from "@/components/Hero";
-    import HowItWorks from "@/components/HowCity";
-    import MedicoBharatSEOSection from "@/components/MetakeyDeoria";
-    import Reviews from "@/components/Review";
-    import { cityData } from "@/data/cityData";
-    import { notFound } from "next/navigation";
-    import Script from "next/script";
-
-    export async function generateStaticParams() {
-
-        return Object.keys(cityData).map((city) => ({
-            city,
-        }));
-
-    }
-
-    export async function generateMetadata({ params }) {
-
-        const resolvedParams =
-            await params;
-
-        const data =
-            cityData[resolvedParams.city];
+import PremiumCitySlider from "@/components/cityData";
+import DeoriaLongSEOContent from "@/components/ContentPage";
+import FinalCTA from "@/components/Cta";
+import FAQ from "@/components/Faq";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowCity";
+import MedicoBharatSEOSection from "@/components/MetakeyDeoria";
+import Reviews from "@/components/Review";
+import { getCity } from "@/lib/getCity";
+import { notFound } from "next/navigation";
+import Script from "next/script";
 
 
-        if (!data) return {};
+export async function generateMetadata({ params }) {
 
-        return {
-            title: data?.title,
+    const resolvedParams =
+        await params;
 
-            description: data?.description,
+     const data = await getCity(resolvedParams.city);
 
-            keywords: data?.keywords,
+    
+    if (!data) return {};
 
-            alternates: {
-                canonical: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
-            },
+    return {
+        title: data?.title,
 
-            robots: {
+        description: data?.description,
+
+        keywords: data?.keywords,
+
+        alternates: {
+            canonical: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+
+            googleBot: {
                 index: true,
                 follow: true,
-
-                googleBot: {
-                    index: true,
-                    follow: true,
-                    "max-video-preview": -1,
-                    "max-image-preview": "large",
-                    "max-snippet": -1,
-                },
+                "max-video-preview": -1,
+                "max-image-preview": "large",
+                "max-snippet": -1,
             },
+        },
 
-            openGraph: {
-                title: data?.title,
-                description: data?.description,
-                url: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
-                type: "website",
-            },
-        };
+        openGraph: {
+            title: data?.title,
+            description: data?.description,
+            url: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+            type: "website",
+        },
+    };
 
+}
+
+export default async function Page({ params }) {
+
+    const resolvedParams = await params;
+
+    const data = await getCity(resolvedParams.city);
+
+    if (!data) {
+        notFound();
     }
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
 
-    export default async function Page({ params }) {
-
-        const resolvedParams = await params;
-
-        const data = cityData[resolvedParams.city];
-
-        if (!data) {
-            notFound();
-        }
-
-        const faqSchema = {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-
-            mainEntity: data?.faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: faq.answer,
-                },
-            })),
-        };
-
-        const medicalBusinessSchema = {
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "@id": `https://www.medicobharat.com/medicine-delivery/${data?.slug}#medicalbusiness`,
-            "name": `MedicoBharat ${data?.city}`,
-            "url": `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
-            "description": "Order medicines online in Deoria with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.",
-            "telephone": "+91-9891233525",
-            "priceRange": "₹₹",
-            "image": "https://www.medicobharat.com/heroimage/medihero.webp",
-            "areaServed": {
-                "@type": "City",
-                "name": data?.city
+        mainEntity: data?.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
             },
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": data?.city,
-                "addressRegion": "Uttar Pradesh",
-                "addressCountry": "IN",
-                "postalCode": "274001"
-            },
-            "parentOrganization": {
-                "@type": "Organization",
-                "name": "MedicoBharat",
-                "url": "https://www.medicobharat.com"
-            }
+        })),
+    };
+
+    const medicalBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "@id": `https://www.medicobharat.com/medicine-delivery/${data?.slug}#medicalbusiness`,
+        "name": `MedicoBharat ${data?.city}`,
+        "url": `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+        "description": "Order medicines online in Deoria with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.",
+        "telephone": "+91-9891233525",
+        "priceRange": "₹₹",
+        "image": "https://www.medicobharat.com/heroimage/medihero.webp",
+        "areaServed": {
+            "@type": "City",
+            "name": data?.city
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": data?.city,
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN",
+            "postalCode": "274001"
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "MedicoBharat",
+            "url": "https://www.medicobharat.com"
         }
+    }
 
-        return (
-            <div>
-                <Script
-                    id="faq-schema"
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(faqSchema),
-                    }}
-                />
+    return (
+        <div>
+            <Script
+                id="faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(faqSchema),
+                }}
+            />
 
-                <Script
-                    id="medical-business-schema"
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(medicalBusinessSchema),
-                    }}
-                />
+            <Script
+                id="medical-business-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(medicalBusinessSchema),
+                }}
+            />
 
-                <Hero data={data} />
-                <PremiumCitySlider />
-                <Reviews data={data} />
-                <HowItWorks data={data} />
-                <MedicoBharatSEOSection data={data} />
-                <FinalCTA />
-                <DeoriaLongSEOContent data={data} />
-                <FAQ data={data} />
-                <Footer  />
+            <Hero data={data} />
+            <PremiumCitySlider data={data} />
+            <Reviews data={data} />
+            <HowItWorks data={data} />
+            <MedicoBharatSEOSection data={data} />
+            <FinalCTA data={data} />
+            <DeoriaLongSEOContent data={data} />
+            <FAQ data={data} />
+            <Footer />
 
-            </div>
+        </div>
 
-        );
+    );
 
-    } 
+} 
