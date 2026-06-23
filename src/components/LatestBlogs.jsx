@@ -23,7 +23,7 @@ const latestBlogs = [
 
 export default function LatestBlogs() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10">
+    <section className="hidden md:block max-w-6xl mx-auto px-4 py-10">
       <div className="text-center mb-10">
         <span className="inline-block px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium">
           Latest Health Guides

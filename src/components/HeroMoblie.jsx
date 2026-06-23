@@ -11,126 +11,88 @@ const banners = [
 ];
 
 export default function MobileSlider() {
-  // ✅ HYDRATION SAFE
-  const [mounted, setMounted] = useState(false);
-
-  // ✅ CURRENT SLIDE
   const [current, setCurrent] = useState(0);
 
-  // ✅ TOUCH REFERENCES
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  /* ================= MOUNT ================= */
+  // Auto Slider
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  /* ================= AUTO SLIDE ================= */
-  useEffect(() => {
-    if (!mounted) return;
-
     const interval = setInterval(() => {
-      setCurrent((prev) =>
-        prev === banners.length - 1 ? 0 : prev + 1
-      );
+      setCurrent((prev) => (prev === banners.length - 1 ? 0 : prev + 1));
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [mounted]);
+  }, []);
 
-  /* ================= NEXT ================= */
   const nextSlide = () => {
-    setCurrent((prev) =>
-      prev === banners.length - 1 ? 0 : prev + 1
-    );
+    setCurrent((prev) => (prev === banners.length - 1 ? 0 : prev + 1));
   };
 
-  /* ================= PREV ================= */
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? banners.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? banners.length - 1 : prev - 1));
   };
 
-  /* ================= TOUCH START ================= */
   const handleTouchStart = (e) => {
     touchStartX.current = e.changedTouches[0].screenX;
   };
 
-  /* ================= TOUCH END ================= */
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
 
-    handleSwipe();
-  };
+    const distance = touchStartX.current - touchEndX.current;
 
-  /* ================= SWIPE ================= */
-  const handleSwipe = () => {
-    const distance =
-      touchStartX.current - touchEndX.current;
-
-    // LEFT
     if (distance > 50) {
       nextSlide();
-    }
-
-    // RIGHT
-    if (distance < -50) {
+    } else if (distance < -50) {
       prevSlide();
     }
   };
 
-  // ✅ PREVENT HYDRATION MISMATCH
-  if (!mounted) return null;
-
   return (
-    <div className="w-full md:hidden px-4 mt-2">
+    <section className="w-full md:hidden px-4 mt-2">
       <div
         className="relative overflow-hidden rounded-[14px]"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {/* SLIDER */}
+        {/* Slider Track */}
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex w-full transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${current * 100}%)`,
           }}
         >
-          {banners?.map((img, index) => (
-            <div
-              key={index}
-              className="min-w-full flex-shrink-0"
-            >
+          {banners.map((img, index) => (
+            /* FIXED: Changed min-w-full to w-full & enforced block width layout */
+            <div key={index} className="w-full flex-shrink-0 block relative h-[140px]">
               <Image
                 src={img}
                 alt={`Medicine Banner ${index + 1}`}
-                width={800}
-                height={300}
-                priority={index === 0}
-                className="w-full h-[140px] object-cover rounded-[6px]"
+                fill
+                priority={index === 0} // Kept: High performance LCP asset preloading
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover rounded-[14px]" // Matched parent rounding to avoid raw edge leaks
               />
             </div>
           ))}
         </div>
 
-        {/* DOTS */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+        {/* Dots */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {banners.map((_, index) => (
             <button
               key={index}
+              type="button"
               onClick={() => setCurrent(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                current === index
-                  ? "w-5 bg-white"
-                  : "w-2 bg-white/60"
-              }`}
               aria-label={`Go to slide ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                current === index ? "w-5 bg-white" : "w-2 bg-white/60"
+              }`}
             />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
