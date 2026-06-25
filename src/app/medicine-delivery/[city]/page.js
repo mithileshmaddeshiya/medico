@@ -10,6 +10,7 @@ import Reviews from "@/components/Review";
 import { getCity } from "@/lib/getCity";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { cityData } from "@/data/cityData";
 
 
 export async function generateMetadata({ params }) {
@@ -56,6 +57,12 @@ export async function generateMetadata({ params }) {
 
 }
 
+export async function generateStaticParams() {
+  return Object.keys(cityData).map((city) => ({
+    city,
+  }));
+}
+
 export default async function Page({ params }) {
 
     const resolvedParams = await params;
@@ -86,7 +93,7 @@ export default async function Page({ params }) {
         "@id": `https://www.medicobharat.com/medicine-delivery/${data?.slug}#medicalbusiness`,
         "name": `MedicoBharat ${data?.city}`,
         "url": `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
-        "description": "Order medicines online in Deoria with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.",
+        "description": `Order medicines online in ${data.city} with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.`,
         "telephone": "+91-9891233525",
         "priceRange": "₹₹",
         "image": "https://www.medicobharat.com/heroimage/medihero.webp",
