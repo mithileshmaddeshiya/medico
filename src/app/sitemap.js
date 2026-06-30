@@ -2,30 +2,42 @@ import { cityData } from "@/data/cityData";
 import { blogs } from "@/data/blogData";
 
 export default function sitemap() {
+  const baseUrl = "https://www.medicobharat.com";
 
+  // 1. Dynamic City Pages
   const cityPages = Object.values(cityData).map((city) => ({
-    url: `https://www.medicobharat.com/medicine-delivery/${city.slug}`,
+    url: `${baseUrl}/medicine-delivery/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: city.slug === "deoria" ? 1.0 : 0.9,
   }));
 
+  // 2. Dynamic Blog Pages
   const blogPages = blogs.map((blog) => ({
-    url: `https://www.medicobharat.com/blogs/${blog.category}/${blog.city}`,
+    url: `${baseUrl}/blogs/${blog.category}/${blog.city}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
+  // 3. Static Pages (Jo Missing The)
+  const staticRoutes = ["/about", "/contact", "/privacy", "/terms"].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+
   return [
+    // Homepage
     {
-      url: "https://www.medicobharat.com",
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "daily",
-      priority: 1,
+      priority: 1.0,
     },
-
     ...cityPages,
     ...blogPages,
+    ...staticRoutes, // Static pages ko yahan merge kar diya
   ];
 }
