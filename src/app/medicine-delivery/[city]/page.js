@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
         await params;
 
      const data = await getCity(resolvedParams.city);
-
+     
     
     if (!data) return {};
 
@@ -93,7 +93,7 @@ export default async function Page({ params }) {
         "@id": `https://www.medicobharat.com/medicine-delivery/${data?.slug}#medicalbusiness`,
         "name": `MedicoBharat ${data?.city}`,
         "url": `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
-        "description": `Order medicines online in ${data.city} with MedicoBharat. Fast doorstep medicine delivery, prescription support, healthcare products, and trusted pharmacy services.`,
+        "description": data?.description,
         "telephone": "+91-9891233525",
         "priceRange": "₹₹",
         "image": "https://www.medicobharat.com/heroimage/medihero.webp",
@@ -106,7 +106,7 @@ export default async function Page({ params }) {
             "addressLocality": data?.city,
             "addressRegion": "Uttar Pradesh",
             "addressCountry": "IN",
-            "postalCode": "274001"
+            "postalCode": data?.postalCode
         },
         "parentOrganization": {
             "@type": "Organization",
@@ -135,7 +135,7 @@ export default async function Page({ params }) {
 
             <Hero data={data} />
             <PremiumCitySlider data={data} />
-            <Reviews data={data} />
+            {/* <Reviews data={data} /> */}
             <HowItWorks data={data} />
             <MedicoBharatSEOSection data={data} />
             <FinalCTA data={data} />

@@ -23,7 +23,7 @@ export default function HomeDataProvider() {
       <CityInterlinking data={data} />
       <LatestBlogs />
       <BannerImage data={data} />
-      <Reviews data={data} />
+      {/* <Reviews data={data} /> */}
       <HowItWorks data={data} />
       <MedicoBharatSEOSection data={data} />
       <FinalCTA data={data} />
