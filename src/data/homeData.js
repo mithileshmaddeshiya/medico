@@ -265,7 +265,7 @@ export const homeData = {
         intro:
             "India mein healthcare infrastructure toh strong hai — bade hospitals, medical colleges, specialists sab jagah available hain. Lekin ek common problem lakhs patients ko face karna padta hai: doctor se prescription mil gaya, ab medicine lena difficult aur time-consuming. Station Road par bheed, Sunday ko stores band, specialized medicines ek jagah nahi milti, late evening mein limited options, aur jo gaanvon se aate hain unke liye sirf medicines lene ke liye city trip ek burden. Senior citizens ke liye toh yeh aur bhi mushkil — peak hours mein market jaana asaan nahi, aur family par dependent rehna padta hai. Nursing mothers ko specialized medicines dhundhhne mein problems hoti hain. Post-surgery recovery ke liye specific products ek hi store par nahi milte. MedicoBharat ne yeh taklif khatam karne ke liye ek simple solution banaya: prescription upload karo, genuine medicines ghar par paao. Aaj Deoria mein start kiya hai, aage 50+ Indian cities mein expand karne ka plan hai. Har Indian family ke liye accessible aur reliable healthcare solution lana hamara mission hai.",
 
-        coverage: "MedicoBharat Uttar Pradesh ke Deoria, Salempur, Bhatni, Barhaj aur Lar mein jald hi doorstep delivery shuru karne ja raha hai...",
+        coverage: "MedicoBharat abhi Deoria mein active hai aur doorstep medicine delivery de raha hai. Salempur, Bhatni, Barhaj aur Lar mein bhi jald hi service expand ho rahi hai...",
 
         services: [
             "General medicine ordering from registered doctors",
