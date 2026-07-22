@@ -1,4 +1,4 @@
-import HomeDataProvider from "@/components/HomeDataProvider";
+import HomeDataProvider from "@/components/medicine/HomeDataProvider";
 
 export default function Page() {
   return (

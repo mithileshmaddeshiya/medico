@@ -5,4 +5,57 @@
   --foreground: #171717;
 }
 
+/* In-page anchors (CTA → hero booking form) glide instead of jumping.
+   Users who ask for reduced motion still get an instant jump. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Navbar ECG heartbeat line — draws itself on a loop */
+@keyframes ecg-draw {
+  0% {
+    stroke-dashoffset: 260;
+  }
+  70%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.ecg-line {
+  stroke-dasharray: 260;
+  animation: ecg-draw 2.4s ease-in-out infinite;
+}
+
+/* Booking modal enter animation */
+@keyframes lab-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lab-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.lab-fade-in {
+  animation: lab-fade-in 0.16s ease-out;
+}
+
+.lab-pop-in {
+  animation: lab-pop-in 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 

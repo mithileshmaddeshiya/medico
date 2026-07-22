@@ -1,6 +1,4 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 export const metadata = {
   metadataBase: new URL("https://www.medicobharat.com"),
@@ -194,7 +192,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <Navbar />
         {children}
       </body>
     </html>

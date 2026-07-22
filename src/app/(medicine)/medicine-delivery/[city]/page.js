@@ -1,12 +1,11 @@
-import PremiumCitySlider from "@/components/cityData";
-import DeoriaLongSEOContent from "@/components/ContentPage";
-import FinalCTA from "@/components/Cta";
-import FAQ from "@/components/Faq";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowCity";
-import MedicoBharatSEOSection from "@/components/MetakeyDeoria";
-import Reviews from "@/components/Review";
+import PremiumCitySlider from "@/components/medicine/cityData";
+import DeoriaLongSEOContent from "@/components/medicine/ContentPage";
+import FinalCTA from "@/components/medicine/Cta";
+import FAQ from "@/components/medicine/Faq";
+import Hero from "@/components/medicine/Hero";
+import HowItWorks from "@/components/medicine/HowCity";
+import MedicoBharatSEOSection from "@/components/medicine/MetakeyDeoria";
+import Reviews from "@/components/medicine/Review";
 import { getCity } from "@/lib/getCity";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -141,7 +140,6 @@ export default async function Page({ params }) {
             <FinalCTA data={data} />
             <DeoriaLongSEOContent data={data} />
             <FAQ data={data} />
-            <Footer />
 
         </div>
 
