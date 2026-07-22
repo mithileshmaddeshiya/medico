@@ -9,6 +9,7 @@ import {
   Beaker,
   Bug,
   ChartLine,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Clock,
@@ -16,15 +17,23 @@ import {
   FlaskConical,
   Gauge,
   HeartPulse,
+  PhoneCall,
   Pill,
+  Search,
+  ShieldCheck,
+  Sparkles,
   Stethoscope,
   Sun,
   Thermometer,
+  UserRound,
+  X,
 } from "lucide-react";
 import LabBookingModal from "./LabBookingModal";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+const PHONE = "+91 98912 33525";
 
 // Cards per view — fractional values leave the next card peeking so the
 // swipe gesture is discoverable on touch devices.
@@ -38,7 +47,8 @@ const BREAKPOINTS = {
 
 // `heading` drives the H2 above the grid — it changes with the active chip.
 const FILTERS = [
-  { key: "All",      label: "All Tests",  heading: "Lab Tests" },
+  { key: "All",      label: "All Tests",  heading: "Lab Tests & Test Packages" },
+  { key: "Packages", label: "Packages",   heading: "Health Checkup Packages" },
   { key: "Popular",  label: "Popular",    heading: "Popular Lab Tests" },
   { key: "Diabetes", label: "Diabetes",   heading: "Diabetes Tests" },
   { key: "Heart",    label: "Heart",      heading: "Heart Tests" },
@@ -57,39 +67,87 @@ const TINT = {
   teal: "bg-teal-50 text-teal-600 ring-teal-100",
 };
 
+// Matching solid colour for the left rail on the phone rows.
+const RAIL = {
+  rose: "bg-rose-400",
+  emerald: "bg-emerald-500",
+  amber: "bg-amber-400",
+  sky: "bg-sky-400",
+  violet: "bg-violet-400",
+  teal: "bg-teal-500",
+};
+
 // `price` — what the patient pays (₹). `mrp` — the struck-through list price;
 // leave it out and the card simply shows the price with no discount pill.
 // `price: null` renders a "Call for price" card instead.
+// `params` — number of parameters in a checkup package; single tests omit it.
+//
+// ORDER MATTERS: cheapest first. The first thing a patient sees on a phone is
+// a ₹100 test, not a ₹2,999 package — a high number at the top reads as "this
+// is expensive" and they leave before scrolling. Packages fall where their
+// price puts them, and the "Packages" chip still groups all three together.
+// Tests with `price: null` go last — "Call for price" is the weakest opener.
 const TESTS = [
-  { id: "cbc",      icon: Droplets,     tint: "rose",    name: "CBC Test",             sub: "Complete Blood Count",         tags: ["Popular"],             fasting: false, price: 400,  mrp: 700  },
-  { id: "fullbody", icon: Stethoscope,  tint: "emerald", name: "Full Body Checkup",    sub: "Head-to-toe health screening", tags: ["Popular"],             fasting: true,  price: null            },
-  { id: "sugar",    icon: Gauge,        tint: "amber",   name: "Blood Sugar Test",     sub: "Fasting & PP glucose",         tags: ["Popular", "Diabetes"], fasting: true,  price: 100,  mrp: 180  },
-  { id: "thyroid",  icon: Activity,     tint: "violet",  name: "Thyroid Profile",      sub: "T3, T4 and TSH",               tags: ["Popular"],             fasting: false, price: 550,  mrp: 900  },
-  { id: "lipid",    icon: HeartPulse,   tint: "rose",    name: "Lipid Profile",        sub: "Cholesterol & triglycerides",  tags: ["Heart"],               fasting: true,  price: 800,  mrp: 1300 },
-  { id: "lft",      icon: FlaskConical, tint: "teal",    name: "Liver Function Test",  sub: "Bilirubin, SGOT, SGPT",        tags: ["Organ"],               fasting: false, price: 600,  mrp: 1000 },
-  { id: "kft",      icon: Beaker,       tint: "sky",     name: "Kidney Function Test", sub: "Urea, creatinine & uric acid", tags: ["Organ"],               fasting: false, price: 700,  mrp: 1150 },
-  { id: "vitd",     icon: Sun,          tint: "amber",   name: "Vitamin D Test",       sub: "25-OH Vitamin D level",        tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 1700 },
-  { id: "vitb12",   icon: Pill,         tint: "violet",  name: "Vitamin B12 Test",     sub: "Serum B12 level",              tags: ["Vitamins"],            fasting: false, price: 1200, mrp: 2000 },
-  { id: "dengue",   icon: Bug,          tint: "emerald", name: "Dengue Test",          sub: "NS1 antigen, IgG & IgM",       tags: ["Fever"],               fasting: false, price: 1200, mrp: 1900 },
-  { id: "hba1c",    icon: ChartLine,    tint: "sky",     name: "HbA1c Test",           sub: "3-month sugar average",        tags: ["Diabetes"],            fasting: false, price: 600,  mrp: 1000 },
-  { id: "fever",    icon: Thermometer,  tint: "teal",    name: "Fever Panel",          sub: "Malaria, typhoid & dengue",    tags: ["Fever"],               fasting: false, price: null            },
+  { id: "sugar",     icon: Gauge,        tint: "amber",   name: "Blood Sugar Test",     sub: "Fasting & PP glucose",         tags: ["Popular", "Diabetes"], fasting: true,  price: 100,  mrp: 180  },
+  { id: "cbc",       icon: Droplets,     tint: "rose",    name: "CBC Test",             sub: "Complete Blood Count",         tags: ["Popular"],             fasting: false, price: 400,  mrp: 700  },
+  { id: "thyroid",   icon: Activity,     tint: "violet",  name: "Thyroid Profile",      sub: "T3, T4 and TSH",               tags: ["Popular"],             fasting: false, price: 550,  mrp: 900  },
+  { id: "hba1c",     icon: ChartLine,    tint: "sky",     name: "HbA1c Test",           sub: "3-month sugar average",        tags: ["Diabetes"],            fasting: false, price: 600,  mrp: 1000 },
+  { id: "lft",       icon: FlaskConical, tint: "teal",    name: "Liver Function Test",  sub: "Bilirubin, SGOT, SGPT",        tags: ["Organ"],               fasting: false, price: 600,  mrp: 1000 },
+  { id: "kft",       icon: Beaker,       tint: "sky",     name: "Kidney Function Test", sub: "Urea, creatinine & uric acid", tags: ["Organ"],               fasting: false, price: 700,  mrp: 1150 },
+  { id: "lipid",     icon: HeartPulse,   tint: "rose",    name: "Lipid Profile",        sub: "Cholesterol & triglycerides",  tags: ["Heart"],               fasting: true,  price: 800,  mrp: 1300 },
+  { id: "pkg-basic", icon: Stethoscope,  tint: "emerald", name: "Full Body Checkup",    sub: "Basic — CBC, sugar, lipid, LFT & KFT", tags: ["Packages", "Popular"], fasting: true,  price: 999,  mrp: 1800, params: 45 },
+  { id: "vitd",      icon: Sun,          tint: "amber",   name: "Vitamin D Test",       sub: "25-OH Vitamin D level",        tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 1700 },
+  { id: "vitb12",    icon: Pill,         tint: "violet",  name: "Vitamin B12 Test",     sub: "Serum B12 level",              tags: ["Vitamins"],            fasting: false, price: 1200, mrp: 2000 },
+  { id: "dengue",    icon: Bug,          tint: "emerald", name: "Dengue Test",          sub: "NS1 antigen, IgG & IgM",       tags: ["Fever"],               fasting: false, price: 1200, mrp: 1900 },
+  { id: "pkg-adv",   icon: Sparkles,     tint: "teal",    name: "Advanced Full Body",   sub: "Basic + thyroid, HbA1c & vitamins",    tags: ["Packages", "Popular"], fasting: true,  price: 1999, mrp: 3600, params: 72 },
+  { id: "pkg-senior",icon: UserRound,    tint: "violet",  name: "Senior Citizen Pack",  sub: "55+ — heart, bones & sugar screening", tags: ["Packages"],            fasting: true,  price: 2999, mrp: 5200, params: 88 },
+  { id: "fever",     icon: Thermometer,  tint: "teal",    name: "Fever Panel",          sub: "Malaria, typhoid & dengue",    tags: ["Fever"],               fasting: false, price: null            },
 ];
 
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
 const offPct = (price, mrp) => Math.round(((mrp - price) / mrp) * 100);
 
+// What the search box looks through. Tags are included on purpose: "package",
+// "diabetes" or "heart" then work as searches, not only as chips.
+const haystack = (t) => `${t.name} ${t.sub} ${t.tags.join(" ")}`.toLowerCase();
+
+// How many tests the phone list shows before "View all" is tapped — enough to
+// scroll past quickly, few enough that the FAQ below stays reachable.
+const MOBILE_PREVIEW = 4;
+
 export default function LabServices({ city = "Varanasi" }) {
   const [filter, setFilter] = useState("All");
+  const [query, setQuery] = useState("");
+  const [expanded, setExpanded] = useState(false);
   const [booking, setBooking] = useState(null);
   const [edge, setEdge] = useState({ begin: true, end: false });
   const swiperRef = useRef(null);
 
-  const visible = useMemo(
-    () => (filter === "All" ? TESTS : TESTS.filter((t) => t.tags.includes(filter))),
-    [filter]
-  );
+  // Two ways in, never both at once: typing searches every test, and the chips
+  // step aside while it does. A search that also silently obeys a chip the
+  // patient set earlier is the fastest way to make this section confusing.
+  const searching = query.trim() !== "";
 
-  const heading = FILTERS.find((f) => f.key === filter)?.heading ?? "Lab Tests";
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (q) return TESTS.filter((t) => haystack(t).includes(q));
+    return filter === "All" ? TESTS : TESTS.filter((t) => t.tags.includes(filter));
+  }, [query, filter]);
+
+  // Any change to the query or chip starts the phone list collapsed again.
+  const pickFilter = (key) => {
+    setFilter(key);
+    setExpanded(false);
+  };
+
+  const search = (value) => {
+    setQuery(value);
+    setExpanded(false);
+    if (value.trim()) setFilter("All");
+  };
+
+  const heading = FILTERS.find((f) => f.key === filter)?.heading ?? "Lab Tests & Test Packages";
+  const mobileList = expanded ? visible : visible.slice(0, MOBILE_PREVIEW);
 
   // overflow-x-clip — the arrows sit half outside the slider, so nothing of
   // theirs may leak into the page's horizontal scroll on small screens.
@@ -102,28 +160,228 @@ export default function LabServices({ city = "Varanasi" }) {
           {`${heading} in ${city}`}
         </h2>
 
-        {/* FILTERS — wrapped, never a scrolling row: on a phone a sideways-
-            scrolling strip hides half the chips and fights the page scroll,
-            so every filter stays visible and tappable at once. */}
-        <div className="mt-3 flex flex-wrap justify-center gap-1.5 sm:gap-2">
-          {FILTERS.map((f) => (
-            <button
-              key={f.key}
-              type="button"
-              onClick={() => setFilter(f.key)}
-              className={`cursor-pointer rounded-full px-3 py-1.5 text-[11.5px] sm:px-4 sm:text-[12.5px] font-semibold transition-all duration-200 ${
-                filter === f.key
-                  ? "bg-white text-teal-600 ring-2 ring-teal-500 shadow-sm"
-                  : "bg-white text-slate-600 ring-1 ring-slate-200 hover:ring-slate-300 hover:text-slate-900"
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
+
+        {/* SEARCH — the fastest path to a named test. On a phone, scanning a
+            slider for "Vitamin D" means swiping through everything else first;
+            typing three letters skips all of it. */}
+        <div className="mx-auto mt-3 max-w-md">
+          <div className="relative">
+            <Search
+              aria-hidden
+              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+              strokeWidth={2.1}
+            />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => search(e.target.value)}
+              placeholder="Search a test — thyroid, sugar, vitamin…"
+              aria-label="Search lab tests"
+              className="h-11 w-full rounded-full bg-white pl-9 pr-9 text-[13.5px] text-slate-800 placeholder:text-slate-400 ring-1 ring-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.04)] outline-none focus:ring-2 focus:ring-teal-500 sm:h-10 sm:text-[13px] transition-all duration-200"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => search("")}
+                aria-label="Clear search"
+                className="absolute right-2.5 top-1/2 flex h-6 w-6 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+              >
+                <X className="h-3.5 w-3.5" strokeWidth={2.4} />
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* TEST CARDS — `key={filter}` remounts the slider so it resets to card 1 */}
-        <div className="relative mt-2">
+        {/* CATEGORIES — tablet and up only. On a phone the chips took two rows
+            above the fold and pushed the tests down; the search box and the
+            price-ordered list cover the same ground in less space.
+
+            Also hidden while a search is running: the box and the chips do the
+            same job, and showing both at once is what made this area busy. */}
+        {!searching && (
+          <div className="mt-2.5 hidden flex-wrap justify-center gap-1.5 sm:flex sm:gap-2">
+            {FILTERS.map((f) => {
+              const active = filter === f.key;
+              // Packages are a different kind of thing from a test category and
+              // the highest-value booking, so the chip is tinted to be found.
+              const pkg = f.key === "Packages";
+
+              return (
+                <button
+                  key={f.key}
+                  type="button"
+                  onClick={() => pickFilter(f.key)}
+                  aria-pressed={active}
+                  className={`cursor-pointer rounded-full px-3.5 py-2 text-[12px] sm:px-4 sm:py-1.5 sm:text-[12.5px] font-semibold transition-all duration-200 ${
+                    active
+                      ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)]"
+                      : pkg
+                        ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 hover:ring-emerald-400"
+                        : "bg-white text-slate-600 ring-1 ring-slate-200 hover:ring-slate-300 hover:text-slate-900"
+                  }`}
+                >
+                  {f.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {/* NO MATCH — a dead end is where a booking is lost, so it ends in a
+            phone number rather than an apology. Shown at every breakpoint. */}
+        {visible.length === 0 && (
+          <div className="mx-auto mt-4 max-w-md rounded-xl bg-white px-4 py-6 text-center ring-1 ring-slate-200">
+            <p className="text-[13px] sm:text-[14px] font-semibold text-slate-800">
+              No test matches “{query}”
+            </p>
+            <p className="mt-1 text-[11.5px] sm:text-[12.5px] text-slate-500">
+              We run many more tests than the ones listed here — call us and we
+              will confirm the price for you.
+            </p>
+            <a
+              href={`tel:${PHONE.replace(/\s/g, "")}`}
+              className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-[12.5px] font-bold text-white hover:bg-emerald-700 active:scale-[0.98] transition-all"
+            >
+              <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.3} />
+              {PHONE}
+            </a>
+          </div>
+        )}
+
+        {/* ── PHONE: a plain vertical list ───────────────────────────────
+            A slider is the wrong shape on a small screen — a patient looking
+            for one test has to swipe past every other one, and a card only
+            half in view reads as clipped. Rows are scannable top-to-bottom,
+            each with its price and its own Book button. */}
+        <div className="mt-3 sm:hidden">
+          {visible.length > 0 && (
+            <>
+              <ul className="space-y-2.5">
+                {mobileList.map((t) => {
+                  const Icon = t.icon;
+                  const save = t.price && t.mrp ? t.mrp - t.price : 0;
+
+                  return (
+                    <li key={t.id}>
+                      {/* The whole row is the button. A thumb aiming at a small
+                          "Book" pill misses; a 100%-wide target does not. The
+                          pill stays as a span so the markup keeps one control. */}
+                      <button
+                        type="button"
+                        onClick={() => setBooking(t.name)}
+                        aria-label={`${t.price ? "Book" : "Enquire about"} ${t.name}`}
+                        className="group relative block w-full overflow-hidden rounded-2xl bg-white text-left ring-1 ring-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.05)] active:scale-[0.985] active:ring-emerald-300 transition-all duration-150"
+                      >
+                        {/* Colour rail — the row's category read at a glance */}
+                        <span
+                          aria-hidden
+                          className={`absolute inset-y-0 left-0 w-1 ${RAIL[t.tint]}`}
+                        />
+
+                        {/* Discount corner — the strongest reason to tap, so it
+                            sits at the top edge rather than in the price row. */}
+                        {save > 0 && (
+                          <span className="absolute right-0 top-0 rounded-bl-xl bg-linear-to-r from-emerald-600 to-teal-600 px-2 py-0.5 text-[9.5px] font-bold tracking-wide text-white">
+                            {offPct(t.price, t.mrp)}% OFF
+                          </span>
+                        )}
+
+                        <div className="flex gap-3 p-3 pl-3.5">
+                          <span
+                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-1 ${TINT[t.tint]}`}
+                          >
+                            <Icon className="h-5 w-5" strokeWidth={1.8} />
+                          </span>
+
+                          <div className="min-w-0 flex-1">
+                            <h3 className="flex items-center gap-1.5 pr-14 text-[14.5px] font-bold leading-snug text-slate-900">
+                              <span className="truncate">{t.name}</span>
+                              {t.tags.includes("Popular") && (
+                                <span className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
+                                  Top
+                                </span>
+                              )}
+                            </h3>
+                            <p className="mt-0.5 truncate text-[11.5px] leading-snug text-slate-500">
+                              {t.sub}
+                            </p>
+
+                            {/* Two small facts, dot-separated on one line — a
+                                wrapping meta row is what made these feel cramped */}
+                            <p className="mt-1.5 truncate text-[10.5px] font-medium text-slate-600">
+                              {t.params > 0 && (
+                                <span className="font-bold text-emerald-700">
+                                  {t.params} parameters ·{" "}
+                                </span>
+                              )}
+                              {t.fasting ? "Fasting required" : "No fasting"} · Report in 24 hrs
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center justify-between gap-3 border-t border-slate-100 bg-slate-50/70 py-2 pl-3.5 pr-3">
+                          <div className="min-w-0">
+                            {t.price ? (
+                              <>
+                                <div className="flex items-baseline gap-1.5">
+                                  <span className="text-[18px] font-extrabold leading-none text-slate-900">
+                                    {inr(t.price)}
+                                  </span>
+                                  {t.mrp && (
+                                    <span className="text-[11.5px] font-medium text-slate-400 line-through">
+                                      {inr(t.mrp)}
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="mt-1 truncate text-[10px] font-semibold text-emerald-700">
+                                  {save > 0 ? `You save ${inr(save)}` : "Free home collection"}
+                                </p>
+                              </>
+                            ) : (
+                              <>
+                                <span className="text-[13px] font-bold leading-none text-teal-700">
+                                  Call for price
+                                </span>
+                                <p className="mt-1 text-[10px] font-medium text-slate-500">
+                                  Custom package · free home visit
+                                </p>
+                              </>
+                            )}
+                          </div>
+
+                          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)]">
+                            {t.price ? "Book Now" : "Enquire"}
+                            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.4} />
+                          </span>
+                        </div>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              {visible.length > MOBILE_PREVIEW && (
+                <button
+                  type="button"
+                  onClick={() => setExpanded((v) => !v)}
+                  className="mt-3 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-white py-2.5 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-200 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:scale-[0.99] transition-transform"
+                >
+                  {expanded ? "Show less" : `View all ${visible.length} tests`}
+                  <ChevronDown
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                      expanded ? "rotate-180" : ""
+                    }`}
+                    strokeWidth={2.4}
+                  />
+                </button>
+              )}
+            </>
+          )}
+        </div>
+
+        {/* ── TABLET & DESKTOP: the slider ───────────────────────────────
+            `key` remounts it so a new filter or search resets to card 1. */}
+        <div className={`relative mt-2 hidden ${visible.length > 0 ? "sm:block" : ""}`}>
 
           {/* ARROWS — sit on the left/right edge of the slider, vertically centred
               on the cards (the -11px offsets the slider's pb-5.5 pagination strip).
@@ -148,9 +406,13 @@ export default function LabServices({ city = "Varanasi" }) {
           </button>
 
           <Swiper
-            key={filter}
+            key={`${filter}|${query}`}
             modules={[Pagination, Keyboard, Autoplay]}
             breakpoints={BREAKPOINTS}
+            /* The slider is display:none below sm — observers re-measure it
+               when it becomes visible instead of leaving it at zero width. */
+            observer
+            observeParents
             keyboard={{ enabled: true }}
             grabCursor
             watchOverflow
@@ -209,6 +471,14 @@ export default function LabServices({ city = "Varanasi" }) {
                     </p>
 
                     <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[10.5px] font-medium text-slate-600">
+                      {/* Packages only — the parameter count is what a patient
+                          compares a checkup on, so it leads the meta row. */}
+                      {t.params && (
+                        <span className="inline-flex items-center gap-1 text-emerald-700">
+                          <ShieldCheck className="h-3 w-3" strokeWidth={2.2} />
+                          {t.params} parameters
+                        </span>
+                      )}
                       <span className="inline-flex items-center gap-1">
                         <span
                           className={`h-1.5 w-1.5 shrink-0 rounded-full ${
@@ -243,7 +513,11 @@ export default function LabServices({ city = "Varanasi" }) {
                       </div>
                     )}
                     <p className="mt-0.5 text-[10px] text-slate-500">
-                      {t.price ? "Free home sample collection" : "Custom package · free home visit"}
+                      {!t.price
+                        ? "Custom package · free home visit"
+                        : t.params
+                          ? "Free home collection · one report"
+                          : "Free home sample collection"}
                     </p>
 
                     <button

@@ -36,6 +36,9 @@ const page = async ({ params }) => {
         </div>
       </div>
 
+      {/* Reviews (LabReviews) belong here — between the tests and the FAQ —
+          whenever the real Google reviews are ready to be pasted in. */}
+
       <LabFaq city={cityName} />
 
       <LabCta city={cityName} />
