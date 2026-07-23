@@ -3,13 +3,16 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer({ data }) {
+// `labCities` comes from the (main) layout, straight out of Firestore — so a
+// new lab city starts being linked from every page on the site the moment it is
+// added, with no code change.
+export default function Footer({ data, labCities = [] }) {
   const city = data?.city || "Deoria";
 
   return (
     // ID top yahan add kiya hai taaki logo par click karne se page upar chala jaye bina JS ke
     <footer id="footer-section" className="bg-gray-50 border-t border-gray-200 mt-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
         
         {/* BRAND */}
         <div className="flex flex-col items-start">
@@ -63,6 +66,28 @@ export default function Footer({ data }) {
             </li>
           </ul>
         </div>
+
+        {/* LAB TESTS — the only inbound links the /lab-test section has. Every
+            live city gets its own keyword-bearing link, sitewide. */}
+        {labCities.length > 0 && (
+          <div>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">
+              Lab Tests at Home
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              {labCities.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/lab-test/${c.slug}`}
+                    className="hover:text-green-600 transition"
+                  >
+                    Lab Test in {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* QUICK LINKS - Anchor Tags ko Next.js Link standard se replace kiya */}
         <div>

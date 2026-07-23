@@ -4,51 +4,17 @@ import { useState } from "react";
 import { BookOpen, ChevronDown } from "lucide-react";
 
 /**
- * Long-form SEO block. Everything the crawler reads lives in `SECTIONS` —
- * replace the paragraphs below with the real copy when it is ready; the layout,
- * anchors and the "On this page" rail all build themselves from this array.
+ * Long-form SEO block. Everything the crawler reads comes in as `sections`,
+ * from the city document or its generated default — see defaultContent in
+ * src/data/labDefaults.js.
  *
- * Shape: { id, h, p: [paragraph, ...] }  — `id` doubles as the anchor target.
- * A `data` prop of the same shape overrides the defaults per city.
+ * Shape: { id, h, p: [paragraph, ...] } — `id` doubles as the anchor target,
+ * and the layout plus the "On this page" rail build themselves from the array.
  */
-const SECTIONS = (city) => [
-  {
-    id: "lab-test-at-home",
-    h: `Lab Tests at Home in ${city}`,
-    p: [
-      `Getting a blood test done in ${city} no longer means standing in a queue at a diagnostic centre. A trained phlebotomist reaches your address, collects the sample in front of you using a sealed, single-use needle, and carries it to the lab in a temperature-controlled box. You stay home; only the report travels.`,
-      `Home collection is free on every test listed on this page. What you pay is the test price you see on the card — there is no visiting charge, no packaging fee and no separate charge for reporting.`,
-    ],
-  },
-  {
-    id: "popular-tests",
-    h: "Which tests do people book most often?",
-    p: [
-      `CBC, Thyroid Profile, Blood Sugar and the Full Body Checkup make up most bookings in ${city}. Seasonal panels move too — the Fever Panel covering malaria, typhoid and dengue is booked heavily through the monsoon, while Vitamin D and Vitamin B12 stay steady all year.`,
-      `If a doctor has written a test that is not listed on this page, call us with the prescription — most routine pathology tests can be arranged at the same home visit.`,
-    ],
-  },
-  {
-    id: "preparation",
-    h: "How to prepare before your sample is collected",
-    p: [
-      `Fasting tests such as Fasting Blood Sugar, the Lipid Profile and the Full Body Checkup need 8–12 hours without food; plain water is fine and should not be skipped. Booking an early slot makes this easier — collection starts at 6 AM, so you can eat right after the sample is taken.`,
-      `Keep your prescription and any earlier reports handy. Carrying forward previous values helps the pathologist flag a trend rather than a single reading, which is what your doctor actually acts on.`,
-    ],
-  },
-  {
-    id: "reports",
-    h: "Reports, accuracy and what happens after collection",
-    p: [
-      `Samples are processed at NABL-accredited partner labs, and every report is verified by a qualified pathologist before it leaves the system. Each vial is barcode-tracked from your door to the analyser, so a sample cannot be mixed up along the way.`,
-      `Most reports reach you within 24 hours as a PDF on WhatsApp and email — the same file you can forward to your doctor or print at a shop. Specialised tests that need longer incubation take 48–72 hours, and that timeline is told to you at the time of booking, not after.`,
-    ],
-  },
-];
-
-export default function LabContent({ city = "Varanasi", data }) {
-  const sections = data?.length ? data : SECTIONS(city);
+export default function LabContent({ city, sections = [] }) {
   const [expanded, setExpanded] = useState(false);
+
+  if (!sections.length) return null;
 
   return (
     <section aria-label={`About lab tests in ${city}`} className="bg-slate-50 border-t border-slate-100">
@@ -100,7 +66,9 @@ export default function LabContent({ city = "Varanasi", data }) {
                       {s.h}
                     </h2>
 
-                    {s.p.map((para, j) => (
+                    {/* `?? []` — a section typed into Firestore without any
+                        paragraphs should render its heading, not a 500. */}
+                    {(s.p ?? []).map((para, j) => (
                       <p
                         key={j}
                         className="mt-2.5 pl-4 text-[12.5px] sm:text-[13.5px] leading-relaxed text-slate-600"

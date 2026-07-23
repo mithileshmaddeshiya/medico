@@ -1,3 +1,5 @@
+import { url } from "@/lib/site";
+
 export const metadata = {
   title:
     "Terms & Conditions - MedicoBharat | Healthcare & Medicine Support",
@@ -14,7 +16,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://medicobharat.com/terms",
+    canonical: url("/terms"),
   },
 
   authors: [{ name: "MedicoBharat" }],
@@ -33,7 +35,7 @@ export const metadata = {
     description:
       "Read the official Terms & Conditions of MedicoBharat related to medicine support, healthcare assistance, and website usage.",
 
-    url: "https://medicobharat.com/terms",
+    url: url("/terms"),
 
     siteName: "MedicoBharat",
 
@@ -299,7 +301,7 @@ export default function Page() {
 
             <p>✉️ support@medicobharat.com</p>
 
-            <p>🌐 https://medicobharat.com</p>
+            <p>🌐 https://www.medicobharat.com</p>
 
           </div>
 

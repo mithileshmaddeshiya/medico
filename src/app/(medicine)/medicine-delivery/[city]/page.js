@@ -10,6 +10,7 @@ import { getCity } from "@/lib/getCity";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { cityData } from "@/data/cityData";
+import { SITE } from "@/lib/site";
 
 
 export async function generateMetadata({ params }) {
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }) {
         keywords: data?.keywords,
 
         alternates: {
-            canonical: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+            canonical: `${SITE}/medicine-delivery/${data?.slug}`,
         },
 
         robots: {
@@ -46,11 +47,31 @@ export async function generateMetadata({ params }) {
             },
         },
 
+        // Metadata is shallow-merged: defining openGraph here replaces the root
+        // layout's object outright, so siteName, locale and the image all have
+        // to be repeated. Without them these pages shared with no picture at all.
         openGraph: {
             title: data?.title,
             description: data?.description,
-            url: `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+            url: `${SITE}/medicine-delivery/${data?.slug}`,
+            siteName: "MedicoBharat",
+            locale: "en_IN",
             type: "website",
+            images: [
+                {
+                    url: `${SITE}/medicine-delivery/${data?.slug}/og`,
+                    width: 1200,
+                    height: 630,
+                    alt: data?.title,
+                },
+            ],
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: data?.title,
+            description: data?.description,
+            images: [`${SITE}/medicine-delivery/${data?.slug}/og`],
         },
     };
 
@@ -89,13 +110,13 @@ export default async function Page({ params }) {
     const medicalBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
-        "@id": `https://www.medicobharat.com/medicine-delivery/${data?.slug}#medicalbusiness`,
+        "@id": `${SITE}/medicine-delivery/${data?.slug}#medicalbusiness`,
         "name": `MedicoBharat ${data?.city}`,
-        "url": `https://www.medicobharat.com/medicine-delivery/${data?.slug}`,
+        "url": `${SITE}/medicine-delivery/${data?.slug}`,
         "description": data?.description,
         "telephone": "+91-9891233525",
         "priceRange": "₹₹",
-        "image": "https://www.medicobharat.com/heroimage/medihero.webp",
+        "image": `${SITE}/heroimage/medihero.webp`,
         "areaServed": {
             "@type": "City",
             "name": data?.city
@@ -110,7 +131,7 @@ export default async function Page({ params }) {
         "parentOrganization": {
             "@type": "Organization",
             "name": "MedicoBharat",
-            "url": "https://www.medicobharat.com"
+            "url": SITE
         }
     }
 

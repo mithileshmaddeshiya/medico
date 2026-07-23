@@ -3,7 +3,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Navbar() {
+// `labCities` comes from the (main) layout. The first entry is the flagship
+// city — linking to it is what connects the lab section to the rest of the site.
+export default function Navbar({ labCities = [] }) {
+    const labHref = labCities[0] ? `/lab-test/${labCities[0].slug}` : null;
+
     return (
         <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/80 border-b border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
 
@@ -31,6 +35,12 @@ export default function Navbar() {
                         Home
                     </Link>
 
+                    {labHref && (
+                        <Link href={labHref} className="hover:text-green-600 transition">
+                            Lab Tests
+                        </Link>
+                    )}
+
                     <Link href="/about" className="hover:text-green-600 transition">
                         About us
                     </Link>
@@ -53,6 +63,20 @@ export default function Navbar() {
 
                 {/* Right */}
 
+                <div className="flex items-center gap-2">
+
+                {/* The nav links above are hidden below md, so on a phone this
+                    is the only route into the lab section — and phones are most
+                    of the traffic. */}
+                {labHref && (
+                    <Link
+                        href={labHref}
+                        className="md:hidden inline-flex items-center rounded-lg border border-green-600 px-3 py-2 text-sm font-medium text-green-700 transition hover:bg-green-50"
+                    >
+                        Lab Tests
+                    </Link>
+                )}
+
                 <a
                     href="https://wa.me/919891233525"
                     target="_blank"
@@ -73,6 +97,8 @@ export default function Navbar() {
                 >
                     Order on <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 sm:h-[18px] sm:w-[18px] opacity-90" > <path d="M20.52 3.48A11.79 11.79 0 0 0 12.05 0C5.4 0 .05 5.35.05 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.62A11.9 11.9 0 0 0 12.05 24C18.7 24 24 18.65 24 12c0-3.2-1.25-6.21-3.48-8.52ZM12.05 21.8a9.8 9.8 0 0 1-5.01-1.37l-.36-.21-3.68.96.98-3.58-.24-.37A9.75 9.75 0 0 1 2.25 12c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.73 9.73 0 0 1 21.85 12c0 5.4-4.4 9.8-9.8 9.8Zm5.37-7.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.46-.14-.65.14-.19.29-.75.95-.92 1.15-.17.19-.34.21-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.76-1.44-1.7-1.61-1.99-.17-.29-.02-.44.12-.58.12-.12.29-.31.43-.46.14-.15.19-.27.29-.46.1-.19.05-.36-.02-.51-.07-.14-.65-1.57-.89-2.16-.23-.56-.46-.48-.65-.49h-.55c-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.42 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.08 4.9 4.32.69.3 1.23.48 1.65.61.69.22 1.31.19 1.8.12.55-.08 1.72-.7 1.96-1.37.24-.68.24-1.26.17-1.37-.07-.12-.26-.19-.55-.34Z" /> </svg>
                 </a>
+
+                </div>
 
             </div>
         </nav>

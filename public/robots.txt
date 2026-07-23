@@ -1,2 +1,7 @@
 User-agent: *
 Allow: /
+
+# Internal data-upload screen — nothing here for a crawler.
+Disallow: /upload
+
+Sitemap: https://www.medicobharat.com/sitemap.xml

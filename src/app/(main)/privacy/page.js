@@ -1,3 +1,5 @@
+import { url } from "@/lib/site";
+
 export const metadata = {
   title:
     "Privacy Policy - MedicoBharat | Customer Data & Healthcare",
@@ -14,7 +16,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://medicobharat.com/privacy",
+    canonical: url("/privacy"),
   },
 
   authors: [{ name: "MedicoBharat" }],
@@ -33,7 +35,7 @@ export const metadata = {
     description:
       "Learn how MedicoBharat collects, uses, and protects customer information and healthcare-related data.",
 
-    url: "https://medicobharat.com/privacy-policy",
+    url: url("/privacy"),
 
     siteName: "MedicoBharat",
 

@@ -1,3 +1,4 @@
+import { url } from "@/lib/site";
 
 export const metadata = {
         title:
@@ -17,7 +18,7 @@ export const metadata = {
         ],
 
         alternates: {
-            canonical: "https://medicobharat.com/about",
+            canonical: url("/about"),
         },
 
         authors: [{ name: "MedicoBharat" }],
@@ -36,7 +37,7 @@ export const metadata = {
             description:
                 "MedicoBharat is a trusted healthcare and online medicine delivery platform focused on convenient and reliable medicine support.",
 
-            url: "https://medicobharat.com/about",
+            url: url("/about"),
 
             siteName: "MedicoBharat",
 

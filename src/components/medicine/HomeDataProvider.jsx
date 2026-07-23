@@ -10,7 +10,6 @@ import FinalCTA from "@/components/medicine/Cta";
 import CitySEOContent from "@/components/medicine/ContentPage";
 import TrustSection from "@/components/medicine/HowWork";
 import FAQ from "@/components/medicine/Faq";
-import Footer from "@/components/common/Footer";
 import LatestBlogs from "@/components/medicine/LatestBlogs";
 import { homeData } from "@/data/homeData";
 
@@ -30,7 +29,9 @@ export default function HomeDataProvider() {
       <CitySEOContent data={data} />
       <TrustSection />
       <FAQ data={data} />
-      <Footer data={data} />
+      {/* No <Footer /> here — the (main) layout already renders one, and having
+          both put two full footers (and two copies of every footer link) into
+          the homepage's HTML. */}
     </>
   );
 }

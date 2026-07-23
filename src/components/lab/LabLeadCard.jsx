@@ -1,20 +1,15 @@
 "use client";
 
 import { useId, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Check, X } from "lucide-react";
-
-import { DEFAULT_CITY, LAB_CITIES } from "@/data/labCities";
 
 const WHATSAPP = "919891233525";
 
-// Every live city plus that city's own localities — one list, sourced from
-// src/data/labCities.js, so a new city needs no edit here.
-export const CITIES = [
-  ...LAB_CITIES.flatMap((c) => [c.name, ...c.areas]),
-  "Other",
-];
-
-export const DEFAULT_CITY_NAME = DEFAULT_CITY.name;
+// The dropdown is filled from Firestore, which only the server can read — the
+// list arrives as `cityOptions` (see getLabCityOptions in src/lib/labCities.js).
+// This is the last-resort list for a render that forgot to pass it.
+const FALLBACK_CITY_OPTIONS = ["Other"];
 
 const inputClass =
   "w-full rounded-md border border-slate-300 px-3 py-2 text-[13px] text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/30 outline-none";
@@ -27,11 +22,14 @@ const labelClass = "block text-[12.5px] font-semibold text-slate-800 mb-1";
  *  - LabBookingModal → rendered inside the overlay with a pre-selected `test`
  */
 export default function LabLeadCard({
-  title = "Get A Call Back",
+  title = "Book Your Sample Collection",
   test = "",
+  cityOptions,
   onClose,
   className = "",
 }) {
+  const cities = cityOptions?.length ? cityOptions : FALLBACK_CITY_OPTIONS;
+
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
@@ -55,7 +53,7 @@ export default function LabLeadCard({
     // No backend yet — the request goes to WhatsApp with the details pre-filled.
     const text = encodeURIComponent(
       [
-        test ? `Lab test booking request` : `Lab test call back request`,
+        test ? `Lab test booking request` : `Sample collection booking request`,
         test ? `Test: ${test}` : null,
         `Name: ${name}`,
         `Mobile: ${phone}`,
@@ -157,7 +155,7 @@ export default function LabLeadCard({
                 className={`${inputClass} bg-white`}
               >
                 <option value="">Select City</option>
-                {CITIES.map((c) => (
+                {cities.map((c) => (
                   <option key={c} value={c}>{c}</option>
                 ))}
               </select>
@@ -183,11 +181,26 @@ export default function LabLeadCard({
               type="submit"
               className="cursor-pointer relative w-full rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 py-2.5 pr-10 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700"
             >
-              {test ? "Book Now" : "Get a Call Back"}
+              {test ? "Book Now" : "Book Your Sample Collection"}
               <span className=" absolute inset-y-0 right-0 flex w-9 items-center justify-center rounded-r-md bg-emerald-800/90">
                 <ArrowRight className="h-4 w-4" />
               </span>
             </button>
+
+            {/* The consent notice belongs here, next to the button that sends
+                the name, mobile and home address — not only in the footer. The
+                DPDP Act 2023 wants the notice where the collection happens. */}
+            <p className="pt-0.5 text-[10.5px] leading-snug text-slate-400">
+              By booking you agree to our{" "}
+              <Link href="/privacy" className="underline hover:text-emerald-700">
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="/terms" className="underline hover:text-emerald-700">
+                Terms
+              </Link>
+              .
+            </p>
           </form>
         )}
       </div>

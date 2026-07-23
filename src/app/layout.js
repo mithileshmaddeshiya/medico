@@ -1,7 +1,8 @@
 import "./globals.css";
+import { SITE } from "@/lib/site";
 
 export const metadata = {
-  metadataBase: new URL("https://www.medicobharat.com"),
+  metadataBase: new URL(SITE),
 
   title: {
     default:
@@ -77,13 +78,13 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.medicobharat.com",
+    canonical: SITE,
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://www.medicobharat.com",
+    url: SITE,
 
     siteName: "MedicoBharat",
 
@@ -97,7 +98,7 @@ export const metadata = {
 
     images: [
       {
-        url: "https://www.medicobharat.com/images/og-image.jpg",
+        url: `${SITE}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "MedicoBharat - Online Medicine Delivery",
@@ -115,7 +116,7 @@ export const metadata = {
       "Trusted online pharmacy with genuine medicines, prescription support, and fast doorstep medicine delivery.",
 
     images: [
-      "https://www.medicobharat.com/images/og-image.jpg",
+      `${SITE}/opengraph-image`,
     ],
   },
 
@@ -162,8 +163,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Pharmacy",
               "name": "MedicoBharat",
-              "url": "https://www.medicobharat.com",
-              "image": "https://www.medicobharat.com/navbar/navbg.webp",
+              "url": SITE,
+              "image": `${SITE}/navbar/navbg.webp`,
               "description": "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
               "telephone": "+916392108234",
               "priceRange": "₹₹",

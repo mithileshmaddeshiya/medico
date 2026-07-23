@@ -1,6 +1,19 @@
 import { blogs } from "@/data/blogData";
+import { SITE } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+/**
+ * The article's share card, rendered by the `og/route.js` handler beside this
+ * file.
+ *
+ * `blog.image` in blogData.js points at /public/blogs/*.webp — files that do
+ * not exist. Using the generated route instead means the OG tags and the
+ * BlogPosting schema both reference an image that actually resolves, which is
+ * what Google requires before it will show the rich result at all.
+ */
+const ogImage = (category, city) =>
+  `${SITE}/blogs/${category}/${city}/og`;
 
 export async function generateStaticParams() {
     return blogs.map((blog) => ({
@@ -36,15 +49,26 @@ export async function generateMetadata({ params }) {
             title: blog.title,
             description: blog.description,
             url: blog.canonical,
-            images: [blog.image],
+            siteName: "MedicoBharat",
+            locale: "en_IN",
+            images: [
+                {
+                    url: ogImage(category, city),
+                    width: 1200,
+                    height: 630,
+                    alt: blog.title,
+                },
+            ],
             type: "article",
+            publishedTime: blog.publishedAt,
+            modifiedTime: blog.updatedAt,
         },
 
         twitter: {
             card: "summary_large_image",
             title: blog.title,
             description: blog.description,
-            images: [blog.image],
+            images: [ogImage(category, city)],
         },
     };
 }
@@ -70,7 +94,7 @@ export default async function BlogPage({ params }) {
 
         headline: blog.title,
         description: blog.description,
-        image: [blog.image],
+        image: [ogImage(category, city)],
 
         datePublished: blog.publishedAt,
         dateModified: blog.updatedAt,

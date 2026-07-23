@@ -3,40 +3,12 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const PHONE = "+91 98912 33525";
-
-// City-aware questions — the ones a patient actually hesitates on before
-// booking: who comes, what it costs, when the report lands, is it accurate.
-const buildFaqs = (city) => [
-  {
-    q: `How much does home sample collection cost in ${city}?`,
-    a: `Home sample collection in ${city} is completely free. You pay only for the test — no visiting charge and no hidden fees. A trained phlebotomist comes to your door, collects the sample and carries it safely to the lab.`,
-  },
-  {
-    q: "Who collects the sample, and how soon do they arrive?",
-    a: "A certified phlebotomist (lab technician) with a verified ID card comes to your home, usually within 60 minutes of your booking being confirmed. Every collection uses a sealed, single-use needle and a fresh vacutainer.",
-  },
-  {
-    q: "When and how will I get my report?",
-    a: "Most reports are ready within 24 hours and are sent as a PDF on both WhatsApp and email, so you can show them to your doctor right away. A few specialised tests take 48–72 hours — we tell you the exact timeline at the time of booking.",
-  },
-  {
-    q: "Which tests require fasting?",
-    a: "Tests such as Fasting Blood Sugar, Lipid Profile and the Full Body Checkup need 8–12 hours of fasting. That is why home visit slots start at 6 AM — give your sample early and have your breakfast right after. Tests like CBC, Thyroid Profile and Vitamin D need no fasting at all.",
-  },
-  {
-    q: "Are the results accurate? Is the lab certified?",
-    a: "Yes. All samples are processed at NABL-accredited partner labs and every report is verified by a qualified pathologist. From collection to reporting, each step is temperature-controlled and barcode-tracked.",
-  },
-  {
-    q: "How do I book a test, and what payment options are available?",
-    a: `Select a test on this page and fill the "Book Now" form, or simply call us at ${PHONE}. You can pay in cash at the time of sample collection, or by UPI (PhonePe, Google Pay, Paytm).`,
-  },
-];
-
-export default function LabFaq({ city = "Varanasi" }) {
-  const faqs = buildFaqs(city);
+// `faqs` come from the city document (or its generated default) — see
+// defaultFaqs in src/data/labDefaults.js. Shape: [{ q, a }].
+export default function LabFaq({ city, faqs = [] }) {
   const [open, setOpen] = useState(0);
+
+  if (!faqs.length) return null;
 
   // FAQPage schema — the same answers, in the shape Google reads for rich results.
   const jsonLd = {

@@ -1,3 +1,5 @@
+import { url } from "@/lib/site";
+
 import {
   Phone,
   Mail,
@@ -25,7 +27,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://medicobharat.com/contact",
+    canonical: url("/contact"),
   },
 
   authors: [{ name: "MedicoBharat" }],
@@ -44,7 +46,7 @@ export const metadata = {
     description:
       "Get in touch with MedicoBharat for medicine ordering support, healthcare assistance, and customer service.",
 
-    url: "https://medicobharat.com/contact",
+    url: url("/contact"),
 
     siteName: "MedicoBharat",
 

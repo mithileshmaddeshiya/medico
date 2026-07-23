@@ -33,7 +33,29 @@ import LabBookingModal from "./LabBookingModal";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const PHONE = "+91 98912 33525";
+/**
+ * Icons cannot travel through Firestore, so a test stores its icon as a string
+ * and this registry maps it back. An unknown name falls back to the flask
+ * rather than crashing — a typo in the console is a wrong icon, never a 500.
+ */
+const ICONS = {
+  gauge: Gauge,
+  droplets: Droplets,
+  activity: Activity,
+  "chart-line": ChartLine,
+  flask: FlaskConical,
+  beaker: Beaker,
+  "heart-pulse": HeartPulse,
+  stethoscope: Stethoscope,
+  sun: Sun,
+  pill: Pill,
+  bug: Bug,
+  sparkles: Sparkles,
+  "user-round": UserRound,
+  thermometer: Thermometer,
+  "shield-check": ShieldCheck,
+  clock: Clock,
+};
 
 // Cards per view — fractional values leave the next card peeking so the
 // swipe gesture is discoverable on touch devices.
@@ -45,19 +67,9 @@ const BREAKPOINTS = {
   1024: { slidesPerView: 4,    spaceBetween: 16 },
 };
 
-// `heading` drives the H2 above the grid — it changes with the active chip.
-const FILTERS = [
-  { key: "All",      label: "All Tests",  heading: "Lab Tests & Test Packages" },
-  { key: "Packages", label: "Packages",   heading: "Health Checkup Packages" },
-  { key: "Popular",  label: "Popular",    heading: "Popular Lab Tests" },
-  { key: "Diabetes", label: "Diabetes",   heading: "Diabetes Tests" },
-  { key: "Heart",    label: "Heart",      heading: "Heart Tests" },
-  { key: "Vitamins", label: "Vitamins",   heading: "Vitamin Tests" },
-  { key: "Fever",    label: "Fever",      heading: "Fever Tests" },
-  { key: "Organ",    label: "Organ",      heading: "Organ Function Tests" },
-];
-
 // Full class strings — Tailwind only picks up literals, never built-up names.
+// A tint typed wrong in Firestore falls back to emerald instead of putting the
+// literal "undefined" into a className.
 const TINT = {
   rose: "bg-rose-50 text-rose-600 ring-rose-100",
   emerald: "bg-emerald-50 text-emerald-600 ring-emerald-100",
@@ -66,6 +78,7 @@ const TINT = {
   violet: "bg-violet-50 text-violet-600 ring-violet-100",
   teal: "bg-teal-50 text-teal-600 ring-teal-100",
 };
+const tint = (key) => TINT[key] ?? TINT.emerald;
 
 // Matching solid colour for the left rail on the phone rows.
 const RAIL = {
@@ -76,46 +89,32 @@ const RAIL = {
   violet: "bg-violet-400",
   teal: "bg-teal-500",
 };
-
-// `price` — what the patient pays (₹). `mrp` — the struck-through list price;
-// leave it out and the card simply shows the price with no discount pill.
-// `price: null` renders a "Call for price" card instead.
-// `params` — number of parameters in a checkup package; single tests omit it.
-//
-// ORDER MATTERS: cheapest first. The first thing a patient sees on a phone is
-// a ₹100 test, not a ₹2,999 package — a high number at the top reads as "this
-// is expensive" and they leave before scrolling. Packages fall where their
-// price puts them, and the "Packages" chip still groups all three together.
-// Tests with `price: null` go last — "Call for price" is the weakest opener.
-const TESTS = [
-  { id: "sugar",     icon: Gauge,        tint: "amber",   name: "Blood Sugar Test",     sub: "Fasting & PP glucose",         tags: ["Popular", "Diabetes"], fasting: true,  price: 100,  mrp: 180  },
-  { id: "cbc",       icon: Droplets,     tint: "rose",    name: "CBC Test",             sub: "Complete Blood Count",         tags: ["Popular"],             fasting: false, price: 400,  mrp: 700  },
-  { id: "thyroid",   icon: Activity,     tint: "violet",  name: "Thyroid Profile",      sub: "T3, T4 and TSH",               tags: ["Popular"],             fasting: false, price: 550,  mrp: 900  },
-  { id: "hba1c",     icon: ChartLine,    tint: "sky",     name: "HbA1c Test",           sub: "3-month sugar average",        tags: ["Diabetes"],            fasting: false, price: 600,  mrp: 1000 },
-  { id: "lft",       icon: FlaskConical, tint: "teal",    name: "Liver Function Test",  sub: "Bilirubin, SGOT, SGPT",        tags: ["Organ"],               fasting: false, price: 600,  mrp: 1000 },
-  { id: "kft",       icon: Beaker,       tint: "sky",     name: "Kidney Function Test", sub: "Urea, creatinine & uric acid", tags: ["Organ"],               fasting: false, price: 700,  mrp: 1150 },
-  { id: "lipid",     icon: HeartPulse,   tint: "rose",    name: "Lipid Profile",        sub: "Cholesterol & triglycerides",  tags: ["Heart"],               fasting: true,  price: 800,  mrp: 1300 },
-  { id: "pkg-basic", icon: Stethoscope,  tint: "emerald", name: "Full Body Checkup",    sub: "Basic — CBC, sugar, lipid, LFT & KFT", tags: ["Packages", "Popular"], fasting: true,  price: 999,  mrp: 1800, params: 45 },
-  { id: "vitd",      icon: Sun,          tint: "amber",   name: "Vitamin D Test",       sub: "25-OH Vitamin D level",        tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 1700 },
-  { id: "vitb12",    icon: Pill,         tint: "violet",  name: "Vitamin B12 Test",     sub: "Serum B12 level",              tags: ["Vitamins"],            fasting: false, price: 1200, mrp: 2000 },
-  { id: "dengue",    icon: Bug,          tint: "emerald", name: "Dengue Test",          sub: "NS1 antigen, IgG & IgM",       tags: ["Fever"],               fasting: false, price: 1200, mrp: 1900 },
-  { id: "pkg-adv",   icon: Sparkles,     tint: "teal",    name: "Advanced Full Body",   sub: "Basic + thyroid, HbA1c & vitamins",    tags: ["Packages", "Popular"], fasting: true,  price: 1999, mrp: 3600, params: 72 },
-  { id: "pkg-senior",icon: UserRound,    tint: "violet",  name: "Senior Citizen Pack",  sub: "55+ — heart, bones & sugar screening", tags: ["Packages"],            fasting: true,  price: 2999, mrp: 5200, params: 88 },
-  { id: "fever",     icon: Thermometer,  tint: "teal",    name: "Fever Panel",          sub: "Malaria, typhoid & dengue",    tags: ["Fever"],               fasting: false, price: null            },
-];
+const rail = (key) => RAIL[key] ?? RAIL.emerald;
 
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
 const offPct = (price, mrp) => Math.round(((mrp - price) / mrp) * 100);
 
 // What the search box looks through. Tags are included on purpose: "package",
 // "diabetes" or "heart" then work as searches, not only as chips.
-const haystack = (t) => `${t.name} ${t.sub} ${t.tags.join(" ")}`.toLowerCase();
+const haystack = (t) =>
+  `${t.name} ${t.sub ?? ""} ${(t.tags ?? []).join(" ")}`.toLowerCase();
 
 // How many tests the phone list shows before "View all" is tapped — enough to
 // scroll past quickly, few enough that the FAQ below stays reachable.
 const MOBILE_PREVIEW = 4;
 
-export default function LabServices({ city = "Varanasi" }) {
+/**
+ * `tests`, `filters` and `phone` come from the city document (or its generated
+ * default) — see defaultTests / defaultFilters in src/data/labDefaults.js.
+ * Prices can therefore differ per city without touching this file.
+ */
+export default function LabServices({
+  city,
+  cityOptions,
+  tests = [],
+  filters = [],
+  phone,
+}) {
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState(false);
@@ -130,9 +129,11 @@ export default function LabServices({ city = "Varanasi" }) {
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (q) return TESTS.filter((t) => haystack(t).includes(q));
-    return filter === "All" ? TESTS : TESTS.filter((t) => t.tags.includes(filter));
-  }, [query, filter]);
+    if (q) return tests.filter((t) => haystack(t).includes(q));
+    return filter === "All"
+      ? tests
+      : tests.filter((t) => (t.tags ?? []).includes(filter));
+  }, [query, filter, tests]);
 
   // Any change to the query or chip starts the phone list collapsed again.
   const pickFilter = (key) => {
@@ -146,7 +147,8 @@ export default function LabServices({ city = "Varanasi" }) {
     if (value.trim()) setFilter("All");
   };
 
-  const heading = FILTERS.find((f) => f.key === filter)?.heading ?? "Lab Tests & Test Packages";
+  const heading =
+    filters.find((f) => f.key === filter)?.heading ?? "Lab Tests & Test Packages";
   const mobileList = expanded ? visible : visible.slice(0, MOBILE_PREVIEW);
 
   // overflow-x-clip — the arrows sit half outside the slider, so nothing of
@@ -200,7 +202,7 @@ export default function LabServices({ city = "Varanasi" }) {
             same job, and showing both at once is what made this area busy. */}
         {!searching && (
           <div className="mt-2.5 hidden flex-wrap justify-center gap-1.5 sm:flex sm:gap-2">
-            {FILTERS.map((f) => {
+            {filters.map((f) => {
               const active = filter === f.key;
               // Packages are a different kind of thing from a test category and
               // the highest-value booking, so the chip is tinted to be found.
@@ -239,11 +241,11 @@ export default function LabServices({ city = "Varanasi" }) {
               will confirm the price for you.
             </p>
             <a
-              href={`tel:${PHONE.replace(/\s/g, "")}`}
+              href={`tel:${String(phone ?? "").replace(/\s/g, "")}`}
               className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-[12.5px] font-bold text-white hover:bg-emerald-700 active:scale-[0.98] transition-all"
             >
               <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.3} />
-              {PHONE}
+              {phone}
             </a>
           </div>
         )}
@@ -258,7 +260,7 @@ export default function LabServices({ city = "Varanasi" }) {
             <>
               <ul className="space-y-2.5">
                 {mobileList.map((t) => {
-                  const Icon = t.icon;
+                  const Icon = ICONS[t.icon] ?? FlaskConical;
                   const save = t.price && t.mrp ? t.mrp - t.price : 0;
 
                   return (
@@ -275,7 +277,7 @@ export default function LabServices({ city = "Varanasi" }) {
                         {/* Colour rail — the row's category read at a glance */}
                         <span
                           aria-hidden
-                          className={`absolute inset-y-0 left-0 w-1 ${RAIL[t.tint]}`}
+                          className={`absolute inset-y-0 left-0 w-1 ${rail(t.tint)}`}
                         />
 
                         {/* Discount corner — the strongest reason to tap, so it
@@ -288,7 +290,7 @@ export default function LabServices({ city = "Varanasi" }) {
 
                         <div className="flex gap-3 p-3 pl-3.5">
                           <span
-                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-1 ${TINT[t.tint]}`}
+                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-1 ${tint(t.tint)}`}
                           >
                             <Icon className="h-5 w-5" strokeWidth={1.8} />
                           </span>
@@ -296,7 +298,7 @@ export default function LabServices({ city = "Varanasi" }) {
                           <div className="min-w-0 flex-1">
                             <h3 className="flex items-center gap-1.5 pr-14 text-[14.5px] font-bold leading-snug text-slate-900">
                               <span className="truncate">{t.name}</span>
-                              {t.tags.includes("Popular") && (
+                              {(t.tags ?? []).includes("Popular") && (
                                 <span className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
                                   Top
                                 </span>
@@ -438,7 +440,7 @@ export default function LabServices({ city = "Varanasi" }) {
             className="pt-2 pb-5.5"
           >
           {visible.map((t) => {
-            const Icon = t.icon;
+            const Icon = ICONS[t.icon] ?? FlaskConical;
             return (
               <SwiperSlide key={t.id} className="h-auto">
                 <article
@@ -453,14 +455,14 @@ export default function LabServices({ city = "Varanasi" }) {
 
                   <div className="flex-1 p-2.5 sm:p-3">
                     <span
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ring-1 ${TINT[t.tint]}`}
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ring-1 ${tint(t.tint)}`}
                     >
                       <Icon className="h-4.5 w-4.5" strokeWidth={1.8} />
                     </span>
 
                     <h3 className="mt-2 flex items-center gap-1.5 text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug">
                       <span className="truncate">{t.name}</span>
-                      {t.tags.includes("Popular") && (
+                      {(t.tags ?? []).includes("Popular") && (
                         <span className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
                           Top
                         </span>
@@ -537,7 +539,13 @@ export default function LabServices({ city = "Varanasi" }) {
         </div>
       </div>
 
-      {booking && <LabBookingModal test={booking} onClose={() => setBooking(null)} />}
+      {booking && (
+        <LabBookingModal
+          test={booking}
+          cityOptions={cityOptions}
+          onClose={() => setBooking(null)}
+        />
+      )}
     </section>
   );
 }

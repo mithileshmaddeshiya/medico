@@ -1,10 +1,21 @@
 import { cityData } from "@/data/cityData";
 import { blogs } from "@/data/blogData";
+import { getLabCities } from "@/lib/labCities";
+import { SITE as baseUrl } from "@/lib/site";
 
-export default function sitemap() {
-  const baseUrl = "https://www.medicobharat.com";
+/**
+ * Rebuilt on the same hourly clock as the lab pages, so a city added in
+ * Firestore appears in the sitemap without a redeploy — which is what actually
+ * gets it crawled. Without this the sitemap would be frozen at build time and
+ * a new city would sit un-indexed until the next deploy.
+ *
+ * Must be a literal — Next.js reads this statically, so an imported constant
+ * fails the build. Keep it in step with LAB_CITIES_REVALIDATE.
+ */
+export const revalidate = 3600;
 
-  // 1. Dynamic City Pages
+export default async function sitemap() {
+  // 1. Medicine city pages (local data)
   const cityPages = Object.values(cityData).map((city) => ({
     url: `${baseUrl}/medicine-delivery/${city.slug}`,
     lastModified: new Date(),
@@ -12,7 +23,17 @@ export default function sitemap() {
     priority: city.slug === "deoria" ? 1.0 : 0.9,
   }));
 
-  // 2. Dynamic Blog Pages
+  // 2. Lab test city pages (Firestore) — the first city in the list is the
+  //    flagship, so it carries the higher priority.
+  const labCities = await getLabCities();
+  const labPages = labCities.map((city, i) => ({
+    url: `${baseUrl}/lab-test/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: i === 0 ? 0.9 : 0.8,
+  }));
+
+  // 3. Dynamic Blog Pages
   const blogPages = blogs.map((blog) => ({
     url: `${baseUrl}/blogs/${blog.category}/${blog.city}`,
     lastModified: new Date(),
@@ -20,7 +41,7 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  // 3. Static Pages (Jo Missing The)
+  // 4. Static Pages
   const staticRoutes = ["/about", "/contact", "/privacy", "/terms"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -37,7 +58,8 @@ export default function sitemap() {
       priority: 1.0,
     },
     ...cityPages,
+    ...labPages,
     ...blogPages,
-    ...staticRoutes, // Static pages ko yahan merge kar diya
+    ...staticRoutes,
   ];
 }
