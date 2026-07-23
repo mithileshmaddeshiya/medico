@@ -11,14 +11,20 @@ import CitySEOContent from "@/components/medicine/ContentPage";
 import TrustSection from "@/components/medicine/HowWork";
 import FAQ from "@/components/medicine/Faq";
 import LatestBlogs from "@/components/medicine/LatestBlogs";
+import LabTestPromo from "@/components/medicine/LabTestPromo";
 import { homeData } from "@/data/homeData";
 
-export default function HomeDataProvider() {
+// `labCity` comes from page.js (a server component) — this file is "use client"
+// and cannot read Firestore itself.
+export default function HomeDataProvider({ labCity }) {
   const data = homeData;
 
   return (
     <>
       <Hero data={data} />
+      {/* Straight under the hero: the strongest in-body link the site can give
+          the lab section, and the first thing a visitor sees after the fold. */}
+      <LabTestPromo city={labCity} />
       <CityInterlinking data={data} />
       <LatestBlogs />
       <BannerImage data={data} />
