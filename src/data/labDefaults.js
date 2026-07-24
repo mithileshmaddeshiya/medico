@@ -20,6 +20,19 @@
 export const LAB_PHONE = "+91 989-123-3525";
 export const LAB_WHATSAPP = "919891233525";
 
+/**
+ * Share-card image for the lab pages (Open Graph + Twitter).
+ *
+ * MUST be a JPG or PNG at 1200×630 — NOT WebP. WhatsApp and several social
+ * scrapers refuse to render a WebP og:image, which is why a mobile share of the
+ * old hero (`.webp`) came up as a blank grey box. Keep it under ~300 KB so
+ * WhatsApp fetches it in time to build the preview.
+ *
+ * The file goes in `public/og/`, so this path resolves to `/public/og/lab-test.jpg`.
+ * A city can override it with its own `ogImage` field in Firestore.
+ */
+export const LAB_OG_IMAGE = "/og/ogtag.jpg";
+
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 
 export const defaultHero = (city) => ({
