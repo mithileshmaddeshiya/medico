@@ -199,7 +199,7 @@ export const defaultContent = (city) => [
     id: "lab-test-in-varanasi",
     h: `${city} Me Lab Test — Online Blood Test Booking, Free Home Sample Collection`,
     p: [
-      `${city} poore Purvanchal ka healthcare centre hai. Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia, Azamgarh aur Bihar ke border districts se roz patients yahan aate hain — kyunki specialist doctors, tertiary hospitals aur NABL accredited diagnostic labs asal me yahi par hain. Iska matlab ye bhi hai ki Lanka, Sunderpur, Bhelupur aur Cantt ki labs me subah 7 baje se 10 baje tak lambi line lagti hai, kyunki har fasting sample isi window me dena hota hai.`,
+      `${city} poore Purvanchal ka healthcare centre hai. Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia, Azamgarh aur Bihar ke border districts se roz patients yahan aate hain — kyunki specialist doctors, tertiary hospitals aur bade diagnostic labs asal me yahi par hain. Iska matlab ye bhi hai ki Lanka, Sunderpur, Bhelupur aur Cantt ki labs me subah 7 baje se 10 baje tak lambi line lagti hai, kyunki har fasting sample isi window me dena hota hai.`,
       `Lab test online book karne se ye poori line hat jaati hai. Aap apna test ya health package choose kijiye, morning slot select kijiye, aur trained phlebotomist aapke ghar ${city} me aa kar aapke saamne fresh sterile needle se sample leta hai. Report seedhe aapke phone par PDF me aa jaati hai. Na traffic me travel, na khaali pet plastic chair par intezaar, aur na hi counter par bill dekh kar surprise.`,
       `Aap individual test bhi book kar sakte hain — CBC, thyroid profile, HbA1c, liver function test, kidney function test, lipid profile, vitamin D aur vitamin B12 — ya phir ek hi sample me 60 se 90 parameter wala full body health checkup. Doctor ka likha hua panel, pre-employment checkup, surgery se pehle ki jaanch, pregnancy profile aur saal me ek baar hone wali routine screening, sab isi tarike se book hoti hai.`,
     ],
@@ -241,10 +241,10 @@ export const defaultContent = (city) => [
     id: "lab-test-price-varanasi",
     h: `${city} Me Lab Test Price (Indicative Range)`,
     p: [
-      `${city} ka rate Delhi aur Lucknow se kaafi kam padta hai, lekin NABL accredited lab aur chhote unaccredited collection point ke beech farq bahut hota hai. Sheher me aam taur par milne wale range: CBC ₹200–₹400, ESR ₹100–₹200, Fasting Blood Sugar ₹80–₹150, HbA1c ₹400–₹700, Lipid Profile ₹450–₹800, Liver Function Test ₹450–₹800, Kidney Function Test ₹500–₹900.`,
+      `${city} ka rate Delhi aur Lucknow se kaafi kam padta hai, lekin ek achhe, established lab aur chhote collection point ke beech farq bahut hota hai. Sheher me aam taur par milne wale range: CBC ₹200–₹400, ESR ₹100–₹200, Fasting Blood Sugar ₹80–₹150, HbA1c ₹400–₹700, Lipid Profile ₹450–₹800, Liver Function Test ₹450–₹800, Kidney Function Test ₹500–₹900.`,
       `Hormone aur vitamin ke liye: Thyroid Profile (T3, T4, TSH) ₹350–₹600, Vitamin D (25-OH) ₹900–₹1,600, Vitamin B12 ₹700–₹1,200, Ferritin ₹500–₹900, Urine Routine ₹100–₹250. Bukhar ke season ke test: Dengue NS1 Antigen ₹600–₹1,100, Dengue IgG/IgM ₹700–₹1,200, Widal ₹200–₹400, Malaria Antigen ₹300–₹600, Typhidot ₹500–₹900.`,
       `Asli bachat health package me hoti hai. Basic full body checkup aam taur par ₹999 se ₹1,499 ke beech, advanced package ₹1,800 se ₹2,800 ke beech, aur comprehensive package ₹3,000 se ₹5,000 ke beech aata hai — wahi test alag alag karane par bill aasani se ₹8,000 paar kar jaata hai.`,
-      `Paisa dene se pehle teen cheezein confirm kar lijiye: home collection sach me free hai ya bill ke end me jud jaayega, quoted price usi method ka hai jo aapke doctor ne likha hai (CLIA aur ECLIA method purane ELISA se mehnge hote hain lekin hormone ke liye zyada reliable hain), aur report NABL-signed hai ya nahi. Jo test ₹150 sasta hai lekin dobara sahi lab me karana pade, wo sasta nahi hai.`,
+      `Paisa dene se pehle do cheezein confirm kar lijiye: home collection sach me free hai ya bill ke end me jud jaayega, aur quoted price usi method ka hai jo aapke doctor ne likha hai (CLIA aur ECLIA method purane ELISA se mehnge hote hain lekin hormone ke liye zyada reliable hain). Jo test ₹150 sasta hai lekin dobara sahi lab me karana pade, wo sasta nahi hai.`,
     ],
   },
 
@@ -290,10 +290,10 @@ export const defaultContent = (city) => [
   },
 
   {
-    id: "nabl-accredited-lab-varanasi",
+    id: "choosing-a-reliable-lab",
     h: `${city} Me Bharosemand Lab Kaise Chunein`,
     p: [
-      `Sabse pehle NABL accreditation dekhiye. NABL (National Accreditation Board for Testing and Calibration Laboratories) lab ke equipment calibration, reagent handling, staff ki qualification, internal quality control aur turnaround time ka audit karta hai. Accredited lab External Quality Assurance Scheme me bhi hissa leti hai, jismein samay samay par blind sample bheje jaate hain aur uske result desh ki reference labs se milaye jaate hain. Yahi farq hai ek aisi machine me jo number deti hai aur ek aisi machine me jo sahi number deti hai.`,
+      `Ek achhe lab ki pehchaan uske quality control se hoti hai: machines ki niyamit calibration, sahi tarike se store kiye gaye reagent, trained staff, aur consistent turnaround time. Aap sidha ye sab nahi dekh sakte, lekin do cheezein zaroor pooch sakte hain — lab kitne saal se chal raha hai, aur wo apni report par test ka method (jaise CLIA/ECLIA) likhta hai ya nahi. Yahi farq hota hai ek aisi machine me jo number deti hai aur ek aisi machine me jo sahi number deti hai.`,
       `Collection ke waqt khud dhyan dijiye. Nayi sterile needle aapke saamne khule, har test ke liye sahi rang ki vacutainer ho, tube aapke darwaze par barcode ho — lab pahunch kar nahi, tube sahi level tak bhare, aur anticoagulant wali tube halke se ulti-seedhi ki jaaye. Clotted ya kam bhara sample hi wo sabse aam wajah hai jiske liye lab dobara sample maangti hai — aur galat tarike se liya gaya sample haemolysis kar deta hai, jisse potassium jhoothe taur par badh jaata hai aur bewajah panic ho jaata hai.`,
       `Aakhir me, repeat test ke liye har baar usi lab me jaaiye. Alag alag analyser aur method ke reference range thode alag hote hain, isliye ek lab me TSH 4.5 aur doosri me 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya. Jo cheez aap mahino tak track kar rahe hain — HbA1c, TSH, creatinine, ferritin — usme lab ki consistency utni hi zaroori hai jitni khud ka number.`,
     ],
@@ -319,17 +319,6 @@ export const defaultContent = (city) => [
     ],
   },
 
-  {
-    id: "faq-lab-test-varanasi",
-    h: "Aksar Pooche Jaane Wale Sawaal (FAQ)",
-    p: [
-      `Kya home sample collection safe hai? Haan. Har draw me nayi single-use needle aur sealed vacutainer aapke saamne kholi jaati hai, aur phlebotomist trained tatha identity-verified hota hai. Sample temperature-controlled box me jaata hai, jisse wo value bachi rehti hain jo room temperature par kharab ho jaati hain.`,
-      `Kya har test ke liye khaali pet rehna padta hai? Nahi. Sirf fasting sugar, lipid profile, insulin aur zyadatar full body package me 10 se 12 ghante ka fasting chahiye. CBC, thyroid profile, HbA1c, vitamin D, vitamin B12, dengue aur urine test me fasting bilkul zaroori nahi. Fasting ke dauran saada paani pee sakte hain.`,
-      `Report kitni jaldi milegi? Routine test aam taur par sample lab pahunchne ke 6 se 24 ghante me report ho jaate hain, aur culture me 48 se 72 ghante lagte hain. Report phone aur email par PDF me aati hai.`,
-      `Kya booking ke liye doctor ka parcha zaroori hai? Zyadatar routine test aur health package bina parche ke book ho jaate hain. Kuch specialised test me regulation ke hisaab se prescription lagti hai, aur parcha upload karna hamesha faydemand hai taki sahi panel run ho.`,
-      `${city} ke kaun kaun se ilaake cover hote hain? Home collection poore sheher me hai, jismein Lanka, Bhelupur, Sigra, Cantt, Mahmoorganj, Ravindrapuri, Sunderpur, Assi, Chowk, Godowlia, Sarnath, Shivpur, Pandeypur, Ashapur, DLW, Chitaipur, Lahartara, Manduadih aur Ramnagar shamil hain. Slot confirm karne ke liye booking ke waqt apna pin code daaliye.`,
-    ],
-  },
 ];
 
 /**

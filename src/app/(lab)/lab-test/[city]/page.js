@@ -236,7 +236,7 @@ export default async function LabCityPage({ params }) {
       {/* Reviews (LabReviews) belong here — between the tests and the FAQ —
           whenever the real Google reviews are ready to be pasted in. */}
 
-      <LabFaq city={cityName} faqs={cityData.faqs} />
+      <LabFaq city={cityName} faqs={cityData.faqs?.slice(0, 6)} />
 
       <LabCta cta={cityData.cta} phone={phone} />
 
