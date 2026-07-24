@@ -15,6 +15,7 @@ import { cache } from "react";
 import { firebaseConfig } from "./firebaseConfig";
 import { SEED_LAB_CITIES, FALLBACK_CITY } from "@/data/labCities";
 import {
+  CITY_ALIASES,
   defaultCallBanner,
   defaultContent,
   defaultCta,
@@ -106,20 +107,20 @@ const obj = (value) =>
  * merge is still predictable, so those fill in field by field.
  */
 function buildContent(fields, base) {
-  const { name, state, areas } = base;
+  const { name, state, areas, aliases } = base;
 
   return {
     // ── metadata ──
     title: str(fields.title) || defaultTitle(name),
     description: str(fields.description) || defaultDescription(name, state, areas),
-    keywords: strList(fields.keywords) ?? defaultKeywords(name, areas),
+    keywords: strList(fields.keywords) ?? defaultKeywords(name, areas, aliases),
 
     // ── sections ──
     hero: { ...defaultHero(name), ...(obj(fields.hero) ?? {}) },
     trustStrip: objList(fields.trustStrip) ?? defaultTrustStrip(),
     tests: objList(fields.tests) ?? defaultTests(),
     filters: objList(fields.filters) ?? defaultFilters(),
-    faqs: objList(fields.faqs) ?? defaultFaqs(name),
+    faqs: objList(fields.faqs) ?? defaultFaqs(name, areas, aliases),
     cta: { ...defaultCta(name), ...(obj(fields.cta) ?? {}) },
     content: objList(fields.content) ?? defaultContent(name),
     callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
@@ -139,6 +140,10 @@ function normalise(fields, docId) {
     name,
     state: str(fields.state) || FALLBACK_CITY.state,
     areas: strList(fields.areas) ?? [],
+    // Alternate names this city is searched by. A Firestore `aliases` array
+    // wins; otherwise the built-in fallback (e.g. Varanasi → "Banaras") applies,
+    // so a doc that predates the field still gets its alt-name keywords.
+    aliases: strList(fields.aliases) ?? CITY_ALIASES[slug] ?? [],
     postalCode: fields.postalCode ? str(fields.postalCode) : null,
     // Only an explicit `published: false` hides a city — a document that
     // predates the field must not silently disappear from the site.

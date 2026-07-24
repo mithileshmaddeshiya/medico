@@ -2,6 +2,43 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
+  FaYoutube,
+  FaXTwitter,
+  FaGlobe,
+} from "react-icons/fa6";
+
+/**
+ * Brand-icon registry for the footer's social row. Keyed by the `type` string
+ * stored in footer.social (see defaultFooter in labDefaults.js) so the data
+ * stays icon-agnostic — a type with no match here renders a neutral globe
+ * instead of a blank gap. `brand` tints the hover to each platform's colour.
+ */
+const SOCIAL_ICONS = {
+  instagram: { Icon: FaInstagram, brand: "hover:bg-[#E1306C]" },
+  facebook: { Icon: FaFacebookF, brand: "hover:bg-[#1877F2]" },
+  whatsapp: { Icon: FaWhatsapp, brand: "hover:bg-[#25D366]" },
+  youtube: { Icon: FaYoutube, brand: "hover:bg-[#FF0000]" },
+  twitter: { Icon: FaXTwitter, brand: "hover:bg-black" },
+  x: { Icon: FaXTwitter, brand: "hover:bg-black" },
+};
+
+/**
+ * Footer navigation to the site's key pages. EVERY href here must be a route
+ * that actually renders — a footer link that 404s bleeds crawl budget and
+ * trust. These five are verified live (/, /about, /contact, /privacy, /terms);
+ * do not add /blogs or a city medicine page here until that route exists.
+ */
+const QUICK_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact Us" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms & Conditions" },
+];
 
 /**
  * `city` is the full Firestore document — its `footer` key carries the tagline,
@@ -14,17 +51,28 @@ export default function LabFooter({ city, otherCities = [] }) {
   const areas = city?.areas ?? [];
   const footer = city?.footer ?? {};
   const popularTests = footer.popularTests ?? [];
+  const social = (footer.social ?? []).filter((s) => s && s.href);
 
   return (
-    <footer id="footer-section" className="relative mt-6 bg-gradient-to-b from-emerald-50/60 via-teal-50/40 to-white border-t border-emerald-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-12">
+    <footer id="footer-section" className="relative mt-4 sm:mt-6 bg-gradient-to-b from-emerald-50/60 via-teal-50/40 to-white border-t border-emerald-100">
+      {/* One real <h2> for the whole footer landmark. It is screen-reader only,
+          but it gives the footer's <h3> column titles a parent to sit under —
+          an <h4> with no h2/h3 above it is the kind of broken heading order an
+          SEO audit flags. Keyword-bearing, so it earns its place in the outline. */}
+      <h2 className="sr-only">
+        MedicoBharat — Lab Tests &amp; Health Checkups at Home in {city.name}
+      </h2>
 
-        {/* BRAND */}
-        <div className="lg:col-span-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-5 sm:gap-y-6 lg:grid-cols-12">
+
+        {/* BRAND — full width on phones (it is the tallest block; letting it
+            span both columns keeps the four short sections below it aligned in a
+            tidy 2×2 instead of leaving a ragged gap beside it). */}
+        <div className="col-span-2 lg:col-span-3">
           <Link href="/" aria-label="MedicoBharat Lab Test — Home" className="inline-block">
             <Image
               src="/navbar/lablogo.png"
-              alt="MedicoBharat Lab Test Logo"
+              alt={`MedicoBharat — Lab Test in ${city.name}`}
               width={260}
               height={76}
               className="h-12 sm:h-14 w-auto object-contain cursor-pointer mb-2"
@@ -33,13 +81,58 @@ export default function LabFooter({ city, otherCities = [] }) {
           <p className="text-[13px] text-slate-600 leading-6 max-w-xs">
             {footer.tagline}
           </p>
+
+          {/* SOCIAL — real profiles from footer.social, left-aligned to match
+              the rest of the footer. `flex-wrap` lets the row reflow on a narrow
+              phone. Each is a 40px tap target that fills with the platform's
+              colour on hover. */}
+          {social.length > 0 && (
+            <ul className="mt-3 sm:mt-4 flex flex-wrap gap-2.5">
+              {social.map((s) => {
+                const { Icon, brand } = SOCIAL_ICONS[s.type] ?? {
+                  Icon: FaGlobe,
+                  brand: "hover:bg-emerald-600",
+                };
+                return (
+                  <li key={s.label ?? s.href}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label ?? s.type ?? "Social profile"}
+                      className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
+                    >
+                      <Icon className="h-4.5 w-4.5" aria-hidden />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </div>
 
+        {/* QUICK LINKS — the footer is a site's second sitemap: it passes link
+            equity to the pages that matter and gives a crawler a route to each
+            from every lab page. Only routes that actually exist are listed, so
+            no link here can 404. */}
+        <nav aria-label="Quick links" className="lg:col-span-2">
+          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">Quick Links</h3>
+          <ul className="space-y-1.5 text-sm text-slate-600">
+            {QUICK_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-emerald-700 transition-colors">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {/* AREAS + OTHER CITIES (SEO) */}
-        <div className="lg:col-span-3">
-          <h4 className="text-sm font-semibold text-emerald-900 mb-2.5">
+        <div className="lg:col-span-2">
+          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">
             Areas We Cover in {city.name}
-          </h4>
+          </h3>
 
           {/* Localities as text: the keywords index, and nobody hits a 404 */}
           <p className="text-sm leading-6 text-slate-600">
@@ -49,8 +142,8 @@ export default function LabFooter({ city, otherCities = [] }) {
           </p>
 
           {otherCities.length > 0 && (
-            <>
-              <h4 className="mt-4 text-sm font-semibold text-emerald-900 mb-2.5">Other Cities</h4>
+            <nav aria-label="Cities we serve">
+              <h3 className="mt-4 text-sm font-semibold text-emerald-900 mb-2.5">Other Cities</h3>
               <ul className="space-y-1.5 text-sm text-slate-600">
                 {otherCities.map((c) => (
                   <li key={c.slug}>
@@ -63,23 +156,24 @@ export default function LabFooter({ city, otherCities = [] }) {
                   </li>
                 ))}
               </ul>
-            </>
+            </nav>
           )}
         </div>
 
         {/* POPULAR TESTS (SEO) */}
-        <div className="lg:col-span-3">
-          <h4 className="text-sm font-semibold text-emerald-900 mb-2.5">
+        <nav aria-label="Popular lab tests" className="lg:col-span-2">
+          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">
             Popular Tests in {city.name}
-          </h4>
-          {/* No "#tests" fragment — it put a hash in the address bar that the
-              canonical URL does not carry, and the two reading differently is
-              exactly the kind of thing that looks like a bug in an SEO audit. */}
+          </h3>
+          {/* Each links to `#book` — the hero booking form at the top of the
+              page — so a visitor who came in on a test name lands straight on
+              the form, ready to book. The hash sits on the canonical page URL
+              (same slug), so it is a scroll target, not a separate URL. */}
           <ul className="space-y-1.5 text-sm text-slate-600">
             {popularTests.map((t) => (
               <li key={t}>
                 <Link
-                  href={`/lab-test/${city.slug}`}
+                  href={`/lab-test/${city.slug}#book`}
                   className="hover:text-emerald-700 transition-colors"
                 >
                   {t} in {city.name}
@@ -87,13 +181,20 @@ export default function LabFooter({ city, otherCities = [] }) {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        {/* CONTACT */}
+        {/* CONTACT / NAP — a semantic <address> so the crawler reads it as the
+            business's contact block, and the name + locality here match the
+            DiagnosticLab schema on the page (see page.js). Consistent NAP across
+            page, schema and footer is what local ranking is built on. No street
+            address is invented — only what we can stand behind is printed. */}
         <div className="lg:col-span-3">
-          <h4 className="text-sm font-semibold text-emerald-900 mb-2.5">Contact</h4>
+          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">Contact</h3>
 
-          <div className="space-y-2 text-sm text-slate-600">
+          <address className="not-italic space-y-2 text-sm text-slate-600">
+            <p className="font-semibold text-slate-700">
+              MedicoBharat — Lab Test in {city.name}
+            </p>
             <a
               href={`tel:${String(footer.phone ?? "").replace(/\s/g, "")}`}
               aria-label={`Call us at ${footer.phone}`}
@@ -106,16 +207,16 @@ export default function LabFooter({ city, otherCities = [] }) {
               <Mail className="h-4 w-4 text-emerald-600 shrink-0" />
               <span className="break-all">{footer.email}</span>
             </a>
-            <div className="flex items-center gap-2">
+            <p className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-emerald-600 shrink-0" />
               {city.name}, {city.state}
-            </div>
+            </p>
             {/* Hours as text, not an image — local search reads this line */}
-            <div className="flex items-center gap-2">
+            <p className="flex items-center gap-2">
               <Clock className="h-4 w-4 text-emerald-600 shrink-0" />
               {footer.hours}
-            </div>
-          </div>
+            </p>
+          </address>
         </div>
       </div>
 

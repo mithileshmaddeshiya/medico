@@ -7,7 +7,7 @@ import LabFaq from "@/components/lab/LabFaq";
 import LabHero from "@/components/lab/LabHero";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
-import { LAB_PHONE } from "@/data/labDefaults";
+import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/labDefaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 
@@ -48,9 +48,18 @@ export async function generateMetadata({ params }) {
 
   // title / description / keywords come from the city document, falling back
   // to the generated defaults — see src/data/labDefaults.js.
-  const { name, state, slug, title, description, keywords, hero } = cityData;
+  const { name, state, slug, title, description, keywords } = cityData;
   const url = `${SITE}/lab-test/${slug}`;
-  const ogImage = `${SITE}${hero.image}`;
+
+  // ── Share card (OG + Twitter) ───────────────────────────────────────────
+  // NEVER the hero .webp here: WhatsApp and many scrapers do not render WebP,
+  // so a mobile share came up blank. A city may set its own `ogImage`; else the
+  // shared lab card is used. Path is made absolute — a relative og:image is a
+  // common reason a preview fails to load off-site.
+  const ogPath = cityData.ogImage || LAB_OG_IMAGE;
+  const ogImage = ogPath.startsWith("http") ? ogPath : `${SITE}${ogPath}`;
+  const ogType = ogImage.toLowerCase().endsWith(".png") ? "image/png" : "image/jpeg";
+  const ogAlt = `Lab Test in ${name} with free home sample collection — MedicoBharat`;
 
   return {
     title,
@@ -79,6 +88,8 @@ export async function generateMetadata({ params }) {
 
     // Metadata is shallow-merged, so a page-level openGraph replaces the root
     // one wholesale — the image has to be repeated here or the card loses it.
+    // width/height let WhatsApp reserve the large-image slot before the file
+    // loads; secureUrl + type are what a strict scraper looks for.
     openGraph: {
       type: "website",
       url,
@@ -86,14 +97,23 @@ export async function generateMetadata({ params }) {
       locale: "en_IN",
       title,
       description,
-      images: [{ url: ogImage, width: 1672, height: 941, alt: title }],
+      images: [
+        {
+          url: ogImage,
+          secureUrl: ogImage,
+          width: 1200,
+          height: 630,
+          alt: ogAlt,
+          type: ogType,
+        },
+      ],
     },
 
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [{ url: ogImage, alt: ogAlt }],
     },
 
     other: {

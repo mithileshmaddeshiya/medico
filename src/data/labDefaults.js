@@ -20,6 +20,19 @@
 export const LAB_PHONE = "+91 989-123-3525";
 export const LAB_WHATSAPP = "919891233525";
 
+/**
+ * Share-card image for the lab pages (Open Graph + Twitter).
+ *
+ * MUST be a JPG or PNG at 1200×630 — NOT WebP. WhatsApp and several social
+ * scrapers refuse to render a WebP og:image, which is why a mobile share of the
+ * old hero (`.webp`) came up as a blank grey box. Keep it under ~300 KB so
+ * WhatsApp fetches it in time to build the preview.
+ *
+ * The file goes in `public/og/`, so this path resolves to `/public/og/lab-test.jpg`.
+ * A city can override it with its own `ogImage` field in Firestore.
+ */
+export const LAB_OG_IMAGE = "/og/ogtag.jpg";
+
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 
 export const defaultHero = (city) => ({
@@ -113,32 +126,59 @@ export const defaultFilters = () => [
    what we know: free home collection, a trained phlebotomist with an ID card,
    6 AM slots, reports in 24 hours, cash/UPI on collection. */
 
-export const defaultFaqs = (city) => [
-  {
-    q: `How much does home sample collection cost in ${city}?`,
-    a: `Home sample collection in ${city} is completely free. You pay only for the test — no visiting charge and no hidden fees. A trained phlebotomist comes to your door, collects the sample and carries it safely to the lab.`,
-  },
-  {
-    q: "Who collects the sample, and how soon do they arrive?",
-    a: "A trained phlebotomist (lab technician) with a verified ID card comes to your home, usually within 60 minutes of your booking being confirmed. You can check the ID card before the collection starts.",
-  },
-  {
-    q: "When and how will I get my report?",
-    a: "Most reports are ready within 24 hours and are sent as a PDF on both WhatsApp and email, so you can show them to your doctor right away. A few specialised tests take 48–72 hours — we tell you the exact timeline at the time of booking.",
-  },
-  {
-    q: "Which tests require fasting?",
-    a: "Tests such as Fasting Blood Sugar, Lipid Profile and the Full Body Checkup need 8–12 hours of fasting. That is why home visit slots start at 6 AM — give your sample early and have your breakfast right after. Tests like CBC, Thyroid Profile and Vitamin D need no fasting at all.",
-  },
-  {
-    q: "What if I have a question about my report?",
-    a: `Call us at ${LAB_PHONE} and we will help you read the report and, where a value needs explaining, put you back in touch with the lab that ran the test. Keep any earlier reports handy — a doctor acts on the trend between readings, not on a single number.`,
-  },
-  {
-    q: "How do I book a test, and what payment options are available?",
-    a: `Select a test on this page and fill the "Book Now" form, or simply call us at ${LAB_PHONE}. You can pay in cash at the time of sample collection, or by UPI (PhonePe, Google Pay, Paytm).`,
-  },
-];
+export const defaultFaqs = (city, areas = [], aliases = []) => {
+  // Real localities named in Hinglish — matches "<area> me blood test" searches;
+  // falls back to the city when no areas are set.
+  const areaText = areas.length
+    ? `${areas.slice(0, 6).join(", ")} aur aas-paas ke ilaake`
+    : `${city} ke har ilaake`;
+
+  const faqs = [
+    {
+      // Snippet-friendly: pehla hi hissa "free hai / kitne ka hai" ka jawab de
+      // deta hai, jo featured snippet jeet-ta hai.
+      q: `${city} me lab test ka kitna kharcha hai, aur kya home sample collection free hai?`,
+      a: `Aap sirf test ka price dete hain jo har card par likha hai — ${city} me home sample collection bilkul free hai, na koi visiting charge na koi hidden fee. Ek trained phlebotomist aapke ghar aata hai, aapke saamne sample leta hai aur lab tak pahunchata hai.`,
+    },
+    {
+      q: `Kya main ${city} me ghar par blood test kara sakta hoon?`,
+      a: `Haan. Verified ID card wala ek trained phlebotomist aapke ${city} wale ghar par aata hai — aam taur par booking confirm hone ke 60 minute ke andar — aur aapke saamne sample leta hai. Collection shuru hone se pehle aap uska ID card check kar sakte hain.`,
+    },
+    {
+      q: `${city} me aap home sample collection ke liye kaun-kaun se area cover karte hain?`,
+      a: `Hum ${areaText} me sample collect karte hain. Aap aas-paas rehte hain par sure nahi ki aapka address cover hota hai? ${LAB_PHONE} par call karein, hum book karne se pehle confirm kar denge.`,
+    },
+    {
+      q: `${city} me mujhe lab test ki report kitni jaldi mil jaayegi?`,
+      a: `Zyadatar report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp aur email dono par PDF ke roop me bhej di jaati hai, taaki aap turant apne doctor ko dikha sakein. Kuch special test 48–72 ghante lete hain — sahi time hum booking ke waqt bata dete hain.`,
+    },
+    {
+      q: "Kaun se lab test me sample dene se pehle fasting (khaali pet) zaroori hai?",
+      a: "Fasting Blood Sugar, Lipid Profile aur Full Body Checkup jaise test me 8–12 ghante ki fasting chahiye; saada paani pi sakte hain. Isiliye home visit slot subah 6 baje se shuru hote hain — jaldi sample dein aur uske turant baad naashta karein. CBC, Thyroid Profile aur Vitamin D me koi fasting nahi chahiye.",
+    },
+    {
+      q: `${city} me main kaun-kaun se lab test aur health package book kar sakta hoon?`,
+      a: `Aap routine pathology test aur checkup package book kar sakte hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver (LFT) aur Kidney (KFT) test, Vitamin D aur B12, Dengue aur Full Body Checkup. Agar doctor ne koi aisa test likha hai jo is page par nahi hai, to prescription ke saath ${LAB_PHONE} par call karein — zyadatar test usi home visit me ho jaate hain.`,
+    },
+    {
+      q: `${city} me lab test kaise book karein, aur payment ke kya option hain?`,
+      a: `Is page par koi test chunein aur "Book Now" form bharein, ya seedhe ${LAB_PHONE} par call karein. Aap sample collection ke waqt cash de sakte hain, ya UPI se — PhonePe, Google Pay ya Paytm.`,
+    },
+  ];
+
+  // Alternate-name FAQ (jaise Varanasi ke liye "Banaras"). Jo log official naam
+  // kabhi nahi type karte unhe capture karta hai, aur dono naam ek hi sheher ke
+  // hone ki baat plain fact ke roop me kehta hai — isse zyada koi claim nahi.
+  const alias = aliases[0];
+  if (alias) {
+    faqs.splice(3, 0, {
+      q: `Kya aap ${alias} me lab test karte hain?`,
+      a: `Haan — "${alias}" aur "${city}" ek hi sheher ke do naam hain, isliye is page ki har service applicable hai. Chahe aap "${alias}" me lab test dhoondein ya "${city}" me, aapko wahi free home sample collection aur 24-ghante me report milti hai.`,
+    });
+  }
+
+  return faqs;
+};
 
 /* ── CTA band ─────────────────────────────────────────────────────────────
    Claims the page already makes elsewhere — no invented numbers, so the strip
@@ -213,6 +253,15 @@ export const defaultFooter = (city) => ({
   email: "medicobharat@gmail.com",
   phone: LAB_PHONE,
   hours: "Open all 7 days · Slots from 6 AM",
+  // Social handles. `type` maps to a brand icon in LabFooter's registry — an
+  // unknown type falls back to a neutral globe rather than breaking the row.
+  // These are the real profiles used in the site's schema (see app/layout.js);
+  // update the href here (or per city in Firestore) if a handle ever changes.
+  social: [
+    { type: "instagram", label: "Instagram", href: "https://www.instagram.com/medicobharat_01/" },
+    { type: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591803531075" },
+    { type: "whatsapp", label: "WhatsApp", href: `https://wa.me/${LAB_WHATSAPP}` },
+  ],
 });
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
@@ -225,7 +274,17 @@ export const defaultDescription = (city, state, areas = []) =>
     areas.length ? ` across ${areas.slice(0, 4).join(", ")} and nearby areas` : ""
   }.`;
 
-export const defaultKeywords = (city, areas = []) => [
+/**
+ * Alternate names a city is also searched by, keyed by slug. Varanasi is very
+ * commonly searched as "Banaras", so that spelling has to appear in the keywords
+ * or all of that traffic silently misses this page. A city can override this by
+ * setting its own `aliases` array in Firestore — that wins over the fallback.
+ */
+export const CITY_ALIASES = {
+  varanasi: ["Banaras"],
+};
+
+export const defaultKeywords = (city, areas = [], aliases = []) => [
   `Lab Test in ${city}`,
   `Blood Test in ${city}`,
   `Pathology Lab in ${city}`,
@@ -236,6 +295,16 @@ export const defaultKeywords = (city, areas = []) => [
   `Best Lab in ${city}`,
   `Lab Test Price in ${city}`,
   ...areas.map((area) => `Lab Test in ${area} ${city}`),
+  // The same searches under the city's alternate name(s) — e.g. "Lab Test in
+  // Banaras" for Varanasi. Without these, a searcher who never types the
+  // official name is invisible to this page.
+  ...aliases.flatMap((alt) => [
+    `Lab Test in ${alt}`,
+    `Blood Test in ${alt}`,
+    `Full Body Checkup in ${alt}`,
+    `Home Sample Collection in ${alt}`,
+    `Pathology Lab in ${alt}`,
+  ]),
   // "near me" searches carry no city of their own — Google fills that in from
   // the searcher's location, which the DiagnosticLab schema's areaServed answers.
   "Lab Test Near Me",
