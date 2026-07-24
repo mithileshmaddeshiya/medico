@@ -54,7 +54,7 @@ export default function LabFooter({ city, otherCities = [] }) {
   const social = (footer.social ?? []).filter((s) => s && s.href);
 
   return (
-    <footer id="footer-section" className="relative mt-4 sm:mt-6 bg-gradient-to-b from-emerald-50/60 via-teal-50/40 to-white border-t border-emerald-100">
+    <footer id="footer-section" className="relative mt-2 sm:mt-4 bg-gradient-to-b from-emerald-50/60 via-teal-50/40 to-white border-t border-emerald-100">
       {/* One real <h2> for the whole footer landmark. It is screen-reader only,
           but it gives the footer's <h3> column titles a parent to sit under —
           an <h4> with no h2/h3 above it is the kind of broken heading order an
@@ -63,7 +63,7 @@ export default function LabFooter({ city, otherCities = [] }) {
         MedicoBharat — Lab Tests &amp; Health Checkups at Home in {city.name}
       </h2>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-5 sm:gap-y-6 lg:grid-cols-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-4 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-2.5 sm:gap-y-4 lg:grid-cols-12">
 
         {/* BRAND — full width on phones (it is the tallest block; letting it
             span both columns keeps the four short sections below it aligned in a
@@ -75,10 +75,10 @@ export default function LabFooter({ city, otherCities = [] }) {
               alt={`MedicoBharat — Lab Test in ${city.name}`}
               width={260}
               height={76}
-              className="h-12 sm:h-14 w-auto object-contain cursor-pointer mb-2"
+              className="h-8 sm:h-10 w-auto object-contain cursor-pointer mb-1 sm:mb-1.5"
             />
           </Link>
-          <p className="text-[13px] text-slate-600 leading-6 max-w-xs">
+          <p className="text-[12px] text-slate-600 leading-5 max-w-xs">
             {footer.tagline}
           </p>
 
@@ -87,7 +87,7 @@ export default function LabFooter({ city, otherCities = [] }) {
               phone. Each is a 40px tap target that fills with the platform's
               colour on hover. */}
           {social.length > 0 && (
-            <ul className="mt-3 sm:mt-4 flex flex-wrap gap-2.5">
+            <ul className="mt-2 sm:mt-3 flex flex-wrap gap-2">
               {social.map((s) => {
                 const { Icon, brand } = SOCIAL_ICONS[s.type] ?? {
                   Icon: FaGlobe,
@@ -100,9 +100,9 @@ export default function LabFooter({ city, otherCities = [] }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={s.label ?? s.type ?? "Social profile"}
-                      className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
+                      className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
                     >
-                      <Icon className="h-4.5 w-4.5" aria-hidden />
+                      <Icon className="h-4 w-4" aria-hidden />
                     </a>
                   </li>
                 );
@@ -116,8 +116,8 @@ export default function LabFooter({ city, otherCities = [] }) {
             from every lab page. Only routes that actually exist are listed, so
             no link here can 404. */}
         <nav aria-label="Quick links" className="lg:col-span-2">
-          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">Quick Links</h3>
-          <ul className="space-y-1.5 text-sm text-slate-600">
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Quick Links</h3>
+          <ul className="space-y-1 text-[12.5px] text-slate-600">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="hover:text-emerald-700 transition-colors">
@@ -130,12 +130,12 @@ export default function LabFooter({ city, otherCities = [] }) {
 
         {/* AREAS + OTHER CITIES (SEO) */}
         <div className="lg:col-span-2">
-          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
             Areas We Cover in {city.name}
           </h3>
 
           {/* Localities as text: the keywords index, and nobody hits a 404 */}
-          <p className="text-sm leading-6 text-slate-600">
+          <p className="text-[12.5px] leading-5 text-slate-600">
             {areas.length > 0
               ? `${areas.join(" · ")} and nearby areas.`
               : `${city.name} and nearby areas.`}
@@ -143,8 +143,8 @@ export default function LabFooter({ city, otherCities = [] }) {
 
           {otherCities.length > 0 && (
             <nav aria-label="Cities we serve">
-              <h3 className="mt-4 text-sm font-semibold text-emerald-900 mb-2.5">Other Cities</h3>
-              <ul className="space-y-1.5 text-sm text-slate-600">
+              <h3 className="mt-3 text-[13px] font-semibold text-emerald-900 mb-2">Other Cities</h3>
+              <ul className="space-y-1 text-[12.5px] text-slate-600">
                 {otherCities.map((c) => (
                   <li key={c.slug}>
                     <Link
@@ -162,14 +162,14 @@ export default function LabFooter({ city, otherCities = [] }) {
 
         {/* POPULAR TESTS (SEO) */}
         <nav aria-label="Popular lab tests" className="lg:col-span-2">
-          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
             Popular Tests in {city.name}
           </h3>
           {/* Each links to `#book` — the hero booking form at the top of the
               page — so a visitor who came in on a test name lands straight on
               the form, ready to book. The hash sits on the canonical page URL
               (same slug), so it is a scroll target, not a separate URL. */}
-          <ul className="space-y-1.5 text-sm text-slate-600">
+          <ul className="space-y-1 text-[12.5px] text-slate-600">
             {popularTests.map((t) => (
               <li key={t}>
                 <Link
@@ -189,9 +189,9 @@ export default function LabFooter({ city, otherCities = [] }) {
             page, schema and footer is what local ranking is built on. No street
             address is invented — only what we can stand behind is printed. */}
         <div className="lg:col-span-3">
-          <h3 className="text-sm font-semibold text-emerald-900 mb-2.5">Contact</h3>
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Contact</h3>
 
-          <address className="not-italic space-y-2 text-sm text-slate-600">
+          <address className="not-italic space-y-1.5 text-[12.5px] text-slate-600">
             <p className="font-semibold text-slate-700">
               MedicoBharat — Lab Test in {city.name}
             </p>
@@ -229,7 +229,7 @@ export default function LabFooter({ city, otherCities = [] }) {
           Act 2023 requires the privacy notice to be reachable from where that
           collection happens. Do not remove them without replacing them. */}
       <div className="border-t border-emerald-100 bg-emerald-50/60">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-col items-center gap-1.5 text-[11.5px] sm:text-[12.5px] text-slate-500 sm:flex-row sm:justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 flex flex-col items-center gap-0.5 sm:gap-1 text-[11px] sm:text-[12px] text-slate-500 sm:flex-row sm:justify-between">
           <p className="text-center">
             © {new Date().getFullYear()} MedicoBharat. All Rights Reserved.
           </p>

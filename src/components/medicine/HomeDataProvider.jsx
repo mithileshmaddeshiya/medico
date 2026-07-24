@@ -1,9 +1,8 @@
 "use client";
 
 import Hero from "@/components/medicine/Hero";
-import CityInterlinking from "@/components/medicine/cityData";
+import CityInterlinking from "@/components/medicine/CitySlider";
 import BannerImage from "@/components/medicine/BannerImage";
-import Reviews from "@/components/medicine/Review";
 import HowItWorks from "@/components/medicine/HowCity";
 import MedicoBharatSEOSection from "@/components/medicine/MetakeyDeoria";
 import FinalCTA from "@/components/medicine/Cta";
@@ -28,7 +27,6 @@ export default function HomeDataProvider({ labCity }) {
       <CityInterlinking data={data} />
       <LatestBlogs />
       <BannerImage data={data} />
-      {/* <Reviews data={data} /> */}
       <HowItWorks data={data} />
       <MedicoBharatSEOSection data={data} />
       <FinalCTA data={data} />

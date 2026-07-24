@@ -2,15 +2,11 @@
 
 import { CheckCircle, Truck } from "lucide-react"
 import Image from "next/image"
-import MobileSlider from "./HeroMoblie"
+import MobileSlider from "./HeroMobile"
 import CallOrderBanner from "./CallOrder"
 import ShopCategories from "./SlideCat"
 
 export default function Hero({ data }) {
-
-  // console.log(data);
-
-
   return (
 
     <section className="pt-20 md:pt-30 bg-gradient-to-b from-green-50 to-white overflow-hidden">

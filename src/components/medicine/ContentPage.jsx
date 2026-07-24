@@ -4,10 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function CitySEOContent({ data }) {
-
-
-  // console.log(data)
-
   const [showMore, setShowMore] = useState(false);
 
   return (

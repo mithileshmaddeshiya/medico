@@ -75,8 +75,8 @@ export async function generateMetadata({ params }) {
     // both, and Search Console reports it as "Submitted URL marked 'noindex'".
     // If the section ever needs taking down, pull it from sitemap.js too.
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       googleBot: {
         index: true,
         follow: true,
@@ -231,10 +231,7 @@ export default async function LabCityPage({ params }) {
         </div>
       </div>
 
-      {/* Reviews (LabReviews) belong here — between the tests and the FAQ —
-          whenever the real Google reviews are ready to be pasted in. */}
-
-      <LabFaq city={cityName} faqs={cityData.faqs} />
+      <LabFaq city={cityName} faqs={cityData.faqs?.slice(0, 6)} />
 
       <LabCta cta={cityData.cta} phone={phone} />
 
