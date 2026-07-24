@@ -9,6 +9,11 @@ they are to fix. Every item names the file and the exact change.
 > duplicate-footer bug found while fixing C1. The 🟠 High and 🟡 Medium sections
 > below are still open. See "What was fixed" at the bottom for exactly what
 > changed and how it was verified.
+>
+> **Re-audit 24 July 2026:** a fresh deep-dive found **two new issues the first
+> pass missed** — one of them now the single most important item on the page —
+> and re-confirmed every open High/Medium is still open. See
+> [**"Re-audit — 24 July 2026"**](#re-audit--24-july-2026) near the bottom.
 
 ---
 
@@ -409,6 +414,100 @@ footers and two copies of every footer link. Removed the one in
 `HomeDataProvider`.
 
 Verified: the homepage now contains exactly one `<footer id="footer-section">`.
+
+---
+
+## Re-audit — 24 July 2026
+
+A second deep-dive after the Critical fixes shipped. The first audit was strong
+on *infrastructure* (links, canonicals, OG, schema) but did not look closely at
+the **actual words on the lab pages** or at **trust/accuracy**. That is where the
+two new findings are — and one of them outranks everything still open.
+
+### 🔴 NEW-1 — Every lab city page serves Varanasi's content (duplicate + false locality)
+
+**File:** `src/data/labDefaults.js` → `defaultContent()` (and the "areas" text in `defaultFaqs()`)
+
+`defaultContent()` is a Varanasi article with `${city}` interpolated in. Two problems compound:
+
+1. **The section IDs are hardcoded to Varanasi** — `id: "lab-test-in-varanasi"`,
+   `"home-sample-collection-varanasi"`, `"popular-blood-tests-varanasi"`, … 9 of them.
+2. **The prose states Varanasi-only facts** — "poore Purvanchal ka healthcare
+   centre", "Chandauli, Jaunpur, Ghazipur, Mirzapur…", and real Varanasi mohallas
+   (Lanka, Sunderpur, Assi Ghat, Sarnath, Bhelupur, Cantt).
+
+On any city that is **not** Varanasi (Deoria, Gorakhpur, …) this content is both
+**near-duplicate** and **factually wrong** — it tells a Deoria reader their
+samples go to labs in Lanka and Sarnath.
+
+**Why it's now the #1 item:** Google's guidance on *doorway pages* and
+*scaled content abuse* targets exactly this — many URLs that differ only by a
+place-name in otherwise identical copy. The whole `/lab-test/*` cluster is at
+risk of being demoted or de-indexed together, which caps the very traffic C1 was
+meant to unlock. C1 gave these pages internal links; NEW-1 is what stops them
+ranking once crawled.
+
+**Fix:**
+- [ ] Rename the section IDs to be generic (`lab-test-intro`, `home-collection`,
+      `popular-tests`, …). No place-name in an ID that every city reuses.
+- [ ] Strip Varanasi-specific facts out of `defaultContent()` so the fallback is
+      genuinely city-agnostic (no "Purvanchal", no named districts, no mohallas).
+- [ ] Put the real local detail (neighbouring areas, actual localities, local
+      price notes) in each **Firestore city document**, which already overrides
+      the defaults via `mergeLabCityContent()`.
+- [ ] Until a city has unique, true local copy, **don't publish it** — or
+      `noindex` it. Five distinct pages beat fifty templated ones.
+
+**Verify:** in Search Console → URL Inspection → "View crawled page" on a
+non-Varanasi city, confirm the rendered text names *that* city's localities, not
+Varanasi's. Watch "Duplicate without user-selected canonical" in the Pages report.
+
+### 🔴 NEW-2 — "NABL" accreditation claims are back in the content
+
+**File:** `src/data/labDefaults.js` — 6 occurrences of "NABL"
+
+The long-form copy again references NABL-accredited labs and "NABL-signed"
+reports. Per the project's own record (and the removal on 23 July 2026), the
+partner labs are **not** NABL-accredited. This regressed when the Varanasi
+article was pasted in.
+
+**Why it matters:** health content is **YMYL** — Google applies its strictest
+E-E-A-T standard. An unverifiable accreditation claim is both a quality-score
+liability and a real-world trust/compliance problem. It also contradicts the
+site's own earlier decision.
+
+**Fix:**
+- [ ] Remove or rewrite every NABL reference so the page never claims — or lets a
+      reader infer — accreditation the operation does not hold.
+- [ ] "How to choose a trustworthy lab" phrasing is fine *as education*, but must
+      not read as a claim about MedicoBharat's own service.
+
+### Two smaller additions the first pass didn't list
+
+- **JSON-LD on the medicine page loads via `next/script`** (`medicine-delivery/[city]/page.js`, `<Script id="faq-schema">`, default `afterInteractive`). The lab and blog pages inline it as a server `<script type="application/ld+json">`, which is the reliable pattern. Move the medicine JSON-LD to a plain server `<script>` too.
+- **No sitewide `Organization` + `WebSite` schema.** The root layout has `Pharmacy` only. Add an `Organization` (logo, `sameAs`, contactPoint) and a `WebSite` node with `SearchAction` — the first feeds the brand Knowledge Panel, the second can enable a sitelinks search box.
+- **`next.config.mjs` has no `images` / `headers()` config.** Add `images.formats: ['image/avif','image/webp']` (+ `remotePatterns` if any remote image stays), `poweredByHeader: false`, and security/cache headers (HSTS, `X-Content-Type-Options`, immutable caching for `/public`).
+
+### Status of the previously-open items (re-verified 24 July 2026)
+
+| Item | Status |
+|---|---|
+| H1 — sitemap `lastModified` always "now" | 🔴 still open (`sitemap.js` still `new Date()`) |
+| H3 — 8 raw `<img>` tags | 🔴 still open (CityStatsimg ×6, CallOrder ×1, Review ×1) |
+| H4 — `/terms` has no H1 | 🔴 still open |
+| H5 — homepage fully client-rendered | 🔴 still open (`HomeDataProvider` still `"use client"`) |
+| H6 — homepage no page-level metadata | 🔴 still open |
+| M1 — no root `not-found.js` / `error.js` / `loading.js` | 🔴 still open |
+| M2 — breadcrumbs only on lab pages | 🔴 still open |
+| M3 — `lang="en"` on Hinglish content | 🔴 still open (also the root cause of the Google-Translate `removeChild` crash — a client-side guard was added to `layout.js`, but the correct `lang` is still the real fix) |
+| M5 — dead components (`CityStatsimg`, `SalempurData`) | 🔴 still open |
+| M6 — ESLint errors | 🔴 still open |
+
+### Revised order of work
+
+1. **NEW-1** — de-duplicate the lab content (biggest traffic lever now that the links exist).
+2. **NEW-2** — pull the NABL claims (trust + compliance; quick).
+3. Then the previously-planned H1 → H3 → H4, and the structure items (H5, M1, M2).
 
 ---
 

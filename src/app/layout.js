@@ -152,6 +152,28 @@ export default function RootLayout({ children }) {
     >
       <head>
         <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />
+
+        {/*
+          Google Translate crash guard (React issue #11538).
+
+          The lab pages are written in Hinglish, so Chrome/Edge offer to
+          "Translate this page". The browser translator swaps text nodes for
+          <font> wrappers behind React's back. The next time an accordion
+          (LabFaq / LabContent "Read More") re-renders, React calls
+          removeChild / insertBefore on a node the translator already moved and
+          throws "NotFoundError: Failed to execute 'removeChild' on 'Node'",
+          which surfaces only as commitMutationEffectsOnFiber in the stack and
+          takes the whole page down.
+
+          Patching these two DOM methods to no-op on a parent mismatch turns
+          that fatal throw into a harmless skip. Must run before hydration, so
+          it is an inline <head> script, not next/script.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
 

@@ -188,6 +188,8 @@ const breadcrumbSchema = (city) => ({
 export default async function LabCityPage({ params }) {
   const { city } = await params;
 
+  // console.log(city)
+
   const cityData = await getLabCity(city);
   // A city we do not serve is a genuine 404 — redirecting it to Varanasi used
   // to hand Google a page whose content never matched the URL that was crawled.

@@ -1,35 +1,74 @@
 'use client'
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-// `faqs` come from the city document (or its generated default) — see
-// defaultFaqs in src/data/labDefaults.js. Shape: [{ q, a }].
+/**
+ * LabFaq
+ *
+ * `faqs` come from the city document (or its generated default) — see
+ * defaultFaqs in src/data/labDefaults.js.
+ *
+ * Shape: [{ q, a, links?: [{ href, label }] }]
+ *   q     — question text (must be unique-ish per page)
+ *   a     — plain-text answer. Goes into the visible copy AND the JSON-LD,
+ *           so keep it plain text: no markup, no truncation.
+ *   links — optional internal links shown under the answer. Deliberately NOT
+ *           part of the schema text; schema must mirror the readable answer.
+ *
+ * SEO note (July 2026): FAQ rich results were fully deprecated by Google on
+ * 7 May 2026 and no longer appear in Search for any site. FAQPage is still a
+ * valid Schema.org type and is safe to keep — it labels the Q&A relationship
+ * for crawlers and AI retrieval — but it is not a SERP feature any more. The
+ * ranking value lives in the visible answers being genuinely useful and
+ * genuinely different per city.
+ */
 export default function LabFaq({ city, faqs = [] }) {
   const [open, setOpen] = useState(0);
+  const uid = useId();
 
-  if (!faqs.length) return null;
+  // Drop blanks and de-dupe by question, otherwise a templated city doc can
+  // emit repeated Question nodes (invalid-ish schema, duplicate React keys).
+  const items = [];
+  const seen = new Set();
+  for (const item of faqs) {
+    const q = item?.q?.trim();
+    const a = item?.a?.trim();
+    if (!q || !a || seen.has(q)) continue;
+    seen.add(q);
+    items.push({ ...item, q, a });
+  }
 
-  // FAQPage schema — the same answers, in the shape Google reads for rich results.
+  if (!items.length) return null;
+
+  const headingId = `${uid}-heading`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map(({ q, a }) => ({
+    mainEntity: items.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
       acceptedAnswer: { "@type": "Answer", text: a },
     })),
   };
 
+  // An answer containing `</script>` (or any `<`) would break out of the tag
+  // below. Escaping `<` as \u003c is still valid JSON and safe inline.
+  const jsonLdHtml = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+
   return (
     <section
       id="faq"
-      aria-label="Frequently asked questions"
+      aria-labelledby={headingId}
       className="bg-white border-t border-slate-100"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-8 sm:pb-12">
 
-        <h2 className="text-balance text-center text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900">
+        <h2
+          id={headingId}
+          className="text-balance text-center text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900"
+        >
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-center text-[12.5px] sm:text-[13.5px] text-slate-500">
@@ -37,49 +76,76 @@ export default function LabFaq({ city, faqs = [] }) {
         </p>
 
         {/* Only one answer open at a time so the list never becomes a wall of
-            text; grid-rows animates the height instead of snapping open. */}
+            text; grid-rows animates the height instead of snapping open.
+            Answers stay in the DOM when collapsed — never conditionally
+            render them, or the visible copy stops matching the JSON-LD. */}
         <ul className="mt-6 sm:mt-8 space-y-2.5">
-          {faqs.map(({ q, a }, i) => {
+          {items.map(({ q, a, links = [] }, i) => {
             const isOpen = open === i;
+            const btnId = `${uid}-btn-${i}`;
+            const panelId = `${uid}-panel-${i}`;
+
             return (
               <li
-                key={q}
+                key={`${i}-${q}`}
                 className={`overflow-hidden rounded-xl bg-white transition-all duration-300 ${
                   isOpen
                     ? "ring-1 ring-emerald-300 shadow-[0_10px_26px_-18px_rgba(6,78,59,0.4)]"
                     : "ring-1 ring-slate-200 hover:ring-emerald-200"
                 }`}
               >
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left sm:py-3.5"
-                >
-                  <span
-                    className={`text-[13px] sm:text-[14.5px] font-semibold leading-snug transition-colors duration-200 ${
+                {/* h3 keeps the questions in the document outline — headings
+                    do more for long-tail queries than the schema does now. */}
+                <h3 className="m-0">
+                  <button
+                    type="button"
+                    id={btnId}
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    className={`flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left sm:py-3.5 text-[13px] sm:text-[14.5px] font-semibold leading-snug transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-inset ${
                       isOpen ? "text-emerald-700" : "text-slate-800"
                     }`}
                   >
-                    {q}
-                  </span>
-                  <ChevronDown
-                    aria-hidden
-                    className={`h-4.5 w-4.5 shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-emerald-600" : "text-slate-400"
-                    }`}
-                  />
-                </button>
+                    <span>{q}</span>
+                    <ChevronDown
+                      aria-hidden="true"
+                      className={`h-4 w-4 sm:h-[18px] sm:w-[18px] shrink-0 transition-transform duration-300 motion-reduce:transition-none ${
+                        isOpen ? "rotate-180 text-emerald-600" : "text-slate-400"
+                      }`}
+                    />
+                  </button>
+                </h3>
 
                 <div
-                  className={`grid transition-all duration-300 ease-out ${
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={btnId}
+                  className={`grid transition-all duration-300 ease-out motion-reduce:transition-none ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-4 pb-4 text-[12px] sm:text-[13px] leading-relaxed text-slate-500">
-                      {a}
-                    </p>
+                    <div className="px-4 pb-4">
+                      <p className="text-[12px] sm:text-[13px] leading-relaxed text-slate-500">
+                        {a}
+                      </p>
+
+                      {links.length > 0 && (
+                        <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[12px] sm:text-[13px]">
+                          {links.map(({ href, label }) => (
+                            <a
+                              key={href}
+                              href={href}
+                              tabIndex={isOpen ? 0 : -1}
+                              className="font-medium text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
+                            >
+                              {label}
+                            </a>
+                          ))}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
@@ -90,7 +156,7 @@ export default function LabFaq({ city, faqs = [] }) {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml }}
       />
     </section>
   );
