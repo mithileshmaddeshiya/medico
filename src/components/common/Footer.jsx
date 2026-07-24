@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // `labCities` comes from the (main) layout, straight out of Firestore — so a
 // new lab city starts being linked from every page on the site the moment it is
-// added, with no code change. 
+// added, with no code change.
 export default function Footer({ data, labCities = [] }) {
   const city = data?.city || "Deoria";
 
