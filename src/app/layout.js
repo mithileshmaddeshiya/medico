@@ -186,8 +186,8 @@ export default function RootLayout({ children }) {
                 "name": "Deoria"
               },
               "sameAs": [
-                "https://www.instagram.com/medicobharat",
-                "https://www.facebook.com/medicobharat"
+                "https://www.instagram.com/medicobharat_01/",
+                "https://www.facebook.com/profile.php?id=61591803531075"
               ]
             }),
           }}

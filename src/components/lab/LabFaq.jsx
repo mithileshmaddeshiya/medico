@@ -33,7 +33,7 @@ export default function LabFaq({ city, faqs = [] }) {
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-center text-[12.5px] sm:text-[13.5px] text-slate-500">
-          Common questions about lab tests, home collection and reports in {city}
+          {city} me lab test, home collection aur report se jude aam sawaal
         </p>
 
         {/* Only one answer open at a time so the list never becomes a wall of
