@@ -220,19 +220,6 @@ export default function LabFooter({ city, otherCities = [] }) {
         </div>
       </div>
 
-      {/* MEDICAL + PRICING DISCLAIMER — this is a health (YMYL) service, so the
-          page must say plainly that it is informational, not medical advice,
-          and be honest about pricing. Kept on every lab page via the footer. */}
-      <div className="border-t border-emerald-100/70">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 text-[10.5px] sm:text-[11px] leading-relaxed text-slate-400">
-          Ye jaankari sirf general awareness ke liye hai aur kisi qualified doctor
-          ki salah, diagnosis ya ilaaj ka vikalp nahi hai — koi bhi test karane se
-          pehle apne physician se salah lein. Listed tests par home sample
-          collection free hai; prices samay-samay par badal sakte hain aur booking
-          ke waqt confirm kiye jaate hain.
-        </div>
-      </div>
-
       {/* COPYRIGHT — same emerald wash as the rest of the footer, one shade
           deeper, so the bar reads as the end of the page rather than a
           different site. The year is computed, not typed, so it never goes stale.
