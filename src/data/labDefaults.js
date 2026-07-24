@@ -17,7 +17,7 @@
  * a name with no match falls back to a neutral icon rather than crashing.
  */
 
-export const LAB_PHONE = "+91 98912 33525";
+export const LAB_PHONE = "+91 989-123-3525";
 export const LAB_WHATSAPP = "919891233525";
 
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
@@ -91,7 +91,7 @@ export const defaultTests = () => [
 
 // `heading` drives the H2 above the grid — it changes with the active chip.
 export const defaultFilters = () => [
-  { key: "All",      label: "All Tests", heading: "Lab Tests & Test Packages" },
+  { key: "All",      label: "All Tests", heading: "Trusted Lab Tests & Health Packages" },
   { key: "Packages", label: "Packages",  heading: "Health Checkup Packages" },
   { key: "Popular",  label: "Popular",   heading: "Popular Lab Tests" },
   { key: "Diabetes", label: "Diabetes",  heading: "Diabetes Tests" },

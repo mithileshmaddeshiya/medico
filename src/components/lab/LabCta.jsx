@@ -56,16 +56,18 @@ export default function LabCta({ cta, phone }) {
               </div>
             </div>
 
-            {/* ACTIONS — full-width stack on phones (bigger tap targets, no
-                cramped side-by-side), one row of equal-height buttons from md. */}
-            <div className="flex shrink-0 flex-col gap-2 md:flex-row md:gap-2.5">
+            {/* ACTIONS — two equal buttons side by side on phones (a grid keeps
+                them the same width whatever the label length), one auto-width row
+                from md. The call button no longer prints the number: it reads as
+                an action, and the tel: link still dials it. */}
+            <div className="grid grid-cols-2 gap-2 sm:gap-2.5 md:flex md:shrink-0 md:gap-2.5">
               <a
                 href="#book"
-                className="group inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-4 text-[13px] font-bold text-white shadow-[0_6px_16px_-8px_rgba(5,150,105,0.9)] hover:bg-emerald-700 hover:shadow-[0_10px_20px_-8px_rgba(5,150,105,0.9)] active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:px-5"
+                className="group inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-3 text-[12.5px] min-[380px]:text-[13px] font-bold text-white shadow-[0_6px_16px_-8px_rgba(5,150,105,0.9)] hover:bg-emerald-700 hover:shadow-[0_10px_20px_-8px_rgba(5,150,105,0.9)] active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:rounded-lg md:px-5"
               >
                 Book a Test
                 <ArrowRight
-                  className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                  className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
                   strokeWidth={2.4}
                 />
               </a>
@@ -73,10 +75,10 @@ export default function LabCta({ cta, phone }) {
               <a
                 href={`tel:${String(phone ?? "").replace(/\s/g, "")}`}
                 aria-label={`Call us at ${phone}`}
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-white px-4 text-[13px] font-bold text-emerald-700 ring-1 ring-emerald-200 hover:ring-emerald-400 hover:bg-emerald-50/60 active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:px-5"
+                className="group inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-white px-3 text-[12.5px] min-[380px]:text-[13px] font-bold text-emerald-700 ring-1 ring-emerald-200 hover:ring-emerald-400 hover:bg-emerald-50/60 active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:rounded-lg md:px-5"
               >
                 <PhoneCall className="h-3.5 w-3.5 shrink-0" strokeWidth={2.2} />
-                <span className="tabular-nums whitespace-nowrap">{phone}</span>
+                <span className="whitespace-nowrap">Call to Book</span>
               </a>
             </div>
           </div>

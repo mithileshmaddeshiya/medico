@@ -15,4 +15,4 @@ export const url = (path = "/") =>
   `${SITE}${path.startsWith("/") ? path : `/${path}`}`;
 
 /** Phone number used across the site, in the one format the markup expects. */
-export const SITE_PHONE = "+91 98912 33525";
+export const SITE_PHONE = "+91 989-123-3525";

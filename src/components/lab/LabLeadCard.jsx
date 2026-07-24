@@ -301,7 +301,7 @@ export default function LabLeadCard({
             {/* The consent notice belongs here, next to the button that sends
                 the name, mobile and home address — not only in the footer. The
                 DPDP Act 2023 wants the notice where the collection happens. */}
-            <p className="pt-0.5 text-[10.5px] leading-snug text-slate-400">
+            <p className="hidden sm:block pt-0.5 text-[10.5px] leading-snug text-slate-400">
               By booking you agree to our{" "}
               <Link href="/privacy" className="underline hover:text-emerald-700">
                 Privacy Policy

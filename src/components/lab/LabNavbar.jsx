@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-const PHONE = "+91 98912 33525"
+const PHONE = "+91 989-123-3525"
 
 export default function LabNavbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -35,7 +35,7 @@ export default function LabNavbar() {
                             alt="Medicobharat Logo"
                             width={260}
                             height={76}
-                            className="h-10 sm:h-12 md:h-14 w-auto object-contain scale-110 origin-left"
+                            className="h-14 sm:h-12 md:h-14 w-auto object-contain scale-110 origin-left"
                             priority
                         />
                     </Link>
@@ -67,11 +67,11 @@ export default function LabNavbar() {
                     <a
                         href={`tel:${PHONE.replace(/\s/g, "")}`}
                         aria-label={`Call us at ${PHONE}`}
-                        className="group flex items-center gap-2.5 rounded-full p-1 pr-4 sm:pr-5 ring-1 ring-emerald-200/70 hover:ring-emerald-300 shadow-sm hover:shadow-md active:scale-[0.98] bg-gradient-to-r from-emerald-50 to-teal-50 transition-all duration-200 shrink-0"
+                        className="group flex items-center gap-1.5 sm:gap-2.5 rounded-full p-1 pr-3 sm:pr-5 ring-1 ring-emerald-200/70 hover:ring-emerald-300 shadow-sm hover:shadow-md active:scale-[0.98] bg-gradient-to-r from-emerald-50 to-teal-50 transition-all duration-200 shrink-0"
                     >
                         {/* Icon badge with live pulse */}
-                        <span className="relative inline-flex items-center justify-center h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-gradient-to-br from-emerald-600 to-teal-600 text-white shadow-[0_4px_12px_rgba(5,150,105,0.35)] group-hover:scale-105 transition-transform duration-200">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4.5 w-4.5 sm:h-5 sm:w-5">
+                        <span className="relative inline-flex items-center justify-center h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gradient-to-br from-emerald-600 to-teal-600 text-white shadow-[0_4px_12px_rgba(5,150,105,0.35)] group-hover:scale-105 transition-transform duration-200">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4 sm:h-5 sm:w-5">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
@@ -82,10 +82,10 @@ export default function LabNavbar() {
 
                         {/* Label + number */}
                         <span className="flex flex-col justify-center">
-                            <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-600 leading-none mb-1">
+                            <span className="text-[8px] sm:text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-600 leading-none mb-1">
                                 Call to Book
                             </span>
-                            <span className="text-[14px] sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors tabular-nums leading-none whitespace-nowrap">
+                            <span className="text-[12px] sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors tabular-nums leading-none whitespace-nowrap">
                                 {PHONE}
                             </span>
                         </span>

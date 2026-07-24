@@ -297,7 +297,7 @@ export default function Page() {
 
           <div className="space-y-3 text-green-50">
 
-            <p>📞 +91 9891233525</p>
+            <p>📞 +91 989-123-3525</p>
 
             <p>✉️ support@medicobharat.com</p>
 

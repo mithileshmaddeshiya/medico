@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
               </h3>
 
               <p className="mt-1 text-xs text-gray-600">
-                WhatsApp: +91 9891233525
+                WhatsApp: +91 989-123-3525
               </p>
             </div>
           </a>

@@ -121,7 +121,7 @@ export default function Footer({ data, labCities = [] }) {
           <div className="space-y-3 text-sm text-gray-600">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-green-600 shrink-0" />
-              <span>+91 9891233525</span>
+              <span>+91 989-123-3525</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-green-600 shrink-0" />
