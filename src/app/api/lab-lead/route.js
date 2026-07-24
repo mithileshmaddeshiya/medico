@@ -35,8 +35,9 @@ function validate(body) {
   if (name.length < 2) return { error: "Please enter your name." };
   if (!city) return { error: "Please select your city." };
   if (!/^[6-9]\d{9}$/.test(phone))
-    return { error: "Please enter a valid 10-digit mobile number." };
-  if (address.length < 10) return { error: "Please enter your full address." };
+    return { error: "Please enter a valid 10-digit Indian mobile number." };
+  // Address is optional — kept if given, but not required to book. The team
+  // confirms the full address on the follow-up call.
 
   return { lead: { name, city, phone, address, test } };
 }

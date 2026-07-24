@@ -75,8 +75,8 @@ export async function generateMetadata({ params }) {
     // both, and Search Console reports it as "Submitted URL marked 'noindex'".
     // If the section ever needs taking down, pull it from sitemap.js too.
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       googleBot: {
         index: true,
         follow: true,

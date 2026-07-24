@@ -1,7 +1,6 @@
 "use client";
 
 import { useId, useState } from "react";
-import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
@@ -55,8 +54,9 @@ export default function LabLeadCard({
 
     if (name.trim().length < 2) return setError("Please enter your name.");
     if (!city) return setError("Please select your city.");
-    if (!/^[6-9]\d{9}$/.test(phone)) return setError("Please enter a valid 10-digit mobile number.");
-    if (address.trim().length < 10) return setError("Please enter your full address.");
+    if (!/^[6-9]\d{9}$/.test(phone)) return setError("Please enter a valid 10-digit Indian mobile number.");
+    // Address is optional — the team confirms the full address on the follow-up
+    // call, so a patient can book without typing it out.
 
     setError("");
     setSending(true);
@@ -263,7 +263,8 @@ export default function LabLeadCard({
 
             <div>
               <label htmlFor={`${uid}-address`} className={labelClass}>
-                Full Address <span className="text-red-500">*</span>
+                Full Address{" "}
+                <span className="font-normal text-slate-400">(optional)</span>
               </label>
               <textarea
                 id={`${uid}-address`}
@@ -298,20 +299,6 @@ export default function LabLeadCard({
               </span>
             </button>
 
-            {/* The consent notice belongs here, next to the button that sends
-                the name, mobile and home address — not only in the footer. The
-                DPDP Act 2023 wants the notice where the collection happens. */}
-            <p className="hidden sm:block pt-0.5 text-[10.5px] leading-snug text-slate-400">
-              By booking you agree to our{" "}
-              <Link href="/privacy" className="underline hover:text-emerald-700">
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link href="/terms" className="underline hover:text-emerald-700">
-                Terms
-              </Link>
-              .
-            </p>
           </form>
         )}
       </div>
