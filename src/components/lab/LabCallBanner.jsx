@@ -20,9 +20,19 @@ export default function LabCallBanner({ banner, phone }) {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-11 text-center">
 
-        <span className="mx-auto flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-linear-to-br from-emerald-600 to-teal-600 text-white ring-6 ring-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.9)]">
+        {/* The icon dials too. It looks like the most tappable thing on the
+            strip, so a tap that did nothing read as a broken page — and on a
+            phone it is the first thing a thumb reaches. `aria-hidden` keeps it
+            out of the screen-reader flow: the number and the button below say
+            the same thing, and three "call us" links in a row is noise. */}
+        <a
+          href={tel}
+          aria-hidden
+          tabIndex={-1}
+          className="mx-auto flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-linear-to-br from-emerald-600 to-teal-600 text-white ring-6 ring-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.95)] active:scale-95"
+        >
           <Phone className="h-5.5 w-5.5 sm:h-6 sm:w-6" strokeWidth={2.2} />
-        </span>
+        </a>
 
         <h2 className="mt-4 text-balance text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900">
           {banner?.heading}
