@@ -7,7 +7,7 @@
  * is a thin set of getters over that list — no network, no cache, no fallback.
  *
  * The functions stay async so their many callers (pages, layouts, sitemap)
- * keep working unchanged; there is just nothing to await any more.
+ * keep working unchanged; there is just nothing to await any more. 
  */
 import { LAB_CITIES, slugify } from "@/data/labCities";
 
