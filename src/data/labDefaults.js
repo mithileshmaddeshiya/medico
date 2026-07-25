@@ -38,7 +38,7 @@ export const LAB_OG_IMAGE = "/og/ogtag.jpg";
 export const defaultHero = (city) => ({
   // The h1 is screen-reader only — the hero itself is image + booking form.
   h1: `Lab Test in ${city} with Free Home Sample Collection`,
-  image: "/navheroimage/navheroo.webp",
+  image: "/navheroimage/labtestimg.webp",
   imageAlt: "Lab test at home",
   formTitle: "Book Your Sample Collection",
 });

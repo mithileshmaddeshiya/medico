@@ -24,22 +24,29 @@ const MAX = { name: 80, city: 80, address: 400, test: 120 };
 const clean = (value, max) => String(value ?? "").trim().slice(0, max);
 
 function validate(body) {
+  // Extracting values explicitly matching frontend keys
   const name = clean(body.name, MAX.name);
-  const city = clean(body.city, MAX.city);
   const phone = clean(body.phone, 10);
+  const city = clean(body.city, MAX.city);
   const address = clean(body.address, MAX.address);
   const test = clean(body.test, MAX.test);
 
-  // Mirrors the client-side checks. The browser's copy is for fast feedback;
-  // this one is the copy that actually decides.
+  // Validation logic
   if (name.length < 2) return { error: "Please enter your name." };
-  if (!city) return { error: "Please select your city." };
   if (!/^[6-9]\d{9}$/.test(phone))
     return { error: "Please enter a valid 10-digit Indian mobile number." };
-  // Address is optional — kept if given, but not required to book. The team
-  // confirms the full address on the follow-up call.
+  if (!city) return { error: "Please select your city." };
 
-  return { lead: { name, city, phone, address, test } };
+  // Explicit mapping so correct fields go to correct places
+  return { 
+    lead: { 
+      name: name, 
+      phone: phone, 
+      city: city, 
+      address: address, 
+      test: test 
+    } 
+  };
 }
 
 async function saveLead(lead) {
@@ -98,8 +105,7 @@ export async function POST(request) {
   }
 
   // Saved is saved. A failed notification must not tell the patient to book
-  // again — that would create duplicate leads for the same person. The booking
-  // is already in Firestore and can be worked from there.
+  // again — that would create duplicate leads for the same person.
   try {
     const result = await notifyOwnerOnWhatsapp(lead);
     if (!result.provider) {

@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { SITE } from "@/lib/site";
 
 export const metadata = {
@@ -152,6 +153,8 @@ export default function RootLayout({ children }) {
     >
       <head>
         <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />
+      </head>
+      <body className="min-h-full flex flex-col">
 
         {/*
           Google Translate crash guard (React issue #11538).
@@ -162,20 +165,16 @@ export default function RootLayout({ children }) {
           (LabFaq / LabContent "Read More") re-renders, React calls
           removeChild / insertBefore on a node the translator already moved and
           throws "NotFoundError: Failed to execute 'removeChild' on 'Node'",
-          which surfaces only as commitMutationEffectsOnFiber in the stack and
-          takes the whole page down.
+          which surfaces only as commitMutationEffectsOnFiber and crashes the page.
 
-          Patching these two DOM methods to no-op on a parent mismatch turns
-          that fatal throw into a harmless skip. Must run before hydration, so
-          it is an inline <head> script, not next/script.
+          Patching these two DOM methods to no-op on a parent mismatch turns the
+          fatal throw into a harmless skip. It must be in place before hydration,
+          so it runs via next/script "beforeInteractive" — a raw inline <script>
+          in the React tree is not executed on the client (Next.js warns about it).
         */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`,
-          }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col">
+        <Script id="translate-crash-guard" strategy="beforeInteractive">
+          {`(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`}
+        </Script>
 
         {/* MEDICAL BUSINESS SCHEMA */}
         <script

@@ -3,11 +3,24 @@
  * the site.
  *
  * WhatsApp is a closed network: no server can just "send a WhatsApp". It has to
- * go through a gateway, and a gateway needs credentials. Two are supported, and
- * whichever is configured wins. Configure neither and this is a silent no-op —
+ * go through a gateway, and a gateway needs credentials. Three are supported,
+ * and the first one configured wins. Configure none and this is a silent no-op —
  * the lead is still saved to Firestore either way.
  *
- * ── Option A: Meta WhatsApp Cloud API (official) ────────────────────────
+ * ── Option A: skwebtech (wa.skwebtech.in) — the one in use ──────────────
+ *   SKWEBTECH_APIKEY       the JWT from the skwebtech dashboard
+ *   SKWEBTECH_CAMPAIGN     optional; defaults to new_lab_test_booking
+ *   SKWEBTECH_DESTINATION  optional; the number the alerts land on
+ *
+ *   A reseller in front of WhatsApp's own API, so the same template rules
+ *   apply: the message body is fixed by an approved template and we only fill
+ *   its variables. See sendViaSkwebtech for why the order matters.
+ *
+ *   The API key is a JWT and JWTs expire. The one issued on 24 Jul 2026 dies on
+ *   31 Jul 2026 — a week. Nothing here can renew it; when notifications go
+ *   quiet, that is the first thing to check (the server log says so plainly).
+ *
+ * ── Option B: Meta WhatsApp Cloud API (official) ────────────────────────
  *   WHATSAPP_TOKEN      permanent access token
  *   WHATSAPP_PHONE_ID   phone number id from the Meta app dashboard
  *   WHATSAPP_TEMPLATE   optional; the name of an approved template
@@ -22,7 +35,7 @@
  *   approved template goes through. Set WHATSAPP_TEMPLATE once you have one
  *   approved, and notifications keep arriving at 3 AM too.
  *
- * ── Option B: CallMeBot (fastest to switch on) ──────────────────────────
+ * ── Option C: CallMeBot (fastest to switch on) ──────────────────────────
  *   CALLMEBOT_APIKEY    the key their bot replies with
  *
  *   Five minutes, no business account, no cost. Send "I allow callmebot to send
@@ -52,6 +65,90 @@ export function formatLead(lead) {
   ]
     .filter((line) => line !== null)
     .join("\n");
+}
+
+/**
+ * One template variable, made safe to send.
+ *
+ * WhatsApp rejects a template parameter that is empty, or that contains a
+ * newline, a tab, or four spaces in a row. Address is an optional field and is
+ * typed by hand across several lines — left raw it is the one value that would
+ * reliably bounce the whole notification.
+ */
+const param = (value) => String(value ?? "").replace(/\s+/g, " ").trim() || "—";
+
+async function sendViaSkwebtech(lead) {
+  // The body of a WhatsApp template is fixed and approved; we only fill its
+  // {{1}}…{{n}} slots. So this array is positional — its length and order have
+  // to match the `new_lab_test_booking` template exactly. Nothing here can read
+  // the approved template, so a wrong order fails silently: the gateway happily
+  // returns success and the message arrives with the mobile number printed
+  // under "City". Confirmed against a real message on 25 Jul 2026; if the
+  // template is ever edited, re-check this list against it.
+  //
+  //   {{1}} Name   {{2}} Mobile   {{3}} City   {{4}} Address   {{5}} Test
+  const templateParams = [
+    param(lead.name),
+    param(lead.phone),
+    param(lead.city),
+    param(lead.address),
+    param(lead.test || "Sample collection"),
+  ];
+
+  const response = await fetch("https://wa.skwebtech.in/api/campaigns/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      apiKey: process.env.SKWEBTECH_APIKEY,
+      campaignName: process.env.SKWEBTECH_CAMPAIGN || "new_lab_test_booking",
+      destination: process.env.SKWEBTECH_DESTINATION || OWNER_WHATSAPP,
+      userName: "Medico Bharat",
+      templateParams,
+      source: "api",
+      // Sent as documented. We pass literal values rather than $Attribute
+      // placeholders, so there is nothing for paramsFallbackValue to fall back
+      // to — it stays empty on purpose.
+      media: {},
+      buttons: [],
+      carouselCards: [],
+      location: {},
+      attributes: {},
+      paramsFallbackValue: {},
+    }),
+    cache: "no-store",
+  });
+
+  const body = await response.text();
+
+  if (!response.ok) {
+    // 401/403 here almost always means the JWT expired, not that the code is
+    // wrong. Say so, so nobody goes hunting through the payload.
+    const hint =
+      response.status === 401 || response.status === 403
+        ? " — the SKWEBTECH_APIKEY has most likely expired; issue a new one"
+        : "";
+    throw new Error(`skwebtech ${response.status}: ${body}${hint}`);
+  }
+
+  // A 200 is not a delivery. The gateway answers 200 with success:false for a
+  // wrong campaign name or a template/parameter-count mismatch, which is
+  // exactly the failure a first setup hits.
+  let parsed;
+  try {
+    parsed = JSON.parse(body);
+  } catch {
+    parsed = null;
+  }
+
+  if (parsed && parsed.success === false) {
+    throw new Error(
+      `skwebtech refused the message: ${parsed.message || body} — check that the ` +
+        `"${process.env.SKWEBTECH_CAMPAIGN || "new_lab_test_booking"}" template is ` +
+        `approved and takes exactly ${templateParams.length} variables`
+    );
+  }
+
+  return { provider: "skwebtech" };
 }
 
 async function sendViaMeta(text) {
@@ -123,9 +220,16 @@ async function sendViaCallMeBot(text) {
  * has already been saved by then.
  */
 export async function notifyOwnerOnWhatsapp(lead) {
+  // skwebtech first — it is the gateway this site is actually set up on. It
+  // takes the lead itself, not the formatted text, because a template message
+  // carries fields in slots, not one block of prose.
+  if (process.env.SKWEBTECH_APIKEY) {
+    return sendViaSkwebtech(lead);
+  }
+
   const text = formatLead(lead);
 
-  // Meta first: it is the official route, so if both are configured it is
+  // Meta next: it is the official route, so if both are configured it is
   // almost certainly the one that was meant.
   if (process.env.WHATSAPP_TOKEN && process.env.WHATSAPP_PHONE_ID) {
     return sendViaMeta(text);
