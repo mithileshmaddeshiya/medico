@@ -11,6 +11,8 @@ import {
   FaGlobe,
 } from "react-icons/fa6";
 
+import BookFormLink from "./BookFormLink";
+
 /**
  * Brand-icon registry for the footer's social row. Keyed by the `type` string
  * stored in footer.social (see defaultFooter in labDefaults.js) so the data
@@ -165,19 +167,16 @@ export default function LabFooter({ city, otherCities = [] }) {
           <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
             Popular Tests in {city.name}
           </h3>
-          {/* Each links to `#book` — the hero booking form at the top of the
-              page — so a visitor who came in on a test name lands straight on
-              the form, ready to book. The hash sits on the canonical page URL
-              (same slug), so it is a scroll target, not a separate URL. */}
+          {/* Each scrolls to the hero booking form at the top of this same
+              page, so a visitor who came in on a test name lands straight on
+              the form, ready to book. Goes through BookFormLink rather than a
+              `#book` href so the scroll does not leave a hash in the URL. */}
           <ul className="space-y-1 text-[12.5px] text-slate-600">
             {popularTests.map((t) => (
               <li key={t}>
-                <Link
-                  href={`/lab-test/${city.slug}#book`}
-                  className="hover:text-emerald-700 transition-colors"
-                >
+                <BookFormLink className="cursor-pointer hover:text-emerald-700 transition-colors">
                   {t} in {city.name}
-                </Link>
+                </BookFormLink>
               </li>
             ))}
           </ul>

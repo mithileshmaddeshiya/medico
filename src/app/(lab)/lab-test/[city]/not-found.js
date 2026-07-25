@@ -79,8 +79,11 @@ export default async function LabCityNotFound() {
             <ul className="mx-auto mt-3 flex max-w-2xl flex-wrap items-center justify-center gap-2">
               {popularTests.map((test) => (
                 <li key={test}>
+                  {/* No `#book` — the form sits in the hero, so the top of the
+                      page is already the form. The hash only ended up in the
+                      address bar. */}
                   <Link
-                    href={`/lab-test/${flagship.slug}#book`}
+                    href={`/lab-test/${flagship.slug}`}
                     className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-[12.5px] font-semibold text-slate-700 ring-1 ring-emerald-200 hover:text-emerald-700 hover:ring-emerald-400 transition-colors"
                   >
                     <FlaskConical className="h-3.5 w-3.5 text-emerald-600 shrink-0" strokeWidth={2.1} />
