@@ -1,19 +1,20 @@
 /**
- * Seed data for the lab-test section — NOT the live source any more.
+ * Local source of truth for the lab-test section.
  *
- * Cities live in the Firestore collection `labCities` (one document per city,
- * document id = slug) and are read by src/lib/labCities.js. This file is the
- * fallback that keeps the site up when Firestore is unreachable, and the
- * payload the /upload page pushes into Firestore the first time.
+ * Works exactly like src/data/cityData.js does for the medicine pages: the
+ * content lives here, in the repo, and is read straight off local data — there
+ * is no Firestore round trip any more. src/lib/labCities.js is now a thin
+ * reader over the `LAB_CITIES` list this file builds.
  *
  * NOTE HOW SHORT AN ENTRY IS. Only the facts that differ between cities live
  * here; every word on the page — hero, tests, prices, FAQs, SEO copy, CTA —
- * comes from src/data/labDefaults.js with the city's name filled in.
+ * comes from src/data/labDefaults.js with the city's name filled in. That is
+ * what keeps adding a city cheap.
  *
  * ── Adding a city ───────────────────────────────────────────────────────
- * Firebase console → `labCities` → new document, id = the slug. Fill in:
+ * Add an object to LAB_CITY_SEED below with:
  *
- *   slug        (string)   URL segment: /lab-test/<slug>. Defaults to the doc id.
+ *   slug        (string)   URL segment: /lab-test/<slug>. Defaults to name.
  *   name        (string)   Display name used in every heading and sentence.
  *   state       (string)   Footer address line and the local-business schema.
  *   areas       (array)    Localities covered; rendered as text (SEO), offered
@@ -46,7 +47,26 @@
  * `icon` values are strings, not components — see src/data/labDefaults.js for
  * the names each registry understands.
  */
-export const SEED_LAB_CITIES = [
+import {
+  CITY_ALIASES,
+  defaultCallBanner,
+  defaultContent,
+  defaultCta,
+  defaultDescription,
+  defaultFaqs,
+  defaultFilters,
+  defaultFooter,
+  defaultHero,
+  defaultKeywords,
+  defaultTests,
+  defaultTitle,
+  defaultTrustStrip,
+} from "./labDefaults";
+
+/* ── The cities we serve ──────────────────────────────────────────────────
+   Just the facts that differ per city. Everything else is filled in from
+   src/data/labDefaults.js when LAB_CITIES is built at the bottom of this file. */
+const LAB_CITY_SEED = [
   {
     slug: "varanasi",
     name: "Varanasi",
@@ -58,8 +78,101 @@ export const SEED_LAB_CITIES = [
   },
 ];
 
+/** State used when a city entry leaves `state` out. */
+const DEFAULT_STATE = LAB_CITY_SEED[0].state;
+
+/* ── Normalising ──────────────────────────────────────────────────────────
+   Every entry is squeezed into the same shape so a typo in the seed can never
+   reach a rendered page — a missing field falls back rather than crashing. */
+
+export const slugify = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const str = (value) => String(value ?? "").trim();
+
+/** A non-empty array of strings, or null when the field is unusable. */
+const strList = (value) => {
+  if (!Array.isArray(value)) return null;
+  const list = value.map(str).filter(Boolean);
+  return list.length ? list : null;
+};
+
+/** A non-empty array of objects, or null — used for faqs, tests, content. */
+const objList = (value) => {
+  if (!Array.isArray(value)) return null;
+  const list = value.filter((item) => item && typeof item === "object");
+  return list.length ? list : null;
+};
+
+/** An object, or null. Guards against a field written as a string by mistake. */
+const obj = (value) =>
+  value && typeof value === "object" && !Array.isArray(value) ? value : null;
+
 /**
- * Used only when Firestore returns nothing at all — every rendered page still
- * needs a city-shaped object rather than a crash.
+ * A city entry merged over the generated defaults.
+ *
+ * Every section is all-or-nothing on purpose: overriding `faqs` replaces the
+ * whole list rather than merging item by item. `hero`, `cta`, `callBanner` and
+ * `footer` are small enough that a per-key merge is still predictable, so those
+ * fill in field by field.
  */
-export const FALLBACK_CITY = SEED_LAB_CITIES[0];
+function buildContent(fields, base) {
+  const { name, state, areas, aliases } = base;
+
+  return {
+    // ── metadata ──
+    title: str(fields.title) || defaultTitle(name),
+    description: str(fields.description) || defaultDescription(name, state, areas),
+    keywords: strList(fields.keywords) ?? defaultKeywords(name, areas, aliases),
+
+    // ── sections ──
+    hero: { ...defaultHero(name), ...(obj(fields.hero) ?? {}) },
+    trustStrip: objList(fields.trustStrip) ?? defaultTrustStrip(),
+    tests: objList(fields.tests) ?? defaultTests(),
+    filters: objList(fields.filters) ?? defaultFilters(),
+    faqs: objList(fields.faqs) ?? defaultFaqs(name, areas, aliases),
+    cta: { ...defaultCta(name), ...(obj(fields.cta) ?? {}) },
+    content: objList(fields.content) ?? defaultContent(name),
+    callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
+    footer: { ...defaultFooter(name), ...(obj(fields.footer) ?? {}) },
+  };
+}
+
+function normalise(fields, id) {
+  const slug = slugify(fields.slug || id);
+  const name = str(fields.name);
+
+  // A city with no slug or no display name cannot be rendered or linked.
+  if (!slug || !name) return null;
+
+  const base = {
+    slug,
+    name,
+    state: str(fields.state) || DEFAULT_STATE,
+    areas: strList(fields.areas) ?? [],
+    // Alternate names this city is searched by (e.g. Varanasi → "Banaras").
+    aliases: strList(fields.aliases) ?? CITY_ALIASES[slug] ?? [],
+    postalCode: fields.postalCode ? str(fields.postalCode) : null,
+    // Only an explicit `published: false` hides a city.
+    published: fields.published !== false,
+    order: Number.isFinite(fields.order) ? fields.order : Number.MAX_SAFE_INTEGER,
+  };
+
+  return { ...base, ...buildContent(fields, base) };
+}
+
+const byOrderThenName = (a, b) =>
+  a.order - b.order || a.name.localeCompare(b.name, "en");
+
+/**
+ * Every published city, fully populated and sorted — the list the whole lab
+ * section reads through src/lib/labCities.js. Built once at module load.
+ */
+export const LAB_CITIES = LAB_CITY_SEED
+  .map((city) => normalise(city, city.slug))
+  .filter((city) => city && city.published)
+  .sort(byOrderThenName);

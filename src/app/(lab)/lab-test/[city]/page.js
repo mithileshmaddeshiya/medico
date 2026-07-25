@@ -11,24 +11,12 @@ import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/labDefaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 
-/**
- * Rebuild each page an hour after it was last served, so a copy edit made in
- * Firestore goes live on its own. `revalidateTag("lab-cities")` (see
- * src/lib/labCities.js) pushes a change out immediately when that is needed.
- *
- * Must be a literal — Next.js reads this value statically, so an imported
- * constant here fails the build. Keep it in step with LAB_CITIES_REVALIDATE.
- */
-export const revalidate = 3600;
+// Cities are local data now, so every page we serve is known at build time.
+// A slug that is not in the list is a city we do not serve → a real 404, which
+// the page already handles by calling notFound() on an unknown slug.
+export const dynamicParams = false;
 
-/**
- * A city added to Firestore *after* the last deploy is not in the list below,
- * so it has to render on first request instead of 404-ing. That is exactly
- * what dynamicParams does — it is the reason a new city needs no redeploy.
- */
-export const dynamicParams = true;
-
-// Prerendered at build time; anything added later is caught by dynamicParams.
+// Every city we serve is prerendered at build time from the local data.
 export async function generateStaticParams() {
   const cities = await getLabCities();
   return cities.map(({ slug }) => ({ city: slug }));
@@ -46,7 +34,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  // title / description / keywords come from the city document, falling back
+  // title / description / keywords come from the city entry, falling back
   // to the generated defaults — see src/data/labDefaults.js.
   const { name, state, slug, title, description, keywords } = cityData;
   const url = `${SITE}/lab-test/${slug}`;
@@ -125,8 +113,8 @@ export async function generateMetadata({ params }) {
 }
 
 /* ── Structured data ──────────────────────────────────────────────────────
-   Built per city from the same Firestore document, so a new city ships with
-   complete schema instead of Varanasi's details under someone else's name. */
+   Built per city from the same local data, so a new city ships with complete
+   schema instead of Varanasi's details under someone else's name. */
 
 const diagnosticLabSchema = (city) => ({
   "@context": "https://schema.org",

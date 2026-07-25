@@ -3,9 +3,9 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// `labCities` comes from the (main) layout, straight out of Firestore — so a
-// new lab city starts being linked from every page on the site the moment it is
-// added, with no code change.
+// `labCities` comes from the (main) layout, out of the local lab data — so a
+// new lab city starts being linked from every page on the site as soon as it is
+// added to src/data/labCities.js.
 export default function Footer({ data, labCities = [] }) {
   const city = data?.city || "Deoria";
 

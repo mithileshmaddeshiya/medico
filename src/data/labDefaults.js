@@ -1,20 +1,19 @@
 /**
  * Default page content for a lab-test city.
  *
- * THIS IS WHAT MAKES ADDING A CITY CHEAP. A Firestore document only has to
- * carry the facts that are genuinely different — slug, name, state, areas.
- * Everything else on the page (hero copy, tests, prices, FAQs, SEO prose, CTA)
- * is generated from these templates with the city's name filled in, so a
- * four-field document still renders a complete page.
+ * THIS IS WHAT MAKES ADDING A CITY CHEAP. A city entry only has to carry the
+ * facts that are genuinely different — slug, name, state, areas. Everything
+ * else on the page (hero copy, tests, prices, FAQs, SEO prose, CTA) is
+ * generated from these templates with the city's name filled in, so a
+ * four-field entry still renders a complete page.
  *
- * Anything you *do* put in the Firestore document wins over the value here —
- * see mergeLabCityContent() in src/lib/labCities.js. So a city can override
- * one FAQ, or its whole test list, without repeating the rest.
+ * Anything you *do* put in the city entry wins over the value here — see
+ * buildContent() in src/data/labCities.js. So a city can override one FAQ, or
+ * its whole test list, without repeating the rest.
  *
- * Icons are stored as STRINGS, not components: Firestore holds data, and a
- * React component cannot survive a round trip through it. Each client
- * component maps the string back to a lucide icon through its own registry —
- * a name with no match falls back to a neutral icon rather than crashing.
+ * Icons are stored as STRINGS, not components. Each client component maps the
+ * string back to a lucide icon through its own registry — a name with no match
+ * falls back to a neutral icon rather than crashing.
  */
 
 export const LAB_PHONE = "+91 989-123-3525";

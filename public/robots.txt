@@ -4,4 +4,16 @@ Allow: /
 # Internal data-upload screen — nothing here for a crawler.
 Disallow: /upload
 
+Disallow: /admin
+Disallow: /api
+
+User-Agent: GPTBot
+User-Agent: Google-Extended
+User-Agent: anthropic-ai
+User-Agent: ClaudeBot
+User-Agent: PerplexityBot
+User-Agent: CCBot
+User-Agent: Applebot-Extended
+
+Host: https://www.medicobharat.com
 Sitemap: https://www.medicobharat.com/sitemap.xml
