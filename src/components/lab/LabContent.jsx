@@ -32,12 +32,40 @@ export default function LabContent({ city, sections = [] }) {
   const sectionRef = useRef(null);
   const railRef = useRef(null);
   const buttonRef = useRef(null);
+  const contentRef = useRef(null);
   // Anchor clicked while the article was still clipped — scrolled to only
   // after the expand transition settles, see the effect below.
   const pendingId = useRef(null);
   // Collapsed height of the article on desktop, in px — see the effect below.
   // null on phones, where the fixed Tailwind clamp is used instead.
   const [clampHeight, setClampHeight] = useState(null);
+  // Full height of the prose, in px — the open state's max-height.
+  const [openHeight, setOpenHeight] = useState(null);
+
+  /**
+   * The open state used to be a flat `max-h-[400rem]` — 6400px. A city with a
+   * long guide (Varanasi runs past that) stayed clipped *after* pressing the
+   * button, so the reader hit a cut paragraph with "Read Less" underneath and
+   * no way to see the rest.
+   *
+   * Measuring the prose instead means the clamp is always exactly as tall as
+   * the text, whatever the city, viewport or font. The +8 is slack for
+   * sub-pixel rounding; max-height above the content adds no empty space.
+   *
+   * Observed on the inner wrapper, not the <article> — the article is the
+   * element being clipped, so its own box would just report the clamp back.
+   */
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const measure = () => setOpenHeight(Math.ceil(content.getBoundingClientRect().height) + 8);
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(content);
+    return () => observer.disconnect();
+  }, [sections]);
 
   // The collapsed column used to stop well above the outline card, leaving the
   // rail hanging into empty space. On desktop the clip height is measured from
@@ -262,57 +290,70 @@ export default function LabContent({ city, sections = [] }) {
               <article
                 ref={articleRef}
                 id="lab-content"
-                // Desktop clamp is measured off the rail so both columns end on
-                // the same line; the classes are the phone fallback, used
-                // whenever clampHeight is null.
-                style={!expanded && clampHeight ? { maxHeight: `${clampHeight}px` } : undefined}
+                // Open: the measured height of the prose, so nothing is ever
+                // cut off. Collapsed on desktop: measured off the rail so both
+                // columns end on the same line. The classes are the pre-measure
+                // and phone fallback.
+                style={
+                  expanded
+                    ? openHeight
+                      ? { maxHeight: `${openHeight}px` }
+                      : { maxHeight: "none" }
+                    : clampHeight
+                      ? { maxHeight: `${clampHeight}px` }
+                      : undefined
+                }
                 className={`overflow-hidden transition-[max-height] duration-500 ease-in-out motion-reduce:transition-none ${
                   // A 176px peek showed one heading and half a sentence, which
                   // read as broken rather than as a preview. Show a full first
                   // paragraph instead, so the teaser is worth reading on its own.
-                  expanded ? "max-h-[400rem]" : "max-h-72 sm:max-h-80"
+                  expanded ? "max-h-none" : "max-h-72 sm:max-h-80"
                 }`}
               >
-                {/* Lead — no heading here, it is the <h2> above. Its id stays
-                    so old links to #lab-test-in-varanasi still land. */}
-                <div id={lead.id} className="scroll-mt-24">
-                  {(lead.p ?? []).map((para, j) => (
-                    <p
-                      key={j}
-                      className="mt-3.5 pl-4 text-[13.5px] first:mt-0 sm:text-[15px] leading-[1.85] text-slate-600"
-                    >
-                      {para}
-                    </p>
-                  ))}
-                </div>
-
-                {rest.map((s) => (
-                  <div
-                    key={s.id}
-                    id={s.id}
-                    data-section
-                    className="mt-8 scroll-mt-24 border-t border-slate-200/70 pt-8 sm:mt-10 sm:pt-10"
-                  >
-                    <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
-                      <span
-                        aria-hidden
-                        className="absolute left-0 top-1 h-[calc(100%-0.5rem)] w-1 rounded-full bg-linear-to-b from-emerald-400 to-teal-500"
-                      />
-                      {s.h}
-                    </h3>
-
-                    {/* `?? []` — a section typed into Firestore without any
-                        paragraphs should render its heading, not a 500. */}
-                    {(s.p ?? []).map((para, j) => (
+                {/* One wrapper around all the prose — the box the open height is
+                    measured from. */}
+                <div ref={contentRef}>
+                  {/* Lead — no heading here, it is the <h2> above. Its id stays
+                      so old links to #lab-test-in-varanasi still land. */}
+                  <div id={lead.id} className="scroll-mt-24">
+                    {(lead.p ?? []).map((para, j) => (
                       <p
                         key={j}
-                        className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600"
+                        className="mt-3.5 pl-4 text-[13.5px] first:mt-0 sm:text-[15px] leading-[1.85] text-slate-600"
                       >
                         {para}
                       </p>
                     ))}
                   </div>
-                ))}
+
+                  {rest.map((s) => (
+                    <div
+                      key={s.id}
+                      id={s.id}
+                      data-section
+                      className="mt-8 scroll-mt-24 border-t border-slate-200/70 pt-8 sm:mt-10 sm:pt-10"
+                    >
+                      <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
+                        <span
+                          aria-hidden
+                          className="absolute left-0 top-1 h-[calc(100%-0.5rem)] w-1 rounded-full bg-linear-to-b from-emerald-400 to-teal-500"
+                        />
+                        {s.h}
+                      </h3>
+
+                      {/* `?? []` — a section typed into Firestore without any
+                          paragraphs should render its heading, not a 500. */}
+                      {(s.p ?? []).map((para, j) => (
+                        <p
+                          key={j}
+                          className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600"
+                        >
+                          {para}
+                        </p>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </article>
 
               {/* Fade over the cut edge — signals "there is more" without a
