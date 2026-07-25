@@ -1,4 +1,6 @@
 import "./globals.css";
+import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 import { SITE } from "@/lib/site";
 
 export const metadata = {
@@ -152,6 +154,8 @@ export default function RootLayout({ children }) {
     >
       <head>
         <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />
+      </head>
+      <body className="min-h-full flex flex-col">
 
         {/*
           Google Translate crash guard (React issue #11538).
@@ -162,20 +166,16 @@ export default function RootLayout({ children }) {
           (LabFaq / LabContent "Read More") re-renders, React calls
           removeChild / insertBefore on a node the translator already moved and
           throws "NotFoundError: Failed to execute 'removeChild' on 'Node'",
-          which surfaces only as commitMutationEffectsOnFiber in the stack and
-          takes the whole page down.
+          which surfaces only as commitMutationEffectsOnFiber and crashes the page.
 
-          Patching these two DOM methods to no-op on a parent mismatch turns
-          that fatal throw into a harmless skip. Must run before hydration, so
-          it is an inline <head> script, not next/script.
+          Patching these two DOM methods to no-op on a parent mismatch turns the
+          fatal throw into a harmless skip. It must be in place before hydration,
+          so it runs via next/script "beforeInteractive" — a raw inline <script>
+          in the React tree is not executed on the client (Next.js warns about it).
         */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`,
-          }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col">
+        <Script id="translate-crash-guard" strategy="beforeInteractive">
+          {`(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`}
+        </Script>
 
         {/* MEDICAL BUSINESS SCHEMA */}
         <script
@@ -216,6 +216,48 @@ export default function RootLayout({ children }) {
         />
 
         {children}
+
+        {/*
+          One toast host for the whole app — react-hot-toast renders into its
+          own fixed container, so a form anywhere in the tree can call
+          toast() without mounting anything of its own.
+
+          The package ships its own "use client", so it drops straight into
+          this Server Component; every prop below is a plain serializable
+          object, which is what the client boundary requires.
+
+          top-center, not the default corner: the lab booking form opens inside
+          a modal, and a toast in the top-right of a wide desktop screen sits
+          far away from the field the patient is looking at.
+        */}
+        <Toaster
+          position="top-center"
+          gutter={8}
+          toastOptions={{
+            duration: 3500,
+            // Same surface as the navbar and the lab cards: white, a hairline
+            // emerald ring and a soft lifted shadow — written as a two-layer
+            // box-shadow because react-hot-toast takes inline styles, not
+            // Tailwind's ring utilities. Was a dark slate pill, which looked
+            // borrowed from another site sitting on the emerald-50 hero.
+            style: {
+              background: "#ffffff",
+              color: "#0f172a", // slate-900, the body text colour
+              fontSize: "13px",
+              fontWeight: 600,
+              lineHeight: "1.45",
+              borderRadius: "12px",
+              padding: "10px 14px",
+              maxWidth: "22rem",
+              boxShadow:
+                "0 0 0 1px rgba(16,185,129,0.22), 0 12px 30px -12px rgba(15,23,42,0.28)",
+            },
+            // Tick in the brand green; the cross stays red — a validation
+            // problem has to read as a problem, theme or no theme.
+            success: { iconTheme: { primary: "#059669", secondary: "#fff" } },
+            error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
+          }}
+        />
       </body>
     </html>
   );

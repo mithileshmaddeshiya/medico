@@ -1,5 +1,7 @@
 import { ArrowRight, Check, PhoneCall, ShieldCheck } from "lucide-react";
 
+import BookFormLink from "./BookFormLink";
+
 // `cta` and `phone` come from the city document (or its generated default) —
 // see defaultCta in src/data/labDefaults.js. Nothing here may assert an
 // accreditation MedicoBharat does not hold; keep it that way when editing.
@@ -61,16 +63,13 @@ export default function LabCta({ cta, phone }) {
                 from md. The call button no longer prints the number: it reads as
                 an action, and the tel: link still dials it. */}
             <div className="grid grid-cols-2 gap-2 sm:gap-2.5 md:flex md:shrink-0 md:gap-2.5">
-              <a
-                href="#book"
-                className="group inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-3 text-[12.5px] min-[380px]:text-[13px] font-bold text-white shadow-[0_6px_16px_-8px_rgba(5,150,105,0.9)] hover:bg-emerald-700 hover:shadow-[0_10px_20px_-8px_rgba(5,150,105,0.9)] active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:rounded-lg md:px-5"
-              >
+              <BookFormLink className="group inline-flex h-11 w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-3 text-[12.5px] min-[380px]:text-[13px] font-bold text-white shadow-[0_6px_16px_-8px_rgba(5,150,105,0.9)] hover:bg-emerald-700 hover:shadow-[0_10px_20px_-8px_rgba(5,150,105,0.9)] active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:rounded-lg md:px-5">
                 Book a Test
-                <ArrowRight
+                <ArrowRight 
                   className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
                   strokeWidth={2.4}
                 />
-              </a>
+              </BookFormLink>
 
               <a
                 href={`tel:${String(phone ?? "").replace(/\s/g, "")}`}
