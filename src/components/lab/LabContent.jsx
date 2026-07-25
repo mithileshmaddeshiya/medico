@@ -30,9 +30,53 @@ export default function LabContent({ city, sections = [] }) {
   const [activeId, setActiveId] = useState(sections[1]?.id ?? null);
   const articleRef = useRef(null);
   const sectionRef = useRef(null);
+  const railRef = useRef(null);
+  const buttonRef = useRef(null);
   // Anchor clicked while the article was still clipped — scrolled to only
   // after the expand transition settles, see the effect below.
   const pendingId = useRef(null);
+  // Collapsed height of the article on desktop, in px — see the effect below.
+  // null on phones, where the fixed Tailwind clamp is used instead.
+  const [clampHeight, setClampHeight] = useState(null);
+
+  // The collapsed column used to stop well above the outline card, leaving the
+  // rail hanging into empty space. On desktop the clip height is measured from
+  // the rail instead of hardcoded, so the teaser plus its button end level with
+  // the card no matter how many sections a city has.
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail || !sections.length) return;
+
+    const mq = window.matchMedia("(min-width: 1024px)");
+
+    const measure = () => {
+      // Below lg the rail is hidden and the button goes full width — nothing to
+      // match, so hand the clamp back to the max-h-72 / sm:max-h-80 classes.
+      if (!mq.matches || !rail.offsetHeight) {
+        setClampHeight(null);
+        return;
+      }
+      // The button sits outside the article but inside the column, so its
+      // height and its mt-5 (20px) come off the rail's height.
+      const button = buttonRef.current;
+      const below = button ? button.offsetHeight + 20 : 62;
+      // Floor: a rail short enough to clip the teaser to a stub would read as
+      // broken. Better to overshoot the card slightly than show two lines.
+      setClampHeight(Math.max(240, Math.round(rail.offsetHeight - below)));
+    };
+
+    measure();
+
+    // Rail height moves with the viewport (link text wraps at narrower widths),
+    // so re-measure rather than reading it once on mount.
+    const observer = new ResizeObserver(measure);
+    observer.observe(rail);
+    mq.addEventListener("change", measure);
+    return () => {
+      observer.disconnect();
+      mq.removeEventListener("change", measure);
+    };
+  }, [sections]);
 
   // Scroll-spy: mark the section nearest the top of the viewport as active so
   // the rail always shows where you are. Cheap — one observer for the article.
@@ -148,7 +192,10 @@ export default function LabContent({ city, sections = [] }) {
             aria-label="On this page"
             className={`lg:sticky lg:top-24 lg:self-start ${rest.length ? "hidden lg:block" : "hidden"}`}
           >
-            <div className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_32px_-24px_rgba(15,23,42,0.25)] backdrop-blur-sm">
+            <div
+              ref={railRef}
+              className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_32px_-24px_rgba(15,23,42,0.25)] backdrop-blur-sm"
+            >
               <p className="flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.16em] text-emerald-700">
                 <BookOpen className="h-3.5 w-3.5" strokeWidth={2.4} />
                 On this page
@@ -215,6 +262,10 @@ export default function LabContent({ city, sections = [] }) {
               <article
                 ref={articleRef}
                 id="lab-content"
+                // Desktop clamp is measured off the rail so both columns end on
+                // the same line; the classes are the phone fallback, used
+                // whenever clampHeight is null.
+                style={!expanded && clampHeight ? { maxHeight: `${clampHeight}px` } : undefined}
                 className={`overflow-hidden transition-[max-height] duration-500 ease-in-out motion-reduce:transition-none ${
                   // A 176px peek showed one heading and half a sentence, which
                   // read as broken rather than as a preview. Show a full first
@@ -275,13 +326,20 @@ export default function LabContent({ city, sections = [] }) {
             </div>
 
             {/* Full width on a phone so it is a clear thumb target, inline on
-                larger screens where a stretched button looks broken. */}
+                larger screens where a stretched button looks broken.
+
+                `sm:ml-4` matches the `pl-4` every paragraph and heading carries,
+                so the button's left edge lines up with the first letter of the
+                prose instead of hanging 16px outside it. Left off below sm,
+                where the button is w-full and the margin would push it past the
+                right edge of the column. */}
             <button
+              ref={buttonRef}
               type="button"
               onClick={toggle}
               aria-expanded={expanded}
               aria-controls="lab-content"
-              className="group mt-5 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.7)] ring-1 ring-emerald-600/20 transition-all duration-200 hover:bg-emerald-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 active:scale-[0.98] sm:inline-flex sm:w-auto sm:py-2.5 sm:text-[12.5px]"
+              className="group mt-5 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.7)] ring-1 ring-emerald-600/20 transition-all duration-200 hover:bg-emerald-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 active:scale-[0.98] sm:ml-4 sm:inline-flex sm:w-auto sm:py-2.5 sm:text-[12.5px]"
             >
               {expanded ? "Read Less" : `Poora Guide Padhein — ${readMinutes} min`}
               <ChevronDown

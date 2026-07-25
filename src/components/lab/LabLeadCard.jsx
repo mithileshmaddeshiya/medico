@@ -1,6 +1,7 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useRef, useState } from "react";
+import toast from "react-hot-toast";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,6 +21,11 @@ const FALLBACK_CITY_OPTIONS = ["Other"];
 
 const inputClass =
   "w-full rounded-md border border-slate-300 px-3 py-2 text-[13px] text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/30 outline-none";
+
+// Swapped in for the field the toast is complaining about, so the message and
+// the box it refers to are obviously the same thing.
+const invalidClass =
+  "w-full rounded-md border border-red-400 bg-red-50/40 px-3 py-2 text-[13px] text-slate-900 placeholder:text-red-300 focus:border-red-500 focus:ring-2 focus:ring-red-500/30 outline-none";
 
 const labelClass = "block text-[12.5px] font-semibold text-slate-800 mb-1";
 
@@ -41,24 +47,49 @@ export default function LabLeadCard({
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [error, setError] = useState("");
+  // Which required field is blank/wrong — turns that one box red. The message
+  // itself is a toast, so the card's height never jumps mid-form.
+  const [invalid, setInvalid] = useState("");
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
   // Hero card and the booking modal can both be mounted — keep field ids unique.
   const uid = useId();
 
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
+  const cityRef = useRef(null);
+
+  /**
+   * Tell the patient exactly what is missing and put them in that field.
+   *
+   * A toast rather than a line of red text under the button: on a phone the
+   * button is often the only thing on screen, and the old inline error appeared
+   * above it — off-screen, so a tap on "Book Now" looked like it did nothing.
+   *
+   * `id` keeps a fast double-tap from stacking three copies of the same toast.
+   */
+  const complain = (field, ref, message) => {
+    setInvalid(field);
+    toast.error(message, { id: "lab-lead-form" });
+    ref.current?.focus();
+    return false;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (sending) return;
 
-    if (name.trim().length < 2) return setError("Please enter your name.");
-    if (!city) return setError("Please select your city.");
-    if (!/^[6-9]\d{9}$/.test(phone)) return setError("Please enter a valid 10-digit Indian mobile number.");
+    if (name.trim().length < 2)
+      return complain("name", nameRef, "Apna naam likhiye — hum isi naam se call karenge.");
+    if (!/^[6-9]\d{9}$/.test(phone))
+      return complain("phone", phoneRef, "10 digit ka mobile number likhiye, jaise 98912 34567.");
+    if (!city)
+      return complain("city", cityRef, "Apna city select kijiye taaki sahi team bheji ja sake.");
     // Address is optional — the team confirms the full address on the follow-up
     // call, so a patient can book without typing it out.
 
-    setError("");
+    setInvalid("");
     setSending(true);
 
     // Posts to our own server, which saves the lead and notifies the shop.
@@ -74,7 +105,9 @@ export default function LabLeadCard({
       const result = await response.json().catch(() => ({}));
 
       if (!response.ok || !result.ok) {
-        setError(result.error || "Something went wrong. Please call us instead.");
+        toast.error(result.error || `Booking nahi ho payi. ${LAB_PHONE} par call kar lijiye.`, {
+          id: "lab-lead-form",
+        });
         return;
       }
 
@@ -82,7 +115,7 @@ export default function LabLeadCard({
     } catch {
       // Offline, or the request never reached us — the phone number is the
       // fallback that always works.
-      setError("Could not reach the server. Please check your internet or call us.");
+      toast.error("Internet check kijiye, ya seedhe call kar lijiye.", { id: "lab-lead-form" });
     } finally {
       setSending(false);
     }
@@ -91,7 +124,7 @@ export default function LabLeadCard({
   // "Book another test" — back to an empty form, keeping the card in place.
   const reset = () => {
     setSent(false);
-    setError("");
+    setInvalid("");
     setName("");
     setCity("");
     setPhone("");
@@ -124,39 +157,49 @@ export default function LabLeadCard({
           // The moment a patient is most likely to worry that nothing happened.
           // So: confirm it landed, say exactly what comes next and when, and
           // give them something to do — go back, or call.
+          //
+          // Copy is plain Hinglish, the same language as the guide and FAQ on
+          // these pages. It used to read "Booking confirmed / Phlebotomist
+          // reaches your door" — accurate, but "phlebotomist" is a word most
+          // patients here have never met, and it sat at the one moment they
+          // most need to understand what happens next.
+          //
+          // Kept short on purpose: this replaces the form in place, so anything
+          // longer than the form it replaced makes the card jump in height —
+          // in the modal that means the confirmation opens already scrolled.
           <div className="py-3">
             <div className="text-center">
-              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-4 ring-emerald-100/70">
-                <Check className="h-6 w-6" strokeWidth={3} />
+              <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-4 ring-emerald-100/70">
+                <Check className="h-5 w-5" strokeWidth={3} />
               </span>
 
-              <h3 className="mt-3 text-[15px] font-extrabold tracking-tight text-slate-900">
-                Booking confirmed
+              <h3 className="mt-2.5 text-[15px] font-extrabold tracking-tight text-slate-900">
+                Form submit ho gaya
               </h3>
-              <p className="mt-1 text-[12.5px] leading-relaxed text-slate-600">
-                Thank you{name.trim() ? `, ${name.trim().split(" ")[0]}` : ""}. Your
-                request has reached us — you do not need to do anything else.
+              <p className="mt-1 text-[12.5px] leading-snug text-slate-600">
+                Thank you{name.trim() ? `, ${name.trim().split(" ")[0]}` : ""}. Ab aapko
+                kuch nahi karna{test ? ` — ${test} book ho gaya hai` : ""}.
               </p>
             </div>
 
             {/* What happens next, with the times we actually promise. Removes
                 the "should I call them?" doubt that follows a silent form. */}
-            <ol className="mt-4 space-y-2.5">
+            <ol className="mt-3.5 space-y-2.5">
               {[
                 {
                   icon: PhoneCall,
-                  h: `We call you on ${phone}`,
-                  s: "Within 30 minutes, to confirm the slot and address",
+                  h: `Hum call karenge — ${phone}`,
+                  s: "30 minute me, time confirm karne ke liye",
                 },
                 {
                   icon: Clock,
-                  h: "Phlebotomist reaches your door",
-                  s: "Usually within 60 minutes of the slot being confirmed",
+                  h: "Staff ghar aayega sample lene",
+                  s: "Time confirm hone ke 60 minute me",
                 },
                 {
                   icon: Check,
-                  h: "Report on WhatsApp & email",
-                  s: "Most reports in 24 hours, as a PDF",
+                  h: "Report WhatsApp par",
+                  s: "24 ghante me, PDF me",
                 },
               ].map(({ icon: Icon, h, s }, i) => (
                 <li key={h} className="flex gap-2.5">
@@ -184,7 +227,7 @@ export default function LabLeadCard({
                 className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-600 to-teal-600 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98] transition-all"
               >
                 <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.4} />
-                Call us now — {LAB_PHONE}
+                Abhi call karein — {LAB_PHONE}
               </a>
 
               {/* The back button. In the modal, closing is the more natural
@@ -196,7 +239,7 @@ export default function LabLeadCard({
                 className="inline-flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-md bg-white text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-50/60 hover:ring-emerald-400 active:scale-[0.98] transition-all"
               >
                 <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.4} />
-                {onClose ? "Back to tests" : "Book another test"}
+                {onClose ? "Wapas tests par jayein" : "Ek aur test book karein"}
               </button>
             </div>
           </div>
@@ -219,13 +262,20 @@ export default function LabLeadCard({
               <label htmlFor={`${uid}-name`} className={labelClass}>
                 Name <span className="text-red-500">*</span>
               </label>
+              {/* The red ring clears the moment they start typing — leaving it
+                  on while the field is being fixed reads as "still wrong". */}
               <input
+                ref={nameRef}
                 id={`${uid}-name`}
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  if (invalid === "name") setInvalid("");
+                }}
+                aria-invalid={invalid === "name" || undefined}
                 placeholder="Enter Name"
-                className={inputClass}
+                className={invalid === "name" ? invalidClass : inputClass}
               />
             </div>
 
@@ -234,13 +284,18 @@ export default function LabLeadCard({
                 Mobile No. <span className="text-red-500">*</span>
               </label>
               <input
+                ref={phoneRef}
                 id={`${uid}-phone`}
                 type="tel"
                 inputMode="numeric"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
+                onChange={(e) => {
+                  setPhone(e.target.value.replace(/\D/g, "").slice(0, 10));
+                  if (invalid === "phone") setInvalid("");
+                }}
+                aria-invalid={invalid === "phone" || undefined}
                 placeholder="Enter Mobile No."
-                className={inputClass}
+                className={invalid === "phone" ? invalidClass : inputClass}
               />
             </div>
 
@@ -249,10 +304,15 @@ export default function LabLeadCard({
                 Select City <span className="text-red-500">*</span>
               </label>
               <select
+                ref={cityRef}
                 id={`${uid}-city`}
                 value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className={`${inputClass} bg-white`}
+                onChange={(e) => {
+                  setCity(e.target.value);
+                  if (invalid === "city") setInvalid("");
+                }}
+                aria-invalid={invalid === "city" || undefined}
+                className={`${invalid === "city" ? invalidClass : inputClass} bg-white`}
               >
                 <option value="">Select City</option>
                 {cities.map((c) => (
@@ -276,27 +336,32 @@ export default function LabLeadCard({
               />
             </div>
 
-            {error && <p className="text-[12px] font-medium text-red-600">{error}</p>}
-
             {/* Disabled while in flight — a double tap on a slow connection
                 would otherwise create two identical leads. */}
+            {/* While sending, the arrow box goes and the spinner sits next to
+                the label in the middle of the button — spinning off in the
+                corner it read as a stray animation rather than as "your form is
+                going". `pr-10` only applies when the box is there to clear. */}
             <button
               type="submit"
               disabled={sending}
-              className="cursor-pointer relative w-full rounded-md bg-linear-to-r from-emerald-600 to-teal-600 py-2.5 pr-10 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-70"
+              className={`cursor-pointer relative flex w-full items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-600 to-teal-600 py-2.5 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-70 ${
+                sending ? "" : "pr-10"
+              }`}
             >
-              {sending
-                ? "Sending…"
-                : test
-                  ? "Book Now"
-                  : "Book Your Sample Collection"}
-              <span className=" absolute inset-y-0 right-0 flex w-9 items-center justify-center rounded-r-md bg-emerald-800/90">
-                {sending ? (
+              {sending ? (
+                <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <ArrowRight className="h-4 w-4" />
-                )}
-              </span>
+                  Sending…
+                </>
+              ) : (
+                <>
+                  {test ? "Book Now" : "Book Your Sample Collection"}
+                  <span className="absolute inset-y-0 right-0 flex w-9 items-center justify-center rounded-r-md bg-emerald-800/90">
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </>
+              )}
             </button>
 
           </form>

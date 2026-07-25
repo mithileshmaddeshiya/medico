@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 import { SITE } from "@/lib/site";
 
 export const metadata = {
@@ -215,6 +216,48 @@ export default function RootLayout({ children }) {
         />
 
         {children}
+
+        {/*
+          One toast host for the whole app — react-hot-toast renders into its
+          own fixed container, so a form anywhere in the tree can call
+          toast() without mounting anything of its own.
+
+          The package ships its own "use client", so it drops straight into
+          this Server Component; every prop below is a plain serializable
+          object, which is what the client boundary requires.
+
+          top-center, not the default corner: the lab booking form opens inside
+          a modal, and a toast in the top-right of a wide desktop screen sits
+          far away from the field the patient is looking at.
+        */}
+        <Toaster
+          position="top-center"
+          gutter={8}
+          toastOptions={{
+            duration: 3500,
+            // Same surface as the navbar and the lab cards: white, a hairline
+            // emerald ring and a soft lifted shadow — written as a two-layer
+            // box-shadow because react-hot-toast takes inline styles, not
+            // Tailwind's ring utilities. Was a dark slate pill, which looked
+            // borrowed from another site sitting on the emerald-50 hero.
+            style: {
+              background: "#ffffff",
+              color: "#0f172a", // slate-900, the body text colour
+              fontSize: "13px",
+              fontWeight: 600,
+              lineHeight: "1.45",
+              borderRadius: "12px",
+              padding: "10px 14px",
+              maxWidth: "22rem",
+              boxShadow:
+                "0 0 0 1px rgba(16,185,129,0.22), 0 12px 30px -12px rgba(15,23,42,0.28)",
+            },
+            // Tick in the brand green; the cross stays red — a validation
+            // problem has to read as a problem, theme or no theme.
+            success: { iconTheme: { primary: "#059669", secondary: "#fff" } },
+            error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
+          }}
+        />
       </body>
     </html>
   );

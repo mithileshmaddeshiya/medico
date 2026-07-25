@@ -230,6 +230,8 @@ export default async function LabCityPage({ params }) {
           />
         </div>
       </div>
+      
+      <LabCallBanner banner={cityData.callBanner} phone={phone} />
 
       <LabFaq city={cityName} faqs={cityData.faqs?.slice(0, 6)} />
 
@@ -238,7 +240,6 @@ export default async function LabCityPage({ params }) {
       <LabContent city={cityName} sections={cityData.content} />
 
       {/* Closing call strip — last section before the footer */}
-      <LabCallBanner banner={cityData.callBanner} phone={phone} />
     </>
   );
 }

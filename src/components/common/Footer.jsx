@@ -21,8 +21,8 @@ export default function Footer({ data, labCities = [] }) {
             <Image
               src="/navbar/navbg.webp"
               alt="MedicoBharat Logo"
-              width={140}
-              height={40}
+              width={175}
+              height={50}
               className="object-contain cursor-pointer mb-4"
             />
           </Link>
