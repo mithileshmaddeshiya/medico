@@ -1,25 +1,27 @@
+import { blogs } from "@/data/blogData";
+import { SITE } from "@/lib/site";
+
 export const revalidate = 86400; // regenerate once per day instead of every request
 
+/**
+ * Every /blogs/<category>/<city> post, read off blogData rather than hand-typed.
+ *
+ * A post whose metadata says robots.index === false is left out on purpose:
+ * submitting a noindex URL is what Search Console flags as "Submitted URL marked
+ * 'noindex'", and it spends crawl budget on a page that can never rank.
+ */
 export async function GET() {
-  const baseUrl = "https://www.medicobharat.com";
-
-  const pages = [
-    // Blogs
-    { route: "/blogs/online-medicine-delivery/deoria", priority: "0.9", changefreq: "weekly" },
-    { route: "/blogs/medicine-home-delivery/deoria", priority: "0.9", changefreq: "weekly" },
-    { route: "/blogs/buy-medicines-online/deoria", priority: "0.9", changefreq: "weekly" },
-  ];
-
   const lastmod = new Date().toISOString().split("T")[0];
 
-  const urls = pages
+  const urls = blogs
+    .filter((blog) => blog?.category && blog?.city && blog?.robots?.index !== false)
     .map(
-      (item) => `
+      (blog) => `
     <url>
-      <loc>${baseUrl}${item.route}</loc>
+      <loc>${SITE}/blogs/${blog.category}/${blog.city}</loc>
       <lastmod>${lastmod}</lastmod>
-      <changefreq>${item.changefreq}</changefreq>
-      <priority>${item.priority}</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
     </url>`
     )
     .join("");

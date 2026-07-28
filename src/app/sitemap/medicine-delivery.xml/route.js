@@ -1,27 +1,26 @@
+import { cityData } from "@/data/cityData";
+import { SITE } from "@/lib/site";
+
 export const revalidate = 86400; // regenerate once per day instead of every request
 
+/**
+ * Every /medicine-delivery/<city> we serve, read off cityData rather than
+ * hand-typed — the lab sitemap next door shipped a 404 for a year because its
+ * list was typed by hand. Adding a city to src/data/cityData.js is all it takes
+ * for it to appear here.
+ */
 export async function GET() {
-  const baseUrl = "https://www.medicobharat.com";
-
-  const pages = [
-    // Medicine delivery
-    { route: "/medicine-delivery/deoria", priority: "0.9", changefreq: "weekly" },
-    { route: "/medicine-delivery/salempur", priority: "0.9", changefreq: "weekly" },
-    { route: "/medicine-delivery/bhatni", priority: "0.9", changefreq: "weekly" },
-    { route: "/medicine-delivery/lar", priority: "0.9", changefreq: "weekly" },
-    { route: "/medicine-delivery/barhaj", priority: "0.9", changefreq: "weekly" },
-  ];
-
+  const slugs = Object.keys(cityData);
   const lastmod = new Date().toISOString().split("T")[0];
 
-  const urls = pages
+  const urls = slugs
     .map(
-      (item) => `
+      (slug) => `
     <url>
-      <loc>${baseUrl}${item.route}</loc>
+      <loc>${SITE}/medicine-delivery/${slug}</loc>
       <lastmod>${lastmod}</lastmod>
-      <changefreq>${item.changefreq}</changefreq>
-      <priority>${item.priority}</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
     </url>`
     )
     .join("");
