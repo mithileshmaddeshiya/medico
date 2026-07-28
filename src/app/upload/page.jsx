@@ -4,13 +4,13 @@ import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 
 import { db } from "@/lib/firebase";
-import { cityData } from "@/data/cityData";
+import { cityData } from "@/data/medicine/cityData";
 
 /**
  * Internal seeding screen — pushes the local medicine data into Firestore.
  *
  * Lab cities are no longer seeded here: they are served straight off local data
- * (src/data/labCities.js), so there is nothing to upload for them any more.
+ * (src/data/lab/cities.js), so there is nothing to upload for them any more.
  */
 export default function UploadPage() {
   const [status, setStatus] = useState("");

@@ -12,7 +12,7 @@ import {
   X,
 } from "lucide-react";
 
-import { LAB_PHONE } from "@/data/labDefaults";
+import { LAB_PHONE } from "@/data/lab/defaults";
 
 // The dropdown is filled from Firestore, which only the server can read — the
 // list arrives as `cityOptions` (see getLabCityOptions in src/lib/labCities.js).

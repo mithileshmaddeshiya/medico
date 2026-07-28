@@ -5,6 +5,13 @@ import Link from "next/link"
 
 // `labCities` comes from the (main) layout. The first entry is the flagship
 // city — linking to it is what connects the lab section to the rest of the site.
+//
+// The nav used to link ONLY to that flagship, which meant every page on the site
+// handed Varanasi a link and gave every other city nothing: Deoria was down to a
+// single sitewide link (the footer) against Varanasi's four. The menu below lists
+// every live city instead, so a new city is linked from every page the day it
+// ships. The flagship stays as the parent link's own href, so the item still
+// works as a plain link when the menu is not open.
 export default function Navbar({ labCities = [] }) {
     const labHref = labCities[0] ? `/lab-test/${labCities[0].slug}` : null;
 
@@ -35,10 +42,44 @@ export default function Navbar({ labCities = [] }) {
                         Home
                     </Link>
 
+                    {/* Opens on hover AND on keyboard focus (focus-within), so
+                        the city links are reachable without a mouse. They stay
+                        in the markup either way — a crawler reads all of them
+                        on every page, which is the whole point of the change. */}
                     {labHref && (
-                        <Link href={labHref} className="hover:text-green-600 transition">
-                            Lab Tests
-                        </Link>
+                        <div className="relative group">
+                            <Link
+                                href={labHref}
+                                className="inline-flex items-center gap-1 hover:text-green-600 transition"
+                            >
+                                Lab Tests
+                                <svg
+                                    aria-hidden
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    className="h-3.5 w-3.5 opacity-60 transition-transform duration-150 group-hover:rotate-180"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+                                        clipRule="evenodd"
+                                    />
+                                </svg>
+                            </Link>
+
+                            <ul className="invisible absolute left-0 top-full z-50 min-w-52.5 -translate-y-1 rounded-xl border border-gray-100 bg-white py-1.5 opacity-0 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.18)] transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                                {labCities.map((c) => (
+                                    <li key={c.slug}>
+                                        <Link
+                                            href={`/lab-test/${c.slug}`}
+                                            className="block px-3.5 py-2 text-[13.5px] text-gray-600 transition-colors hover:bg-green-50 hover:text-green-700"
+                                        >
+                                            Lab Test in {c.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     )}
 
                     <Link href="/about" className="hover:text-green-600 transition">

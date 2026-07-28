@@ -216,11 +216,13 @@ export default function CitySEOContent({ data }) {
                         Lar
                       </Link>
 
-                      <Link
-                        href="/medicine-delivery/bhatpar"
-                        className="px-3 py-1 rounded-full bg-green-50 border border-green-200 text-sm">
-                        Bhatpar Rani
-                      </Link>
+                      {/* Bhatpar Rani was a sixth chip here, linking to
+                          /medicine-delivery/bhatpar — a page that does not
+                          exist, so every one of these pages was shipping a 404
+                          to readers and crawlers alike. Removed rather than
+                          repointed: there is no medicine page for that town to
+                          send anyone to. Add one to src/data/medicine/cityData.js
+                          and the chip can come back. */}
                     </div>
                   </div>
 

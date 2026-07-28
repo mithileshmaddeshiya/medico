@@ -11,8 +11,6 @@ import {
   FaGlobe,
 } from "react-icons/fa6";
 
-import BookFormLink from "./BookFormLink";
-
 /**
  * Brand-icon registry for the footer's social row. Keyed by the `type` string
  * stored in footer.social (see defaultFooter in labDefaults.js) so the data
@@ -49,11 +47,18 @@ const QUICK_LINKS = [
  * real cross-links, while this city's own areas stay plain text, because a
  * link to a page that does not exist yet helps nobody.
  */
-export default function LabFooter({ city, otherCities = [] }) {
+export default function LabFooter({ city, otherCities = [], medicineCities = [] }) {
   const areas = city?.areas ?? [];
   const footer = city?.footer ?? {};
-  const popularTests = footer.popularTests ?? [];
   const social = (footer.social ?? []).filter((s) => s && s.href);
+
+  // A town served by BOTH sections — matched on slug, so /lab-test/deoria finds
+  // /medicine-delivery/deoria. Surfaced first and styled a shade stronger: it is
+  // the most relevant link in this block, and the only one that keeps the reader
+  // in their own town. Varanasi has no medicine page today, so it simply lists
+  // the towns that do rather than showing nothing.
+  const sameTown = medicineCities.find((c) => c.slug === city?.slug) ?? null;
+  const otherTowns = medicineCities.filter((c) => c.slug !== sameTown?.slug);
 
   return (
     <footer id="footer-section" className="relative mt-2 sm:mt-4 bg-gradient-to-b from-emerald-50/60 via-teal-50/40 to-white border-t border-emerald-100">
@@ -160,27 +165,50 @@ export default function LabFooter({ city, otherCities = [] }) {
               </ul>
             </nav>
           )}
+
         </div>
 
-        {/* POPULAR TESTS (SEO) */}
-        <nav aria-label="Popular lab tests" className="lg:col-span-2">
-          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
-            Popular Tests in {city.name}
-          </h3>
-          {/* Each scrolls to the hero booking form at the top of this same
-              page, so a visitor who came in on a test name lands straight on
-              the form, ready to book. Goes through BookFormLink rather than a
-              `#book` href so the scroll does not leave a hash in the URL. */}
-          <ul className="space-y-1 text-[12.5px] text-slate-600">
-            {popularTests.map((t) => (
-              <li key={t}>
-                <BookFormLink className="cursor-pointer hover:text-emerald-700 transition-colors">
-                  {t} in {city.name}
-                </BookFormLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* MEDICINE DELIVERY — takes the column "Popular Tests in <city>" used
+            to occupy, which keeps the row at a balanced 3+2+2+2+3 of twelve.
+            Those popular-test links were the cheapest in the footer anyway:
+            they scrolled to the form on this same page rather than pointing at
+            another URL, and the test names are still on the page as the cards
+            themselves. These links do reach somewhere new — before them, the
+            lab section carried no link at all into /medicine-delivery/*.
+
+            The same-town page goes first and is weighted a shade stronger: it
+            is the one a reader here actually wants, since someone booking a
+            blood test in Deoria is the same person who needs the prescription
+            filled in Deoria. */}
+        {medicineCities.length > 0 && (
+          <nav aria-label="Medicine delivery" className="lg:col-span-2">
+            <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
+              Medicine Delivery
+            </h3>
+            <ul className="space-y-1 text-[12.5px] text-slate-600">
+              {sameTown && (
+                <li>
+                  <Link
+                    href={`/medicine-delivery/${sameTown.slug}`}
+                    className="font-medium text-emerald-800 hover:text-emerald-700 transition-colors"
+                  >
+                    Medicine Delivery in {sameTown.name}
+                  </Link>
+                </li>
+              )}
+              {otherTowns.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/medicine-delivery/${c.slug}`}
+                    className="hover:text-emerald-700 transition-colors"
+                  >
+                    Medicine Delivery in {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         {/* CONTACT / NAP — a semantic <address> so the crawler reads it as the
             business's contact block, and the name + locality here match the

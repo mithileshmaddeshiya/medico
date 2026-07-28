@@ -6,7 +6,7 @@ import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
 /**
  * Long-form SEO block. Everything the crawler reads comes in as `sections`,
  * from the city document or its generated default — see defaultContent in
- * src/data/labDefaults.js.
+ * src/data/lab/defaults.js.
  *
  * Shape: { id, h, p: [paragraph, ...] } — `id` doubles as the anchor target,
  * and the layout plus the "On this page" rail build themselves from the array.

@@ -2,7 +2,7 @@ import Image from "next/image";
 import LabLeadCard from "./LabLeadCard";
 
 // `hero` and `cityOptions` come from the Firestore-backed page — see
-// defaultHero in src/data/labDefaults.js for the shape and its defaults.
+// defaultHero in src/data/lab/defaults.js for the shape and its defaults.
 export default function LabHero({ hero, cityOptions }) {
   return (
     <section className="bg-linear-to-b from-emerald-50/70 to-white">

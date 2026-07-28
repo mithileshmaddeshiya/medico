@@ -7,7 +7,7 @@ import LabFaq from "@/components/lab/LabFaq";
 import LabHero from "@/components/lab/LabHero";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
-import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/labDefaults";
+import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
   }
 
   // title / description / keywords come from the city entry, falling back
-  // to the generated defaults — see src/data/labDefaults.js.
+  // to the generated defaults — see src/data/lab/defaults.js.
   const { name, state, slug, title, description, keywords } = cityData;
   const url = `${SITE}/lab-test/${slug}`;
 
@@ -181,9 +181,11 @@ export default async function LabCityPage({ params }) {
   // to hand Google a page whose content never matched the URL that was crawled.
   if (!cityData) notFound();
 
-  // The booking form's dropdown covers every live city, not just this one, so
-  // a visitor from a neighbouring town can still book without leaving the page.
-  const cityOptions = await getLabCityOptions();
+  // The booking form's dropdown is scoped to THIS city — its name, its own
+  // localities, then "Other". It used to list every live city, which put
+  // Varanasi's localities at the top of Deoria's form. "Other" still covers the
+  // visitor from a neighbouring town.
+  const cityOptions = await getLabCityOptions(cityData.slug);
 
   const cityName = cityData.name;
   const phone = cityData.footer.phone ?? LAB_PHONE;

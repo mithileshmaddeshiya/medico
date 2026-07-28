@@ -1,4 +1,5 @@
 import LabFooter from "@/components/lab/LabFooter";
+import { getMedicineCities } from "@/lib/getCity";
 import { getDefaultLabCity, getLabCities, getLabCity } from "@/lib/labCities";
 
 // The footer needs the city, and only this segment knows it — so the footer is
@@ -17,10 +18,18 @@ export default async function LabCityLayout({ children, params }) {
   // a shared component that must not reach into the data layer itself.
   const otherCities = cities.filter((c) => c.slug !== cityData.slug);
 
+  // The medicine section's towns, for the footer's cross-section links. Read
+  // here for the same reason: the footer takes data, it does not fetch it.
+  const medicineCities = await getMedicineCities();
+
   return (
     <>
       {children}
-      <LabFooter city={cityData} otherCities={otherCities} />
+      <LabFooter
+        city={cityData}
+        otherCities={otherCities}
+        medicineCities={medicineCities}
+      />
     </>
   );
 }

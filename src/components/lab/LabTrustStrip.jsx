@@ -21,7 +21,7 @@ const ICONS = {
 };
 
 // `promises` comes from the city document (or its generated default) — see
-// defaultTrustStrip in src/data/labDefaults.js.
+// defaultTrustStrip in src/data/lab/defaults.js.
 export default function LabTrustStrip({ promises = [] }) {
   if (!promises.length) return null;
 

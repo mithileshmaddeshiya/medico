@@ -3,7 +3,7 @@ import { ArrowRight, Check, PhoneCall, ShieldCheck } from "lucide-react";
 import BookFormLink from "./BookFormLink";
 
 // `cta` and `phone` come from the city document (or its generated default) —
-// see defaultCta in src/data/labDefaults.js. Nothing here may assert an
+// see defaultCta in src/data/lab/defaults.js. Nothing here may assert an
 // accreditation MedicoBharat does not hold; keep it that way when editing.
 export default function LabCta({ cta, phone }) {
   const proof = cta?.proof ?? [];

@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
  * LabFaq
  *
  * `faqs` come from the city document (or its generated default) — see
- * defaultFaqs in src/data/labDefaults.js.
+ * defaultFaqs in src/data/lab/defaults.js.
  *
  * Shape: [{ q, a, links?: [{ href, label }] }]
  *   q     — question text (must be unique-ish per page)

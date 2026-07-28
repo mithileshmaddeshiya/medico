@@ -8,7 +8,7 @@ import { Phone } from "lucide-react";
  * (emerald → teal on a soft emerald wash) so the page ends where it started.
  *
  * `banner` and `phone` come from the city document (or its generated default) —
- * see defaultCallBanner in src/data/labDefaults.js.
+ * see defaultCallBanner in src/data/lab/defaults.js.
  */
 export default function LabCallBanner({ banner, phone }) {
   const tel = `tel:${String(phone ?? "").replace(/\s/g, "")}`;

@@ -8,7 +8,7 @@
  * four-field entry still renders a complete page.
  *
  * Anything you *do* put in the city entry wins over the value here — see
- * buildContent() in src/data/labCities.js. So a city can override one FAQ, or
+ * buildContent() in src/data/lab/cities.js. So a city can override one FAQ, or
  * its whole test list, without repeating the rest.
  *
  * Icons are stored as STRINGS, not components. Each client component maps the
@@ -191,35 +191,62 @@ export const defaultCta = (city) => ({
 
 /* ── Long-form SEO copy ───────────────────────────────────────────────────
    Shape: { id, h, p: [paragraph, ...] } — `id` doubles as the anchor target
-   and feeds the "On this page" rail. */
+   and feeds the "On this page" rail.
 
-export const defaultContent = (city) => [
+   ⚠ READ THIS BEFORE LAUNCHING A NEW CITY ON THESE DEFAULTS.
+
+   What used to sit here was Varanasi's article with `${city}` interpolated into
+   it. Every city therefore inherited Varanasi's facts under its own name. When
+   Deoria was added, its live page claimed Deoria is Purvanchal's healthcare
+   centre and offered home collection at Assi Ghat, Sarnath, DLW, Godowlia and
+   the Babatpur airport route — none of which exist in Deoria. That copy now
+   lives in src/data/lab/content/varanasi.js where it belongs.
+
+   What remains here is deliberately generic: medical and procedural guidance
+   that is true in any city, plus the city's own name and its real `areas`.
+   There are no invented local landmarks, no claims about a city's standing in
+   its region, and no service claims beyond the confirmed set (see the warning
+   above defaultFaqs).
+
+   BUT GENERIC ALSO MEANS DUPLICATE. Two cities running on these defaults get
+   near-identical pages, and Google indexes at most one of them — the rest are
+   filtered as doorway pages. So these defaults are a scaffold for a city that
+   is not live yet, NOT something to launch on. Before a city goes into the
+   sitemap, give it its own file in src/data/lab/content/ and set `content` and
+   `faqs` on its seed entry, the way varanasi and deoria do. */
+
+export const defaultContent = (city, areas = []) => {
+  // Only the city's own localities are ever named — never a hardcoded list, which
+  // is how Varanasi's neighbourhoods ended up being offered in Deoria.
+  const areaText = areas.length ? areas.join(", ") : `${city} ke har ilaake`;
+
+  return [
   {
-    id: "lab-test-in-varanasi",
+    id: "lab-test-overview",
     h: `${city} Me Lab Test — Online Blood Test Booking, Free Home Sample Collection`,
     p: [
-      `${city} poore Purvanchal ka healthcare centre hai. Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia, Azamgarh aur Bihar ke border districts se roz patients yahan aate hain — kyunki specialist doctors, tertiary hospitals aur bade diagnostic labs asal me yahi par hain. Iska matlab ye bhi hai ki Lanka, Sunderpur, Bhelupur aur Cantt ki labs me subah 7 baje se 10 baje tak lambi line lagti hai, kyunki har fasting sample isi window me dena hota hai.`,
-      `Lab test online book karne se ye poori line hat jaati hai. Aap apna test ya health package choose kijiye, morning slot select kijiye, aur trained phlebotomist aapke ghar ${city} me aa kar aapke saamne fresh sterile needle se sample leta hai. Report seedhe aapke phone par PDF me aa jaati hai. Na traffic me travel, na khaali pet plastic chair par intezaar, aur na hi counter par bill dekh kar surprise.`,
-      `Aap individual test bhi book kar sakte hain — CBC, thyroid profile, HbA1c, liver function test, kidney function test, lipid profile, vitamin D aur vitamin B12 — ya phir ek hi sample me 60 se 90 parameter wala full body health checkup. Doctor ka likha hua panel, pre-employment checkup, surgery se pehle ki jaanch, pregnancy profile aur saal me ek baar hone wali routine screening, sab isi tarike se book hoti hai.`,
+      `${city} me lab test karana ab lab tak jaane par nirbhar nahi hai. Zyadatar routine pathology — blood count, sugar, thyroid, liver, kidney, lipid, vitamin aur urine ke test — sirf ek sample par hote hain, aur wo sample aapke ghar par liya ja sakta hai. Isse subah khaali pet safar karna, counter par line lagana aur report lene ke liye doosri baar jaana, teenon bach jaate hain.`,
+      `Booking ka tarika seedha hai. Apna test ya health package chuniye, subah ka slot lijiye, aur trained phlebotomist ID card ke saath aapke ghar ${city} me aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — kagaz lene dobara jaane ki zaroorat nahi.`,
+      `Aap individual test bhi book kar sakte hain — CBC, thyroid profile, HbA1c, liver function test, kidney function test, lipid profile, vitamin D aur vitamin B12 — ya phir ek hi sample me 45 se 88 parameter wala full body health checkup. Doctor ka likha hua panel, surgery se pehle ki jaanch, pregnancy profile aur saal me ek baar hone wali routine screening, sab isi tarike se book hoti hai.`,
     ],
   },
 
   {
-    id: "home-sample-collection-varanasi",
+    id: "home-sample-collection",
     h: `Poore ${city} Me Free Home Sample Collection`,
     p: [
-      `Certified phlebotomist aapke address par sealed collection kit, single-use vacutainer, nayi disposable needle aur barcode printer le kar aata hai. Tube aapke saamne label aur barcode hoti hai, isliye do patients ke sample aapas me badalne ka koi chance nahi rehta. Uske baad sample temperature-controlled box me lab tak jaata hai — kyunki ${city} ki dopahar ki garmi me garam hua blood sample potassium, LDH aur glucose ki galat value de deta hai.`,
-      `Subah 6:30 se 10:30 baje ke slot fasting tests ke liye rakhe jaate hain, jaise fasting blood sugar, lipid profile aur insulin. Non-fasting tests jaise CBC, thyroid profile, dengue NS1, vitamin D ya HbA1c din bhar kabhi bhi ho sakte hain. Ghar me koi bujurg hai, bed-rest par hai, diabetic hai jinki vein patli ho gayi hai, ya operation ke baad recovery kar raha hai — to booking ke waqt bata dijiye, taki experienced phlebotomist bheja jaaye.`,
-      `Home collection poore sheher me available hai: Lanka, Sunderpur, Nagwa, Assi Ghat, Samne Ghat, Ravindrapuri, Bhelupur, Durgakund, Sigra, Mahmoorganj, Maldahiya, Cantt, Nadesar, Kachahari, Chowk, Godowlia, Dashashwamedh, Lahurabir, Bhojubir, Pandeypur, Ashapur, Sarnath, Shivpur, Chandmari, DLW, Chitaipur, Susuwahi, Karaundi, Lahartara, Manduadih, Rathyatra, Bajardiha, Ramnagar, aur Ring Road tatha Babatpur airport route ki nayi colonies.`,
-      `Purane sheher ki tangg galiyon me — Chowk, Godowlia aur ghaton ke aas paas, jahan char pahiya gaadi ja hi nahi sakti — collection two-wheeler se hoti hai. Isliye booking karte waqt location theek se pin kijiye aur ek landmark zaroor likhiye. Agar ghar ke teen-chaar log ek saath test kara rahe hain to sabka sample ek hi slot me book kijiye: ek visit, ek trip, aur aksar package discount bhi.`,
+      `Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai, na koi visiting charge na koi hidden fee. Trained phlebotomist ID card ke saath aata hai; sample dene se pehle use dekh lena aapka haq hai. Poori visit lagbhag 10 minute ki hoti hai, aur payment usi waqt cash ya UPI se hota hai.`,
+      `Subah 6 baje se slot shuru hote hain, kyunki fasting wale test — fasting blood sugar, lipid profile aur zyadatar full body package — 10 se 12 ghante khaali pet maangte hain. Non-fasting test jaise CBC, thyroid profile, dengue NS1, vitamin D ya HbA1c din me kabhi bhi ho sakte hain.`,
+      `${city} me hum ${areaText} me sample collect karte hain. Aapka pata is list me naam se nahi hai to booking se pehle ek call kar lijiye — cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge.`,
+      `Pata likhte waqt ek landmark zaroor daaliye aur mobile number chalu rakhiye; late visit ki sabse aam wajah adhoora pata hoti hai. Ghar me ek se zyada log test kara rahe hain to sabki booking ek hi slot me kar dijiye. Koi bujurg hai, bistar par hai, diabetic hai jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai — ye booking ke waqt bata dijiye.`,
     ],
   },
 
   {
-    id: "popular-blood-tests-varanasi",
+    id: "popular-blood-tests",
     h: `${city} Me Sabse Zyada Book Hone Wale Blood Tests Aur Wo Kya Batate Hain`,
     p: [
-      `Complete Blood Count (CBC) sheher ka sabse zyada order hone wala test hai. Ye haemoglobin, RBC, WBC aur platelet count naapta hai, aur bukhar, kamzori, baar-baar infection ya anaemia ke shak me doctor sabse pehle yahi likhte hain. Purvanchal me anaemia bahut aam hai, khaas kar auraton aur teenage ladkiyon me — isliye haemoglobin kam aane par aage iron studies, ferritin aur vitamin B12 kiya jaata hai.`,
+      `Complete Blood Count (CBC) sabse zyada order hone wala test hai. Ye haemoglobin, RBC, WBC aur platelet count naapta hai, aur bukhar, kamzori, baar-baar infection ya khoon ki kami ke shak me doctor sabse pehle yahi likhte hain. Haemoglobin kam aane par aage iron studies, ferritin aur vitamin B12 kiya jaata hai, kyunki sirf iron ki goli shuru kar dena adhoora ilaaj hai.`,
       `Thyroid Profile (TSH, T3, T4) doosre number par hai. Bina wajah wazan badhna ya ghatna, baal jhadna, periods ka irregular hona, hamesha thakan, thand zyada lagna, ya infertility ki jaanch — sab isi test tak le aate hain. Hypothyroidism North India me bahut common hai aur diagnose hone ke baad aasani se control ho jaata hai, lekin test karayenge tabhi pata chalega. Jo log pehle se thyroxine le rahe hain, unhe dose change ke baad har 6 se 8 hafte me TSH dohrana chahiye, phir har 6 se 12 mahine me.`,
       `Diabetes ke test — Fasting Blood Sugar, Post Prandial Blood Sugar aur HbA1c — iske turant baad aate hain. HbA1c pichhle 2 se 3 mahine ka average sugar control batata hai aur ismein fasting ki zaroorat nahi hoti, isliye jinka khaane ka time fix nahi rehta unke liye ye sabse bharosemand test hai. Jo pehle se diabetic hain unhe har teen mahine me HbA1c aur saal me ek baar kidney function ke saath urine microalbumin karana chahiye.`,
       `Baaki top list ye hai: cholesterol aur triglycerides ke liye Lipid Profile, bilirubin, SGOT, SGPT aur alkaline phosphatase ke liye Liver Function Test (LFT), urea, creatinine aur uric acid ke liye Kidney Function Test (KFT/RFT), Vitamin D aur Vitamin B12, Urine Routine aur Microscopy, Blood Group aur Rh typing, inflammation ke liye ESR aur CRP, aur bukhar ka panel — Dengue NS1, Widal, Malaria aur Typhidot. Hepatitis B (HBsAg), Hepatitis C aur HIV screening operation se pehle, dialysis se pehle aur pregnancy me aksar karayi jaati hai.`,
@@ -227,34 +254,38 @@ export const defaultContent = (city) => [
   },
 
   {
-    id: "full-body-checkup-varanasi",
+    id: "full-body-checkup",
     h: `${city} Me Full Body Health Checkup — Ismein Kya Kya Hona Chahiye`,
     p: [
       `Asli full body checkup sirf parameter ki lambi list nahi hoti. Kam se kam paanch system cover hone chahiye: blood (CBC, ESR), sugar (fasting glucose aur HbA1c), heart risk (complete lipid profile), liver (poora LFT with albumin aur globulin), aur kidney (urea, creatinine, uric acid, electrolytes ke saath urine routine). Iske upar thyroid profile, vitamin D aur B12 jod dijiye — tab package me sach me kuch pakad me aata hai.`,
       `Basic package aam taur par 45 se 60 parameter ka hota hai aur 30 saal se kam umar ke healthy logon ke yearly baseline ke liye theek hai. Advanced package 70 se 85 parameter ka hota hai, jismein thyroid, vitamins, iron studies aur electrolytes jud jaate hain — 30 se 50 saal ke working adults ke liye yahi sahi fit hai. Comprehensive package 90 se 100+ parameter ka hota hai, jismein cardiac risk markers, HbA1c, urine microalbumin aur kabhi kabhi 50 se upar ke purushon ke liye PSA ya mahilaon ke liye hormone panel bhi shamil hota hai.`,
-      `Package price dekh kar nahi, apne risk dekh kar chuniye. Ghar me diabetes ya heart disease ki history hai to basic package me bhi HbA1c, lipid profile aur kidney markers ko priority dijiye. Din bhar desk par baithte hain aur dhoop kam milti hai to extra liver enzymes se zyada zaroori vitamin D aur B12 hai. Aur agar aap vegetarian hain — jo ${city} ke zyadatar gharon me hai — to B12 deficiency itni common hai ki use saal ke panel me jagah milni hi chahiye.`,
+      `Package price dekh kar nahi, apne risk dekh kar chuniye. Ghar me diabetes ya heart disease ki history hai to basic package me bhi HbA1c, lipid profile aur kidney markers ko priority dijiye. Din bhar andar baithte hain aur dhoop kam milti hai to extra liver enzymes se zyada zaroori vitamin D aur B12 hai. Aur shudh shakahari khana chalta ho to Vitamin B12 ki kami itni common hai ki use saal ke panel me jagah milni hi chahiye.`,
     ],
   },
 
   {
-    id: "lab-test-price-varanasi",
-    h: `${city} Me Lab Test Price (Indicative Range)`,
+    // Card prices, not market estimates. The old version quoted an "indicative
+    // range" for the city — numbers nobody had surveyed, on a page that also
+    // shows the real price beside every test. Quoting the actual cards keeps the
+    // prose and the price list from ever contradicting each other.
+    id: "lab-test-price",
+    h: `${city} Me Lab Test Ka Price`,
     p: [
-      `${city} ka rate Delhi aur Lucknow se kaafi kam padta hai, lekin ek achhe, established lab aur chhote collection point ke beech farq bahut hota hai. Sheher me aam taur par milne wale range: CBC ₹200–₹400, ESR ₹100–₹200, Fasting Blood Sugar ₹80–₹150, HbA1c ₹400–₹700, Lipid Profile ₹450–₹800, Liver Function Test ₹450–₹800, Kidney Function Test ₹500–₹900.`,
-      `Hormone aur vitamin ke liye: Thyroid Profile (T3, T4, TSH) ₹350–₹600, Vitamin D (25-OH) ₹900–₹1,600, Vitamin B12 ₹700–₹1,200, Ferritin ₹500–₹900, Urine Routine ₹100–₹250. Bukhar ke season ke test: Dengue NS1 Antigen ₹600–₹1,100, Dengue IgG/IgM ₹700–₹1,200, Widal ₹200–₹400, Malaria Antigen ₹300–₹600, Typhidot ₹500–₹900.`,
-      `Asli bachat health package me hoti hai. Basic full body checkup aam taur par ₹999 se ₹1,499 ke beech, advanced package ₹1,800 se ₹2,800 ke beech, aur comprehensive package ₹3,000 se ₹5,000 ke beech aata hai — wahi test alag alag karane par bill aasani se ₹8,000 paar kar jaata hai.`,
-      `Paisa dene se pehle do cheezein confirm kar lijiye: home collection sach me free hai ya bill ke end me jud jaayega, aur quoted price usi method ka hai jo aapke doctor ne likha hai (CLIA aur ECLIA method purane ELISA se mehnge hote hain lekin hormone ke liye zyada reliable hain). Jo test ₹150 sasta hai lekin dobara sahi lab me karana pade, wo sasta nahi hai.`,
+      `Har card par jo price likha hai, wahi aapko dena hai — home sample collection uske upar free hai, na visiting charge na koi hidden fee. Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se.`,
+      `Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.`,
+      `Bachat package me sabse zyada hai: Basic Full Body Checkup ₹999 me 45 parameter, Advanced Full Body ₹1,999 me 72 parameter, aur Senior Citizen Pack ₹2,999 me 88 parameter. Wahi test alag alag karane par kharcha kai guna ho jaata hai.`,
+      `Kuch test, jaise Fever Panel, us waqt ki zaroorat par tay hote hain — unke card par "Call for price" likha rehta hai. Phone par pooch lijiye; sample dene se pehle price bata diya jaata hai.`,
     ],
   },
 
   {
-    id: "fever-dengue-typhoid-testing-varanasi",
+    id: "fever-dengue-typhoid-testing",
     h: `${city} Me Bukhar: Dengue, Typhoid, Malaria Aur Jaundice Ki Jaanch`,
     p: [
-      `July se November tak sheher me viral fever, dengue aur typhoid tezi se badhte hain — monsoon ke baad jal-bharav, purane wardon me ghani basti, aur cooler tatha chhat ki tanki me jama paani machhar ke liye perfect conditions bana dete hain. Sabse badi galti jo patients karte hain wo hai galat din par galat test karana, jisse ilaaj lagbhag ek hafta late ho jaata hai.`,
+      `Monsoon ke baad viral fever, dengue aur typhoid tezi se badhte hain — jama paani, cooler aur chhat ki tanki machhar ke liye maakool haalat bana dete hain. Sabse badi galti jo patients karte hain wo hai galat din par galat test karana, jisse sahi ilaaj lagbhag ek hafta late ho jaata hai.`,
       `Timing sabse zaroori hai. Dengue NS1 antigen sirf bukhar ke pehle 1 se 5 din me hi bharosemand hai. Paanchve din ke baad NS1 aksar negative aa jaata hai aur tab Dengue IgM antibody karana padta hai. Doosre din IgM ya aathve din NS1 karayenge to dengue hone ke bawajood report negative aa sakti hai. Dono me se koi bhi test ho, saath me CBC zaroor jodiye — girta hua platelet count aur badhta haematocrit hi wo cheez hai jo doctor roz monitor karta hai.`,
       `Typhoid me Widal test ke liye kam se kam 5 se 7 din ka bukhar chahiye, tabhi antibody titre badhte hain; doosre din karaya gaya Widal lagbhag bekaar hota hai. Aur jahan typhoid endemic hai, wahan purane infection se bhi Widal positive aa sakta hai. Typhidot IgM jaldi positive hota hai, aur pehle hafte me blood culture aaj bhi sabse pakka jawab deta hai. Jis bukhar me thand aur kanpkanpi ho, usme malaria antigen aur peripheral smear zaroor jodiye.`,
-      `Jaundice ${city} ka doosra khaas pattern hai. Paani se failne wale Hepatitis A aur Hepatitis E garmi me aur monsoon ke baad badh jaate hain, khaas kar wahan jahan peene ka paani aur sewage line paas paas chalti hai. Aankhon ka peelapan, gehra peshab, ulti jaisa lagna aur bhookh khatam hona — in sab par LFT (total aur direct bilirubin ke saath), Hepatitis A IgM aur Hepatitis E IgM karana chahiye. Pregnancy me jaundice ho to turant doctor ko dikhaiye, kyunki Hepatitis E garbhawastha me kahin zyada khatarnak hota hai.`,
+      `Jaundice alag se dhyan maangta hai. Paani se failne wale Hepatitis A aur Hepatitis E garmi me aur monsoon ke baad badh jaate hain, khaas kar wahan jahan peene ka paani aur sewage line paas paas chalti hai. Aankhon ka peelapan, gehra peshab, ulti jaisa lagna aur bhookh khatam hona — in sab par LFT (total aur direct bilirubin ke saath), Hepatitis A IgM aur Hepatitis E IgM karana chahiye. Pregnancy me jaundice ho to turant doctor ko dikhaiye, kyunki Hepatitis E garbhawastha me kahin zyada khatarnak hota hai.`,
     ],
   },
 
@@ -309,16 +340,17 @@ export const defaultContent = (city) => [
   },
 
   {
-    id: "how-to-book-lab-test-varanasi",
+    id: "how-to-book-lab-test",
     h: `${city} Me Lab Test Kaise Book Karein`,
     p: [
-      `Test ya package ka naam search kijiye, test page par parameter list aur price dekhiye, aur booking me add kar dijiye. Agar doctor ka parcha hai to use upload kar dijiye — isse lab confirm kar leti hai ki wahi panel process ho raha hai jo aapke physician ne likha tha, khaas kar jahan naam milte julte hote hain, jaise Thyroid Profile Total aur Free.`,
-      `Apna ${city} ka address landmark ke saath likhiye, collection slot chuniye aur confirm kar dijiye. Aapko SMS milega jismein phlebotomist ka naam aur visit ka time window hoga. Fasting ki instructions, agar koi hain, confirmation ke saath hi aa jaati hain — taki raat 10 baje kisi ko yaad karne ki zaroorat na pade.`,
-      `Phlebotomist aata hai, aapka naam aur test list verify karta hai, sample leta hai aur tube aapke saamne barcode karta hai. Poori visit lagbhag 10 minute ki hoti hai. Sample lab pahunchne par ek notification aata hai, aur report taiyaar hone par doosra.`,
+      `Is page par apna test ya package chuniye, parameter list aur price dekhiye, aur booking form bhar dijiye. Doctor ka parcha hai to uska photo saath rakhiye — isse wahi panel liya jaata hai jo aapke physician ne likha tha, khaas kar jahan naam milte julte hote hain, jaise Thyroid Profile Total aur Free.`,
+      `Apna ${city} ka address landmark ke saath likhiye aur collection slot chuniye. Fasting wale test subah ke slot me hi karaaiye. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute ke andar pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye.`,
+      `Poori visit lagbhag 10 minute ki hoti hai. Payment usi waqt cash ya UPI se hota hai. Uske baad aapko kuch nahi karna — report taiyaar hone par WhatsApp aur email par PDF khud aa jaayegi.`,
     ],
   },
 
-];
+  ];
+};
 
 /**
  * FAQ schema for rich results in Google. Render this in the same page as the
@@ -405,6 +437,12 @@ export const defaultDescription = (city, state, areas = []) =>
  */
 export const CITY_ALIASES = {
   varanasi: ["Banaras"],
+  // No entry for Deoria on purpose. "Devaria" and "Deoriya" were added here as
+  // alternate spellings and taken back out — the correct spelling is Deoria,
+  // and the base keywords above already carry it. An alias is only worth adding
+  // when a city is genuinely known by a DIFFERENT name (Varanasi → Banaras),
+  // not for a misspelling of the same one: putting a wrong spelling in the
+  // metadata just publishes it in our own name.
 };
 
 export const defaultKeywords = (city, areas = [], aliases = []) => [
@@ -417,7 +455,15 @@ export const defaultKeywords = (city, areas = [], aliases = []) => [
   `Lab Test at Home ${city}`,
   `Best Lab in ${city}`,
   `Lab Test Price in ${city}`,
-  ...areas.map((area) => `Lab Test in ${area} ${city}`),
+  // "<area> <city>" is how these are actually searched — "Lab Test in Sarnath
+  // Varanasi". But an area whose own name already contains the city produces a
+  // stutter: Deoria's "Deoria Sadar" came out as "Lab Test in Deoria Sadar
+  // Deoria". Where the city is already in the area name, it is not repeated.
+  ...areas.map((area) =>
+    area.toLowerCase().includes(city.toLowerCase())
+      ? `Lab Test in ${area}`
+      : `Lab Test in ${area} ${city}`
+  ),
   // The same searches under the city's alternate name(s) — e.g. "Lab Test in
   // Banaras" for Varanasi. Without these, a searcher who never types the
   // official name is invisible to this page.

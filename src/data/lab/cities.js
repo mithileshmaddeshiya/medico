@@ -1,14 +1,14 @@
 /**
  * Local source of truth for the lab-test section.
  *
- * Works exactly like src/data/cityData.js does for the medicine pages: the
+ * Works exactly like src/data/medicine/cityData.js does for the medicine pages: the
  * content lives here, in the repo, and is read straight off local data — there
  * is no Firestore round trip any more. src/lib/labCities.js is now a thin
  * reader over the `LAB_CITIES` list this file builds.
  *
  * NOTE HOW SHORT AN ENTRY IS. Only the facts that differ between cities live
  * here; every word on the page — hero, tests, prices, FAQs, SEO copy, CTA —
- * comes from src/data/labDefaults.js with the city's name filled in. That is
+ * comes from src/data/lab/defaults.js with the city's name filled in. That is
  * what keeps adding a city cheap.
  *
  * ── Adding a city ───────────────────────────────────────────────────────
@@ -44,9 +44,11 @@
  *   footer                        { tagline, popularTests: [], email,
  *                                   phone, hours }
  *
- * `icon` values are strings, not components — see src/data/labDefaults.js for
+ * `icon` values are strings, not components — see src/data/lab/defaults.js for
  * the names each registry understands.
  */
+import { deoriaContent, deoriaFaqs } from "./content/deoria";
+import { varanasiContent } from "./content/varanasi";
 import {
   CITY_ALIASES,
   defaultCallBanner,
@@ -61,11 +63,11 @@ import {
   defaultTests,
   defaultTitle,
   defaultTrustStrip,
-} from "./labDefaults";
+} from "./defaults";
 
 /* ── The cities we serve ──────────────────────────────────────────────────
    Just the facts that differ per city. Everything else is filled in from
-   src/data/labDefaults.js when LAB_CITIES is built at the bottom of this file. */
+   src/data/lab/defaults.js when LAB_CITIES is built at the bottom of this file. */
 const LAB_CITY_SEED = [
   {
     slug: "varanasi",
@@ -75,6 +77,39 @@ const LAB_CITY_SEED = [
     postalCode: "221001",
     order: 1,
     published: true,
+    // This copy used to be defaultContent() — the fallback every city inherited
+    // — even though every fact in it is Varanasi's. It is unchanged, just moved
+    // under the city it was actually written about. See labContent/varanasi.js.
+    content: varanasiContent,
+  },
+  {
+    slug: "deoria",
+    name: "Deoria",
+    state: "Uttar Pradesh",
+    areas: [
+      "Deoria Sadar",
+      "Rudrapur",
+      "Barhaj",
+      "Salempur",
+      "Bhatpar Rani",
+      "Gauri Bazar",
+      "Baitalpur",
+    ],
+    postalCode: "274001",
+    order: 2,
+    published: true,
+
+    /* Deoria carries its own copy rather than the generated defaults, because a
+       page that is another city's page with the noun swapped does not get
+       indexed — Google reads it as a doorway page. `content` and `faqs` are the
+       two blocks that decide that, so both are hand-written here, and the title
+       and description are set so the search result itself does not read as a
+       duplicate of Varanasi's. See src/data/lab/content/deoria.js. */
+    title: "Lab Test in Deoria | Blood Test at Home, Free Sample Collection",
+    description:
+      "Book blood tests in Deoria, Uttar Pradesh without travelling to Gorakhpur. Free home sample collection across Deoria Sadar, Rudrapur, Barhaj, Salempur and Bhatpar Rani, slots from 6 AM and reports on WhatsApp in 24 hours.",
+    content: deoriaContent,
+    faqs: deoriaFaqs,
   },
 ];
 
@@ -136,7 +171,10 @@ function buildContent(fields, base) {
     filters: objList(fields.filters) ?? defaultFilters(),
     faqs: objList(fields.faqs) ?? defaultFaqs(name, areas, aliases),
     cta: { ...defaultCta(name), ...(obj(fields.cta) ?? {}) },
-    content: objList(fields.content) ?? defaultContent(name),
+    // `areas` is passed through so the generated copy can only ever name this
+    // city's own localities — the fallback used to carry a hardcoded list of
+    // Varanasi neighbourhoods, which every other city then advertised.
+    content: objList(fields.content) ?? defaultContent(name, areas),
     callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
     footer: { ...defaultFooter(name), ...(obj(fields.footer) ?? {}) },
   };

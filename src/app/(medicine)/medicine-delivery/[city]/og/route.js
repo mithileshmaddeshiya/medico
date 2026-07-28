@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-import { cityData } from "@/data/cityData";
+import { cityData } from "@/data/medicine/cityData";
 
 /**
  * Per-city share card: GET /medicine-delivery/<city>/og

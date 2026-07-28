@@ -11,7 +11,7 @@ import TrustSection from "@/components/medicine/HowWork";
 import FAQ from "@/components/medicine/Faq";
 import LatestBlogs from "@/components/medicine/LatestBlogs";
 import LabTestPromo from "@/components/medicine/LabTestPromo";
-import { homeData } from "@/data/homeData";
+import { homeData } from "@/data/medicine/homeData";
 
 // `labCity` comes from page.js (a server component) — this file is "use client"
 // and cannot read Firestore itself.

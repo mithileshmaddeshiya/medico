@@ -8,7 +8,7 @@ import MedicoBharatSEOSection from "@/components/medicine/MetakeyDeoria";
 import { getCity } from "@/lib/getCity";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import { cityData } from "@/data/cityData";
+import { cityData } from "@/data/medicine/cityData";
 import { SITE } from "@/lib/site";
 
 

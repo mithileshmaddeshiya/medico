@@ -105,7 +105,7 @@ const MOBILE_PREVIEW = 4;
 
 /**
  * `tests`, `filters` and `phone` come from the city document (or its generated
- * default) — see defaultTests / defaultFilters in src/data/labDefaults.js.
+ * default) — see defaultTests / defaultFilters in src/data/lab/defaults.js.
  * Prices can therefore differ per city without touching this file.
  */
 export default function LabServices({
