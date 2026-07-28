@@ -118,7 +118,14 @@ export async function generateMetadata({ params }) {
 
 const diagnosticLabSchema = (city) => ({
   "@context": "https://schema.org",
-  "@type": "DiagnosticLab",
+  // Two types on purpose. DiagnosticLab is the accurate description of what
+  // this is, but it hangs off MedicalOrganization — NOT off LocalBusiness. That
+  // matters because everything below (postal address, opening hours, telephone,
+  // areaServed, price range) are local-business properties, and Google's local
+  // results are built around LocalBusiness and its subtypes. MedicalBusiness is
+  // a LocalBusiness subtype, so listing both keeps the precise description and
+  // still files the page under the type the local signals belong to.
+  "@type": ["DiagnosticLab", "MedicalBusiness"],
   "@id": `${SITE}/lab-test/${city.slug}#diagnosticlab`,
   name: `MedicoBharat Lab Test — ${city.name}`,
   url: `${SITE}/lab-test/${city.slug}`,
