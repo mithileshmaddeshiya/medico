@@ -1,6 +1,7 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
 
 /**
@@ -10,6 +11,19 @@ import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
  *
  * Shape: { id, h, p: [paragraph, ...] } — `id` doubles as the anchor target,
  * and the layout plus the "On this page" rail build themselves from the array.
+ *
+ * A paragraph is USUALLY a plain string. It may also be an array of parts, so a
+ * city can put a real internal link inside its prose:
+ *
+ *   p: [
+ *     "Dawa bhi chahiye to ",
+ *     { text: "Deoria me medicine delivery", href: "/medicine-delivery/deoria" },
+ *     " se ghar par mangwa lijiye.",
+ *   ]
+ *
+ * That matters more than it looks: a contextual link inside a sentence carries
+ * its anchor text as a topical signal, which a footer link column does not. The
+ * string form stays valid, so every existing city renders unchanged.
  *
  * The FIRST section is the lead: its heading is the block's own <h2> and its
  * paragraphs are the intro. It used to render as one more <h3> underneath a
@@ -22,6 +36,45 @@ import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
 // Average Hindi/Hinglish reading speed on a phone, rounded down deliberately —
 // an under-promise here reads better than "12 min" over a wall of text.
 const WORDS_PER_MINUTE = 180;
+
+/** A paragraph in part form; a plain string is a single-part paragraph. */
+const partsOf = (para) => (Array.isArray(para) ? para : [para]);
+
+/** Just the words of a paragraph — used for the read-time estimate. */
+const paraText = (para) =>
+  partsOf(para)
+    .map((part) => (typeof part === "string" ? part : (part?.text ?? "")))
+    .join("");
+
+/**
+ * One paragraph, with any `{ text, href }` parts rendered as internal links.
+ *
+ * next/link so the click is a client navigation like every other link on the
+ * site; the href is still a real <a href> in the HTML, which is all a crawler
+ * needs. Underlined rather than colour-only, so the link is distinguishable
+ * without relying on colour alone.
+ */
+function Paragraph({ para, className }) {
+  return (
+    <p className={className}>
+      {partsOf(para).map((part, i) => {
+        if (typeof part === "string") return <Fragment key={i}>{part}</Fragment>;
+        if (part?.href) {
+          return (
+            <Link
+              key={i}
+              href={part.href}
+              className="font-semibold text-emerald-700 underline underline-offset-2 decoration-emerald-300 transition-colors hover:text-emerald-800 hover:decoration-emerald-600"
+            >
+              {part.text}
+            </Link>
+          );
+        }
+        return <Fragment key={i}>{part?.text ?? ""}</Fragment>;
+      })}
+    </p>
+  );
+}
 
 export default function LabContent({ city, sections = [] }) {
   const [expanded, setExpanded] = useState(false);
@@ -174,7 +227,8 @@ export default function LabContent({ city, sections = [] }) {
   const [lead, ...rest] = sections;
 
   const words = sections.reduce(
-    (total, s) => total + (s.p ?? []).reduce((n, para) => n + para.split(/\s+/).length, 0),
+    (total, s) =>
+      total + (s.p ?? []).reduce((n, para) => n + paraText(para).split(/\s+/).length, 0),
     0
   );
   const readMinutes = Math.max(1, Math.round(words / WORDS_PER_MINUTE));
@@ -317,12 +371,11 @@ export default function LabContent({ city, sections = [] }) {
                       so old links to #lab-test-in-varanasi still land. */}
                   <div id={lead.id} className="scroll-mt-24">
                     {(lead.p ?? []).map((para, j) => (
-                      <p
+                      <Paragraph
                         key={j}
+                        para={para}
                         className="mt-3.5 pl-4 text-[13.5px] first:mt-0 sm:text-[15px] leading-[1.85] text-slate-600"
-                      >
-                        {para}
-                      </p>
+                      />
                     ))}
                   </div>
 
@@ -344,12 +397,11 @@ export default function LabContent({ city, sections = [] }) {
                       {/* `?? []` — a section typed into Firestore without any
                           paragraphs should render its heading, not a 500. */}
                       {(s.p ?? []).map((para, j) => (
-                        <p
+                        <Paragraph
                           key={j}
+                          para={para}
                           className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600"
-                        >
-                          {para}
-                        </p>
+                        />
                       ))}
                     </div>
                   ))}

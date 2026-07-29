@@ -1,4 +1,5 @@
 import { blogs } from "@/data/blogData";
+import { getLabCity } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -143,6 +144,12 @@ export default async function BlogPage({ params }) {
             item.category !== category
     );
 
+    // The same town in the lab section, or null when we do not run lab tests
+    // there. Someone reading about medicine delivery in Deoria is the same
+    // person who needs a blood test in Deoria, and until this the articles
+    // linked only into /medicine-delivery/*.
+    const labCity = await getLabCity(city);
+
 
     return (
         <>
@@ -212,12 +219,28 @@ export default async function BlogPage({ params }) {
                         Get medicines delivered to your doorstep across {city} and nearby areas..
                     </p>
 
-                    <Link
-                        href={`/medicine-delivery/${city}`}
-                        className="inline-flex items-center px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition"
-                    >
-                        Order Now
-                    </Link>
+                    <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                            href={`/medicine-delivery/${city}`}
+                            className="inline-flex items-center px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition"
+                        >
+                            Order Now
+                        </Link>
+
+                        {/* The lab section's only inbound link from an article.
+                            Rendered only when a lab city with THIS slug exists,
+                            so it can never 404 on a town we do not serve — the
+                            check is the whole reason `labCity` is looked up
+                            above rather than the href being built blind. */}
+                        {labCity && (
+                            <Link
+                                href={`/lab-test/${labCity.slug}`}
+                                className="inline-flex items-center px-6 py-3 rounded-xl border border-green-600 text-green-700 font-medium hover:bg-green-100 transition"
+                            >
+                                Book Lab Test in {labCity.name}
+                            </Link>
+                        )}
+                    </div>
                 </div>
 
                 <div className="mt-16">

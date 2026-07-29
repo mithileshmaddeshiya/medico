@@ -5,6 +5,7 @@ import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import LabHero from "@/components/lab/LabHero";
+import LabRelatedLinks from "@/components/lab/LabRelatedLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
@@ -230,11 +231,22 @@ export default async function LabCityPage({ params }) {
       
       <LabCallBanner banner={cityData.callBanner} phone={phone} />
 
-      <LabFaq city={cityName} faqs={cityData.faqs?.slice(0, 6)} />
+      {/* A safety cap on a runaway city document, not a target — raised from 6
+          to 8 because both live cities now carry eight questions that are each
+          a different query. At 6, Deoria's pathology-lab and booking answers
+          were written and then never rendered, and Varanasi silently dropped
+          its "Kya aap Banaras me lab test karte hain?" answer — the one that
+          catches everyone who never types the official name. */}
+      <LabFaq city={cityName} faqs={cityData.faqs?.slice(0, 8)} />
 
       <LabCta cta={cityData.cta} phone={phone} />
 
       <LabContent city={cityName} sections={cityData.content} />
+
+      {/* Internal links, after the guide because that is where a reader who has
+          finished reading is looking for somewhere to go. Renders nothing for a
+          city with no `relatedLinks` — see src/data/lab/cities.js. */}
+      <LabRelatedLinks related={cityData.relatedLinks} />
 
       {/* Closing call strip — last section before the footer */}
     </>
