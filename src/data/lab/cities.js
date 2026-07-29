@@ -43,6 +43,9 @@
  *   callBanner                    { heading, buttonText }
  *   footer                        { tagline, popularTests: [], email,
  *                                   phone, hours }
+ *   relatedLinks                  { heading, intro, groups: [{ title,
+ *                                   links: [{ href, label, sub }] }] }
+ *                                 In-body internal links; omitted → no block.
  *
  * `icon` values are strings, not components — see src/data/lab/defaults.js for
  * the names each registry understands.
@@ -86,6 +89,13 @@ const LAB_CITY_SEED = [
     slug: "deoria",
     name: "Deoria",
     state: "Uttar Pradesh",
+    /* Deoria Sadar plus the district towns collection actually reaches. These
+       are not decorative: they render in the footer, fill the booking form's
+       dropdown, become `areaServed` in the schema, and are what a "<town> me
+       blood test" search matches on. Lar and Bhatni were added because the
+       medicine section already serves both, so the town is genuinely covered
+       and the lab page can honestly name it. Do NOT pad this list with towns
+       nobody visits — an areaServed we cannot serve is a lie in schema form. */
     areas: [
       "Deoria Sadar",
       "Rudrapur",
@@ -94,6 +104,8 @@ const LAB_CITY_SEED = [
       "Bhatpar Rani",
       "Gauri Bazar",
       "Baitalpur",
+      "Lar",
+      "Bhatni",
     ],
     postalCode: "274001",
     order: 2,
@@ -105,11 +117,171 @@ const LAB_CITY_SEED = [
        two blocks that decide that, so both are hand-written here, and the title
        and description are set so the search result itself does not read as a
        duplicate of Varanasi's. See src/data/lab/content/deoria.js. */
-    title: "Lab Test in Deoria | Blood Test at Home, Free Sample Collection",
+
+    // 39 characters, and it has to stay short: the root layout appends
+    // " | MedicoBharat" (template in src/app/layout.js), so what Google
+    // actually renders is 54 — just inside the ~60 it will show. The previous
+    // title was 63 BEFORE the suffix and got cut at "…Free Sample Coll…", so
+    // the strongest phrase on it was never seen. Primary keyword first, then
+    // the second-biggest query on this page; both survive the truncation.
+    title: "Lab Test in Deoria — Blood Test at Home",
+
+    // ~150 characters, so it renders whole on both desktop and mobile. The old
+    // one ran past 230 and lost everything after "…Rudrapur, Barhaj". Written
+    // in Hinglish deliberately: the page is Hinglish, the searcher here is, and
+    // a snippet in the reader's own register wins the click. The English terms
+    // that must match ("lab test", "blood test", "full body checkup") are all
+    // still in it.
     description:
-      "Book blood tests in Deoria, Uttar Pradesh without travelling to Gorakhpur. Free home sample collection across Deoria Sadar, Rudrapur, Barhaj, Salempur and Bhatpar Rani, slots from 6 AM and reports on WhatsApp in 24 hours.",
+      "Deoria me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the two terms the URL cannot: "blood test" and
+    // "pathology". The default was "Lab Test in Deoria with Free Home Sample
+    // Collection", which repeated the title without adding a term.
+    hero: {
+      h1: "Lab Test in Deoria — Blood Test & Pathology Lab with Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which only produces
+       "<template> in Deoria" nine times over plus one line per area. That
+       misses the two things Deoria traffic actually is: test-wise long-tail
+       ("CBC test price in Deoria"), which converts because the searcher has
+       already decided what they want, and Devanagari, which is how a large
+       share of this district types.
+
+       Ordered strongest first. `keywords` is a weak-to-zero ranking signal on
+       its own — the reason to keep this list honest and specific is that it is
+       the checklist the page's headings, FAQs and prose are written against.
+       Every term below appears in the visible copy; a keyword that appears
+       ONLY here is the kind that gets a page filtered, not ranked. */
+    keywords: [
+      // Primary
+      "lab test in Deoria",
+      "Deoria me lab test",
+      "blood test in Deoria",
+      "pathology lab in Deoria",
+      "diagnostic centre in Deoria",
+      "lab test at home Deoria",
+      "home sample collection Deoria",
+      "blood test home collection Deoria",
+      "lab test price in Deoria",
+      "lab test rate list Deoria",
+      "best pathology lab Deoria",
+      "online lab test booking Deoria",
+
+      // Test-wise long tail — the highest-intent queries on the page
+      "CBC test in Deoria",
+      "CBC test price in Deoria",
+      "thyroid test in Deoria",
+      "TSH test Deoria",
+      "sugar test in Deoria",
+      "HbA1c test in Deoria",
+      "full body checkup in Deoria",
+      "full body health checkup package Deoria",
+      "lipid profile test Deoria",
+      "liver function test Deoria",
+      "kidney function test Deoria",
+      "vitamin D test in Deoria",
+      "vitamin B12 test in Deoria",
+      "dengue test in Deoria",
+      "typhoid test in Deoria",
+      "malaria test in Deoria",
+      "urine routine test Deoria",
+      "hepatitis test in Deoria",
+
+      // Area modifiers — how a district search is actually typed
+      "lab test in Deoria Sadar",
+      "blood test in Rudrapur Deoria",
+      "blood test in Barhaj Deoria",
+      "lab test in Salempur",
+      "lab test in Bhatpar Rani",
+      "lab test in Gauri Bazar Deoria",
+      "lab test in Baitalpur Deoria",
+      "lab test in Lar Deoria",
+      "lab test in Bhatni",
+
+      // Devanagari — same intents, the script a big share of this district types
+      "देवरिया में लैब टेस्ट",
+      "देवरिया में खून की जांच",
+      "देवरिया में पैथोलॉजी लैब",
+      "घर से सैंपल कलेक्शन देवरिया",
+      "देवरिया लैब टेस्ट रेट लिस्ट",
+      "देवरिया में फुल बॉडी चेकअप",
+
+      // Location-free queries — Google supplies the city from the searcher's
+      // position, which the DiagnosticLab schema's areaServed answers.
+      "lab test near me",
+      "blood test near me",
+      "pathology lab near me",
+      "full body checkup near me",
+      "MedicoBharat lab test Deoria",
+    ],
+
     content: deoriaContent,
     faqs: deoriaFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabRelatedLinks below the guide. The medicine towns are also
+       in the footer, but a footer is byte-identical on every lab page and gets
+       discounted as boilerplate; these anchors are descriptive and per-city.
+       The three guides are the real gain — nothing else on the site links a lab
+       page into /blogs/*.
+
+       Every href here is checked against a real route: the medicine towns exist
+       in src/data/medicine/cityData.js, the guides in src/data/blogData.js, and
+       varanasi in the seed above. */
+    relatedLinks: {
+      heading: "Deoria Jile Me MedicoBharat Ki Doosri Services",
+      intro:
+        "Test ke baad dawa, aas-paas ke kasbon ki delivery, aur Deoria ke liye likhe gaye guide — sab ek jagah.",
+      groups: [
+        {
+          title: "Deoria Me Medicine Delivery",
+          links: [
+            {
+              href: "/medicine-delivery/deoria",
+              label: "Deoria me online medicine delivery",
+              sub: "Parcha bhejiye, dawa ghar par",
+            },
+            { href: "/medicine-delivery/salempur", label: "Salempur me medicine delivery" },
+            { href: "/medicine-delivery/barhaj", label: "Barhaj me medicine delivery" },
+            { href: "/medicine-delivery/lar", label: "Lar me medicine delivery" },
+            { href: "/medicine-delivery/bhatni", label: "Bhatni me medicine delivery" },
+          ],
+        },
+        {
+          title: "Deoria Ke Liye Guide",
+          links: [
+            {
+              href: "/blogs/online-medicine-delivery/deoria",
+              label: "Online medicine delivery in Deoria",
+            },
+            {
+              href: "/blogs/medicine-home-delivery/deoria",
+              label: "Medicine home delivery in Deoria",
+            },
+            {
+              href: "/blogs/buy-medicines-online/deoria",
+              label: "Deoria me online dawa kaise mangwayein",
+            },
+          ],
+        },
+        {
+          title: "Doosre Sheher Aur Madad",
+          links: [
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+            { href: "/contact", label: "Contact — number aur booking help" },
+            { href: "/about", label: "MedicoBharat ke baare me" },
+          ],
+        },
+      ],
+    },
   },
 ];
 
@@ -177,6 +349,11 @@ function buildContent(fields, base) {
     content: objList(fields.content) ?? defaultContent(name, areas),
     callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
     footer: { ...defaultFooter(name), ...(obj(fields.footer) ?? {}) },
+    // Optional and with NO default on purpose. A generated link block would be
+    // the same boilerplate on every city — the value is in hand-picked anchors
+    // pointing at routes that exist for THAT city, so a city without the field
+    // simply renders no block. See LabRelatedLinks.
+    relatedLinks: obj(fields.relatedLinks),
   };
 }
 
