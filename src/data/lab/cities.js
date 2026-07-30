@@ -20,6 +20,12 @@
  *   areas       (array)    Localities covered; rendered as text (SEO), offered
  *                          in the booking form, and listed in areaServed.
  *   postalCode  (string)   Optional; local-business schema only.
+ *   geo         { lat, lng } Optional; town-centre coordinates, schema only.
+ *                          Use the town centre — this is a service area, not a
+ *                          walk-in address, so a precise pin would be a lie.
+ *   updated     (string)   Optional; ISO date the copy was last reviewed. Feeds
+ *                          `dateModified` in the page schema. Bump it when you
+ *                          actually rewrite the copy — never on a deploy.
  *   order       (number)   Optional; lower sorts first, else sorted by name.
  *   published   (boolean)  Optional; set false to hide without deleting.
  *
@@ -78,6 +84,8 @@ const LAB_CITY_SEED = [
     state: "Uttar Pradesh",
     areas: ["Sarnath", "Ramnagar", "Bhelupur", "Lanka", "Sigra", "Cantt"],
     postalCode: "221001",
+    geo: { lat: 25.3176, lng: 82.9739 },
+    updated: "2026-07-30",
     order: 1,
     published: true,
     // This copy used to be defaultContent() — the fallback every city inherited
@@ -108,6 +116,12 @@ const LAB_CITY_SEED = [
       "Bhatni",
     ],
     postalCode: "274001",
+    /* Deoria town centre. Deliberately the CENTRE and not a street pin: there is
+       no walk-in counter here — this is a home-collection service area, and a
+       precise address in the schema would be a claim we cannot keep. Google
+       reads `geo` on a service-area business as "roughly here", which is true. */
+    geo: { lat: 26.5024, lng: 83.7791 },
+    updated: "2026-07-30",
     order: 2,
     published: true,
 
@@ -372,6 +386,19 @@ function normalise(fields, id) {
     // Alternate names this city is searched by (e.g. Varanasi → "Banaras").
     aliases: strList(fields.aliases) ?? CITY_ALIASES[slug] ?? [],
     postalCode: fields.postalCode ? str(fields.postalCode) : null,
+    // Schema only, and only when BOTH numbers are real numbers — a half-filled
+    // pair would emit `latitude: undefined`, which invalidates the whole
+    // GeoCoordinates node rather than just omitting it.
+    geo:
+      Number.isFinite(fields.geo?.lat) && Number.isFinite(fields.geo?.lng)
+        ? { lat: fields.geo.lat, lng: fields.geo.lng }
+        : null,
+    // ISO date the copy was last reviewed; null → the page omits dateModified
+    // rather than inventing one. Only YYYY-MM-DD is accepted, so a typo drops
+    // the field instead of publishing a date Google cannot parse.
+    updated: /^\d{4}-\d{2}-\d{2}$/.test(str(fields.updated))
+      ? str(fields.updated)
+      : null,
     // Only an explicit `published: false` hides a city.
     published: fields.published !== false,
     order: Number.isFinite(fields.order) ? fields.order : Number.MAX_SAFE_INTEGER,

@@ -16,6 +16,11 @@ import { ChevronDown } from "lucide-react";
  *   links — optional internal links shown under the answer. Deliberately NOT
  *           part of the schema text; schema must mirror the readable answer.
  *
+ * `pageUrl` is the absolute URL of the page this block sits on. It is what lets
+ * the FAQ node join the page's graph (`#faqpage` → `isPartOf` → `#webpage`)
+ * instead of floating as an unattached document. Optional: without it the node
+ * still validates, it just carries no id and no link back to the page.
+ *
  * SEO note (July 2026): FAQ rich results were fully deprecated by Google on
  * 7 May 2026 and no longer appear in Search for any site. FAQPage is still a
  * valid Schema.org type and is safe to keep — it labels the Q&A relationship
@@ -23,7 +28,7 @@ import { ChevronDown } from "lucide-react";
  * ranking value lives in the visible answers being genuinely useful and
  * genuinely different per city.
  */
-export default function LabFaq({ city, faqs = [] }) {
+export default function LabFaq({ city, faqs = [], pageUrl }) {
   const [open, setOpen] = useState(0);
   const uid = useId();
 
@@ -43,9 +48,21 @@ export default function LabFaq({ city, faqs = [] }) {
 
   const headingId = `${uid}-heading`;
 
+  // Joined to the page's graph rather than left standing on its own. The page
+  // emits #webpage / #diagnosticlab / #breadcrumb (see the lab city page); this
+  // adds #faqpage and points at the same #webpage, so a crawler reads all four
+  // as one document about one business instead of two unrelated payloads.
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    ...(pageUrl
+      ? {
+          "@id": `${pageUrl}#faqpage`,
+          url: pageUrl,
+          isPartOf: { "@id": `${pageUrl}#webpage` },
+          inLanguage: ["hi-IN", "en-IN"],
+        }
+      : {}),
     mainEntity: items.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
