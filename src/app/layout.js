@@ -1,6 +1,14 @@
 import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import {
+  GBP_MAP_URL,
+  ORG_REF,
+  graph,
+  ldJson,
+  organizationNode,
+  websiteNode,
+} from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
 export const metadata = {
@@ -177,41 +185,59 @@ export default function RootLayout({ children }) {
           {`(function(){if(typeof Node!=="function"||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})();`}
         </Script>
 
-        {/* MEDICAL BUSINESS SCHEMA */}
+        {/*
+          BRAND ENTITY — the Organization, the WebSite, and the pharmacy service.
+
+          These three used to be one anonymous `Pharmacy` node with no `@id`, so
+          nothing else on the site could point at it and Google held no entity
+          for the name "MedicoBharat" at all — a brand search was being
+          spell-corrected to "medical bharat". The Organization and WebSite now
+          carry stable ids from src/lib/schema.js, every city page references
+          those ids instead of repeating a nameless stub, and the pharmacy is
+          declared as a service OF that organisation rather than as a separate
+          business that happens to share its name.
+
+          It renders on every route on purpose. The organisation is the same
+          organisation on /lab-test/deoria as it is here, and repeating the
+          identical `@id` across pages is how a crawler learns that.
+        */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Pharmacy",
-              "name": "MedicoBharat",
-              "url": SITE,
-              "image": `${SITE}/navbar/navbg.webp`,
-              "description": "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
-              "telephone": "+916392108234",
-              "priceRange": "₹₹",
-              "openingHours": "Mo-Su 00:00-23:59",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Deoria",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "274001",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "26.5017",
-                "longitude": "83.7794"
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "Deoria"
-              },
-              "sameAs": [
-                "https://www.instagram.com/medicobharat_01/",
-                "https://www.facebook.com/profile.php?id=61591803531075"
-              ]
-            }),
+            __html: ldJson(
+              graph(organizationNode(), websiteNode(), {
+                "@type": "Pharmacy",
+                "@id": `${SITE}/#pharmacy`,
+                name: "MedicoBharat",
+                url: SITE,
+                image: `${SITE}/navbar/navbg.webp`,
+                description:
+                  "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
+                telephone: "+916392108234",
+                priceRange: "₹₹",
+                openingHours: "Mo-Su 00:00-23:59",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Deoria",
+                  addressRegion: "Uttar Pradesh",
+                  postalCode: "274001",
+                  addressCountry: "IN",
+                },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: "26.5017",
+                  longitude: "83.7794",
+                },
+                areaServed: { "@type": "City", name: "Deoria" },
+                // A Pharmacy is a LocalBusiness, so it is a Place and `hasMap`
+                // is in domain here. Disappears while GBP_MAP_URL is empty.
+                ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
+                // The link that makes this a service of the brand above rather
+                // than a look-alike business. Same for `sameAs`: the profiles
+                // are declared once on the Organization, not copied here.
+                parentOrganization: ORG_REF,
+              })
+            ),
           }}
         />
 

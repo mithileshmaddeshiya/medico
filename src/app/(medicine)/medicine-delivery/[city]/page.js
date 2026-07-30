@@ -7,8 +7,8 @@ import HowItWorks from "@/components/medicine/HowCity";
 import MedicoBharatSEOSection from "@/components/medicine/MetakeyDeoria";
 import { getCity } from "@/lib/getCity";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import { cityData } from "@/data/medicine/cityData";
+import { BRAND_PROFILES, ORG_REF } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
 
@@ -127,28 +127,49 @@ export default async function Page({ params }) {
             "addressCountry": "IN",
             "postalCode": data?.postalCode
         },
-        "parentOrganization": {
-            "@type": "Organization",
-            "name": "MedicoBharat",
-            "url": SITE
-        }
+        // The brand, by reference — the same `@id` the root layout declares and
+        // the lab city pages point at. This was a `{ name, url }` stub, which
+        // shares a name with the organisation but carries no identifier, so a
+        // crawler could not tell that the MedicoBharat on this page is the same
+        // company as the one on /lab-test/deoria. See src/lib/schema.js.
+        "parentOrganization": ORG_REF,
+        "sameAs": BRAND_PROFILES
     }
 
     return (
         <div>
-            <Script
-                id="faq-schema"
+            {/*
+                Native <script>, NOT next/script.
+
+                These two were <Script> with the default "afterInteractive"
+                strategy, which injects an inline script from the CLIENT after
+                hydration. The consequence: neither block existed in the
+                prerendered HTML — `curl` this page and there was no structured
+                data on it at all. Google renders JavaScript and would usually
+                still find it, but on a second render pass and with no guarantee,
+                and every other crawler (Bing, and the AI answer engines) simply
+                saw a page with no schema.
+
+                JSON-LD is data, not executable code, so a plain tag is the right
+                choice and it lands in the static HTML — which is the whole
+                point. Next's own guide says exactly this:
+                node_modules/next/dist/docs/01-app/02-guides/json-ld.md
+
+                `<` is escaped for the same reason as on the lab pages: city copy
+                is authored text, and a stray "</script>" in it would close the
+                tag early and spill the payload into the document.
+            */}
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(faqSchema),
+                    __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
                 }}
             />
 
-            <Script
-                id="medical-business-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(medicalBusinessSchema),
+                    __html: JSON.stringify(medicalBusinessSchema).replace(/</g, "\\u003c"),
                 }}
             />
 

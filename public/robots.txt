@@ -7,6 +7,16 @@ Disallow: /upload
 Disallow: /admin
 Disallow: /api
 
+# AI / answer-engine crawlers, explicitly allowed.
+#
+# This group had NO rule line under it, which is not a valid group — a parser
+# either drops it or guesses, and "what does our robots.txt actually say" is not
+# a question to leave to a guess. The effective behaviour is unchanged (no rule
+# meant they fell back to the `*` group above, i.e. allowed); it is just stated
+# now. These crawlers are what put the site into ChatGPT, Claude and Perplexity
+# answers, which for a brand nobody has heard of is worth more than it costs.
+#
+# To BLOCK them instead, replace the Allow line below with `Disallow: /`.
 User-Agent: GPTBot
 User-Agent: Google-Extended
 User-Agent: anthropic-ai
@@ -14,6 +24,8 @@ User-Agent: ClaudeBot
 User-Agent: PerplexityBot
 User-Agent: CCBot
 User-Agent: Applebot-Extended
+Allow: /
 
+# Non-standard and ignored by Google, kept because Yandex still reads it.
 Host: https://www.medicobharat.com
 Sitemap: https://www.medicobharat.com/sitemap.xml

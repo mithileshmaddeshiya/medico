@@ -1,5 +1,14 @@
 # MedicoBharat — Technical & On-Page SEO Audit
 
+> **This file is history.** The current working checklist is
+> [SEO-CHECKLIST.md](SEO-CHECKLIST.md), audited 30 July 2026 against the
+> prerendered HTML. Read this file for the *reasoning* behind the July 23/24
+> findings; act on the other one.
+>
+> Since this audit: C1–C4 shipped, the lab content was rewritten per city, the
+> NABL claims were removed, and an Organization/WebSite entity graph was added
+> (30 July). The items still open are carried forward into the new checklist.
+
 Audited 23 July 2026 against the `new` branch. Next.js 16.2.4, App Router.
 
 Findings are ordered by how much traffic they are costing you, not by how hard
