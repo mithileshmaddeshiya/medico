@@ -57,6 +57,7 @@
  * the names each registry understands.
  */
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
+import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { varanasiContent } from "./content/varanasi";
 import {
   CITY_ALIASES,
@@ -131,6 +132,11 @@ const LAB_CITY_SEED = [
         {
           title: "Doosre Sheher",
           links: [
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Purvanchal ka referral hub — OPD se pehle report",
+            },
             {
               href: "/lab-test/deoria",
               label: "Deoria me lab test",
@@ -346,9 +352,226 @@ const LAB_CITY_SEED = [
           title: "Doosre Sheher Aur Madad",
           links: [
             {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            {
               href: "/lab-test/varanasi",
               label: "Varanasi me lab test",
               sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+            { href: "/contact", label: "Contact — number aur booking help" },
+            { href: "/about", label: "MedicoBharat ke baare me" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "gorakhpur",
+    name: "Gorakhpur",
+    state: "Uttar Pradesh",
+
+    /* City neighbourhoods first, then the district towns collection actually
+       reaches. These are not decorative: they render in the footer, fill the
+       booking form's dropdown, become `areaServed` in the schema, and are what
+       a "<mohalla> me blood test" search matches on. Kept to the localities a
+       Gorakhpur reader would recognise by name — an areaServed we cannot serve
+       is a lie in schema form, and a 30-item dropdown is unusable on a phone.
+       The full list, including the smaller mohallas, is in the page copy. */
+    areas: [
+      "Golghar",
+      "Civil Lines",
+      "Betiahata",
+      "Mohaddipur",
+      "Taramandal",
+      "Rustampur",
+      "Medical College Road",
+      "Gorakhnath",
+      "Kunraghat",
+      "Sahjanwa",
+      "Pipraich",
+      "Chauri Chaura",
+    ],
+
+    postalCode: "273001",
+
+    /* Gorakhpur town centre. Deliberately the CENTRE and not a street pin:
+       there is no walk-in counter here — this is a home-collection service
+       area, and a precise address in the schema would be a claim we cannot
+       keep. Google reads `geo` on a service-area business as "roughly here". */
+    geo: { lat: 26.7606, lng: 83.3732 },
+
+    updated: "2026-08-03",
+    order: 3,
+    published: true,
+
+    /* Gorakhpur carries its own copy rather than the generated defaults, for
+       the same reason Deoria does: a page that is another city's page with the
+       noun swapped reads as a doorway page and does not get indexed. `content`
+       and `faqs` are the two blocks that decide that, and the title and
+       description are written so the search result itself does not look like a
+       duplicate of the other two cities.
+
+       The angle is Gorakhpur's own — it is the region's referral hub, so the
+       reader is often here for an OPD appointment and can save an entire trip
+       by having the report in hand. See src/data/lab/content/gorakhpur.js. */
+
+    // 42 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat" (template in src/app/layout.js), so Google renders 57 —
+    // just inside the ~60 it will show. Primary keyword first, then the second
+    // biggest query on the page; both survive truncation.
+    title: "Lab Test in Gorakhpur — Blood Test at Home",
+
+    // ~157 characters, so it renders whole on desktop and mobile. Deliberately
+    // NOT Deoria's description with the city swapped — it leads with the thing
+    // only this city's page argues (report before the OPD visit), so the two
+    // snippets do not read as the same page twice.
+    description:
+      "Gorakhpur me lab test ghar baithe — OPD se pehle report taiyaar rakhiye. CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: "blood test",
+    // "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Gorakhpur — Blood Test, Full Body Checkup Aur Pathology Lab Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which only produces
+       "<template> in Gorakhpur" nine times plus one line per area. That misses
+       the three things Gorakhpur traffic actually is: test-wise long tail,
+       which converts because the searcher has already decided; the mohalla
+       modifiers, which is how a city this spread out is searched; and
+       Devanagari, which is how a large share of this district types.
+
+       `keywords` is a weak-to-zero ranking signal on its own — the reason to
+       keep this list honest is that it is the checklist the page's headings,
+       FAQs and prose are written against. Every term below appears in the
+       visible copy. */
+    keywords: [
+      // Primary
+      "lab test in Gorakhpur",
+      "Gorakhpur me lab test",
+      "blood test in Gorakhpur",
+      "pathology lab in Gorakhpur",
+      "diagnostic centre in Gorakhpur",
+      "lab test at home Gorakhpur",
+      "home sample collection Gorakhpur",
+      "blood test home collection Gorakhpur",
+      "lab test price in Gorakhpur",
+      "lab test rate list Gorakhpur",
+      "best pathology lab Gorakhpur",
+      "online lab test booking Gorakhpur",
+
+      // Test-wise long tail — the highest-intent queries on the page
+      "CBC test in Gorakhpur",
+      "CBC test price in Gorakhpur",
+      "thyroid test in Gorakhpur",
+      "TSH test Gorakhpur",
+      "sugar test in Gorakhpur",
+      "HbA1c test in Gorakhpur",
+      "full body checkup in Gorakhpur",
+      "full body health checkup package Gorakhpur",
+      "lipid profile test Gorakhpur",
+      "liver function test Gorakhpur",
+      "kidney function test Gorakhpur",
+      "vitamin D test in Gorakhpur",
+      "vitamin B12 test in Gorakhpur",
+      "dengue test in Gorakhpur",
+      "typhoid test in Gorakhpur",
+      "malaria test in Gorakhpur",
+      "urine routine test Gorakhpur",
+      "hepatitis test in Gorakhpur",
+
+      // Mohalla modifiers — how a city this spread out is actually searched
+      "blood test in Golghar Gorakhpur",
+      "lab test in Civil Lines Gorakhpur",
+      "lab test in Betiahata",
+      "blood test in Mohaddipur",
+      "lab test in Taramandal Gorakhpur",
+      "lab test in Rustampur Gorakhpur",
+      "blood test near Medical College Road Gorakhpur",
+      "lab test in Gorakhnath",
+      "lab test in Kunraghat",
+      "lab test in Sahjanwa",
+      "lab test in Pipraich",
+      "lab test in Chauri Chaura",
+
+      // Devanagari — same intents, the script a big share of this district types
+      "गोरखपुर में लैब टेस्ट",
+      "गोरखपुर में खून की जांच",
+      "गोरखपुर में पैथोलॉजी लैब",
+      "घर से सैंपल कलेक्शन गोरखपुर",
+      "गोरखपुर लैब टेस्ट रेट लिस्ट",
+      "गोरखपुर में फुल बॉडी चेकअप",
+
+      // Location-free queries — Google supplies the city from the searcher's
+      // position, which the DiagnosticLab schema's areaServed answers.
+      "lab test near me",
+      "blood test near me",
+      "pathology lab near me",
+      "full body checkup near me",
+      "MedicoBharat lab test Gorakhpur",
+    ],
+
+    content: gorakhpurContent,
+    faqs: gorakhpurFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabRelatedLinks below the guide. The footer already carries
+       some of these, but a footer is byte-identical on every lab page and gets
+       discounted as boilerplate; these anchors are descriptive and per-city.
+
+       Every href is checked against a real route: the lab cities in the seed
+       above, the medicine towns in src/data/medicine/cityData.js, and the
+       guides in src/data/blogs/. */
+    relatedLinks: {
+      heading: "Gorakhpur Ke Aas-paas MedicoBharat Ki Doosri Services",
+      intro:
+        "Aas-paas ke jilon me bhi wahi home collection, aur test chunne se le kar report padhne tak ke guide.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Gorakhpur ka safar bachane wala option",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Ilaaj Varanasi me chal raha ho to",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Fasting ke niyam aur test se pehle ki taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Dawa Aur Madad",
+          links: [
+            {
+              href: "/medicine-delivery/deoria",
+              label: "Deoria me online medicine delivery",
+              sub: "Test ke baad parche ki dawa",
             },
             { href: "/contact", label: "Contact — number aur booking help" },
             { href: "/about", label: "MedicoBharat ke baare me" },

@@ -96,6 +96,7 @@ const LAB_VARANASI_FEVER = "/lab-test/varanasi#fever-dengue-typhoid-testing-vara
 const LAB_VARANASI_PREGNANCY = "/lab-test/varanasi#pregnancy-women-health-tests";
 const LAB_VARANASI_BOOK = "/lab-test/varanasi#book";
 const LAB_DEORIA = "/lab-test/deoria";
+const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const MEDICINE_DEORIA = "/medicine-delivery/deoria";
 const BLOG_MEDICINE_DEORIA = "/blogs/online-medicine-delivery/deoria";
 const CONTACT = "/contact";
@@ -636,6 +637,11 @@ export const labTestVaranasi = {
       {
         title: "Aas-paas Ke Sheher",
         links: [
+          {
+            href: LAB_GORAKHPUR,
+            label: "Gorakhpur me lab test",
+            sub: "OPD se pehle report taiyaar rakhne ka tarika",
+          },
           {
             href: LAB_DEORIA,
             label: "Deoria me lab test",

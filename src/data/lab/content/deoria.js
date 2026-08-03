@@ -63,6 +63,10 @@ const MEDICINE_BARHAJ = "/medicine-delivery/barhaj";
 const MEDICINE_LAR = "/medicine-delivery/lar";
 const MEDICINE_BHATNI = "/medicine-delivery/bhatni";
 const LAB_VARANASI = "/lab-test/varanasi";
+// Added once Gorakhpur went live. This page names the city a dozen times as
+// the place people travel to — leaving it as plain text while we serve it was
+// the site's single most obvious missing link.
+const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 
 export const deoriaContent = [
   {
@@ -119,7 +123,9 @@ export const deoriaContent = [
       [
         "Isliye seedha faisla ye hai: parche par sirf blood aur urine ke test likhe hain to ghar par karaiye. Parche par scan ya procedure likha hai to safar ki planning kijiye — aur us trip se pehle blood test ghar par karwa lijiye, taaki specialist ke paas jaate waqt report pehle se haath me ho aur ek visit me baat ban jaaye. Kisi ka ilaaj Varanasi me chal raha hai to wahan bhi yahi suvidha hai — ",
         { text: "Varanasi me lab test aur home sample collection", href: LAB_VARANASI },
-        " usi tarah book hota hai.",
+        " usi tarah book hota hai. Aur agar aap Gorakhpur me hi rehte hain ya wahan kisi ke saath ruke hain, to ",
+        { text: "Gorakhpur me lab test", href: LAB_GORAKHPUR },
+        " bhi ghar par ho jaata hai.",
       ],
     ],
   },
@@ -296,8 +302,11 @@ export const deoriaFaqs = [
   },
   {
     q: "Kya lab test ke liye mujhe Deoria se Gorakhpur jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Deoria me hi liya ja sakta hai. Gorakhpur ya Varanasi jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lena behtar hai, taaki report pehle se haath me ho.",
-    links: [{ href: LAB_VARANASI, label: "Varanasi me lab test" }],
+    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Deoria me hi liya ja sakta hai. Gorakhpur ya Varanasi jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lena behtar hai, taaki report pehle se haath me ho — aur Gorakhpur me bhi home collection usi tarah available hai.",
+    links: [
+      { href: LAB_GORAKHPUR, label: "Gorakhpur me lab test" },
+      { href: LAB_VARANASI, label: "Varanasi me lab test" },
+    ],
   },
   {
     q: "Deoria jile me aap kaun kaun se ilaake cover karte hain?",
