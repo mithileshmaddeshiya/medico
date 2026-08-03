@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-import { blogs } from "@/data/blogData";
+import { blogs, getBlog } from "@/data/blogs";
 
 /**
  * Per-article share card: GET /blogs/<category>/<city>/og
@@ -15,7 +15,9 @@ import { blogs } from "@/data/blogData";
  * schema — three places that can now never disagree.
  *
  * Replaces the old `image:` values in blogData.js, which pointed at
- * /public/blogs/*.webp — files that were never added to the repo.
+ * /public/blogs/*.webp — files that were never added to the repo. (That data
+ * now lives in src/data/blogs/; the field is gone and on-page images must name
+ * a file that exists.)
  */
 export const size = { width: 1200, height: 630 };
 
@@ -26,7 +28,7 @@ export function generateStaticParams() {
 
 export async function GET(request, { params }) {
   const { category, city } = await params;
-  const blog = blogs.find((b) => b.category === category && b.city === city);
+  const blog = getBlog(category, city);
 
   const title = blog?.title?.trim() || "MedicoBharat";
 

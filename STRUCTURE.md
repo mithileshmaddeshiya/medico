@@ -49,8 +49,10 @@ src/app/
 │   ├── privacy/page.js    → /privacy
 │   ├── terms/page.js      → /terms
 │   └── blogs/[category]/[city]/
-│       ├── page.js        → /blogs/<category>/<city>   (blog article)
+│       ├── page.js        → /blogs/<category>/<city>  (blog article)
 │       └── og/route.js    → us article ka share-card image
+│                             (⚠ /blogs khud koi page NAHI hai — jaan-bujh kar.
+│                              Kahin bhi "/blogs" link mat lagana, wo 404 dega.)
 │
 ├── (medicine)/            → medicine delivery section
 │   ├── layout.js
@@ -87,6 +89,11 @@ src/components/
 ├── common/                → HAR page par shared
 │   ├── Navbar.jsx
 │   └── Footer.jsx
+│
+├── blog/                  → sirf /blogs pages ke liye
+│   ├── BlogProse.jsx        article ka body (h2 + paragraph + inline links + images)
+│   ├── BlogShare.jsx        social share buttons + follow links (sab plain <a>)
+│   └── BlogCityLinks.jsx    saare sheher ka link grid (live city list se banta hai)
 │
 ├── lab/                   → sirf LAB pages ke liye (self-contained, saaf)
 │   ├── LabNavbar.jsx        header
@@ -131,13 +138,42 @@ Yahaan **sirf data hota hai (JS objects), koi logic nahi.**
 
 ```
 src/data/
-├── labDefaults.js   → ⭐ lab page ka SAARA default content (hero, tests, prices, FAQs,
-│                        SEO copy, footer). Ek nayi city ka page yahin se ban jaata hai.
-├── labCities.js     → lab cities ka SEED/fallback data (jab Firestore na mile)
-├── cityData.js      → medicine-delivery cities ka data
-├── homeData.js      → homepage ka content
-└── blogData.js      → blog articles ka content
+├── lab/
+│   ├── defaults.js       → ⭐ lab page ka SAARA default content (hero, tests, prices,
+│   │                          FAQs, SEO copy, footer). Nayi city yahin se ban jaati hai.
+│   ├── cities.js         → lab cities ki list + har city ke override
+│   └── content/          → lambi SEO copy, ek file per city (varanasi.js, deoria.js)
+│
+├── medicine/
+│   ├── cityData.js       → medicine-delivery cities ka data
+│   └── homeData.js       → homepage ka content
+│
+└── blogs/                → ⭐ blog articles — ek FOLDER per city
+    ├── index.js            registry: blogs[], getBlog(), getRelatedBlogs(), getLatestBlogs()
+    ├── shared.js           author / publisher / robots / canonical — ek jagah
+    ├── varanasi/
+    │   ├── index.js        is sheher ke articles ki list
+    │   └── lab-test-in-varanasi.js
+    └── deoria/
+        ├── index.js
+        └── …teen articles
 ```
+
+### Naya blog kaise add karein
+
+1. `src/data/blogs/<city>/` me nayi file banao (purani ko copy kar lo — sabse aasan).
+2. `category` badlo (yahi URL banta hai: `/blogs/<category>/<city>`), phir title,
+   description, keywords, sections aur faqs.
+3. Usi folder ke `index.js` me import karke array me daal do.
+
+Bas. Route, sitemap, share-card image, BlogPosting + FAQ + Breadcrumb schema,
+homepage ke cards aur baaki articles ke "Aage padhiye" links — sab apne aap pick
+kar lete hain. **Naya sheher** ho to folder banao aur use
+`src/data/blogs/index.js` ke `CITY_BLOGS` me add kar do.
+
+> ⚠ Image ka `src` hamesha aisi file ho jo `/public` me sach me ho. Purane
+> `blogData.js` me aise path the jinki file kabhi add hi nahi hui — isliye blog
+> page par ek bhi image nahi dikhti thi aur schema me 404 ja raha tha.
 
 ---
 
@@ -167,18 +203,24 @@ src/lib/
 
 | Kya badalna hai | Kahaan jaao |
 |---|---|
-| Lab test ka price / naya test | `src/data/labDefaults.js` → `defaultTests()` (ya Firestore me us city ka doc) |
-| Lab page ke FAQ | `src/data/labDefaults.js` → `defaultFaqs()` |
-| Lab page ka SEO content | `src/data/labDefaults.js` → `defaultContent()` |
+| Lab test ka price / naya test | `src/data/lab/defaults.js` → `defaultTests()` |
+| Lab page ke FAQ | `src/data/lab/defaults.js` → `defaultFaqs()` |
+| Lab page ka SEO content | `src/data/lab/content/<city>.js` |
+| Lab page ke in-body internal links | `src/data/lab/cities.js` → us city ka `relatedLinks` |
+| **Naya blog likhna** | `src/data/blogs/<city>/` me nayi file + usi folder ke `index.js` me add |
+| Blog ka author / publisher / robots | `src/data/blogs/shared.js` |
+| Blog page ka layout / schema | `src/app/(main)/blogs/[category]/[city]/page.js` |
+| Blog ke social share buttons | `src/components/blog/BlogShare.jsx` |
 | Site ka domain / phone number | `src/lib/site.js` |
-| Homepage ka content | `src/data/homeData.js` + `src/components/medicine/HomeDataProvider.jsx` |
-| Medicine city ka data | `src/data/cityData.js` |
+| Brand ke social profile (schema + share) | `src/lib/schema.js` → `BRAND_PROFILES` |
+| Homepage ka content | `src/data/medicine/homeData.js` + `src/components/medicine/HomeDataProvider.jsx` |
+| Medicine city ka data | `src/data/medicine/cityData.js` |
 | Booking form ke fields | `src/components/lab/LabLeadCard.jsx` |
 | Booking kahaan save hoti hai | `src/app/api/lab-lead/route.js` |
 | Naya page/URL banana | `src/app/` me naya folder + `page.js` |
 | Footer / Navbar (main site) | `src/components/common/` |
 | Lab footer / navbar | `src/components/lab/LabFooter.jsx`, `LabNavbar.jsx` |
-| Sitemap me kya aata hai | `src/app/sitemap.js` |
+| Sitemap me kya aata hai | `src/app/sitemap.xml/route.js` + `src/app/sitemap/*.xml/route.js` |
 
 ---
 

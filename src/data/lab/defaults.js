@@ -405,7 +405,7 @@ export const defaultFooter = (city) => ({
     "Vitamin D Test",
     "Lipid Profile",
   ],
-  email: "medicobharat@gmail.com",
+  email: "support.medicobharat@gmail.com",
   phone: LAB_PHONE,
   hours: "Open all 7 days · Slots from 6 AM",
   // Social handles. `type` maps to a brand icon in LabFooter's registry — an

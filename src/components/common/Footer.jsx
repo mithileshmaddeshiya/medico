@@ -125,7 +125,7 @@ export default function Footer({ data, labCities = [] }) {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-green-600 shrink-0" />
-              <span className="break-all">medicobharat@gmail.com</span>
+              <span className="break-all">support.medicobharat@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-green-600 shrink-0" />
