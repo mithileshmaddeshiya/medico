@@ -2,27 +2,22 @@
 
 import { Upload, CheckCircle, Truck } from "lucide-react";
 
+/**
+ * Icon per step, positionally: step 1 uploads, step 2 confirms, step 3 delivers.
+ *
+ * Components, not rendered elements, and hoisted out of the component. As an
+ * array of JSX *elements* built inside the map callback, this was three
+ * elements in an array literal — which is what React needs `key` on, and what
+ * eslint was failing the build on. It also rebuilt all three on every step just
+ * to use one.
+ *
+ * A step beyond the third falls back to the first icon rather than rendering
+ * nothing, so adding a fourth step to a city's data cannot produce a card with
+ * an empty circle.
+ */
+const STEP_ICONS = [Upload, CheckCircle, Truck];
+
 export default function HowItWorks({ data }) {
-
-  const steps = [
-    {
-      icon: <Upload className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-      title: "Send Prescription",
-      desc: "Medicine name ya prescription WhatsApp par bhejein",
-      link: "https://wa.me/919891233525",
-    },
-    {
-      icon: <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-      title: "Order Confirm",
-      desc: "Hum price aur availability confirm karte hain",
-    },
-    {
-      icon: <Truck className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-      title: "Fast Delivery",
-      desc: "30–60 min me ghar tak delivery",
-    },
-  ];
-
   return (
     <section className="py-5 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -38,16 +33,12 @@ export default function HowItWorks({ data }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-5">
 
           {data?.howItWorks?.steps?.map((step, index) => {
-            const icons = [
-              <Upload className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-              <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-              <Truck className="w-5 h-5 md:w-6 md:h-6 text-green-600" />,
-            ];
+            const Icon = STEP_ICONS[index] ?? STEP_ICONS[0];
 
             const Card = (
               <div className="bg-green-50 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition duration-300 hover:scale-[1.02] cursor-pointer">
                 <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mx-auto bg-white rounded-full shadow mb-3 md:mb-4">
-                  {icons[index]}
+                  <Icon aria-hidden className="w-5 h-5 md:w-6 md:h-6 text-green-600" />
                 </div>
 
                 <h3 className="font-semibold text-gray-900 text-sm md:text-base">

@@ -94,7 +94,7 @@ export const BRAND_ALTERNATE_NAMES = [
 ];
 
 const BRAND_PHONE = "+916392108234";
-const BRAND_EMAIL = "medicobharat@gmail.com";
+const BRAND_EMAIL = "support.medicobharat@gmail.com";
 
 /**
  * The organisation itself. Declared on the home page (root layout) and
