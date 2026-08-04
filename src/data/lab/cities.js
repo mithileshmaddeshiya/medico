@@ -120,6 +120,11 @@ const LAB_CITY_SEED = [
               sub: "Symptom, umar aur mausam ke hisaab se poori guide",
             },
             {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Varanasi me full body checkup — kya karayein",
+              sub: "Package me kya hona chahiye, \"80+ parameters\" ka sach",
+            },
+            {
               href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
               label: "Blood test se pehle fasting aur taiyari",
             },
