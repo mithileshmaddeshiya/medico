@@ -17,6 +17,7 @@
  * city) is the URL, so a duplicate would make one of them unreachable. The
  * registry in ../index.js throws at import time if that ever happens.
  */
+import { fullBodyCheckupVaranasi } from "./full-body-checkup-in-varanasi";
 import { labTestVaranasi } from "./lab-test-in-varanasi";
 
-export const varanasiBlogs = [labTestVaranasi];
+export const varanasiBlogs = [labTestVaranasi, fullBodyCheckupVaranasi];

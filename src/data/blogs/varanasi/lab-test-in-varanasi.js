@@ -99,6 +99,10 @@ const LAB_DEORIA = "/lab-test/deoria";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const MEDICINE_DEORIA = "/medicine-delivery/deoria";
 const BLOG_MEDICINE_DEORIA = "/blogs/online-medicine-delivery/deoria";
+/* The sibling guide. This article stops at "package me kya hona chahiye" in one
+   sentence and hands the subject over — see the de-duplication note at the top
+   of ./full-body-checkup-in-varanasi.js for what moved there and why. */
+const BLOG_FULLBODY_VARANASI = "/blogs/full-body-checkup/varanasi";
 const CONTACT = "/contact";
 
 export const labTestVaranasi = {
@@ -131,9 +135,10 @@ export const labTestVaranasi = {
     "kaun sa blood test kab karayein",
     "blood test kab karana chahiye",
 
-    // The questions this guide is actually built to answer
-    "full body checkup in Varanasi",
-    "full body checkup me kaun se test hote hain",
+    // The questions this guide is actually built to answer. The full-body-
+    // checkup terms that used to sit here now belong to
+    // ./full-body-checkup-in-varanasi.js — one page per intent, or the two
+    // compete and Google picks one.
     "blood test se pehle kya nahi khana chahiye",
     "fasting blood test kitne ghante",
     "blood test report kaise padhein",
@@ -305,9 +310,11 @@ export const labTestVaranasi = {
         },
         "Ek baseline report sambhaal kar rakhiye — ye report se zyada keemti cheez hai. Aaj ka number tab kaam aata hai jab paanch saal baad koi value badalti hai aur ye pata karna hota hai ki wo hamesha se aisi thi ya ab hui hai.",
         [
-          "In sab ko alag-alag karane se accha ek package me karana hota hai — ek hi sample, kam kharcha, aur saare number ek hi date ke, jinhe aapas me padha ja sake. Kis package me kya hona chahiye, wo ",
+          "In sab ko alag-alag karane se accha ek package me karana hota hai — ek hi sample, kam kharcha, aur saare number ek hi date ke, jinhe aapas me padha ja sake. Package me kaun se test hone chahiye, \"80+ parameters\" ka matlab kya hota hai aur umar ke hisaab se kaun sa level lena chahiye — uski poori guide alag hai: ",
+          { text: "Varanasi me full body checkup — kya karayein", href: BLOG_FULLBODY_VARANASI },
+          ". Package aur booking ",
           { text: "full body checkup wale section", href: LAB_VARANASI_FULLBODY },
-          " me detail me likha hai.",
+          " par hai.",
         ],
         {
           note: {
@@ -563,9 +570,14 @@ export const labTestVaranasi = {
         "Dengue NS1 antigen sirf bukhar ke pehle 1 se 5 din me bharosemand hai. Paanchve din ke baad NS1 aksar negative aa jaata hai aur tab Dengue IgM antibody karana chahiye. Dono me se koi bhi test ho, saath me CBC zaroor karayein — platelet count aur haematocrit hi wo cheez hai jo doctor roz monitor karta hai. Typhoid ke Widal ke liye kam se kam 5 se 7 din ka bukhar chahiye.",
     },
     {
-      question: "Full body checkup me kam se kam kaun se test hone chahiye?",
+      /* This slot used to ask "full body checkup me kam se kam kaun se test
+         hone chahiye". That question now has its own article and its own FAQ
+         at /blogs/full-body-checkup/varanasi, and two FAQPage nodes on one
+         domain answering one question compete for one rich result — so this
+         one moved back into this article's own lane. */
+      question: "Haemoglobin kam aaya hai — sirf iron ki goli kaafi hai?",
       answer:
-        "Kam se kam paanch system cover hone chahiye: blood (CBC, ESR), sugar (fasting glucose aur HbA1c), heart risk (poora lipid profile), liver (LFT with albumin aur globulin) aur kidney (urea, creatinine, uric acid, electrolytes ke saath urine routine). Iske upar thyroid profile, vitamin D aur B12 jodne par package sach me kaam ka ho jaata hai. Package price dekh kar nahi, apne risk dekh kar chuniye.",
+        "Nahi. Haemoglobin kam aane par wahin rukna sabse aam galti hai. Iron ki goli haemoglobin to badha degi, lekin agar asli wajah vitamin B12 ki kami thi to wo waise hi chalti rahegi aur kuch mahine baad number phir gir jaayega. Kam haemoglobin par ferritin, iron studies aur vitamin B12 karana chahiye, taaki kami ki wajah pata chale. Purvanchal me auraton aur teenage ladkiyon me anaemia bahut aam hai, aur vegetarian gharon me B12 ki kami usse bhi aam.",
     },
     {
       question: "Thyroid ki dawa lene wale log test se pehle goli lein ya baad me?",
@@ -657,6 +669,11 @@ export const labTestVaranasi = {
       {
         title: "Doosre Guide",
         links: [
+          {
+            href: BLOG_FULLBODY_VARANASI,
+            label: "Varanasi me full body checkup — kya karayein",
+            sub: "Package me kya hona chahiye, umar ke hisaab se kaun sa level",
+          },
           {
             href: BLOG_MEDICINE_DEORIA,
             label: "Online medicine delivery in Deoria",
