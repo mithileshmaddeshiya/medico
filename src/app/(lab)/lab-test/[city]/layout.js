@@ -1,6 +1,6 @@
 import LabFooter from "@/components/lab/LabFooter";
-import { getMedicineCities } from "@/lib/getCity";
-import { getDefaultLabCity, getLabCities, getLabCity } from "@/lib/labCities";
+import { getDefaultLabCity, getLabCity } from "@/lib/labCities";
+import { getShellData } from "@/lib/shell";
 
 // The footer needs the city, and only this segment knows it — so the footer is
 // rendered here rather than in the (lab) group layout, which has no params.
@@ -11,25 +11,18 @@ import { getDefaultLabCity, getLabCities, getLabCity } from "@/lib/labCities";
 export default async function LabCityLayout({ children, params }) {
   const { city } = await params;
 
-  const cities = await getLabCities();
-  const cityData = (await getLabCity(city)) ?? (await getDefaultLabCity());
-
-  // Cross-links to the other live cities — computed here because the footer is
-  // a shared component that must not reach into the data layer itself.
-  const otherCities = cities.filter((c) => c.slug !== cityData.slug);
-
-  // The medicine section's towns, for the footer's cross-section links. Read
-  // here for the same reason: the footer takes data, it does not fetch it.
-  const medicineCities = await getMedicineCities();
+  const [{ labCities, guides }, cityData] = await Promise.all([
+    getShellData(),
+    getLabCity(city).then((found) => found ?? getDefaultLabCity()),
+  ]);
 
   return (
     <>
       {children}
-      <LabFooter
-        city={cityData}
-        otherCities={otherCities}
-        medicineCities={medicineCities}
-      />
+      {/* The footer filters this city out of `labCities` itself — see
+          LabFooter. It no longer takes a medicine-city list: that section is
+          retired and its URLs are redirected in next.config.mjs. */}
+      <LabFooter city={cityData} labCities={labCities} guides={guides} />
     </>
   );
 }

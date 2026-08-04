@@ -6,12 +6,15 @@ import { ArrowUpRight } from "lucide-react";
  * The all-cities link grid at the foot of an article.
  *
  * ── WHY IT IS GENERATED AND NOT HAND-WRITTEN ─────────────────────────────
- * Every href here comes from the live city lists (src/data/lab/cities.js and
- * src/data/medicine/cityData.js) and the blog registry. So a town that is added
- * appears here on its own, and — the part that matters — a town that is
- * un-published disappears instead of leaving a 404 in a link block that sits on
- * every article. A block of links is a crawl path; one dead link in it wastes
- * crawl budget on every page that carries it.
+ * Every href here comes from the live city list (src/data/lab/cities.js) and
+ * the blog registry. So a town that is added appears here on its own, and —
+ * the part that matters — a town that is un-published disappears instead of
+ * leaving a 404 in a link block that sits on every article. A block of links
+ * is a crawl path; one dead link in it wastes crawl budget on every page that
+ * carries it.
+ *
+ * The medicine-delivery column was removed with that section; its URLs are
+ * permanently redirected in next.config.mjs.
  *
  * The counterpart to this is `relatedLinks` on the post itself, which is
  * hand-picked and carries the contextual anchors a generator cannot know — the
@@ -27,12 +30,7 @@ import { ArrowUpRight } from "lucide-react";
  * `current` is the article's own href — it is filtered out, because a page
  * linking to itself is noise in the link graph.
  */
-export default function BlogCityLinks({
-  labCities = [],
-  medicineCities = [],
-  posts = [],
-  current = "",
-}) {
+export default function BlogCityLinks({ labCities = [], posts = [], current = "" }) {
   const groups = [
     {
       title: "Lab test — sheher ke hisaab se",
@@ -43,19 +41,23 @@ export default function BlogCityLinks({
       })),
     },
     {
-      title: "Medicine delivery — sheher ke hisaab se",
-      note: "Parcha bhejiye, dawa ghar par — jin kasbon me service hai.",
-      links: medicineCities.map((city) => ({
-        href: `/medicine-delivery/${city.slug}`,
-        label: `${city.name} me medicine delivery`,
-      })),
-    },
-    {
       title: "Doosre guide",
       note: "Isi tarah ke lekh, doosre sheher aur doosre sawaalon par.",
       links: posts
         .filter((post) => post.href !== current)
         .map((post) => ({ href: post.href, label: post.title })),
+    },
+    {
+      // Always present, and always last: the home page carries the full price
+      // list and the "which test when" copy, which is what a reader who has
+      // finished an article most often wants next.
+      title: "Sab kuch ek jagah",
+      note: "Poori rate list, sabhi test aur booking form — ek hi page par.",
+      links: [
+        { href: "/", label: "Sabhi lab test aur rate list" },
+        { href: "/about", label: "MedicoBharat ke baare me" },
+        { href: "/contact", label: "Contact — number aur booking help" },
+      ],
     },
   ].filter((group) => group.links.length);
 

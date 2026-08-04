@@ -45,24 +45,25 @@
  * ── Internal links ───────────────────────────────────────────────────────
  * The paragraph parts of the form { text, href } render as real in-prose links
  * (see LabContent). They are placed only where the sentence genuinely leads
- * somewhere — after the test comes the prescription, so those links point at
- * /medicine-delivery/<town>; the Gorakhpur/Varanasi paragraph points at the
- * other lab city. Every href here must be a route that exists:
- *   /medicine-delivery/{deoria,salempur,barhaj,lar,bhatni}   (medicine cityData)
- *   /lab-test/varanasi                                       (lab cities)
- *   /blogs/{online-medicine-delivery,medicine-home-delivery,buy-medicines-online}/deoria
+ * somewhere — the Gorakhpur/Varanasi paragraphs point at those cities' pages,
+ * and the "which test" paragraphs point at the guide that answers it.
+ *
+ * This page used to carry six links into /medicine-delivery/* and three into
+ * the Deoria medicine guides. That section is retired and every one of those
+ * URLs now 308s (see next.config.mjs), so they have been removed rather than
+ * left as redirects inside the prose. Every href below must be a route that
+ * renders:
+ *   /lab-test/{varanasi,gorakhpur}       (src/data/lab/cities.js)
+ *   /blogs/{lab-test,full-body-checkup}/varanasi   (src/data/blogs/varanasi/)
  *   /contact
  */
 
 /* Link targets used below. Kept as constants so a route rename is a one-line
    fix here instead of a hunt through the prose — and so a typo shows up as
    `undefined` in the href rather than as a silent 404 in production. */
-const MEDICINE_DEORIA = "/medicine-delivery/deoria";
-const MEDICINE_SALEMPUR = "/medicine-delivery/salempur";
-const MEDICINE_BARHAJ = "/medicine-delivery/barhaj";
-const MEDICINE_LAR = "/medicine-delivery/lar";
-const MEDICINE_BHATNI = "/medicine-delivery/bhatni";
 const LAB_VARANASI = "/lab-test/varanasi";
+const GUIDE_LAB_TEST = "/blogs/lab-test/varanasi";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 // Added once Gorakhpur went live. This page names the city a dozen times as
 // the place people travel to — leaving it as plain text while we serve it was
 // the site's single most obvious missing link.
@@ -101,15 +102,11 @@ export const deoriaContent = [
       "Fasting wale test ke liye subah 6 baje se slot shuru hote hain. Iska faayda gaon-kasbe me sheher se zyada hai: kheti ya dukaan ka kaam subah hi shuru ho jaata hai, aur 10–12 ghante khaali pet rehne ke baad koi din bhar bhookha nahi baith sakta. Jaldi wala slot lijiye, sample dijiye, aur turant naashta kar lijiye.",
       "Ghar me ek se zyada log test kara rahe hain — maa-baap, dada-dadi, bachche — to sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaayega. Agar koi bujurg hai, bistar par hai, diabetic hai jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai, to ye booking ke waqt bata dijiye.",
       [
-        "Inhi kasbon me dawa bhi ghar tak pahunchti hai, isliye test ke baad parche ki dawa ke liye dobara bazaar jaane ki zaroorat nahi — ",
-        { text: "Salempur me medicine delivery", href: MEDICINE_SALEMPUR },
-        ", ",
-        { text: "Barhaj me medicine delivery", href: MEDICINE_BARHAJ },
-        ", ",
-        { text: "Lar me medicine delivery", href: MEDICINE_LAR },
-        " aur ",
-        { text: "Bhatni me medicine delivery", href: MEDICINE_BHATNI },
-        " — sab isi jile me chalti hai.",
+        "Aur ye tay karne me ki kaun sa test karana chahiye — shikayat, umar aur mausam ke hisaab se — ",
+        { text: "hamari poori guide", href: GUIDE_LAB_TEST },
+        " kaam aayegi. Saal ka routine checkup karana ho to ",
+        { text: "full body checkup me kya-kya hona chahiye", href: GUIDE_FULL_BODY },
+        " wo bhi alag se likha hai.",
       ],
     ],
   },
@@ -171,9 +168,9 @@ export const deoriaContent = [
       "Isi wajah se ghar par sample dena in logon ke liye sabse aasan tarika hai. Chhutti ke pehle ya doosre din subah ka slot lijiye — ek visit, 10 minute, aur report chhutti khatam hone se pehle haath me. Ek baseline report saath rakhne ka faayda ye hai ki agli baar number badla to pata chal jaata hai.",
       "Wapas aane par jo panel aam taur par sabse kaam ka rehta hai: CBC, Blood Sugar (fasting aur PP) ya HbA1c, Lipid Profile, Liver Function Test aur Kidney Function Test, aur Vitamin D tatha B12. Jo log bahar lambi shift, kam dhoop aur bahar ka khana jhelte hain, unme vitamin ki kami aur badha hua lipid bahut aam milta hai.",
       [
-        "Agar bahar rehte hue lagatar bukhar, wazan girna, khaansi ya peeliyapan raha ho, to ye baat booking ke waqt zaroor bataiye aur doctor ko bhi. Aise me sirf routine package kaafi nahi hota, alag se jaanch chahiye hoti hai. Aur ghar par ma-baap ki regular dawa chal rahi hai to wapas jaane se pehle ",
-        { text: "Deoria me online medicine delivery", href: MEDICINE_DEORIA },
-        " set kar dijiye — parcha bhej dene par dawa ghar tak pahunch jaati hai.",
+        "Agar bahar rehte hue lagatar bukhar, wazan girna, khaansi ya peeliyapan raha ho, to ye baat booking ke waqt zaroor bataiye aur doctor ko bhi. Aise me sirf routine package kaafi nahi hota, alag se jaanch chahiye hoti hai. Aur ghar par ma-baap ka saal-bhar ka checkup bhi isi chhutti me nipta dijiye — ",
+        { text: "kis umar me kaun sa package theek rehta hai", href: GUIDE_FULL_BODY },
+        ", wo alag se likha hai.",
       ],
     ],
   },
@@ -230,9 +227,9 @@ export const deoriaContent = [
       "Report WhatsApp aur email dono par PDF me aati hai. Iska ek bada faayda Deoria jaise jile me ye hai ki report seedhe phone par rehti hai — Gorakhpur ya Lucknow ke doctor ko dikhana ho to bas forward kar dijiye, kagaz le kar jaane ki zaroorat nahi. Purani report bhi phone me sambhal kar rakhiye; doctor ko badlav dekhna hota hai, sirf aaj ka number nahi.",
       "Number ko report par chhape reference range se hi milaiye, internet ke kisi chart se nahi. Range machine aur method ke hisaab se badalti hai, aur umar tatha ling ke hisaab se bhi. Thoda sa high ya low hona bahut aam hai aur aksar koi bimari nahi hoti — ye diagnosis nahi, doctor se poochne ka ishaara hai.",
       [
-        "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Report ke baad doctor ne dawa likh di ho to wo bhi ",
-        { text: "Deoria me ghar tak medicine delivery", href: MEDICINE_DEORIA },
-        " se mangwa sakte hain — parche ka photo bhejiye, dawa ghar par aa jaayegi.",
+        "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Report ke numbers ka matlab kya hota hai aur kis flag par ghabrana nahi chahiye, ye ",
+        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kaise-padhein` },
+        " me detail me likha hai.",
       ],
     ],
   },
@@ -267,9 +264,9 @@ export const deoriaContent = [
       "देवरिया की रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
       "सैंपल देवरिया सदर के साथ रुद्रपुर, बरहज, सलेमपुर, भटपार रानी, गौरी बाज़ार, बैतालपुर, लार और भटनी में भी लिया जाता है। आपका गाँव इस सूची में न हो तो एक बार फ़ोन कर लीजिए — कवर होने पर उसी समय स्लॉट बुक हो जाएगा।",
       [
-        "बच्चे को तेज़ बुखार के साथ झटके, बेहोशी या लगातार उल्टी हो, तो जांच बुक करने के बजाय सीधे नज़दीकी अस्पताल ले जाइए — यह आपात स्थिति है। और जांच के बाद डॉक्टर ने दवा लिखी हो तो ",
-        { text: "देवरिया में दवा की होम डिलीवरी", href: MEDICINE_DEORIA },
-        " से वह भी घर पर मंगवाई जा सकती है।",
+        "बच्चे को तेज़ बुखार के साथ झटके, बेहोशी या लगातार उल्टी हो, तो जांच बुक करने के बजाय सीधे नज़दीकी अस्पताल ले जाइए — यह आपात स्थिति है। कौन सी जांच कब करानी चाहिए, इसकी पूरी जानकारी ",
+        { text: "हमारी गाइड में", href: GUIDE_LAB_TEST },
+        " दी गई है।",
       ],
     ],
   },
@@ -311,12 +308,6 @@ export const deoriaFaqs = [
   {
     q: "Deoria jile me aap kaun kaun se ilaake cover karte hain?",
     a: "Hum Deoria Sadar ke saath Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar, Bhatni aur inke aas-paas ke ilaakon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt ek landmark zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
-    links: [
-      { href: MEDICINE_SALEMPUR, label: "Salempur medicine delivery" },
-      { href: MEDICINE_BARHAJ, label: "Barhaj medicine delivery" },
-      { href: MEDICINE_LAR, label: "Lar medicine delivery" },
-      { href: MEDICINE_BHATNI, label: "Bhatni medicine delivery" },
-    ],
   },
   {
     q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
@@ -337,8 +328,8 @@ export const deoriaFaqs = [
     a: "Routine pathology ke liye kahin jaane ki zaroorat nahi — sample aapke ghar par liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye fasting wale test subah aur CBC, thyroid, HbA1c, vitamin jaise test din me kabhi bhi ho jaate hain. Hum 24 ghante khula lab hone ka daawa nahi karte; report 24 ghante ke andar milne ka karte hain.",
   },
   {
-    q: "Deoria me booking kaise karein, payment ka kya tarika hai, aur test ke baad dawa kaise milegi?",
-    a: "Is page par test chun kar form bhar dijiye ya seedha call kar dijiye. Doctor ka parcha hai to uska photo saath rakhiye, taaki wahi panel liya jaaye jo likha hai. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute me pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye. Payment usi waqt cash ya UPI (PhonePe, Google Pay, Paytm) se hota hai. Report ke baad likhi hui dawa ghar tak mangwane ka option alag se hai.",
-    links: [{ href: MEDICINE_DEORIA, label: "Deoria me medicine delivery" }],
+    q: "Deoria me booking kaise karein aur payment ka kya tarika hai?",
+    a: "Is page par test chun kar form bhar dijiye ya seedha call kar dijiye. Doctor ka parcha hai to uska photo saath rakhiye, taaki wahi panel liya jaaye jo likha hai. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute me pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye. Payment usi waqt cash ya UPI (PhonePe, Google Pay, Paytm) se hota hai.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
   },
 ];

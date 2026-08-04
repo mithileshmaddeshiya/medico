@@ -100,10 +100,10 @@ const BRAND_EMAIL = "support.medicobharat@gmail.com";
  * The organisation itself. Declared on the home page (root layout) and
  * referenced by `@id` everywhere else.
  *
- * Typed `Organization`, not `MedicalOrganization`: this node is the company
- * behind both sections of the site. The medical typing belongs on the nodes
- * that describe a service — the `Pharmacy` node on the home page and the
- * `DiagnosticLab` node on each lab page — and both point back here.
+ * Typed `Organization`, not `MedicalOrganization`: this node is the company,
+ * not the clinical service. The medical typing belongs on the nodes that
+ * describe a service — the `DiagnosticLab` node on the home page and the one
+ * on each lab city page — and every one of them points back here.
  */
 export const organizationNode = () => ({
   "@type": "Organization",
@@ -119,8 +119,13 @@ export const organizationNode = () => ({
     caption: "MedicoBharat",
   },
   image: { "@id": LOGO_ID },
+  // One sentence, and it must say what the business does. This used to lead
+  // with "online medicine delivery" — the description on the node that every
+  // other node on the site resolves to, i.e. the definition of the brand as
+  // far as a crawler is concerned. The medicine section is retired; nothing
+  // here may describe it again.
   description:
-    "MedicoBharat online medicine delivery aur ghar par lab test sample collection karta hai — Deoria jile aur aas-paas ke sheher me.",
+    "MedicoBharat ghar par lab test aur full body checkup ke liye free home sample collection karta hai — Varanasi, Gorakhpur aur Deoria jile me. Report 24 ghante me.",
   email: BRAND_EMAIL,
   telephone: BRAND_PHONE,
   address: {
@@ -163,7 +168,7 @@ export const websiteNode = () => ({
   name: "MedicoBharat",
   alternateName: BRAND_ALTERNATE_NAMES,
   description:
-    "Online medicine delivery aur home sample collection wale lab test — MedicoBharat.",
+    "Lab test aur full body checkup, ghar se free sample collection ke saath — MedicoBharat.",
   publisher: ORG_REF,
   inLanguage: ["hi-IN", "en-IN"],
 });

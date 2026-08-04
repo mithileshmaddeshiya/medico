@@ -1,18 +1,30 @@
 import { url } from "@/lib/site";
 
+/**
+ * /privacy
+ *
+ * This page is not optional decoration. The booking form on every page of this
+ * site collects a name, a mobile number and a full home address, and the DPDP
+ * Act 2023 requires the privacy notice to be reachable from where that
+ * collection happens — which is why the footer links it on every route.
+ *
+ * The copy used to describe a medicine-delivery business ("delivery and
+ * address details", "processing medicine-related requests"). It describes what
+ * is actually collected now: the details needed to send a phlebotomist to a
+ * house and return a report to a phone.
+ */
 export const metadata = {
-  title:
-    "Privacy Policy - MedicoBharat | Customer Data & Healthcare",
+  title: "Privacy Policy — MedicoBharat Lab Test",
 
   description:
-    "Read the Privacy Policy of MedicoBharat to understand how we collect, use, and protect customer information and healthcare-related.",
+    "MedicoBharat lab test booking me aapki kaun si jaankari li jaati hai, kis liye use hoti hai aur kaise surakshit rakhi jaati hai — poori privacy policy.",
 
   keywords: [
     "MedicoBharat privacy policy",
-    "medicine delivery privacy",
-    "healthcare website privacy policy",
+    "lab test privacy policy",
+    "health report data privacy",
+    "home sample collection data policy",
     "customer data policy",
-    "online pharmacy privacy",
   ],
 
   alternates: {
@@ -29,11 +41,10 @@ export const metadata = {
   },
 
   openGraph: {
-    title:
-      "Privacy Policy - MedicoBharat | Customer Data & Healthcare Privacy",
+    title: "Privacy Policy — MedicoBharat Lab Test",
 
     description:
-      "Learn how MedicoBharat collects, uses, and protects customer information and healthcare-related data.",
+      "Lab test booking me li gayi jaankari — kya collect hota hai, kyun, aur use kaise surakshit rakha jaata hai.",
 
     url: url("/privacy"),
 
@@ -155,19 +166,23 @@ export default function Page() {
                   </h2>
 
                   <p className="text-sm md:text-base text-gray-600 leading-7 mb-4">
-                    MedicoBharat may collect certain information to provide a
-                    smooth and reliable customer experience.
+                    A lab test booking cannot be fulfilled without a few
+                    specific details — someone has to reach the right house and
+                    the report has to reach the right phone. We collect those,
+                    and no more than those.
                   </p>
 
                   <ul className="space-y-3 text-sm md:text-base text-gray-700">
 
-                    <li>• Name and contact information</li>
+                    <li>• Name and mobile number</li>
 
-                    <li>• Delivery and address details</li>
+                    <li>• Home address for sample collection, with a landmark</li>
 
-                    <li>• Prescription-related information</li>
+                    <li>• The test or package selected, and the city or locality</li>
 
-                    <li>• Healthcare support queries</li>
+                    <li>
+                      • A prescription image, only when you choose to send one
+                    </li>
 
                     <li>• Website usage and technical information</li>
 
@@ -183,17 +198,25 @@ export default function Page() {
                   </h2>
 
                   <p className="text-sm md:text-base text-gray-600 leading-7 mb-4">
-                    Customer information may be used to improve services and
-                    provide healthcare-related assistance.
+                    Your details are used to run the booking you asked for. They
+                    are not sold, and they are not used to market anything to
+                    you that you did not ask about.
                   </p>
 
                   <ul className="space-y-3 text-sm md:text-base text-gray-700">
 
-                    <li>• Processing medicine-related requests</li>
+                    <li>
+                      • Confirming your slot and address by phone or WhatsApp
+                    </li>
 
-                    <li>• Customer support and communication</li>
+                    <li>
+                      • Sending a phlebotomist to collect the sample, and
+                      processing it at the laboratory
+                    </li>
 
-                    <li>• Improving user experience and services</li>
+                    <li>• Delivering your report as a PDF on WhatsApp and email</li>
+
+                    <li>• Customer support and follow-up on that booking</li>
 
                     <li>• Managing website functionality and security</li>
 

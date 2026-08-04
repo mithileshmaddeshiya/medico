@@ -16,9 +16,9 @@ import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
  * city can put a real internal link inside its prose:
  *
  *   p: [
- *     "Dawa bhi chahiye to ",
- *     { text: "Deoria me medicine delivery", href: "/medicine-delivery/deoria" },
- *     " se ghar par mangwa lijiye.",
+ *     "Kaun sa test kab karana chahiye, wo ",
+ *     { text: "is guide me likha hai", href: "/blogs/lab-test/varanasi" },
+ *     ".",
  *   ]
  *
  * That matters more than it looks: a contextual link inside a sentence carries

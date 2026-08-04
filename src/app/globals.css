@@ -13,7 +13,9 @@
   }
 }
 
-/* Navbar ECG heartbeat line — draws itself on a loop */
+/* ECG heartbeat line — draws itself on a loop. Used by the homepage hero's
+   trust badge; it was the navbar's centre tagline until the nav links took
+   that space. */
 @keyframes ecg-draw {
   0% {
     stroke-dashoffset: 260;
@@ -56,6 +58,20 @@
 
 .lab-pop-in {
   animation: lab-pop-in 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mobile menu sheet — slides in from the right edge (LabNavbar) */
+@keyframes lab-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.lab-slide-in {
+  animation: lab-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 

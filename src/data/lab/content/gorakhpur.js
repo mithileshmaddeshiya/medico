@@ -69,9 +69,13 @@
  * Paragraph parts of the form { text, href } render as in-prose links (see
  * LabContent). Every href must be a route that exists:
  *   /lab-test/{deoria,varanasi}            (src/data/lab/cities.js)
- *   /medicine-delivery/deoria              (src/data/medicine/cityData.js)
  *   /blogs/lab-test/varanasi  + anchors    (src/data/blogs/varanasi/)
+ *   /blogs/full-body-checkup/varanasi      (src/data/blogs/varanasi/)
  *   /contact
+ *
+ * The /medicine-delivery/deoria link that used to sit in the reports section
+ * is gone: that section is retired and the URL now 308s (see next.config.mjs).
+ * A redirect inside prose is a link a crawler learns to stop following.
  */
 
 /* Link targets as constants: a route rename is a one-line fix here instead of a
@@ -79,8 +83,8 @@
    than as a silent 404 in production. */
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_VARANASI = "/lab-test/varanasi";
-const MEDICINE_DEORIA = "/medicine-delivery/deoria";
 const GUIDE_WHICH_TEST = "/blogs/lab-test/varanasi";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 const GUIDE_FEVER_DAYS = "/blogs/lab-test/varanasi#bukhar-me-test-ka-din";
 const GUIDE_FASTING = "/blogs/lab-test/varanasi#fasting-aur-taiyari";
 const GUIDE_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
@@ -265,9 +269,9 @@ export const gorakhpurContent = [
         ".",
       ],
       [
-        "Kuch result usi din doctor maangte hain, intezaar nahi: tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya badha creatinine ke saath peshab kam hona. Aur report ke baad likhi hui dawa aas-paas ke jilon me ghar tak pahunchti hai — jaise ",
-        { text: "Deoria me medicine delivery", href: MEDICINE_DEORIA },
-        ".",
+        "Kuch result usi din doctor maangte hain, intezaar nahi: tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya badha creatinine ke saath peshab kam hona. Aur saal ka routine checkup planning karni ho to ",
+        { text: "full body checkup me kya-kya hona chahiye", href: GUIDE_FULL_BODY },
+        " pehle padh lijiye — package parameter ki ginti se nahi, apne risk se chunna chahiye.",
       ],
     ],
   },

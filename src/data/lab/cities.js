@@ -103,9 +103,10 @@ const LAB_CITY_SEED = [
 
        The split is deliberate and the anchors say so: this page is the service
        (book, price, menu), the guide is the reading (which test, when, how to
-       read the report). Every href is a route that exists — the guide in
-       src/data/blogs/varanasi/, deoria in the seed below, the medicine towns in
-       src/data/medicine/cityData.js. */
+       read the report). Every href is a route that exists — the guides in
+       src/data/blogs/varanasi/, the other cities in the seed below, and the
+       home page. The medicine-delivery links that used to sit in this block
+       are gone with the section; do not add them back. */
     relatedLinks: {
       heading: "Test Chunne Me Madad Chahiye?",
       intro:
@@ -147,16 +148,16 @@ const LAB_CITY_SEED = [
               label: "Deoria me lab test",
               sub: "Gorakhpur ka safar bachane wala option",
             },
-            {
-              href: "/medicine-delivery/deoria",
-              label: "Deoria me online medicine delivery",
-              sub: "Test ke baad parche ki dawa",
-            },
           ],
         },
         {
           title: "Madad",
           links: [
+            {
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Kaun sa test kab karayein — ek jagah",
+            },
             { href: "/contact", label: "Contact — number aur booking help" },
             { href: "/about", label: "MedicoBharat ke baare me" },
           ],
@@ -308,53 +309,50 @@ const LAB_CITY_SEED = [
     faqs: deoriaFaqs,
 
     /* ── In-body internal links ────────────────────────────────────────────
-       Rendered by LabRelatedLinks below the guide. The medicine towns are also
+       Rendered by LabRelatedLinks below the guide. The other cities are also
        in the footer, but a footer is byte-identical on every lab page and gets
        discounted as boilerplate; these anchors are descriptive and per-city.
-       The three guides are the real gain — nothing else on the site links a lab
-       page into /blogs/*.
+       The guides are the real gain — nothing else on the site links a lab page
+       into /blogs/*.
 
-       Every href here is checked against a real route: the medicine towns exist
-       in src/data/medicine/cityData.js, the guides in src/data/blogs/, and
-       varanasi in the seed above. */
+       This block used to be two-thirds medicine delivery: five town pages and
+       three medicine guides, all of which are now permanently redirected (see
+       next.config.mjs). A link block is a crawl path, and a path made of
+       redirects is one the crawler learns to stop following. What replaces
+       them are the routes a reader on this page actually wants next.
+
+       Every href here is checked against a real route: the guides live in
+       src/data/blogs/varanasi/ and the cities in the seed above. */
     relatedLinks: {
-      heading: "Deoria Jile Me MedicoBharat Ki Doosri Services",
+      heading: "Deoria Ke Liye Aage Ki Jaankari",
       intro:
-        "Test ke baad dawa, aas-paas ke kasbon ki delivery, aur Deoria ke liye likhe gaye guide — sab ek jagah.",
+        "Kaun sa test kab karana chahiye, report ke numbers ka matlab, aur aas-paas ke jile — sab ek jagah.",
       groups: [
         {
-          title: "Deoria Me Medicine Delivery",
+          title: "Test Chunne Me Madad",
           links: [
             {
-              href: "/medicine-delivery/deoria",
-              label: "Deoria me online medicine delivery",
-              sub: "Parcha bhejiye, dawa ghar par",
-            },
-            { href: "/medicine-delivery/salempur", label: "Salempur me medicine delivery" },
-            { href: "/medicine-delivery/barhaj", label: "Barhaj me medicine delivery" },
-            { href: "/medicine-delivery/lar", label: "Lar me medicine delivery" },
-            { href: "/medicine-delivery/bhatni", label: "Bhatni me medicine delivery" },
-          ],
-        },
-        {
-          title: "Deoria Ke Liye Guide",
-          links: [
-            {
-              href: "/blogs/online-medicine-delivery/deoria",
-              label: "Online medicine delivery in Deoria",
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
             },
             {
-              href: "/blogs/medicine-home-delivery/deoria",
-              label: "Medicine home delivery in Deoria",
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
             },
             {
-              href: "/blogs/buy-medicines-online/deoria",
-              label: "Deoria me online dawa kaise mangwayein",
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
             },
           ],
         },
         {
-          title: "Doosre Sheher Aur Madad",
+          title: "Doosre Sheher",
           links: [
             {
               href: "/lab-test/gorakhpur",
@@ -365,6 +363,16 @@ const LAB_CITY_SEED = [
               href: "/lab-test/varanasi",
               label: "Varanasi me lab test",
               sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+          ],
+        },
+        {
+          title: "Madad",
+          links: [
+            {
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Har sheher me wahi rate — ek jagah",
             },
             { href: "/contact", label: "Contact — number aur booking help" },
             { href: "/about", label: "MedicoBharat ke baare me" },
@@ -530,8 +538,7 @@ const LAB_CITY_SEED = [
        discounted as boilerplate; these anchors are descriptive and per-city.
 
        Every href is checked against a real route: the lab cities in the seed
-       above, the medicine towns in src/data/medicine/cityData.js, and the
-       guides in src/data/blogs/. */
+       above and the guides in src/data/blogs/varanasi/. */
     relatedLinks: {
       heading: "Gorakhpur Ke Aas-paas MedicoBharat Ki Doosri Services",
       intro:
@@ -571,12 +578,16 @@ const LAB_CITY_SEED = [
           ],
         },
         {
-          title: "Dawa Aur Madad",
+          title: "Madad",
           links: [
             {
-              href: "/medicine-delivery/deoria",
-              label: "Deoria me online medicine delivery",
-              sub: "Test ke baad parche ki dawa",
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Har sheher me wahi rate — ek jagah",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
             },
             { href: "/contact", label: "Contact — number aur booking help" },
             { href: "/about", label: "MedicoBharat ke baare me" },

@@ -8,14 +8,13 @@ import { ArrowUpRight } from "lucide-react";
  * no block — Varanasi renders exactly as before.
  *
  * WHY A BLOCK AND NOT JUST MORE FOOTER LINKS. The footer already cross-links
- * the medicine towns, but a footer is boilerplate: it is identical on every lab
+ * the other cities, but a footer is boilerplate: it is byte-identical on every
  * page, so a crawler discounts it. This block is per-city, sits in the body,
- * and carries descriptive anchors ("Deoria me online medicine delivery"), which
- * is what actually passes a topical signal.
+ * and carries descriptive anchors ("Gorakhpur me lab test — OPD se pehle
+ * report"), which is what actually passes a topical signal.
  *
- * It is also the only thing on the site that links a lab page to the Deoria
- * blog articles — before this, /blogs/* was reachable from nothing but its own
- * related-articles list and the sitemap.
+ * It is also most of what links a city page into /blogs/* — those articles are
+ * otherwise reachable from the header menu, the footer column and each other.
  *
  * Shape:
  *   relatedLinks: {

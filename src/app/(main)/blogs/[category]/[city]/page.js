@@ -11,7 +11,6 @@ import BlogShare from "@/components/blog/BlogShare";
 // reused here rather than duplicated. See the note at the top of that file.
 import LabRelatedLinks from "@/components/lab/LabRelatedLinks";
 import { blogs, getBlog, getRelatedBlogs } from "@/data/blogs";
-import { getMedicineCities } from "@/lib/getCity";
 import { getLabCities, getLabCity } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, SITE_PHONE } from "@/lib/site";
@@ -106,17 +105,18 @@ export default async function BlogPage({ params }) {
 
   if (!blog) notFound();
 
-  /* The service pages this town actually has. Both are looked up rather than
-     assumed, because the CTA used to link at /medicine-delivery/<city>
-     unconditionally — and there is no medicine page for Varanasi, so the very
-     first article for a lab city would have shipped a 404 in its main call to
-     action. A link that might not resolve is not a link. */
-  const [labCity, labCities, medicineCities] = await Promise.all([
+  /* The lab page for this town, looked up rather than assumed. Every CTA and
+     breadcrumb below is rendered only when it resolves — an article may be
+     written for a town whose service page has not shipped yet, and a link that
+     might not resolve is not a link.
+
+     There used to be a second lookup here for the medicine section. That
+     section is retired and its URLs are permanently redirected, so the article
+     now has exactly one service page to point at. */
+  const [labCity, labCities] = await Promise.all([
     getLabCity(blog.city),
     getLabCities(),
-    getMedicineCities(),
   ]);
-  const medicineCity = medicineCities.find((item) => item.slug === blog.city) ?? null;
 
   const related = getRelatedBlogs(blog);
   const published = readableDate(blog.publishedAt);
@@ -170,12 +170,7 @@ export default async function BlogPage({ params }) {
      valid two-item list. */
   const parentCrumb = labCity
     ? { name: `${labCity.name} me lab test`, item: `${SITE}/lab-test/${labCity.slug}` }
-    : medicineCity
-      ? {
-          name: `${medicineCity.name} me medicine delivery`,
-          item: `${SITE}/medicine-delivery/${medicineCity.slug}`,
-        }
-      : null;
+    : null;
 
   const breadcrumbNode = {
     "@type": "BreadcrumbList",
@@ -395,31 +390,23 @@ export default async function BlogPage({ params }) {
                 </nav>
               )}
 
-              {/* Booking card. Rendered only for a town that has the service —
-                  same rule as the CTA further down. */}
-              {(labCity || medicineCity) && (
+              {/* Booking card. Rendered only for a town that has a service
+                  page — same rule as the CTA further down. */}
+              {labCity && (
                 <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-5">
                   <p className="text-[13.5px] font-bold text-emerald-950">
-                    {labCity
-                      ? `${labCity.name} me ghar par sample collection`
-                      : `${medicineCity.name} me dawa ghar par`}
+                    {labCity.name} me ghar par sample collection
                   </p>
 
                   <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
-                    {labCity
-                      ? "Free home collection · slot subah 6 baje se · report 24 ghante me."
-                      : "Parcha bhejiye, dawa aapke darwaze par."}
+                    Free home collection · slot subah 6 baje se · report 24 ghante me.
                   </p>
 
                   <Link
-                    href={
-                      labCity
-                        ? `/lab-test/${labCity.slug}#book`
-                        : `/medicine-delivery/${medicineCity.slug}`
-                    }
+                    href={`/lab-test/${labCity.slug}#book`}
                     className="mt-4 flex w-full items-center justify-center rounded-xl bg-emerald-600 px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-emerald-700"
                   >
-                    {labCity ? "Test book karein" : "Order karein"}
+                    Test book karein
                   </Link>
 
                   <a
@@ -471,42 +458,32 @@ export default async function BlogPage({ params }) {
 
             <BlogProse sections={blog.sections} />
 
-            {/* CTA — only the services this town actually has. Both hrefs are
-                checked against the live city lists above, so neither can 404. */}
-            {(labCity || medicineCity) && (
+            {/* CTA — rendered only when this town has a service page. The href
+                is checked against the live city list above, so it cannot 404. */}
+            {labCity && (
               <div className="mt-12 rounded-2xl bg-linear-to-br from-emerald-600 to-teal-600 p-6 sm:p-8 text-white">
                 <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
                   {blog.cityName} me abhi book kijiye
                 </h2>
 
                 <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-emerald-50">
-                  {labCity
-                    ? `Free home sample collection, slot subah 6 baje se, aur report 24 ghante me — poore ${blog.cityName} me.`
-                    : `Parcha bhejiye aur dawa ${blog.cityName} me apne ghar par mangwaiye.`}
+                  {`Free home sample collection, slot subah 6 baje se, aur report 24 ghante me — poore ${blog.cityName} me.`}
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  {labCity && (
-                    <Link
-                      href={`/lab-test/${labCity.slug}`}
-                      className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-[14px] font-bold text-emerald-700 transition hover:bg-emerald-50"
-                    >
-                      {labCity.name} me lab test book karein
-                    </Link>
-                  )}
+                  <Link
+                    href={`/lab-test/${labCity.slug}`}
+                    className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-[14px] font-bold text-emerald-700 transition hover:bg-emerald-50"
+                  >
+                    {labCity.name} me lab test book karein
+                  </Link>
 
-                  {medicineCity && (
-                    <Link
-                      href={`/medicine-delivery/${medicineCity.slug}`}
-                      className={`inline-flex items-center rounded-xl px-6 py-3 text-[14px] font-bold transition ${
-                        labCity
-                          ? "border border-white/70 text-white hover:bg-white/10"
-                          : "bg-white text-emerald-700 hover:bg-emerald-50"
-                      }`}
-                    >
-                      {medicineCity.name} me medicine delivery
-                    </Link>
-                  )}
+                  <Link
+                    href="/"
+                    className="inline-flex items-center rounded-xl border border-white/70 px-6 py-3 text-[14px] font-bold text-white transition hover:bg-white/10"
+                  >
+                    Sabhi test aur rate list
+                  </Link>
                 </div>
               </div>
             )}
@@ -547,15 +524,10 @@ export default async function BlogPage({ params }) {
 
             <BlogShare url={blog.canonical} title={blog.title} />
 
-            {/* The generated grid: every lab town, every medicine town, every
-                other guide. Built from the live lists so it cannot point at a
-                town we have stopped serving. */}
-            <BlogCityLinks
-              labCities={labCities}
-              medicineCities={medicineCities}
-              posts={blogs}
-              current={blog.href}
-            />
+            {/* The generated grid: every lab town and every other guide. Built
+                from the live lists so it cannot point at a town we have
+                stopped serving. */}
+            <BlogCityLinks labCities={labCities} posts={blogs} current={blog.href} />
 
             {related.length > 0 && (
               <section aria-labelledby="blog-related-heading" className="mt-12">
