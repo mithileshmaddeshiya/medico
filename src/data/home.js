@@ -124,66 +124,67 @@ export const HOME_META = {
 };
 
 /* ── Hero ─────────────────────────────────────────────────────────────────
-   The h1 is VISIBLE here, unlike on the city pages where the hero is an image
-   plus the booking form and the h1 is screen-reader only. A home page whose
-   biggest promise is invisible to the reader is a home page that has to be
-   read to be understood, and most of this traffic is on a phone in a hurry. */
+   The hero is a banner image plus the booking form, the same as the city
+   pages, and the h1 is screen-reader only. */
 export const HOME_HERO = {
-  eyebrow: "Free home sample collection · Report 24 ghante me",
-
-  // Two halves so the accent colour can fall on the phrase that carries the
-  // primary keyword rather than on a random word in the middle of it.
+  /* Two halves so that, if the visible headline ever comes back, the accent
+     colour falls on the phrase carrying the primary keyword rather than on a
+     random word in the middle of it. HomeHero joins them for the sr-only h1. */
   h1Lead: "Lab Test Ghar Baithe —",
   h1Accent: "Free Home Sample Collection",
 
-  lead:
-    "CBC, thyroid, sugar, vitamin aur full body checkup — sample aapke ghar se liya jaata hai aur report 24 ghante me WhatsApp par PDF me aa jaati hai. Na line, na khaali pet safar, na report lene dobara jaana.",
-
-  /* Four facts, not four adjectives. Every one of them is checkable and every
-     one of them is in the confirmed set at the top of this file. */
-  points: [
-    "Collection bilkul free — sirf test ka price",
-    "Slot subah 6 baje se, saaton din",
-    "Trained phlebotomist, ID card ke saath",
-    "Payment sample lete waqt — cash ya UPI",
-  ],
-
   formTitle: "Book Your Sample Collection",
 
-  // Same asset the city heroes use, so there is one hero image to maintain.
-  image: "/navheroimage/labtestimg.webp",
+  // The home page gets its own banner rather than reusing the city heroes'
+  // asset — the two pages sit next to each other in search results, and an
+  // identical image makes the home page look like just another city page.
+  // 1699x926, so the hero box is aspect-11/6. Replacing this file with a
+  // different shape means changing that class in HomeHero.jsx too.
+  image: "/navheroimage/homepage.png",
+
+  // The banner has its headline burned into the artwork, and a crawler cannot
+  // read pixels — so the alt carries that wording rather than describing the
+  // photograph. The counts printed on the banner are deliberately NOT repeated
+  // here; see the rule at the top of this file.
   imageAlt:
-    "MedicoBharat ka trained phlebotomist ghar par blood sample collect karte hue",
+    "MedicoBharat Lab Test — accurate tests, reliable results. Advanced diagnostics, certified labs aur home sample collection.",
 };
 
 /* ── How it works ─────────────────────────────────────────────────────────
    Four steps, with the actual timings the site promises elsewhere. The point
    of this block on a home page is to remove the one doubt that stops a first
-   booking: "kya hoga booking ke baad". */
+   booking: what actually happens after I submit the form.
+
+   THIS BLOCK IS IN ENGLISH, on purpose, and it is the only one on the page
+   that is — everything around it is Hinglish. The timings are unchanged: 30
+   minutes to the call, 10 minutes for the visit, 24 hours to the report, and
+   48–72 hours for the specialised tests. Those four numbers appear in the
+   FAQs, the long-form copy and the city pages too; changing one here without
+   changing it there is how the page starts contradicting itself. */
 export const HOME_STEPS = {
-  heading: "Booking Se Report Tak — Poora Process",
+  heading: "From Booking to Report — The Full Process",
   intro:
-    "Char step, aur teenon timing wahi hain jo hum har page par likhte hain — na koi chhupa charge, na koi surprise.",
+    "Four steps, and all three timings are the same ones we state on every page — no hidden charge, no surprises.",
   steps: [
     {
       icon: "clipboard-list",
-      title: "Test chuniye",
-      text: "Neeche ki list se test ya package chuniye, ya form bhar dijiye. Doctor ka parcha hai to uska photo saath rakhiye — wahi panel liya jaayega.",
+      title: "Choose your test",
+      text: "Pick a test or package from the list below, or simply fill in the form. If you have a doctor's prescription, keep a photo of it handy — we will run exactly that panel.",
     },
     {
       icon: "phone-call",
-      title: "Hum call karenge",
-      text: "Lagbhag 30 minute me call aata hai — slot aur address confirm karne ke liye. Fasting wale test ke liye subah ka slot suggest kiya jaata hai.",
+      title: "We call you back",
+      text: "You get a call in about 30 minutes to confirm your slot and address. For fasting tests we suggest an early-morning slot.",
     },
     {
       icon: "home",
-      title: "Ghar par collection",
-      text: "Trained phlebotomist ID card ke saath aata hai, aapke saamne sample leta hai. Poori visit lagbhag 10 minute. Payment wahin — cash ya UPI.",
+      title: "Collection at home",
+      text: "A trained phlebotomist arrives with an ID card and draws the sample in front of you. The whole visit takes about 10 minutes. Payment on the spot — cash or UPI.",
     },
     {
       icon: "file-check",
-      title: "Report 24 ghante me",
-      text: "PDF report WhatsApp aur email dono par aati hai, taaki aap turant doctor ko dikha sakein. Kuch special test 48–72 ghante lete hain.",
+      title: "Report in 24 hours",
+      text: "The PDF report reaches you on WhatsApp and email both, so you can show it to your doctor right away. Some specialised tests take 48–72 hours.",
     },
   ],
 };
@@ -192,7 +193,14 @@ export const HOME_STEPS = {
    Read this block twice before editing it. Every card is a promise we keep,
    written as a checkable fact. The last card is deliberately about what we do
    NOT claim — a home page that only makes claims reads like every other one,
-   and being explicit about the limits is what makes the rest believable. */
+   and being explicit about the limits is what makes the rest believable.
+
+   ── KEEP THESE SHORT ─────────────────────────────────────────────────────
+   One or two sentences each, and the first one must carry the fact. The cards
+   render side by side with the icon, so a third sentence buys nothing but
+   height — and this section reads as more trustworthy tight than padded: six
+   specific, checkable lines look like a spec sheet, six paragraphs look like
+   marketing. Trim the sentence before you trim the fact. */
 export const HOME_WHY = {
   heading: "Log MedicoBharat Par Kyun Bharosa Karte Hain",
   intro:
@@ -201,44 +209,34 @@ export const HOME_WHY = {
     {
       icon: "wallet",
       title: "Collection ka koi charge nahi",
-      text: "Card par jo price likha hai, sirf wahi dena hai. Na visiting charge, na convenience fee, na koi hidden amount — na 1 test par, na 10 par.",
+      text: "Card par jo price likha hai, sirf wahi dena hai — na visiting charge, na convenience fee, na hidden amount.",
     },
     {
       icon: "badge-check",
       title: "Phlebotomist ID card ke saath",
-      text: "Jo staff aata hai uske paas ID card hota hai. Sample dene se pehle use dekh lena aapka haq hai — aur hum ye kehte hain, chhupate nahi.",
+      text: "Jo staff aata hai uske paas ID card hota hai. Sample dene se pehle dekh lena aapka haq hai.",
     },
     {
       icon: "sunrise",
       title: "Subah 6 baje se slot",
-      text: "Fasting wale test — sugar, lipid, zyadatar full body package — 10 se 12 ghante khaali pet maangte hain. Jaldi slot ka matlab hai jaldi naashta.",
+      text: "Fasting wale test 10 se 12 ghante khaali pet maangte hain. Jaldi slot ka matlab hai jaldi naashta.",
     },
     {
       icon: "message-circle",
       title: "Report WhatsApp par, PDF me",
-      text: "Report lene dobara jaana nahi padta. PDF WhatsApp aur email dono par aati hai — jitni baar chahe kholiye, doctor ko forward kar dijiye.",
+      text: "Report lene dobara jaana nahi padta — PDF WhatsApp aur email dono par aa jaati hai.",
     },
     {
       icon: "languages",
       title: "Baat Hindi me hoti hai",
-      text: "Booking se le kar report samjhane tak — sab Hindi ya Hinglish me. Kaun sa test kab karana hai, ye poochhna kabhi awkward nahi hona chahiye.",
+      text: "Booking se le kar report samjhane tak, sab Hindi ya Hinglish me. Poochhna kabhi awkward nahi hona chahiye.",
     },
     {
       icon: "shield-alert",
       title: "Jo claim nahi karte",
-      text: "Hum NABL accredited hone ka daawa nahi karte, na 24x7 khule rehne ka. Slot 6 AM se raat tak hain, aur jo nahi kar sakte wo pehle hi bata dete hain.",
+      text: "Na NABL accreditation ka daawa, na 24x7 ka. Slot 6 AM se raat tak — jo nahi kar sakte, wo pehle hi bata dete hain.",
     },
   ],
-};
-
-/* ── Cities ───────────────────────────────────────────────────────────────
-   The heading and intro only — the cards themselves are built from the live
-   city list, so a new city appears here the day it is published and an
-   unpublished one disappears instead of leaving a 404 on the home page. */
-export const HOME_CITIES = {
-  heading: "Hum Kin Sheher Me Sample Collect Karte Hain",
-  intro:
-    "Har sheher ka apna page hai — usi sheher ke rate, wahi ke ilaake aur wahi ka booking form. Apna sheher kholiye.",
 };
 
 /* ── Guides ───────────────────────────────────────────────────────────────
@@ -316,7 +314,44 @@ export const HOME_CONTENT = [
         { text: "Gorakhpur me lab test", href: "/lab-test/gorakhpur" },
         " aur ",
         { text: "Deoria me lab test", href: "/lab-test/deoria" },
-        " — teenon ka apna poora page hai.",
+        " — teenon ka apna poora page hai, aur apne sheher ka page kholna hi booking ka sabse seedha rasta hai.",
+      ],
+    ],
+  },
+
+  /* SECOND, not seventh. This section used to sit near the end of the article,
+     because a card grid higher up the page was already doing the "which towns,
+     which localities" job. That grid has been removed, so this is now the
+     page's main hand-off to the three city pages — and a hand-off buried under
+     five sections of a collapsed article is a hand-off most readers never see.
+     Moving it up also puts it first in LabContent's "On this page" rail. */
+  {
+    id: "sheher-aur-coverage",
+    h: "Hum Kin Sheher Me Sample Collect Karte Hain",
+    p: [
+      [
+        "Abhi home sample collection teen jilon me hai: ",
+        { text: "Varanasi", href: "/lab-test/varanasi" },
+        " — Sarnath, Ramnagar, Bhelupur, Lanka, Sigra aur Cantt tak; ",
+        { text: "Gorakhpur", href: "/lab-test/gorakhpur" },
+        " — Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road aur Kunraghat tak; aur ",
+        { text: "Deoria", href: "/lab-test/deoria" },
+        " — Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak.",
+      ],
+      "Har sheher ka apna page hai, aur wo jaan-boojh kar hai. Us page par usi sheher ke ilaake, usi sheher ka booking form aur usi sheher ke liye likhi gayi jaankari milti hai — ek hi page par teen jilon ka mix ho jaata to na booking form kaam ka rehta, na jaankari.",
+      [
+        "Isliye booking ka sabse aasan tareeka yahi hai ki apna sheher khol lijiye — ",
+        { text: "Varanasi ki rate list aur booking", href: "/lab-test/varanasi" },
+        ", ",
+        { text: "Gorakhpur ki rate list aur booking", href: "/lab-test/gorakhpur" },
+        ", ya ",
+        { text: "Deoria ki rate list aur booking", href: "/lab-test/deoria" },
+        ".",
+      ],
+      [
+        "Aapka pata upar ki list me naam se nahi hai lekin aas-paas hi hai? ",
+        { text: "Contact page", href: "/contact" },
+        " par diye number par ek call kar lijiye. Cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge — kyunki jis jagah pahunch nahi sakte, uska vaada karna sabse mehnga jhooth hai.",
       ],
     ],
   },
@@ -391,28 +426,6 @@ export const HOME_CONTENT = [
   },
 
   {
-    id: "sheher-aur-coverage",
-    h: "Hum Kahan-Kahan Sample Collect Karte Hain",
-    p: [
-      [
-        "Abhi home sample collection teen jilon me hai: ",
-        { text: "Varanasi", href: "/lab-test/varanasi" },
-        " — Sarnath, Ramnagar, Bhelupur, Lanka, Sigra aur Cantt tak; ",
-        { text: "Gorakhpur", href: "/lab-test/gorakhpur" },
-        " — Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road aur Kunraghat tak; aur ",
-        { text: "Deoria", href: "/lab-test/deoria" },
-        " — Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak.",
-      ],
-      "Har sheher ka apna page hai, aur wo jaan-boojh kar hai. Us page par usi sheher ke ilaake, usi sheher ka booking form aur usi sheher ke liye likhi gayi jaankari milti hai — ek hi page par teen jilon ka mix ho jaata to na booking form kaam ka rehta, na jaankari.",
-      [
-        "Aapka pata upar ki list me naam se nahi hai lekin aas-paas hi hai? ",
-        { text: "Contact page", href: "/contact" },
-        " par diye number par ek call kar lijiye. Cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge — kyunki jis jagah pahunch nahi sakte, uska vaada karna sabse mehnga jhooth hai.",
-      ],
-    ],
-  },
-
-  {
     id: "bharosa-kaise-banta-hai",
     h: "Ek Bharosemand Lab Kaise Chunein",
     p: [
@@ -448,7 +461,11 @@ export const HOME_CALL_BANNER = {
 
    This is the home page's biggest link-equity hand-off: it is the page every
    other page points at, so what it points at in return is what gets crawled
-   first. The static links at the end are all verified routes. */
+   first. The static links at the end are all verified routes.
+
+   Rendered inside LabContent (its `related` prop), at the end of the guide —
+   not as a band of its own. Same links either way; the home page just does not
+   need one more separately-titled section to scroll past. */
 export const homeRelatedLinks = (labCities = [], guides = []) => {
   const cityLinks = labCities.map((city) => ({
     href: `/lab-test/${city.slug}`,

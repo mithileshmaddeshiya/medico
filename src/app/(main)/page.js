@@ -1,4 +1,3 @@
-import HomeCities from "@/components/home/HomeCities";
 import HomeGuides from "@/components/home/HomeGuides";
 import HomeHero from "@/components/home/HomeHero";
 import HomeSteps from "@/components/home/HomeSteps";
@@ -7,13 +6,11 @@ import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
-import LabRelatedLinks from "@/components/lab/LabRelatedLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import { getLatestBlogs } from "@/data/blogs";
 import {
   HOME_CALL_BANNER,
-  HOME_CITIES,
   HOME_CONTENT,
   HOME_CTA,
   HOME_FAQS,
@@ -67,9 +64,19 @@ import { SITE } from "@/lib/site";
  * stale ₹400 the first time a CBC price changed, and a price on the home page
  * that contradicts the city page is worse than no price at all.
  *
- * What is genuinely different about this page — the hero, the city cards, the
- * process steps, the trust cards, the guide rail — lives in
- * src/components/home/, and every word of its copy is in src/data/home.js.
+ * What is genuinely different about this page — the hero, the process steps,
+ * the trust cards, the guide rail — lives in src/components/home/, and every
+ * word of its copy is in src/data/home.js.
+ *
+ * ── WHERE THE CITY LINKS LIVE ────────────────────────────────────────────
+ * There used to be a card grid here whose only job was to link the three city
+ * pages. It is gone, and the links it carried are now spread across the page
+ * instead: contextual anchors inside the long-form block (HOME_CONTENT — the
+ * lead section and "Hum Kin Sheher Me Sample Collect Karte Hain", which sits
+ * second so it is not buried), the "Aage Kahan Jaayein" block at the bottom,
+ * the sitewide footer's "Cities We Serve" column, and the ItemList node below.
+ * If a city page ever needs to be reachable from this page in one obvious tap,
+ * that is the trade this removal made — see the note on cityListNode.
  */
 
 /* ── Metadata ─────────────────────────────────────────────────────────────
@@ -277,10 +284,15 @@ const webPageNode = () => ({
 /**
  * The city pages, as an explicit list.
  *
- * This is the machine-readable half of the city cards further down. It tells a
- * crawler that these three URLs are the members of one set rather than three
- * unrelated pages that happen to be linked from here — which is what stops
- * them being read as near-duplicates of each other.
+ * It tells a crawler that these three URLs are the members of one set rather
+ * than three unrelated pages that happen to be linked from here — which is
+ * what stops them being read as near-duplicates of each other.
+ *
+ * This node matters MORE now than it used to. It was the machine-readable half
+ * of a visible card grid; that grid is gone, so this is the only place on the
+ * page that states the three city pages are one set. Every URL in it is still
+ * linked in the rendered HTML — the long-form block and the related-links
+ * block both carry them — which is what keeps this markup honest.
  */
 const cityListNode = (cities) => ({
   "@type": "ItemList",
@@ -329,24 +341,18 @@ export default async function HomePage() {
           three city pages at once, and they can never disagree. No `city`
           prop: this page serves all of them. */}
       <LabServices
-        subheading="Yahi rate har sheher me lagte hain. Home sample collection alag se free hai — jo card par likha hai, sirf wahi dena hai."
         cityOptions={cityOptions}
         tests={defaultTests()}
         filters={defaultFilters()}
         phone={LAB_PHONE}
       />
 
-      {/* The home page's most valuable block: the link that carries this
-          domain's strongest page into the three pages that earn the bookings. */}
-      <HomeCities data={HOME_CITIES} cities={cities} />
 
-      <HomeSteps data={HOME_STEPS} />
-
-      <HomeWhy data={HOME_WHY} />
+      {/* <HomeWhy data={HOME_WHY} /> */}
 
       <LabCallBanner banner={HOME_CALL_BANNER} phone={LAB_PHONE} />
 
-      <HomeGuides data={HOME_GUIDES} posts={guides} />
+      {/* <HomeGuides data={HOME_GUIDES} posts={guides} /> */}
 
       {/* `pageUrl` joins the FAQ node to this page's graph (#faqpage →
           isPartOf → #webpage) instead of leaving it floating unattached. It is
@@ -358,12 +364,19 @@ export default async function HomePage() {
 
       {/* The long read, last — a reader who has decided has already booked
           from the form above, and a reader who has not is exactly the one who
-          wants to know which test to take. */}
-      <LabContent city="Purvanchal" sections={HOME_CONTENT} />
+          wants to know which test to take.
 
-      {/* Built from the live lists, so nothing in it can 404 — see
-          homeRelatedLinks in src/data/home.js. */}
-      <LabRelatedLinks related={homeRelatedLinks(cities, guides)} />
+          The "Aage Kahan Jaayein" links used to be a LabRelatedLinks band of
+          their own below this. They are now rendered inside the guide, at the
+          end of its reading column: the home page is already a long stack of
+          bands, and a third one made of nothing but links was the easiest to
+          fold in without losing a single href. Built from the live lists, so
+          nothing in it can 404 — see homeRelatedLinks in src/data/home.js. */}
+      <LabContent
+        city="Purvanchal"
+        sections={HOME_CONTENT}
+        related={homeRelatedLinks(cities, guides)}
+      />
     </>
   );
 }

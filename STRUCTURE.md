@@ -106,8 +106,8 @@ src/components/
 │
 ├── lab/                   → lab pages KE SAATH-SAATH poori site ka chrome
 │   ├── LabNavbar.jsx        ⭐ SITE KA EKMATRA HEADER — har layout isi ko mount
-│   │                          karta hai. City dropdown + guides menu + mobile
-│   │                          sheet. `labCities` aur `guides` props se aate hain.
+│   │                          karta hai. Sirf logo + ECG tagline + phone.
+│   │                          Koi link nahi — na menu, na mobile sheet.
 │   ├── LabFooter.jsx        ⭐ SITE KA EKMATRA FOOTER — do mode me chalta hai:
 │   │                          `city` ke saath = city footer (us sheher ke ilaake,
 │   │                          contact block); `city` ke bina = site-wide footer.
@@ -117,16 +117,22 @@ src/components/
 │   ├── LabServices.jsx      tests + packages ka grid/slider + search
 │   │                          (`city` optional — homepage bina city ke use karta hai)
 │   ├── LabTrustStrip.jsx    "free collection / 6 AM slot" promises
-│   ├── LabContent.jsx       lamba SEO content + "On this page" rail
+│   ├── LabContent.jsx       lamba SEO content + "On this page" rail. `related`
+│   │                        prop de do to guide ke aakhir me internal links ka
+│   │                        block bhi yahi render karta hai (city pages).
 │   ├── LabFaq.jsx           FAQ accordion (+ FAQPage schema)
 │   ├── LabCta.jsx           call-to-action band
 │   ├── LabCallBanner.jsx    footer se pehle wala call strip
-│   ├── LabRelatedLinks.jsx  in-body internal link block
+│   ├── LabRelatedLinks.jsx  in-body internal link band — ab sirf blog posts.
+│   │                        Home aur city pages ye links LabContent ke andar
+│   │                        dikhate hain (do band ki jagah ek).
 │   └── BookFormLink.jsx     "#book" tak scroll, URL me hash chhode bina
 │
 ├── home/                  → sirf HOMEPAGE ke liye (jo city pages par nahi hai)
-│   ├── HomeHero.jsx         visible h1 + promises + booking form
-│   ├── HomeCities.jsx       ⭐ city cards — site ka sabse zaroori internal link
+│   ├── HomeHero.jsx         banner image + booking form (h1 sr-only)
+│   ├── HomeCities.jsx       city cards — ab kahin use NAHI hota (home se hata diya gaya;
+│   │                        city links ab HOME_CONTENT ki prose, "Aage Kahan Jaayein"
+│   │                        aur footer ke "Cities We Serve" me hain)
 │   ├── HomeSteps.jsx        "booking se report tak" 4 steps
 │   ├── HomeWhy.jsx          trust cards (aakhri card: "jo daawa nahi karte")
 │   └── HomeGuides.jsx       latest blog cards
@@ -138,7 +144,7 @@ src/components/
 ```
 
 > **Homepage baaki sab lab components reuse karta hai** — LabTrustStrip,
-> LabServices, LabFaq, LabCta, LabCallBanner, LabContent, LabRelatedLinks.
+> LabServices, LabFaq, LabCta, LabCallBanner, LabContent (`related` ke saath).
 > Ye jaan-bujh kar hai: price grid do jagah likha hota to ek jagah ka rate
 > purana pad jaata, aur homepage ka price city page se alag dikhna sabse bura
 > hai.

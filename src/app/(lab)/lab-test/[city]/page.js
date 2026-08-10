@@ -5,7 +5,6 @@ import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import LabHero from "@/components/lab/LabHero";
-import LabRelatedLinks from "@/components/lab/LabRelatedLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
@@ -383,12 +382,16 @@ export default async function LabCityPage({ params }) {
 
       <LabCta cta={cityData.cta} phone={phone} />
 
-      <LabContent city={cityName} sections={cityData.content} />
-
-      {/* Internal links, after the guide because that is where a reader who has
-          finished reading is looking for somewhere to go. Renders nothing for a
-          city with no `relatedLinks` — see src/data/lab/cities.js. */}
-      <LabRelatedLinks related={cityData.relatedLinks} />
+      {/* The internal links used to be a LabRelatedLinks band of their own
+          under this one. They are now passed in and rendered at the end of the
+          guide's reading column — same links, one section instead of two. A
+          city with no `relatedLinks` simply renders no block; see
+          src/data/lab/cities.js. */}
+      <LabContent
+        city={cityName}
+        sections={cityData.content}
+        related={cityData.relatedLinks}
+      />
 
       {/* Closing call strip — last section before the footer */}
     </>

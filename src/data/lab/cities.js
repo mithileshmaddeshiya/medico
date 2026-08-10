@@ -309,7 +309,7 @@ const LAB_CITY_SEED = [
     faqs: deoriaFaqs,
 
     /* ── In-body internal links ────────────────────────────────────────────
-       Rendered by LabRelatedLinks below the guide. The other cities are also
+       Rendered by LabContent at the end of the guide. The other cities are also
        in the footer, but a footer is byte-identical on every lab page and gets
        discounted as boilerplate; these anchors are descriptive and per-city.
        The guides are the real gain — nothing else on the site links a lab page
@@ -533,7 +533,7 @@ const LAB_CITY_SEED = [
     faqs: gorakhpurFaqs,
 
     /* ── In-body internal links ────────────────────────────────────────────
-       Rendered by LabRelatedLinks below the guide. The footer already carries
+       Rendered by LabContent at the end of the guide. The footer already carries
        some of these, but a footer is byte-identical on every lab page and gets
        discounted as boilerplate; these anchors are descriptive and per-city.
 
@@ -665,7 +665,7 @@ function buildContent(fields, base) {
     // Optional and with NO default on purpose. A generated link block would be
     // the same boilerplate on every city — the value is in hand-picked anchors
     // pointing at routes that exist for THAT city, so a city without the field
-    // simply renders no block. See LabRelatedLinks.
+    // simply renders no block. Rendered by LabContent's `related` prop.
     relatedLinks: obj(fields.relatedLinks),
   };
 }

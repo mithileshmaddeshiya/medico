@@ -2,7 +2,7 @@
 
 import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
+import { ArrowUpRight, BookOpen, ChevronDown, Clock3 } from "lucide-react";
 
 /**
  * Long-form SEO block. Everything the crawler reads comes in as `sections`,
@@ -31,6 +31,29 @@ import { BookOpen, ChevronDown, Clock3 } from "lucide-react";
  * back to back — on a phone that was six lines of bold text before a single
  * sentence of content. It is also left out of the rail, because a page listing
  * its own title as a jump link is a link to where the reader already is.
+ *
+ * ── `related` — THE IN-BODY LINK BLOCK ───────────────────────────────────
+ * Same `{ heading, intro?, groups: [{ title, links: [{href, label, sub?}] }] }`
+ * shape LabRelatedLinks takes — the city's `relatedLinks` field on a city page,
+ * `homeRelatedLinks()` on the home page. It is rendered HERE, at the end of the
+ * guide, instead of as its own full-width band underneath: the pages had grown
+ * into a stack of separately-titled sections, and a reader who has just
+ * finished the guide is already at the bottom of this column — that is where
+ * somewhere-to-go-next belongs, not in a new band with its own heading.
+ *
+ * It sits INSIDE the collapsible <article>, at the end of the prose, so it is
+ * clipped with everything else and only appears once the reader has pressed
+ * "Poora Guide Padhein" — on desktop and on phones alike. A collapsed page is
+ * the offer; the links are for the reader who chose to keep reading.
+ *
+ * Clipped, NOT conditionally mounted — `{expanded && …}` would keep every one
+ * of these hrefs out of the HTML until a click, and this block is the main
+ * thing linking a city page to its guides. Under the clamp they are still in
+ * the markup, so a crawler follows them without expanding anything.
+ *
+ * LabRelatedLinks is still the standalone band, for the blog posts. Pass
+ * `related` here only where the page should not have a second band; passing
+ * both would duplicate every link on one page.
  */
 
 // Average Hindi/Hinglish reading speed on a phone, rounded down deliberately —
@@ -76,7 +99,7 @@ function Paragraph({ para, className }) {
   );
 }
 
-export default function LabContent({ city, sections = [] }) {
+export default function LabContent({ city, sections = [], related = null }) {
   const [expanded, setExpanded] = useState(false);
   // Which section the reader is currently on — drives the rail highlight.
   // Starts on the first *listed* section, not the lead, which has no rail entry.
@@ -225,6 +248,9 @@ export default function LabContent({ city, sections = [] }) {
   // `rest` is what the reader can jump to; `lead` titles the block. A city
   // document with a single section still renders — it just has no outline.
   const [lead, ...rest] = sections;
+
+  // A group with an empty `links` array would render a heading over nothing.
+  const relatedGroups = (related?.groups ?? []).filter((g) => g?.links?.length);
 
   const words = sections.reduce(
     (total, s) =>
@@ -405,6 +431,93 @@ export default function LabContent({ city, sections = [] }) {
                       ))}
                     </div>
                   ))}
+
+                  {/* ── WHERE TO GO NEXT ──────────────────────────────────
+                      What used to be the LabRelatedLinks band below this
+                      section. Folded in here it costs the page one heading
+                      and one band of chrome instead of two, and it lands
+                      where the reader already is — at the end of the guide
+                      they just finished.
+
+                      INSIDE the clipped article on purpose, so it only
+                      appears once the reader presses "Poora Guide Padhein" —
+                      at every width, phones included. A page that has not
+                      been expanded is a price list and a booking form, not a
+                      wall of links. It is still in the HTML either way, which
+                      is the whole reason it is clipped rather than mounted on
+                      `expanded`: a crawler reads every one of these hrefs
+                      without a click, exactly as it reads the prose above.
+
+                      The cards are gone with the band: inside the reading
+                      column a white card on white would be a box around a
+                      box. Hairline-divided rows carry the same "this is an
+                      index" reading, and the headings reuse the accent-bar
+                      pairing the prose uses above. */}
+                  {relatedGroups.length > 0 && (
+                    <div className="mt-8 border-t border-slate-200/70 pt-8 sm:mt-10 sm:pt-10">
+                      <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
+                        <span
+                          aria-hidden
+                          className="absolute left-0 top-1 h-[calc(100%-0.5rem)] w-1 rounded-full bg-linear-to-b from-emerald-400 to-teal-500"
+                        />
+                        {related.heading}
+                      </h3>
+
+                      {related.intro && (
+                        <p className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600">
+                          {related.intro}
+                        </p>
+                      )}
+
+                      {/* Two columns, not the band's three: this column is
+                          narrower than the full page was, and a third would
+                          leave every link wrapping onto three lines. */}
+                      <div className="mt-6 grid gap-x-8 gap-y-7 pl-4 sm:grid-cols-2">
+                        {relatedGroups.map((group) => (
+                          <nav key={group.title} aria-label={group.title}>
+                            <h4 className="flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.13em] text-emerald-700">
+                              <span
+                                aria-hidden
+                                className="h-3.5 w-1 rounded-full bg-linear-to-b from-emerald-400 to-teal-500"
+                              />
+                              {group.title}
+                            </h4>
+
+                            {/* `-mx-2` lets a row's hover tint run past the
+                                text to the edges of the column, so the whole
+                                row reads as the target rather than the words
+                                in it. */}
+                            <ul className="mt-2 -mx-2 divide-y divide-slate-100">
+                              {group.links.map(({ href, label, sub }) => (
+                                <li key={href}>
+                                  <Link
+                                    href={href}
+                                    className="group flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors duration-200 hover:bg-emerald-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                                  >
+                                    <span className="min-w-0 flex-1">
+                                      <span className="block text-[12.5px] sm:text-[13px] font-semibold leading-snug text-slate-800 transition-colors group-hover:text-emerald-800">
+                                        {label}
+                                      </span>
+                                      {sub && (
+                                        <span className="mt-0.5 block text-[11.5px] leading-snug text-slate-500">
+                                          {sub}
+                                        </span>
+                                      )}
+                                    </span>
+                                    <ArrowUpRight
+                                      aria-hidden
+                                      className="h-3.5 w-3.5 shrink-0 text-slate-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-emerald-600"
+                                      strokeWidth={2.6}
+                                    />
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </nav>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </article>
 

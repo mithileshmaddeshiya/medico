@@ -60,18 +60,4 @@
   animation: lab-pop-in 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Mobile menu sheet — slides in from the right edge (LabNavbar) */
-@keyframes lab-slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: none;
-  }
-}
-
-.lab-slide-in {
-  animation: lab-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 
