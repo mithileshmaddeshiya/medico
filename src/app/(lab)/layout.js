@@ -1,8 +1,10 @@
 import LabNavbar from "@/components/lab/LabNavbar";
 
 // Lab Test section layout — wraps /lab-test/[city].
-// Uses the dedicated Lab Test header; the footer is rendered one level deeper,
-// in [city]/layout.js, because it needs the city from the route params.
+//
+// Header only. The footer is rendered one level deeper, in [city]/layout.js,
+// because it needs the city from the route params to print that town's
+// localities and contact block.
 export default function LabLayout({ children }) {
   return (
     <>

@@ -11,36 +11,35 @@
  *   src/data/blogs/
  *   ├── index.js            ← you are here: registry + lookups
  *   ├── shared.js           ← author, publisher, robots, canonical helper
- *   ├── varanasi/
- *   │   ├── index.js        ← the city's list
- *   │   └── lab-test-in-varanasi.js
- *   └── deoria/
- *       ├── index.js
- *       └── …three posts
+ *   └── varanasi/
+ *       ├── index.js        ← the city's list
+ *       ├── lab-test-in-varanasi.js
+ *       └── full-body-checkup-in-varanasi.js
  *
  * To add a city: create the folder with an index.js exporting an array, then
  * import it into CITY_BLOGS below. To add a post to a city that already
  * exists, you never touch this file at all.
  *
  * ── WHAT NORMALISATION BUYS ──────────────────────────────────────────────
- * Posts are written in two eras. The Deoria posts give each section a single
- * `content` string; the Varanasi post gives `paras`, an array, where a
- * paragraph may itself be an array of parts so it can carry in-prose links.
- * The page should not know that. So every post is squeezed into one shape
- * here, and a malformed post throws at import time — at build, in a stack
- * trace naming the file — rather than rendering a broken page in production.
+ * A post may give each section a single `content` string, or `paras` — an
+ * array where a paragraph may itself be an array of parts so it can carry
+ * in-prose links — or the richer `blocks` form. The page should not know
+ * that. So every post is squeezed into one shape here, and a malformed post
+ * throws at import time — at build, in a stack trace naming the file — rather
+ * than rendering a broken page in production.
  */
-import { deoriaBlogs } from "./deoria";
 import { varanasiBlogs } from "./varanasi";
 
 /**
  * Every city's list, in the order a listing should show them.
  *
- * Varanasi first: it is the newest article and the only lab-test guide, so it
- * is the one worth putting in front of a reader who lands on /blogs/* from
- * anywhere else.
+ * The three Deoria medicine-delivery guides were removed when the site became
+ * lab-test only; their URLs are permanently redirected to /lab-test/deoria in
+ * next.config.mjs. Every guide here is a lab-test guide on purpose — a blog
+ * about a service the site no longer offers is a topical signal pointing the
+ * wrong way, which is exactly what this rewrite set out to fix.
  */
-const CITY_BLOGS = [varanasiBlogs, deoriaBlogs];
+const CITY_BLOGS = [varanasiBlogs];
 
 /** URL-safe slug, same rules as the lab section's (src/data/lab/cities.js). */
 const slugify = (value) =>

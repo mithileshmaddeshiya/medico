@@ -1,59 +1,79 @@
 import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
-import {
-  GBP_MAP_URL,
-  ORG_REF,
-  graph,
-  ldJson,
-  organizationNode,
-  websiteNode,
-} from "@/lib/schema";
+import { graph, ldJson, organizationNode, websiteNode } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
+/**
+ * SITE-WIDE METADATA.
+ *
+ * ── READ THIS BEFORE CHANGING A WORD OF IT ────────────────────────────────
+ * Every string here used to describe an online pharmacy: the default title,
+ * the description, twenty-odd medicine keywords, the OG card, and the
+ * `classification` line. Those are what a crawler reads on EVERY route of the
+ * site, including all three lab city pages — so the lab section was
+ * effectively publishing "we are a medicine delivery platform" on pages about
+ * blood tests, and then wondering why it did not rank for lab test queries.
+ *
+ * MedicoBharat is a lab-test service. The medicine section is retired and its
+ * URLs are permanently redirected (see next.config.mjs). Nothing on this site
+ * may describe it as a pharmacy again.
+ *
+ * The `default` title only ever shows on a route that sets no title of its
+ * own — every real page sets one. The `template` is what matters: it appends
+ * " | MedicoBharat" to each page's own title, which is why the city titles in
+ * src/data/lab/cities.js are kept short enough to survive it.
+ */
 export const metadata = {
   metadataBase: new URL(SITE),
 
   title: {
-    default:
-      "MedicoBharat | Online Medicine Delivery & Trusted Pharmacy Services",
+    default: "MedicoBharat | Lab Test at Home with Free Sample Collection",
     template: "%s | MedicoBharat",
   },
 
   description:
-    "MedicoBharat is a trusted online medicine delivery platform providing genuine medicines, prescription support, healthcare products, and fast doorstep pharmacy delivery across Deoria and nearby cities.",
+    "MedicoBharat books lab tests and full body health checkups with free home sample collection — CBC, thyroid, sugar, vitamin and organ function tests. Trained phlebotomists, reports in 24 hours, across Varanasi, Gorakhpur and Deoria.",
 
   keywords: [
-    // BRAND
+    // BRAND — the reason this list exists at all. Google was spell-correcting
+    // "medicobharat" to "medical bharat"; see src/lib/schema.js.
     "MedicoBharat",
     "Medico Bharat",
-    "MedicoBharat Pharmacy",
+    "MedicoBharat Lab Test",
 
     // PRIMARY
-    "Online Medicine Delivery",
-    "Online Pharmacy",
-    "Medicine Home Delivery",
-    "Online Medical Store",
-    "Buy Medicines Online",
+    "Lab Test at Home",
+    "Blood Test at Home",
+    "Home Sample Collection",
+    "Online Lab Test Booking",
+    "Pathology Lab",
+    "Diagnostic Centre",
 
-    // HIGH INTENT
-    "Prescription Medicine Delivery",
-    "Emergency Medicine Delivery",
-    "Doorstep Medicine Delivery",
-    "24x7 Medicine Delivery",
-    "Healthcare Products Online",
+    // HIGH INTENT — a searcher who types these has already decided
+    "Full Body Checkup at Home",
+    "CBC Test",
+    "Thyroid Profile Test",
+    "Blood Sugar Test",
+    "HbA1c Test",
+    "Lipid Profile Test",
+    "Vitamin D Test",
+    "Vitamin B12 Test",
+    "Liver Function Test",
+    "Kidney Function Test",
+    "Dengue Test",
 
-    // LOCAL
-    "Medicine Delivery in Deoria",
-    "Online Pharmacy Deoria",
-    "Medical Store Deoria",
-    "Medicine Delivery Uttar Pradesh",
+    // LOCAL — the three districts the service actually reaches
+    "Lab Test in Varanasi",
+    "Lab Test in Gorakhpur",
+    "Lab Test in Deoria",
+    "Blood Test Home Collection Uttar Pradesh",
 
-    // TRUST
-    "Trusted Online Pharmacy",
-    "Genuine Medicines",
-    "Fast Pharmacy Delivery",
-    "Healthcare Platform India",
+    // Location-free — Google supplies the city from the searcher's position,
+    // which the DiagnosticLab schema's areaServed answers.
+    "Lab Test Near Me",
+    "Blood Test Near Me",
+    "Full Body Checkup Near Me",
   ],
 
   authors: [
@@ -71,7 +91,7 @@ export const metadata = {
   category: "Healthcare",
 
   classification:
-    "Online Pharmacy, Medicine Delivery & Healthcare Platform",
+    "Diagnostic Lab, Lab Test at Home & Health Checkup Service",
 
   robots: {
     index: true,
@@ -100,18 +120,17 @@ export const metadata = {
 
     locale: "en_IN",
 
-    title:
-      "MedicoBharat | Online Medicine Delivery & Trusted Pharmacy",
+    title: "MedicoBharat | Lab Test at Home with Free Sample Collection",
 
     description:
-      "Order genuine medicines online with fast doorstep delivery, prescription support, and trusted pharmacy services from MedicoBharat.",
+      "Book a lab test or full body checkup with free home sample collection. Trained phlebotomists, slots from 6 AM and reports in 24 hours on WhatsApp.",
 
     images: [
       {
         url: `${SITE}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "MedicoBharat - Online Medicine Delivery",
+        alt: "MedicoBharat — lab test at home with free sample collection",
       },
     ],
   },
@@ -119,11 +138,10 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "MedicoBharat | Online Medicine Delivery & Pharmacy",
+    title: "MedicoBharat | Lab Test at Home",
 
     description:
-      "Trusted online pharmacy with genuine medicines, prescription support, and fast doorstep medicine delivery.",
+      "Lab tests and full body checkups with free home sample collection and reports in 24 hours.",
 
     images: [
       `${SITE}/opengraph-image`,
@@ -145,9 +163,8 @@ export const metadata = {
     locality: "Deoria",
     region: "Uttar Pradesh",
     country: "India",
-    coverage: "India",
-    target:
-      "Online Medicine Delivery & Healthcare Users",
+    coverage: "Varanasi, Gorakhpur, Deoria",
+    target: "Lab Test & Health Checkup Users",
   },
 };
 
@@ -186,58 +203,40 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/*
-          BRAND ENTITY — the Organization, the WebSite, and the pharmacy service.
+          BRAND ENTITY — the Organization and the WebSite.
 
-          These three used to be one anonymous `Pharmacy` node with no `@id`, so
-          nothing else on the site could point at it and Google held no entity
-          for the name "MedicoBharat" at all — a brand search was being
-          spell-corrected to "medical bharat". The Organization and WebSite now
-          carry stable ids from src/lib/schema.js, every city page references
-          those ids instead of repeating a nameless stub, and the pharmacy is
-          declared as a service OF that organisation rather than as a separate
-          business that happens to share its name.
+          Both carry stable ids from src/lib/schema.js, and every other node on
+          the site references those ids instead of repeating a nameless stub.
+          That is the whole trick: one entity, many references. Google held no
+          entity for the name "MedicoBharat" at all — a brand search was being
+          spell-corrected to "medical bharat" — and a stub that shares a name
+          but carries no identifier is something a crawler cannot connect.
 
           It renders on every route on purpose. The organisation is the same
           organisation on /lab-test/deoria as it is here, and repeating the
           identical `@id` across pages is how a crawler learns that.
+
+          ── WHAT WAS REMOVED FROM THIS GRAPH ─────────────────────────────
+          A third node used to sit here: a `Pharmacy` with a Deoria street
+          address, geo coordinates and `openingHours: "Mo-Su 00:00-23:59"`. It
+          was the single strongest machine-readable statement that this domain
+          is an online pharmacy, it was on EVERY page including the lab city
+          pages, and one of its claims (open 24 hours) was not even true.
+
+          Its replacement is the `DiagnosticLab` / `MedicalBusiness` node on the
+          home page — same business, typed as what it actually is, with the
+          hours the site really keeps and the price list the page really shows.
+          It lives on the home page rather than in this layout because the city
+          pages already declare their own local node, and two overlapping
+          local-business nodes on one page describe two businesses.
+
+          DO NOT ADD A PHARMACY NODE BACK. The medicine section is retired and
+          its URLs are permanently redirected — see next.config.mjs.
         */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: ldJson(
-              graph(organizationNode(), websiteNode(), {
-                "@type": "Pharmacy",
-                "@id": `${SITE}/#pharmacy`,
-                name: "MedicoBharat",
-                url: SITE,
-                image: `${SITE}/navbar/navbg.webp`,
-                description:
-                  "Online medicine delivery service in Deoria with fast doorstep delivery and genuine medicines.",
-                telephone: "+916392108234",
-                priceRange: "₹₹",
-                openingHours: "Mo-Su 00:00-23:59",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Deoria",
-                  addressRegion: "Uttar Pradesh",
-                  postalCode: "274001",
-                  addressCountry: "IN",
-                },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: "26.5017",
-                  longitude: "83.7794",
-                },
-                areaServed: { "@type": "City", name: "Deoria" },
-                // A Pharmacy is a LocalBusiness, so it is a Place and `hasMap`
-                // is in domain here. Disappears while GBP_MAP_URL is empty.
-                ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
-                // The link that makes this a service of the brand above rather
-                // than a look-alike business. Same for `sameAs`: the profiles
-                // are declared once on the Organization, not copied here.
-                parentOrganization: ORG_REF,
-              })
-            ),
+            __html: ldJson(graph(organizationNode(), websiteNode())),
           }}
         />
 

@@ -107,9 +107,17 @@ const MOBILE_PREVIEW = 4;
  * `tests`, `filters` and `phone` come from the city document (or its generated
  * default) — see defaultTests / defaultFilters in src/data/lab/defaults.js.
  * Prices can therefore differ per city without touching this file.
+ *
+ * `city` is OPTIONAL. With one, the heading reads "… in Varanasi" and the
+ * booking modal's dropdown is that city's localities. Without one — the home
+ * page, which serves every city — the heading drops the "in <city>" clause and
+ * `subheading` takes its place. The same section, the same prices and the same
+ * booking modal in both places; the alternative was a second price grid on the
+ * home page that would have gone stale the first time a price changed.
  */
 export default function LabServices({
   city,
+  subheading,
   cityOptions,
   tests = [],
   filters = [],
@@ -157,10 +165,22 @@ export default function LabServices({
     <section id="tests" className="bg-slate-50 border-t border-slate-100 overflow-x-clip">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-8">
 
-        {/* HEADING — follows the active chip */}
+        {/* HEADING — follows the active chip. The city is appended only when
+            there is one: this section also runs on the home page, which serves
+            every city, and "Popular Lab Tests in undefined" is what a blind
+            template produces there. */}
         <h2 className="text-balance text-center text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900">
-          {`${heading} in ${city}`}
+          {city ? `${heading} in ${city}` : heading}
         </h2>
+
+        {/* One line of context under the heading, on the home page only. On a
+            city page the prices are that city's and the copy above already
+            says so; here it is the first time a reader meets the price list. */}
+        {!city && subheading && (
+          <p className="mx-auto mt-2 max-w-2xl text-center text-[12.5px] sm:text-[14px] leading-relaxed text-slate-500">
+            {subheading}
+          </p>
+        )}
 
 
         {/* SEARCH — the fastest path to a named test. On a phone, scanning a

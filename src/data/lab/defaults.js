@@ -419,6 +419,26 @@ export const defaultFooter = (city) => ({
   ],
 });
 
+/**
+ * The footer for a page that is NOT about one city — the home page, /about,
+ * /contact, an article.
+ *
+ * Same contact details and the same social row as a city footer (it is built
+ * from the same function), so the two modes can never print a different phone
+ * number or a different address. Only the tagline differs, because the city
+ * template with no city to interpolate reads "…at home in  —", which is what
+ * the footer showed on every non-city page before this existed.
+ *
+ * No city names are hardcoded in the tagline on purpose: the footer already
+ * renders the live list from src/data/lab/cities.js right beside this line,
+ * and a hardcoded pair of names goes stale the day a city is added.
+ */
+export const siteFooter = () => ({
+  ...defaultFooter(""),
+  tagline:
+    "Lab test aur full body checkup ghar baithe — free home sample collection, trained phlebotomist aur report 24 ghante me, poore Purvanchal me.",
+});
+
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
 
 export const defaultTitle = (city) =>

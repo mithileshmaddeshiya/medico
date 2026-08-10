@@ -12,7 +12,7 @@ import { ImageResponse } from "next/og";
  * opengraph-image.js beside its page.
  */
 export const alt =
-  "MedicoBharat — Online Medicine Delivery & Lab Tests at Home";
+  "MedicoBharat — Lab Tests & Full Body Checkups at Home";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -58,7 +58,7 @@ export default function OpengraphImage() {
             letterSpacing: -2,
           }}
         >
-          Medicines & Lab Tests, Delivered Home
+          Lab Tests & Health Checkups, at Home
         </div>
 
         <div

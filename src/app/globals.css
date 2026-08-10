@@ -13,7 +13,9 @@
   }
 }
 
-/* Navbar ECG heartbeat line — draws itself on a loop */
+/* ECG heartbeat line — draws itself on a loop. Used by the homepage hero's
+   trust badge; it was the navbar's centre tagline until the nav links took
+   that space. */
 @keyframes ecg-draw {
   0% {
     stroke-dashoffset: 260;

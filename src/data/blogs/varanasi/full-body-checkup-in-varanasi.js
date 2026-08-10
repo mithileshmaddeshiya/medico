@@ -57,16 +57,16 @@
  *   /lab-test/varanasi + 7 of its section anchors  (src/data/lab/content/varanasi.js)
  *   /lab-test/gorakhpur, /lab-test/deoria          (src/data/lab/cities.js)
  *   /blogs/lab-test/varanasi + 3 anchors           (./lab-test-in-varanasi.js)
- *   /medicine-delivery/deoria                      (src/data/medicine/cityData.js)
+ *   /                                              (the home page's rate list)
  *   /contact
  * If a section id in varanasiContent is ever renamed, the anchors here break
  * silently — they are listed in that file's header note for exactly that reason.
  *
  * ── Images: deliberately none ────────────────────────────────────────────
- * This post ships with no hero and no in-body photographs. Every image in
- * /public today belongs to the medicine side or is the one phlebotomy photo
- * the sibling article already uses as its hero — so anything placed here
- * would either be off-topic or a duplicate of another article's LCP image.
+ * This post ships with no hero and no in-body photographs. The only clinical
+ * photograph in /public is the phlebotomy shot the sibling article already
+ * uses as its hero, so anything placed here would be a duplicate of another
+ * article's LCP image.
  *
  * Nothing breaks by leaving them out. `hero` is optional (index.js normalises
  * a missing one to null and page.js renders the masthead without the figure),
@@ -107,7 +107,7 @@ const BLOG_LAB_VARANASI_FEVER = "/blogs/lab-test/varanasi#bukhar-me-test-ka-din"
 
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_DEORIA = "/lab-test/deoria";
-const MEDICINE_DEORIA = "/medicine-delivery/deoria";
+const HOME_RATE_LIST = "/";
 const CONTACT = "/contact";
 
 export const fullBodyCheckupVaranasi = {
@@ -593,9 +593,9 @@ export const fullBodyCheckupVaranasi = {
           ".",
         ],
         [
-          "Checkup ke baad ka aakhri kadam parche par likhi dawa hai. Test aur dawa ke beech ka gap hi wo jagah hai jahan ilaaj rukta hai, isliye ",
-          { text: "MedicoBharat medicine delivery", href: MEDICINE_DEORIA },
-          " bhi wahi platform karta hai — parcha bhejiye, dawa ghar par.",
+          "Kis package me kya-kya hai aur uska kya rate hai, ye ek hi jagah rakha gaya hai taaki number kabhi purana na pade: ",
+          { text: "sabhi test aur package ki rate list", href: HOME_RATE_LIST },
+          ".",
         ],
       ],
     },

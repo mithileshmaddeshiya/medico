@@ -50,18 +50,16 @@
  * Paragraph and list parts shaped { text, href } render as real in-prose links.
  * Every href below must be a route that exists:
  *   /lab-test/varanasi  and its section anchors        (src/data/lab/cities.js)
- *   /lab-test/deoria                                   (same)
- *   /medicine-delivery/deoria                          (src/data/medicine/cityData.js)
- *   /blogs/online-medicine-delivery/deoria             (../deoria)
- *   /blogs, /contact, /about
+ *   /lab-test/{deoria,gorakhpur}                       (same)
+ *   /blogs/full-body-checkup/varanasi                  (./)
+ *   /, /contact
  * The all-cities link grid at the foot of the page is NOT listed here — it is
  * generated from the live city lists so it can never point at a town we have
  * stopped serving.
  *
  * ── Images ───────────────────────────────────────────────────────────────
- * Three: the hero (a lab photograph) plus a booking banner and a delivery
- * photo, one each in the sections about booking a slot and about getting the
- * prescription filled afterwards.
+ * Two: the hero (a lab photograph) plus a booking banner in the section about
+ * booking a slot.
  *
  * THE RULE FOR ADDING MORE, and it is the one worth keeping: `src` must be a
  * file that exists in /public. The old blogData.js carried image URLs for
@@ -69,12 +67,15 @@
  * the blog page ended up rendering no images at all and the article schema
  * pointed at a 404.
  *
- * The two banners below are brand assets shot for the medicine side, reused
- * here because they are what exists today. They are placed in the two sections
- * where they are at least on topic — the booking banner beside the booking
- * steps, the delivery photo beside the paragraph about medicines after a test —
- * rather than sprinkled through the clinical sections, where a pharmacy photo
- * would sit next to a paragraph about NS1 timing and mean nothing.
+ * The banner below is a brand asset reused here because it is what exists
+ * today, and it sits in the one section where it is on topic — beside the
+ * booking steps — rather than being sprinkled through the clinical sections,
+ * where a stock photo next to a paragraph about NS1 timing would mean nothing.
+ *
+ * A second banner used to sit in the "Varanasi ke baahar" section: a delivery
+ * photograph captioned "test ke baad dawa". It went with the medicine section.
+ * An image whose alt text and caption advertise a service the site no longer
+ * offers is a topical signal pointing the wrong way — and alt text is read.
  *
  * When Varanasi gets its own photography, drop the files in
  * /public/blogs/varanasi/ and change the `src` strings here — nothing else.
@@ -97,8 +98,6 @@ const LAB_VARANASI_PREGNANCY = "/lab-test/varanasi#pregnancy-women-health-tests"
 const LAB_VARANASI_BOOK = "/lab-test/varanasi#book";
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
-const MEDICINE_DEORIA = "/medicine-delivery/deoria";
-const BLOG_MEDICINE_DEORIA = "/blogs/online-medicine-delivery/deoria";
 /* The sibling guide. This article stops at "package me kya hona chahiye" in one
    sentence and hands the subject over — see the de-duplication note at the top
    of ./full-body-checkup-in-varanasi.js for what moved there and why. */
@@ -475,11 +474,9 @@ export const labTestVaranasi = {
           },
         },
         [
-          "Report ke baad ka aakhri kadam parche par likhi dawa hai. Test aur dawa ke beech ka gap hi wo jagah hai jahan ilaaj rukta hai, isliye ",
-          { text: "MedicoBharat medicine delivery", href: MEDICINE_DEORIA },
-          " bhi wahi platform karta hai — parcha bhejiye, dawa ghar par. ",
-          { text: "Iska poora guide yahan hai", href: BLOG_MEDICINE_DEORIA },
-          ".",
+          "Report aa jaane ke baad agla kadam use doctor ko dikhana hai — PDF WhatsApp par rehti hai, isliye forward kar dena hi kaafi hai. Purani report bhi phone me sambhal kar rakhiye: doctor ko badlav dekhna hota hai, sirf aaj ka number nahi. Saal ka routine checkup planning kar rahe hain to ",
+          { text: "full body checkup me kya hona chahiye", href: BLOG_FULLBODY_VARANASI },
+          " pehle padh lijiye.",
         ],
       ],
     },
@@ -515,12 +512,6 @@ export const labTestVaranasi = {
     {
       id: "varanasi-ke-baahar",
       heading: "Varanasi Ke Baahar Se Aa Rahe Hain To Yeh Padhiye",
-      image: {
-        src: "/short/statsimg.webp",
-        alt: "MedicoBharat ka delivery partner ek parivaar ko ghar par dawa de raha hai",
-        caption:
-          "Test ke baad dawa — dono ek hi jagah se, taaki ilaaj beech me na ruke.",
-      },
       blocks: [
         "Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia aur Azamgarh se roz log Varanasi aate hain — kyunki specialist doctor, tertiary hospital aur bade diagnostic setup yahin hain. Lekin ek baat saaf samajh lijiye: safar sirf tab zaroori hai jab baat imaging ya procedure ki ho — MRI, CT scan, angiography, endoscopy, biopsy — ya kisi super-speciality OPD ki. Ye machine aur doctor par hote hain, sample par nahi.",
         "Parche par sirf blood aur urine ke test likhe hain — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — to unke liye Varanasi aane ki koi zaroorat nahi. Ye sab sample par hote hain, aur sample aapke apne sheher me liya ja sakta hai.",
@@ -659,11 +650,6 @@ export const labTestVaranasi = {
             label: "Deoria me lab test",
             sub: "Gorakhpur ka safar bachane wala option",
           },
-          {
-            href: MEDICINE_DEORIA,
-            label: "Deoria me online medicine delivery",
-            sub: "Test ke baad parche ki dawa",
-          },
         ],
       },
       {
@@ -675,8 +661,9 @@ export const labTestVaranasi = {
             sub: "Package me kya hona chahiye, umar ke hisaab se kaun sa level",
           },
           {
-            href: BLOG_MEDICINE_DEORIA,
-            label: "Online medicine delivery in Deoria",
+            href: "/",
+            label: "Sabhi lab test aur rate list",
+            sub: "Har sheher me wahi rate — ek hi page par",
           },
           { href: CONTACT, label: "Contact — booking aur test chunne me madad" },
         ],

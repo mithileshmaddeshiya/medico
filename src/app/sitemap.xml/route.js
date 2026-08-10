@@ -14,9 +14,13 @@ export const revalidate = 86400; // regenerate once per day instead of every req
  * Keep this a route handler for that reason — do not "simplify" it back to
  * app/sitemap.js.
  */
+/* "/sitemap/medicine-delivery.xml" used to be in this list. It is gone with
+   the section it described — submitting URLs that now 308 to a lab page would
+   spend crawl budget confirming a redirect Google will follow from the old
+   links anyway, and a sitemap full of redirects is a signal that the sitemap
+   is not maintained. The redirects themselves live in next.config.mjs. */
 const CHILDREN = [
   "/sitemap/static.xml",
-  "/sitemap/medicine-delivery.xml",
   "/sitemap/lab-test.xml",
   "/sitemap/blogs.xml",
 ];

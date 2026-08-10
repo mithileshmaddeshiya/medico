@@ -1,29 +1,49 @@
-import { url } from "@/lib/site";
+import Link from "next/link";
+import { Clock3, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
-import {
-  Phone,
-  Mail,
-  ShieldCheck,
-  Clock3,
-} from "lucide-react";
+import { LAB_PHONE, LAB_WHATSAPP, defaultFooter } from "@/data/lab/defaults";
+import { getLabCities } from "@/lib/labCities";
+import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
+import { SITE, url } from "@/lib/site";
 
-import { FaWhatsapp } from "react-icons/fa";
-
+/**
+ * /contact
+ *
+ * ── WHY EVERY NUMBER ON THIS PAGE IS IMPORTED ────────────────────────────
+ * This page used to hardcode its own contact details, and they had drifted:
+ * the WhatsApp button dialled 7303995446 while the footer and the schema on
+ * every other page used 9891233525, and the email said
+ * support@medicobharat.com while the rest of the site said
+ * support.medicobharat@gmail.com.
+ *
+ * That is not a cosmetic bug. Local ranking is built on NAP consistency —
+ * Name, Address, Phone appearing identically across a site, its schema and its
+ * business profile. Two phone numbers on one domain is exactly the signal that
+ * stops a business being matched to a single entity, and the contact page is
+ * the page a crawler weights most heavily for it.
+ *
+ * So nothing here is typed. LAB_PHONE, LAB_WHATSAPP and defaultFooter().email
+ * come from src/data/lab/defaults.js — the same source the footer, the booking
+ * form and the DiagnosticLab schema read. Change a number there and it changes
+ * everywhere at once, which is the only way it stays consistent.
+ *
+ * The copy is lab-test copy now. It used to offer "medicine ordering
+ * assistance" and "prescription support" for a section that no longer exists.
+ */
 export const metadata = {
-  title:
-    "Contact MedicoBharat | Medicine Support & Customer Assistance",
+  title: "Contact MedicoBharat — Lab Test Booking Help",
 
   description:
-    "Contact MedicoBharat for medicine support, healthcare assistance, and customer service. Reach us through WhatsApp, phone, or email for quick support across India.",
+    "Lab test booking, home sample collection ke ilaake, report ya price ka sawaal — WhatsApp, phone ya email par MedicoBharat se baat kijiye. Slot subah 6 baje se, saaton din.",
 
   keywords: [
     "Contact MedicoBharat",
-    "medicine support",
-    "customer assistance",
-    "online medicine help",
-    "healthcare support India",
-    "medicine delivery support",
-    "online pharmacy contact",
+    "MedicoBharat phone number",
+    "lab test booking help",
+    "home sample collection booking",
+    "lab test customer support",
+    "blood test booking number",
   ],
 
   alternates: {
@@ -40,262 +60,273 @@ export const metadata = {
   },
 
   openGraph: {
-    title:
-      "Contact MedicoBharat | Medicine Support & Customer Assistance",
-
+    title: "Contact MedicoBharat — Lab Test Booking Help",
     description:
-      "Get in touch with MedicoBharat for medicine ordering support, healthcare assistance, and customer service.",
-
+      "Lab test booking, coverage aur report se jude sawaal — WhatsApp, phone ya email par baat kijiye.",
     url: url("/contact"),
-
     siteName: "MedicoBharat",
-
     type: "website",
   },
 };
 
+export default async function ContactPage() {
+  const cities = await getLabCities();
+  const { email, hours } = defaultFooter("");
 
-export default function Page() {
+  const tel = `tel:${LAB_PHONE.replace(/\s/g, "")}`;
+  const whatsapp = `https://wa.me/${LAB_WHATSAPP}`;
+
+  /* ContactPage joined to the site graph. `mainEntity` resolves to the same
+     organisation @id the root layout declares, and the ContactPoint below
+     carries the same number the whole site prints — which is the entire point
+     of the note at the top of this file. */
+  const contactNode = {
+    "@type": "ContactPage",
+    "@id": `${SITE}/contact#webpage`,
+    url: url("/contact"),
+    name: metadata.title,
+    description: metadata.description,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: ORG_REF,
+    mainEntity: {
+      "@type": "ContactPoint",
+      telephone: LAB_PHONE,
+      email,
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["Hindi", "English"],
+    },
+    publisher: ORG_REF,
+    inLanguage: ["hi-IN", "en-IN"],
+  };
+
+  const breadcrumbNode = {
+    "@type": "BreadcrumbList",
+    "@id": `${SITE}/contact#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+      { "@type": "ListItem", position: 2, name: "Contact", item: url("/contact") },
+    ],
+  };
+
   return (
-    <section className="w-full overflow-hidden bg-gradient-to-b from-white to-green-50/30 py-20 md:pt-23 px-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: ldJson(graph(contactNode, breadcrumbNode)),
+        }}
+      />
 
-      <div className="max-w-6xl mx-auto">
+      <section className="w-full overflow-hidden bg-linear-to-b from-emerald-50/70 to-white pt-24 sm:pt-32 pb-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="relative mx-auto max-w-3xl text-center">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute left-1/2 top-0 h-52 w-52 -translate-x-1/2 rounded-full bg-emerald-200/40 blur-3xl"
+            />
 
-        {/* HERO */}
-        <div className="relative text-center max-w-3xl mx-auto mb-6 md:mb-8">
-
-          <div className="absolute left-1/2 top-0 -translate-x-1/2 w-52 h-52 rounded-full bg-green-100/40 blur-3xl"></div>
-
-          <span className="relative inline-flex items-center rounded-full border border-green-200 bg-white px-4 py-1.5 text-xs md:text-sm font-semibold text-green-700 shadow-sm mb-3">
-            Trusted Customer Support
-          </span>
-
-          <h1 className="relative text-3xl sm:text-4xl md:text-[42px] font-black tracking-tight text-gray-900 leading-tight">
-
-            Contact{" "}
-
-            <span className="bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-              MedicoBharat
+            <span className="relative inline-flex items-center rounded-full border border-emerald-200 bg-white px-4 py-1.5 text-[11.5px] font-bold text-emerald-800 shadow-sm">
+              {hours}
             </span>
 
-          </h1>
+            <h1 className="relative mt-4 text-balance text-[30px] sm:text-[42px] font-extrabold leading-[1.12] tracking-tight text-slate-900">
+              Contact{" "}
+              <span className="bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                MedicoBharat
+              </span>
+            </h1>
 
-          <p className="relative mt-3 text-sm sm:text-base md:text-lg leading-7 text-gray-600">
-            Reach out for medicine support, prescription assistance, healthcare
-            guidance, and reliable customer service.
-          </p>
-
+            <p className="relative mt-4 text-[14px] sm:text-[16.5px] leading-relaxed text-slate-600">
+              Test book karana ho, ye poochhna ho ki aapka ilaaka cover hota hai
+              ya nahi, ya report aur price se juda koi sawaal ho — call kijiye,
+              WhatsApp kijiye ya email likhiye. Baat Hindi me hoti hai.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* CONTACT CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6 md:mb-8">
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
 
-          {/* WHATSAPP */}
-          <div className="group relative overflow-hidden rounded-[28px] border border-green-100 bg-white p-4 md:p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          {/* ── THREE WAYS TO REACH US ──────────────────────────────────── */}
+          <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-green-100 blur-3xl opacity-30"></div>
+            {/* PHONE — first, because it is the fastest way to a booking and
+                the number this business is actually reached on. */}
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-emerald-100/90 shadow-[0_1px_2px_rgba(6,78,59,0.04),0_14px_34px_-24px_rgba(6,78,59,0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:ring-emerald-300/80">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-emerald-500 to-teal-600 text-white shadow-[0_8px_18px_-8px_rgba(5,150,105,0.7)]">
+                <Phone className="h-5 w-5" strokeWidth={1.9} />
+              </span>
 
-            <div className="relative">
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#25D366]/10 mb-4">
-                <FaWhatsapp className="h-6 w-6 text-[#25D366]" />
-              </div>
-
-              <h2 className="text-lg font-bold text-gray-900 mb-2">
-                WhatsApp Support
+              <h2 className="mt-4 text-[16px] font-bold tracking-tight text-slate-900">
+                Call kijiye
               </h2>
-
-              <p className="text-sm text-gray-600 leading-6 mb-4">
-                Connect instantly with our support team for medicine and
-                healthcare assistance.
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-500">
+                Sabse tez tarika. Slot, ilaaka aur price — teenon ek call me
+                confirm ho jaate hain.
               </p>
 
               <a
-                href="https://wa.me/917303995446"
+                href={tel}
+                className="mt-4 inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 text-[13px] font-bold text-white transition hover:bg-emerald-700 active:scale-[0.98]"
+              >
+                <Phone className="h-3.5 w-3.5" strokeWidth={2.4} />
+                <span className="tabular-nums">{LAB_PHONE}</span>
+              </a>
+            </div>
+
+            {/* WHATSAPP */}
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-emerald-100/90 shadow-[0_1px_2px_rgba(6,78,59,0.04),0_14px_34px_-24px_rgba(6,78,59,0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:ring-emerald-300/80">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#25D366]/10 text-[#25D366]">
+                <FaWhatsapp className="h-6 w-6" aria-hidden />
+              </span>
+
+              <h2 className="mt-4 text-[16px] font-bold tracking-tight text-slate-900">
+                WhatsApp
+              </h2>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-500">
+                Doctor ka parcha bhejna ho to yahi sabse aasan hai — photo
+                bhejiye, wahi panel book ho jaayega.
+              </p>
+
+              <a
+                href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90"
+                className="mt-4 inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 text-[13px] font-bold text-white transition hover:opacity-90 active:scale-[0.98]"
               >
-                Chat Now
+                <FaWhatsapp className="h-4 w-4" aria-hidden />
+                Chat karein
               </a>
-
             </div>
-          </div>
 
-          {/* PHONE */}
-          <div className="group relative overflow-hidden rounded-[28px] border border-green-100 bg-white p-4 md:p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            {/* EMAIL */}
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-emerald-100/90 shadow-[0_1px_2px_rgba(6,78,59,0.04),0_14px_34px_-24px_rgba(6,78,59,0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:ring-emerald-300/80 sm:col-span-2 lg:col-span-1">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100">
+                <Mail className="h-5 w-5" strokeWidth={1.9} />
+              </span>
 
-            <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-green-100 blur-3xl opacity-30"></div>
-
-            <div className="relative">
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-green-100 mb-4">
-                <Phone className="h-5 w-5 text-green-600" />
-              </div>
-
-              <h2 className="text-lg font-bold text-gray-900 mb-2">
-                Phone Support
+              <h2 className="mt-4 text-[16px] font-bold tracking-tight text-slate-900">
+                Email
               </h2>
-
-              <p className="text-sm text-gray-600 leading-6 mb-4">
-                Get quick assistance and customer support for medicine-related
-                queries.
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-500">
+                Report se juda koi sawaal, ya likhit me kuch bhejna ho to yahan
+                likhiye.
               </p>
 
               <a
-                href="tel:+919891233525"
-                className="text-green-600 font-semibold text-sm hover:underline"
+                href={`mailto:${email}`}
+                className="mt-4 inline-block break-all text-[13px] font-bold text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
               >
-                +91 989-123-3525
+                {email}
               </a>
-
             </div>
           </div>
 
-          {/* EMAIL */}
-          <div className="group relative overflow-hidden rounded-[28px] border border-green-100 bg-white p-4 md:p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:col-span-2 lg:col-span-1">
+          {/* ── WHAT WE CAN HELP WITH + WHERE WE COME ───────────────────── */}
+          <div className="mt-5 grid gap-4 sm:gap-5 md:grid-cols-2">
 
-            <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-green-100 blur-3xl opacity-30"></div>
-
-            <div className="relative">
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-green-100 mb-4">
-                <Mail className="h-5 w-5 text-green-600" />
+            <div className="rounded-2xl bg-white p-5 sm:p-6 ring-1 ring-slate-200/80">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100">
+                  <ShieldCheck className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <h2 className="text-[17px] font-bold tracking-tight text-slate-900">
+                  Kis cheez me madad milti hai
+                </h2>
               </div>
 
-              <h2 className="text-lg font-bold text-gray-900 mb-2">
-                Email Support
-              </h2>
+              <ul className="mt-4 space-y-2.5 text-[13px] leading-relaxed text-slate-600">
+                <li>• Test ya package chunne me — kaun sa test kab karana chahiye</li>
+                <li>• Doctor ke parche ke hisaab se sahi panel book karne me</li>
+                <li>• Ye confirm karne me ki aapka pata cover hota hai ya nahi</li>
+                <li>• Fasting ke niyam aur slot ke time me</li>
+                <li>• Report na milne ya PDF dobara chahiye hone par</li>
+                <li>• Us test ka price jo is site par listed nahi hai</li>
+              </ul>
 
-              <p className="text-sm text-gray-600 leading-6 mb-4">
-                Send your queries and healthcare assistance requests through
-                email.
+              <p className="mt-4 rounded-xl bg-amber-50 p-3.5 text-[12.5px] leading-relaxed text-amber-900 ring-1 ring-amber-200">
+                <strong className="font-bold">Emergency me call mat kijiye.</strong>{" "}
+                Tez bukhar ke saath jhatke, behoshi, saans ki takleef, seene me
+                dard ya lagatar ulti ho to seedha najdeeki hospital jaaiye. Lab
+                test iska pehla jawab nahi hai.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-linear-to-br from-emerald-50 to-teal-50/60 p-5 sm:p-6 ring-1 ring-emerald-100">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-emerald-600 ring-1 ring-emerald-100">
+                  <Clock3 className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <h2 className="text-[17px] font-bold tracking-tight text-slate-900">
+                  Timing aur coverage
+                </h2>
+              </div>
+
+              <p className="mt-4 text-[13px] leading-relaxed text-slate-600">
+                Home visit ke slot <strong className="font-semibold text-slate-800">subah 6 baje se</strong>{" "}
+                shuru hote hain aur shaam tak chalte hain, saaton din. Report 24
+                ghante me milti hai — lab 24 ghante khula nahi rehta, aur hum
+                aisa daawa bhi nahi karte.
               </p>
 
-              <a
-                href="mailto:support@medicobharat.com"
-                className="text-green-600 font-semibold text-sm break-all hover:underline"
-              >
-                support@medicobharat.com
-              </a>
+              {/* Cities as links: /contact is a page both readers and crawlers
+                  reach, and a route from here into each city page is worth more
+                  than a paragraph about how responsive we are. */}
+              <nav aria-label="Cities we serve" className="mt-4">
+                <h3 className="text-[12px] font-bold uppercase tracking-[0.1em] text-emerald-800">
+                  Jin sheher me collection hoti hai
+                </h3>
+                <ul className="mt-2.5 space-y-1.5">
+                  {cities.map((city) => (
+                    <li key={city.slug}>
+                      <Link
+                        href={`/lab-test/${city.slug}`}
+                        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:text-emerald-700"
+                      >
+                        <MapPin
+                          aria-hidden
+                          className="h-3.5 w-3.5 shrink-0 text-emerald-500"
+                          strokeWidth={2.2}
+                        />
+                        Lab Test in {city.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
 
+              <p className="mt-4 text-[12.5px] leading-relaxed text-slate-500">
+                Aapka gaon ya mohalla in page par listed nahi hai? Ek call kar
+                lijiye — cover hone par usi waqt slot book ho jaayega, aur nahi
+                hone par hum saaf bata denge.
+              </p>
             </div>
           </div>
 
-        </div>
-
-        {/* INFO SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6 md:mb-8">
-
-          {/* LEFT */}
-          <div className="rounded-[28px] border border-gray-100 bg-white p-5 shadow-sm">
-
-            <div className="flex items-center gap-3 mb-4">
-
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-green-100">
-                <ShieldCheck className="h-5 w-5 text-green-600" />
-              </div>
-
-              <h2 className="text-lg md:text-xl font-bold text-gray-900">
-                Customer Assistance
-              </h2>
-
-            </div>
-
-            <p className="text-sm text-gray-600 leading-7 mb-4">
-              MedicoBharat focuses on delivering reliable healthcare and
-              medicine support with a customer-first experience.
-            </p>
-
-            <ul className="space-y-2 text-sm text-gray-700">
-
-              <li>• Online medicine ordering assistance</li>
-
-              <li>• Prescription support and guidance</li>
-
-              <li>• Healthcare product support</li>
-
-              <li>• Fast customer response</li>
-
-            </ul>
-
-          </div>
-
-          {/* RIGHT */}
-          <div className="rounded-[28px] border border-green-100 bg-gradient-to-br from-green-50 to-white p-5 shadow-sm">
-
-            <div className="flex items-center gap-3 mb-4">
-
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-green-100">
-                <Clock3 className="h-5 w-5 text-green-600" />
-              </div>
-
-              <h2 className="text-lg md:text-xl font-bold text-gray-900">
-                Support Availability
-              </h2>
-
-            </div>
-
-            <div className="space-y-4 text-sm text-gray-700">
-
-              <div>
-                <p className="font-semibold text-gray-900">
-                  Support Hours
-                </p>
-
-                <p className="text-gray-600 mt-1">
-                  Monday to Sunday
-                </p>
-
-                <p className="text-gray-600">
-                  8:00 AM – 10:00 PM
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-gray-900">
-                  Reliable Assistance
-                </p>
-
-                <p className="text-gray-600 mt-1 leading-6">
-                  Fast and responsive support for healthcare and medicine
-                  related queries.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* TRUST SECTION */}
-        <div className="relative overflow-hidden rounded-[8px] bg-gradient-to-r from-green-600 to-green-500 px-5 py-6 md:px-8 md:py-7 text-center text-white shadow-lg">
-
-          <div className="absolute inset-0 opacity-20">
-
-            <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-
-          </div>
-
-          <div className="relative">
-
-            <h2 className="text-2xl md:text-4xl font-black leading-tight mb-3">
-              Reliable Healthcare Support You Can Trust
+          {/* ── CTA ─────────────────────────────────────────────────────── */}
+          <div className="mt-5 rounded-2xl bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-8 sm:px-10 sm:py-10 text-center text-white">
+            <h2 className="text-balance text-[22px] sm:text-[30px] font-extrabold leading-tight tracking-tight">
+              Call Karne Ki Bhi Zaroorat Nahi
             </h2>
 
-            <p className="max-w-3xl mx-auto text-sm md:text-base leading-7 text-green-50">
-              MedicoBharat delivers a smooth, responsive, and customer-friendly
-              healthcare experience with genuine medicine assistance.
+            <p className="mx-auto mt-3 max-w-2xl text-[13.5px] sm:text-[15px] leading-relaxed text-emerald-50">
+              Form bhar dijiye — hum lagbhag 30 minute me call kar ke slot aur
+              pata confirm kar lenge.
             </p>
 
+            <div className="mt-6">
+              <Link
+                href="/#book"
+                className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-[13.5px] font-bold text-emerald-700 transition hover:bg-emerald-50 active:scale-[0.98]"
+              >
+                Booking form kholein
+              </Link>
+            </div>
           </div>
-
         </div>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
