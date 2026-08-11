@@ -189,6 +189,56 @@ export const HOME_STEPS = {
   ],
 };
 
+/* ── "How to book" steps ──────────────────────────────────────────────────
+   The numbered row rendered by src/components/lab/LabHowTo.jsx at the bottom of
+   this page — the same block the city pages carry, so the procedure a patient
+   reads is identical wherever they land. English, like HOME_STEPS above, and the
+   timings are the same four numbers: 30 minutes to the call, ~10 minutes for the
+   visit, 6–24 hours for a routine report, 48–72 for cultures.
+
+   ⚠ RELATIONSHIP TO HOME_STEPS. That block is the older four-step version of
+   this same content, rendered by HomeSteps.jsx — which this page does not
+   currently render. Nothing breaks while that is true, but the two must never be
+   on the page at once: it would state the process twice, and the day a timing
+   changes in one and not the other the page contradicts itself. If HomeSteps is
+   ever switched back on, delete one of them.
+
+   ⚠ Same claims rule as the city defaults: nothing about temperature-controlled
+   transport, pathologist verification or accreditation — see the warning above
+   defaultHowTo in src/data/lab/defaults.js. */
+export const HOME_HOW_TO = {
+  heading: "How to book a lab test with MedicoBharat",
+  intro:
+    "Five steps from booking to report — and the same timings we state on every page, in every city we serve.",
+  steps: [
+    {
+      icon: "clipboard-list",
+      title: "Booking Made Easy",
+      text: "Pick a test or package from the list above and fill the form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
+    },
+    {
+      icon: "headset",
+      title: "Guidance",
+      text: "We call you back in about 30 minutes to confirm the slot and address, and to tell you whether the test needs fasting.",
+    },
+    {
+      icon: "test-tube",
+      title: "Sample Collection",
+      text: "A trained phlebotomist reaches your address with an ID card and draws the sample in front of you. About 10 minutes, and collection is free.",
+    },
+    {
+      icon: "microscope",
+      title: "Lab Processing",
+      text: "The sample goes to the lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
+    },
+    {
+      icon: "file-heart",
+      title: "Report and Support",
+      text: "The PDF report comes on WhatsApp and email, so you can show your doctor right away. Anything unclear in it — call us and we will explain.",
+    },
+  ],
+};
+
 /* ── Why us ───────────────────────────────────────────────────────────────
    Read this block twice before editing it. Every card is a promise we keep,
    written as a checkable fact. The last card is deliberately about what we do

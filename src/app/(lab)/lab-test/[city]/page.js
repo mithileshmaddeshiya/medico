@@ -5,6 +5,7 @@ import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import LabHero from "@/components/lab/LabHero";
+import LabHowTo from "@/components/lab/LabHowTo";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
@@ -393,7 +394,12 @@ export default async function LabCityPage({ params }) {
         related={cityData.relatedLinks}
       />
 
-      {/* Closing call strip — last section before the footer */}
+      {/* How the visit actually works, under the guide. Last section on the
+          page on purpose: the reader who has got this far has decided they want
+          the test, and the only thing left in the way is not knowing what
+          happens after the form. Copy in src/data/lab/defaults.js — read the
+          claims warning above it before editing. */}
+      <LabHowTo data={cityData.howTo} />
     </>
   );
 }

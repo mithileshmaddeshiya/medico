@@ -46,6 +46,10 @@
  *   faqs                          [{ q, a }]
  *   cta                           { headingLead, headingAccent, proof: [] }
  *   content                       [{ id, h, p: [] }]
+ *   howTo                         { heading, intro, steps: [{ icon, title,
+ *                                   text }] }  the numbered "How to book"
+ *                                   row under the guide. Setting `steps`
+ *                                   replaces all five.
  *   callBanner                    { heading, buttonText }
  *   footer                        { tagline, popularTests: [], email,
  *                                   phone, hours }
@@ -69,6 +73,7 @@ import {
   defaultFilters,
   defaultFooter,
   defaultHero,
+  defaultHowTo,
   defaultKeywords,
   defaultTests,
   defaultTitle,
@@ -660,6 +665,11 @@ function buildContent(fields, base) {
     // city's own localities — the fallback used to carry a hardcoded list of
     // Varanasi neighbourhoods, which every other city then advertised.
     content: objList(fields.content) ?? defaultContent(name, areas),
+    // Per-key merge, like `cta` and `callBanner`: a city can retitle the block
+    // without restating all five steps. Passing `steps` replaces the array
+    // wholesale — a per-item merge across two lists of different lengths is not
+    // predictable enough to be worth it.
+    howTo: { ...defaultHowTo(name), ...(obj(fields.howTo) ?? {}) },
     callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
     footer: { ...defaultFooter(name), ...(obj(fields.footer) ?? {}) },
     // Optional and with NO default on purpose. A generated link block would be

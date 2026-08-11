@@ -6,6 +6,7 @@ import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
+import LabHowTo from "@/components/lab/LabHowTo";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import { getLatestBlogs } from "@/data/blogs";
@@ -16,6 +17,7 @@ import {
   HOME_FAQS,
   HOME_GUIDES,
   HOME_HERO,
+  HOME_HOW_TO,
   HOME_META,
   HOME_STEPS,
   HOME_WHY,
@@ -352,6 +354,9 @@ export default async function HomePage() {
 
       <LabCallBanner banner={HOME_CALL_BANNER} phone={LAB_PHONE} />
 
+      <LabHowTo data={HOME_HOW_TO} />
+
+
       {/* <HomeGuides data={HOME_GUIDES} posts={guides} /> */}
 
       {/* `pageUrl` joins the FAQ node to this page's graph (#faqpage →
@@ -377,6 +382,12 @@ export default async function HomePage() {
         sections={HOME_CONTENT}
         related={homeRelatedLinks(cities, guides)}
       />
+
+      {/* How the visit actually works, under the guide — the same component and
+          the same five steps the city pages carry, so the procedure never reads
+          differently depending on where a patient landed. Copy is HOME_HOW_TO in
+          src/data/home.js; read the note above it about HOME_STEPS before
+          switching HomeSteps back on. */}
     </>
   );
 }
