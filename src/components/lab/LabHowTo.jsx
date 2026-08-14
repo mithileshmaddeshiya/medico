@@ -89,7 +89,7 @@ export default function LabHowTo({ data }) {
   return (
     <section
       aria-labelledby="lab-howto-heading"
-      className="border-t border-slate-200/80 bg-white"
+      className="hidden md:block border-t border-slate-200/80 bg-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
 

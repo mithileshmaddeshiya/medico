@@ -388,6 +388,15 @@ export const HOME_CONTENT = [
         { text: "Deoria", href: "/lab-test/deoria" },
         " — Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak.",
       ],
+      // Jile teen hi hain — Salempur Deoria jile ke andar hai, isliye upar wali
+      // ginti nahi badli. Alag page isliye hai ki us tehsil ka reader apne kasbe
+      // ka naam search karta hai, jila ka nahi. Home page se link dena is naye
+      // URL ke crawl hone ka sabse seedha rasta hai.
+      [
+        "Deoria jile me Salempur tehsil ke liye alag page bhi hai — ",
+        { text: "Salempur me lab test", href: "/lab-test/salempur" },
+        " — jismein Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana aur Barhaj ke ilaake aur wahi ka booking form hai.",
+      ],
       "Har sheher ka apna page hai, aur wo jaan-boojh kar hai. Us page par usi sheher ke ilaake, usi sheher ka booking form aur usi sheher ke liye likhi gayi jaankari milti hai — ek hi page par teen jilon ka mix ho jaata to na booking form kaam ka rehta, na jaankari.",
       [
         "Isliye booking ka sabse aasan tareeka yahi hai ki apna sheher khol lijiye — ",
@@ -500,7 +509,7 @@ export const HOME_CTA = {
 };
 
 export const HOME_CALL_BANNER = {
-  heading: "Ghar Baithe Apna Health Checkup Book Kijiye",
+  heading: "Book Your Health Checkup From Home",
   buttonText: "Book Now — Call Us",
 };
 

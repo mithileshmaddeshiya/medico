@@ -6,6 +6,7 @@ import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
+import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
@@ -382,6 +383,10 @@ export default async function HomePage() {
         sections={HOME_CONTENT}
         related={homeRelatedLinks(cities, guides)}
       />
+
+      {/* Floats over everything, bottom-right, dismissible — the shortcut for a
+          reader who decides mid-scroll. Same number the strips above dial. */}
+      <FloatingCallButton phone={LAB_PHONE} />
 
       {/* How the visit actually works, under the guide — the same component and
           the same five steps the city pages carry, so the procedure never reads
