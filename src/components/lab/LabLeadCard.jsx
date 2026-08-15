@@ -81,11 +81,11 @@ export default function LabLeadCard({
     if (sending) return;
 
     if (name.trim().length < 2)
-      return complain("name", nameRef, "Apna naam likhiye — hum isi naam se call karenge.");
+      return complain("name", nameRef, "Please enter your name — we will use it when we call.");
     if (!/^[6-9]\d{9}$/.test(phone))
-      return complain("phone", phoneRef, "10 digit ka mobile number likhiye, jaise 98912 34567.");
+      return complain("phone", phoneRef, "Please enter a 10 digit mobile number, e.g. 98912 34567.");
     if (!city)
-      return complain("city", cityRef, "Apna city select kijiye taaki sahi team bheji ja sake.");
+      return complain("city", cityRef, "Please select your city so we can send the nearest team.");
     // Address is optional — the team confirms the full address on the follow-up
     // call, so a patient can book without typing it out.
 
@@ -105,7 +105,7 @@ export default function LabLeadCard({
       const result = await response.json().catch(() => ({}));
 
       if (!response.ok || !result.ok) {
-        toast.error(result.error || `Booking nahi ho payi. ${LAB_PHONE} par call kar lijiye.`, {
+        toast.error(result.error || `Booking could not be placed. Please call us at ${LAB_PHONE}.`, {
           id: "lab-lead-form",
         });
         return;
@@ -115,7 +115,7 @@ export default function LabLeadCard({
     } catch {
       // Offline, or the request never reached us — the phone number is the
       // fallback that always works.
-      toast.error("Internet check kijiye, ya seedhe call kar lijiye.", { id: "lab-lead-form" });
+      toast.error("Please check your internet, or call us directly.", { id: "lab-lead-form" });
     } finally {
       setSending(false);
     }
@@ -158,10 +158,9 @@ export default function LabLeadCard({
           // So: confirm it landed, say exactly what comes next and when, and
           // give them something to do — go back, or call.
           //
-          // Copy is plain Hinglish, the same language as the guide and FAQ on
-          // these pages. It used to read "Booking confirmed / Phlebotomist
-          // reaches your door" — accurate, but "phlebotomist" is a word most
-          // patients here have never met, and it sat at the one moment they
+          // Copy is plain English, deliberately free of lab jargon. It used to
+          // read "Phlebotomist reaches your door" — accurate, but that is a word
+          // most patients here have never met, and it sat at the one moment they
           // most need to understand what happens next.
           //
           // Kept short on purpose: this replaces the form in place, so anything
@@ -174,11 +173,11 @@ export default function LabLeadCard({
               </span>
 
               <h3 className="mt-2.5 text-[15px] font-extrabold tracking-tight text-slate-900">
-                Form submit ho gaya
+                Form submitted
               </h3>
               <p className="mt-1 text-[12.5px] leading-snug text-slate-600">
-                Thank you{name.trim() ? `, ${name.trim().split(" ")[0]}` : ""}. Ab aapko
-                kuch nahi karna{test ? ` — ${test} book ho gaya hai` : ""}.
+                Thank you{name.trim() ? `, ${name.trim().split(" ")[0]}` : ""}. Nothing
+                more to do{test ? ` — ${test} is booked` : ""}.
               </p>
             </div>
 
@@ -188,18 +187,18 @@ export default function LabLeadCard({
               {[
                 {
                   icon: PhoneCall,
-                  h: `Hum call karenge — ${phone}`,
-                  s: "30 minute me, time confirm karne ke liye",
+                  h: `We will call you — ${phone}`,
+                  s: "Within 30 minutes, to confirm your slot",
                 },
                 {
                   icon: Clock,
-                  h: "Staff ghar aayega sample lene",
-                  s: "Time confirm hone ke 60 minute me",
+                  h: "Our staff visits to collect the sample",
+                  s: "Within 60 minutes of the slot being confirmed",
                 },
                 {
                   icon: Check,
-                  h: "Report WhatsApp par",
-                  s: "24 ghante me, PDF me",
+                  h: "Report on WhatsApp",
+                  s: "Within 24 hours, as a PDF",
                 },
               ].map(({ icon: Icon, h, s }, i) => (
                 <li key={h} className="flex gap-2.5">
@@ -227,7 +226,7 @@ export default function LabLeadCard({
                 className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-600 to-teal-600 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98] transition-all"
               >
                 <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.4} />
-                Abhi call karein — {LAB_PHONE}
+                Call now — {LAB_PHONE}
               </a>
 
               {/* The back button. In the modal, closing is the more natural
@@ -239,7 +238,7 @@ export default function LabLeadCard({
                 className="inline-flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-md bg-white text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-50/60 hover:ring-emerald-400 active:scale-[0.98] transition-all"
               >
                 <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.4} />
-                {onClose ? "Wapas tests par jayein" : "Ek aur test book karein"}
+                {onClose ? "Back to tests" : "Book another test"}
               </button>
             </div>
           </div>

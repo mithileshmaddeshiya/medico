@@ -68,6 +68,11 @@ const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 // the place people travel to — leaving it as plain text while we serve it was
 // the site's single most obvious missing link.
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
+// Salempur tehsil got its own page. This file already names the town twice as a
+// place we collect from, and an in-prose link is how that page gets crawled —
+// a new URL two levels down in a district is found through links long before a
+// sitemap entry counts for anything.
+const LAB_SALEMPUR = "/lab-test/salempur";
 
 export const deoriaContent = [
   {
@@ -97,7 +102,11 @@ export const deoriaContent = [
     id: "home-sample-collection-deoria",
     h: "Deoria Jile Me Home Sample Collection — Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani Aur Lar",
     p: [
-      "Collection Deoria Sadar ke saath saath jile ke kasbon me bhi hoti hai — Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni. Aap in kasbon ke aas paas ke gaon me rehte hain aur sure nahi hain ki aapka address cover hota hai ya nahi, to booking se pehle ek call kar lijiye; hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon.",
+      [
+        "Collection Deoria Sadar ke saath saath jile ke kasbon me bhi hoti hai — Rudrapur, Barhaj, ",
+        { text: "Salempur", href: LAB_SALEMPUR },
+        ", Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni. Salempur tehsil aur uske aas-paas ke kasbon ke liye alag page hai, jismein wahan ke ilaake aur booking form hain. Aap in kasbon ke aas paas ke gaon me rehte hain aur sure nahi hain ki aapka address cover hota hai ya nahi, to booking se pehle ek call kar lijiye; hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon.",
+      ],
       "Deoria ke pate sheher jaise nahi hote. Yahan house number aur sector se zyada kaam landmark karta hai — school, mandir, bank, petrol pump, block office, chauraha. Booking form me apna gaon ya mohalla likhne ke saath ek landmark zaroor daaliye aur mobile number chalu rakhiye. Zyadatar late visit ki wajah galat pata hoti hai, na ki phlebotomist ka na aana.",
       "Fasting wale test ke liye subah 6 baje se slot shuru hote hain. Iska faayda gaon-kasbe me sheher se zyada hai: kheti ya dukaan ka kaam subah hi shuru ho jaata hai, aur 10–12 ghante khaali pet rehne ke baad koi din bhar bhookha nahi baith sakta. Jaldi wala slot lijiye, sample dijiye, aur turant naashta kar lijiye.",
       "Ghar me ek se zyada log test kara rahe hain — maa-baap, dada-dadi, bachche — to sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaayega. Agar koi bujurg hai, bistar par hai, diabetic hai jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai, to ye booking ke waqt bata dijiye.",

@@ -73,6 +73,51 @@ export const defaultTrustStrip = () => [
   },
 ];
 
+/* ── "How to book" steps ──────────────────────────────────────────────────
+   The numbered row under the long-form guide — see src/components/lab/LabHowTo.jsx.
+   Five steps, in order, and every timing in them is one the rest of the site
+   already states: 30 minutes to the call, ~10 minutes for the visit, 6–24 hours
+   for a routine report.
+
+   ⚠ SAME RULE AS defaultFaqs BELOW: every claim here must be literally true of
+   the actual operation. Do NOT add cold-chain / temperature-controlled
+   transport, pathologist verification, barcoded tubes or NABL accreditation to
+   step 4 — all four were removed from this project on 23 Jul 2026 because they
+   could not be confirmed with the partner lab. */
+
+export const defaultHowTo = (city) => ({
+  heading: `How to book a lab test in ${city}`,
+  intro:
+    "Five steps from booking to report — and the same timings we state everywhere else on this page.",
+  steps: [
+    {
+      icon: "clipboard-list",
+      title: "Booking Made Easy",
+      text: "Pick a test or package on this page and fill the form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
+    },
+    {
+      icon: "headset",
+      title: "Guidance",
+      text: "We call you back in about 30 minutes to confirm the slot and address, and to tell you whether the test needs fasting.",
+    },
+    {
+      icon: "test-tube",
+      title: "Sample Collection",
+      text: `A trained phlebotomist reaches your ${city} address with an ID card and draws the sample in front of you. About 10 minutes, and collection is free.`,
+    },
+    {
+      icon: "microscope",
+      title: "Lab Processing",
+      text: "The sample goes to the lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
+    },
+    {
+      icon: "file-heart",
+      title: "Report and Support",
+      text: "The PDF report comes on WhatsApp and email, so you can show your doctor right away. Anything unclear in it — call us and we will explain.",
+    },
+  ],
+});
+
 /* ── Tests & packages ─────────────────────────────────────────────────────
    `price` — what the patient pays (₹). `mrp` — the struck-through list price;
    leave it out and the card shows the price with no discount pill.

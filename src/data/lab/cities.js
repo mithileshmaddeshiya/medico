@@ -46,6 +46,10 @@
  *   faqs                          [{ q, a }]
  *   cta                           { headingLead, headingAccent, proof: [] }
  *   content                       [{ id, h, p: [] }]
+ *   howTo                         { heading, intro, steps: [{ icon, title,
+ *                                   text }] }  the numbered "How to book"
+ *                                   row under the guide. Setting `steps`
+ *                                   replaces all five.
  *   callBanner                    { heading, buttonText }
  *   footer                        { tagline, popularTests: [], email,
  *                                   phone, hours }
@@ -58,6 +62,7 @@
  */
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
+import { salempurContent, salempurFaqs } from "./content/salempur";
 import { varanasiContent } from "./content/varanasi";
 import {
   CITY_ALIASES,
@@ -69,6 +74,7 @@ import {
   defaultFilters,
   defaultFooter,
   defaultHero,
+  defaultHowTo,
   defaultKeywords,
   defaultTests,
   defaultTitle,
@@ -354,6 +360,13 @@ const LAB_CITY_SEED = [
         {
           title: "Doosre Sheher",
           links: [
+            // Jile ke andar ka page, isliye pehle. Salempur tehsil ka apna page
+            // hai aur wahan ke reader ko yahi anchor us tak le jaata hai.
+            {
+              href: "/lab-test/salempur",
+              label: "Salempur me lab test",
+              sub: "Bhatni, Lar aur Bhatpar Rani ke aas-paas ka ilaaka",
+            },
             {
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
@@ -596,6 +609,239 @@ const LAB_CITY_SEED = [
       ],
     },
   },
+  {
+    /* ── Salempur ──────────────────────────────────────────────────────────
+       The first entry in this list that is NOT a district headquarters:
+       Salempur is a tehsil town inside Deoria district, and it is already named
+       as an `areas` entry on /lab-test/deoria. That makes it the one city here
+       with a real cannibalisation risk — two pages of ours competing for
+       "Salempur me lab test", with the likely outcome being that Google indexes
+       one and filters the other.
+
+       It is still worth its own page because the search is real and the intent
+       is different: someone typing "Salempur me blood test" is asking whether
+       anyone comes to THEIR kasba, and a district page that mentions their town
+       once in a list does not answer that. What makes it safe is that the copy
+       argues something Deoria's page does not — see the header of
+       src/data/lab/content/salempur.js. If that ever gets edited down into a
+       rewrite of Deoria's page, delete this entry rather than keep both. */
+    slug: "salempur",
+    name: "Salempur",
+    state: "Uttar Pradesh",
+
+    /* The kasbas around Salempur that collection actually reaches. NOT the
+       whole tehsil, and deliberately NOT "Salempur" itself — the booking form
+       renders `[name, ...areas, "Other"]`, so repeating the town here would
+       print it twice in the dropdown.
+
+       Overlap with Deoria's list (Barhaj, Lar, Bhatni, Bhatpar Rani) is
+       intentional and honest: the same van covers them, and both pages name
+       them because a reader in Lar could plausibly search either town. These
+       become `areaServed` in the schema — do not pad the list with places we
+       cannot serve. */
+    areas: [
+      "Bhatni",
+      "Lar",
+      "Bhatpar Rani",
+      "Bhagalpur",
+      "Majhauli Raj",
+      "Rampur Karkhana",
+      "Barhaj",
+    ],
+
+    // Salempur town's PIN. Schema only. Worth re-checking against a delivery
+    // slip before any paid push — it is the one field here nobody on the page
+    // ever reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "274509",
+
+    /* Salempur town centre, and approximate on purpose — same rule as the other
+       cities: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 26.2989, lng: 83.8636 },
+
+    updated: "2026-08-14",
+    order: 4,
+    published: true,
+
+    // 41 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 56 — inside the ~60 it will show.
+    //
+    // "Blood Test in Salempur" leads, and it is the EXACT phrase, not "Lab Test
+    // in Salempur — Blood Test at Home" (what this was): that version carried
+    // "blood test" and "Salempur" but never next to each other, so the phrase a
+    // reader actually types was not in the title at all. Lab test stays as the
+    // second half, so both queries survive the truncation.
+    title: "Blood Test in Salempur — Lab Test at Home",
+
+    // ~155 characters, so it survives whole on desktop and mobile. Written to
+    // NOT read like Deoria's snippet: it names the surrounding kasbas rather
+    // than the district, which is what distinguishes the two results when both
+    // show for one query.
+    description:
+      "Salempur, Bhatni aur Lar me lab test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: "blood test",
+    // "pathology lab" and the district, which is how this town is disambiguated
+    // from the other Salempurs in UP and Bihar.
+    hero: {
+      h1: "Lab Test in Salempur, Deoria — Blood Test & Pathology Lab with Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Salempur" nine times plus one line per area and miss the
+       three things this town's traffic actually is: test-wise long tail, the
+       neighbouring-kasba modifiers (a Bhatni or Lar reader rarely types
+       "Salempur"), and Devanagari.
+
+       "Salempur" alone is ambiguous — there are Salempurs in several districts —
+       so the district-qualified forms are carried explicitly rather than left
+       to Google to infer.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy. */
+    keywords: [
+      // Primary. "blood test in Salempur" first because the title now leads
+      // with it — this list is the checklist the copy is written against, so it
+      // should not disagree with what the page is titled.
+      "blood test in Salempur",
+      "lab test in Salempur",
+      "Salempur me lab test",
+      "blood test in Salempur Deoria",
+      "lab test in Salempur Deoria",
+      "pathology lab in Salempur",
+      "diagnostic centre in Salempur",
+      "lab test at home Salempur",
+      "home sample collection Salempur",
+      "blood test home collection Salempur",
+      "lab test price in Salempur",
+      "lab test rate list Salempur",
+      "online lab test booking Salempur",
+
+      // Test-wise long tail — the highest-intent queries on the page
+      "CBC test in Salempur",
+      "CBC test price in Salempur",
+      "thyroid test in Salempur",
+      "TSH test Salempur",
+      "sugar test in Salempur",
+      "HbA1c test in Salempur",
+      "full body checkup in Salempur",
+      "full body health checkup package Salempur",
+      "lipid profile test Salempur",
+      "liver function test Salempur",
+      "kidney function test Salempur",
+      "vitamin D test in Salempur",
+      "vitamin B12 test in Salempur",
+      "dengue test in Salempur",
+      "typhoid test in Salempur",
+      "malaria test in Salempur",
+      "urine routine test Salempur",
+
+      // Neighbouring kasbas — a reader in these towns rarely types "Salempur"
+      "blood test in Bhatni",
+      "lab test in Bhatni Deoria",
+      "lab test in Lar Deoria",
+      "blood test in Bhatpar Rani",
+      "lab test in Bhagalpur Deoria",
+      "lab test in Majhauli Raj",
+      "lab test in Rampur Karkhana",
+      "blood test in Barhaj",
+
+      // Devanagari — same intents, the script a big share of this belt types
+      "सलेमपुर में लैब टेस्ट",
+      "सलेमपुर में खून की जांच",
+      "सलेमपुर में पैथोलॉजी लैब",
+      "घर से सैंपल कलेक्शन सलेमपुर",
+      "सलेमपुर लैब टेस्ट रेट लिस्ट",
+      "भटनी में खून की जांच",
+
+      // Location-free queries — Google supplies the town from the searcher's
+      // position, which the DiagnosticLab schema's areaServed answers.
+      "lab test near me",
+      "blood test near me",
+      "pathology lab near me",
+      "full body checkup near me",
+      "MedicoBharat lab test Salempur",
+    ],
+
+    content: salempurContent,
+    faqs: salempurFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. This block matters more
+       here than on the other cities: a brand-new URL two levels down in a
+       district gets crawled through links, not through the sitemap alone, so
+       the district page is named first and links back (see Deoria's block).
+
+       Every href is checked against a real route: the cities in the seed above
+       and the guides in src/data/blogs/varanasi/. */
+    relatedLinks: {
+      heading: "Salempur Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Aas-paas ke sheher jahan yahi home collection chalti hai, aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Zila mukhyalaya — poore jile ki rate list aur booking",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Ilaaj Varanasi me chal raha ho to",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Madad",
+          links: [
+            {
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Har jagah wahi rate — ek jagah",
+            },
+            { href: "/contact", label: "Contact — number aur booking help" },
+            { href: "/about", label: "MedicoBharat ke baare me" },
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 /** State used when a city entry leaves `state` out. */
@@ -660,6 +906,11 @@ function buildContent(fields, base) {
     // city's own localities — the fallback used to carry a hardcoded list of
     // Varanasi neighbourhoods, which every other city then advertised.
     content: objList(fields.content) ?? defaultContent(name, areas),
+    // Per-key merge, like `cta` and `callBanner`: a city can retitle the block
+    // without restating all five steps. Passing `steps` replaces the array
+    // wholesale — a per-item merge across two lists of different lengths is not
+    // predictable enough to be worth it.
+    howTo: { ...defaultHowTo(name), ...(obj(fields.howTo) ?? {}) },
     callBanner: { ...defaultCallBanner(name), ...(obj(fields.callBanner) ?? {}) },
     footer: { ...defaultFooter(name), ...(obj(fields.footer) ?? {}) },
     // Optional and with NO default on purpose. A generated link block would be
