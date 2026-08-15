@@ -19,6 +19,11 @@
 export const LAB_PHONE = "+91 989-123-3525";
 export const LAB_WHATSAPP = "919891233525";
 
+// Written once because it is printed twice in the footer — as the contact line
+// and as the `mailto:` behind the Gmail icon in the social row. Two literals
+// would be two chances for them to disagree.
+export const LAB_EMAIL = "support.medicobharat@gmail.com";
+
 /**
  * Share-card image for the lab pages (Open Graph + Twitter).
  *
@@ -450,17 +455,23 @@ export const defaultFooter = (city) => ({
     "Vitamin D Test",
     "Lipid Profile",
   ],
-  email: "support.medicobharat@gmail.com",
+  email: LAB_EMAIL,
   phone: LAB_PHONE,
   hours: "Open all 7 days · Slots from 6 AM",
   // Social handles. `type` maps to a brand icon in LabFooter's registry — an
   // unknown type falls back to a neutral globe rather than breaking the row.
   // These are the real profiles used in the site's schema (see app/layout.js);
   // update the href here (or per city in Firestore) if a handle ever changes.
+  //
+  // The Gmail entry is the odd one out: it is not a profile, it is the same
+  // mailto: the contact block already carries, offered again as a one-tap icon
+  // for the reader who scans the row rather than reading the block. It is built
+  // from LAB_EMAIL for that reason — one address, printed twice.
   social: [
     { type: "instagram", label: "Instagram", href: "https://www.instagram.com/medicobharat_01/" },
     { type: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591803531075" },
     { type: "whatsapp", label: "WhatsApp", href: `https://wa.me/${LAB_WHATSAPP}` },
+    { type: "gmail", label: "Email", href: `mailto:${LAB_EMAIL}` },
   ],
 });
 

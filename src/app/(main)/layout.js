@@ -11,16 +11,19 @@ import { getShellData } from "@/lib/shell";
 // A visitor moving from the home page into /lab-test/varanasi no longer watches
 // the whole shell change, and the site has one link graph instead of two.
 //
-// The city list and the guides are read here so the footer can link to them
-// from every page — see src/lib/shell.js. The header carries no links.
+// The city list is read here so the footer can link to every city from every
+// page — see src/lib/shell.js. The header carries no links. The guide list used
+// to be read here too, for a footer column that is gone: the guides are linked
+// in-body now, from the home page's related-links block and from every city
+// page's, with anchors that describe the article.
 export default async function MainLayout({ children }) {
-  const { labCities, guides } = await getShellData();
+  const { labCities } = await getShellData();
 
   return (
     <>
       <LabNavbar />
       <main className="flex-1">{children}</main>
-      <LabFooter labCities={labCities} guides={guides} />
+      <LabFooter labCities={labCities} />
     </>
   );
 }

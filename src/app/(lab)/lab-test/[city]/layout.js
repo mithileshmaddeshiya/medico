@@ -11,7 +11,7 @@ import { getShellData } from "@/lib/shell";
 export default async function LabCityLayout({ children, params }) {
   const { city } = await params;
 
-  const [{ labCities, guides }, cityData] = await Promise.all([
+  const [{ labCities }, cityData] = await Promise.all([
     getShellData(),
     getLabCity(city).then((found) => found ?? getDefaultLabCity()),
   ]);
@@ -22,7 +22,7 @@ export default async function LabCityLayout({ children, params }) {
       {/* The footer filters this city out of `labCities` itself — see
           LabFooter. It no longer takes a medicine-city list: that section is
           retired and its URLs are redirected in next.config.mjs. */}
-      <LabFooter city={cityData} labCities={labCities} guides={guides} />
+      <LabFooter city={cityData} labCities={labCities} />
     </>
   );
 }
