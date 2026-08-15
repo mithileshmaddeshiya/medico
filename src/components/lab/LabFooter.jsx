@@ -10,6 +10,8 @@ import {
   FaXTwitter,
   FaGlobe,
 } from "react-icons/fa6";
+// Gmail has no fa6 brand glyph — the simple-icons pack is where it lives.
+import { SiGmail } from "react-icons/si";
 
 import { siteFooter } from "@/data/lab/defaults";
 
@@ -24,6 +26,7 @@ const SOCIAL_ICONS = {
   instagram: { Icon: FaInstagram, brand: "hover:bg-[#E1306C]" },
   facebook: { Icon: FaFacebookF, brand: "hover:bg-[#1877F2]" },
   whatsapp: { Icon: FaWhatsapp, brand: "hover:bg-[#25D366]" },
+  gmail: { Icon: SiGmail, brand: "hover:bg-[#EA4335]" },
   youtube: { Icon: FaYoutube, brand: "hover:bg-[#FF0000]" },
   twitter: { Icon: FaXTwitter, brand: "hover:bg-black" },
   x: { Icon: FaXTwitter, brand: "hover:bg-black" },
@@ -58,11 +61,11 @@ const QUICK_LINKS = [
  * medicine one was pointing at a section that no longer exists.
  *
  * `labCities` is every live city (the layout passes it in — the footer takes
- * data, it does not fetch it). `guides` is the article list, which is the only
- * sitewide link any article gets: there is no /blogs hub page, so without this
- * column a guide is reachable from a handful of pages instead of all of them.
+ * data, it does not fetch it). It no longer takes the guide list: those links
+ * now live in each page's in-body `relatedLinks` block, where the anchor can
+ * describe the article instead of repeating its full title in a narrow column.
  */
-export default function LabFooter({ city = null, labCities = [], guides = [] }) {
+export default function LabFooter({ city = null, labCities = [] }) {
   // Sitewide mode has no city, so the contact block falls back to the brand's
   // own details — the same values a city inherits when it does not override
   // them, so the two modes can never print a different phone number.
@@ -94,9 +97,11 @@ export default function LabFooter({ city = null, labCities = [], guides = [] }) 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-5 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-4 lg:grid-cols-12">
 
         {/* BRAND — full width on phones (it is the tallest block; letting it
-            span both columns keeps the four short sections below it aligned in a
-            tidy 2×2 instead of leaving a ragged gap beside it). */}
-        <div className="col-span-2 lg:col-span-3">
+            span both columns keeps the short sections below it aligned instead
+            of leaving a ragged gap beside it). One span wider on desktop than
+            it used to be: the guides column is gone, and its width is split
+            between this block and the city list rather than left as a hole. */}
+        <div className="col-span-2 lg:col-span-4">
           <Link href="/" aria-label="MedicoBharat Lab Test — Home" className="inline-block">
             <Image
               src="/navbar/lablogo.png"
@@ -125,12 +130,17 @@ export default function LabFooter({ city = null, labCities = [], guides = [] }) 
                   Icon: FaGlobe,
                   brand: "hover:bg-emerald-600",
                 };
+                // A new tab is right for a profile on someone else's site and
+                // wrong for a mailto: — that one hands off to the mail app and
+                // would leave an empty tab behind on desktop.
+                const isExternal = /^https?:/i.test(s.href);
                 return (
                   <li key={s.label ?? s.href}>
                     <a
                       href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...(isExternal
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       aria-label={s.label ?? s.type ?? "Social profile"}
                       className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
                     >
@@ -160,23 +170,14 @@ export default function LabFooter({ city = null, labCities = [], guides = [] }) 
           </ul>
         </nav>
 
-        {/* CITIES — the section's whole point. On a city page this is preceded
-            by that city's own localities as plain text: the keywords index, and
-            nobody hits a 404 for a locality that has no page of its own. */}
-        <div className="lg:col-span-2">
-          {city && (
-            <>
-              <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
-                Areas We Cover in {city.name}
-              </h3>
-              <p className="mb-3 text-[12.5px] leading-5 text-slate-600">
-                {areas.length > 0
-                  ? `${areas.join(" · ")} and nearby areas.`
-                  : `${city.name} and nearby areas.`}
-              </p>
-            </>
-          )}
-
+        {/* CITIES — the section's whole point. The city's own localities used to
+            sit above this list inside the same column; with a twelve-locality
+            city (Azamgarh) that paragraph wrapped to seven lines in a
+            two-of-twelve-wide column, pushing "Other Cities" far below the
+            other columns and leaving the rest of the footer as empty space. The
+            localities now render as one full-width line under the grid — same
+            text, same keywords, a fraction of the height. */}
+        <div className="lg:col-span-3">
           {otherCities.length > 0 && (
             <nav aria-label="Cities we serve">
               <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
@@ -198,38 +199,27 @@ export default function LabFooter({ city = null, labCities = [], guides = [] }) 
           )}
         </div>
 
-        {/* HEALTH GUIDES — this column replaced the medicine-delivery links.
-            Those pointed at a section that no longer exists; these point at the
-            articles, which are otherwise reachable only from the header menu
-            and from each other. There is no /blogs hub route, so a sitewide
-            link per article is the only way a crawler reaches one from most of
-            the site. Renders nothing while there are no articles. */}
-        {guides.length > 0 && (
-          <nav aria-label="Health guides" className="lg:col-span-2">
-            <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
-              Health Guides
-            </h3>
-            <ul className="space-y-1 text-[12.5px] text-slate-600">
-              {guides.map((post) => (
-                <li key={post.href}>
-                  <Link
-                    href={post.href}
-                    className="hover:text-emerald-700 transition-colors"
-                  >
-                    {post.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
+        {/* The guides used to have a column of their own here. Their titles are
+            full sentences ("Varanasi Me Lab Test — Kaun Sa Test Kab"), which in
+            a two-of-twelve-wide column wrapped to two lines each and read as
+            spilling out of their box. They are not lost: every city page links
+            all four guide entry points from `relatedLinks` at the end of the
+            guide (see src/data/lab/cities.js) and the home page does the same
+            through homeRelatedLinks() — both with descriptive anchors, which is
+            worth more than a repeated footer link anyway. If a guide ever ships
+            that no page links in-body, put it back here rather than leaving it
+            reachable from the sitemap alone. */}
 
         {/* CONTACT / NAP — a semantic <address> so the crawler reads it as the
             business's contact block, and the name + locality here match the
             DiagnosticLab schema on the page (see the city page). Consistent NAP
             across page, schema and footer is what local ranking is built on. No
             street address is invented — only what we can stand behind. */}
-        <div className="lg:col-span-3">
+        {/* Full width on phones: with the guides column gone there are three
+            short blocks under the brand, and a 2-column phone grid would leave
+            this one alone on a half-width row with the email breaking mid-word.
+            Across both columns it reads as the closing block it is. */}
+        <div className="col-span-2 lg:col-span-3">
           <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Contact</h3>
 
           <address className="not-italic space-y-1.5 text-[12.5px] text-slate-600">
@@ -262,6 +252,26 @@ export default function LabFooter({ city = null, labCities = [], guides = [] }) 
           </address>
         </div>
       </div>
+
+      {/* AREAS — the city's localities, as one full-width line rather than a
+          column of its own. It is plain text on purpose: these are the names a
+          "<locality> me blood test" search matches on, and none of them has a
+          page to link to, so a link here would 404. Full width because the list
+          grows with the city — twelve localities in a narrow column is seven
+          wrapped lines and a lopsided footer; across the container it is one or
+          two. Only on a city page; sitewide mode has no localities. */}
+      {city && (
+        <div className="border-t border-emerald-100/70">
+          <p className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 text-[12px] leading-5 text-slate-600">
+            <span className="font-semibold text-emerald-900">
+              Areas We Cover in {city.name}:
+            </span>{" "}
+            {areas.length > 0
+              ? `${areas.join(" · ")} and nearby areas.`
+              : `${city.name} and nearby areas.`}
+          </p>
+        </div>
+      )}
 
       {/* COPYRIGHT — same emerald wash as the rest of the footer, one shade
           deeper, so the bar reads as the end of the page rather than a

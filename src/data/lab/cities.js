@@ -60,6 +60,7 @@
  * `icon` values are strings, not components — see src/data/lab/defaults.js for
  * the names each registry understands.
  */
+import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { salempurContent, salempurFaqs } from "./content/salempur";
@@ -148,6 +149,14 @@ const LAB_CITY_SEED = [
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
               sub: "Purvanchal ka referral hub — OPD se pehle report",
+            },
+            // Azamgarh se ilaaj ke liye Varanasi aana aam hai, isliye link dono
+            // taraf hai — Azamgarh ka page bhi is page par aata hai. Ek naya URL
+            // sitemap se nahi, links se crawl hota hai.
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mandal mukhyalaya — poore jile me home collection",
             },
             {
               href: "/lab-test/deoria",
@@ -565,6 +574,13 @@ const LAB_CITY_SEED = [
               label: "Deoria me lab test",
               sub: "Gorakhpur ka safar bachane wala option",
             },
+            // Azamgarh mandal se log yahan OPD ke liye aate hain, isliye link
+            // dono taraf hai — Azamgarh ka page bhi is page par aata hai.
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mubarakpur, Nizamabad aur Lalganj tak home collection",
+            },
             {
               href: "/lab-test/varanasi",
               label: "Varanasi me lab test",
@@ -801,6 +817,239 @@ const LAB_CITY_SEED = [
               href: "/lab-test/varanasi",
               label: "Varanasi me lab test",
               sub: "Ilaaj Varanasi me chal raha ho to",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Madad",
+          links: [
+            {
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Har jagah wahi rate — ek jagah",
+            },
+            { href: "/contact", label: "Contact — number aur booking help" },
+            { href: "/about", label: "MedicoBharat ke baare me" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    /* ── Azamgarh ──────────────────────────────────────────────────────────
+       A district headquarters again, and the first city here that is also a
+       MANDAL headquarters — Mau and Ballia refer inward to it. That, plus the
+       plain size of the district (seven tehsils, ~50–60 km from the far edge to
+       the city where the labs are), is the whole argument of this page's copy
+       and the reason it does not read like Gorakhpur's or Deoria's.
+
+       There is no cannibalisation risk of the Salempur kind here: Azamgarh is
+       not named as an `areas` entry on any other lab page, and the towns below
+       are its own — nothing in this list is claimed by Deoria or Salempur. See
+       src/data/lab/content/azamgarh.js for which sections are this page's own
+       and which arguments were deliberately left to the other four. */
+    slug: "azamgarh",
+    name: "Azamgarh",
+    state: "Uttar Pradesh",
+
+    /* City localities first, then the tehsil towns collection actually reaches.
+       These are not decorative: they render in the footer, fill the booking
+       form's dropdown, become `areaServed` in the schema, and are what a
+       "<kasba> me blood test" search matches on. Kept to twelve — the full
+       list, including Mehnagar, Jeanpur, Sagri, Martinganj, Budhanpur,
+       Jahanaganj, Ahiraula and Deogaon, is in the page copy, because a
+       twenty-item dropdown is unusable on a phone. An areaServed we cannot
+       serve is a lie in schema form; do not pad this list. */
+    areas: [
+      "Sidhari",
+      "Civil Lines",
+      "Kachehri",
+      "Rani Ki Sarai",
+      "Mubarakpur",
+      "Nizamabad",
+      "Bilariyaganj",
+      "Sarai Mir",
+      "Lalganj",
+      "Phulpur",
+      "Maharajganj",
+      "Atraulia",
+    ],
+
+    // Azamgarh city PIN. Schema only. Worth re-checking against a delivery slip
+    // before any paid push — it is the one field here nobody on the page ever
+    // reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "276001",
+
+    /* Azamgarh town centre, and approximate on purpose — same rule as the other
+       cities: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 26.0685, lng: 83.1836 },
+
+    updated: "2026-08-15",
+    order: 5,
+    published: true,
+
+    // 41 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 56 — inside the ~60 it will show.
+    // Primary keyword first, then the second-biggest query on the page; both
+    // survive the truncation.
+    title: "Lab Test in Azamgarh — Blood Test at Home",
+
+    // ~153 characters, so it renders whole on desktop and mobile. Written to
+    // NOT read like the other cities' snippets: it names the span from the city
+    // mohalla to the weaving towns, which is what distinguishes this result
+    // when more than one of our pages shows for a district-level query.
+    description:
+      "Azamgarh me lab test ghar baithe — Sidhari se Mubarakpur tak free home sample collection. CBC, thyroid, sugar aur full body checkup, report 24 ghante me.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: "blood test",
+    // "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Azamgarh — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Azamgarh" nine times plus one line per area and miss the
+       three things this district's traffic actually is: test-wise long tail,
+       which converts because the searcher has already decided; the tehsil-town
+       modifiers, because a reader in Mubarakpur or Lalganj rarely types
+       "Azamgarh"; and Devanagari, which is how a large share of this district
+       types.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      // Primary
+      "lab test in Azamgarh",
+      "Azamgarh me lab test",
+      "blood test in Azamgarh",
+      "pathology lab in Azamgarh",
+      "diagnostic centre in Azamgarh",
+      "lab test at home Azamgarh",
+      "home sample collection Azamgarh",
+      "blood test home collection Azamgarh",
+      "lab test price in Azamgarh",
+      "lab test rate list Azamgarh",
+      "best pathology lab Azamgarh",
+      "online lab test booking Azamgarh",
+
+      // Test-wise long tail — the highest-intent queries on the page
+      "CBC test in Azamgarh",
+      "CBC test price in Azamgarh",
+      "thyroid test in Azamgarh",
+      "TSH test Azamgarh",
+      "sugar test in Azamgarh",
+      "HbA1c test in Azamgarh",
+      "full body checkup in Azamgarh",
+      "full body health checkup package Azamgarh",
+      "lipid profile test Azamgarh",
+      "liver function test Azamgarh",
+      "kidney function test Azamgarh",
+      "vitamin D test in Azamgarh",
+      "vitamin B12 test in Azamgarh",
+      "dengue test in Azamgarh",
+      "typhoid test in Azamgarh",
+      "malaria test in Azamgarh",
+      "urine routine test Azamgarh",
+      "hepatitis test in Azamgarh",
+
+      // Locality and tehsil-town modifiers — how a district this large is
+      // actually searched
+      "blood test in Sidhari Azamgarh",
+      "lab test in Civil Lines Azamgarh",
+      "lab test in Kachehri Azamgarh",
+      "blood test in Mubarakpur Azamgarh",
+      "lab test in Nizamabad Azamgarh",
+      "lab test in Bilariyaganj",
+      "blood test in Sarai Mir",
+      "lab test in Lalganj Azamgarh",
+      "lab test in Phulpur Azamgarh",
+      "lab test in Maharajganj Azamgarh",
+      "lab test in Atraulia",
+      "lab test in Mehnagar",
+      "lab test in Jeanpur Azamgarh",
+      "lab test in Rani Ki Sarai",
+
+      // Devanagari — same intents, the script a big share of this district types
+      "आज़मगढ़ में लैब टेस्ट",
+      "आजमगढ़ में खून की जांच",
+      "आजमगढ़ में पैथोलॉजी लैब",
+      "घर से सैंपल कलेक्शन आजमगढ़",
+      "आजमगढ़ लैब टेस्ट रेट लिस्ट",
+      "आजमगढ़ में फुल बॉडी चेकअप",
+      "मुबारकपुर में खून की जांच",
+
+      // Location-free queries — Google supplies the city from the searcher's
+      // position, which the DiagnosticLab schema's areaServed answers.
+      "lab test near me",
+      "blood test near me",
+      "pathology lab near me",
+      "full body checkup near me",
+      "MedicoBharat lab test Azamgarh",
+    ],
+
+    content: azamgarhContent,
+    faqs: azamgarhFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the two cities
+       this district actually travels to — Varanasi and Gorakhpur — are named
+       first and both link back (see their blocks above).
+
+       Every href is checked against a real route: the cities in the seed above
+       and the guides in src/data/blogs/varanasi/. */
+    relatedLinks: {
+      heading: "Azamgarh Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Jile ka apna page — rate list aur booking",
             },
           ],
         },
