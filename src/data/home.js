@@ -138,16 +138,16 @@ export const HOME_HERO = {
   // The home page gets its own banner rather than reusing the city heroes'
   // asset — the two pages sit next to each other in search results, and an
   // identical image makes the home page look like just another city page.
-  // 1699x926, so the hero box is aspect-11/6. Replacing this file with a
+  // 1700x925, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
-  image: "/navheroimage/homepage.png",
+  image: "/navheroimage/herosecimg.png",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
   // photograph. The counts printed on the banner are deliberately NOT repeated
   // here; see the rule at the top of this file.
   imageAlt:
-    "MedicoBharat Lab Test — accurate tests, reliable results. Advanced diagnostics, certified labs aur home sample collection.",
+    "MedicoBharat Lab Test — accurate tests, better health. Reliable lab tests, advanced technology, safe aur hygienic collection, home sample collection ke saath.",
 };
 
 /* ── How it works ─────────────────────────────────────────────────────────

@@ -15,9 +15,13 @@ export default function LabHero({ hero, cityOptions }) {
 
         <div className="grid items-center gap-5 lg:gap-8 lg:grid-cols-12">
 
-          {/* LEFT: image — 1672x941 (16:9); on phones it is slightly cropped to save height */}
+          {/* LEFT: image — 1696x927, so the box carries the banner's own ratio
+              (aspect-11/6) at every width. It used to be cropped on phones to
+              save height, but this banner has its headline and a contact bar
+              printed into the artwork, and a crop cuts them in half. See
+              defaultHero in src/data/lab/defaults.js for the file. */}
           <div className="lg:col-span-8">
-            <div className="relative w-full aspect-2/1 sm:aspect-video rounded-md lg:rounded-tr-none overflow-hidden">
+            <div className="relative w-full aspect-11/6 rounded-md lg:rounded-tr-none overflow-hidden">
               <Image
                 src={hero?.image}
                 alt={hero?.imageAlt ?? ""}

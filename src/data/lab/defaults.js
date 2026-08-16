@@ -42,8 +42,17 @@ export const LAB_OG_IMAGE = "/og/ogtag.jpg";
 export const defaultHero = (city) => ({
   // The h1 is screen-reader only — the hero itself is image + booking form.
   h1: `Lab Test in ${city} with Free Home Sample Collection`,
-  image: "/navheroimage/labtestimg.webp",
-  imageAlt: "Lab test at home",
+  // One banner for every city page. 1696x927, so LabHero's hero box is
+  // aspect-11/6 — replacing this file with a different shape means changing
+  // that class too, otherwise the artwork's own headline and the contact bar
+  // along the bottom get cropped.
+  image: "/navheroimage/herocity.png",
+
+  // The banner has its copy burned into the artwork and a crawler cannot read
+  // pixels, so the alt carries that wording rather than describing the photo.
+  // The city name is spliced in because this alt is the one piece of the hero
+  // that is per-city — the h1 above it is screen-reader only as well.
+  imageAlt: `MedicoBharat Lab Test in ${city} — accurate tests, better health. Blood test, advanced technology, safe aur hygienic, free home sample collection.`,
   formTitle: "Book Your Sample Collection",
 });
 
