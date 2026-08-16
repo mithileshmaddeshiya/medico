@@ -71,6 +71,7 @@
 const LAB_VARANASI = "/lab-test/varanasi";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_DEORIA = "/lab-test/deoria";
+const LAB_BALLIA = "/lab-test/ballia";
 const GUIDE_LAB_TEST = "/blogs/lab-test/varanasi";
 const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 
@@ -123,7 +124,9 @@ export const azamgarhContent = [
         " bhi usi tarah book hota hai.",
       ],
       [
-        "Aur agar aap Mau, Ballia ya Jaunpur ki taraf se sirf jaanch ke liye Azamgarh aane ki soch rahe hain to ruk jaaiye — routine blood test ke liye aana zaroori nahi hai. Kaun sa test kis shikayat, umar aur mausam me karana chahiye, ye ",
+        "Aur agar aap Mau, Ballia ya Jaunpur ki taraf se sirf jaanch ke liye Azamgarh aane ki soch rahe hain to ruk jaaiye — routine blood test ke liye aana zaroori nahi hai; ",
+        { text: "Ballia me lab test", href: LAB_BALLIA },
+        " bhi usi tarah ghar se ho jaata hai. Kaun sa test kis shikayat, umar aur mausam me karana chahiye, ye ",
         { text: "hamari poori guide", href: GUIDE_LAB_TEST },
         " me detail me likha hai.",
       ],
