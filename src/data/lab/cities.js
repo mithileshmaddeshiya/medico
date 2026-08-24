@@ -64,6 +64,7 @@ import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { balliaContent, balliaFaqs } from "./content/ballia";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
+import { mauContent, mauFaqs } from "./content/mau";
 import { salempurContent, salempurFaqs } from "./content/salempur";
 import { varanasiContent } from "./content/varanasi";
 import {
@@ -1057,13 +1058,19 @@ const LAB_CITY_SEED = [
               label: "Deoria me lab test",
               sub: "Jile ka apna page — rate list aur booking",
             },
-            // Mandal ka apna jila: Azamgarh ki copy Ballia ko naam se leti hai,
-            // isliye link dono taraf hai — ek naya URL sitemap se nahi, links
-            // se crawl hota hai.
+            // Mandal ke apne jile: Azamgarh ki copy Ballia aur Mau dono ko naam
+            // se leti hai, isliye link dono taraf hai — ek naya URL sitemap se
+            // nahi, links se crawl hota hai. Mau iss jile se hi kata tha, aur
+            // uska page yahan wapas link karta hai.
             {
               href: "/lab-test/ballia",
               label: "Ballia me lab test",
               sub: "Ganga-patti aur diara ke gaon tak home collection",
+            },
+            {
+              href: "/lab-test/mau",
+              label: "Mau me lab test",
+              sub: "Ghosi, Madhuban aur Doharighat tak ghar se sample",
             },
           ],
         },
@@ -1300,6 +1307,280 @@ const LAB_CITY_SEED = [
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
               sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            // Padosi jila, aur Mau ka page yahan link karta hai — link dono
+            // taraf rakhna hi ek naye URL ko crawl karwata hai.
+            {
+              href: "/lab-test/mau",
+              label: "Mau me lab test",
+              sub: "Ghosi, Madhuban aur Doharighat tak ghar se sample",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Madad",
+          links: [
+            {
+              href: "/",
+              label: "Sabhi test aur rate list",
+              sub: "Har jagah wahi rate — ek jagah",
+            },
+            { href: "/contact", label: "Contact — number aur booking help" },
+            { href: "/about", label: "MedicoBharat ke baare me" },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── Mau ───────────────────────────────────────────────────────────────
+       Azamgarh se kata hua jila, aur jila mukhyalaya ka asli naam Maunath
+       Bhanjan hai — yaani ek hi jagah ke do naam, Varanasi/Banaras wali
+       sthiti. URL sirf ek naam le sakta hai, isliye doosra naam description,
+       h1, keywords, ek H2 aur ek FAQ me rakha gaya hai.
+
+       Is page ki apni do cheezein, jo site par kahin aur nahi hain: powerloom
+       aur karkhane wala kaam (jismein sabse zaroori baat wo hai jo hum NAHI
+       bechte — lambi khaansi ka jawab blood test nahi, balgam ki sarkari muft
+       jaanch hai), aur raat/badalti shift walon ke liye sample ka sahi waqt.
+
+       Cannibalisation ka khatra nahi hai: Mau kisi doosre lab page ke `areas`
+       me naam se nahi hai, aur neeche ke kasbe iske apne hain — inme se koi
+       Azamgarh, Ballia ya Deoria ne claim nahi kiya. Azamgarh ka page Mau ko
+       naam se leta hai, isliye dono taraf link hai. Kaunse arguments jaan
+       boojh kar doosre pages ke liye chhode gaye, wo
+       src/data/lab/content/mau.js ke header me likha hai. */
+    slug: "mau",
+    name: "Mau",
+    state: "Uttar Pradesh",
+
+    /* City mohalle first, then the block towns collection actually reaches.
+       These are not decorative: they render in the footer, fill the booking
+       form's dropdown, become `areaServed` in the schema, and are what a
+       "<kasba> me blood test" search matches on. Kept to twelve — the fuller
+       list, including Ranipur, Walidpur, Ratanpura, Pardaha, Amila, Adari,
+       Khurhat, Sarai Lakhansi aur Baraipar, is in the page copy, because a
+       twenty-item dropdown is unusable on a phone. An areaServed we cannot
+       serve is a lie in schema form; do not pad this list. */
+    areas: [
+      "Mau Sadar",
+      "Sahadatpura",
+      "Mirzahadipura",
+      "Alinagar",
+      "Purani Bazar",
+      "Station Road",
+      "Ghosi",
+      "Madhuban",
+      "Muhammadabad Gohna",
+      "Kopaganj",
+      "Doharighat",
+      "Chiraiyakot",
+    ],
+
+    // Maunath Bhanjan (Mau city) PIN. Schema only. Worth re-checking against a
+    // delivery slip before any paid push — it is the one field here nobody on
+    // the page ever reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "275101",
+
+    /* Mau town centre, and approximate on purpose — same rule as the other
+       cities: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 25.9417, lng: 83.5611 },
+
+    updated: "2026-08-24",
+    order: 7,
+    published: true,
+
+    /* No `aliases` entry, and none in CITY_ALIASES either — deliberately.
+       "Maunath Bhanjan" IS a genuine second name for this town (the Varanasi →
+       Banaras case, not a misspelling), but `aliases` only feeds
+       defaultKeywords() and defaultFaqs(), and this city overrides both, so
+       wiring it up would be config that changes nothing. The alternate name is
+       carried where it actually works instead: the description below, the h1,
+       the keywords, an H2 in the copy, the lead paragraph, and an FAQ of its
+       own in content/mau.js. */
+
+    // 36 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 51 — comfortably inside the ~60 it
+    // will show. "Maunath Bhanjan" is deliberately NOT in the title: it would
+    // push the line to the truncation edge and cost the "blood test" half,
+    // which is the bigger query. It sits in the description instead.
+    title: "Lab Test in Mau — Blood Test at Home",
+
+    // ~154 characters, so it renders whole on desktop and mobile. Leads with
+    // BOTH names because a large share of this district types the official one,
+    // then names the block towns that are furthest from the city — which is
+    // what distinguishes this result when more than one of our pages shows for
+    // a regional query.
+    description:
+      "Maunath Bhanjan (Mau) me lab test ghar baithe — Ghosi, Madhuban aur Doharighat tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: the official name,
+    // "blood test", "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Mau (Maunath Bhanjan) — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Mau" nine times plus one line per area and miss the four
+       things this district's traffic actually is: the official name, which a
+       lot of people type and the URL cannot carry; test-wise long tail, which
+       converts because the searcher has already decided; the block-town
+       modifiers, because a reader in Ghosi or Doharighat rarely types "Mau";
+       and Devanagari, which is how a large share of this district types.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      // Primary
+      "lab test in Mau",
+      "Mau me lab test",
+      "blood test in Mau",
+      "pathology lab in Mau",
+      "diagnostic centre in Mau",
+      "lab test at home Mau",
+      "home sample collection Mau",
+      "blood test home collection Mau",
+      "lab test price in Mau",
+      "lab test rate list Mau",
+      "best pathology lab Mau",
+      "online lab test booking Mau",
+
+      // The official name — a second real name for the same town, and the one
+      // the URL cannot carry. Same intents, spelled both ways people write it.
+      "lab test in Maunath Bhanjan",
+      "Maunath Bhanjan me lab test",
+      "blood test in Maunath Bhanjan",
+      "pathology lab in Maunath Bhanjan",
+      "home sample collection Maunath Bhanjan",
+      "lab test in Mau Nath Bhanjan",
+
+      // Test-wise long tail — the highest-intent queries on the page
+      "CBC test in Mau",
+      "CBC test price in Mau",
+      "thyroid test in Mau",
+      "TSH test Mau",
+      "sugar test in Mau",
+      "HbA1c test in Mau",
+      "full body checkup in Mau",
+      "full body health checkup package Mau",
+      "lipid profile test Mau",
+      "liver function test Mau",
+      "kidney function test Mau",
+      "vitamin D test in Mau",
+      "vitamin B12 test in Mau",
+      "dengue test in Mau",
+      "typhoid test in Mau",
+      "malaria test in Mau",
+      "urine routine test Mau",
+      "hepatitis test in Mau",
+
+      // Locality and block-town modifiers — how this district is actually
+      // searched, because the reader types the kasba, not the district
+      "blood test in Sahadatpura Mau",
+      "lab test near Station Road Mau",
+      "lab test in Mirzahadipura",
+      "lab test in Alinagar Mau",
+      "blood test in Purani Bazar Mau",
+      "lab test in Ghosi",
+      "blood test in Ghosi Mau",
+      "lab test in Madhuban Mau",
+      "lab test in Muhammadabad Gohna",
+      "lab test in Kopaganj",
+      "blood test in Doharighat",
+      "lab test in Chiraiyakot",
+      "lab test in Ranipur Mau",
+      "lab test in Walidpur",
+
+      // Devanagari — same intents, the script a big share of this district types
+      "मऊ में लैब टेस्ट",
+      "मऊ में खून की जांच",
+      "मऊ में पैथोलॉजी लैब",
+      "मऊनाथ भंजन में लैब टेस्ट",
+      "घर से सैंपल कलेक्शन मऊ",
+      "मऊ लैब टेस्ट रेट लिस्ट",
+      "मऊ में फुल बॉडी चेकअप",
+      "घोसी में खून की जांच",
+
+      // Location-free queries — Google supplies the city from the searcher's
+      // position, which the DiagnosticLab schema's areaServed answers.
+      "lab test near me",
+      "blood test near me",
+      "pathology lab near me",
+      "full body checkup near me",
+      "MedicoBharat lab test Mau",
+    ],
+
+    content: mauContent,
+    faqs: mauFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the places this
+       district actually travels to for treatment — Azamgarh (the parent
+       district and mandal mukhyalaya), Varanasi and Gorakhpur — are named
+       first, with Ballia added because it is the one neighbour this page does
+       NOT link to from its prose. Azamgarh links back (see its block above).
+
+       Every href is checked against a real route: the cities in the seed above
+       and the guides in src/data/blogs/varanasi/. */
+    relatedLinks: {
+      heading: "Mau Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mandal mukhyalaya — wahan bhi ghar se sample",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/ballia",
+              label: "Ballia me lab test",
+              sub: "Padosi jila — wahan bhi wahi rate, wahi service",
             },
           ],
         },
