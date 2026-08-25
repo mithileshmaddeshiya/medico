@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 
+import { postLead, validateLead } from "@/components/lab/leadForm";
 import { LAB_PHONE } from "@/data/lab/defaults";
 
 // The dropdown is filled from Firestore, which only the server can read — the
@@ -33,6 +34,11 @@ const labelClass = "block text-[12.5px] font-semibold text-slate-800 mb-1";
  * The green-tab enquiry card used in two places:
  *  - LabHero  → rendered inline, no `test`, no `onClose`
  *  - LabBookingModal → rendered inside the overlay with a pre-selected `test`
+ *
+ * The on-load popup does NOT use this card — it has its own, deliberately
+ * different face (see PopupLeadForm). What the two share is the part that must
+ * never differ: the field rules, the endpoint and the failure copy, all of
+ * which live in leadForm.js.
  */
 export default function LabLeadCard({
   title = "Book Your Sample Collection",
@@ -80,14 +86,15 @@ export default function LabLeadCard({
     e.preventDefault();
     if (sending) return;
 
-    if (name.trim().length < 2)
-      return complain("name", nameRef, "Please enter your name — we will use it when we call.");
-    if (!/^[6-9]\d{9}$/.test(phone))
-      return complain("phone", phoneRef, "Please enter a 10 digit mobile number, e.g. 98912 34567.");
-    if (!city)
-      return complain("city", cityRef, "Please select your city so we can send the nearest team.");
-    // Address is optional — the team confirms the full address on the follow-up
-    // call, so a patient can book without typing it out.
+    // Same rules the popup form and the API route apply — see leadForm.js.
+    // Address is optional and deliberately not among them: the team confirms
+    // the full address on the follow-up call, so a patient can book without
+    // typing it out.
+    const problem = validateLead({ name, phone, city });
+    if (problem) {
+      const refs = { name: nameRef, phone: phoneRef, city: cityRef };
+      return complain(problem.field, refs[problem.field], problem.message);
+    }
 
     setInvalid("");
     setSending(true);
@@ -95,30 +102,15 @@ export default function LabLeadCard({
     // Posts to our own server, which saves the lead and notifies the shop.
     // It used to open wa.me in a new tab, which threw the patient out of the
     // site and lost the booking entirely if they did not press send there.
-    try {
-      const response = await fetch("/api/lab-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, city, phone, address, test }),
-      });
+    const result = await postLead({ name, city, phone, address, test });
+    setSending(false);
 
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok || !result.ok) {
-        toast.error(result.error || `Booking could not be placed. Please call us at ${LAB_PHONE}.`, {
-          id: "lab-lead-form",
-        });
-        return;
-      }
-
-      setSent(true);
-    } catch {
-      // Offline, or the request never reached us — the phone number is the
-      // fallback that always works.
-      toast.error("Please check your internet, or call us directly.", { id: "lab-lead-form" });
-    } finally {
-      setSending(false);
+    if (!result.ok) {
+      toast.error(result.error, { id: "lab-lead-form" });
+      return;
     }
+
+    setSent(true);
   };
 
   // "Book another test" — back to an empty form, keeping the card in place.
