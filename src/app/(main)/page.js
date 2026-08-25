@@ -10,6 +10,7 @@ import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
+import WelcomePopup from "@/components/lab/WelcomePopup";
 import { getLatestBlogs } from "@/data/blogs";
 import {
   HOME_CALL_BANNER,
@@ -334,6 +335,12 @@ export default async function HomePage() {
           ),
         }}
       />
+
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. It carries the same form as the hero and
+          posts through the same /api/lab-lead → Firestore → WhatsApp path, so
+          a popup lead lands exactly where a hero booking does. */}
+      <WelcomePopup cityOptions={cityOptions} />
 
       <HomeHero hero={HOME_HERO} cityOptions={cityOptions} />
 

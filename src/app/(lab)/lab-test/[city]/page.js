@@ -9,6 +9,7 @@ import LabHero from "@/components/lab/LabHero";
 import LabHowTo from "@/components/lab/LabHowTo";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
+import WelcomePopup from "@/components/lab/WelcomePopup";
 import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import {
@@ -346,6 +347,15 @@ export default async function LabCityPage({ params }) {
             )
           ),
         }}
+      />
+
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. Same form as the hero, same /api/lab-lead →
+          Firestore → WhatsApp path, and the same city dropdown this page's own
+          form uses, so a popup lead already carries the right locality. */}
+      <WelcomePopup
+        cityOptions={cityOptions}
+        title={`Book Lab Test in ${cityData.name}`}
       />
 
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
