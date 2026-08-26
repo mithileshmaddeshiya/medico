@@ -265,66 +265,16 @@ const LAB_CITY_SEED = [
        Every term below appears in the visible copy; a keyword that appears
        ONLY here is the kind that gets a page filtered, not ranked. */
     keywords: [
-      // Primary
-      "lab test in Deoria",
-      "Deoria me lab test",
-      "blood test in Deoria",
-      "pathology lab in Deoria",
-      "diagnostic centre in Deoria",
-      "lab test at home Deoria",
-      "home sample collection Deoria",
-      "blood test home collection Deoria",
-      "lab test price in Deoria",
-      "lab test rate list Deoria",
-      "best pathology lab Deoria",
-      "online lab test booking Deoria",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Deoria",
-      "CBC test price in Deoria",
-      "thyroid test in Deoria",
-      "TSH test Deoria",
-      "sugar test in Deoria",
-      "HbA1c test in Deoria",
-      "full body checkup in Deoria",
-      "full body health checkup package Deoria",
-      "lipid profile test Deoria",
-      "liver function test Deoria",
-      "kidney function test Deoria",
-      "vitamin D test in Deoria",
-      "vitamin B12 test in Deoria",
-      "dengue test in Deoria",
-      "typhoid test in Deoria",
-      "malaria test in Deoria",
-      "urine routine test Deoria",
-      "hepatitis test in Deoria",
-
-      // Area modifiers — how a district search is actually typed
-      "lab test in Deoria Sadar",
-      "blood test in Rudrapur Deoria",
-      "blood test in Barhaj Deoria",
-      "lab test in Salempur",
-      "lab test in Bhatpar Rani",
-      "lab test in Gauri Bazar Deoria",
-      "lab test in Baitalpur Deoria",
-      "lab test in Lar Deoria",
-      "lab test in Bhatni",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "देवरिया में लैब टेस्ट",
-      "देवरिया में खून की जांच",
-      "देवरिया में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन देवरिया",
-      "देवरिया लैब टेस्ट रेट लिस्ट",
-      "देवरिया में फुल बॉडी चेकअप",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Deoria",
+      "Lab Test at Home in Deoria",
+      "Blood Test at Home in Deoria",
+      "Home Sample Collection in Deoria",
+      "Blood Test in Deoria",
+      "Diagnostic Lab in Deoria",
+      "Pathology Lab in Deoria",
+      "Full Body Checkup in Deoria",
+      "Full Body Checkup at Home in Deoria",
+      "Home Collection Lab in Deoria",
+      "Lab Test Near Me in Deoria"
     ],
 
     content: deoriaContent,
@@ -493,69 +443,16 @@ const LAB_CITY_SEED = [
        FAQs and prose are written against. Every term below appears in the
        visible copy. */
     keywords: [
-      // Primary
-      "lab test in Gorakhpur",
-      "Gorakhpur me lab test",
-      "blood test in Gorakhpur",
-      "pathology lab in Gorakhpur",
-      "diagnostic centre in Gorakhpur",
-      "lab test at home Gorakhpur",
-      "home sample collection Gorakhpur",
-      "blood test home collection Gorakhpur",
-      "lab test price in Gorakhpur",
-      "lab test rate list Gorakhpur",
-      "best pathology lab Gorakhpur",
-      "online lab test booking Gorakhpur",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Gorakhpur",
-      "CBC test price in Gorakhpur",
-      "thyroid test in Gorakhpur",
-      "TSH test Gorakhpur",
-      "sugar test in Gorakhpur",
-      "HbA1c test in Gorakhpur",
-      "full body checkup in Gorakhpur",
-      "full body health checkup package Gorakhpur",
-      "lipid profile test Gorakhpur",
-      "liver function test Gorakhpur",
-      "kidney function test Gorakhpur",
-      "vitamin D test in Gorakhpur",
-      "vitamin B12 test in Gorakhpur",
-      "dengue test in Gorakhpur",
-      "typhoid test in Gorakhpur",
-      "malaria test in Gorakhpur",
-      "urine routine test Gorakhpur",
-      "hepatitis test in Gorakhpur",
-
-      // Mohalla modifiers — how a city this spread out is actually searched
-      "blood test in Golghar Gorakhpur",
-      "lab test in Civil Lines Gorakhpur",
-      "lab test in Betiahata",
-      "blood test in Mohaddipur",
-      "lab test in Taramandal Gorakhpur",
-      "lab test in Rustampur Gorakhpur",
-      "blood test near Medical College Road Gorakhpur",
-      "lab test in Gorakhnath",
-      "lab test in Kunraghat",
-      "lab test in Sahjanwa",
-      "lab test in Pipraich",
-      "lab test in Chauri Chaura",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "गोरखपुर में लैब टेस्ट",
-      "गोरखपुर में खून की जांच",
-      "गोरखपुर में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन गोरखपुर",
-      "गोरखपुर लैब टेस्ट रेट लिस्ट",
-      "गोरखपुर में फुल बॉडी चेकअप",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Gorakhpur",
+      "Lab Test at Home in Gorakhpur",
+      "Blood Test at Home in Gorakhpur",
+      "Home Sample Collection in Gorakhpur",
+      "Blood Test in Gorakhpur",
+      "Diagnostic Lab in Gorakhpur",
+      "Pathology Lab in Gorakhpur",
+      "Full Body Checkup in Gorakhpur",
+      "Full Body Checkup at Home in Gorakhpur",
+      "Home Collection Lab in Gorakhpur",
+      "Lab Test Near Me in Gorakhpur"
     ],
 
     content: gorakhpurContent,
@@ -728,67 +625,16 @@ const LAB_CITY_SEED = [
        it honest is that it is the checklist the page's headings, FAQs and prose
        are written against. Every term below appears in the visible copy. */
     keywords: [
-      // Primary. "blood test in Salempur" first because the title now leads
-      // with it — this list is the checklist the copy is written against, so it
-      // should not disagree with what the page is titled.
-      "blood test in Salempur",
-      "lab test in Salempur",
-      "Salempur me lab test",
-      "blood test in Salempur Deoria",
-      "lab test in Salempur Deoria",
-      "pathology lab in Salempur",
-      "diagnostic centre in Salempur",
-      "lab test at home Salempur",
-      "home sample collection Salempur",
-      "blood test home collection Salempur",
-      "lab test price in Salempur",
-      "lab test rate list Salempur",
-      "online lab test booking Salempur",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Salempur",
-      "CBC test price in Salempur",
-      "thyroid test in Salempur",
-      "TSH test Salempur",
-      "sugar test in Salempur",
-      "HbA1c test in Salempur",
-      "full body checkup in Salempur",
-      "full body health checkup package Salempur",
-      "lipid profile test Salempur",
-      "liver function test Salempur",
-      "kidney function test Salempur",
-      "vitamin D test in Salempur",
-      "vitamin B12 test in Salempur",
-      "dengue test in Salempur",
-      "typhoid test in Salempur",
-      "malaria test in Salempur",
-      "urine routine test Salempur",
-
-      // Neighbouring kasbas — a reader in these towns rarely types "Salempur"
-      "blood test in Bhatni",
-      "lab test in Bhatni Deoria",
-      "lab test in Lar Deoria",
-      "blood test in Bhatpar Rani",
-      "lab test in Bhagalpur Deoria",
-      "lab test in Majhauli Raj",
-      "lab test in Rampur Karkhana",
-      "blood test in Barhaj",
-
-      // Devanagari — same intents, the script a big share of this belt types
-      "सलेमपुर में लैब टेस्ट",
-      "सलेमपुर में खून की जांच",
-      "सलेमपुर में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन सलेमपुर",
-      "सलेमपुर लैब टेस्ट रेट लिस्ट",
-      "भटनी में खून की जांच",
-
-      // Location-free queries — Google supplies the town from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Salempur",
+      "Lab Test at Home in Salempur",
+      "Blood Test at Home in Salempur",
+      "Home Sample Collection in Salempur",
+      "Blood Test in Salempur",
+      "Diagnostic Lab in Salempur",
+      "Pathology Lab in Salempur",
+      "Full Body Checkup in Salempur",
+      "Full Body Checkup at Home in Salempur",
+      "Home Collection Lab in Salempur",
+      "Lab Test Near Me in Salempur"
     ],
 
     content: salempurContent,
@@ -955,73 +801,16 @@ const LAB_CITY_SEED = [
        are written against. Every term below appears in the visible copy — a
        keyword that appears ONLY here is the kind that gets a page filtered. */
     keywords: [
-      // Primary
-      "lab test in Azamgarh",
-      "Azamgarh me lab test",
-      "blood test in Azamgarh",
-      "pathology lab in Azamgarh",
-      "diagnostic centre in Azamgarh",
-      "lab test at home Azamgarh",
-      "home sample collection Azamgarh",
-      "blood test home collection Azamgarh",
-      "lab test price in Azamgarh",
-      "lab test rate list Azamgarh",
-      "best pathology lab Azamgarh",
-      "online lab test booking Azamgarh",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Azamgarh",
-      "CBC test price in Azamgarh",
-      "thyroid test in Azamgarh",
-      "TSH test Azamgarh",
-      "sugar test in Azamgarh",
-      "HbA1c test in Azamgarh",
-      "full body checkup in Azamgarh",
-      "full body health checkup package Azamgarh",
-      "lipid profile test Azamgarh",
-      "liver function test Azamgarh",
-      "kidney function test Azamgarh",
-      "vitamin D test in Azamgarh",
-      "vitamin B12 test in Azamgarh",
-      "dengue test in Azamgarh",
-      "typhoid test in Azamgarh",
-      "malaria test in Azamgarh",
-      "urine routine test Azamgarh",
-      "hepatitis test in Azamgarh",
-
-      // Locality and tehsil-town modifiers — how a district this large is
-      // actually searched
-      "blood test in Sidhari Azamgarh",
-      "lab test in Civil Lines Azamgarh",
-      "lab test in Kachehri Azamgarh",
-      "blood test in Mubarakpur Azamgarh",
-      "lab test in Nizamabad Azamgarh",
-      "lab test in Bilariyaganj",
-      "blood test in Sarai Mir",
-      "lab test in Lalganj Azamgarh",
-      "lab test in Phulpur Azamgarh",
-      "lab test in Maharajganj Azamgarh",
-      "lab test in Atraulia",
-      "lab test in Mehnagar",
-      "lab test in Jeanpur Azamgarh",
-      "lab test in Rani Ki Sarai",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "आज़मगढ़ में लैब टेस्ट",
-      "आजमगढ़ में खून की जांच",
-      "आजमगढ़ में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन आजमगढ़",
-      "आजमगढ़ लैब टेस्ट रेट लिस्ट",
-      "आजमगढ़ में फुल बॉडी चेकअप",
-      "मुबारकपुर में खून की जांच",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Azamgarh",
+      "Lab Test at Home in Azamgarh",
+      "Blood Test at Home in Azamgarh",
+      "Home Sample Collection in Azamgarh",
+      "Blood Test in Azamgarh",
+      "Diagnostic Lab in Azamgarh",
+      "Pathology Lab in Azamgarh",
+      "Full Body Checkup in Azamgarh",
+      "Full Body Checkup at Home in Azamgarh",
+      "Home Collection Lab in Azamgarh",
+      "Lab Test Near Me in Azamgarh"
     ],
 
     content: azamgarhContent,
@@ -1204,73 +993,16 @@ const LAB_CITY_SEED = [
        are written against. Every term below appears in the visible copy — a
        keyword that appears ONLY here is the kind that gets a page filtered. */
     keywords: [
-      // Primary
-      "lab test in Ballia",
-      "Ballia me lab test",
-      "blood test in Ballia",
-      "pathology lab in Ballia",
-      "diagnostic centre in Ballia",
-      "lab test at home Ballia",
-      "home sample collection Ballia",
-      "blood test home collection Ballia",
-      "lab test price in Ballia",
-      "lab test rate list Ballia",
-      "best pathology lab Ballia",
-      "online lab test booking Ballia",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Ballia",
-      "CBC test price in Ballia",
-      "thyroid test in Ballia",
-      "TSH test Ballia",
-      "sugar test in Ballia",
-      "HbA1c test in Ballia",
-      "full body checkup in Ballia",
-      "full body health checkup package Ballia",
-      "lipid profile test Ballia",
-      "liver function test Ballia",
-      "kidney function test Ballia",
-      "vitamin D test in Ballia",
-      "vitamin B12 test in Ballia",
-      "dengue test in Ballia",
-      "typhoid test in Ballia",
-      "malaria test in Ballia",
-      "urine routine test Ballia",
-      "hepatitis test in Ballia",
-
-      // Locality and tehsil-town modifiers — how this district is actually
-      // searched, because the reader types the kasba, not the district
-      "blood test in Station Road Ballia",
-      "lab test near Bhrigu Ashram Ballia",
-      "lab test in Phephna",
-      "blood test in Rasra",
-      "lab test in Bansdih",
-      "lab test in Bairia Ballia",
-      "blood test in Sikandarpur Ballia",
-      "lab test in Belthara Road",
-      "lab test in Reoti Ballia",
-      "lab test in Maniyar Ballia",
-      "blood test in Sahatwar",
-      "lab test in Nagra Ballia",
-      "lab test in Chitbara Gaon",
-      "lab test in Garwar Ballia",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "बलिया में लैब टेस्ट",
-      "बलिया में खून की जांच",
-      "बलिया में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन बलिया",
-      "बलिया लैब टेस्ट रेट लिस्ट",
-      "बलिया में फुल बॉडी चेकअप",
-      "रसड़ा में खून की जांच",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Ballia",
+      "Lab Test at Home in Ballia",
+      "Blood Test at Home in Ballia",
+      "Home Sample Collection in Ballia",
+      "Blood Test in Ballia",
+      "Diagnostic Lab in Ballia",
+      "Pathology Lab in Ballia",
+      "Full Body Checkup in Ballia",
+      "Full Body Checkup at Home in Ballia",
+      "Home Collection Lab in Ballia",
+      "Lab Test Near Me in Ballia"
     ],
 
     content: balliaContent,
@@ -1462,83 +1194,16 @@ const LAB_CITY_SEED = [
        are written against. Every term below appears in the visible copy — a
        keyword that appears ONLY here is the kind that gets a page filtered. */
     keywords: [
-      // Primary
-      "lab test in Mau",
-      "Mau me lab test",
-      "blood test in Mau",
-      "pathology lab in Mau",
-      "diagnostic centre in Mau",
-      "lab test at home Mau",
-      "home sample collection Mau",
-      "blood test home collection Mau",
-      "lab test price in Mau",
-      "lab test rate list Mau",
-      "best pathology lab Mau",
-      "online lab test booking Mau",
-
-      // The official name — a second real name for the same town, and the one
-      // the URL cannot carry. Same intents, spelled both ways people write it.
-      "lab test in Maunath Bhanjan",
-      "Maunath Bhanjan me lab test",
-      "blood test in Maunath Bhanjan",
-      "pathology lab in Maunath Bhanjan",
-      "home sample collection Maunath Bhanjan",
-      "lab test in Mau Nath Bhanjan",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Mau",
-      "CBC test price in Mau",
-      "thyroid test in Mau",
-      "TSH test Mau",
-      "sugar test in Mau",
-      "HbA1c test in Mau",
-      "full body checkup in Mau",
-      "full body health checkup package Mau",
-      "lipid profile test Mau",
-      "liver function test Mau",
-      "kidney function test Mau",
-      "vitamin D test in Mau",
-      "vitamin B12 test in Mau",
-      "dengue test in Mau",
-      "typhoid test in Mau",
-      "malaria test in Mau",
-      "urine routine test Mau",
-      "hepatitis test in Mau",
-
-      // Locality and block-town modifiers — how this district is actually
-      // searched, because the reader types the kasba, not the district
-      "blood test in Sahadatpura Mau",
-      "lab test near Station Road Mau",
-      "lab test in Mirzahadipura",
-      "lab test in Alinagar Mau",
-      "blood test in Purani Bazar Mau",
-      "lab test in Ghosi",
-      "blood test in Ghosi Mau",
-      "lab test in Madhuban Mau",
-      "lab test in Muhammadabad Gohna",
-      "lab test in Kopaganj",
-      "blood test in Doharighat",
-      "lab test in Chiraiyakot",
-      "lab test in Ranipur Mau",
-      "lab test in Walidpur",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "मऊ में लैब टेस्ट",
-      "मऊ में खून की जांच",
-      "मऊ में पैथोलॉजी लैब",
-      "मऊनाथ भंजन में लैब टेस्ट",
-      "घर से सैंपल कलेक्शन मऊ",
-      "मऊ लैब टेस्ट रेट लिस्ट",
-      "मऊ में फुल बॉडी चेकअप",
-      "घोसी में खून की जांच",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Mau",
+      "Lab Test at Home in Mau",
+      "Blood Test at Home in Mau",
+      "Home Sample Collection in Mau",
+      "Blood Test in Mau",
+      "Diagnostic Lab in Mau",
+      "Pathology Lab in Mau",
+      "Full Body Checkup in Mau",
+      "Full Body Checkup at Home in Mau",
+      "Home Collection Lab in Mau",
+      "Lab Test Near Me in Mau"
     ],
 
     content: mauContent,

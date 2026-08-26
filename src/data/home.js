@@ -71,55 +71,26 @@ export const HOME_META = {
      copy of this page. A keyword that appears ONLY in this array is the kind
      that gets a page filtered rather than ranked. */
   keywords: [
-    // Brand — the whole point of the rewrite. Google was spell-correcting
-    // "medicobharat" to "medical bharat"; see src/lib/schema.js.
-    "MedicoBharat",
-    "Medico Bharat",
-    "MedicoBharat lab test",
-
-    // Primary, location-free. Google fills the city in from the searcher's
-    // position, which the schema's areaServed answers.
-    "lab test at home",
-    "lab test near me",
-    "blood test at home",
-    "blood test near me",
-    "home sample collection",
-    "online lab test booking",
-    "pathology lab near me",
-    "diagnostic centre near me",
-    "full body checkup at home",
-    "full body checkup near me",
-
-    // Test-wise — the highest-intent queries this page answers
-    "CBC test price",
-    "thyroid test at home",
-    "TSH test price",
-    "HbA1c test at home",
-    "lipid profile test price",
-    "liver function test at home",
-    "kidney function test at home",
-    "vitamin D test at home",
-    "vitamin B12 test price",
-    "dengue test at home",
-    "full body checkup package price",
-
-    // The questions this page exists to answer, and which no city page does
-    "kaun sa lab test kab karayein",
-    "blood test se pehle fasting",
-    "lab test report kaise padhein",
-    "umar ke hisaab se health checkup",
-
-    // Regional — the district names in the service area
-    "lab test in Varanasi",
-    "lab test in Gorakhpur",
-    "lab test in Deoria",
-    "lab test in Purvanchal",
-
-    // Devanagari — the script a large share of this audience types in
-    "घर पर लैब टेस्ट",
-    "घर से सैंपल कलेक्शन",
-    "खून की जांच घर पर",
-    "फुल बॉडी चेकअप",
+    "Lab Test at Home",
+    "Blood Test at Home",
+    "Home Sample Collection",
+    "Blood Sample Collection at Home",
+    "Diagnostic Test at Home",
+    "Pathology Lab Home Collection",
+    "Lab Test Home Collection",
+    "Online Lab Test Booking",
+    "Health Checkup at Home",
+    "Home Health Checkup",
+    "Diagnostic Lab",
+    "Pathology Lab",
+    "Blood Test",
+    "Full Body Health Checkup",
+    "Complete Health Checkup",
+    "Preventive Health Checkup",
+    "Online Blood Test Booking",
+    "Home Diagnostic Services",
+    "Diagnostic Services at Home",
+    "Healthcare Services at Home"
   ],
 };
 
