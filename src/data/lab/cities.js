@@ -64,6 +64,7 @@ import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { balliaContent, balliaFaqs } from "./content/ballia";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
+import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { mauContent, mauFaqs } from "./content/mau";
 import { salempurContent, salempurFaqs } from "./content/salempur";
 import { varanasiContent } from "./content/varanasi";
@@ -328,6 +329,11 @@ const LAB_CITY_SEED = [
         {
           title: "Doosre Sheher",
           links: [
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi zila",
+            },
             // Jile ke andar ka page, isliye pehle. Salempur tehsil ka apna page
             // hai aur wahan ke reader ko yahi anchor us tak le jaata hai.
             {
@@ -463,6 +469,11 @@ const LAB_CITY_SEED = [
         {
           title: "Aas-paas Ke Sheher",
           links: [
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "Padrauna aur Kasia — wahan se log yahin dikhane aate hain",
+            },
             {
               href: "/lab-test/deoria",
               label: "Deoria me lab test",
@@ -1207,6 +1218,182 @@ const LAB_CITY_SEED = [
             {
               href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
               label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    /* ── Kushinagar ────────────────────────────────────────────────────────
+       The only district here whose headquarters is NOT the town the district
+       is named after. Padrauna is the administrative centre — hospital, courts,
+       market, and most of the population that books a checkup. Kushinagar
+       (Kasia) is the Buddhist pilgrimage town about 15 km away.
+
+       That splits the search demand cleanly in two: the district name is what
+       everyone outside types, "Padrauna" is what the people who live at the
+       headquarters type. Both names therefore run through the description, the
+       h1, the keywords and the copy — see the note at the top of
+       content/kushinagar.js. Mau does the same for "Maunath Bhanjan", but there
+       the two names are one town; here they are two, which is why the copy says
+       so in plain words rather than treating them as synonyms.
+
+       It also completes the belt: Gorakhpur, Deoria and Kushinagar are the
+       three districts that share the AES/JE season and the same referral road
+       to BRD. All three now link to each other. */
+    slug: "kushinagar",
+    name: "Kushinagar",
+    state: "Uttar Pradesh",
+
+    /* Headquarters first, then the pilgrimage town, then the block towns
+       collection actually reaches. These are not decorative: they render in the
+       footer, fill the booking form's dropdown, become `areaServed` in the
+       schema, and are what a "<kasba> me blood test" search matches on. Kept to
+       twelve — Dudahi, Sukrauli, Motichak and the smaller villages are named in
+       the page copy instead, because a twenty-item dropdown is unusable on a
+       phone. An areaServed we cannot serve is a lie in schema form; do not pad
+       this list. */
+    areas: [
+      "Padrauna",
+      "Kasia",
+      "Hata",
+      "Ramkola",
+      "Tamkuhi Raj",
+      "Khadda",
+      "Captainganj",
+      "Sewrahi",
+      "Fazilnagar",
+      "Nebua Naurangia",
+      "Vishunpura",
+      "Dudahi",
+    ],
+
+    // Padrauna PIN — the headquarters, not the pilgrimage town (Kasia is
+    // 274403). Schema only. Worth re-checking against a delivery slip before
+    // any paid push: it is the one field here nobody on the page ever reads, so
+    // a wrong value would sit in the markup unnoticed.
+    postalCode: "274304",
+
+    /* Padrauna town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. Deliberately Padrauna and not Kasia: the geo point
+       should sit where the demand and the population are. */
+    geo: { lat: 26.9008, lng: 83.98 },
+
+    updated: "2026-08-27",
+    order: 8,
+    published: true,
+
+    /* No `aliases` entry, and none in CITY_ALIASES either. "Padrauna" is NOT an
+       alternate name for Kushinagar — it is a different town in the same
+       district — so putting it in `aliases` would be wrong on the facts, and
+       `aliases` only feeds defaultKeywords() and defaultFaqs(), both of which
+       this city overrides anyway. The name is carried where it actually works:
+       the description, the h1, the keywords, two H2s and three FAQs. */
+
+    // 43 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 58 — just inside the ~60 it shows.
+    // "Padrauna" is deliberately NOT in the title: it would push the line past
+    // truncation and cost the "blood test" half, which is the bigger query. It
+    // leads the description instead, where there is room for it.
+    title: "Lab Test in Kushinagar — Blood Test at Home",
+
+    // ~158 characters, so it renders whole on desktop and mobile. Padrauna
+    // first, because that is where the readers are, then the block towns that
+    // are furthest from the headquarters — which is what distinguishes this
+    // result when more than one of our pages shows for a regional query.
+    description:
+      "Padrauna aur Kushinagar me lab test ghar baithe — Hata, Ramkola, Khadda aur Tamkuhi Raj tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: the headquarters'
+    // name, "blood test", "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Kushinagar Aur Padrauna — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Kushinagar" nine times plus one line per area and miss the
+       three things this district's traffic actually is: Padrauna, which the URL
+       cannot carry and which half the district types; the block-town modifiers,
+       because a reader in Khadda or Tamkuhi Raj rarely types the district name;
+       and the district's own seasonal demand.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      "Lab Test in Kushinagar",
+      "Blood Test in Kushinagar",
+      "Lab Test in Padrauna",
+      "Blood Test in Padrauna",
+      "Home Sample Collection in Kushinagar",
+      "Pathology Lab in Kushinagar",
+      "Diagnostic Centre in Kushinagar",
+      "Full Body Checkup in Kushinagar",
+      "Dengue Test in Kushinagar",
+      "Lab Test Near Me in Kushinagar"
+    ],
+
+    content: kushinagarContent,
+    faqs: kushinagarFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the two
+       districts this one actually travels to — Gorakhpur for specialists and
+       Deoria for everything to the south — are named first, and both of them
+       link back (see their blocks above). Varanasi is there for imaging and
+       referrals that go past Gorakhpur.
+
+       Every href is checked against a real route: the cities in this seed and
+       the guides in src/data/blogs/. */
+    relatedLinks: {
+      heading: "Kushinagar Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Specialist aur BRD — wahan dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Jile ke dakshin se laga padosi zila",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye aage jaana ho to",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — is belt ke liye guide",
+              sub: "Package, bukhar ka din, Gorakhpur se pehle ki taiyaari",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level",
             },
             {
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
