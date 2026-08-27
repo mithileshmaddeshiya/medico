@@ -7,6 +7,7 @@ import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHero from "@/components/lab/LabHero";
 import LabHowTo from "@/components/lab/LabHowTo";
+import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import WelcomePopup from "@/components/lab/WelcomePopup";
@@ -327,6 +328,11 @@ export default async function LabCityPage({ params }) {
   // visitor from a neighbouring town.
   const cityOptions = await getLabCityOptions(cityData.slug);
 
+  // The full published list, for the Quick Links index at the bottom of the
+  // page. Read here rather than threaded down from the layout: the layout feeds
+  // the footer, and a page that renders its own index should not depend on it.
+  const cities = await getLabCities();
+
   const cityName = cityData.name;
   const phone = cityData.footer.phone ?? LAB_PHONE;
 
@@ -406,6 +412,11 @@ export default async function LabCityPage({ params }) {
         sections={cityData.content}
         related={cityData.relatedLinks}
       />
+
+      {/* The collapsed index that closes the page: every city we serve, every
+          locality, and the site's own pages. Native <details>, so it costs no
+          client JS and needs no Google-Translate guard — see the component. */}
+      <LabQuickLinks cities={cities} currentSlug={cityData.slug} />
 
       {/* Floats over everything, bottom-right, dismissible. `phone` is this
           city's number, so it can never dial a different one than the page. */}

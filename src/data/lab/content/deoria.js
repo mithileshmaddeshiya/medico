@@ -82,6 +82,14 @@ export const deoriaContent = [
       "Deoria ki sabse badi dikkat test karana nahi, test ke liye safar karna hai. Zila mukhyalaya par district hospital aur kai private clinic hain, lekin bade multi-speciality diagnostic setup zyadatar Gorakhpur me hain, jo yahan se kareeb 55–60 kilometre door hai. Nateeja ye hota hai ki ek CBC ya thyroid ke liye bhi log subah bus ya train pakadte hain, khaali pet do-teen ghante safar karte hain, sample dete hain, aur report lene phir ek din jaate hain. Ek test, do trip, poora din.",
       "Home sample collection is poore chakkar ko khatam kar deta hai. Aap Deoria me apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai — na bus ka kiraya, na khaali pet ka safar, na report lene ke liye doosra din.",
       "Yahan routine pathology ke saare test aur checkup package book hote hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver Function Test, Kidney Function Test, Vitamin D, Vitamin B12, Dengue aur Full Body Checkup. Doctor ne parcha likh diya hai to usi panel ke hisaab se booking ho jaati hai; agar koi test is page par nahi dikh raha to prescription ke saath call kar lijiye.",
+      [
+        "Kaun sa test kab karana chahiye, bukhar me kis din test matlab rakhta hai, aur report ke numbers me kya dekhna chahiye — us par is jile ke liye alag guide hai: ",
+        {
+          text: "Deoria me kaun sa test kab karayein",
+          href: "/blogs/lab-test/deoria",
+        },
+        ". Is page par booking, price aur test menu hai; wahan test chunna aur report samajhna.",
+      ],
     ],
   },
 
