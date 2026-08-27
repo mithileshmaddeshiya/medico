@@ -19,5 +19,12 @@
  */
 import { fullBodyCheckupVaranasi } from "./full-body-checkup-in-varanasi";
 import { labTestVaranasi } from "./lab-test-in-varanasi";
+import { pathologyLabVaranasi } from "./pathology-lab-in-varanasi";
 
-export const varanasiBlogs = [labTestVaranasi, fullBodyCheckupVaranasi];
+export const varanasiBlogs = [
+  labTestVaranasi,
+  fullBodyCheckupVaranasi,
+  // Third, and last in the list on purpose: it is the trust/brand page, the one
+  // a reader opens after the two clinical guides rather than before them.
+  pathologyLabVaranasi,
+];

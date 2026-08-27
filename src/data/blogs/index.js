@@ -28,6 +28,7 @@
  * throws at import time — at build, in a stack trace naming the file — rather
  * than rendering a broken page in production.
  */
+import { deoriaBlogs } from "./deoria";
 import { varanasiBlogs } from "./varanasi";
 
 /**
@@ -39,7 +40,7 @@ import { varanasiBlogs } from "./varanasi";
  * about a service the site no longer offers is a topical signal pointing the
  * wrong way, which is exactly what this rewrite set out to fix.
  */
-const CITY_BLOGS = [varanasiBlogs];
+const CITY_BLOGS = [varanasiBlogs, deoriaBlogs];
 
 /** URL-safe slug, same rules as the lab section's (src/data/lab/cities.js). */
 const slugify = (value) =>

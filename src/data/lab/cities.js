@@ -125,6 +125,11 @@ const LAB_CITY_SEED = [
           title: "Varanasi Ke Liye Guide",
           links: [
             {
+              href: "/blogs/pathology-lab/varanasi",
+              label: "Varanasi me pathology lab kaise chunein",
+              sub: "Poochhne layak paanch sawaal — aur hum kya daawa nahi karte",
+            },
+            {
               href: "/blogs/lab-test/varanasi",
               label: "Varanasi me lab test — kaun sa test kab karayein",
               sub: "Symptom, umar aur mausam ke hisaab se poori guide",
@@ -170,18 +175,6 @@ const LAB_CITY_SEED = [
               label: "Ballia me lab test",
               sub: "UP ka aakhiri jila — imaging ke liye yahan aana padta hai",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Kaun sa test kab karayein — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -303,6 +296,15 @@ const LAB_CITY_SEED = [
         {
           title: "Test Chunne Me Madad",
           links: [
+            // Deoria ka apna guide, isliye sabse pehle. Pehle yahan sirf
+            // Varanasi ke guide the — is jile ka reader ek doosre sheher ka
+            // URL khol raha tha. Wo dono ab bhi neeche hain, kyunki unmein
+            // report padhna aur package chunna hai, jo har jile me ek jaisa hai.
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Deoria me kaun sa test kab karayein — poori guide",
+              sub: "Package, bukhar ka din, Gorakhpur se pehle ki taiyaari",
+            },
             {
               href: "/blogs/lab-test/varanasi",
               label: "Kaun sa test kab karayein — poori guide",
@@ -343,18 +345,6 @@ const LAB_CITY_SEED = [
               label: "Varanasi me lab test",
               sub: "Imaging ya specialist ke liye jaana ho to",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har sheher me wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -501,6 +491,10 @@ const LAB_CITY_SEED = [
               sub: "Shikayat, umar aur mausam ke hisaab se",
             },
             {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+            },
+            {
               href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
               label: "Fasting ke niyam aur test se pehle ki taiyaari",
             },
@@ -508,22 +502,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har sheher me wahi rate — ek jagah",
-            },
-            {
-              href: "/blogs/full-body-checkup/varanasi",
-              label: "Full body checkup me kya hona chahiye",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -694,18 +672,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -886,18 +852,6 @@ const LAB_CITY_SEED = [
             },
           ],
         },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
-          ],
-        },
       ],
     },
   },
@@ -1070,18 +1024,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -1270,18 +1212,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
