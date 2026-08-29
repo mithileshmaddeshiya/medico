@@ -6,50 +6,47 @@ import LabLeadCard from "./LabLeadCard";
 export default function LabHero({ hero, cityOptions }) {
   return (
     <section className="bg-linear-to-b from-emerald-50/70 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-19 sm:pt-24 pb-2 sm:pb-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-19 sm:pt-24 pb-6 sm:pb-8">
 
-        {/* ── THE PAGE'S ONLY H1 ──────────────────────────────────────────
-            Every other lab section starts at h2.
+        {/* `items-center` — the banner keeps its own ratio rather than being
+            stretched to the form's height, so the two columns are different
+            heights and the shorter one centres against the taller. */}
+        <div className="grid items-center gap-5 lg:gap-8 lg:grid-cols-12">
 
-            This was `sr-only` — hidden from sight and readable only by screen
-            readers — because the hero's headline was printed into the banner
-            artwork below. That cost the page three things at once:
-
-              1. The most prominent element above the fold was raster text,
-                 which no crawler can read.
-              2. The LCP candidate was a 1.8 MB image rather than a line of
-                 text, which paints on the first frame.
-              3. The SAME banner file is the hero on all six city pages, so
-                 the page's dominant element was byte-identical across six
-                 pages competing for six different towns' queries.
-
-            Now it is real text carrying the city name, and it is the first
-            thing painted. `text-balance` keeps the two-line phone wrap even;
-            `text-pretty` on the sub-line stops a one-word last line. */}
-        <div className="max-w-3xl">
-          <h1 className="text-balance text-[26px] min-[400px]:text-[30px] sm:text-[38px] lg:text-[42px] font-extrabold leading-[1.12] tracking-tight text-slate-900">
-            {hero?.h1}
-          </h1>
-
-          {/* Rendered only when the city supplies one, so an older city entry
-              without `h1Sub` degrades to just the heading rather than an empty
-              paragraph holding open a gap. */}
-          {hero?.h1Sub && (
-            <p className="mt-2.5 max-w-2xl text-pretty text-[13.5px] sm:text-[15px] leading-relaxed text-slate-600">
-              {hero.h1Sub}
-            </p>
-          )}
-        </div>
-
-        <div className="mt-5 sm:mt-6 grid items-center gap-5 lg:gap-8 lg:grid-cols-12">
-
-          {/* LEFT: image — 1696x927, so the box carries the banner's own ratio
-              (aspect-11/6) at every width. It used to be cropped on phones to
-              save height, but this banner has its headline and a contact bar
-              printed into the artwork, and a crop cuts them in half. See
-              defaultHero in src/data/lab/defaults.js for the file. */}
           <div className="lg:col-span-8">
-            <div className="relative w-full aspect-11/6 rounded-md lg:rounded-tr-none overflow-hidden">
+
+            {/* ── THE PAGE'S ONLY H1, AND IT IS INVISIBLE ─────────────────
+                Every other lab section starts at h2, so this element is what
+                stops the page having no h1 at all.
+
+                It is `sr-only` because the hero shows no heading: the banner
+                carries its own headline in the artwork, and a second one in
+                text sat awkwardly against it however it was placed.
+
+                ── THE COST, AND IT IS HIGHER HERE THAN ON THE HOME PAGE ───
+                A crawler cannot read pixels, and the SAME banner file is the
+                hero on every city page. So the dominant element of six pages
+                competing for six different towns is byte-identical, and the
+                only per-city machine-readable text above the fold is this
+                hidden heading and the image alt. Both carry the city name;
+                nothing visible does.
+
+                Reversing it is one swap: point defaultHero.image at
+                /navheroimage/herocityempty.webp (the same photograph with its
+                left side left clear) and this heading can come back visible,
+                overlaid on that empty side. */}
+            <h1 className="sr-only">
+              {hero?.h1}
+              {hero?.h1Sub ? `. ${hero.h1Sub}` : ""}
+            </h1>
+
+            {/* ── THE BANNER ──────────────────────────────────────────────
+                1696x927, so the box carries the artwork's own ratio
+                (aspect-11/6) at every width — nothing cropped, and the contact
+                bar along the bottom stays whole. Replace the file with a
+                differently-shaped one and this class changes with it. See
+                defaultHero in src/data/lab/defaults.js. */}
+            <div className="relative w-full aspect-11/6 overflow-hidden rounded-xl ring-1 ring-emerald-100 shadow-[0_20px_50px_-30px_rgba(6,78,59,0.55)]">
               <Image
                 src={hero?.image}
                 alt={hero?.imageAlt ?? ""}

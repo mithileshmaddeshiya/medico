@@ -13,12 +13,17 @@
   }
 }
 
-/* ECG heartbeat line — draws itself on a loop. Used by the homepage hero's
-   trust badge; it was the navbar's centre tagline until the nav links took
-   that space. */
+/* ECG heartbeat line — draws itself on a loop, the way a monitor sweeps.
+   Used only by the navbar's centre (LabNavbar.jsx).
+
+   The dash has to be LONGER than the path it is drawn on, or the tail of the
+   trace never appears: at offset 0 the dash covers 0..320 of a ~282 unit path,
+   so the whole line ends up painted. Lengthen the path in the SVG and this
+   number has to grow with it — it was 260 for the old 120-wide viewBox, and
+   left the last 8% of the wider one permanently blank. */
 @keyframes ecg-draw {
   0% {
-    stroke-dashoffset: 260;
+    stroke-dashoffset: 320;
   }
   70%,
   100% {
@@ -27,8 +32,17 @@
 }
 
 .ecg-line {
-  stroke-dasharray: 260;
+  stroke-dasharray: 320;
   animation: ecg-draw 2.4s ease-in-out infinite;
+}
+
+/* A looping animation sitting in a fixed header is exactly the motion that
+   triggers discomfort, and it carries no information — so it just stops. */
+@media (prefers-reduced-motion: reduce) {
+  .ecg-line {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Booking modal enter animation */

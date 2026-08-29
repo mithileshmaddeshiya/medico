@@ -153,17 +153,27 @@ export const HOME_HERO = {
   // The home page gets its own banner rather than reusing the city heroes'
   // asset — the two pages sit next to each other in search results, and an
   // identical image makes the home page look like just another city page.
-  // 1700x925, so the hero box is aspect-11/6. Replacing this file with a
+  // 1699x926, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
   //
   // WebP, not the original PNG: this is the LCP element on the site's most
   // linked page, marked `priority`. Same pixels, 91 KB instead of 1516 KB.
+  //
+  // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
+  // It carries its own headline, four icon labels and a contact bar. That is
+  // why HomeHero prints no visible heading of its own: two headlines, one in
+  // pixels and one in text, sat on top of each other however they were
+  // arranged. A text-free cut of the same photograph exists at
+  // /navheroimage/heroempty.webp — switching back to it is what makes a
+  // readable h1 possible again, and HomeHero has the note on how.
   image: "/navheroimage/herosecimg.webp",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
-  // photograph. The counts printed on the banner are deliberately NOT repeated
-  // here; see the rule at the top of this file.
+  // photograph. With the visible h1 gone this alt and the sr-only heading are
+  // between them the only machine-readable version of what the hero says.
+  // The counts printed on the banner are deliberately NOT repeated here; see
+  // the rule at the top of this file.
   imageAlt:
     "MedicoBharat Lab Test — accurate tests, better health. Reliable lab tests, advanced technology, safe aur hygienic collection, home sample collection ke saath.",
 };
