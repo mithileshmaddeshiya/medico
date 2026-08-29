@@ -192,8 +192,9 @@ export default function LabFooter({ city = null, labCities = [] }) {
                     <Link
                       href={`/lab-test/${c.slug}`}
                       className="hover:text-emerald-700 transition-colors"
+                      aria-label={`Lab Test in ${c.name}`}
                     >
-                      Lab Test in {c.name}
+                      {c.name}
                     </Link>
                   </li>
                 ))}

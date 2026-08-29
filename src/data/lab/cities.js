@@ -73,6 +73,8 @@ import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { balliaContent, balliaFaqs } from "./content/ballia";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
+import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
+import { mauContent, mauFaqs } from "./content/mau";
 import { salempurContent, salempurFaqs } from "./content/salempur";
 import { varanasiContent } from "./content/varanasi";
 import {
@@ -133,6 +135,11 @@ const LAB_CITY_SEED = [
           title: "Varanasi Ke Liye Guide",
           links: [
             {
+              href: "/blogs/pathology-lab/varanasi",
+              label: "Varanasi me pathology lab kaise chunein",
+              sub: "Poochhne layak paanch sawaal — aur hum kya daawa nahi karte",
+            },
+            {
               href: "/blogs/lab-test/varanasi",
               label: "Varanasi me lab test — kaun sa test kab karayein",
               sub: "Symptom, umar aur mausam ke hisaab se poori guide",
@@ -178,18 +185,6 @@ const LAB_CITY_SEED = [
               label: "Ballia me lab test",
               sub: "UP ka aakhiri jila — imaging ke liye yahan aana padta hai",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Kaun sa test kab karayein — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -290,66 +285,16 @@ const LAB_CITY_SEED = [
        Every term below appears in the visible copy; a keyword that appears
        ONLY here is the kind that gets a page filtered, not ranked. */
     keywords: [
-      // Primary
-      "lab test in Deoria",
-      "Deoria me lab test",
-      "blood test in Deoria",
-      "pathology lab in Deoria",
-      "diagnostic centre in Deoria",
-      "lab test at home Deoria",
-      "home sample collection Deoria",
-      "blood test home collection Deoria",
-      "lab test price in Deoria",
-      "lab test rate list Deoria",
-      "best pathology lab Deoria",
-      "online lab test booking Deoria",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Deoria",
-      "CBC test price in Deoria",
-      "thyroid test in Deoria",
-      "TSH test Deoria",
-      "sugar test in Deoria",
-      "HbA1c test in Deoria",
-      "full body checkup in Deoria",
-      "full body health checkup package Deoria",
-      "lipid profile test Deoria",
-      "liver function test Deoria",
-      "kidney function test Deoria",
-      "vitamin D test in Deoria",
-      "vitamin B12 test in Deoria",
-      "dengue test in Deoria",
-      "typhoid test in Deoria",
-      "malaria test in Deoria",
-      "urine routine test Deoria",
-      "hepatitis test in Deoria",
-
-      // Area modifiers — how a district search is actually typed
-      "lab test in Deoria Sadar",
-      "blood test in Rudrapur Deoria",
-      "blood test in Barhaj Deoria",
-      "lab test in Salempur",
-      "lab test in Bhatpar Rani",
-      "lab test in Gauri Bazar Deoria",
-      "lab test in Baitalpur Deoria",
-      "lab test in Lar Deoria",
-      "lab test in Bhatni",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "देवरिया में लैब टेस्ट",
-      "देवरिया में खून की जांच",
-      "देवरिया में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन देवरिया",
-      "देवरिया लैब टेस्ट रेट लिस्ट",
-      "देवरिया में फुल बॉडी चेकअप",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Deoria",
+      "Lab Test at Home in Deoria",
+      "Blood Test at Home in Deoria",
+      "Home Sample Collection in Deoria",
+      "Blood Test in Deoria",
+      "Diagnostic Lab in Deoria",
+      "Pathology Lab in Deoria",
+      "Full Body Checkup in Deoria",
+      "Full Body Checkup at Home in Deoria",
+      "Home Collection Lab in Deoria",
+      "Lab Test Near Me in Deoria"
     ],
 
     content: deoriaContent,
@@ -378,6 +323,15 @@ const LAB_CITY_SEED = [
         {
           title: "Test Chunne Me Madad",
           links: [
+            // Deoria ka apna guide, isliye sabse pehle. Pehle yahan sirf
+            // Varanasi ke guide the — is jile ka reader ek doosre sheher ka
+            // URL khol raha tha. Wo dono ab bhi neeche hain, kyunki unmein
+            // report padhna aur package chunna hai, jo har jile me ek jaisa hai.
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Deoria me kaun sa test kab karayein — poori guide",
+              sub: "Package, bukhar ka din, Gorakhpur se pehle ki taiyaari",
+            },
             {
               href: "/blogs/lab-test/varanasi",
               label: "Kaun sa test kab karayein — poori guide",
@@ -401,6 +355,11 @@ const LAB_CITY_SEED = [
         {
           title: "Doosre Sheher",
           links: [
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi zila",
+            },
             // Jile ke andar ka page, isliye pehle. Salempur tehsil ka apna page
             // hai aur wahan ke reader ko yahi anchor us tak le jaata hai.
             {
@@ -418,18 +377,6 @@ const LAB_CITY_SEED = [
               label: "Varanasi me lab test",
               sub: "Imaging ya specialist ke liye jaana ho to",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har sheher me wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -539,69 +486,16 @@ const LAB_CITY_SEED = [
        FAQs and prose are written against. Every term below appears in the
        visible copy. */
     keywords: [
-      // Primary
-      "lab test in Gorakhpur",
-      "Gorakhpur me lab test",
-      "blood test in Gorakhpur",
-      "pathology lab in Gorakhpur",
-      "diagnostic centre in Gorakhpur",
-      "lab test at home Gorakhpur",
-      "home sample collection Gorakhpur",
-      "blood test home collection Gorakhpur",
-      "lab test price in Gorakhpur",
-      "lab test rate list Gorakhpur",
-      "best pathology lab Gorakhpur",
-      "online lab test booking Gorakhpur",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Gorakhpur",
-      "CBC test price in Gorakhpur",
-      "thyroid test in Gorakhpur",
-      "TSH test Gorakhpur",
-      "sugar test in Gorakhpur",
-      "HbA1c test in Gorakhpur",
-      "full body checkup in Gorakhpur",
-      "full body health checkup package Gorakhpur",
-      "lipid profile test Gorakhpur",
-      "liver function test Gorakhpur",
-      "kidney function test Gorakhpur",
-      "vitamin D test in Gorakhpur",
-      "vitamin B12 test in Gorakhpur",
-      "dengue test in Gorakhpur",
-      "typhoid test in Gorakhpur",
-      "malaria test in Gorakhpur",
-      "urine routine test Gorakhpur",
-      "hepatitis test in Gorakhpur",
-
-      // Mohalla modifiers — how a city this spread out is actually searched
-      "blood test in Golghar Gorakhpur",
-      "lab test in Civil Lines Gorakhpur",
-      "lab test in Betiahata",
-      "blood test in Mohaddipur",
-      "lab test in Taramandal Gorakhpur",
-      "lab test in Rustampur Gorakhpur",
-      "blood test near Medical College Road Gorakhpur",
-      "lab test in Gorakhnath",
-      "lab test in Kunraghat",
-      "lab test in Sahjanwa",
-      "lab test in Pipraich",
-      "lab test in Chauri Chaura",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "गोरखपुर में लैब टेस्ट",
-      "गोरखपुर में खून की जांच",
-      "गोरखपुर में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन गोरखपुर",
-      "गोरखपुर लैब टेस्ट रेट लिस्ट",
-      "गोरखपुर में फुल बॉडी चेकअप",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Gorakhpur",
+      "Lab Test at Home in Gorakhpur",
+      "Blood Test at Home in Gorakhpur",
+      "Home Sample Collection in Gorakhpur",
+      "Blood Test in Gorakhpur",
+      "Diagnostic Lab in Gorakhpur",
+      "Pathology Lab in Gorakhpur",
+      "Full Body Checkup in Gorakhpur",
+      "Full Body Checkup at Home in Gorakhpur",
+      "Home Collection Lab in Gorakhpur",
+      "Lab Test Near Me in Gorakhpur"
     ],
 
     content: gorakhpurContent,
@@ -622,6 +516,11 @@ const LAB_CITY_SEED = [
         {
           title: "Aas-paas Ke Sheher",
           links: [
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "Padrauna aur Kasia — wahan se log yahin dikhane aate hain",
+            },
             {
               href: "/lab-test/deoria",
               label: "Deoria me lab test",
@@ -650,6 +549,10 @@ const LAB_CITY_SEED = [
               sub: "Shikayat, umar aur mausam ke hisaab se",
             },
             {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+            },
+            {
               href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
               label: "Fasting ke niyam aur test se pehle ki taiyaari",
             },
@@ -657,22 +560,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har sheher me wahi rate — ek jagah",
-            },
-            {
-              href: "/blogs/full-body-checkup/varanasi",
-              label: "Full body checkup me kya hona chahiye",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -791,67 +678,16 @@ const LAB_CITY_SEED = [
        it honest is that it is the checklist the page's headings, FAQs and prose
        are written against. Every term below appears in the visible copy. */
     keywords: [
-      // Primary. "blood test in Salempur" first because the title now leads
-      // with it — this list is the checklist the copy is written against, so it
-      // should not disagree with what the page is titled.
-      "blood test in Salempur",
-      "lab test in Salempur",
-      "Salempur me lab test",
-      "blood test in Salempur Deoria",
-      "lab test in Salempur Deoria",
-      "pathology lab in Salempur",
-      "diagnostic centre in Salempur",
-      "lab test at home Salempur",
-      "home sample collection Salempur",
-      "blood test home collection Salempur",
-      "lab test price in Salempur",
-      "lab test rate list Salempur",
-      "online lab test booking Salempur",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Salempur",
-      "CBC test price in Salempur",
-      "thyroid test in Salempur",
-      "TSH test Salempur",
-      "sugar test in Salempur",
-      "HbA1c test in Salempur",
-      "full body checkup in Salempur",
-      "full body health checkup package Salempur",
-      "lipid profile test Salempur",
-      "liver function test Salempur",
-      "kidney function test Salempur",
-      "vitamin D test in Salempur",
-      "vitamin B12 test in Salempur",
-      "dengue test in Salempur",
-      "typhoid test in Salempur",
-      "malaria test in Salempur",
-      "urine routine test Salempur",
-
-      // Neighbouring kasbas — a reader in these towns rarely types "Salempur"
-      "blood test in Bhatni",
-      "lab test in Bhatni Deoria",
-      "lab test in Lar Deoria",
-      "blood test in Bhatpar Rani",
-      "lab test in Bhagalpur Deoria",
-      "lab test in Majhauli Raj",
-      "lab test in Rampur Karkhana",
-      "blood test in Barhaj",
-
-      // Devanagari — same intents, the script a big share of this belt types
-      "सलेमपुर में लैब टेस्ट",
-      "सलेमपुर में खून की जांच",
-      "सलेमपुर में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन सलेमपुर",
-      "सलेमपुर लैब टेस्ट रेट लिस्ट",
-      "भटनी में खून की जांच",
-
-      // Location-free queries — Google supplies the town from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Salempur",
+      "Lab Test at Home in Salempur",
+      "Blood Test at Home in Salempur",
+      "Home Sample Collection in Salempur",
+      "Blood Test in Salempur",
+      "Diagnostic Lab in Salempur",
+      "Pathology Lab in Salempur",
+      "Full Body Checkup in Salempur",
+      "Full Body Checkup at Home in Salempur",
+      "Home Collection Lab in Salempur",
+      "Lab Test Near Me in Salempur"
     ],
 
     content: salempurContent,
@@ -911,18 +747,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -1036,73 +860,16 @@ const LAB_CITY_SEED = [
        are written against. Every term below appears in the visible copy — a
        keyword that appears ONLY here is the kind that gets a page filtered. */
     keywords: [
-      // Primary
-      "lab test in Azamgarh",
-      "Azamgarh me lab test",
-      "blood test in Azamgarh",
-      "pathology lab in Azamgarh",
-      "diagnostic centre in Azamgarh",
-      "lab test at home Azamgarh",
-      "home sample collection Azamgarh",
-      "blood test home collection Azamgarh",
-      "lab test price in Azamgarh",
-      "lab test rate list Azamgarh",
-      "best pathology lab Azamgarh",
-      "online lab test booking Azamgarh",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Azamgarh",
-      "CBC test price in Azamgarh",
-      "thyroid test in Azamgarh",
-      "TSH test Azamgarh",
-      "sugar test in Azamgarh",
-      "HbA1c test in Azamgarh",
-      "full body checkup in Azamgarh",
-      "full body health checkup package Azamgarh",
-      "lipid profile test Azamgarh",
-      "liver function test Azamgarh",
-      "kidney function test Azamgarh",
-      "vitamin D test in Azamgarh",
-      "vitamin B12 test in Azamgarh",
-      "dengue test in Azamgarh",
-      "typhoid test in Azamgarh",
-      "malaria test in Azamgarh",
-      "urine routine test Azamgarh",
-      "hepatitis test in Azamgarh",
-
-      // Locality and tehsil-town modifiers — how a district this large is
-      // actually searched
-      "blood test in Sidhari Azamgarh",
-      "lab test in Civil Lines Azamgarh",
-      "lab test in Kachehri Azamgarh",
-      "blood test in Mubarakpur Azamgarh",
-      "lab test in Nizamabad Azamgarh",
-      "lab test in Bilariyaganj",
-      "blood test in Sarai Mir",
-      "lab test in Lalganj Azamgarh",
-      "lab test in Phulpur Azamgarh",
-      "lab test in Maharajganj Azamgarh",
-      "lab test in Atraulia",
-      "lab test in Mehnagar",
-      "lab test in Jeanpur Azamgarh",
-      "lab test in Rani Ki Sarai",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "आज़मगढ़ में लैब टेस्ट",
-      "आजमगढ़ में खून की जांच",
-      "आजमगढ़ में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन आजमगढ़",
-      "आजमगढ़ लैब टेस्ट रेट लिस्ट",
-      "आजमगढ़ में फुल बॉडी चेकअप",
-      "मुबारकपुर में खून की जांच",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Azamgarh",
+      "Lab Test at Home in Azamgarh",
+      "Blood Test at Home in Azamgarh",
+      "Home Sample Collection in Azamgarh",
+      "Blood Test in Azamgarh",
+      "Diagnostic Lab in Azamgarh",
+      "Pathology Lab in Azamgarh",
+      "Full Body Checkup in Azamgarh",
+      "Full Body Checkup at Home in Azamgarh",
+      "Home Collection Lab in Azamgarh",
+      "Lab Test Near Me in Azamgarh"
     ],
 
     content: azamgarhContent,
@@ -1139,13 +906,19 @@ const LAB_CITY_SEED = [
               label: "Deoria me lab test",
               sub: "Jile ka apna page — rate list aur booking",
             },
-            // Mandal ka apna jila: Azamgarh ki copy Ballia ko naam se leti hai,
-            // isliye link dono taraf hai — ek naya URL sitemap se nahi, links
-            // se crawl hota hai.
+            // Mandal ke apne jile: Azamgarh ki copy Ballia aur Mau dono ko naam
+            // se leti hai, isliye link dono taraf hai — ek naya URL sitemap se
+            // nahi, links se crawl hota hai. Mau iss jile se hi kata tha, aur
+            // uska page yahan wapas link karta hai.
             {
               href: "/lab-test/ballia",
               label: "Ballia me lab test",
               sub: "Ganga-patti aur diara ke gaon tak home collection",
+            },
+            {
+              href: "/lab-test/mau",
+              label: "Mau me lab test",
+              sub: "Ghosi, Madhuban aur Doharighat tak ghar se sample",
             },
           ],
         },
@@ -1170,18 +943,6 @@ const LAB_CITY_SEED = [
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
-          ],
-        },
-        {
-          title: "Madad",
-          links: [
-            {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
-            },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
           ],
         },
       ],
@@ -1297,73 +1058,16 @@ const LAB_CITY_SEED = [
        are written against. Every term below appears in the visible copy — a
        keyword that appears ONLY here is the kind that gets a page filtered. */
     keywords: [
-      // Primary
-      "lab test in Ballia",
-      "Ballia me lab test",
-      "blood test in Ballia",
-      "pathology lab in Ballia",
-      "diagnostic centre in Ballia",
-      "lab test at home Ballia",
-      "home sample collection Ballia",
-      "blood test home collection Ballia",
-      "lab test price in Ballia",
-      "lab test rate list Ballia",
-      "best pathology lab Ballia",
-      "online lab test booking Ballia",
-
-      // Test-wise long tail — the highest-intent queries on the page
-      "CBC test in Ballia",
-      "CBC test price in Ballia",
-      "thyroid test in Ballia",
-      "TSH test Ballia",
-      "sugar test in Ballia",
-      "HbA1c test in Ballia",
-      "full body checkup in Ballia",
-      "full body health checkup package Ballia",
-      "lipid profile test Ballia",
-      "liver function test Ballia",
-      "kidney function test Ballia",
-      "vitamin D test in Ballia",
-      "vitamin B12 test in Ballia",
-      "dengue test in Ballia",
-      "typhoid test in Ballia",
-      "malaria test in Ballia",
-      "urine routine test Ballia",
-      "hepatitis test in Ballia",
-
-      // Locality and tehsil-town modifiers — how this district is actually
-      // searched, because the reader types the kasba, not the district
-      "blood test in Station Road Ballia",
-      "lab test near Bhrigu Ashram Ballia",
-      "lab test in Phephna",
-      "blood test in Rasra",
-      "lab test in Bansdih",
-      "lab test in Bairia Ballia",
-      "blood test in Sikandarpur Ballia",
-      "lab test in Belthara Road",
-      "lab test in Reoti Ballia",
-      "lab test in Maniyar Ballia",
-      "blood test in Sahatwar",
-      "lab test in Nagra Ballia",
-      "lab test in Chitbara Gaon",
-      "lab test in Garwar Ballia",
-
-      // Devanagari — same intents, the script a big share of this district types
-      "बलिया में लैब टेस्ट",
-      "बलिया में खून की जांच",
-      "बलिया में पैथोलॉजी लैब",
-      "घर से सैंपल कलेक्शन बलिया",
-      "बलिया लैब टेस्ट रेट लिस्ट",
-      "बलिया में फुल बॉडी चेकअप",
-      "रसड़ा में खून की जांच",
-
-      // Location-free queries — Google supplies the city from the searcher's
-      // position, which the DiagnosticLab schema's areaServed answers.
-      "lab test near me",
-      "blood test near me",
-      "pathology lab near me",
-      "full body checkup near me",
-      "MedicoBharat lab test Ballia",
+      "Lab Test at Home in Ballia",
+      "Blood Test at Home in Ballia",
+      "Home Sample Collection in Ballia",
+      "Blood Test in Ballia",
+      "Diagnostic Lab in Ballia",
+      "Pathology Lab in Ballia",
+      "Full Body Checkup in Ballia",
+      "Full Body Checkup at Home in Ballia",
+      "Home Collection Lab in Ballia",
+      "Lab Test Near Me in Ballia"
     ],
 
     content: balliaContent,
@@ -1401,6 +1105,13 @@ const LAB_CITY_SEED = [
               label: "Gorakhpur me lab test",
               sub: "Wahan OPD dikhana ho to report pehle taiyaar",
             },
+            // Padosi jila, aur Mau ka page yahan link karta hai — link dono
+            // taraf rakhna hi ek naye URL ko crawl karwata hai.
+            {
+              href: "/lab-test/mau",
+              label: "Mau me lab test",
+              sub: "Ghosi, Madhuban aur Doharighat tak ghar se sample",
+            },
           ],
         },
         {
@@ -1426,16 +1137,368 @@ const LAB_CITY_SEED = [
             },
           ],
         },
+      ],
+    },
+  },
+
+  {
+    /* ── Mau ───────────────────────────────────────────────────────────────
+       Azamgarh se kata hua jila, aur jila mukhyalaya ka asli naam Maunath
+       Bhanjan hai — yaani ek hi jagah ke do naam, Varanasi/Banaras wali
+       sthiti. URL sirf ek naam le sakta hai, isliye doosra naam description,
+       h1, keywords, ek H2 aur ek FAQ me rakha gaya hai.
+
+       Is page ki apni do cheezein, jo site par kahin aur nahi hain: powerloom
+       aur karkhane wala kaam (jismein sabse zaroori baat wo hai jo hum NAHI
+       bechte — lambi khaansi ka jawab blood test nahi, balgam ki sarkari muft
+       jaanch hai), aur raat/badalti shift walon ke liye sample ka sahi waqt.
+
+       Cannibalisation ka khatra nahi hai: Mau kisi doosre lab page ke `areas`
+       me naam se nahi hai, aur neeche ke kasbe iske apne hain — inme se koi
+       Azamgarh, Ballia ya Deoria ne claim nahi kiya. Azamgarh ka page Mau ko
+       naam se leta hai, isliye dono taraf link hai. Kaunse arguments jaan
+       boojh kar doosre pages ke liye chhode gaye, wo
+       src/data/lab/content/mau.js ke header me likha hai. */
+    slug: "mau",
+    name: "Mau",
+    state: "Uttar Pradesh",
+
+    /* City mohalle first, then the block towns collection actually reaches.
+       These are not decorative: they render in the footer, fill the booking
+       form's dropdown, become `areaServed` in the schema, and are what a
+       "<kasba> me blood test" search matches on. Kept to twelve — the fuller
+       list, including Ranipur, Walidpur, Ratanpura, Pardaha, Amila, Adari,
+       Khurhat, Sarai Lakhansi aur Baraipar, is in the page copy, because a
+       twenty-item dropdown is unusable on a phone. An areaServed we cannot
+       serve is a lie in schema form; do not pad this list. */
+    areas: [
+      "Mau Sadar",
+      "Sahadatpura",
+      "Mirzahadipura",
+      "Alinagar",
+      "Purani Bazar",
+      "Station Road",
+      "Ghosi",
+      "Madhuban",
+      "Muhammadabad Gohna",
+      "Kopaganj",
+      "Doharighat",
+      "Chiraiyakot",
+    ],
+
+    // Maunath Bhanjan (Mau city) PIN. Schema only. Worth re-checking against a
+    // delivery slip before any paid push — it is the one field here nobody on
+    // the page ever reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "275101",
+
+    /* Mau town centre, and approximate on purpose — same rule as the other
+       cities: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 25.9417, lng: 83.5611 },
+
+    updated: "2026-08-24",
+    order: 7,
+    published: true,
+
+    /* No `aliases` entry, and none in CITY_ALIASES either — deliberately.
+       "Maunath Bhanjan" IS a genuine second name for this town (the Varanasi →
+       Banaras case, not a misspelling), but `aliases` only feeds
+       defaultKeywords() and defaultFaqs(), and this city overrides both, so
+       wiring it up would be config that changes nothing. The alternate name is
+       carried where it actually works instead: the description below, the h1,
+       the keywords, an H2 in the copy, the lead paragraph, and an FAQ of its
+       own in content/mau.js. */
+
+    // 36 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 51 — comfortably inside the ~60 it
+    // will show. "Maunath Bhanjan" is deliberately NOT in the title: it would
+    // push the line to the truncation edge and cost the "blood test" half,
+    // which is the bigger query. It sits in the description instead.
+    title: "Lab Test in Mau — Blood Test at Home",
+
+    // ~154 characters, so it renders whole on desktop and mobile. Leads with
+    // BOTH names because a large share of this district types the official one,
+    // then names the block towns that are furthest from the city — which is
+    // what distinguishes this result when more than one of our pages shows for
+    // a regional query.
+    description:
+      "Maunath Bhanjan (Mau) me lab test ghar baithe — Ghosi, Madhuban aur Doharighat tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: the official name,
+    // "blood test", "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Mau (Maunath Bhanjan) — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Mau" nine times plus one line per area and miss the four
+       things this district's traffic actually is: the official name, which a
+       lot of people type and the URL cannot carry; test-wise long tail, which
+       converts because the searcher has already decided; the block-town
+       modifiers, because a reader in Ghosi or Doharighat rarely types "Mau";
+       and Devanagari, which is how a large share of this district types.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      "Lab Test at Home in Mau",
+      "Blood Test at Home in Mau",
+      "Home Sample Collection in Mau",
+      "Blood Test in Mau",
+      "Diagnostic Lab in Mau",
+      "Pathology Lab in Mau",
+      "Full Body Checkup in Mau",
+      "Full Body Checkup at Home in Mau",
+      "Home Collection Lab in Mau",
+      "Lab Test Near Me in Mau"
+    ],
+
+    content: mauContent,
+    faqs: mauFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the places this
+       district actually travels to for treatment — Azamgarh (the parent
+       district and mandal mukhyalaya), Varanasi and Gorakhpur — are named
+       first, with Ballia added because it is the one neighbour this page does
+       NOT link to from its prose. Azamgarh links back (see its block above).
+
+       Every href is checked against a real route: the cities in the seed above
+       and the guides in src/data/blogs/varanasi/. */
+    relatedLinks: {
+      heading: "Mau Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
         {
-          title: "Madad",
+          title: "Aas-paas Ke Sheher",
           links: [
             {
-              href: "/",
-              label: "Sabhi test aur rate list",
-              sub: "Har jagah wahi rate — ek jagah",
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mandal mukhyalaya — wahan bhi ghar se sample",
             },
-            { href: "/contact", label: "Contact — number aur booking help" },
-            { href: "/about", label: "MedicoBharat ke baare me" },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye jaana ho to",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Wahan OPD dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/ballia",
+              label: "Ballia me lab test",
+              sub: "Padosi jila — wahan bhi wahi rate, wahi service",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    /* ── Kushinagar ────────────────────────────────────────────────────────
+       The only district here whose headquarters is NOT the town the district
+       is named after. Padrauna is the administrative centre — hospital, courts,
+       market, and most of the population that books a checkup. Kushinagar
+       (Kasia) is the Buddhist pilgrimage town about 15 km away.
+
+       That splits the search demand cleanly in two: the district name is what
+       everyone outside types, "Padrauna" is what the people who live at the
+       headquarters type. Both names therefore run through the description, the
+       h1, the keywords and the copy — see the note at the top of
+       content/kushinagar.js. Mau does the same for "Maunath Bhanjan", but there
+       the two names are one town; here they are two, which is why the copy says
+       so in plain words rather than treating them as synonyms.
+
+       It also completes the belt: Gorakhpur, Deoria and Kushinagar are the
+       three districts that share the AES/JE season and the same referral road
+       to BRD. All three now link to each other. */
+    slug: "kushinagar",
+    name: "Kushinagar",
+    state: "Uttar Pradesh",
+
+    /* Headquarters first, then the pilgrimage town, then the block towns
+       collection actually reaches. These are not decorative: they render in the
+       footer, fill the booking form's dropdown, become `areaServed` in the
+       schema, and are what a "<kasba> me blood test" search matches on. Kept to
+       twelve — Dudahi, Sukrauli, Motichak and the smaller villages are named in
+       the page copy instead, because a twenty-item dropdown is unusable on a
+       phone. An areaServed we cannot serve is a lie in schema form; do not pad
+       this list. */
+    areas: [
+      "Padrauna",
+      "Kasia",
+      "Hata",
+      "Ramkola",
+      "Tamkuhi Raj",
+      "Khadda",
+      "Captainganj",
+      "Sewrahi",
+      "Fazilnagar",
+      "Nebua Naurangia",
+      "Vishunpura",
+      "Dudahi",
+    ],
+
+    // Padrauna PIN — the headquarters, not the pilgrimage town (Kasia is
+    // 274403). Schema only. Worth re-checking against a delivery slip before
+    // any paid push: it is the one field here nobody on the page ever reads, so
+    // a wrong value would sit in the markup unnoticed.
+    postalCode: "274304",
+
+    /* Padrauna town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. Deliberately Padrauna and not Kasia: the geo point
+       should sit where the demand and the population are. */
+    geo: { lat: 26.9008, lng: 83.98 },
+
+    updated: "2026-08-27",
+    order: 8,
+    published: true,
+
+    /* No `aliases` entry, and none in CITY_ALIASES either. "Padrauna" is NOT an
+       alternate name for Kushinagar — it is a different town in the same
+       district — so putting it in `aliases` would be wrong on the facts, and
+       `aliases` only feeds defaultKeywords() and defaultFaqs(), both of which
+       this city overrides anyway. The name is carried where it actually works:
+       the description, the h1, the keywords, two H2s and three FAQs. */
+
+    // 43 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 58 — just inside the ~60 it shows.
+    // "Padrauna" is deliberately NOT in the title: it would push the line past
+    // truncation and cost the "blood test" half, which is the bigger query. It
+    // leads the description instead, where there is room for it.
+    title: "Lab Test in Kushinagar — Blood Test at Home",
+
+    // ~158 characters, so it renders whole on desktop and mobile. Padrauna
+    // first, because that is where the readers are, then the block towns that
+    // are furthest from the headquarters — which is what distinguishes this
+    // result when more than one of our pages shows for a regional query.
+    description:
+      "Padrauna aur Kushinagar me lab test ghar baithe — Hata, Ramkola, Khadda aur Tamkuhi Raj tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+
+    // The h1 is screen-reader only (the hero is image + form), so it costs a
+    // reader nothing and carries the terms the URL cannot: the headquarters'
+    // name, "blood test", "pathology lab" and "full body checkup".
+    hero: {
+      h1: "Lab Test in Kushinagar Aur Padrauna — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Kushinagar" nine times plus one line per area and miss the
+       three things this district's traffic actually is: Padrauna, which the URL
+       cannot carry and which half the district types; the block-town modifiers,
+       because a reader in Khadda or Tamkuhi Raj rarely types the district name;
+       and the district's own seasonal demand.
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      "Lab Test in Kushinagar",
+      "Blood Test in Kushinagar",
+      "Lab Test in Padrauna",
+      "Blood Test in Padrauna",
+      "Home Sample Collection in Kushinagar",
+      "Pathology Lab in Kushinagar",
+      "Diagnostic Centre in Kushinagar",
+      "Full Body Checkup in Kushinagar",
+      "Dengue Test in Kushinagar",
+      "Lab Test Near Me in Kushinagar"
+    ],
+
+    content: kushinagarContent,
+    faqs: kushinagarFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the two
+       districts this one actually travels to — Gorakhpur for specialists and
+       Deoria for everything to the south — are named first, and both of them
+       link back (see their blocks above). Varanasi is there for imaging and
+       referrals that go past Gorakhpur.
+
+       Every href is checked against a real route: the cities in this seed and
+       the guides in src/data/blogs/. */
+    relatedLinks: {
+      heading: "Kushinagar Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Specialist aur BRD — wahan dikhana ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Jile ke dakshin se laga padosi zila",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya specialist ke liye aage jaana ho to",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — is belt ke liye guide",
+              sub: "Package, bukhar ka din, Gorakhpur se pehle ki taiyaari",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
           ],
         },
       ],

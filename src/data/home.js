@@ -57,7 +57,7 @@ import { LAB_PHONE } from "@/data/lab/defaults";
    title absolutely (see the home page's generateMetadata), so the root
    layout's " | MedicoBharat" suffix is NOT appended on top of it. */
 export const HOME_META = {
-  title: "Lab Test at Home — Free Sample Collection | MedicoBharat",
+  title: "Lab Test at Home in Varanasi, Gorakhpur & UP | MedicoBharat",
 
   // ~155 characters, so it survives on desktop and mobile alike. Hinglish on
   // purpose: the whole site is Hinglish, this audience searches in Hinglish,
@@ -65,7 +65,7 @@ export const HOME_META = {
   // terms that have to match a query ("lab test", "blood test", "full body
   // checkup", "home sample collection") are all still in it.
   description:
-    "Ghar baithe lab test aur full body checkup book karein — CBC, thyroid, sugar aur vitamin test. Free home sample collection, report 24 ghante me WhatsApp par.",
+    "Book Lab Test & Full Body Checkup at home in Varanasi, Gorakhpur, Deoria, Azamgarh & Salempur. Free sample collection & fast reports by MedicoBharat.",
 
   /* `keywords` is a weak-to-zero ranking signal on its own. The reason to keep
      it honest and specific is that it is the checklist the headings, FAQs and
@@ -86,11 +86,13 @@ export const HOME_META = {
     "blood test at home",
     "blood test near me",
     "home sample collection",
+    "free home sample collection",
     "online lab test booking",
     "pathology lab near me",
     "diagnostic centre near me",
     "full body checkup at home",
     "full body checkup near me",
+    "preventive health checkup",
 
     // Test-wise — the highest-intent queries this page answers
     "CBC test price",
@@ -223,33 +225,50 @@ export const HOME_STEPS = {
    transport, pathologist verification or accreditation — see the warning above
    defaultHowTo in src/data/lab/defaults.js. */
 export const HOME_HOW_TO = {
-  heading: "How to book a lab test with MedicoBharat",
+  /* ── SEO NOTE ON THE WORDING ────────────────────────────────────────────
+     The heading carries the page's primary phrase — "lab test at home" — and
+     the step titles carry the secondary ones a booking searcher actually
+     types: home sample collection, pathology lab, report on WhatsApp — plus
+     "full body checkup" in step one's body, next to the price list it is
+     picked from. Each appears ONCE, in the position where it is also
+     the plainest description of what the step is. That is the whole trick and
+     the limit: the moment a phrase is repeated in a step's body because it is
+     a keyword rather than because the sentence needs it, this block stops
+     being a procedure and starts being a keyword list, and Google reads the
+     difference. If you add a term here, take one out.
+
+     Do NOT hardcode a city list into `intro`. Seven cities are published today
+     (src/data/lab/cities.js) and the day an eighth ships this line goes stale
+     silently. The city keywords live where they can be built from the live
+     list — the footer column, HOME_CONTENT's "Hum Kin Sheher Me" section, and
+     the city pages' own titles. */
+  heading: "How to book a lab test at home with MedicoBharat",
   intro:
-    "Five steps from booking to report — and the same timings we state on every page, in every city we serve.",
+    "Five steps from the booking form to the report — free home sample collection, a trained phlebotomist, and the same timings we state on every page, in every city we serve.",
   steps: [
     {
       icon: "clipboard-list",
-      title: "Booking Made Easy",
-      text: "Pick a test or package from the list above and fill the form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
+      title: "Book Your Lab Test",
+      text: "Pick a test or a full body checkup from the price list above and fill the booking form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
     },
     {
       icon: "headset",
-      title: "Guidance",
+      title: "Confirmation Call",
       text: "We call you back in about 30 minutes to confirm the slot and address, and to tell you whether the test needs fasting.",
     },
     {
       icon: "test-tube",
-      title: "Sample Collection",
-      text: "A trained phlebotomist reaches your address with an ID card and draws the sample in front of you. About 10 minutes, and collection is free.",
+      title: "Home Sample Collection",
+      text: "A trained phlebotomist reaches your address with an ID card and draws the blood sample in front of you. About 10 minutes, and home collection is free.",
     },
     {
       icon: "microscope",
-      title: "Lab Processing",
-      text: "The sample goes to the lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
+      title: "Pathology Lab Testing",
+      text: "The sample goes to the pathology lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
     },
     {
       icon: "file-heart",
-      title: "Report and Support",
+      title: "Report on WhatsApp",
       text: "The PDF report comes on WhatsApp and email, so you can show your doctor right away. Anything unclear in it — call us and we will explain.",
     },
   ],
@@ -324,36 +343,36 @@ export const HOME_GUIDES = {
    background is a question a snippet cannot be lifted from. */
 export const HOME_FAQS = [
   {
-    q: "MedicoBharat kya hai?",
-    a: `MedicoBharat ek lab test service hai jo aapke ghar se blood aur urine sample collect karti hai — ${coverageHi()} jile me. Aap CBC, thyroid, sugar, vitamin, liver, kidney aur full body checkup jaise test book kar sakte hain. Home sample collection free hai, aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Booking ${LAB_PHONE} par call kar ke bhi ho jaati hai.`,
+    q: "MedicoBharat kya hai aur Purvanchal ke kin kin sheheron me lab test ki suvidha hai?",
+    a: `MedicoBharat ek trusted online diagnostic platform hai jo ghar baithe free home sample collection ki suvidha deta hai. Hum ${coverageHi()} jile me blood test aur full body health checkup ki services provide karte hain. Aap CBC test, Thyroid profile, Diabetes (HbA1c), Lipid profile, Vitamin D/B12 aur Liver-Kidney function test book kar sakte hain. Accurate PDF report 24 ghante me WhatsApp aur email par mil jaati hai. Direct booking ke liye ${LAB_PHONE} par call karein.`,
   },
   {
-    q: "Kya ghar par blood test karana sach me free hota hai?",
-    a: "Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai. Na visiting charge, na convenience fee, na koi hidden amount. Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se.",
+    q: "Kya ghar par blood test sample collection sach me free hai?",
+    a: "Haan, MedicoBharat par home sample collection 100% free hai. Aapko sirf lab test ya health checkup package ka exact price dena hota hai. Koi extra visiting charge, hidden fee ya convenience charge nahi liya jata. Payment sample collection ke waqt cash ya UPI (Google Pay, PhonePe, Paytm) se kar sakte hain.",
   },
   {
-    q: "Lab test book karne ke liye doctor ka parcha zaroori hai kya?",
-    a: "Zyadatar routine test aur health package bina prescription ke book ho jaate hain — CBC, thyroid profile, sugar, lipid, vitamin D, vitamin B12 aur full body checkup. Kuch specialised test niyam ke hisaab se parcha maangte hain. Doctor ne kuch likha hai to uska photo booking ke waqt saath rakhiye, taaki bilkul wahi panel liya jaaye jo unhone likha tha.",
+    q: "Lab test online book karne ke liye doctor ka parcha (prescription) zaroori hai?",
+    a: "Nahi, routine lab tests aur preventive health checkup packages ke liye doctor ka parcha zaroori nahi hai — jaise CBC test, Thyroid profile, Fasting Blood Sugar, Lipid profile, Vitamin test aur Full Body Checkup. Lekin agar doctor ne koi specific pathology test likha hai, toh booking ke waqt uski photo zaroor share karein taaki exact test perform kiya ja sake.",
   },
   {
-    q: "Kaun se test me fasting (khaali pet) zaroori hai?",
-    a: "Fasting Blood Sugar, Lipid Profile, insulin aur zyadatar Full Body Checkup package me 10 se 12 ghante ki fasting chahiye; saada paani peena allowed hai aur zaroori bhi. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 aur Dengue test me koi fasting nahi chahiye. Isi wajah se home visit slot subah 6 baje se shuru hote hain — sample dijiye aur turant naashta kar lijiye.",
+    q: "Kaun se blood test ke liye fasting (khaali pet) zaroori hoti hai?",
+    a: "Fasting Blood Sugar, Lipid Profile (Cholesterol), Insulin aur zyadatar Full Body Health Checkup packages ke liye 10 se 12 ghante ki fasting (khaali pet rehna) zaroori hai. Saada paani peena allowed hai. Jabki CBC, Thyroid Profile, HbA1c, Vitamin D, B12 aur Dengue test ke liye fasting ki zaroorat nahi hoti. Hamare trained phlebotomists subah 6 baje se home collection ke liye available rehte hain.",
   },
   {
-    q: "Report kitni der me milti hai aur kahan aati hai?",
-    a: "Zyadatar report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp aur email dono par PDF ke roop me bhej di jaati hai — report lene dobara jaane ki zaroorat nahi. Culture jaise kuch test 48 se 72 ghante lete hain, kyunki unme pehle organism ko ugana padta hai. Sahi time hum booking ke waqt hi bata dete hain.",
+    q: "Blood test report kitni der me aur kahan milti hai?",
+    a: "Zyadatar routine pathology test reports 24 ghante ke andar ready ho jaati hain. Final verified report PDF format me direct aapke WhatsApp number aur Email ID par bhej di jaati hai. Specialty tests ya Blood Culture me 48 se 72 ghante lag sakte hain, jiski jankari booking ke waqt hi de di jaati hai.",
   },
   {
-    q: "Ghar par sample lene kaun aata hai?",
-    a: "Ek trained phlebotomist aata hai jiske paas ID card hota hai — sample dene se pehle aap wo dekh sakte hain, aur dekhna chahiye. Sample aapke saamne liya jaata hai aur poori visit lagbhag 10 minute ki hoti hai. Ghar me bujurg hain, koi bistar par hai, diabetic hain jinki nas patli ho gayi hai, ya operation ke baad recovery chal rahi hai — ye booking ke waqt bata dijiye.",
+    q: "Ghar par blood sample lene ke liye kaun aata hai?",
+    a: "MedicoBharat ke certified aur highly trained phlebotomist aapke ghar aate hain. Unke paas official ID card hota hai aur poori visit 10 minute me complete ho jaati hai. Bujurgon, bedridden patients aur diabetic logon ke liye painless sample collection ki vishesh suvidha di jaati hai.",
   },
   {
-    q: "Ek hi visit me ghar ke kai logon ka test ho sakta hai?",
-    a: "Haan. Sabki booking ek hi slot me kar dijiye — phlebotomist ek hi visit me sabka sample le lega, aur har vyakti ki report alag aayegi. Ye sabse aasan tareeka hai jab poore parivaar ka saal-bhar ka checkup ek saath karana ho.",
+    q: "Kya ek hi slot me ghar ke sabhi sadasyon ka lab test book ho sakta hai?",
+    a: "Haan, aap ek hi booking slot me poore parivaar ke liye lab test ya health checkup book kar sakte hain. Certified phlebotomist ek hi visit me sabhi ke samples collect kar lenge, aur har member ki individual report alag-alag WhatsApp/Email par bheji jayegi.",
   },
   {
-    q: "Kya main apne sheher se bahar ke liye bhi book kar sakta hoon?",
-    a: `Booking form me apna sheher chuniye; jo ilaake hum cover karte hain wo har sheher ke page par likhe hain. Aapka pata list me naam se nahi hai to ${LAB_PHONE} par ek call kar lijiye — cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge. Hum wahi jagah promise karte hain jahan sach me pahunch sakte hain.`,
+    q: "Kya main Varanasi, Gorakhpur, Deoria, Azamgarh aur Salempur me kisi bhi location se book kar sakta hoon?",
+    a: `Haan, aap website par apna city aur pincode chunge. Agar aapka area list me nahi mil raha, toh direct ${LAB_PHONE} par call karke apna location confirm kar sakte hain. Hamari team turant aapke location ke liye home sample collection slot schedule kar degi.`,
   },
 ];
 

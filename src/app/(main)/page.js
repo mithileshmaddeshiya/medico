@@ -8,8 +8,10 @@ import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
+import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
+import WelcomePopup from "@/components/lab/WelcomePopup";
 import { getLatestBlogs } from "@/data/blogs";
 import {
   HOME_CALL_BANNER,
@@ -335,6 +337,12 @@ export default async function HomePage() {
         }}
       />
 
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. It carries the same form as the hero and
+          posts through the same /api/lab-lead → Firestore → WhatsApp path, so
+          a popup lead lands exactly where a hero booking does. */}
+      <WelcomePopup cityOptions={cityOptions} />
+
       <HomeHero hero={HOME_HERO} cityOptions={cityOptions} />
 
       <LabTrustStrip promises={defaultTrustStrip()} />
@@ -383,6 +391,11 @@ export default async function HomePage() {
         sections={HOME_CONTENT}
         related={homeRelatedLinks(cities, guides)}
       />
+
+      {/* The collapsed index that closes the page: every city we serve, every
+          locality, and the site's own pages. Native <details>, so it costs no
+          client JS and needs no Google-Translate guard — see the component. */}
+      <LabQuickLinks cities={cities} />
 
       {/* Floats over everything, bottom-right, dismissible — the shortcut for a
           reader who decides mid-scroll. Same number the strips above dial. */}

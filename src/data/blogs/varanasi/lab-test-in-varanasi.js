@@ -126,51 +126,28 @@ export const labTestVaranasi = {
      visible copy; a keyword that lives ONLY in this array is the kind that
      gets a page filtered rather than ranked. */
   keywords: [
-    // Primary — informational intent, which is what an article can win
-    "Varanasi me lab test",
-    "lab test in Varanasi",
-    "blood test in Varanasi",
-    "Varanasi me blood test kaha karayein",
-    "kaun sa blood test kab karayein",
-    "blood test kab karana chahiye",
-
-    // The questions this guide is actually built to answer. The full-body-
-    // checkup terms that used to sit here now belong to
-    // ./full-body-checkup-in-varanasi.js — one page per intent, or the two
-    // compete and Google picks one.
-    "blood test se pehle kya nahi khana chahiye",
-    "fasting blood test kitne ghante",
-    "blood test report kaise padhein",
-    "normal range blood test",
-    "dengue test kab karayein",
-    "NS1 test kab karana chahiye",
-    "widal test kab karayein",
-    "typhoid test in Varanasi",
-    "HbA1c test kitne mahine me",
-    "thyroid test kab karayein",
-    "vitamin D test in Varanasi",
-    "vitamin B12 test kab karayein",
-    "CBC test kab karayein",
-    "kidney function test kab karayein",
-
-    // Local + service, kept few — the service page owns these
-    "home sample collection Varanasi",
-    "lab test at home Varanasi",
-    "pathology lab in Varanasi",
-    "diagnostic centre in Varanasi",
-    "blood test home collection Varanasi",
-
-    // Devanagari — same intents, the script a large share of Purvanchal types
-    "वाराणसी में लैब टेस्ट",
-    "वाराणसी में खून की जांच",
-    "कौन सा टेस्ट कब कराएं",
-    "फुल बॉडी चेकअप वाराणसी",
-    "घर से सैंपल कलेक्शन वाराणसी",
-
-    // Location-free — Google supplies the city from the searcher's position
-    "lab test near me",
-    "blood test near me",
-    "MedicoBharat Varanasi",
+    // Primary
+    "Lab Test at Home in Varanasi",
+    "Blood Test at Home in Varanasi",
+    "Home Sample Collection in Varanasi",
+    "Blood Test in Varanasi",
+    "Diagnostic Lab in Varanasi",
+    "Pathology Lab in Varanasi",
+    "Full Body Checkup in Varanasi",
+    "Full Body Checkup at Home in Varanasi",
+    "Home Collection Lab in Varanasi",
+    "Lab Test Near Me in Varanasi",
+    // Supporting / Informational
+    "How to Book Lab Test at Home in Varanasi",
+    "Home Blood Sample Collection in Varanasi",
+    "Online Lab Test Booking in Varanasi",
+    "Diagnostic Test at Home in Varanasi",
+    "Health Checkup at Home in Varanasi",
+    "Blood Test Price in Varanasi",
+    "Full Body Checkup Price in Varanasi",
+    "Blood Test Home Collection Varanasi",
+    "Pathology Test at Home in Varanasi",
+    "Affordable Lab Test in Varanasi"
   ],
 
   canonical: canonicalFor("lab-test", "varanasi"),

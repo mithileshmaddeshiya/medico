@@ -7,8 +7,10 @@ import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHero from "@/components/lab/LabHero";
 import LabHowTo from "@/components/lab/LabHowTo";
+import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
+import WelcomePopup from "@/components/lab/WelcomePopup";
 import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import {
@@ -358,6 +360,11 @@ export default async function LabCityPage({ params }) {
   // visitor from a neighbouring town.
   const cityOptions = await getLabCityOptions(cityData.slug);
 
+  // The full published list, for the Quick Links index at the bottom of the
+  // page. Read here rather than threaded down from the layout: the layout feeds
+  // the footer, and a page that renders its own index should not depend on it.
+  const cities = await getLabCities();
+
   const cityName = cityData.name;
   const phone = cityData.footer.phone ?? LAB_PHONE;
 
@@ -378,6 +385,15 @@ export default async function LabCityPage({ params }) {
             )
           ),
         }}
+      />
+
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. Same form as the hero, same /api/lab-lead →
+          Firestore → WhatsApp path, and the same city dropdown this page's own
+          form uses, so a popup lead already carries the right locality. */}
+      <WelcomePopup
+        cityOptions={cityOptions}
+        title={`Book Lab Test in ${cityData.name}`}
       />
 
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
@@ -435,6 +451,11 @@ export default async function LabCityPage({ params }) {
         sections={cityData.content}
         related={cityData.relatedLinks}
       />
+
+      {/* The collapsed index that closes the page: every city we serve, every
+          locality, and the site's own pages. Native <details>, so it costs no
+          client JS and needs no Google-Translate guard — see the component. */}
+      <LabQuickLinks cities={cities} currentSlug={cityData.slug} />
 
       {/* Floats over everything, bottom-right, dismissible. `phone` is this
           city's number, so it can never dial a different one than the page. */}
