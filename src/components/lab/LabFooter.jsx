@@ -187,9 +187,32 @@ export default function LabFooter({ city = null, labCities = [] }) {
               <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
                 {city ? "Other Cities" : "Cities We Serve"}
               </h3>
-              <ul className="space-y-1 text-[12.5px] text-slate-600">
+              {/* Two columns, and it is the city count that put them there. At
+                  six cities this was a tidy single column; at ten it ran far
+                  past the Quick Links and contact blocks beside it and left the
+                  rest of the footer as empty space — the same failure the
+                  locality paragraph caused before it was moved out.
+
+                  `columns-2` rather than a grid: the browser balances the two
+                  halves itself, so nothing here has to be recalculated the next
+                  time a city is added. `gap-x-4` keeps the two lists from
+                  reading as one wrapped column.
+
+                  It stays a single <ul>. Splitting the list in two to lay it
+                  out in two would tell a screen reader there are two lists of
+                  cities when there is one; `columns` is presentation only, and
+                  the reading order is unchanged.
+
+                  Held back below 380px. On a phone this block is already one
+                  half of a two-column footer grid, so on a 320px screen each
+                  sub-column would be about 68px — narrower than the word
+                  "Kushinagar". One column is the right answer at that width. */}
+              <ul className="min-[380px]:columns-2 gap-x-4 space-y-1 text-[12.5px] text-slate-600">
                 {otherCities.map((c) => (
-                  <li key={c.slug}>
+                  // `break-inside-avoid` so a link is never split across the
+                  // column boundary — a city name broken in half mid-word is
+                  // the one way this layout can look broken rather than tight.
+                  <li key={c.slug} className="break-inside-avoid">
                     <Link
                       href={`/lab-test/${c.slug}`}
                       className="hover:text-emerald-700 transition-colors"
