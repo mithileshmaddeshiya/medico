@@ -72,10 +72,12 @@
 import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { balliaContent, balliaFaqs } from "./content/ballia";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
+import { ghazipurContent, ghazipurFaqs } from "./content/ghazipur";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { mauContent, mauFaqs } from "./content/mau";
 import { salempurContent, salempurFaqs } from "./content/salempur";
+import { siwanContent, siwanFaqs } from "./content/siwan";
 import { varanasiContent } from "./content/varanasi";
 import {
   CITY_ALIASES,
@@ -1498,6 +1500,407 @@ const LAB_CITY_SEED = [
             {
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── SIWAN — THE FIRST BIHAR DISTRICT ON THIS SITE ───────────────────
+       Every other city here is Uttar Pradesh, and that is not a cosmetic
+       difference. `state` feeds the footer address line and `addressRegion` in
+       the LocalBusiness schema, so this entry is the first one that makes the
+       markup say Bihar — check it renders as Bihar and not the DEFAULT_STATE
+       fallback before any paid push.
+
+       It also breaks the referral pattern every other page here argues from.
+       Deoria, Kushinagar and Salempur all say "the specialists are in
+       Gorakhpur, skip the journey". Siwan is pulled three ways at once —
+       Chhapra (~60 km) for the divisional hospital, Patna (~135 km) for PMCH
+       and IGIMS, and Gorakhpur (~110 km) across the border, which is nearer
+       than its own state capital. The copy names all three; see
+       content/siwan.js. */
+    slug: "siwan",
+    name: "Siwan",
+    state: "Bihar",
+
+    /* ⚠ VERIFY THIS LIST AGAINST THE ROUTE BEFORE PUSHING TRAFFIC AT IT.
+       These are the district headquarters and the block towns along the main
+       roads — the ones a collection round can plausibly reach. They are not
+       decorative: they render in the footer, fill the booking form's dropdown,
+       become `areaServed` in the schema, and are what a "<kasba> me blood
+       test" search matches on. An areaServed we cannot serve is a lie in
+       schema form, so trim anything the round does not actually cover rather
+       than leaving it in to catch a query.
+
+       Kept to twelve. Hussainganj, Nautan, Lakri Nabiganj, Siswan and
+       Bhagwanpur Hat are named in the page copy instead — a twenty-item
+       dropdown is unusable on a phone. */
+    areas: [
+      "Siwan Sadar",
+      "Maharajganj",
+      "Mairwa",
+      "Barharia",
+      "Andar",
+      "Basantpur",
+      "Darauli",
+      "Guthani",
+      "Raghunathpur",
+      "Pachrukhi",
+      "Hasanpura",
+      "Goriakothi",
+    ],
+
+    // Siwan town PIN. Schema only — nobody on the page ever reads this field,
+    // so a wrong value would sit in the markup unnoticed. Worth checking
+    // against a delivery slip.
+    postalCode: "841226",
+
+    /* Siwan town centre, and approximate on purpose — same rule as every other
+       city: there is no walk-in counter here, this is a home-collection service
+       area, and a precise street pin in the schema would be a claim we cannot
+       keep. Google reads `geo` on a service-area business as "roughly here",
+       which is true. */
+    geo: { lat: 26.2214, lng: 84.3597 },
+
+    updated: "2026-08-29",
+    order: 9,
+    published: true,
+
+    /* No CITY_ALIASES entry. "Sivan" and "Siwaan" are misspellings of the same
+       name, not a different name the town is known by — and the rule set with
+       Deoria stands: an alias is worth adding only for a genuinely different
+       name (Varanasi → Banaras). Putting a wrong spelling in the metadata
+       publishes it in our own name. */
+
+    // 37 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 52 — inside the ~60 it will
+    // show. Primary keyword first, then the second-biggest query on this page;
+    // both survive truncation.
+    title: "Lab Test in Siwan — Blood Test at Home",
+
+    // ~152 characters, so it renders whole on desktop and mobile. Hinglish
+    // deliberately: the page is Hinglish and so is the searcher here, and a
+    // snippet in the reader's own register wins the click. The English terms
+    // that must match ("lab test", "blood test", "full body checkup") are all
+    // still in it. Bihar is named because this is the site's only Bihar page
+    // and "Siwan" alone is ambiguous to anyone outside the belt.
+    description:
+      "Siwan (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+
+    /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
+       stopped being sr-only. The h1 opens with the phrase people actually type
+       and stops; the secondary terms live in h1Sub, inside a real sentence,
+       where they are worth more than they would be crammed into a heading. */
+    hero: {
+      h1: "Lab Test in Siwan — Blood Test Ghar Baithe",
+      h1Sub:
+        "Pathology lab ke saare test aur full body checkup — Siwan me free home sample collection, report 24 ghante me WhatsApp par.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which would only
+       produce "<template> in Siwan" nine times plus one line per area. That
+       misses what Siwan traffic actually is: test-wise long-tail, which
+       converts because the searcher has already decided, and the district's
+       own two intents — the Gulf-bound worker and the Chhapra/Patna traveller.
+
+       Ordered strongest first. `keywords` is a weak-to-zero ranking signal on
+       its own; the reason to keep it honest is that it is the checklist the
+       headings, FAQs and prose are written against. Every term below appears
+       in the visible copy. A keyword that appears ONLY here is the kind that
+       gets a page filtered, not ranked — which is also why there is no
+       "GAMCA" or "Wafid" term in this list: the page says plainly that we do
+       not do that medical, so ranking for it would be a bait. */
+    keywords: [
+      "Lab Test at Home in Siwan",
+      "Blood Test at Home in Siwan",
+      "Home Sample Collection in Siwan",
+      "Blood Test in Siwan",
+      "Lab Test in Siwan Bihar",
+      "Diagnostic Lab in Siwan",
+      "Pathology Lab in Siwan",
+      "Full Body Checkup in Siwan",
+      "Full Body Checkup at Home in Siwan",
+      "CBC Test Price in Siwan",
+      "Thyroid Test in Siwan",
+      "Sugar Test at Home in Siwan",
+      "Dengue Test in Siwan",
+      "Home Collection Lab in Siwan",
+      "Lab Test Near Me in Siwan",
+      "सीवान में लैब टेस्ट",
+      "सीवान में ब्लड टेस्ट घर पर",
+      "सीवान में फुल बॉडी चेकअप",
+    ],
+
+    content: siwanContent,
+    faqs: siwanFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. The other cities are in
+       the footer too, but a footer is byte-identical on every lab page and gets
+       discounted as boilerplate; these anchors are descriptive and per-city.
+
+       Siwan has no guide of its own yet, so the "test chunne me madad" group
+       points at the Deoria and Varanasi guides — the questions they answer
+       (which test on which day, how to read a report, what belongs in a
+       package) are district-neutral. If a Siwan guide is ever written, it goes
+       first in that group, the way Deoria's does on its own page.
+
+       Every href here is checked against a real route: the guides live in
+       src/data/blogs/ and the cities in the seed above. */
+    relatedLinks: {
+      heading: "Siwan Ke Liye Aage Ki Jaankari",
+      intro:
+        "Kaun sa test kab karana chahiye, report ke numbers ka matlab, aur seemaa ke us paar ke jile — sab ek jagah.",
+      groups: [
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Package, bukhar ka din, bade sheher jaane se pehle ki taiyaari",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Aas-Paas Ke Jile",
+          links: [
+            // Seema ke us paar ka sabse nazdeek page, isliye pehle. Siwan ka
+            // paschimi hissa Bhatni-Salempur ki taraf khulta hai.
+            {
+              href: "/lab-test/salempur",
+              label: "Salempur me lab test",
+              sub: "Bhatni aur Lar ki taraf ka seemaa se laga ilaaka",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "UP ki taraf ka zila mukhyalaya, kareeb 60 km",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Specialist ki OPD dikhani ho to report pehle taiyaar",
+            },
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Imaging ya bade sansthan ke liye jaana ho to",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── GHAZIPUR — THE DISTRICT THAT IS TOO CLOSE TO VARANASI ───────────
+       Its page argues the opposite of Deoria's and Siwan's. Those two are far
+       from everything, so their copy says "skip the journey". Ghazipur is
+       about 80 km from Varanasi on a direct road and a direct train, and that
+       closeness is the habit the page addresses: a family will travel for a
+       CBC because going is easier than finding out what is available at home.
+
+       That distinction is not decoration. Four neighbouring districts already
+       have pages here — Ballia, Mau, Azamgarh, Varanasi — and a fifth that
+       repeated any of their arguments would be read as a doorway page and
+       indexed as none of them. See the header of content/ghazipur.js for which
+       argument belongs to which district, and read it before editing this
+       city's copy. */
+    slug: "ghazipur",
+    name: "Ghazipur",
+    state: "Uttar Pradesh",
+
+    /* City localities first, then the tehsil and block towns collection
+       actually reaches. These are not decorative: they render in the footer,
+       fill the booking form's dropdown, become `areaServed` in the schema, and
+       are what a "<kasba> me blood test" search matches on. An areaServed we
+       cannot serve is a lie in schema form — trim anything the round does not
+       cover rather than leaving it in to catch a query.
+
+       Kept to twelve. Bahadurganj, Karanda, Deokali, Mardah, Baraachawar and
+       Manihari are named in the page copy instead: a twenty-item dropdown is
+       unusable on a phone. */
+    areas: [
+      "Ghazipur City",
+      "Lanka",
+      "Mahuabagh",
+      "Nandganj",
+      "Zamania",
+      "Saidpur",
+      "Mohammadabad",
+      "Kasimabad",
+      "Jakhanian",
+      "Dildarnagar",
+      "Gahmar",
+      "Sevrai",
+    ],
+
+    // Ghazipur city PIN. Schema only — nobody on the page ever reads this
+    // field, so a wrong value would sit in the markup unnoticed. Worth
+    // checking against a delivery slip.
+    postalCode: "233001",
+
+    /* Ghazipur town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 25.5788, lng: 83.5776 },
+
+    updated: "2026-08-29",
+    order: 10,
+    published: true,
+
+    /* No CITY_ALIASES entry. "Gazipur" and "Ghazeepur" are misspellings of the
+       same name, not a different name the town is known by — and the rule set
+       with Deoria stands: an alias is worth adding only for a genuinely
+       different name (Varanasi → Banaras). Putting a wrong spelling in the
+       metadata publishes it in our own name. */
+
+    // 40 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 55 — inside the ~60 it will
+    // show. Primary keyword first, then the second-biggest query on this page.
+    title: "Lab Test in Ghazipur — Blood Test at Home",
+
+    // ~151 characters, so it renders whole on desktop and mobile. Hinglish
+    // deliberately: the page is Hinglish and so is the searcher here, and a
+    // snippet in the reader's own register wins the click. The English terms
+    // that must match ("lab test", "blood test", "full body checkup") are all
+    // still in it.
+    description:
+      "Ghazipur me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+
+    /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
+       stopped being sr-only. The h1 opens with the phrase people actually type
+       and stops; the secondary terms live in h1Sub, inside a real sentence,
+       where they are worth more than they would be crammed into a heading. */
+    hero: {
+      h1: "Lab Test in Ghazipur — Blood Test Ghar Baithe",
+      h1Sub:
+        "Pathology lab ke saare test aur full body checkup — Ghazipur me free home sample collection, report 24 ghante me WhatsApp par.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which would only
+       produce "<template> in Ghazipur" nine times plus one line per area.
+       That misses what Ghazipur traffic actually is: test-wise long-tail,
+       which converts because the searcher has already decided, the two biggest
+       block towns as their own terms, and Devanagari, which is how a large
+       share of this district types.
+
+       Ordered strongest first. `keywords` is a weak-to-zero ranking signal on
+       its own; the reason to keep it honest is that it is the checklist the
+       headings, FAQs and prose are written against. Every term below appears
+       in the visible copy. A keyword that appears ONLY here is the kind that
+       gets a page filtered, not ranked — which is also why there is no "army
+       medical" or "bharti medical" term in this list: the page says plainly
+       that we do not do that medical, so ranking for it would be a bait. */
+    keywords: [
+      "Lab Test at Home in Ghazipur",
+      "Blood Test at Home in Ghazipur",
+      "Home Sample Collection in Ghazipur",
+      "Blood Test in Ghazipur",
+      "Diagnostic Lab in Ghazipur",
+      "Pathology Lab in Ghazipur",
+      "Full Body Checkup in Ghazipur",
+      "Full Body Checkup at Home in Ghazipur",
+      "CBC Test Price in Ghazipur",
+      "Thyroid Test in Ghazipur",
+      "Sugar Test at Home in Ghazipur",
+      "Dengue Test in Ghazipur",
+      "Lab Test in Zamania",
+      "Blood Test in Mohammadabad Ghazipur",
+      "Home Collection Lab in Ghazipur",
+      "Lab Test Near Me in Ghazipur",
+      "ग़ाज़ीपुर में लैब टेस्ट",
+      "गाजीपुर में ब्लड टेस्ट घर पर",
+      "गाजीपुर में फुल बॉडी चेकअप",
+    ],
+
+    content: ghazipurContent,
+    faqs: ghazipurFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. The other cities are in
+       the footer too, but a footer is byte-identical on every lab page and gets
+       discounted as boilerplate; these anchors are descriptive and per-city.
+
+       Ghazipur has no guide of its own yet, so the "test chunne me madad"
+       group points at the Varanasi guides — which is the right fallback here
+       rather than Deoria's, because Varanasi is this district's own referral
+       city and the guide is written from there. If a Ghazipur guide is ever
+       written, it goes first in that group.
+
+       Every href here is checked against a real route: the guides live in
+       src/data/blogs/ and the cities in the seed above. */
+    relatedLinks: {
+      heading: "Ghazipur Ke Liye Aage Ki Jaankari",
+      intro:
+        "Kaun sa test kab karana chahiye, report ke numbers ka matlab, aur aas-paas ke jile — sab ek jagah.",
+      groups: [
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Aas-Paas Ke Jile",
+          links: [
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Kareeb 80 km — imaging ya specialist ke liye jaana ho to",
+            },
+            {
+              href: "/lab-test/ballia",
+              label: "Ballia me lab test",
+              sub: "Ganga patti, diara ke gaon aur paani se judi jaanch",
+            },
+            {
+              href: "/lab-test/mau",
+              label: "Mau me lab test",
+              sub: "Ghosi, Madhuban aur Doharighat ki taraf ka padosi zila",
+            },
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mandal mukhyalaya, uttar-paschim ki taraf",
             },
           ],
         },
