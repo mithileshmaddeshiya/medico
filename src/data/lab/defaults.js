@@ -56,36 +56,29 @@ export const defaultHero = (city) => ({
   // aspect-11/6 — replacing this file with a different shape means changing
   // that class too, otherwise the contact bar along the bottom gets cropped.
   //
-  // ── THIS BANNER HAS NO TEXT IN IT, AND THAT IS THE POINT ───────────────
-  // The previous one (herocity.webp) had its headline, a ₹200 price pill and
-  // three icon labels painted into the frame. One file is the hero on TEN city
-  // pages, so that headline was identical on all ten — and hiding each page's
-  // h1 to make room for it left the most prominent element of every city page
-  // unreadable to a crawler, with only a hidden string and an alt carrying the
-  // town's name. Siwan and Ghazipur sat unindexed while that was true.
+  // WebP, not the original PNG: the source was 1.8 MB and this is the LCP
+  // element on six pages, marked `priority`, for an audience on mobile data.
+  // Same pixel dimensions, 128 KB instead of 1829 KB.
   //
-  // This is the same photograph with the left side left empty, which is where
-  // LabHero paints the h1 — so the one genuinely per-city thing above the fold
-  // is now real, visible text.
+  // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
+  // It carries its own headline, a ₹200 price pill and three icon labels, so
+  // LabHero prints no visible heading of its own — two headlines, one in
+  // pixels and one in text, sat on top of each other however they were
+  // arranged. A text-free cut of the same photograph exists at
+  // /navheroimage/herocityempty.webp; switching back to it is what makes a
+  // readable h1 possible again.
   //
-  // KEEP THAT SIDE EMPTY. A re-export that fills it forces the hidden h1 back.
-  //
-  // 1696x927, so LabHero's box is aspect-11/6 — a differently-shaped file
-  // means changing that class too. WebP, not the PNG that was dropped in: this
-  // is the LCP element on ten pages, marked `priority`, for an audience on
-  // mobile data. Same pixel dimensions, 92 KB instead of 1772 KB.
-  //
-  // ⚠ STILL A SHARED ASSET — one photograph across every city page. It no
-  // longer duplicates the h1, which was the worse half of that problem, but a
-  // per-city photograph would still serve ten pages better than one shared one.
-  image: "/navheroimage/herocityempty.webp",
+  // ⚠ AND IT IS A SHARED ASSET. One file across every city page, carrying a
+  // headline that is identical on all of them — so the dominant element of six
+  // pages competing for six different towns is byte-identical. Only the
+  // sr-only h1 and the alt below carry the city name.
+  image: "/navheroimage/herocity.webp",
 
-  // Describes the PHOTOGRAPH, because that is all this file is now. The old
-  // alt transcribed the wording printed on the banner; there is no wording
-  // left to transcribe, and the h1 over it carries the claim in real text.
-  // The city name is still spliced in — this alt and the h1 are the two parts
-  // of the hero that are per-city.
-  imageAlt: `MedicoBharat in ${city} — a phlebotomist drawing a blood sample from a seated patient at a lab reception.`,
+  // The banner has its copy burned into the artwork and a crawler cannot read
+  // pixels, so the alt carries that wording rather than describing the photo.
+  // The city name is spliced in because this alt is the one piece of the hero
+  // that is per-city — the h1 above it is screen-reader only as well.
+  imageAlt: `MedicoBharat Lab Test in ${city} — accurate tests, better health. Blood test, advanced technology, safe aur hygienic, free home sample collection.`,
   formTitle: "Book Your Sample Collection",
 });
 
