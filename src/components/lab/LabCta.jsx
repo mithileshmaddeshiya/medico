@@ -73,6 +73,7 @@ export default function LabCta({ cta, phone }) {
 
               <a
                 href={`tel:${String(phone ?? "").replace(/\s/g, "")}`}
+                title={`Call ${phone} to book a lab test`}
                 aria-label={`Call us at ${phone}`}
                 className="group inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-white px-3 text-[12.5px] min-[380px]:text-[13px] font-bold text-emerald-700 ring-1 ring-emerald-200 hover:ring-emerald-400 hover:bg-emerald-50/60 active:scale-[0.98] transition-all duration-200 md:h-10 md:w-auto md:rounded-lg md:px-5"
               >

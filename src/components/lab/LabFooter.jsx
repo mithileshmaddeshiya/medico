@@ -39,11 +39,11 @@ const SOCIAL_ICONS = {
  * do not add /blogs here, that hub route does not exist.
  */
 const QUICK_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact Us" },
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms & Conditions" },
+  { href: "/", label: "Home", title: "MedicoBharat home — lab test rate list and booking" },
+  { href: "/about", label: "About Us", title: "About MedicoBharat — who we are and where we collect samples" },
+  { href: "/contact", label: "Contact Us", title: "Contact MedicoBharat — phone number and booking help" },
+  { href: "/privacy", label: "Privacy Policy", title: "How MedicoBharat handles your personal and health data" },
+  { href: "/terms", label: "Terms & Conditions", title: "Terms of service for MedicoBharat lab test bookings" },
 ];
 
 /**
@@ -102,16 +102,19 @@ export default function LabFooter({ city = null, labCities = [] }) {
             it used to be: the guides column is gone, and its width is split
             between this block and the city list rather than left as a hole. */}
         <div className="col-span-2 lg:col-span-4">
-          <Link href="/" aria-label="MedicoBharat Lab Test — Home" className="inline-block">
+          <Link href="/" aria-label="MedicoBharat Lab Test — Home" title="MedicoBharat — lab test at home with free sample collection" className="inline-block">
+            {/* Same trimmed WebP and same true 3.56:1 ratio as the navbar — see
+                the note there. No `priority`: this sits at the bottom of the
+                page and must never compete with the hero for bandwidth. */}
             <Image
-              src="/navbar/lablogo.png"
+              src="/navbar/lablogo.webp"
               alt={
                 city
                   ? `MedicoBharat — Lab Test in ${city.name}`
                   : "MedicoBharat — Lab Test at Home"
               }
-              width={260}
-              height={76}
+              width={320}
+              height={90}
               className="h-8 sm:h-10 w-auto object-contain cursor-pointer mb-1 sm:mb-1.5"
             />
           </Link>
@@ -142,6 +145,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
                       aria-label={s.label ?? s.type ?? "Social profile"}
+                      title={`MedicoBharat on ${s.label ?? s.type ?? "the web"}`}
                       className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
                     >
                       <Icon className="h-4 w-4" aria-hidden />
@@ -162,7 +166,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           <ul className="space-y-1 text-[12.5px] text-slate-600">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-emerald-700 transition-colors">
+                <Link href={link.href} title={link.title} className="hover:text-emerald-700 transition-colors">
                   {link.label}
                 </Link>
               </li>
@@ -190,6 +194,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
                       href={`/lab-test/${c.slug}`}
                       className="hover:text-emerald-700 transition-colors"
                       aria-label={`Lab Test in ${c.name}`}
+                      title={`Lab test and blood test at home in ${c.name} — free sample collection`}
                     >
                       {c.name}
                     </Link>
@@ -231,13 +236,14 @@ export default function LabFooter({ city = null, labCities = [] }) {
             </p>
             <a
               href={`tel:${String(footer.phone ?? "").replace(/\s/g, "")}`}
+              title={`Call ${footer.phone} to book a lab test`}
               aria-label={`Call us at ${footer.phone}`}
               className="flex items-center gap-2 hover:text-emerald-700 transition-colors"
             >
               <Phone className="h-4 w-4 text-emerald-600 shrink-0" />
               <span className="tabular-nums">{footer.phone}</span>
             </a>
-            <a href={`mailto:${footer.email}`} className="flex items-center gap-2 hover:text-emerald-700 transition-colors">
+            <a href={`mailto:${footer.email}`} title={`Email MedicoBharat at ${footer.email}`} className="flex items-center gap-2 hover:text-emerald-700 transition-colors">
               <Mail className="h-4 w-4 text-emerald-600 shrink-0" />
               <span className="break-all">{footer.email}</span>
             </a>
@@ -289,11 +295,11 @@ export default function LabFooter({ city = null, labCities = [] }) {
           </p>
 
           <nav aria-label="Legal" className="flex items-center gap-2">
-            <Link href="/privacy" className="hover:text-emerald-700 transition-colors">
+            <Link href="/privacy" title="How MedicoBharat handles your personal and health data" className="hover:text-emerald-700 transition-colors">
               Privacy Policy
             </Link>
             <span aria-hidden className="h-1 w-1 rounded-full bg-emerald-300" />
-            <Link href="/terms" className="hover:text-emerald-700 transition-colors">
+            <Link href="/terms" title="Terms of service for MedicoBharat lab test bookings" className="hover:text-emerald-700 transition-colors">
               Terms &amp; Conditions
             </Link>
           </nav>

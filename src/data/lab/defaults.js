@@ -40,13 +40,32 @@ export const LAB_OG_IMAGE = "/og/ogtag.jpg";
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 
 export const defaultHero = (city) => ({
-  // The h1 is screen-reader only — the hero itself is image + booking form.
+  // The page's h1, and it is REAL VISIBLE TEXT now — see LabHero.jsx. It used
+  // to be `sr-only`, because the headline was burned into the banner artwork
+  // below; a raster headline is unindexable, and the same file being the hero
+  // on all six city pages meant the single most prominent element on the page
+  // was byte-identical across the pages we want ranked for six different towns.
   h1: `Lab Test in ${city} with Free Home Sample Collection`,
+
+  // The one-line promise under the h1. Short on purpose: it sits above the
+  // fold on a phone, where anything longer than two lines pushes the booking
+  // form off the screen.
+  h1Sub: `Ghar baithe blood test book kijiye — free home sample collection ${city} me, report 24 ghante me.`,
+
   // One banner for every city page. 1696x927, so LabHero's hero box is
   // aspect-11/6 — replacing this file with a different shape means changing
   // that class too, otherwise the artwork's own headline and the contact bar
   // along the bottom get cropped.
-  image: "/navheroimage/herocity.png",
+  //
+  // WebP, not the original PNG: the source was 1.8 MB and this is the LCP
+  // element on six pages, marked `priority`, for an audience on mobile data.
+  // Same pixel dimensions, 128 KB instead of 1829 KB.
+  //
+  // ⚠ STILL A SHARED ASSET. The artwork carries its own printed headline, so
+  // it now says on screen roughly what the h1 above it says. That is the one
+  // piece of this fix that needs a designer rather than a code change: a
+  // per-city banner with no baked-in text. See imageAlt below.
+  image: "/navheroimage/herocity.webp",
 
   // The banner has its copy burned into the artwork and a crawler cannot read
   // pixels, so the alt carries that wording rather than describing the photo.
@@ -506,13 +525,58 @@ export const siteFooter = () => ({
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
 
-export const defaultTitle = (city) =>
-  `Lab Test in ${city} | Free Home Sample Collection`;
+/**
+ * ⚠ BOTH OF THESE HAVE A CHARACTER BUDGET. READ IT BEFORE EDITING.
+ *
+ * The root layout appends " | MedicoBharat" — 15 characters — to every title,
+ * and Google renders roughly 60 in total. So a title generated here has 45 to
+ * work with. It was `Lab Test in ${city} | Free Home Sample Collection`, which
+ * is 49 before the suffix and came out at 65 for Varanasi: cut in the SERP, on
+ * the flagship city page, while the five cities that override this default all
+ * fit comfortably. The shorter form below matches the pattern those five
+ * already use, so an overriding city and an inheriting one now read alike.
+ *
+ * The description budget is ~155 characters. The old one ran to 216 for
+ * Varanasi — it named the state, then four localities, then "and nearby areas",
+ * and the last quarter was never shown. It was also the site's only English
+ * description: the other five cities write theirs in the Hinglish the pages are
+ * actually in, which is the register this audience searches in and the one that
+ * wins the click.
+ *
+ * Two localities, not four. Four is what pushed it over, and a reader scanning
+ * a result does not need the full coverage list — that is what the page is for.
+ */
+export const defaultTitle = (city) => `Lab Test in ${city} — Blood Test at Home`;
 
-export const defaultDescription = (city, state, areas = []) =>
-  `Book lab tests in ${city}, ${state} with free home sample collection by MedicoBharat. Trained phlebotomists, reports in 24 hours and affordable prices${
-    areas.length ? ` across ${areas.slice(0, 4).join(", ")} and nearby areas` : ""
-  }.`;
+/** Google truncates a description around here. Not a hard limit — a budget. */
+const DESCRIPTION_BUDGET = 155;
+
+/**
+ * ⚠ IT FITS THE BUDGET BY CONSTRUCTION, NOT BY LUCK.
+ *
+ * A fixed template cannot: the length depends on the city's name and on how
+ * long its localities happen to be. Tuned by hand against the six cities that
+ * exist today, it silently overflows on the seventh — which is exactly how the
+ * previous version came to emit 216 characters for Varanasi.
+ *
+ * So it tries two localities, then one, then none, and takes the first that
+ * fits. A long name like "Salempur, Deoria" loses a locality instead of losing
+ * the end of the sentence.
+ */
+export const defaultDescription = (city, state, areas = []) => {
+  const build = (count) => {
+    const where = count && areas.length
+      ? `${areas.slice(0, count).join(", ")} samet poore sheher me`
+      : `${city} me`;
+
+    return `${city} me ghar baithe lab test — ${where} free home sample collection. CBC, thyroid, sugar aur full body checkup.`;
+  };
+
+  return (
+    [2, 1, 0].map(build).find((text) => text.length <= DESCRIPTION_BUDGET) ??
+    build(0)
+  );
+};
 
 /**
  * Alternate names a city is also searched by, keyed by slug. Varanasi is very

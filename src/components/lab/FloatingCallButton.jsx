@@ -40,6 +40,7 @@ export default function FloatingCallButton({ phone, label = "Book Now" }) {
         <a
           href={tel}
           aria-label={`Call MedicoBharat at ${phone} to book a test`}
+          title={`Call ${phone} to book a lab test`}
           className="flex h-11 items-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-5 text-[14px] font-bold text-white shadow-[0_10px_22px_-10px_rgba(5,150,105,0.95)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98]"
         >
           <Phone className="h-4 w-4 shrink-0" strokeWidth={2.4} />

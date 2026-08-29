@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { Clock3, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 
@@ -35,7 +36,7 @@ export const metadata = {
   title: "Contact MedicoBharat — Lab Test Booking Help",
 
   description:
-    "Lab test booking, home sample collection ke ilaake, report ya price ka sawaal — WhatsApp, phone ya email par MedicoBharat se baat kijiye. Slot subah 6 baje se, saaton din.",
+    "Lab test booking, collection ke ilaake, report ya price ka sawaal — MedicoBharat se WhatsApp, phone ya email par baat kijiye. Slot subah 6 baje se.",
 
   keywords: [
     "Contact MedicoBharat",
@@ -169,6 +170,7 @@ export default async function ContactPage() {
 
               <a
                 href={tel}
+                title="Call MedicoBharat to book a lab test"
                 className="mt-4 inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 text-[13px] font-bold text-white transition hover:bg-emerald-700 active:scale-[0.98]"
               >
                 <Phone className="h-3.5 w-3.5" strokeWidth={2.4} />
@@ -192,6 +194,7 @@ export default async function ContactPage() {
 
               <a
                 href={whatsapp}
+                title="Chat with MedicoBharat on WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 text-[13px] font-bold text-white transition hover:opacity-90 active:scale-[0.98]"
@@ -217,6 +220,7 @@ export default async function ContactPage() {
 
               <a
                 href={`mailto:${email}`}
+                title={`Email MedicoBharat at ${email}`}
                 className="mt-4 inline-block break-all text-[13px] font-bold text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
               >
                 {email}
@@ -283,6 +287,7 @@ export default async function ContactPage() {
                     <li key={city.slug}>
                       <Link
                         href={`/lab-test/${city.slug}`}
+                        title={linkTitle(`/lab-test/${city.slug}`)}
                         className="inline-flex items-center gap-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:text-emerald-700"
                       >
                         <MapPin
@@ -319,6 +324,7 @@ export default async function ContactPage() {
             <div className="mt-6">
               <Link
                 href="/#book"
+                title="Go to the booking form on the home page"
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-[13.5px] font-bold text-emerald-700 transition hover:bg-emerald-50 active:scale-[0.98]"
               >
                 Booking form kholein

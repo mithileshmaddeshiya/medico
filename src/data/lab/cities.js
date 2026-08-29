@@ -23,6 +23,15 @@
  *   geo         { lat, lng } Optional; town-centre coordinates, schema only.
  *                          Use the town centre — this is a service area, not a
  *                          walk-in address, so a precise pin would be a lie.
+ *   gbp         (string)   Optional; THIS city's own Google Business Profile as
+ *                          a full https://www.google.com/maps/place/… URL. It
+ *                          becomes `hasMap` and joins `sameAs` on the city's
+ *                          DiagnosticLab node — our half of the handshake that
+ *                          ties the page to a Google-verified record of the
+ *                          business. See GBP_MAP_URL in src/lib/schema.js for
+ *                          why this is the highest-value string on the page,
+ *                          and never guess one: a wrong Maps link points the
+ *                          markup at somebody else's lab.
  *   updated     (string)   Optional; ISO date the copy was last reviewed. Feeds
  *                          `dateModified` in the page schema. Bump it when you
  *                          actually rewrite the copy — never on a deploy.
@@ -237,12 +246,29 @@ const LAB_CITY_SEED = [
     description:
       "Deoria me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
 
-    // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the two terms the URL cannot: "blood test" and
-    // "pathology". The default was "Lab Test in Deoria with Free Home Sample
-    // Collection", which repeated the title without adding a term.
+    /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
+       It used to be `sr-only`, and every city's override was written on that
+       basis: "it costs a reader nothing", so each one carried every keyword
+       variant at once. Deoria's ran to 86 characters, Gorakhpur's to 109.
+
+       The hero renders the h1 as real text now (see LabHero.jsx), because a
+       headline burned into a shared banner image is unreadable to a crawler and
+       identical on all six pages. A 109-character heading that nobody saw is
+       fine; the same heading at the top of a phone screen is a wall of text,
+       and a heading stuffed with comma-separated variants is one of the oldest
+       spam patterns there is.
+
+       So the h1 opens with the phrase people actually type — "Lab Test in
+       <city>" — and stops. The secondary terms ("pathology lab", "full body
+       checkup", "blood test") moved into `h1Sub`, where they sit in a real
+       sentence. Terms in a sentence a reader reads are worth more than terms
+       crammed into a heading, and the sub-line was going to be written anyway.
+
+       Budget: h1 under ~60 characters, h1Sub under ~140. */
     hero: {
-      h1: "Lab Test in Deoria — Blood Test & Pathology Lab with Free Home Sample Collection",
+      h1: "Lab Test in Deoria — Blood Test Ghar Baithe",
+      h1Sub:
+        "Pathology lab ke saare test aur full body checkup — Deoria me free home sample collection, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -417,13 +443,34 @@ const LAB_CITY_SEED = [
     // only this city's page argues (report before the OPD visit), so the two
     // snippets do not read as the same page twice.
     description:
-      "Gorakhpur me lab test ghar baithe — OPD se pehle report taiyaar rakhiye. CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+      // 149 characters. It was 167 and the tail was being cut in the SERP; the
+      // "report 24 ghante me" clause moved out because the OPD line is the one
+      // thing here no other city page says, and it earns the space.
+      "Gorakhpur me lab test ghar baithe — OPD se pehle report taiyaar rakhiye. CBC, thyroid, sugar aur full body checkup, free home sample collection.",
 
-    // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the terms the URL cannot: "blood test",
-    // "pathology lab" and "full body checkup".
+    /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
+       It used to be `sr-only`, and every city's override was written on that
+       basis: "it costs a reader nothing", so each one carried every keyword
+       variant at once. Deoria's ran to 86 characters, Gorakhpur's to 109.
+
+       The hero renders the h1 as real text now (see LabHero.jsx), because a
+       headline burned into a shared banner image is unreadable to a crawler and
+       identical on all six pages. A 109-character heading that nobody saw is
+       fine; the same heading at the top of a phone screen is a wall of text,
+       and a heading stuffed with comma-separated variants is one of the oldest
+       spam patterns there is.
+
+       So the h1 opens with the phrase people actually type — "Lab Test in
+       <city>" — and stops. The secondary terms ("pathology lab", "full body
+       checkup", "blood test") moved into `h1Sub`, where they sit in a real
+       sentence. Terms in a sentence a reader reads are worth more than terms
+       crammed into a heading, and the sub-line was going to be written anyway.
+
+       Budget: h1 under ~60 characters, h1Sub under ~140. */
     hero: {
-      h1: "Lab Test in Gorakhpur — Blood Test, Full Body Checkup Aur Pathology Lab Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Gorakhpur — Blood Test Ghar Baithe",
+      h1Sub:
+        "CBC, thyroid, sugar se full body checkup tak — Gorakhpur me trained phlebotomist ghar aakar sample lega, report 24 ghante me.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -591,12 +638,29 @@ const LAB_CITY_SEED = [
     description:
       "Salempur, Bhatni aur Lar me lab test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
 
-    // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the terms the URL cannot: "blood test",
-    // "pathology lab" and the district, which is how this town is disambiguated
-    // from the other Salempurs in UP and Bihar.
+    /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
+       It used to be `sr-only`, and every city's override was written on that
+       basis: "it costs a reader nothing", so each one carried every keyword
+       variant at once. Deoria's ran to 86 characters, Gorakhpur's to 109.
+
+       The hero renders the h1 as real text now (see LabHero.jsx), because a
+       headline burned into a shared banner image is unreadable to a crawler and
+       identical on all six pages. A 109-character heading that nobody saw is
+       fine; the same heading at the top of a phone screen is a wall of text,
+       and a heading stuffed with comma-separated variants is one of the oldest
+       spam patterns there is.
+
+       So the h1 opens with the phrase people actually type — "Lab Test in
+       <city>" — and stops. The secondary terms ("pathology lab", "full body
+       checkup", "blood test") moved into `h1Sub`, where they sit in a real
+       sentence. Terms in a sentence a reader reads are worth more than terms
+       crammed into a heading, and the sub-line was going to be written anyway.
+
+       Budget: h1 under ~60 characters, h1Sub under ~140. */
     hero: {
-      h1: "Lab Test in Salempur, Deoria — Blood Test & Pathology Lab with Free Home Sample Collection",
+      h1: "Lab Test in Salempur — Blood Test Ghar Baithe",
+      h1Sub:
+        "Salempur aur aas-paas ke gaon me pathology lab ke test ghar baithe — free sample collection, report 24 ghante me phone par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -757,11 +821,29 @@ const LAB_CITY_SEED = [
     description:
       "Azamgarh me lab test ghar baithe — Sidhari se Mubarakpur tak free home sample collection. CBC, thyroid, sugar aur full body checkup, report 24 ghante me.",
 
-    // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the terms the URL cannot: "blood test",
-    // "pathology lab" and "full body checkup".
+    /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
+       It used to be `sr-only`, and every city's override was written on that
+       basis: "it costs a reader nothing", so each one carried every keyword
+       variant at once. Deoria's ran to 86 characters, Gorakhpur's to 109.
+
+       The hero renders the h1 as real text now (see LabHero.jsx), because a
+       headline burned into a shared banner image is unreadable to a crawler and
+       identical on all six pages. A 109-character heading that nobody saw is
+       fine; the same heading at the top of a phone screen is a wall of text,
+       and a heading stuffed with comma-separated variants is one of the oldest
+       spam patterns there is.
+
+       So the h1 opens with the phrase people actually type — "Lab Test in
+       <city>" — and stops. The secondary terms ("pathology lab", "full body
+       checkup", "blood test") moved into `h1Sub`, where they sit in a real
+       sentence. Terms in a sentence a reader reads are worth more than terms
+       crammed into a heading, and the sub-line was going to be written anyway.
+
+       Budget: h1 under ~60 characters, h1Sub under ~140. */
     hero: {
-      h1: "Lab Test in Azamgarh — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Azamgarh — Blood Test Ghar Baithe",
+      h1Sub:
+        "Blood test, thyroid, sugar aur full body checkup — Azamgarh me free home sample collection, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -937,11 +1019,29 @@ const LAB_CITY_SEED = [
     description:
       "Ballia me lab test ghar baithe — Rasra, Bansdih, Bairia aur Belthara Road tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
 
-    // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the terms the URL cannot: "blood test",
-    // "pathology lab" and "full body checkup".
+    /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
+       It used to be `sr-only`, and every city's override was written on that
+       basis: "it costs a reader nothing", so each one carried every keyword
+       variant at once. Deoria's ran to 86 characters, Gorakhpur's to 109.
+
+       The hero renders the h1 as real text now (see LabHero.jsx), because a
+       headline burned into a shared banner image is unreadable to a crawler and
+       identical on all six pages. A 109-character heading that nobody saw is
+       fine; the same heading at the top of a phone screen is a wall of text,
+       and a heading stuffed with comma-separated variants is one of the oldest
+       spam patterns there is.
+
+       So the h1 opens with the phrase people actually type — "Lab Test in
+       <city>" — and stops. The secondary terms ("pathology lab", "full body
+       checkup", "blood test") moved into `h1Sub`, where they sit in a real
+       sentence. Terms in a sentence a reader reads are worth more than terms
+       crammed into a heading, and the sub-line was going to be written anyway.
+
+       Budget: h1 under ~60 characters, h1Sub under ~140. */
     hero: {
-      h1: "Lab Test in Ballia — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Ballia — Blood Test Ghar Baithe",
+      h1Sub:
+        "Pathology lab ke test aur full body checkup — Ballia me free home sample collection, report 24 ghante me seedhe phone par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1441,6 +1541,31 @@ const obj = (value) =>
   value && typeof value === "object" && !Array.isArray(value) ? value : null;
 
 /**
+ * A Google Business Profile URL, or null.
+ *
+ * Validated rather than trusted, for the same reason `geo` requires two real
+ * numbers: this value is published in `hasMap` and `sameAs`, where a wrong link
+ * does not degrade gracefully — it asserts that some other business IS us. A
+ * string that is not recognisably a Google Maps URL is dropped, so a typo or a
+ * pasted GBP *dashboard* link (business.google.com/…, which is our private
+ * admin screen and 404s for everyone else) publishes nothing instead of
+ * publishing a lie.
+ *
+ * Both forms are accepted: the expanded `/maps/place/…` URL, which is what
+ * should be published, and the `maps.app.goo.gl` short link that Share → Copy
+ * gives you. The short one redirects, so expand it when you can.
+ */
+const gbpUrl = (value) => {
+  const url = str(value);
+  if (!url) return null;
+  return /^https:\/\/(?:www\.)?google\.[a-z.]+\/maps\/|^https:\/\/maps\.app\.goo\.gl\/|^https:\/\/goo\.gl\/maps\//.test(
+    url
+  )
+    ? url
+    : null;
+};
+
+/**
  * A city entry merged over the generated defaults.
  *
  * Every section is all-or-nothing on purpose: overriding `faqs` replaces the
@@ -1498,6 +1623,10 @@ function normalise(fields, id) {
     // Alternate names this city is searched by (e.g. Varanasi → "Banaras").
     aliases: strList(fields.aliases) ?? CITY_ALIASES[slug] ?? [],
     postalCode: fields.postalCode ? str(fields.postalCode) : null,
+    // This city's own Business Profile. Optional, validated, and null when
+    // absent — the page then falls back to the brand-wide GBP_MAP_URL and, if
+    // that is empty too, omits the property rather than inventing one.
+    gbp: gbpUrl(fields.gbp),
     // Schema only, and only when BOTH numbers are real numbers — a half-filled
     // pair would emit `latitude: undefined`, which invalidates the whole
     // GeoCoordinates node rather than just omitting it.

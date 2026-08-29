@@ -46,6 +46,8 @@
  * from src/data/lab/cities.js and the two guides from src/data/blogs/varanasi/.
  * If a city is ever unpublished, the links naming it here have to go with it.
  */
+
+import { SERVICE_CITIES, coverageHi } from "@/lib/coverage";
 import { LAB_PHONE } from "@/data/lab/defaults";
 
 /* ── Metadata ─────────────────────────────────────────────────────────────
@@ -71,39 +73,80 @@ export const HOME_META = {
      copy of this page. A keyword that appears ONLY in this array is the kind
      that gets a page filtered rather than ranked. */
   keywords: [
-    "Lab Test at Home",
-    "Blood Test at Home",
-    "Home Sample Collection",
-    "Free Home Sample Collection",
-    "Online Lab Test Booking",
-    "Full Body Health Checkup",
-    "Preventive Health Checkup",
-    "Complete Body Checkup Package",
-    "CBC Test at Home",
-    "Thyroid Test at Home",
-    "Diabetes Blood Test",
-    "HbA1c Test Online Booking",
-    "Lipid Profile Test",
-    "Lab Test in Varanasi",
-    "Blood Test in Gorakhpur",
-    "Pathology Lab in Deoria",
-    "Diagnostic Center in Azamgarh",
-    "Home Sample Collection Salempur",
-    "Diagnostic Lab Near Me",
-    "Pathology Lab Home Collection",
-    "MedicoBharat"
+    // Brand — the whole point of the rewrite. Google was spell-correcting
+    // "medicobharat" to "medical bharat"; see src/lib/schema.js.
+    "MedicoBharat",
+    "Medico Bharat",
+    "MedicoBharat lab test",
+
+    // Primary, location-free. Google fills the city in from the searcher's
+    // position, which the schema's areaServed answers.
+    "lab test at home",
+    "lab test near me",
+    "blood test at home",
+    "blood test near me",
+    "home sample collection",
+    "free home sample collection",
+    "online lab test booking",
+    "pathology lab near me",
+    "diagnostic centre near me",
+    "full body checkup at home",
+    "full body checkup near me",
+    "preventive health checkup",
+
+    // Test-wise — the highest-intent queries this page answers
+    "CBC test price",
+    "thyroid test at home",
+    "TSH test price",
+    "HbA1c test at home",
+    "lipid profile test price",
+    "liver function test at home",
+    "kidney function test at home",
+    "vitamin D test at home",
+    "vitamin B12 test price",
+    "dengue test at home",
+    "full body checkup package price",
+
+    // The questions this page exists to answer, and which no city page does
+    "kaun sa lab test kab karayein",
+    "blood test se pehle fasting",
+    "lab test report kaise padhein",
+    "umar ke hisaab se health checkup",
+
+    // Regional — every district in the service area, built from the live city
+    // list. It named three while six were live; see src/lib/coverage.js.
+    ...SERVICE_CITIES.map((city) => `lab test in ${city}`),
+    "lab test in Purvanchal",
+
+    // Devanagari — the script a large share of this audience types in
+    "घर पर लैब टेस्ट",
+    "घर से सैंपल कलेक्शन",
+    "खून की जांच घर पर",
+    "फुल बॉडी चेकअप",
   ],
 };
 
 /* ── Hero ─────────────────────────────────────────────────────────────────
-   The hero is a banner image plus the booking form, the same as the city
-   pages, and the h1 is screen-reader only. */
+   A visible headline, a one-line promise, then the banner image and the
+   booking form side by side — the same shape as the city pages.
+
+   The h1 used to be `sr-only`, because the headline was printed into the
+   banner artwork. That made the most prominent element on the site's most
+   linked page unreadable to a crawler, and made a 1.5 MB image the LCP
+   candidate instead of a line of text. See HomeHero.jsx. */
 export const HOME_HERO = {
-  /* Two halves so that, if the visible headline ever comes back, the accent
-     colour falls on the phrase carrying the primary keyword rather than on a
-     random word in the middle of it. HomeHero joins them for the sr-only h1. */
+  /* Two halves so the accent colour falls on the phrase carrying the primary
+     keyword rather than on a random word in the middle of it. The visible
+     headline is back — HomeHero renders `h1Accent` in emerald. */
   h1Lead: "Lab Test Ghar Baithe —",
   h1Accent: "Free Home Sample Collection",
+
+  /* The one line under the h1. It names the region rather than listing six
+     towns: this sits above the fold on a phone, and the list would push the
+     booking form off the screen. The full list is in the guide further down
+     and in the footer. */
+  h1Sub:
+    "CBC, thyroid, sugar, vitamin aur full body checkup — trained phlebotomist ghar aakar sample lega, report 24 ghante me WhatsApp par.",
 
   formTitle: "Book Your Sample Collection",
 
@@ -112,7 +155,10 @@ export const HOME_HERO = {
   // identical image makes the home page look like just another city page.
   // 1700x925, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
-  image: "/navheroimage/herosecimg.png",
+  //
+  // WebP, not the original PNG: this is the LCP element on the site's most
+  // linked page, marked `priority`. Same pixels, 91 KB instead of 1516 KB.
+  image: "/navheroimage/herosecimg.webp",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
@@ -298,7 +344,7 @@ export const HOME_GUIDES = {
 export const HOME_FAQS = [
   {
     q: "MedicoBharat kya hai aur Purvanchal ke kin kin sheheron me lab test ki suvidha hai?",
-    a: `MedicoBharat ek trusted online diagnostic platform hai jo ghar baithe free home sample collection ki suvidha deta hai. Hum Varanasi, Gorakhpur, Deoria, Azamgarh aur Salempur jile me blood test aur full body health checkup ki services provide karte hain. Aap CBC test, Thyroid profile, Diabetes (HbA1c), Lipid profile, Vitamin D/B12 aur Liver-Kidney function test book kar sakte hain. Accurate PDF report 24 ghante me WhatsApp aur email par mil jaati hai. Direct booking ke liye ${LAB_PHONE} par call karein.`,
+    a: `MedicoBharat ek trusted online diagnostic platform hai jo ghar baithe free home sample collection ki suvidha deta hai. Hum ${coverageHi()} jile me blood test aur full body health checkup ki services provide karte hain. Aap CBC test, Thyroid profile, Diabetes (HbA1c), Lipid profile, Vitamin D/B12 aur Liver-Kidney function test book kar sakte hain. Accurate PDF report 24 ghante me WhatsApp aur email par mil jaati hai. Direct booking ke liye ${LAB_PHONE} par call karein.`,
   },
   {
     q: "Kya ghar par blood test sample collection sach me free hai?",

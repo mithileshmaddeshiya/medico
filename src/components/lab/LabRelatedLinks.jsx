@@ -1,5 +1,6 @@
 // SSR component — plain links, no state, nothing to hydrate.
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowUpRight } from "lucide-react";
 
 /**
@@ -95,6 +96,7 @@ export default function LabRelatedLinks({ related }) {
                   <li key={href}>
                     <Link
                       href={href}
+                      title={sub ?? linkTitle(href)}
                       className="group flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors duration-200 hover:bg-emerald-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >
                       <span className="min-w-0 flex-1">

@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import { SERVICE_CITIES, coverage } from "@/lib/coverage";
 import { graph, ldJson, organizationNode, websiteNode } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
@@ -32,8 +33,11 @@ export const metadata = {
     template: "%s | MedicoBharat",
   },
 
-  description:
-    "MedicoBharat books lab tests and full body health checkups with free home sample collection — CBC, thyroid, sugar, vitamin and organ function tests. Trained phlebotomists, reports in 24 hours, across Varanasi, Gorakhpur and Deoria.",
+  // This only ever renders on a route that sets no description of its own, so
+  // its length is not the constraint the page-level ones are under. The city
+  // list is BUILT — it read "Varanasi, Gorakhpur and Deoria" for as long as
+  // Salempur, Azamgarh and Ballia had been live. See src/lib/coverage.js.
+  description: `MedicoBharat books lab tests and full body health checkups with free home sample collection — CBC, thyroid, sugar, vitamin and organ function tests. Trained phlebotomists, reports in 24 hours, across ${coverage()}.`,
 
   keywords: [
     // BRAND — the reason this list exists at all. Google was spell-correcting
@@ -63,10 +67,10 @@ export const metadata = {
     "Kidney Function Test",
     "Dengue Test",
 
-    // LOCAL — the three districts the service actually reaches
-    "Lab Test in Varanasi",
-    "Lab Test in Gorakhpur",
-    "Lab Test in Deoria",
+    // LOCAL — every district the service actually reaches, built from the same
+    // city list the routes and the sitemap read. It named three towns while six
+    // were live; a hand-typed list is how that happens.
+    ...SERVICE_CITIES.map((city) => `Lab Test in ${city}`),
     "Blood Test Home Collection Uttar Pradesh",
 
     // Location-free — Google supplies the city from the searcher's position,
@@ -153,19 +157,61 @@ export const metadata = {
       "LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8",
   },
 
+  // The .ico is a 16/32px favicon and is the wrong thing to hand an iOS home
+  // screen, which wants a 180px+ square and does not read .ico at all — it was
+  // producing a blank or upscaled icon. The PNGs in /public/brand are the
+  // square lockup the Organization schema and the manifest also use, so the
+  // mark is identical wherever it appears.
   icons: {
-    icon: "/favicon/medicofav.ico",
+    icon: [
+      { url: "/favicon/medicofav.ico", sizes: "any" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/brand/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
     shortcut: "/favicon/medicofav.ico",
-    apple: "/favicon/medicofav.ico",
+    apple: { url: "/brand/icon-192.png", sizes: "192x192" },
   },
+
+  /* No `manifest:` key here. src/app/manifest.js is a Next.js file convention —
+     it is served at /manifest.webmanifest and the <link rel="manifest"> is
+     emitted automatically. Declaring it here as well renders the tag twice,
+     which is the bug this pass just removed from the verification meta. */
 
   other: {
     locality: "Deoria",
     region: "Uttar Pradesh",
     country: "India",
-    coverage: "Varanasi, Gorakhpur, Deoria",
+    // Built, not typed — this said "Varanasi, Gorakhpur, Deoria" while six
+    // cities were live. See src/lib/coverage.js.
+    coverage: SERVICE_CITIES.join(", "),
     target: "Lab Test & Health Checkup Users",
   },
+};
+
+/**
+ * VIEWPORT.
+ *
+ * A separate export from `metadata` — Next.js moved these fields out of the
+ * metadata object, and putting `themeColor` back in there is silently ignored.
+ * See node_modules/next/dist/docs/01-app/03-api-reference/04-functions/generate-viewport.md.
+ *
+ * `themeColor` is the emerald the whole site is built on (Tailwind emerald-600,
+ * the same value the CTAs and the toast tick use). It tints the Android browser
+ * chrome and the iOS status bar, so an installed shortcut and a normal tab both
+ * read as this brand rather than as default grey.
+ *
+ * The viewport line itself was already correct — Next emits
+ * `width=device-width, initial-scale=1` by default. It is restated here only
+ * because declaring `themeColor` requires this export to exist anyway, and a
+ * half-declared viewport is worse than an explicit one. `maximumScale` is
+ * deliberately NOT set: capping zoom is an accessibility failure, and on a site
+ * whose readers are frequently older patients reading a lab report, it is not a
+ * trade worth making for pixel-perfect layout.
+ */
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#059669",
 };
 
 export default function RootLayout({ children }) {
@@ -173,13 +219,36 @@ export default function RootLayout({ children }) {
 
 
   return (
+    /*
+      lang="hi-Latn-IN", not "en".
+
+      The copy on this site is Hinglish — Hindi vocabulary written in Latin
+      script ("Ghar baithe lab test book karein"). Every WebPage, Article and
+      FAQPage node the site emits already declares
+      `inLanguage: ["hi-IN", "en-IN"]`, so `lang="en"` was the document
+      contradicting its own structured data on every route.
+
+      `hi-Latn-IN` is the correct BCP-47 tag for exactly this: language `hi`,
+      script `Latn`, region `IN`. It is what tells Google the page serves Hindi
+      speakers reading romanised text, which is the audience actually typing
+      "ghar par blood test kaise karayein".
+
+      It also stops Chrome offering to translate the page from English into
+      Hindi — the translation the crash guard below exists to survive.
+    */
     <html
-      lang="en"
+      lang="hi-Latn-IN"
       className="h-full antialiased"
     >
-      <head>
-        <meta name="google-site-verification" content="LrAb_C1IjlUf70mhPXMzFJsg0pmpiPp6PhRKu_kVPR8" />
-      </head>
+      {/*
+        No hand-written <head> block.
+
+        A raw <meta name="google-site-verification"> lived here AND the same
+        token was declared in `metadata.verification.google` above, so the tag
+        rendered twice in the head of every page. Next.js owns <head> — anything
+        it needs to emit belongs in the `metadata` export, which is the one
+        place it cannot be duplicated.
+      */}
       <body className="min-h-full flex flex-col">
 
         {/*
