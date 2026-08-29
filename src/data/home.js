@@ -183,8 +183,9 @@ export const HOME_HERO = {
    of this block on a home page is to remove the one doubt that stops a first
    booking: what actually happens after I submit the form.
 
-   THIS BLOCK IS IN ENGLISH, on purpose, and it is the only one on the page
-   that is — everything around it is Hinglish. The timings are unchanged: 30
+   THIS BLOCK IS IN ENGLISH, on purpose. Most of the page is Hinglish; the
+   English ones are this, the CTA band and the call strip. The timings are
+   unchanged: 30
    minutes to the call, 10 minutes for the visit, 24 hours to the report, and
    48–72 hours for the specialised tests. Those four numbers appear in the
    FAQs, the long-form copy and the city pages too; changing one here without
@@ -546,10 +547,16 @@ export const HOME_CONTENT = [
 
 /* ── CTA band + closing call strip ────────────────────────────────────────
    Same shapes the lab city pages use (defaultCta / defaultCallBanner), so the
-   existing LabCta and LabCallBanner components render them unchanged. */
+   existing LabCta and LabCallBanner components render them unchanged.
+
+   The heading is English, and it is worded to match defaultCta in
+   src/data/lab/defaults.js — "Book a lab test in <city> — sample collected at
+   home". Same band, same component, same sentence minus the city, so a
+   visitor moving from here to a city page reads one promise rather than two
+   phrasings of it. The proof line and both buttons were already English. */
 export const HOME_CTA = {
-  headingLead: "Lab test book kijiye —",
-  headingAccent: "sample ghar se liya jaayega",
+  headingLead: "Book a lab test —",
+  headingAccent: "sample collected at home",
   proof: ["Trained phlebotomist", "Free home collection", "Reports in 24 hrs"],
 };
 
