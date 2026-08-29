@@ -156,26 +156,34 @@ export const HOME_HERO = {
   // 1699x926, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
   //
-  // WebP, not the original PNG: this is the LCP element on the site's most
-  // linked page, marked `priority`. Same pixels, 91 KB instead of 1516 KB.
+  // ── THIS BANNER HAS NO TEXT IN IT, AND THAT IS THE POINT ───────────────
+  // The previous one (herosecimg.webp) had its headline, four icon labels and
+  // a contact bar painted across the frame. There was nowhere to put a real
+  // heading against it: above the picture it repeated the picture, over the
+  // picture it collided with it, and hiding the h1 to make room left the
+  // page's most prominent element unreadable to a crawler — on ten city pages
+  // at once, since they share one banner. Two brand-new pages sat unindexed
+  // while that was true.
   //
-  // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
-  // It carries its own headline, four icon labels and a contact bar. That is
-  // why HomeHero prints no visible heading of its own: two headlines, one in
-  // pixels and one in text, sat on top of each other however they were
-  // arranged. A text-free cut of the same photograph exists at
-  // /navheroimage/heroempty.webp — switching back to it is what makes a
-  // readable h1 possible again, and HomeHero has the note on how.
-  image: "/navheroimage/herosecimg.webp",
+  // This is the same photograph with the left half left empty, which is where
+  // HomeHero paints the h1. Real text over a picture, instead of two headlines
+  // fighting each other.
+  //
+  // KEEP THAT HALF EMPTY. A re-export that fills it forces the hidden h1 back.
+  //
+  // 1699x926, so the hero box is aspect-11/6 — a differently-shaped file means
+  // changing that class in HomeHero.jsx too. WebP, not the PNG that was
+  // dropped in: this is the LCP element on the site's most linked page, marked
+  // `priority`. Same pixels, 53 KB instead of 1352 KB.
+  image: "/navheroimage/heroempty.webp",
 
-  // The banner has its headline burned into the artwork, and a crawler cannot
-  // read pixels — so the alt carries that wording rather than describing the
-  // photograph. With the visible h1 gone this alt and the sr-only heading are
-  // between them the only machine-readable version of what the hero says.
-  // The counts printed on the banner are deliberately NOT repeated here; see
-  // the rule at the top of this file.
+  // Describes the PHOTOGRAPH, because that is all this file is now. The old
+  // alt transcribed the wording printed on the banner — there is no wording
+  // left to transcribe, and the h1 beside it carries the claim in real text.
+  // The counts printed on the old banner are deliberately NOT repeated here;
+  // see the rule at the top of this file.
   imageAlt:
-    "MedicoBharat Lab Test — accurate tests, better health. Reliable lab tests, advanced technology, safe aur hygienic collection, home sample collection ke saath.",
+    "MedicoBharat lab — a technician in gloves lifting a blood sample tube from a rack of collected samples beside a microscope.",
 };
 
 /* ── How it works ─────────────────────────────────────────────────────────

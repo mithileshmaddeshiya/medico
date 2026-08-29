@@ -8,16 +8,24 @@ import LabLeadCard from "@/components/lab/LabLeadCard";
  * The home page hero — banner image plus the booking form, the same shape the
  * city heroes use (see src/components/lab/LabHero.jsx).
  *
- * ── THE HERO SHOWS NO HEADING ────────────────────────────────────────────
- * Banner and form, nothing else. The banner has its headline painted into the
- * artwork, so a second heading in text had nowhere good to go: above the
- * picture it repeated it, and over the picture it collided with it. The h1 is
- * still in the DOM — `sr-only`, see the note beside it — because every section
- * below starts at h2 and the page needs one.
+ * ── WHERE THE H1 LIVES ───────────────────────────────────────────────────
+ * Over the banner's empty half from lg, above the banner below it. Whichever
+ * it is, it is ordinary DOM text — and that is the part that matters. Google
+ * files this domain as an online pharmacy, and saying "lab test, at home,
+ * collection free" in text a crawler can read is what corrects that. Painted
+ * into the artwork it would be pixels; here it is markup, and it is the LCP
+ * element, which paints on the first frame.
  *
- * The cost is real and it is written out where the element is. Short version:
- * the largest thing above the fold is now raster text a crawler cannot read.
- * The fix is an image with room in it, not a cleverer arrangement of type.
+ * ── THE ONE THING NOT TO UNDO ────────────────────────────────────────────
+ * The overlay only works because the banner has an empty half. It has been
+ * swapped back to a full-bleed artwork banner once already, and the h1 went
+ * `sr-only` to make room for it — which left the page's most prominent element
+ * unreadable to a crawler and identical to nine other pages. Both new city
+ * pages went unindexed while that was true.
+ *
+ * So: an overlay is only ever valid against an image with room in it, and this
+ * hero is only worth having with one. Swap HOME_HERO.image for artwork with
+ * type across the frame and you are choosing the hidden h1 again.
  *
  * ── AND WHY THE FORM IS STILL IN THE HERO ────────────────────────────────
  * `#book` is the anchor every CTA on the site scrolls to (see BookFormLink).
@@ -45,35 +53,74 @@ export default function HomeHero({ hero, cityOptions }) {
             heights and the shorter one centres against the taller. */}
         <div className="grid items-center gap-5 lg:grid-cols-12 lg:gap-8">
 
-          <div className="lg:col-span-8">
+          {/* The image column is `relative` only from lg, because that is the
+              only width at which the headline is positioned against it. */}
+          <div className="lg:relative lg:col-span-8">
 
-            {/* ── THE PAGE'S ONLY H1, AND IT IS INVISIBLE ─────────────────
-                Every section below it starts at h2, so this element is what
-                stops the page having no h1 at all.
+            {/* ── THE PAGE'S ONLY H1 ──────────────────────────────────────
+                Every section below it starts at h2.
 
-                It is `sr-only` because the hero shows no heading: the banner
-                carries its own headline in the artwork, and a second one in
-                text sat awkwardly against it however it was placed — above the
-                picture it repeated the picture, and over the picture it landed
-                on the picture's own type.
+                ── IT WAS sr-only AND THAT WAS THE PROBLEM ────────────────
+                For a while this hero showed no heading at all: the banner
+                carried its headline in the artwork and the h1 sat hidden
+                behind it. The cost was not theoretical. A crawler cannot read
+                pixels, so the largest thing above the fold was unreadable, and
+                the SAME banner file is the hero on every city page — which
+                left ten pages whose most prominent element was byte-identical
+                and whose only machine-readable claim was a hidden string. That
+                is the exact shape of a page Google crawls and then declines to
+                index.
 
-                ── THE COST, STATED PLAINLY ────────────────────────────────
-                A crawler cannot read pixels. With this hidden, the largest
-                thing above the fold is raster text, and the only
-                machine-readable version of the page's claim is this element
-                plus the image alt. It still ranks the page — a screen reader
-                and a crawler both get it in full — but a visible h1 in real
-                text is worth more, and it is what corrects a domain Google
-                currently files as an online pharmacy.
+                It is real, visible text again. The fix that made that possible
+                was not a cleverer arrangement of type — it was a banner with
+                room in it (HOME_HERO.image → heroempty.webp, the same
+                photograph with its left half left clear).
 
-                If that trade ever needs reversing, it is one swap: point
-                HOME_HERO.image at /navheroimage/heroempty.webp (the same
-                photograph with its left half left clear) and this heading can
-                come back visible, overlaid on that empty half. */}
-            <h1 className="sr-only">
-              {hero.h1Lead} {hero.h1Accent}
-              {hero.h1Sub ? `. ${hero.h1Sub}` : ""}
-            </h1>
+                ── WHY IT MOVES INSTEAD OF STAYING PUT ────────────────────
+                One element, two positions, no duplicate markup:
+
+                • Below lg it is an ordinary block ABOVE the picture. A phone
+                  banner is ~200px tall and its empty half is ~170px wide —
+                  there is no room to write there, and forcing it produces the
+                  overlap this hero already tried once.
+
+                • From lg it is absolutely positioned INSIDE the picture, in
+                  the half the artwork leaves empty.
+
+                The h1 is in the DOM once either way, in the same place in the
+                reading order, so none of this is visible to a crawler or a
+                screen reader — it is purely where the pixels land.
+
+                The white gradient behind it is a safety net, not a scrim: the
+                artwork's left half is already near-white, so it is invisible
+                over the empty area and only does work where the photograph
+                starts. That is the whole difference between this and the dark
+                scrim that was tried before — this text sits on light space the
+                image was built to give it, so nothing has to be dimmed.
+
+                The two halves do the job they were split for: the accent
+                colour lands on "Free Home Sample Collection", the phrase
+                carrying the primary keyword, rather than on a word in the
+                middle of it. */}
+            <div className="mb-5 lg:mb-0 lg:absolute lg:inset-y-0 lg:left-0 lg:z-10 lg:w-[58%]">
+              <div className="lg:flex lg:h-full lg:flex-col lg:justify-center lg:rounded-l-xl lg:bg-linear-to-r lg:from-white lg:via-white/88 lg:to-transparent lg:py-8 lg:pl-7 lg:pr-12">
+                {/* `text-balance` keeps the two-line phone wrap even. The scale
+                    peaks at sm/md, where the headline has the full column to
+                    itself, and steps DOWN at lg where it has to live inside
+                    58% of the picture. */}
+                <h1 className="max-w-3xl text-balance text-[26px] min-[400px]:text-[30px] sm:text-[36px] lg:max-w-none lg:text-[27px] xl:text-[31px] font-extrabold leading-[1.14] tracking-tight text-slate-900">
+                  {hero.h1Lead}{" "}
+                  <span className="text-emerald-700">{hero.h1Accent}</span>
+                </h1>
+
+                {/* `text-pretty` stops a one-word last line. */}
+                {hero.h1Sub && (
+                  <p className="mt-3 max-w-2xl text-pretty text-[13.5px] sm:text-[15px] lg:mt-2.5 lg:max-w-none lg:text-[13px] leading-relaxed text-slate-600">
+                    {hero.h1Sub}
+                  </p>
+                )}
+              </div>
+            </div>
 
             {/* ── IMAGE ───────────────────────────────────────────────────
                 The box carries the banner's own ratio — 1699x926, near enough

@@ -187,6 +187,15 @@ const LAB_CITY_SEED = [
               label: "Ballia me lab test",
               sub: "UP ka aakhiri jila — imaging ke liye yahan aana padta hai",
             },
+            // Ghazipur ka page is page ko naam se leta hai ("Varanasi kareeb
+            // 80 km"), aur ye link uska jawab hai. Ek naya URL sitemap se nahi,
+            // links se crawl hota hai — aur ek taraf ka link crawler ko sirf
+            // itna batata hai ki do page jude hain, ye nahi ki dono asli hain.
+            {
+              href: "/lab-test/ghazipur",
+              label: "Ghazipur me lab test",
+              sub: "Kareeb 80 km — Ganga kinare ka padosi jila",
+            },
           ],
         },
       ],
@@ -369,6 +378,13 @@ const LAB_CITY_SEED = [
               label: "Salempur me lab test",
               sub: "Bhatni, Lar aur Bhatpar Rani ke aas-paas ka ilaaka",
             },
+            // Siwan ka page is page ko naam se leta hai; ye link uska jawab
+            // hai. Ek naya URL sitemap se nahi, links se crawl hota hai.
+            {
+              href: "/lab-test/siwan",
+              label: "Siwan me lab test",
+              sub: "Seema ke us paar Bihar ka jila, kareeb 60 km",
+            },
             {
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
@@ -522,6 +538,15 @@ const LAB_CITY_SEED = [
               href: "/lab-test/kushinagar",
               label: "Kushinagar me lab test",
               sub: "Padrauna aur Kasia — wahan se log yahin dikhane aate hain",
+            },
+            // Siwan ka page is sheher ko baar baar naam se leta hai — wahan se
+            // log kareeb 110 km chal kar yahan dikhane aate hain, aur ye link
+            // us baat ka jawab hai. Link dono taraf rakhna hi ek naye URL ko
+            // crawl karwata hai.
+            {
+              href: "/lab-test/siwan",
+              label: "Siwan me lab test",
+              sub: "Bihar ka jila — wahan se log yahin dikhane aate hain",
             },
             {
               href: "/lab-test/deoria",
@@ -715,6 +740,14 @@ const LAB_CITY_SEED = [
               href: "/lab-test/deoria",
               label: "Deoria me lab test",
               sub: "Zila mukhyalaya — poore jile ki rate list aur booking",
+            },
+            // Is tehsil ki poorabi seema Bihar se lagti hai, aur Siwan ka page
+            // Bhatni aur Salempur ko naam se leta hai — link dono taraf rakhna
+            // hi ek naye URL ko crawl karwata hai.
+            {
+              href: "/lab-test/siwan",
+              label: "Siwan me lab test",
+              sub: "Bhatni-Mairwa hokar Bihar ki taraf ka padosi jila",
             },
             {
               href: "/lab-test/gorakhpur",
@@ -917,6 +950,13 @@ const LAB_CITY_SEED = [
               label: "Ballia me lab test",
               sub: "Ganga-patti aur diara ke gaon tak home collection",
             },
+            // Ghazipur ka page is jile ko naam se leta hai; link dono taraf
+            // rakhna hi ek naye URL ko crawl karwata hai.
+            {
+              href: "/lab-test/ghazipur",
+              label: "Ghazipur me lab test",
+              sub: "Zamania, Saidpur aur Mohammadabad tak home collection",
+            },
             {
               href: "/lab-test/mau",
               label: "Mau me lab test",
@@ -1114,6 +1154,14 @@ const LAB_CITY_SEED = [
               label: "Mau me lab test",
               sub: "Ghosi, Madhuban aur Doharighat tak ghar se sample",
             },
+            // Ghazipur is jile se Ganga ke saath-saath lagta hai, aur uska page
+            // Ballia ke paani wale hisse par seedha link karta hai — ye us link
+            // ka jawab hai.
+            {
+              href: "/lab-test/ghazipur",
+              label: "Ghazipur me lab test",
+              sub: "Ganga ke saath-saath lagta padosi jila",
+            },
           ],
         },
         {
@@ -1301,6 +1349,13 @@ const LAB_CITY_SEED = [
               href: "/lab-test/ballia",
               label: "Ballia me lab test",
               sub: "Padosi jila — wahan bhi wahi rate, wahi service",
+            },
+            // Ghazipur ka page Mau ko naam se leta hai; link dono taraf rakhna
+            // hi ek naye URL ko crawl karwata hai.
+            {
+              href: "/lab-test/ghazipur",
+              label: "Ghazipur me lab test",
+              sub: "Dakshin ka padosi jila — Ghazipur city se Zamania tak",
             },
           ],
         },
