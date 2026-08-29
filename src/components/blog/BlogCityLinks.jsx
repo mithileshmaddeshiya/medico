@@ -1,5 +1,6 @@
 // SSR component — plain links, nothing to hydrate.
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowUpRight } from "lucide-react";
 
 /**
@@ -100,6 +101,7 @@ export default function BlogCityLinks({ labCities = [], posts = [], current = ""
                 <li key={href}>
                   <Link
                     href={href}
+                    title={linkTitle(href)}
                     className="group flex items-start gap-1.5 text-[12.5px] sm:text-[13px] font-medium leading-snug text-slate-700 transition-colors hover:text-emerald-700"
                   >
                     <span className="min-w-0">{label}</span>

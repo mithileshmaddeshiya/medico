@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowRight, Phone, Search } from "lucide-react";
 
 import LabFooter from "@/components/lab/LabFooter";
@@ -75,6 +76,7 @@ export default async function NotFound() {
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/"
+                title={linkTitle("/")}
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-[13.5px] font-bold text-white transition hover:bg-emerald-700"
               >
                 Home page par jaayein
@@ -83,6 +85,7 @@ export default async function NotFound() {
 
               <a
                 href={`tel:${LAB_PHONE.replace(/[^+\d]/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="inline-flex items-center gap-2 rounded-xl border border-emerald-600 px-5 py-3 text-[13.5px] font-bold text-emerald-700 transition hover:bg-emerald-50"
               >
                 <Phone aria-hidden className="h-4 w-4" />
@@ -109,6 +112,7 @@ export default async function NotFound() {
                 <li key={city.slug}>
                   <Link
                     href={`/lab-test/${city.slug}`}
+                    title={linkTitle(`/lab-test/${city.slug}`)}
                     className="inline-flex rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-[12.5px] font-semibold text-slate-700 transition hover:border-emerald-300 hover:text-emerald-700"
                   >
                     {`Lab test in ${city.name}`}
@@ -132,6 +136,7 @@ export default async function NotFound() {
                   <li key={post.href}>
                     <Link
                       href={post.href}
+                      title={linkTitle(post.href)}
                       className="block h-full rounded-xl border border-slate-200 bg-white p-4 transition hover:border-emerald-200 hover:bg-emerald-50/40"
                     >
                       <span className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">

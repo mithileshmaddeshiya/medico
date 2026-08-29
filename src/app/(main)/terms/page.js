@@ -215,6 +215,7 @@ export default function TermsPage() {
             <p>
               <a
                 href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="font-semibold underline underline-offset-2 decoration-emerald-200 hover:decoration-white"
               >
                 {LAB_PHONE}
@@ -223,6 +224,7 @@ export default function TermsPage() {
             <p>
               <a
                 href={`mailto:${email}`}
+                title={`Email MedicoBharat at ${email}`}
                 className="break-all font-semibold underline underline-offset-2 decoration-emerald-200 hover:decoration-white"
               >
                 {email}

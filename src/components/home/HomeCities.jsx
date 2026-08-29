@@ -1,5 +1,6 @@
 // SSR component — plain links, nothing to hydrate.
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowRight, MapPin } from "lucide-react";
 
 /**
@@ -67,6 +68,7 @@ export default function HomeCities({ data, cities = [] }) {
                     lands in the gap between two elements. */}
                 <Link
                   href={`/lab-test/${city.slug}`}
+                  title={linkTitle(`/lab-test/${city.slug}`)}
                   className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:ring-emerald-300 hover:shadow-[0_18px_40px_-24px_rgba(6,78,59,0.5)]"
                 >
                   {/* Emerald wash that warms on hover — the card's only motion

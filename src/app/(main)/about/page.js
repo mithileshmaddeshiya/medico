@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import {
   BadgeCheck,
   Clock,
@@ -226,6 +227,7 @@ export default async function AboutMedicoBharat() {
                     <li key={city.slug}>
                       <Link
                         href={`/lab-test/${city.slug}`}
+                        title={linkTitle(`/lab-test/${city.slug}`)}
                         className="group flex items-start gap-2.5 rounded-xl bg-white p-3.5 ring-1 ring-emerald-100 transition-all duration-200 hover:ring-emerald-300 hover:shadow-[0_10px_24px_-18px_rgba(6,78,59,0.6)]"
                       >
                         <MapPin
@@ -251,6 +253,7 @@ export default async function AboutMedicoBharat() {
                   Aapka pata in list me naam se nahi hai lekin aas-paas hi hai?{" "}
                   <a
                     href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                    title={`Call ${LAB_PHONE} to book a lab test`}
                     className="font-semibold text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
                   >
                     {LAB_PHONE}
@@ -363,6 +366,7 @@ export default async function AboutMedicoBharat() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/#book"
+                title="Go to the booking form on the home page"
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-[13.5px] font-bold text-emerald-700 transition hover:bg-emerald-50 active:scale-[0.98]"
               >
                 Test book karein
@@ -370,6 +374,7 @@ export default async function AboutMedicoBharat() {
 
               <a
                 href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/70 px-6 text-[13.5px] font-bold text-white transition hover:bg-white/10 active:scale-[0.98]"
               >
                 <Phone className="h-4 w-4" strokeWidth={2.3} />

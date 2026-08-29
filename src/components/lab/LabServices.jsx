@@ -262,6 +262,7 @@ export default function LabServices({
             </p>
             <a
               href={`tel:${String(phone ?? "").replace(/\s/g, "")}`}
+              title={`Call ${phone} to book a lab test`}
               className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-[12.5px] font-bold text-white hover:bg-emerald-700 active:scale-[0.98] transition-all"
             >
               <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.3} />

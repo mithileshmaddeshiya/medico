@@ -1,6 +1,7 @@
 'use client'
 
 import { useId, useState } from "react";
+import { linkTitle } from "@/lib/linkTitle";
 import { ChevronDown } from "lucide-react";
 
 /**
@@ -175,6 +176,7 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
                             <a
                               key={href}
                               href={href}
+                              title={linkTitle(href)}
                               tabIndex={isOpen ? 0 : -1}
                               className="font-medium text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
                             >

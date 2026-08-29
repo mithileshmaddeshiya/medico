@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowRight, Clock3, MapPin, Phone } from "lucide-react";
 
 import { LAB_PHONE } from "@/data/lab/defaults";
@@ -139,7 +140,7 @@ export default async function LabTestIndexPage() {
           <nav aria-label="Breadcrumb" className="text-[12px] text-slate-500">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-emerald-700">Home</Link>
+                <Link href="/" title={linkTitle("/")} className="hover:text-emerald-700">Home</Link>
               </li>
               <li aria-hidden className="text-slate-300">/</li>
               <li className="font-medium text-slate-700">Lab Test</li>
@@ -158,6 +159,7 @@ export default async function LabTestIndexPage() {
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={`tel:${LAB_PHONE.replace(/[^+\d]/g, "")}`}
+              title={`Call ${LAB_PHONE} to book a lab test`}
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-[13.5px] font-bold text-white transition hover:bg-emerald-700"
             >
               <Phone aria-hidden className="h-4 w-4" />
@@ -197,6 +199,7 @@ export default async function LabTestIndexPage() {
             <li key={city.slug}>
               <Link
                 href={`/lab-test/${city.slug}`}
+                title={linkTitle(`/lab-test/${city.slug}`)}
                 className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-[0_12px_30px_-18px_rgba(6,78,59,.45)]"
               >
                 <div className="flex items-start justify-between gap-3">
@@ -238,6 +241,7 @@ export default async function LabTestIndexPage() {
           Aapka sheher list me nahi hai?{" "}
           <a
             href={`tel:${LAB_PHONE.replace(/[^+\d]/g, "")}`}
+            title={`Call ${LAB_PHONE} to book a lab test`}
             className="font-semibold text-emerald-700 underline underline-offset-2"
           >
             {LAB_PHONE}

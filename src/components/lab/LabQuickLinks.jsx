@@ -1,5 +1,6 @@
 // SSR component — no 'use client', and no state anywhere in it.
 import { ChevronDown } from "lucide-react";
+import { linkTitle } from "@/lib/linkTitle";
 import Link from "next/link";
 
 /**
@@ -133,6 +134,7 @@ export default function LabQuickLinks({ cities = [], currentSlug = null }) {
                   <li key={c.slug}>
                     <Link
                       href={`/lab-test/${c.slug}`}
+                      title={linkTitle(`/lab-test/${c.slug}`)}
                       aria-label={`Lab Test in ${c.name}`}
                       className="group/row flex items-center gap-2 rounded-lg px-2 py-1.5 text-[12.5px] leading-snug text-slate-700 transition-colors duration-200 hover:bg-emerald-50 hover:text-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >

@@ -1,6 +1,7 @@
 'use client'
 
 import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import { linkTitle } from "@/lib/linkTitle";
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, ChevronDown, Clock3 } from "lucide-react";
 
@@ -87,6 +88,7 @@ function Paragraph({ para, className }) {
             <Link
               key={i}
               href={part.href}
+              title={part.title ?? linkTitle(part.href)}
               className="font-semibold text-emerald-700 underline underline-offset-2 decoration-emerald-300 transition-colors hover:text-emerald-800 hover:decoration-emerald-600"
             >
               {part.text}
@@ -316,6 +318,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                     <li key={s.id}>
                       <a
                         href={`#${s.id}`}
+                        title={`Jump to: ${s.h}`}
                         onClick={(e) => jumpTo(e, s.id)}
                         aria-current={isActive ? "true" : undefined}
                         className={`group relative flex items-start gap-2.5 rounded-lg py-2 pl-4 pr-2 text-[12.5px] leading-snug transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
@@ -492,6 +495,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                                 <li key={href}>
                                   <Link
                                     href={href}
+                                    title={sub ?? linkTitle(href)}
                                     className="group flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors duration-200 hover:bg-emerald-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                                   >
                                     <span className="min-w-0 flex-1">

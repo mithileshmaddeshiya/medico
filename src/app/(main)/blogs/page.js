@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { CalendarDays, Clock } from "lucide-react";
 
 import { blogs } from "@/data/blogs";
@@ -159,7 +160,7 @@ export default async function BlogsIndexPage() {
           <nav aria-label="Breadcrumb" className="text-[12px] text-slate-500">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-emerald-700">Home</Link>
+                <Link href="/" title={linkTitle("/")} className="hover:text-emerald-700">Home</Link>
               </li>
               <li aria-hidden className="text-slate-300">/</li>
               <li className="font-medium text-slate-700">Guides</li>
@@ -194,6 +195,7 @@ export default async function BlogsIndexPage() {
               <li key={post.href}>
                 <Link
                   href={post.href}
+                  title={linkTitle(post.href)}
                   className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition hover:border-emerald-300 hover:shadow-[0_12px_30px_-18px_rgba(6,78,59,.45)]"
                 >
                   <span className="text-[11px] font-bold uppercase tracking-wide text-emerald-700">
@@ -244,6 +246,7 @@ export default async function BlogsIndexPage() {
               <li key={city.slug}>
                 <Link
                   href={`/lab-test/${city.slug}`}
+                  title={linkTitle(`/lab-test/${city.slug}`)}
                   className="inline-flex rounded-lg bg-white px-3.5 py-2 text-[12.5px] font-semibold text-emerald-800 ring-1 ring-emerald-200 transition hover:bg-emerald-600 hover:text-white hover:ring-emerald-600"
                 >
                   {`Lab test in ${city.name}`}

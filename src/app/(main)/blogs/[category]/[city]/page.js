@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { linkTitle } from "@/lib/linkTitle";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Check, Clock, Phone, RefreshCw } from "lucide-react";
@@ -228,7 +229,7 @@ export default async function BlogPage({ params }) {
           <nav aria-label="Breadcrumb" className="text-[12px] text-slate-500">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-emerald-700">Home</Link>
+                <Link href="/" title={linkTitle("/")} className="hover:text-emerald-700">Home</Link>
               </li>
 
               {/* Same trail as the schema above — and the same reason there is
@@ -239,6 +240,7 @@ export default async function BlogPage({ params }) {
                   <li>
                     <Link
                       href={parentCrumb.item.replace(SITE, "")}
+                      title={linkTitle(parentCrumb.item.replace(SITE, ""))}
                       className="hover:text-emerald-700"
                     >
                       {parentCrumb.name}
@@ -380,6 +382,7 @@ export default async function BlogPage({ params }) {
                         </span>
                         <a
                           href={`#${section.id}`}
+                          title={`Jump to: ${section.heading}`}
                           className="text-[12.5px] font-medium leading-snug text-slate-600 transition-colors hover:text-emerald-700"
                         >
                           {section.heading}
@@ -404,6 +407,7 @@ export default async function BlogPage({ params }) {
 
                   <Link
                     href={`/lab-test/${labCity.slug}#book`}
+                    title={`Book a lab test in ${labCity.name} — free home sample collection`}
                     className="mt-4 flex w-full items-center justify-center rounded-xl bg-emerald-600 px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-emerald-700"
                   >
                     Test book karein
@@ -411,6 +415,7 @@ export default async function BlogPage({ params }) {
 
                   <a
                     href={`tel:${SITE_PHONE.replace(/[^+\d]/g, "")}`}
+                    title={`Call ${SITE_PHONE} to book a lab test`}
                     className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-xl border border-emerald-600 px-4 py-2.5 text-[13px] font-semibold text-emerald-700 transition hover:bg-emerald-100"
                   >
                     <Phone aria-hidden className="h-3.5 w-3.5" />
@@ -473,6 +478,7 @@ export default async function BlogPage({ params }) {
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                   <Link
                     href={`/lab-test/${labCity.slug}`}
+                    title={linkTitle(`/lab-test/${labCity.slug}`)}
                     className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-[14px] font-bold text-emerald-700 transition hover:bg-emerald-50"
                   >
                     {labCity.name} me lab test book karein
@@ -480,6 +486,7 @@ export default async function BlogPage({ params }) {
 
                   <Link
                     href="/"
+                    title={linkTitle("/")}
                     className="inline-flex items-center rounded-xl border border-white/70 px-6 py-3 text-[14px] font-bold text-white transition hover:bg-white/10"
                   >
                     Sabhi test aur rate list
@@ -543,6 +550,7 @@ export default async function BlogPage({ params }) {
                     <Link
                       key={item.href}
                       href={item.href}
+                      title={linkTitle(item.href)}
                       className="rounded-xl border border-slate-200 p-4 transition hover:border-emerald-200 hover:bg-emerald-50/40"
                     >
                       <span className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">

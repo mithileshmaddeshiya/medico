@@ -215,6 +215,7 @@ export default function LabLeadCard({
             <div className="mt-4 flex flex-col gap-2">
               <a
                 href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-600 to-teal-600 text-[13px] font-bold text-white hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98] transition-all"
               >
                 <PhoneCall className="h-3.5 w-3.5" strokeWidth={2.4} />

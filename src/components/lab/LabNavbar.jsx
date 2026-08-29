@@ -54,10 +54,10 @@ import { LAB_PHONE } from "@/data/lab/defaults"
  * where the exhaustive list belongs.
  */
 const NAV_LINKS = [
-    { href: "/lab-test", label: "Lab Tests" },
-    { href: "/blogs", label: "Guides" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/lab-test", label: "Lab Tests", title: "Lab test rate list and home sample collection in every city we serve" },
+    { href: "/blogs", label: "Guides", title: "Health guides — which test to take, fasting rules and how to read a report" },
+    { href: "/about", label: "About", title: "About MedicoBharat — who we are and where we collect samples" },
+    { href: "/contact", label: "Contact", title: "Contact MedicoBharat — phone number and booking help" },
 ]
 
 export default function LabNavbar() {
@@ -86,7 +86,7 @@ export default function LabNavbar() {
                 <div className="max-w-6xl mx-auto pl-3 pr-2 sm:px-5 md:px-8 flex items-center justify-between gap-2 sm:gap-3 h-16 sm:h-20">
 
                     {/* LOGO */}
-                    <Link href="/" className="flex items-center shrink-0" aria-label="MedicoBharat — Home">
+                    <Link href="/" className="flex items-center shrink-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with free sample collection">
                         {/* 320×90 is the artwork's real 3.56:1 ratio, and the file
                             is the trimmed WebP rather than the original PNG.
 
@@ -128,6 +128,7 @@ export default function LabNavbar() {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
+                                    title={link.title}
                                     className="block rounded-lg px-2.5 lg:px-3 py-2 text-[13px] font-semibold text-slate-600 whitespace-nowrap transition-colors hover:bg-emerald-50 hover:text-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                                 >
                                     {link.label}
@@ -141,6 +142,7 @@ export default function LabNavbar() {
                         <a
                             href={tel}
                             aria-label={`Call us at ${LAB_PHONE}`}
+                            title={`Call ${LAB_PHONE} to book a lab test`}
                             className="group flex items-center gap-1.5 sm:gap-2.5 rounded-full p-1 pr-3 sm:pr-5 ring-1 ring-emerald-200/70 hover:ring-emerald-300 shadow-sm hover:shadow-md active:scale-[0.98] bg-linear-to-r from-emerald-50 to-teal-50 transition-all duration-200"
                         >
                             {/* Icon badge with live pulse */}

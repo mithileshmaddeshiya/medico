@@ -1,5 +1,6 @@
 // SSR component — semantic markup and next/image, nothing to hydrate.
 import { Fragment } from "react";
+import { linkTitle } from "@/lib/linkTitle";
 import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, Info } from "lucide-react";
@@ -44,6 +45,7 @@ function Parts({ value }) {
         <Link
           key={i}
           href={part.href}
+          title={linkTitle(part.href)}
           className="font-semibold text-emerald-700 underline underline-offset-2 decoration-emerald-300 transition-colors hover:text-emerald-800 hover:decoration-emerald-600"
         >
           {part.text}

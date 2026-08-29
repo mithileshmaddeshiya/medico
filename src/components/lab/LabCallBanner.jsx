@@ -29,6 +29,7 @@ export default function LabCallBanner({ banner, phone }) {
           href={tel}
           aria-hidden
           tabIndex={-1}
+          title={`Call ${phone} to book a lab test`}
           className="mx-auto flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-linear-to-br from-emerald-600 to-teal-600 text-white ring-6 ring-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.95)] active:scale-95"
         >
           <Phone className="h-5.5 w-5.5 sm:h-6 sm:w-6" strokeWidth={2.2} />
@@ -41,6 +42,7 @@ export default function LabCallBanner({ banner, phone }) {
         <a
           href={tel}
           aria-label={`Call us at ${phone}`}
+          title={`Call ${phone} to book a lab test`}
           className="mt-2 inline-block text-[16px] sm:text-[19px] font-bold tabular-nums tracking-tight text-emerald-700 hover:text-emerald-800"
         >
           {phone}
@@ -49,6 +51,7 @@ export default function LabCallBanner({ banner, phone }) {
         <div className="mt-5">
           <a
             href={tel}
+            title={`Call ${phone} to book a lab test`}
             className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-7 sm:px-9 text-[13px] sm:text-[14px] font-bold text-white shadow-[0_10px_22px_-10px_rgba(5,150,105,0.95)] hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98] transition-all duration-200"
           >
             <Phone className="h-4 w-4 shrink-0" strokeWidth={2.4} />
