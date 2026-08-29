@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { LAB_PHONE } from "@/data/lab/defaults";
+import { coverageEn, coverageHi } from "@/lib/coverage";
 import { getLabCities } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, url } from "@/lib/site";
@@ -39,7 +40,12 @@ export const metadata = {
   title: "About MedicoBharat — Lab Test at Home",
 
   description:
-    "MedicoBharat books lab tests and full body checkups with free home sample collection across Varanasi, Gorakhpur and Deoria. What we promise, and what we deliberately do not claim.",
+    // `coverageEn()`, not `coverage()`. Naming all six towns costs ~55
+    // characters and pushed this to 207 — a third of the budget spent on a list
+    // the page body carries in full anyway. The English helper is used because
+    // THIS description is in English; the Hinglish one would mix registers.
+    // See src/lib/coverage.js.
+    `MedicoBharat books lab tests and full body checkups across ${coverageEn()}. What we promise, and what we deliberately do not claim.`,
 
   keywords: [
     "MedicoBharat",
@@ -166,8 +172,7 @@ export default async function AboutMedicoBharat() {
             <p className="mt-4 text-[14px] sm:text-[16.5px] leading-relaxed text-slate-600">
               MedicoBharat ek lab test service hai. Hum aapke ghar se blood aur
               urine ka sample lete hain, lab tak pahunchate hain, aur report
-              seedhe aapke phone par bhejte hain — Varanasi, Gorakhpur aur
-              Deoria jile me.
+              seedhe aapke phone par bhejte hain — {coverageHi()} jile me.
             </p>
           </div>
         </div>

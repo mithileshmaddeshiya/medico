@@ -316,14 +316,43 @@ export default function LabServices({
                           </span>
 
                           <div className="min-w-0 flex-1">
-                            <h3 className="flex items-center gap-1.5 pr-14 text-[14.5px] font-bold leading-snug text-slate-900">
-                              <span className="truncate">{t.name}</span>
+                            {/* ── NOT AN h3 — DELIBERATELY ────────────────────
+                                This component renders the test list TWICE: this
+                                phone list (`sm:hidden`) and the desktop carousel
+                                below (`hidden sm:block`). Both are in the DOM at
+                                once, so when both used <h3> every test emitted a
+                                duplicate heading on every page of the site.
+
+                                The carousel keeps the headings because it always
+                                holds the COMPLETE set of tests. This list is
+                                `visible.slice(0, 4)` until the reader taps "show
+                                more" — a document outline that changes depending
+                                on whether someone tapped a button is not an
+                                outline. The names are also carried by the JSON-LD
+                                `makesOffer` block, the guide prose and the FAQs,
+                                so nothing is lost by styling rather than marking
+                                these up as headings.
+
+                                `font-bold` at the same size renders identically.
+
+                                The "Top" badge is a sibling, not a child: inside
+                                the heading its text content became "CBC TestTop",
+                                which is what a crawler indexed and what a screen
+                                reader announced. `aria-hidden` because "Popular"
+                                is already stated by the tag copy on the card. */}
+                            <div className="flex items-center gap-1.5 pr-14">
+                              <p className="min-w-0 truncate text-[14.5px] font-bold leading-snug text-slate-900">
+                                {t.name}
+                              </p>
                               {(t.tags ?? []).includes("Popular") && (
-                                <span className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
+                                <span
+                                  aria-hidden
+                                  className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
+                                >
                                   Top
                                 </span>
                               )}
-                            </h3>
+                            </div>
                             <p className="mt-0.5 truncate text-[11.5px] leading-snug text-slate-500">
                               {t.sub}
                             </p>
@@ -480,14 +509,21 @@ export default function LabServices({
                       <Icon className="h-4.5 w-4.5" strokeWidth={1.8} />
                     </span>
 
-                    <h3 className="mt-2 flex items-center gap-1.5 text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug">
-                      <span className="truncate">{t.name}</span>
+                    {/* Badge outside the heading — see the note on the mobile
+                        card above for why. */}
+                    <div className="mt-2 flex items-center gap-1.5">
+                      <h3 className="min-w-0 truncate text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug">
+                        {t.name}
+                      </h3>
                       {(t.tags ?? []).includes("Popular") && (
-                        <span className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
+                        <span
+                          aria-hidden
+                          className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
+                        >
                           Top
                         </span>
                       )}
-                    </h3>
+                    </div>
                     <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-slate-500 leading-snug">
                       {t.sub}
                     </p>

@@ -35,7 +35,7 @@ export const metadata = {
   title: "Contact MedicoBharat — Lab Test Booking Help",
 
   description:
-    "Lab test booking, home sample collection ke ilaake, report ya price ka sawaal — WhatsApp, phone ya email par MedicoBharat se baat kijiye. Slot subah 6 baje se, saaton din.",
+    "Lab test booking, collection ke ilaake, report ya price ka sawaal — MedicoBharat se WhatsApp, phone ya email par baat kijiye. Slot subah 6 baje se.",
 
   keywords: [
     "Contact MedicoBharat",

@@ -46,6 +46,8 @@
  * from src/data/lab/cities.js and the two guides from src/data/blogs/varanasi/.
  * If a city is ever unpublished, the links naming it here have to go with it.
  */
+
+import { SERVICE_CITIES, coverageHi } from "@/lib/coverage";
 import { LAB_PHONE } from "@/data/lab/defaults";
 
 /* ── Metadata ─────────────────────────────────────────────────────────────
@@ -109,10 +111,9 @@ export const HOME_META = {
     "lab test report kaise padhein",
     "umar ke hisaab se health checkup",
 
-    // Regional — the district names in the service area
-    "lab test in Varanasi",
-    "lab test in Gorakhpur",
-    "lab test in Deoria",
+    // Regional — every district in the service area, built from the live city
+    // list. It named three while six were live; see src/lib/coverage.js.
+    ...SERVICE_CITIES.map((city) => `lab test in ${city}`),
     "lab test in Purvanchal",
 
     // Devanagari — the script a large share of this audience types in
@@ -124,14 +125,26 @@ export const HOME_META = {
 };
 
 /* ── Hero ─────────────────────────────────────────────────────────────────
-   The hero is a banner image plus the booking form, the same as the city
-   pages, and the h1 is screen-reader only. */
+   A visible headline, a one-line promise, then the banner image and the
+   booking form side by side — the same shape as the city pages.
+
+   The h1 used to be `sr-only`, because the headline was printed into the
+   banner artwork. That made the most prominent element on the site's most
+   linked page unreadable to a crawler, and made a 1.5 MB image the LCP
+   candidate instead of a line of text. See HomeHero.jsx. */
 export const HOME_HERO = {
-  /* Two halves so that, if the visible headline ever comes back, the accent
-     colour falls on the phrase carrying the primary keyword rather than on a
-     random word in the middle of it. HomeHero joins them for the sr-only h1. */
+  /* Two halves so the accent colour falls on the phrase carrying the primary
+     keyword rather than on a random word in the middle of it. The visible
+     headline is back — HomeHero renders `h1Accent` in emerald. */
   h1Lead: "Lab Test Ghar Baithe —",
   h1Accent: "Free Home Sample Collection",
+
+  /* The one line under the h1. It names the region rather than listing six
+     towns: this sits above the fold on a phone, and the list would push the
+     booking form off the screen. The full list is in the guide further down
+     and in the footer. */
+  h1Sub:
+    "CBC, thyroid, sugar, vitamin aur full body checkup — trained phlebotomist ghar aakar sample lega, report 24 ghante me WhatsApp par.",
 
   formTitle: "Book Your Sample Collection",
 
@@ -140,7 +153,10 @@ export const HOME_HERO = {
   // identical image makes the home page look like just another city page.
   // 1700x925, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
-  image: "/navheroimage/herosecimg.png",
+  //
+  // WebP, not the original PNG: this is the LCP element on the site's most
+  // linked page, marked `priority`. Same pixels, 91 KB instead of 1516 KB.
+  image: "/navheroimage/herosecimg.webp",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
@@ -309,7 +325,7 @@ export const HOME_GUIDES = {
 export const HOME_FAQS = [
   {
     q: "MedicoBharat kya hai?",
-    a: `MedicoBharat ek lab test service hai jo aapke ghar se blood aur urine sample collect karti hai — Varanasi, Gorakhpur aur Deoria jile me. Aap CBC, thyroid, sugar, vitamin, liver, kidney aur full body checkup jaise test book kar sakte hain. Home sample collection free hai, aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Booking ${LAB_PHONE} par call kar ke bhi ho jaati hai.`,
+    a: `MedicoBharat ek lab test service hai jo aapke ghar se blood aur urine sample collect karti hai — ${coverageHi()} jile me. Aap CBC, thyroid, sugar, vitamin, liver, kidney aur full body checkup jaise test book kar sakte hain. Home sample collection free hai, aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Booking ${LAB_PHONE} par call kar ke bhi ho jaati hai.`,
   },
   {
     q: "Kya ghar par blood test karana sach me free hota hai?",

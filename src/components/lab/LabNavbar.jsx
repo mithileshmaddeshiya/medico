@@ -15,17 +15,51 @@ import { LAB_PHONE } from "@/data/lab/defaults"
  * crossing from the home page into a lab page watched the whole chrome change.
  * That second navbar is gone; this is now mounted by every layout.
  *
- * ── THE HEADER CARRIES NO LINKS ──────────────────────────────────────────
- * The bar used to carry a desktop row of links — Home, a Lab Tests menu with
- * every live city, a Health Guides menu, About, Contact. That row was replaced
- * by the ECG tagline, and the hamburger button that held the same links in a
- * slide-in sheet has since been removed too. What is left is a logo, a running
- * heartbeat and the phone number, at every width.
+ * ── THE HEADER CARRIES LINKS AGAIN ───────────────────────────────────────
+ * It had none. A logo, a decorative ECG line and a phone number, at every
+ * width — so every internal link on the site lived in the footer or in body
+ * copy. Google discounts sitewide footer links relative to header and
+ * in-content ones, which meant the section's most commercially valuable pages
+ * were reachable only by the weakest form of internal linking available.
  *
- * So the only navigation out of any page is now in the body and in the footer.
- * LabFooter's "Cities We Serve" column is what links every city from every
- * page — if that ever goes, the city pages lose their sitewide link entirely.
+ * The four links below are the site's real top level. They are flat hrefs, not
+ * dropdown menus: the menus this header used to carry needed JavaScript to
+ * open, and a link inside a closed menu is a link a crawler has to work for.
+ * Two of them point at hub pages that did not exist until this pass —
+ * /lab-test and /blogs — which is the other half of the same fix.
+ *
+ * ── WHY THE ECG LINE HAD TO GO ───────────────────────────────────────────
+ * It sat in exactly the space the links need, and it was decoration that said
+ * so in its own comment. The promise it carried ("home sample collection —
+ * reports in 24 hours") is stated by the trust strip on every page, the hero
+ * sub-line and the footer, so nothing factual is lost.
+ *
+ * ── THE MOBILE CAVEAT, STATED PLAINLY ────────────────────────────────────
+ * The row is `hidden md:flex`. Below `md` the logo and the call block already
+ * fill the bar, and squeezing links in would shrink the phone number — the one
+ * thing on a phone header actually worth tapping. The links are still in the
+ * HTML at every width, so the link graph is unaffected; what a phone reader
+ * gets instead is the footer, which carries the same destinations plus every
+ * city. If this header ever grows a second row, that is the place to solve it
+ * properly — but not at the cost of the call button.
  */
+/**
+ * The header's four destinations, in the order they matter commercially.
+ *
+ * "Lab Tests" is first and points at the city hub rather than at any one city:
+ * a header link is on every page including the six city pages, and pointing it
+ * at Varanasi from Ballia's page would be a sitewide vote for the wrong town.
+ *
+ * Keep this list to four. A fifth item wraps the bar at `md`, and the footer is
+ * where the exhaustive list belongs.
+ */
+const NAV_LINKS = [
+    { href: "/lab-test", label: "Lab Tests" },
+    { href: "/blogs", label: "Guides" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+]
+
 export default function LabNavbar() {
     const [scrolled, setScrolled] = useState(false)
 
@@ -53,61 +87,54 @@ export default function LabNavbar() {
 
                     {/* LOGO */}
                     <Link href="/" className="flex items-center shrink-0" aria-label="MedicoBharat — Home">
+                        {/* 320×90 is the artwork's real 3.56:1 ratio, and the file
+                            is the trimmed WebP rather than the original PNG.
+
+                            The source was an 826 KB PNG, 1774×887, of which only
+                            1646×463 was actually logo — the rest was blank
+                            padding. It was declared here at 260×76 (3.42:1), a
+                            ratio that matched neither the file nor the artwork,
+                            so `object-contain` letterboxed it inside a box wider
+                            than it needed and the reserved layout space did not
+                            match the painted pixels.
+
+                            Trimmed and re-encoded it is 14 KB — a 98% cut on an
+                            image that is `priority`-preloaded on every route of
+                            the site. With the ratio now honest, `object-contain`
+                            is no longer doing any work, but it is kept as a cheap
+                            guard against a future re-export at a different crop. */}
                         <Image
-                            src="/navbar/lablogo.png"
+                            src="/navbar/lablogo.webp"
                             alt="MedicoBharat — lab test at home"
-                            width={260}
-                            height={76}
+                            width={320}
+                            height={90}
                             className="h-14 sm:h-12 md:h-14 w-auto object-contain scale-110 origin-left"
                             priority
                         />
                     </Link>
 
-                    {/* ── CENTRE: ECG TAGLINE ─────────────────────────────────
-                        What the desktop link row used to occupy. It is
-                        decoration, not navigation — `aria-hidden` on the line
-                        itself, and the words beside it are a plain statement of
-                        the two things this service actually promises.
+                    {/* ── CENTRE: PRIMARY NAVIGATION ──────────────────────
+                        The site's four top-level destinations. Flat links, no
+                        dropdowns — see the note at the top of this file for why
+                        the menus that used to live here are not coming back.
 
-                        `md` and up only: below that the logo and the call block
-                        already fill the bar, and squeezing this in between them
-                        would shrink the phone number, which is the one thing on
-                        a phone header worth tapping. */}
-                    <p className="hidden md:flex min-w-0 items-center gap-2.5 text-[12.5px] font-semibold text-slate-600">
-                        <svg
-                            viewBox="0 0 120 24"
-                            className="h-5 w-21 shrink-0 overflow-visible"
-                            fill="none"
-                            aria-hidden
-                        >
-                            {/* `.ecg-line` draws the stroke on a 2.4s loop — see
-                                the keyframes in src/app/globals.css. */}
-                            <path
-                                className="ecg-line"
-                                d="M0 12 H26 l4 -9 6 18 5 -14 4 10 H72 l4 -6 4 6 H120"
-                                stroke="url(#navEcg)"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <defs>
-                                <linearGradient
-                                    id="navEcg"
-                                    x1="0"
-                                    y1="0"
-                                    x2="120"
-                                    y2="0"
-                                    gradientUnits="userSpaceOnUse"
+                        `aria-label` on the <nav> is "Main" already, so these
+                        need no further labelling. Anchors carry descriptive text
+                        rather than "Tests" / "Guides" alone: the anchor text is
+                        the strongest on-page signal about what the target page
+                        is, and this row is on every route of the site. */}
+                    <ul className="hidden md:flex min-w-0 items-center gap-1 lg:gap-2">
+                        {NAV_LINKS.map((link) => (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    className="block rounded-lg px-2.5 lg:px-3 py-2 text-[13px] font-semibold text-slate-600 whitespace-nowrap transition-colors hover:bg-emerald-50 hover:text-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                                 >
-                                    <stop stopColor="#0d9488" />
-                                    <stop offset="1" stopColor="#059669" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span className="truncate">
-                            Home sample collection — reports in 24 hours
-                        </span>
-                    </p>
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
 
                     {/* RIGHT: the call block — the header's only action. */}
                     <div className="flex items-center gap-1.5 shrink-0">

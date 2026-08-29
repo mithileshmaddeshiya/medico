@@ -124,7 +124,7 @@ export const fullBodyCheckupVaranasi = {
      because the page and the searcher both are — with the English terms that
      have to match kept intact: full body checkup, package, parameter. */
   description:
-    "Varanasi me full body checkup me kaun se test hone chahiye, sasta package me kya chhoot jaata hai, aur umar ke hisaab se kaun sa package sahi hai — poori guide.",
+    "Varanasi me full body checkup me kaun se test hone chahiye, sasta package me kya chhoot jaata hai, aur umar ke hisaab se kaun sa sahi hai.",
 
   /* Ordered strongest first. This array is the checklist the headings, tables
      and FAQs below were written against — every term here appears in the

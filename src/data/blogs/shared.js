@@ -11,6 +11,7 @@
  * Import these instead of retyping them. A new post should only carry what is
  * genuinely different about it.
  */
+import { BRAND_LOGO } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
 /** Byline for every post. Articles here are editorial, not personally authored. */
@@ -22,13 +23,19 @@ export const BLOG_AUTHOR = {
 /**
  * Publisher node for BlogPosting.
  *
- * Same logo file as organizationNode() in src/lib/schema.js — the two must not
- * drift, or the same company is described with two different logos on the same
- * domain.
+ * The logo is IMPORTED from src/lib/schema.js, not retyped. Both files used to
+ * spell out `${SITE}/navbar/navbg.webp` — a file that has never existed in
+ * /public — so the publisher logo on both articles 404'd, which is on its own
+ * enough for Google to withhold the Article rich result. Exactly the bug the
+ * comment at the top of this file describes, repeated.
+ *
+ * Sharing the constant means the same company can never be described with two
+ * different logos on the same domain, and there is now only one path to check
+ * if it ever moves again.
  */
 export const BLOG_PUBLISHER = {
   name: "MedicoBharat",
-  logo: `${SITE}/navbar/navbg.webp`,
+  logo: BRAND_LOGO,
 };
 
 /**

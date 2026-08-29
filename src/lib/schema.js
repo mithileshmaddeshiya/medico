@@ -26,7 +26,18 @@
  * none — it is exactly what a manual action is written for. Only add a
  * `sameAs` profile that is genuinely ours and genuinely live.
  */
-import { SITE } from "./site";
+import { coverageHi } from "./coverage";
+import { SITE, SITE_PHONE_E164 } from "./site";
+
+/**
+ * The brand mark, as one absolute URL.
+ *
+ * Square (512×512) on purpose — see the note on `logo` below. Written here
+ * rather than inline so the Organization node and the BlogPosting publisher in
+ * src/data/blogs/shared.js cannot drift into describing the same company with
+ * two different logos.
+ */
+export const BRAND_LOGO = `${SITE}/brand/logo-square.png`;
 
 /* ── Stable identifiers ───────────────────────────────────────────────────
    Fragment URLs, never a page URL: `#organization` is the company, and it is
@@ -93,7 +104,14 @@ export const BRAND_ALTERNATE_NAMES = [
   "मेडिको भारत",
 ];
 
-const BRAND_PHONE = "+916392108234";
+/**
+ * The brand's phone number.
+ *
+ * ⚠ IMPORTED, NEVER TYPED. This used to be a literal "+916392108234" — a
+ * different number from the one the entire visible site uses. See the note on
+ * SITE_PHONE_E164 in src/lib/site.js for what that cost.
+ */
+const BRAND_PHONE = SITE_PHONE_E164;
 const BRAND_EMAIL = "support.medicobharat@gmail.com";
 
 /**
@@ -111,11 +129,31 @@ export const organizationNode = () => ({
   name: "MedicoBharat",
   alternateName: BRAND_ALTERNATE_NAMES,
   url: SITE,
+  /**
+   * The brand mark.
+   *
+   * ⚠ THIS URL MUST RESOLVE. It pointed at `/navbar/navbg.webp` — a file that
+   * has never existed in /public — so the ImageObject on the entity that every
+   * other node on the site resolves to was a 404, on every page. A publisher
+   * logo that 404s is enough on its own for Google to withhold the Article rich
+   * result, and a broken image on the Organization node undermines the exact
+   * brand-entity problem this whole file was written to solve.
+   *
+   * It is the SQUARE lockup, not the wide navbar file: Google's guidance for a
+   * publisher logo is a near-square raster, and a 3.5:1 banner gets letterboxed
+   * or rejected. `width`/`height` are declared because a consumer that cannot
+   * fetch the file still needs to know it clears the 112px minimum.
+   *
+   * Before changing this path, open `${SITE}${path}` in a browser and confirm
+   * it returns an image.
+   */
   logo: {
     "@type": "ImageObject",
     "@id": LOGO_ID,
-    url: `${SITE}/navbar/navbg.webp`,
-    contentUrl: `${SITE}/navbar/navbg.webp`,
+    url: BRAND_LOGO,
+    contentUrl: BRAND_LOGO,
+    width: 512,
+    height: 512,
     caption: "MedicoBharat",
   },
   image: { "@id": LOGO_ID },
@@ -124,8 +162,11 @@ export const organizationNode = () => ({
   // other node on the site resolves to, i.e. the definition of the brand as
   // far as a crawler is concerned. The medicine section is retired; nothing
   // here may describe it again.
-  description:
-    "MedicoBharat ghar par lab test aur full body checkup ke liye free home sample collection karta hai — Varanasi, Gorakhpur aur Deoria jile me. Report 24 ghante me.",
+  //
+  // The city list is BUILT, not typed. It read "Varanasi, Gorakhpur aur Deoria"
+  // long after Salempur, Azamgarh and Ballia shipped, so the entity every node
+  // on the site resolves to excluded half the service area. See src/lib/coverage.js.
+  description: `MedicoBharat ghar par lab test aur full body checkup ke liye free home sample collection karta hai — ${coverageHi()} jile me. Report 24 ghante me.`,
   email: BRAND_EMAIL,
   telephone: BRAND_PHONE,
   address: {

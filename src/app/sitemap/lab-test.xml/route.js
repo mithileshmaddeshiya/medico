@@ -1,4 +1,4 @@
-import { getLabCitySlugs } from "@/lib/labCities";
+import { getLabCities } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 
 export const revalidate = 86400; // regenerate once per day instead of every request
@@ -12,16 +12,33 @@ export const revalidate = 86400; // regenerate once per day instead of every req
  * never submitted at all. A generated list cannot drift from the routes that
  * actually exist, and a new city is in the sitemap the moment it ships.
  */
-export async function GET() {
-  const slugs = await getLabCitySlugs();
-  const lastmod = new Date().toISOString().split("T")[0];
+/**
+ * `lastmod` comes from the city's own `updated` field, never from the clock.
+ *
+ * It used to be `new Date()`, so with `revalidate = 86400` this file told Google
+ * that all six city pages changed yesterday, and the day before, and the day
+ * before that. A lastmod that always says "today" is one Google learns to ignore
+ * entirely — which is exactly the reasoning already written at the top of
+ * sitemap/blogs.xml, where it was got right.
+ *
+ * `updated` is already in src/data/lab/cities.js for every city. An entry
+ * without one, or with an unparseable one, emits no <lastmod> at all: no date is
+ * a neutral signal, a wrong date is a false one.
+ */
+const lastmodOf = (city) =>
+  /^\d{4}-\d{2}-\d{2}$/.test(String(city.updated ?? ""))
+    ? `
+      <lastmod>${city.updated}</lastmod>`
+    : "";
 
-  const urls = slugs
+export async function GET() {
+  const cities = await getLabCities();
+
+  const urls = cities
     .map(
-      (slug) => `
+      (city) => `
     <url>
-      <loc>${SITE}/lab-test/${slug}</loc>
-      <lastmod>${lastmod}</lastmod>
+      <loc>${SITE}/lab-test/${city.slug}</loc>${lastmodOf(city)}
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>`

@@ -38,14 +38,31 @@ export default function HomeHero({ hero, cityOptions }) {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-28  sm:pb-6">
-        {/* The page's only h1. Every section below it starts at h2. */}
-        <h1 className="sr-only">
-          {hero.h1Lead} {hero.h1Accent}
+        {/* ── THE PAGE'S ONLY H1 ──────────────────────────────────────────
+            Every section below it starts at h2.
+
+            It was `sr-only`, because the headline was printed into the banner
+            artwork — so the home page, the page every external link and every
+            brand search points at, had no readable headline at all and its LCP
+            candidate was a 1.5 MB image instead of a line of text.
+
+            The two halves finally do the job they were split for: the accent
+            colour lands on "Free Home Sample Collection", the phrase carrying
+            the primary keyword, rather than on a word in the middle of it. */}
+        <h1 className="max-w-3xl text-balance text-[27px] min-[400px]:text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold leading-[1.1] tracking-tight text-slate-900">
+          {hero.h1Lead}{" "}
+          <span className="text-emerald-700">{hero.h1Accent}</span>
         </h1>
+
+        {hero.h1Sub && (
+          <p className="mt-3 max-w-2xl text-pretty text-[14px] sm:text-[15.5px] leading-relaxed text-slate-600">
+            {hero.h1Sub}
+          </p>
+        )}
 
         {/* No `items-center` — the two columns must stretch to the same height,
             which is what lets the image match the form. */}
-        <div className="grid gap-5 lg:grid-cols-12 lg:gap-8">
+        <div className="mt-6 sm:mt-7 grid gap-5 lg:grid-cols-12 lg:gap-8">
 
           {/* ── IMAGE ─────────────────────────────────────────────────────────
               Two different sizing rules, one per layout:

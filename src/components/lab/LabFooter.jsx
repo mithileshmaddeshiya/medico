@@ -103,15 +103,18 @@ export default function LabFooter({ city = null, labCities = [] }) {
             between this block and the city list rather than left as a hole. */}
         <div className="col-span-2 lg:col-span-4">
           <Link href="/" aria-label="MedicoBharat Lab Test — Home" className="inline-block">
+            {/* Same trimmed WebP and same true 3.56:1 ratio as the navbar — see
+                the note there. No `priority`: this sits at the bottom of the
+                page and must never compete with the hero for bandwidth. */}
             <Image
-              src="/navbar/lablogo.png"
+              src="/navbar/lablogo.webp"
               alt={
                 city
                   ? `MedicoBharat — Lab Test in ${city.name}`
                   : "MedicoBharat — Lab Test at Home"
               }
-              width={260}
-              height={76}
+              width={320}
+              height={90}
               className="h-8 sm:h-10 w-auto object-contain cursor-pointer mb-1 sm:mb-1.5"
             />
           </Link>

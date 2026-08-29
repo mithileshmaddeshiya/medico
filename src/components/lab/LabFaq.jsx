@@ -28,7 +28,7 @@ import { ChevronDown } from "lucide-react";
  * ranking value lives in the visible answers being genuinely useful and
  * genuinely different per city.
  */
-export default function LabFaq({ city, faqs = [], pageUrl }) {
+export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }) {
   const [open, setOpen] = useState(0);
   const uid = useId();
 
@@ -47,6 +47,27 @@ export default function LabFaq({ city, faqs = [], pageUrl }) {
   if (!items.length) return null;
 
   const headingId = `${uid}-heading`;
+
+  /* ── WHY THE HEADING IS A PROP ──────────────────────────────────────────
+     It was the literal string "Frequently Asked Questions", which meant the
+     only <h2> in this section was byte-identical on all six city pages while
+     the eight answers underneath it were hand-written and completely different
+     per city. The one line summarising the block carried no signal at all, and
+     the city term it was missing was sitting one element below in a <p>.
+
+     That is the exact trade this codebase already argues in
+     src/data/lab/content/deoria.js: "a heading ranks and a keyword buried in a
+     paragraph mostly does not". So the city page passes a real Hinglish
+     sentence naming the town, and the generic string stays as the default for
+     the home page, which serves every city and can name none of them.
+
+     It is a heading, not a keyword slot. Do not grow it into
+     "Deoria Lab Test Blood Test Pathology Lab FAQ" — that is the stuffing the
+     rest of this section was written to avoid. */
+  const title = heading?.trim() || "Frequently Asked Questions";
+  const sub =
+    subheading?.trim() ||
+    `${city} me lab test, home collection aur report se jude aam sawaal`;
 
   // Joined to the page's graph rather than left standing on its own. The page
   // emits #webpage / #diagnosticlab / #breadcrumb (see the lab city page); this
@@ -86,10 +107,10 @@ export default function LabFaq({ city, faqs = [], pageUrl }) {
           id={headingId}
           className="text-balance text-center text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900"
         >
-          Frequently Asked Questions
+          {title}
         </h2>
         <p className="mt-2 text-center text-[12.5px] sm:text-[13.5px] text-slate-500">
-          {city} me lab test, home collection aur report se jude aam sawaal
+          {sub}
         </p>
 
         {/* Only one answer open at a time so the list never becomes a wall of

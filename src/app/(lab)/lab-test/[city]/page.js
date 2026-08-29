@@ -148,8 +148,37 @@ const ids = (slug) => {
   };
 };
 
+/**
+ * The Maps URL this city's local node should publish.
+ *
+ * A service like this ends up with ONE Business Profile per town, not one for
+ * the brand — the Deoria profile is a different verified record from the
+ * Varanasi one, with its own reviews, its own photos and its own map pin. So
+ * the city's own `gbp` wins, and the brand-wide GBP_MAP_URL is only the
+ * fallback for a city that has no profile of its own yet.
+ *
+ * Empty string when neither exists, and every property built from it below is
+ * written to disappear in that case. That is deliberate: an unset link costs
+ * nothing, while a guessed one claims another lab is us.
+ */
+const mapUrlFor = (city) => city.gbp || GBP_MAP_URL || "";
+
+/**
+ * `sameAs` for the local node — the brand profiles plus THIS city's profile.
+ *
+ * BRAND_PROFILES already folds in GBP_MAP_URL when that is set, so appending
+ * would duplicate it on cities with no profile of their own. The membership
+ * check keeps the list a set: a repeated `sameAs` entry is not invalid, but it
+ * is the kind of noise that makes markup look generated rather than curated.
+ */
+const sameAsFor = (city) => {
+  const map = mapUrlFor(city);
+  return map && !BRAND_PROFILES.includes(map) ? [...BRAND_PROFILES, map] : BRAND_PROFILES;
+};
+
 const diagnosticLabNode = (city) => {
   const id = ids(city.slug);
+  const mapUrl = mapUrlFor(city);
 
   return {
     // Two types on purpose. DiagnosticLab is the accurate description of what
@@ -224,8 +253,9 @@ const diagnosticLabNode = (city) => {
     // DiagnosticLab is a MedicalOrganization.
     knowsLanguage: ["hi-IN", "en-IN"],
     // A LocalBusiness IS a Place, so the Maps link belongs here (unlike on the
-    // Organization node). Omitted entirely until GBP_MAP_URL is filled in.
-    ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
+    // Organization node). This city's own profile first, the brand-wide one as
+    // fallback, and the property omitted entirely when neither is set.
+    ...(mapUrl ? { hasMap: mapUrl } : {}),
     // The real price list, straight off the cards — the same numbers a patient
     // sees, so the rich result can never disagree with the page.
     makesOffer: city.tests
@@ -252,8 +282,10 @@ const diagnosticLabNode = (city) => {
     parentOrganization: ORG_REF,
     // Off-domain profiles are the only part of this markup a search engine can
     // verify without taking our word for it, which is exactly why a brand with
-    // no recognised entity needs them on its local nodes too.
-    sameAs: BRAND_PROFILES,
+    // no recognised entity needs them on its local nodes too. The city's own
+    // Business Profile is the strongest of them: it is the one link that
+    // resolves to a Google-verified record of THIS town's operation.
+    sameAs: sameAsFor(city),
   };
 };
 
@@ -382,6 +414,13 @@ export default async function LabCityPage({ params }) {
         city={cityName}
         faqs={cityData.faqs?.slice(0, 8)}
         pageUrl={`${SITE}/lab-test/${cityData.slug}`}
+        /* Names the town, because this <h2> used to be the string "Frequently
+           Asked Questions" on all six city pages — the one generic heading on
+           an otherwise entirely city-specific page. The sub-line below it drops
+           the city in return, so the pair states two things instead of one
+           thing twice. See the note in LabFaq. */
+        heading={`${cityName} Me Lab Test — Aksar Puche Jane Wale Sawaal`}
+        subheading="Home collection, fasting, report aur payment se jude seedhe jawab."
       />
 
       <LabCta cta={cityData.cta} phone={phone} />

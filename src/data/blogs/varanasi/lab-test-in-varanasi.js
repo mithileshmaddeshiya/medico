@@ -118,7 +118,7 @@ export const labTestVaranasi = {
      purpose — the page is Hinglish and so is the searcher — while keeping the
      English terms that must match: lab test, blood test, full body checkup. */
   description:
-    "Varanasi me lab test kaun sa aur kab karayein — symptom, umar aur mausam ke hisaab se poori guide. Fasting ke niyam, full body checkup aur report padhne ka tarika.",
+    "Varanasi me kaun sa lab test kab karayein — symptom, umar aur mausam ke hisaab se. Fasting ke niyam aur report padhne ka tarika bhi.",
 
   /* Ordered strongest first. `keywords` is a weak ranking signal on its own —
      the reason to keep it honest is that it is the checklist the headings,
