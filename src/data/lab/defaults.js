@@ -54,17 +54,24 @@ export const defaultHero = (city) => ({
 
   // One banner for every city page. 1696x927, so LabHero's hero box is
   // aspect-11/6 — replacing this file with a different shape means changing
-  // that class too, otherwise the artwork's own headline and the contact bar
-  // along the bottom get cropped.
+  // that class too, otherwise the contact bar along the bottom gets cropped.
   //
   // WebP, not the original PNG: the source was 1.8 MB and this is the LCP
   // element on six pages, marked `priority`, for an audience on mobile data.
   // Same pixel dimensions, 128 KB instead of 1829 KB.
   //
-  // ⚠ STILL A SHARED ASSET. The artwork carries its own printed headline, so
-  // it now says on screen roughly what the h1 above it says. That is the one
-  // piece of this fix that needs a designer rather than a code change: a
-  // per-city banner with no baked-in text. See imageAlt below.
+  // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
+  // It carries its own headline, a ₹200 price pill and three icon labels, so
+  // LabHero prints no visible heading of its own — two headlines, one in
+  // pixels and one in text, sat on top of each other however they were
+  // arranged. A text-free cut of the same photograph exists at
+  // /navheroimage/herocityempty.webp; switching back to it is what makes a
+  // readable h1 possible again.
+  //
+  // ⚠ AND IT IS A SHARED ASSET. One file across every city page, carrying a
+  // headline that is identical on all of them — so the dominant element of six
+  // pages competing for six different towns is byte-identical. Only the
+  // sr-only h1 and the alt below carry the city name.
   image: "/navheroimage/herocity.webp",
 
   // The banner has its copy burned into the artwork and a crawler cannot read
