@@ -311,42 +311,42 @@ export const deoriaContent = [
  */
 export const deoriaFaqs = [
   {
-    q: "Deoria me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Deoria me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Deoria, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Deoria is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya lab test ke liye mujhe Deoria se Gorakhpur jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Deoria me hi liya ja sakta hai. Gorakhpur ya Varanasi jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lena behtar hai, taaki report pehle se haath me ho — aur Gorakhpur me bhi home collection usi tarah available hai.",
+    q: "Do I have to travel from Deoria to Gorakhpur for a lab test?",
+    a: "Not for routine pathology. Every blood and urine test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — is run on a sample, and that sample can be drawn at your home in Deoria. Gorakhpur or Varanasi is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person. Before a trip like that, it is worth having the blood tests done at home so the report is already in hand — and home collection is available in Gorakhpur in the same way.",
     links: [
-      { href: LAB_GORAKHPUR, label: "Gorakhpur me lab test" },
-      { href: LAB_VARANASI, label: "Varanasi me lab test" },
+      { href: LAB_GORAKHPUR, label: "Lab test in Gorakhpur" },
+      { href: LAB_VARANASI, label: "Lab test in Varanasi" },
     ],
   },
   {
-    q: "Deoria jile me aap kaun kaun se ilaake cover karte hain?",
-    a: "Hum Deoria Sadar ke saath Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar, Bhatni aur inke aas-paas ke ilaakon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt ek landmark zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas of Deoria district do you cover?",
+    a: "We collect samples in Deoria Sadar along with Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar, Bhatni and the areas around them. If your village is not named in this list, please call anyway — if it is covered, the slot is booked on the same call. Do include a landmark in the address, because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
-    a: "Nahi. Tez bukhar ke saath jhatke, behoshi, gardan akadna, lagatar ulti ya bahut susti ho to seedha najdeeki hospital le jaaiye — ye emergency hai aur ismein der khatarnak hai. Gorakhpur–Deoria–Kushinagar belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Home sample collection ka intezaar mat kijiye; blood test iska pehla jawab nahi hai.",
+    q: "My child has a high fever with seizures — should I book a lab test?",
+    a: "No. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness needs the nearest hospital immediately — this is an emergency, and any delay is dangerous. The Gorakhpur–Deoria–Kushinagar belt has seen cases of acute encephalitis syndrome (AES / Japanese Encephalitis) in children after the monsoon. Do not wait for a home collection; a blood test is not the first answer here.",
   },
   {
-    q: "Deoria me lab test ki report kitni jaldi mil jaati hai?",
-    a: "Zyadatar routine test ki report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp tatha email dono par PDF me bhej di jaati hai. Culture jaise test 48 se 72 ghante lete hain, kyunki pehle organism ugana padta hai. Report phone par hone ka faayda ye hai ki Gorakhpur ya Lucknow ke doctor ko dikhana ho to bas forward kar dijiye — kagaz le kar jaane ki zaroorat nahi.",
+    q: "How quickly will I get my lab test report in Deoria?",
+    a: "Most routine tests are reported within 24 hours, and the report is sent as a PDF on both WhatsApp and email. Tests such as cultures take 48 to 72 hours, because the organism has to be grown first. Having the report on your phone means that if you need to show it to a doctor in Gorakhpur or Lucknow, you simply forward it — there is no paper copy to carry.",
   },
   {
-    q: "Kaun se test me khaali pet (fasting) rehna zaroori hai?",
-    a: "Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota; saada paani pi sakte hain. Chai, doodh, biscuit ya toffee bhi nahi — ek chai se hi report badal jaati hai. CBC, Thyroid Profile, HbA1c, Vitamin D aur B12 me koi fasting nahi chahiye. Isi liye home visit ke slot subah 6 baje se shuru hote hain, taaki sample de kar aap turant naashta kar sakein.",
+    q: "Which tests require fasting?",
+    a: "Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages need 10 to 12 hours without food; plain water is allowed. Tea, milk, a biscuit or a toffee are not — a single cup of tea is enough to change the result. CBC, Thyroid Profile, HbA1c, Vitamin D and B12 need no fasting at all. This is why home visit slots start at 6 AM, so you can give the sample and have breakfast straight after.",
   },
   {
-    // "Deoria me pathology lab / diagnostic centre / lab test near me" — teenon
-    // ka intent ek hi hai, aur wo intent yahi sawaal hai.
-    q: "Deoria me pathology lab ya diagnostic centre jaana padega, ya ghar par hi ho jaayega?",
-    a: "Routine pathology ke liye kahin jaane ki zaroorat nahi — sample aapke ghar par liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye fasting wale test subah aur CBC, thyroid, HbA1c, vitamin jaise test din me kabhi bhi ho jaate hain. Hum 24 ghante khula lab hone ka daawa nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    // "Deoria me pathology lab / diagnostic centre / lab test near me" — all
+    // three carry the same intent, and this question is that intent.
+    q: "Do I need to visit a pathology lab or diagnostic centre in Deoria, or can it be done at home?",
+    a: "For routine pathology you do not need to go anywhere — the sample is collected at your home. Home visit slots start at 6 AM and run until evening, so fasting tests can be done in the morning and tests such as CBC, thyroid, HbA1c and vitamins at any time of day. We do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Deoria me booking kaise karein aur payment ka kya tarika hai?",
-    a: "Is page par test chun kar form bhar dijiye ya seedha call kar dijiye. Doctor ka parcha hai to uska photo saath rakhiye, taaki wahi panel liya jaaye jo likha hai. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute me pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye. Payment usi waqt cash ya UPI (PhonePe, Google Pay, Paytm) se hota hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "How do I book in Deoria, and what are the payment options?",
+    a: "Choose a test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. Once the booking is confirmed, a trained phlebotomist usually arrives within 60 minutes — they carry an ID card, and you are welcome to check it before giving the sample. Payment is taken at that time, by cash or UPI (PhonePe, Google Pay, Paytm).",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

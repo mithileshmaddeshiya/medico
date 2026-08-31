@@ -94,6 +94,7 @@ import {
   defaultTests,
   defaultTitle,
   defaultTrustStrip,
+  varanasiFaqs,
 } from "./defaults";
 
 /* ── The cities we serve ──────────────────────────────────────────────────
@@ -113,7 +114,29 @@ const LAB_CITY_SEED = [
     // This copy used to be defaultContent() — the fallback every city inherited
     // — even though every fact in it is Varanasi's. It is unchanged, just moved
     // under the city it was actually written about. See labContent/varanasi.js.
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Lab Test at Home in Varanasi",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. "blood sample collection from home varanasi" — the strip above took
+       "lab test at home in varanasi".
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book blood sample collection from home in Varanasi" },
+
     content: varanasiContent,
+
+    /* Varanasi was the ONLY city still running defaultFaqs. varanasiFaqs has
+       existed in src/data/lab/defaults.js since the section was built — its own
+       doc comment says "render this in the same page as the LabContent block" —
+       but nothing ever imported it, so the flagship city answered its questions
+       with the generic template while the other nine answered with their own. */
+    faqs: varanasiFaqs,
 
     /* ── In-body internal links ────────────────────────────────────────────
        The other half of the link between this page and the Varanasi guide at
@@ -307,6 +330,21 @@ const LAB_CITY_SEED = [
       "Home Collection Lab in Deoria",
       "Lab Test Near Me in Deoria"
     ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Deoria",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. "health checkup package deoria". The h1 has "lab test in deoria" and the
+       strip has "blood test at home in deoria", so this is the third.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a health checkup package in Deoria" },
 
     content: deoriaContent,
     faqs: deoriaFaqs,
@@ -516,6 +554,21 @@ const LAB_CITY_SEED = [
       "Lab Test Near Me in Gorakhpur"
     ],
 
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test Home Collection in Gorakhpur",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. "full body health checkup in gorakhpur". Still NOT "best pathology lab
+       in gorakhpur", which is on the list and is a claim we cannot make.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a full body health checkup in Gorakhpur" },
+
     content: gorakhpurContent,
     faqs: gorakhpurFaqs,
 
@@ -717,6 +770,21 @@ const LAB_CITY_SEED = [
       "Lab Test Near Me in Salempur"
     ],
 
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Lab Test Service in Salempur",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. One tracked phrase ("lab test service salempur"), used by the strip.
+       Written in the neighbours' shape.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a blood test at home in Salempur" },
+
     content: salempurContent,
     faqs: salempurFaqs,
 
@@ -906,6 +974,21 @@ const LAB_CITY_SEED = [
       "Home Collection Lab in Azamgarh",
       "Lab Test Near Me in Azamgarh"
     ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Pathology Lab in Azamgarh",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. "blood test at home azamgarh" — the strip above took the pathology-lab
+       phrase, so the two do not overlap.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a blood test at home in Azamgarh" },
 
     content: azamgarhContent,
     faqs: azamgarhFaqs,
@@ -1112,6 +1195,21 @@ const LAB_CITY_SEED = [
       "Lab Test Near Me in Ballia"
     ],
 
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Sample Collection in Ballia",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. "lab test at home in ballia"; the strip took "blood sample collection
+       ballia".
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test at home in Ballia" },
+
     content: balliaContent,
     faqs: balliaFaqs,
 
@@ -1309,6 +1407,21 @@ const LAB_CITY_SEED = [
       "Lab Test Near Me in Mau"
     ],
 
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Pathology Lab Home Collection in Mau",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. Mau has one tracked phrase and the strip above uses it, so this is
+       written in the same shape as its neighbours.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test at home in Mau" },
+
     content: mauContent,
     faqs: mauFaqs,
 
@@ -1501,6 +1614,21 @@ const LAB_CITY_SEED = [
       "Lab Test Near Me in Kushinagar"
     ],
 
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Kushinagar",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. One tracked phrase, used by the strip. This one carries Padrauna, which
+       half the district types and the URL cannot hold.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test in Kushinagar and Padrauna" },
+
     content: kushinagarContent,
     faqs: kushinagarFaqs,
 
@@ -1689,6 +1817,20 @@ const LAB_CITY_SEED = [
       "सीवान में ब्लड टेस्ट घर पर",
       "सीवान में फुल बॉडी चेकअप",
     ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Lab Test at Home in Siwan",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. Not on the tracked list; written in the same shape as its neighbours.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a blood test at home in Siwan" },
 
     content: siwanContent,
     faqs: siwanFaqs,
@@ -1889,6 +2031,20 @@ const LAB_CITY_SEED = [
       "गाजीपुर में ब्लड टेस्ट घर पर",
       "गाजीपुर में फुल बॉडी चेकअप",
     ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Ghazipur",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. Not on the tracked list; written in the same shape as its neighbours.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test at home in Ghazipur" },
 
     content: ghazipurContent,
     faqs: ghazipurFaqs,

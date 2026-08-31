@@ -47,7 +47,7 @@
  * If a city is ever unpublished, the links naming it here have to go with it.
  */
 
-import { SERVICE_CITIES, coverageHi } from "@/lib/coverage";
+import { SERVICE_CITIES, coverage } from "@/lib/coverage";
 import { LAB_PHONE } from "@/data/lab/defaults";
 
 /* ── Metadata ─────────────────────────────────────────────────────────────
@@ -254,8 +254,11 @@ export const HOME_HOW_TO = {
      list — the footer column, HOME_CONTENT's "Hum Kin Sheher Me" section, and
      the city pages' own titles. */
   heading: "How to book a lab test at home with MedicoBharat",
-  intro:
-    "Five steps from the booking form to the report — free home sample collection, a trained phlebotomist, and the same timings we state on every page, in every city we serve.",
+  // No `intro`. LabHowTo renders the line only when one is set, and the line
+  // this had listed free collection, the trained phlebotomist and the timings —
+  // all three of which the five steps below then state again, in order. The
+  // heading already says what the block is; a summary of a five-step list that
+  // sits directly above the five steps is a sentence the reader pays for twice.
   steps: [
     {
       icon: "clipboard-list",
@@ -354,36 +357,36 @@ export const HOME_GUIDES = {
    background is a question a snippet cannot be lifted from. */
 export const HOME_FAQS = [
   {
-    q: "MedicoBharat kya hai aur Purvanchal ke kin kin sheheron me lab test ki suvidha hai?",
-    a: `MedicoBharat ek trusted online diagnostic platform hai jo ghar baithe free home sample collection ki suvidha deta hai. Hum ${coverageHi()} jile me blood test aur full body health checkup ki services provide karte hain. Aap CBC test, Thyroid profile, Diabetes (HbA1c), Lipid profile, Vitamin D/B12 aur Liver-Kidney function test book kar sakte hain. Accurate PDF report 24 ghante me WhatsApp aur email par mil jaati hai. Direct booking ke liye ${LAB_PHONE} par call karein.`,
+    q: "What is MedicoBharat, and which districts of Purvanchal do you serve?",
+    a: `MedicoBharat is an online diagnostic booking service with free home sample collection. We serve ${coverage()}, offering blood tests and full body health checkups — CBC, Thyroid Profile, Diabetes (HbA1c), Lipid Profile, Vitamin D and B12, and Liver and Kidney function tests. The report arrives as a PDF within 24 hours on WhatsApp and email. To book directly, call ${LAB_PHONE}.`,
   },
   {
-    q: "Kya ghar par blood test sample collection sach me free hai?",
-    a: "Haan, MedicoBharat par home sample collection 100% free hai. Aapko sirf lab test ya health checkup package ka exact price dena hota hai. Koi extra visiting charge, hidden fee ya convenience charge nahi liya jata. Payment sample collection ke waqt cash ya UPI (Google Pay, PhonePe, Paytm) se kar sakte hain.",
+    q: "Is home blood sample collection really free?",
+    a: "Yes, home sample collection is completely free. You pay only the price of the test or health checkup package itself. There is no visiting charge, no hidden fee and no convenience charge. Payment is taken at the time of collection, in cash or by UPI (Google Pay, PhonePe, Paytm).",
   },
   {
-    q: "Lab test online book karne ke liye doctor ka parcha (prescription) zaroori hai?",
-    a: "Nahi, routine lab tests aur preventive health checkup packages ke liye doctor ka parcha zaroori nahi hai — jaise CBC test, Thyroid profile, Fasting Blood Sugar, Lipid profile, Vitamin test aur Full Body Checkup. Lekin agar doctor ne koi specific pathology test likha hai, toh booking ke waqt uski photo zaroor share karein taaki exact test perform kiya ja sake.",
+    q: "Do I need a doctor's prescription to book a lab test online?",
+    a: "No. Routine lab tests and preventive health checkup packages — CBC, Thyroid Profile, Fasting Blood Sugar, Lipid Profile, vitamin tests and the Full Body Checkup — can be booked without a prescription. If your doctor has written a specific test, do send a photo of the prescription when you book, so that exactly that panel is run.",
   },
   {
-    q: "Kaun se blood test ke liye fasting (khaali pet) zaroori hoti hai?",
-    a: "Fasting Blood Sugar, Lipid Profile (Cholesterol), Insulin aur zyadatar Full Body Health Checkup packages ke liye 10 se 12 ghante ki fasting (khaali pet rehna) zaroori hai. Saada paani peena allowed hai. Jabki CBC, Thyroid Profile, HbA1c, Vitamin D, B12 aur Dengue test ke liye fasting ki zaroorat nahi hoti. Hamare trained phlebotomists subah 6 baje se home collection ke liye available rehte hain.",
+    q: "Which blood tests require fasting?",
+    a: "Fasting Blood Sugar, Lipid Profile (cholesterol), insulin and most Full Body Health Checkup packages need 10 to 12 hours of fasting. Plain water is allowed. CBC, Thyroid Profile, HbA1c, Vitamin D, B12 and dengue tests need no fasting. Home visit slots start at 6 AM, so a fasting sample can be given early and breakfast taken straight after.",
   },
   {
-    q: "Blood test report kitni der me aur kahan milti hai?",
-    a: "Zyadatar routine pathology test reports 24 ghante ke andar ready ho jaati hain. Final verified report PDF format me direct aapke WhatsApp number aur Email ID par bhej di jaati hai. Specialty tests ya Blood Culture me 48 se 72 ghante lag sakte hain, jiski jankari booking ke waqt hi de di jaati hai.",
+    q: "How soon does the report arrive, and where is it sent?",
+    a: "Most routine pathology reports are ready within 24 hours. The report is sent as a PDF directly to your WhatsApp number and email address. Specialised tests and blood cultures can take 48 to 72 hours, and we tell you that at the time of booking.",
   },
   {
-    q: "Ghar par blood sample lene ke liye kaun aata hai?",
-    a: "MedicoBharat ke certified aur highly trained phlebotomist aapke ghar aate hain. Unke paas official ID card hota hai aur poori visit 10 minute me complete ho jaati hai. Bujurgon, bedridden patients aur diabetic logon ke liye painless sample collection ki vishesh suvidha di jaati hai.",
+    q: "Who comes to the house to collect the blood sample?",
+    a: "A trained phlebotomist from MedicoBharat, carrying an official ID card that you are welcome to check before the collection begins. The whole visit takes about 10 minutes. Please mention when booking if the sample is for an elderly, bedridden or diabetic patient, so that whoever comes arrives prepared.",
   },
   {
-    q: "Kya ek hi slot me ghar ke sabhi sadasyon ka lab test book ho sakta hai?",
-    a: "Haan, aap ek hi booking slot me poore parivaar ke liye lab test ya health checkup book kar sakte hain. Certified phlebotomist ek hi visit me sabhi ke samples collect kar lenge, aur har member ki individual report alag-alag WhatsApp/Email par bheji jayegi.",
+    q: "Can the whole family be tested in a single slot?",
+    a: "Yes. You can book lab tests or health checkups for everyone at home in one slot, and the phlebotomist collects all the samples in a single visit. Each person's report is sent separately on WhatsApp and email.",
   },
   {
-    q: "Kya main Varanasi, Gorakhpur, Deoria, Azamgarh aur Salempur me kisi bhi location se book kar sakta hoon?",
-    a: `Haan, aap website par apna city aur pincode chunge. Agar aapka area list me nahi mil raha, toh direct ${LAB_PHONE} par call karke apna location confirm kar sakte hain. Hamari team turant aapke location ke liye home sample collection slot schedule kar degi.`,
+    q: "Can I book from any locality in the districts you serve?",
+    a: `Yes. Choose your city on the site and give your locality and a landmark when booking. If your area is not on the list, call ${LAB_PHONE} and we will confirm whether it is covered — if it is, the slot is scheduled on the same call.`,
   },
 ];
 
@@ -560,8 +563,17 @@ export const HOME_CTA = {
   proof: ["Trained phlebotomist", "Free home collection", "Reports in 24 hrs"],
 };
 
+/* Same rule as the city pages — see defaultCallBanner in
+   src/data/lab/defaults.js — with the one difference that this page has no
+   city to name. So it takes the phrase all of them share ("lab test at home")
+   and the district list stands in for the city, which is also the only honest
+   way to say it here: the home page serves every town in
+   src/data/lab/cities.js, not one.
+
+   It was "Book Your Health Checkup From Home", which is a sentence nobody
+   types into a search box. */
 export const HOME_CALL_BANNER = {
-  heading: "Book Your Health Checkup From Home",
+  heading: "Lab Test at Home — Free Blood Sample Collection",
   buttonText: "Book Now — Call Us",
 };
 

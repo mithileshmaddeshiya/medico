@@ -280,40 +280,40 @@ export const salempurContent = [
  */
 export const salempurFaqs = [
   {
-    q: "Salempur me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Salempur me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Kasba hone ki wajah se koi alag daam nahi lagta. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Salempur, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Salempur is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Being a small town makes no difference to the rate. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya lab test ke liye mujhe Salempur se Deoria ya Gorakhpur jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Salempur me hi liya ja sakta hai. Deoria, Gorakhpur ya Varanasi jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lena behtar hai, taaki report pehle se haath me ho.",
+    q: "Do I have to travel from Salempur to Deoria or Gorakhpur for a lab test?",
+    a: "Not for routine pathology. Every blood and urine test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — is run on a sample, and that sample can be drawn at your home in Salempur. Deoria, Gorakhpur or Varanasi is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person. Before a trip like that, it is worth having the blood tests done at home so the report is already in hand.",
     links: [
-      { href: LAB_DEORIA, label: "Deoria me lab test" },
-      { href: LAB_GORAKHPUR, label: "Gorakhpur me lab test" },
+      { href: LAB_DEORIA, label: "Lab test in Deoria" },
+      { href: LAB_GORAKHPUR, label: "Lab test in Gorakhpur" },
     ],
   },
   {
-    q: "Salempur ke aas-paas aap kaun kaun se ilaake cover karte hain?",
-    a: "Hum Salempur kasbe ke saath Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana, Barhaj aur inse lage gaon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt tola ya purwa ka naam aur ek landmark (school, mandir, block office, chauraha) zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas around Salempur do you cover?",
+    a: "We collect samples in Salempur town along with Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana, Barhaj and the villages adjoining them. If your village is not named in this list, please call anyway — if it is covered, the slot is booked on the same call. When writing the address, include the tola or purwa and a landmark (a school, temple, block office or crossing), because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Main bahar kaam karta hoon — kya ghar par maa-baap ka test main yahin se book kar sakta hoon?",
-    a: "Haan. Booking ke liye ghar par hona zaroori nahi hai. Form bharte waqt ghar ka pata, landmark aur wahan maujood kisi ka chalu mobile number de dijiye, aur ye bata dijiye ki confirmation call kis number par aani chahiye — wo aapke number par bhi aa sakti hai. Doctor ke parche ka photo bhej dijiye taaki wahi panel liya jaaye jo likha hai. Payment sample lene ke waqt cash ya UPI se hota hai, aur report 24 ghante me WhatsApp tatha email par PDF me aa jaati hai, isliye wo aapke phone par bhi pahunch jaati hai.",
+    q: "I work away from home — can I book a test for my parents from here?",
+    a: "Yes. You do not need to be at the house to book. On the form, give the home address with a landmark and a working mobile number of someone who is there, and tell us which number the confirmation call should go to — it can be yours. Send a photo of the doctor's prescription so that exactly the panel written on it is run. Payment is taken at the time of collection, by cash or UPI, and the report arrives within 24 hours as a PDF on WhatsApp and email, so it reaches your phone as well.",
   },
   {
-    q: "Kya Salempur me aapka koi lab ya collection centre hai jahan ja kar sample de sakte hain?",
-    a: "Nahi — hamara koi walk-in counter Salempur me nahi hai, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Salempur where I can walk in and give a sample?",
+    a: "No — we have no walk-in counter in Salempur, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Bujurg ya bistar par pade mareez ka sample ghar par liya ja sakta hai?",
-    a: "Haan, aur unhi ke liye ye sabse zyada kaam ka hai. Booking ke waqt mareez ki haalat zaroor bata dijiye — bujurg hain, bistar par hain, diabetic hain jinki nas patli ho gayi hai, ya pehle sample lene me dikkat aayi hai — taaki aane wala taiyaari ke saath aaye. Sample se pehle mareez ko thoda paani pila dijiye, jab tak fasting ke niyam mana na karein. Ghar ke kai log test kara rahe hain to sabki booking ek hi slot me kar dijiye; ek visit me sabka sample ho jaayega.",
+    q: "Can a sample be taken at home for an elderly or bedridden patient?",
+    a: "Yes, and this is exactly who it helps most. Please describe the patient's condition when booking — elderly, bedridden, diabetic with veins that have become difficult, or a history of trouble during earlier draws — so that whoever comes arrives prepared. Give the patient a little water beforehand, unless the fasting instructions say otherwise. If several people in the house are being tested, book them into a single slot; all the samples can be taken in one visit.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
-    a: "Nahi. Tez bukhar ke saath jhatke, behoshi, gardan akadna, lagatar ulti ya bahut susti ho to seedha najdeeki hospital le jaaiye — ye emergency hai aur ismein der khatarnak hai. Gorakhpur–Deoria–Kushinagar belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Home sample collection ka intezaar mat kijiye; blood test iska pehla jawab nahi hai.",
+    q: "My child has a high fever with seizures — should I book a lab test?",
+    a: "No. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness needs the nearest hospital immediately — this is an emergency, and any delay is dangerous. The Gorakhpur–Deoria–Kushinagar belt has seen cases of acute encephalitis syndrome (AES / Japanese Encephalitis) in children after the monsoon. Do not wait for a home collection; a blood test is not the first answer here.",
   },
   {
-    q: "Kaun se test me fasting zaroori hai, aur report kitni jaldi mil jaati hai?",
-    a: "Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota; saada paani pi sakte hain, lekin chai, doodh, biscuit ya toffee nahi — ek chai se hi report badal jaati hai. CBC, Thyroid Profile, HbA1c, Vitamin D aur B12 me koi fasting nahi chahiye. Zyadatar routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai; culture jaise test 48 se 72 ghante lete hain.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "Which tests require fasting, and how soon does the report arrive?",
+    a: "Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages need 10 to 12 hours without food; plain water is allowed, but tea, milk, a biscuit or a toffee are not — a single cup of tea is enough to change the result. CBC, Thyroid Profile, HbA1c, Vitamin D and B12 need no fasting. Most routine tests are reported within 24 hours as a PDF on WhatsApp and email; tests such as cultures take 48 to 72 hours.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

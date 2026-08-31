@@ -346,44 +346,44 @@ export const ghazipurContent = [
  */
 export const ghazipurFaqs = [
   {
-    q: "Ghazipur me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Ghazipur me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Ghazipur, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Ghazipur is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya lab test ke liye mujhe Ghazipur se Varanasi jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. CBC, sugar, thyroid, liver, kidney, lipid, vitamin aur dengue — ye sab sample par hote hain, aur sample aapke ghar Ghazipur me hi liya ja sakta hai. Varanasi kareeb 80 kilometre hai, isliye log aadat se chale jaate hain, lekin ek CBC ke liye poora din aur kiraya kharch karne ka koi faayda nahi. Varanasi jaana tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho — aur us din report pehle se haath me le kar jaaiye, warna doctor test likh kar agli tareekh de dega.",
-    links: [{ href: LAB_VARANASI, label: "Varanasi me lab test" }],
+    q: "Do I have to travel from Ghazipur to Varanasi for a lab test?",
+    a: "Not for routine pathology. CBC, sugar, thyroid, liver, kidney, lipid, vitamin and dengue tests are all run on a sample, and that sample can be drawn at your home in Ghazipur. Varanasi is about 80 kilometres away, so people go out of habit — but there is nothing to be gained by spending a whole day and the fare on a CBC. Varanasi is necessary when there is imaging such as MRI, CT or endoscopy, or a specialist to see in person — and on that day, go with the report already in hand, or the doctor will prescribe tests and give you another date.",
+    links: [{ href: LAB_VARANASI, label: "Lab test in Varanasi" }],
   },
   {
-    q: "Kya fauj ki bharti ka medical yahan ho jaayega?",
-    a: "Nahi. Bharti ka medical rally me aur military aspatal me hota hai — wo hum nahi karte, aur kisi aur ki report wahan chalti bhi nahi. Uska koi vikalp yahan nahi hai. Haan, uske pehle apni CBC (haemoglobin aur khoon ki kami ke liye) aur Blood Sugar ghar par karwa lena kaam ka hai: kuch kam nikla to sudhaarne ka waqt bacha rehta hai, aur ye dono is page ke sabse saste test me se hain.",
+    q: "Can the army recruitment medical be done here?",
+    a: "No. The recruitment medical is conducted at the rally and at a military hospital — we do not perform it, and no one else's report is accepted there. There is no alternative to it here. What is worth doing beforehand is having a CBC (for haemoglobin and anaemia) and a Blood Sugar test done at home: if something is low, there is still time to correct it, and both are among the least expensive tests on this page.",
   },
   {
-    q: "Ghazipur jile me aap kaun kaun se ilaake cover karte hain?",
-    a: "Sheher me Lanka, Mahuabagh, Vishveshwarganj, Rauza aur Nandganj ki taraf, aur jile me Zamania, Saidpur, Mohammadabad (Yusufpur), Kasimabad, Jakhanian, Sevrai, Dildarnagar, Gahmar, Revatipur tatha Bhanwarkol ke aas-paas ke ilaakon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt tehsil ka naam aur ek landmark zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas of Ghazipur district do you cover?",
+    a: "In the city: Lanka, Mahuabagh, Vishveshwarganj, Rauza and towards Nandganj. In the district: Zamania, Saidpur, Mohammadabad (Yusufpur), Kasimabad, Jakhanian, Sevrai, Dildarnagar, Gahmar, Revatipur and the areas around Bhanwarkol. If your village is not named in this list, please call anyway — if it is covered, the slot is booked on the same call. Do include the tehsil name and a landmark in the address, because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Baadh ke baad peelapan (jaundice) dikh raha hai — kaunsa test karana chahiye?",
-    a: "Aankhon ya peshaab me peelapan dikhte hi Liver Function Test — bilirubin, SGOT, SGPT — pehla test hai; number bata dete hain ki maamla halka hai ya doctor ke paas jaane wala. Paani utarne ke baad ka mahina Sevrai, Bhanwarkol, Revatipur aur Gahmar ki taraf sabse nazuk hota hai, kyunki peene ka paani milawat le leta hai. Lagatar bukhar 5-7 din se zyada chale to typhoid ki jaanch bhi karwaiye, aur ulti-dast ke baad kamzori rahe to CBC ke saath Kidney Function Test.",
-    links: [{ href: BALLIA_PAANI, label: "Ganga patti ke paani par vistaar se" }],
+    q: "There is jaundice after the flood — which test should be done?",
+    a: "As soon as yellowing of the eyes or urine appears, a Liver Function Test — bilirubin, SGOT, SGPT — is the first test; the numbers show whether this is mild or something to take to a doctor. The month after the water recedes is hardest on Sevrai, Bhanwarkol, Revatipur and Gahmar, because the drinking water picks up contamination. If a fever continues beyond 5 to 7 days, have the typhoid tests done as well, and if weakness persists after vomiting and loose motions, a CBC along with a Kidney Function Test.",
+    links: [{ href: BALLIA_PAANI, label: "More on the water along the Ganga belt" }],
   },
   {
-    q: "Ghazipur me lab test ki report kitni jaldi mil jaati hai?",
-    a: "Zyadatar routine test ki report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp tatha email dono par PDF me bhej di jaati hai. Culture jaise test 48 se 72 ghante lete hain, kyunki pehle organism ugana padta hai. Report phone par hone ka faayda ye hai ki Varanasi ya Lucknow ke doctor ko dikhana ho to bas forward kar dijiye — aur ghar ka aadmi bahar posted hai to use bhi wahi file bhej kar wahin salah li ja sakti hai.",
+    q: "How quickly will I get my lab test report in Ghazipur?",
+    a: "Most routine tests are reported within 24 hours, and the report is sent as a PDF on both WhatsApp and email. Tests such as cultures take 48 to 72 hours, because the organism has to be grown first. Having the report on your phone means that if you need to show it to a doctor in Varanasi or Lucknow, you simply forward it — and if someone from the family is posted away, the same file can be sent to them and advice taken from there.",
   },
   {
-    q: "Kaun se test me khaali pet (fasting) rehna zaroori hai?",
-    a: "Fasting Blood Sugar, Lipid Profile aur teenon Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota; saada paani pi sakte hain. Chai, doodh, biscuit ya toffee bhi nahi — ek chai se hi report badal jaati hai. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 aur Dengue me koi fasting nahi chahiye. Isi liye home visit ke slot subah 6 baje se shuru hote hain — usi din bahar nikalna ho to sample dekar naashta kijiye aur gaadi pakad lijiye.",
+    q: "Which tests require fasting?",
+    a: "Fasting Blood Sugar, Lipid Profile and all three Full Body Checkup packages need 10 to 12 hours without food; plain water is allowed. Tea, milk, a biscuit or a toffee are not — a single cup of tea is enough to change the result. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 and Dengue need no fasting at all. This is why home visit slots start at 6 AM — if you are travelling that day, give the sample, have breakfast and catch your train.",
   },
   {
-    // "Ghazipur me pathology lab / diagnostic centre / lab test near me" —
-    // teenon ka intent ek hi hai, aur wo intent yahi sawaal hai.
-    q: "Ghazipur me pathology lab ya diagnostic centre jaana padega, ya ghar par hi ho jaayega?",
-    a: "Routine pathology ke liye kahin jaane ki zaroorat nahi — sample aapke ghar par liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye fasting wale test subah aur CBC, thyroid, HbA1c, vitamin jaise test din me kabhi bhi ho jaate hain. X-ray, ultrasound aur CT-MRI machine par hote hain, unke liye centre par hi jaana hoga. Hum 24 ghante khula lab hone ka daawa nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    // "Ghazipur me pathology lab / diagnostic centre / lab test near me" — all
+    // three carry the same intent, and this question is that intent.
+    q: "Do I need to visit a pathology lab or diagnostic centre in Ghazipur, or can it be done at home?",
+    a: "For routine pathology you do not need to go anywhere — the sample is collected at your home. Home visit slots start at 6 AM and run until evening, so fasting tests can be done in the morning and tests such as CBC, thyroid, HbA1c and vitamins at any time of day. X-rays, ultrasound and CT or MRI are done on a machine, and for those you do have to go to a centre. We do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Ghazipur me booking kaise karein aur payment ka kya tarika hai?",
-    a: "Is page par test chun kar form bhar dijiye ya seedha call kar dijiye. Doctor ka parcha hai to uska photo saath rakhiye, taaki wahi panel liya jaaye jo likha hai. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute me pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye. Payment usi waqt cash ya UPI (PhonePe, Google Pay, Paytm) se hota hai. Ghar ke kai logon ka test ek hi visit me ho sakta hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "How do I book in Ghazipur, and what are the payment options?",
+    a: "Choose a test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. Once the booking is confirmed, a trained phlebotomist usually arrives within 60 minutes — they carry an ID card, and you are welcome to check it before giving the sample. Payment is taken at that time, by cash or UPI (PhonePe, Google Pay, Paytm). Several people in the same household can be tested in a single visit.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

@@ -331,36 +331,36 @@ export const gorakhpurContent = [
  */
 export const gorakhpurFaqs = [
   {
-    q: "Kal doctor ko dikhana hai aur parche par test likhe hain — kya report kal tak mil jaayegi?",
-    a: "Haan. Zyadatar routine test ki report 24 ghante ke andar aa jaati hai, isliye appointment se ek din pehle subah ka slot le lijiye. Agle din aap OPD me report le kar jaayenge aur doctor usi visit me dawa likh dega — do trip ka kaam ek me. Booking ke waqt parche ka photo bhej dijiye taaki wahi panel liya jaaye jo likha hai; test ke naam aksar milte-julte hote hain.",
+    q: "I see the doctor tomorrow and have tests written on the prescription — will the report be ready by then?",
+    a: "Yes. Most routine tests are reported within 24 hours, so book a morning slot for the day before the appointment. You then walk into the OPD with the report in hand and the doctor can prescribe in that same visit — two trips become one. Send a photo of the prescription when you book, so that exactly the panel written on it is run; test names are often confusingly similar.",
   },
   {
-    q: "Gorakhpur me lab test ka kitna kharcha hai, aur kya home collection free hai?",
-    a: "Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai, koi visiting charge ya hidden fee nahi. Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, aur Basic Full Body Checkup ₹999 se. Fever Panel jaise kuch test par 'Call for price' likha rehta hai — sample lene se pehle price bata diya jaata hai. Payment cash ya UPI se, sample ke waqt.",
+    q: "How much does a lab test cost in Gorakhpur, and is home collection free?",
+    a: "Home sample collection is free — you pay only the price printed on the test card, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. A few tests, such as the Fever Panel, are marked 'Call for price' — the price is confirmed before the sample is taken. Payment is by cash or UPI, at the time of collection.",
   },
   {
-    q: "Operation se pehle wale test bhi ghar par ho jaayenge?",
-    a: "Blood aur urine wale saare test ghar par ho jaate hain — CBC, blood group aur Rh typing, sugar, KFT, LFT aur HBsAg, Anti-HCV tatha HIV screening. Kuch surgery me PT/INR bhi maanga jaata hai. Lekin list hamesha apne hospital ki maanie, kyunki har department ki zaroorat alag hoti hai aur ek test chhootne par date aage badh jaati hai. Admission se do-teen din pehle sample de dijiye taaki report waqt par haath me ho.",
+    q: "Can pre-operative tests be done at home as well?",
+    a: "All blood and urine tests can be done at home — CBC, blood group and Rh typing, sugar, KFT, LFT, and HBsAg, Anti-HCV and HIV screening. Some surgeries also ask for PT/INR. Always go by your own hospital's list, though, as every department asks for something slightly different, and one missing test pushes the date back. Give the sample two or three days before admission so the report is in hand on time.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
-    a: "Nahi. Tez bukhar ke saath jhatke, behoshi, gardan akadna, lagatar ulti ya bahut susti ho to seedha najdeeki hospital le jaaiye — ye emergency hai aur ismein der khatarnak hai. Gorakhpur–Kushinagar–Maharajganj belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Home sample collection ka intezaar mat kijiye; blood test iska pehla jawab nahi hai.",
+    q: "My child has a high fever with seizures — should I book a lab test?",
+    a: "No. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness needs the nearest hospital immediately — this is an emergency, and any delay is dangerous. The Gorakhpur–Kushinagar–Maharajganj belt has seen cases of acute encephalitis syndrome (AES / Japanese Encephalitis) in children after the monsoon. Do not wait for a home collection; a blood test is not the first answer here.",
   },
   {
-    q: "Gorakhpur me aap kaun kaun se mohalle aur kasbe cover karte hain?",
-    a: "Sheher me Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Kunraghat, Rapti Nagar, Khorabar aur aas-paas ke mohalle. Jile me Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj. Aapka mohalla is list me na ho to ek call kar lijiye — cover hone par usi waqt slot ban jaayega. Pata likhte waqt landmark zaroor daaliye, kyunki naye mohalle map par theek nahi aate.",
+    q: "Which neighbourhoods and towns do you cover in Gorakhpur?",
+    a: "In the city: Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Kunraghat, Rapti Nagar, Khorabar and the areas around them. In the district: Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni and Barhalganj. If your locality is not on this list, please call — if it is covered, the slot is booked on the same call. Do include a landmark in the address, as newer colonies do not always map correctly.",
   },
   {
-    q: "Main Kushinagar ya Maharajganj se aa raha hoon — blood test Gorakhpur me karaun ya apne sheher me?",
-    a: "Apne sheher me. Blood aur urine ke saare routine test sample par hote hain, aur kis sheher me sample liya gaya isse result par koi farq nahi padta. Gorakhpur aana tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho — aur aisi trip se pehle blood test ghar par karwa lena hi sabse samajhdari ka kaam hai, taaki report saath me ho aur ek visit me baat ban jaaye.",
-    links: [{ href: LAB_DEORIA, label: "Deoria me lab test" }],
+    q: "I am coming from Kushinagar or Maharajganj — should I get the blood test done in Gorakhpur or in my own town?",
+    a: "In your own town. Every routine blood and urine test is run on a sample, and the city the sample was drawn in makes no difference to the result. Gorakhpur is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person — and before a trip like that, having the blood tests done at home is the sensible thing to do, so the report travels with you and the visit settles the matter.",
+    links: [{ href: LAB_DEORIA, label: "Lab test in Deoria" }],
   },
   {
-    q: "Kaun se test me khaali pet rehna zaroori hai, aur chai pi sakte hain?",
-    a: "Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota. Chai bilkul nahi — ek chai se hi sugar aur lipid ki report badal jaati hai aur test dobara karana padta hai. Sirf saada paani, aur wo peete rehna zaroori hai. CBC, Thyroid Profile, HbA1c, Vitamin D aur B12 me koi fasting nahi chahiye. Thyroid ki goli sample dene ke baad leni chahiye, pehle nahi.",
+    q: "Which tests require fasting, and is tea allowed?",
+    a: "Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages need 10 to 12 hours without food. Tea is not allowed at all — one cup is enough to change a sugar and lipid report and force a repeat. Only plain water, and you should keep drinking it. CBC, Thyroid Profile, HbA1c, Vitamin D and B12 need no fasting. A thyroid tablet should be taken after the sample is drawn, not before.",
   },
   {
-    q: "Gorakhpur me lab chunte waqt kya dekhna chahiye?",
-    a: "Do cheezein report par dikhti hain aur bahut kuch bata deti hain: test ka method likha hai ya nahi (jaise CLIA ya ECLIA), aur reference range report par khud chhapi hai ya nahi. Teesri baat khud karni hoti hai — jo number aap mahino track kar rahe hain, jaise HbA1c, TSH ya creatinine, unke liye lab badalte mat rahiye. Alag analyser ki range thodi alag hoti hai, isliye ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab thyroid ka badalna nahi hota.",
+    q: "What should I look for when choosing a lab in Gorakhpur?",
+    a: "Two things are visible on the report itself and tell you a great deal: whether the test method is stated (CLIA or ECLIA, for instance), and whether the reference range is printed on the report. The third is up to you — for anything you are tracking over months, such as HbA1c, TSH or creatinine, stay with one lab. Reference ranges differ slightly between analysers, so a TSH of 4.5 at one lab and 4.1 at another does not mean your thyroid has changed.",
   },
 ];

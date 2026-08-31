@@ -22,5 +22,14 @@
  * city name — which is how a site ends up with seven near-identical pages.
  */
 import { labTestDeoria } from "./lab-test-in-deoria";
+import { pathologyLabDeoria } from "./pathology-lab-in-deoria";
 
-export const deoriaBlogs = [labTestDeoria];
+export const deoriaBlogs = [
+  labTestDeoria,
+  // Second on purpose: the clinical guide ("kaun sa test kab") is the one a
+  // reader needs first. This one answers "sample dene kahan jaana padega" —
+  // the locality and "diagnostic centre near me" lane, which is a different
+  // question and therefore does not compete with either the guide above or
+  // the service page at /lab-test/deoria.
+  pathologyLabDeoria,
+];
