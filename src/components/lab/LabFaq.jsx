@@ -58,9 +58,13 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
 
      That is the exact trade this codebase already argues in
      src/data/lab/content/deoria.js: "a heading ranks and a keyword buried in a
-     paragraph mostly does not". So the city page passes a real Hinglish
-     sentence naming the town, and the generic string stays as the default for
-     the home page, which serves every city and can name none of them.
+     paragraph mostly does not". So the city page passes a real sentence naming
+     the town, and the generic string stays as the default for the home page,
+     which serves every city and can name none of them.
+
+     Both are English, and so is the fallback sub-line below. Every question and
+     answer this section renders is English now; a Hinglish frame around English
+     content reads as a section somebody stopped translating halfway.
 
      It is a heading, not a keyword slot. Do not grow it into
      "Deoria Lab Test Blood Test Pathology Lab FAQ" — that is the stuffing the
@@ -68,7 +72,7 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
   const title = heading?.trim() || "Frequently Asked Questions";
   const sub =
     subheading?.trim() ||
-    `${city} me lab test, home collection aur report se jude aam sawaal`;
+    `Common questions about lab tests, home collection and reports in ${city}`;
 
   // Joined to the page's graph rather than left standing on its own. The page
   // emits #webpage / #diagnosticlab / #breadcrumb (see the lab city page); this

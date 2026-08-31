@@ -346,46 +346,46 @@ export const siwanContent = [
  */
 export const siwanFaqs = [
   {
-    q: "Siwan me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Siwan me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Siwan, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Siwan is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya Gulf jaane ka medical (GAMCA / Wafid) yahan ho jaayega?",
-    a: "Nahi. Gulf ka pre-departure medical sirf Wafid-approved centre par hi hota hai aur uski report seedha unke system me jaati hai — hum wo nahi karte, aur kisi aur ki report wahan chalti bhi nahi. Uske liye approved centre par hi jaana hoga. Haan, us medical se pehle apni Blood Sugar, HbA1c, Liver Function Test aur Lipid Profile ghar par karwa lena kaam ka hai: kuch galat nikla to sudhaarne ka waqt bacha rehta hai, aur medical me fail hone par jo paisa aur ticket jaata hai wo bach jaata hai.",
+    q: "Can the Gulf pre-departure medical (GAMCA / Wafid) be done here?",
+    a: "No. The Gulf pre-departure medical is carried out only at a Wafid-approved centre, and the report goes directly into their system — we do not perform it, and no one else's report is accepted there. For that you have to go to an approved centre. What is worth doing beforehand is having your Blood Sugar, HbA1c, Liver Function Test and Lipid Profile done at home: if something is off, there is still time to correct it, and you save the money and the ticket that a failed medical costs.",
   },
   {
-    q: "Kya lab test ke liye mujhe Siwan se Chhapra ya Patna jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Siwan me hi liya ja sakta hai. Chhapra, Patna ya Gorakhpur jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lijiye, taaki report pehle se haath me ho — warna doctor test likh kar agli tareekh de deta hai aur wahi safar dobara karna padta hai.",
+    q: "Do I have to travel from Siwan to Chhapra or Patna for a lab test?",
+    a: "Not for routine pathology. Every blood and urine test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — is run on a sample, and that sample can be drawn at your home in Siwan. Chhapra, Patna or Gorakhpur is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person. Before a trip like that, have the blood tests done at home so the report is already in hand — otherwise the doctor prescribes tests, gives you another date, and the same journey has to be made again.",
     links: [
-      { href: LAB_GORAKHPUR, label: "Gorakhpur me lab test" },
-      { href: LAB_VARANASI, label: "Varanasi me lab test" },
+      { href: LAB_GORAKHPUR, label: "Lab test in Gorakhpur" },
+      { href: LAB_VARANASI, label: "Lab test in Varanasi" },
     ],
   },
   {
-    q: "Siwan jile me aap kaun kaun se ilaake cover karte hain?",
-    a: "Hum Siwan Sadar ke saath Maharajganj, Mairwa, Barharia, Andar, Basantpur, Darauli, Guthani, Raghunathpur, Pachrukhi, Hasanpura, Goriakothi aur Jiradei tatha inke aas-paas ke ilaakon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt block ka naam aur ek landmark zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas of Siwan district do you cover?",
+    a: "We collect samples in Siwan Sadar along with Maharajganj, Mairwa, Barharia, Andar, Basantpur, Darauli, Guthani, Raghunathpur, Pachrukhi, Hasanpura, Goriakothi and Jiradei, and the areas around them. If your village is not named in this list, please call anyway — if it is covered, the slot is booked on the same call. Do include the block name and a landmark in the address, because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Bukhar do hafte se zyada chal raha hai aur pet phoola lag raha hai — kya test book karun?",
-    a: "Pehle doctor ko dikhaiye. Lamba bukhar, pet ka phoolna, wazan girna aur badhti kamzori — Bihar me ye kala-azar ke lakshan bhi ho sakte hain, aur rashtriya karyakram ke tahat uski jaanch aur ilaaj sarkari aspatal me muft hota hai. Hum wo confirm karne wali jaanch nahi karte. CBC ek ishaara zaroor de sakta hai, lekin ishaara nidaan nahi hota — lambe bukhar me pehla kadam doctor hai, test doosra. Yahi baat bachche ke tez bukhar par bhi lagu hai: jhatke, behoshi ya sust padna dikhe to seedha aspatal, ghar par sample ka intezaar nahi.",
+    q: "The fever has lasted more than two weeks and the abdomen feels swollen — should I book a test?",
+    a: "See a doctor first. A long fever, a swollen abdomen, weight loss and increasing weakness can also be signs of kala-azar in Bihar, and under the national programme both its diagnosis and its treatment are free at a government hospital. We do not perform the confirmatory test for it. A CBC can certainly give an indication, but an indication is not a diagnosis — with a long fever the first step is a doctor and the test is second. The same applies to a high fever in a child: seizures, unconsciousness or unusual drowsiness mean hospital straight away, not waiting for a sample at home.",
   },
   {
-    q: "Siwan me lab test ki report kitni jaldi mil jaati hai?",
-    a: "Zyadatar routine test ki report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp tatha email dono par PDF me bhej di jaati hai. Culture jaise test 48 se 72 ghante lete hain, kyunki pehle organism ugana padta hai. Report phone par hone ka faayda ye hai ki Chhapra, Patna ya Gorakhpur ke doctor ko dikhana ho to bas forward kar dijiye — kagaz le kar jaane ki zaroorat nahi.",
+    q: "How quickly will I get my lab test report in Siwan?",
+    a: "Most routine tests are reported within 24 hours, and the report is sent as a PDF on both WhatsApp and email. Tests such as cultures take 48 to 72 hours, because the organism has to be grown first. Having the report on your phone means that if you need to show it to a doctor in Chhapra, Patna or Gorakhpur, you simply forward it — there is no paper copy to carry.",
   },
   {
-    q: "Kaun se test me khaali pet (fasting) rehna zaroori hai?",
-    a: "Fasting Blood Sugar, Lipid Profile aur teenon Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota; saada paani pi sakte hain. Chai, doodh, biscuit ya toffee bhi nahi — ek chai se hi report badal jaati hai. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 aur Dengue me koi fasting nahi chahiye. Isi liye home visit ke slot subah 6 baje se shuru hote hain, taaki sample de kar aap turant naashta kar sakein.",
+    q: "Which tests require fasting?",
+    a: "Fasting Blood Sugar, Lipid Profile and all three Full Body Checkup packages need 10 to 12 hours without food; plain water is allowed. Tea, milk, a biscuit or a toffee are not — a single cup of tea is enough to change the result. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 and Dengue need no fasting at all. This is why home visit slots start at 6 AM, so you can give the sample and have breakfast straight after.",
   },
   {
-    // "Siwan me pathology lab / diagnostic centre / lab test near me" — teenon
-    // ka intent ek hi hai, aur wo intent yahi sawaal hai.
-    q: "Siwan me pathology lab ya diagnostic centre jaana padega, ya ghar par hi ho jaayega?",
-    a: "Routine pathology ke liye kahin jaane ki zaroorat nahi — sample aapke ghar par liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye fasting wale test subah aur CBC, thyroid, HbA1c, vitamin jaise test din me kabhi bhi ho jaate hain. X-ray, ultrasound aur CT-MRI machine par hote hain, unke liye centre par hi jaana hoga. Hum 24 ghante khula lab hone ka daawa nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    // "Siwan me pathology lab / diagnostic centre / lab test near me" — all
+    // three carry the same intent, and this question is that intent.
+    q: "Do I need to visit a pathology lab or diagnostic centre in Siwan, or can it be done at home?",
+    a: "For routine pathology you do not need to go anywhere — the sample is collected at your home. Home visit slots start at 6 AM and run until evening, so fasting tests can be done in the morning and tests such as CBC, thyroid, HbA1c and vitamins at any time of day. X-rays, ultrasound and CT or MRI are done on a machine, and for those you do have to go to a centre. We do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Siwan me booking kaise karein aur payment ka kya tarika hai?",
-    a: "Is page par test chun kar form bhar dijiye ya seedha call kar dijiye. Doctor ka parcha hai to uska photo saath rakhiye, taaki wahi panel liya jaaye jo likha hai. Booking confirm hone ke baad trained phlebotomist aam taur par 60 minute me pahunch jaata hai — uske paas ID card hota hai, sample dene se pehle dekh lijiye. Payment usi waqt cash ya UPI (PhonePe, Google Pay, Paytm) se hota hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "How do I book in Siwan, and what are the payment options?",
+    a: "Choose a test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. Once the booking is confirmed, a trained phlebotomist usually arrives within 60 minutes — they carry an ID card, and you are welcome to check it before giving the sample. Payment is taken at that time, by cash or UPI (PhonePe, Google Pay, Paytm).",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

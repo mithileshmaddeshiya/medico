@@ -8,7 +8,9 @@ import { Phone } from "lucide-react";
  * (emerald → teal on a soft emerald wash) so the page ends where it started.
  *
  * `banner` and `phone` come from the city document (or its generated default) —
- * see defaultCallBanner in src/data/lab/defaults.js.
+ * see defaultCallBanner in src/data/lab/defaults.js, which carries the reason
+ * this heading is keyword-bearing per city rather than one template with the
+ * town's name dropped into it. Read that note before rewording either string.
  */
 export default function LabCallBanner({ banner, phone }) {
   const tel = `tel:${String(phone ?? "").replace(/\s/g, "")}`;
@@ -35,7 +37,18 @@ export default function LabCallBanner({ banner, phone }) {
           <Phone className="h-5.5 w-5.5 sm:h-6 sm:w-6" strokeWidth={2.2} />
         </a>
 
-        <h2 className="mt-4 text-balance text-xl min-[400px]:text-2xl sm:text-[28px] md:text-[32px] font-extrabold tracking-tight text-slate-900">
+        {/* max-w-4xl, not the container's full 6xl and not the max-w-xl this
+            briefly had. The cap exists so the heading sits over the button
+            rather than spanning the whole viewport like a banner ad; 4xl is
+            the width at which the longest heading we ship — Kushinagar's, at
+            57 characters — still lands on ONE line at the md size below.
+            Narrower than that and it broke in two on desktop.
+
+            Sizes stay a step down from the hero's: this is the page's closing
+            line, not its headline. On a phone the heading cannot fit on one
+            line at any readable size, so text-balance is kept to split what
+            wrapping is left into even lines instead of a long one and a stub. */}
+        <h2 className="mx-auto mt-4 max-w-4xl text-balance text-[17px] min-[400px]:text-lg sm:text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">
           {banner?.heading}
         </h2>
 

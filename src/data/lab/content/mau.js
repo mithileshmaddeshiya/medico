@@ -329,37 +329,37 @@ export const mauContent = [
  */
 export const mauFaqs = [
   {
-    q: "Mau me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Mau me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Ghosi, Madhuban ya Doharighat jaise door ke kasbon me bhi wahi rate lagta hai jo sheher me hai. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Mau, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Mau is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate in far towns such as Ghosi, Madhuban or Doharighat is the same as in the city. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya Mau me aapka koi lab ya collection centre hai — Station Road ya Sahadatpura ke paas?",
-    a: "Nahi — hamara koi walk-in counter Mau me nahi hai, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai, chahe aap sheher me hon ya jile ke kisi gaon me. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Mau — near Station Road or Sahadatpura?",
+    a: "No — we have no walk-in counter in Mau, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there, whether you are in the city or in a village in the district. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Kya aap Maunath Bhanjan me bhi lab test karte hain?",
-    a: "Haan — Mau aur Maunath Bhanjan ek hi jagah ke do naam hain, isliye is page ki har service wahan laagu hoti hai. Aap \"Maunath Bhanjan me blood test\" dhoondhein ya \"Mau me lab test\", aapko wahi free home sample collection, wahi rate aur 24 ghante me report milti hai. Sheher me Sahadatpura, Mirzahadipura, Alinagar, Purani Bazar, Station Road aur Chowk ke aas-paas se sample liya jaata hai.",
+    q: "Do you carry out lab tests in Maunath Bhanjan as well?",
+    a: "Yes — Mau and Maunath Bhanjan are two names for the same place, so everything on this page applies there. Whether you search for a blood test in Maunath Bhanjan or a lab test in Mau, you get the same free home sample collection, the same rates and a report within 24 hours. In the city, samples are collected in and around Sahadatpura, Mirzahadipura, Alinagar, Purani Bazar, Station Road and Chowk.",
   },
   {
-    q: "Mau jile me aap kaun kaun se ilaake cover karte hain — Ghosi, Madhuban aur Doharighat bhi?",
-    a: "Sheher me Sahadatpura, Mirzahadipura, Alinagar, Purani Bazar, Station Road, Chowk aur zila aspatal ke aas-paas, aur jile me Ghosi, Madhuban, Muhammadabad Gohna, Kopaganj, Doharighat, Chiraiyakot, Ranipur, Walidpur, Ratanpura, Pardaha, Amila, Adari, Khurhat, Sarai Lakhansi aur Baraipar tak — inse lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye. Pata likhte waqt tola ya purwa ka naam, post office aur ek landmark zaroor likhiye — ek hi naam ke do gaon paas paas hona yahan aam hai, aur late visit ki sabse badi wajah yahi hoti hai.",
+    q: "Which areas of Mau district do you cover — Ghosi, Madhuban and Doharighat too?",
+    a: "In the city: Sahadatpura, Mirzahadipura, Alinagar, Purani Bazar, Station Road, Chowk and around the district hospital. In the district: Ghosi, Madhuban, Muhammadabad Gohna, Kopaganj, Doharighat, Chiraiyakot, Ranipur, Walidpur, Ratanpura, Pardaha, Amila, Adari, Khurhat, Sarai Lakhansi and Baraipar — the villages adjoining them are usually covered too. If your village is not named here, please call anyway. When writing the address, do include the tola or purwa, the post office and a landmark — two villages of the same name close together is common here, and that is the single commonest reason a visit runs late.",
   },
   {
-    q: "Loom ya karkhane me kaam karte hain aur khaansi lambe samay se hai — kaunsa test karayein?",
-    a: "Lambi khaansi ka jawab khoon ki jaanch nahi hai. Do hafte se zyada khaansi, shaam ko bukhar, raat ko paseena, wazan girna ya balgam me khoon ho to TB ka shak hota hai, aur uski jaanch balgam se hoti hai — najdeeki sarkari aspatal ya DOTS centre par, muft. TB ka antibody wala blood test bharosemand nahi hai aur hum wo karte bhi nahi. Saans ya seene ki jakadan ke liye doctor ko dikhaiye aur unhe apne kaam ki jagah ke baare me bataiye; iski jaanch saans ki jaanch se hoti hai, jo hum nahi karte. Jo hum kar sakte hain wo alag hai: band jagah me kaam karne walon me Vitamin D aur B12 ki kami, haemoglobin ki kami aur thyroid ki gadbadi aam hai — CBC, Vitamin D, Vitamin B12 aur TSH ek hi sample me ghar par ho jaate hain.",
+    q: "I work at a loom or in a workshop and have had a cough for a long time — which test should I have?",
+    a: "A long cough is not answered by a blood test. A cough lasting more than two weeks, an evening fever, night sweats, weight loss or blood in the sputum raises a suspicion of TB, and that is diagnosed from sputum — free of charge at the nearest government hospital or DOTS centre. The antibody blood test for TB is not reliable and we do not offer it. For breathlessness or tightness in the chest, see a doctor and tell them about your workplace; that is assessed with breathing tests, which we do not do. What we can do is separate: deficiencies of Vitamin D and B12, low haemoglobin and thyroid problems are common among people working indoors — a CBC, Vitamin D, Vitamin B12 and TSH can all be done at home from a single sample.",
   },
   {
-    q: "Raat ki shift me kaam karta hoon — fasting wala test kaise karaun?",
-    a: "Fasting ka niyam ghadi ka nahi, ginti ka hai: aakhri khaane ke 10 se 12 ghante baad ka sample fasting sample hai. Lekin raat bhar shift kar ke, bina soye, subah seedha fasting sample mat dijiye — bina neend ki raat khud sugar aur lipid ko upar-neeche kar deti hai. Fasting wale test chhutti wale din karaiye, jis din raat ko normal neend hui ho. Aur sugar ki nigrani ke liye HbA1c behtar hai: usme fasting bilkul nahi chahiye aur wo din me kabhi bhi diya ja sakta hai. CBC, Thyroid Profile, Vitamin D, Vitamin B12 aur Dengue bhi bina fasting ke hote hain. Booking ke waqt apni shift bata dijiye, slot usi hisaab se rakh diya jaayega.",
+    q: "I work night shifts — how do I manage a fasting test?",
+    a: "Fasting is counted in hours, not by the clock: a sample 10 to 12 hours after your last meal is a fasting sample. But do not come off a full night shift without sleep and give a fasting sample in the morning — a night without sleep by itself pushes sugar and lipids up and down. Have fasting tests done on a day off, after a normal night's sleep. For monitoring sugar, HbA1c is the better test in any case: it needs no fasting at all and can be given at any time of day. CBC, Thyroid Profile, Vitamin D, Vitamin B12 and Dengue also need no fasting. Tell us your shift when you book and the slot will be set around it.",
   },
   {
-    q: "Ilaaj Azamgarh ya Varanasi me chal raha hai — kya follow-up jaanch Mau me ghar par ho sakti hai?",
-    a: "Haan. Routine blood test kahin bhi ho sakta hai; ye zaroori nahi ki jaanch wahin ho jahan aapne dikhaya tha. Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, jise aap doctor ko dikha sakte hain ya bhej sakte hain. Diabetes me har teen mahine me HbA1c, saal me ek baar Lipid Profile aur Kidney Function Test ke saath urine microalbumin; thyroid me dose badalne ke 6 se 8 hafte baad TSH, uske baad har 6 se 12 mahine me. Ek hi test ko baar baar alag alag jagah se mat karaiye — reference range alag hone se tulna galat baithti hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "My treatment is in Azamgarh or Varanasi — can the follow-up tests be done at home in Mau?",
+    a: "Yes. A routine blood test can be done anywhere; it does not have to be done where you were seen. The report arrives within 24 hours as a PDF on WhatsApp and email, which you can show or forward to your doctor. For diabetes: HbA1c every three months, a Lipid Profile once a year, and a Kidney Function Test with urine microalbumin once a year. For thyroid: TSH 6 to 8 weeks after a change of dose, then every 6 to 12 months. Do not keep having the same test done at different places — reference ranges differ, and the comparison stops meaning anything.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
   {
-    q: "Mau me booking kaise karein, aur doctor ka parcha bhejna zaroori hai?",
-    a: "Is page par test ya package chuniye aur form bhar dijiye — naam, mobile number, mohalla ya gaon aur ek landmark — ya seedha call kar dijiye. Confirm karne ke liye call aam taur par 30 minute ke andar aati hai, jismein slot, pata aur fasting ki baat tay ho jaati hai. Parcha zaroori nahi hai, lekin hai to uska photo bhej dijiye: Thyroid Total aur Free, Sugar Fasting aur PP, Widal aur Typhidot jaise milte julte naam ki wajah se galat test ho jaana sabse aam galti hai, aur photo hone par ye galti hoti hi nahi. Ghar me kai log karaa rahe hain to sabki booking ek hi slot me kar dijiye — ek visit me sabka sample ho jaayega.",
-    links: [{ href: "/contact", label: "Contact — number aur booking help" }],
+    q: "How do I book in Mau, and do I need to send the doctor's prescription?",
+    a: "Choose a test or package on this page and fill in the form — name, mobile number, locality or village and a landmark — or simply call us. The confirmation call usually comes within 30 minutes and settles the slot, the address and the fasting instructions. A prescription is not required, but if you have one, send a photo: the commonest mistake is the wrong test being run because of similar names — Thyroid Total and Free, Sugar Fasting and PP, Widal and Typhidot — and with a photo that mistake simply does not happen. If several people at home are being tested, book them into one slot — every sample can be taken in a single visit.",
+    links: [{ href: "/contact", label: "Contact — number and booking help" }],
   },
 ];

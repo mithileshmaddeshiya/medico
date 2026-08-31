@@ -372,7 +372,18 @@ export default async function HomePage() {
           isPartOf → #webpage) instead of leaving it floating unattached. It is
           HOME_URL, with the trailing slash — see the note beside IDS above for
           why passing bare SITE here silently breaks that link. */}
-      <LabFaq city="Aapke sheher" faqs={HOME_FAQS} pageUrl={HOME_URL} />
+      {/* No `heading`: the default "Frequently Asked Questions" is right here,
+          because this page serves every city and can name none of them. `city`
+          only ever reaches the fallback sub-line, and it used to be the
+          Hinglish "Aapke sheher" under English questions. The sub-line is
+          passed explicitly now so the section does not depend on that fallback
+          at all. */}
+      <LabFaq
+        city="your city"
+        faqs={HOME_FAQS}
+        pageUrl={HOME_URL}
+        subheading="Straight answers on home collection, fasting, reports and payment."
+      />
 
       <LabCta cta={HOME_CTA} phone={LAB_PHONE} />
 

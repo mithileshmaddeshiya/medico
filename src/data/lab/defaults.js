@@ -125,8 +125,32 @@ export const defaultTrustStrip = () => [
    step 4 — all four were removed from this project on 23 Jul 2026 because they
    could not be confirmed with the partner lab. */
 
+/**
+ * The numbered "how to book" row.
+ *
+ * ⚠ THE HEADING IS THE ONLY PART THAT VARIES BY CITY, AND IT TAKES ONE
+ * TRACKED SEARCH PHRASE — the same rule as defaultCallBanner above, read that
+ * note first. The two must not take the SAME phrase: they are the page's last
+ * two <h2>s, and if both say "blood test at home in <city>" the page has spent
+ * two headings on one query. So every city in src/data/lab/cities.js sets a
+ * howTo heading using a phrase its call strip does not, with the phrase named
+ * in a comment beside it.
+ *
+ * The intro and the five steps below are deliberately NOT city-specific and
+ * must not be made so. They describe a procedure — form, callback, collection,
+ * lab, report — and the procedure is identical in every town we serve. Only
+ * the collection step names the city, because that step is about the address.
+ * Working a city's name into the other four would be a keyword in a sentence
+ * that does not need one, which is where this stops being a procedure and
+ * starts being a keyword list.
+ *
+ * Timings here are load-bearing: 30-minute callback, ~10-minute draw, 6-24
+ * hours for routine reports, 48-72 for cultures. They are repeated in the FAQs
+ * and the city copy, and the intro line promises they match. Change one, change
+ * all of them.
+ */
 export const defaultHowTo = (city) => ({
-  heading: `How to book a lab test in ${city}`,
+  heading: `How to book a lab test at home in ${city}`,
   intro:
     "Five steps from booking to report — and the same timings we state everywhere else on this page.",
   steps: [
@@ -186,16 +210,49 @@ export const defaultTests = () => [
   { id: "fever",      icon: "thermometer", tint: "teal",    name: "Fever Panel",          sub: "Malaria, typhoid & dengue",            tags: ["Fever"],               fasting: false, price: null              },
 ];
 
-// `heading` drives the H2 above the grid — it changes with the active chip.
+/**
+ * The chips above the test grid. `heading` drives the H2, which changes with
+ * the active chip; LabServices appends " in <city>" on a city page, so each
+ * string below has to read as a phrase that clause can follow.
+ *
+ * ⚠ ONLY THE FIRST HEADING IS EVER CRAWLED. The section is client-side: "All"
+ * is the active chip in the server-rendered HTML, so its heading is the only
+ * one in the document a crawler receives. The other seven appear after a click
+ * and are invisible to Google. Putting a keyword in one of them does nothing
+ * for ranking — they are written for the reader who clicks, and the ranking
+ * work has to be done by the "All" heading or somewhere else on the page.
+ *
+ * ── Why "Trusted" is gone ────────────────────────────────────────────────
+ * The first heading read "Trusted Lab Tests & Health Packages". Nothing on
+ * this site supports calling itself trusted — it is the same class of
+ * unearned claim as the accreditation removed on 23 Jul 2026 (see the warning
+ * above defaultFaqs), just softer, and it was occupying the one crawlable
+ * heading in this section. What replaced it is a plain description of what is
+ * actually underneath: a list of tests and packages with their prices.
+ *
+ * ⚠ AND IT IS NOT A KEYWORD SLOT. One phrase, in a sentence — the same rule as
+ * defaultCallBanner and defaultHowTo above. In particular, do NOT write
+ * "near me" into it. A "near me" search is resolved from the searcher's own
+ * location against this business's declared location — the DiagnosticLab node's
+ * `geo`, `postalCode` and `areaServed` (every locality of the city; see the
+ * page's schema) — not from the words "near me" appearing on the page. Printing
+ * them next to "in Varanasi" also contradicts itself, and reads as machine
+ * text, which is the tell this whole section was rewritten to avoid.
+ */
 export const defaultFilters = () => [
-  { key: "All",      label: "All Tests", heading: "Trusted Lab Tests & Health Packages" },
-  { key: "Packages", label: "Packages",  heading: "Health Checkup Packages" },
-  { key: "Popular",  label: "Popular",   heading: "Popular Lab Tests" },
-  { key: "Diabetes", label: "Diabetes",  heading: "Diabetes Tests" },
-  { key: "Heart",    label: "Heart",     heading: "Heart Tests" },
-  { key: "Vitamins", label: "Vitamins",  heading: "Vitamin Tests" },
-  { key: "Fever",    label: "Fever",     heading: "Fever Tests" },
-  { key: "Organ",    label: "Organ",     heading: "Organ Function Tests" },
+  // The only crawlable one. Takes "full body checkup price", because the grid
+  // below it literally IS a price list — the term and the content agree.
+  { key: "All",      label: "All Tests", heading: "Lab Test & Full Body Checkup Prices" },
+  // The seven below are for the reader who clicks a chip. Plain descriptions
+  // of what the chip filters to; no keyword is spent here, because none of
+  // them reaches a crawler.
+  { key: "Packages", label: "Packages",  heading: "Full Body & Senior Citizen Checkup Packages" },
+  { key: "Popular",  label: "Popular",   heading: "Popular Blood Tests" },
+  { key: "Diabetes", label: "Diabetes",  heading: "Diabetes & Blood Sugar Tests" },
+  { key: "Heart",    label: "Heart",     heading: "Heart & Cholesterol Tests" },
+  { key: "Vitamins", label: "Vitamins",  heading: "Vitamin D & B12 Tests" },
+  { key: "Fever",    label: "Fever",     heading: "Fever Tests — Dengue, Typhoid & Malaria" },
+  { key: "Organ",    label: "Organ",     heading: "Liver & Kidney Function Tests" },
 ];
 
 /* ── FAQs ─────────────────────────────────────────────────────────────────
@@ -211,53 +268,53 @@ export const defaultFilters = () => [
    6 AM slots, reports in 24 hours, cash/UPI on collection. */
 
 export const defaultFaqs = (city, areas = [], aliases = []) => {
-  // Real localities named in Hinglish — matches "<area> me blood test" searches;
-  // falls back to the city when no areas are set.
+  // Real localities, named — this is what matches an "<area> blood test"
+  // search; falls back to the city itself when no areas are set.
   const areaText = areas.length
-    ? `${areas.slice(0, 6).join(", ")} aur aas-paas ke ilaake`
-    : `${city} ke har ilaake`;
+    ? `${areas.slice(0, 6).join(", ")} and the areas around them`
+    : `every part of ${city}`;
 
   const faqs = [
     {
-      // Snippet-friendly: pehla hi hissa "free hai / kitne ka hai" ka jawab de
-      // deta hai, jo featured snippet jeet-ta hai.
-      q: `${city} me lab test ka kitna kharcha hai, aur kya home sample collection free hai?`,
-      a: `Aap sirf test ka price dete hain jo har card par likha hai — ${city} me home sample collection bilkul free hai, na koi visiting charge na koi hidden fee. Ek trained phlebotomist aapke ghar aata hai, aapke saamne sample leta hai aur lab tak pahunchata hai.`,
+      // Snippet-friendly: the first clause answers "is it free / what does it
+      // cost", which is what wins the featured snippet.
+      q: `How much does a lab test cost in ${city}, and is home sample collection free?`,
+      a: `You pay only the price printed on the test card — home sample collection in ${city} is completely free, with no visiting charge and no hidden fee. A trained phlebotomist comes to your home, draws the sample in front of you and carries it to the lab.`,
     },
     {
-      q: `Kya main ${city} me ghar par blood test kara sakta hoon?`,
-      a: `Haan. Verified ID card wala ek trained phlebotomist aapke ${city} wale ghar par aata hai — aam taur par booking confirm hone ke 60 minute ke andar — aur aapke saamne sample leta hai. Collection shuru hone se pehle aap uska ID card check kar sakte hain.`,
+      q: `Can I have a blood test done at home in ${city}?`,
+      a: `Yes. A trained phlebotomist carrying a verified ID card comes to your home in ${city} — usually within 60 minutes of the booking being confirmed — and draws the sample in front of you. You are welcome to check the ID card before the collection begins.`,
     },
     {
-      q: `${city} me aap home sample collection ke liye kaun-kaun se area cover karte hain?`,
-      a: `Hum ${areaText} me sample collect karte hain. Aap aas-paas rehte hain par sure nahi ki aapka address cover hota hai? ${LAB_PHONE} par call karein, hum book karne se pehle confirm kar denge.`,
+      q: `Which areas do you cover for home sample collection in ${city}?`,
+      a: `We collect samples in ${areaText}. If you live nearby but are not sure whether your address is covered, call ${LAB_PHONE} and we will confirm before you book.`,
     },
     {
-      q: `${city} me mujhe lab test ki report kitni jaldi mil jaayegi?`,
-      a: `Zyadatar report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp aur email dono par PDF ke roop me bhej di jaati hai, taaki aap turant apne doctor ko dikha sakein. Kuch special test 48–72 ghante lete hain — sahi time hum booking ke waqt bata dete hain.`,
+      q: `How quickly will I get my lab test report in ${city}?`,
+      a: `Most reports are ready within 24 hours and are sent as a PDF on both WhatsApp and email, so you can show your doctor straight away. A few specialised tests take 48 to 72 hours — we tell you the exact timing when you book.`,
     },
     {
-      q: "Kaun se lab test me sample dene se pehle fasting (khaali pet) zaroori hai?",
-      a: "Fasting Blood Sugar, Lipid Profile aur Full Body Checkup jaise test me 8–12 ghante ki fasting chahiye; saada paani pi sakte hain. Isiliye home visit slot subah 6 baje se shuru hote hain — jaldi sample dein aur uske turant baad naashta karein. CBC, Thyroid Profile aur Vitamin D me koi fasting nahi chahiye.",
+      q: "Which lab tests require fasting before the sample is given?",
+      a: "Tests such as Fasting Blood Sugar, Lipid Profile and the Full Body Checkup packages need 8 to 12 hours of fasting; plain water is allowed. This is why home visit slots start at 6 AM — give the sample early and have breakfast straight after. CBC, Thyroid Profile and Vitamin D need no fasting.",
     },
     {
-      q: `${city} me main kaun-kaun se lab test aur health package book kar sakta hoon?`,
-      a: `Aap routine pathology test aur checkup package book kar sakte hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver (LFT) aur Kidney (KFT) test, Vitamin D aur B12, Dengue aur Full Body Checkup. Agar doctor ne koi aisa test likha hai jo is page par nahi hai, to prescription ke saath ${LAB_PHONE} par call karein — zyadatar test usi home visit me ho jaate hain.`,
+      q: `Which lab tests and health packages can I book in ${city}?`,
+      a: `You can book routine pathology tests and checkup packages — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver (LFT) and Kidney (KFT) function tests, Vitamin D and B12, Dengue and the Full Body Checkup. If your doctor has prescribed something that is not listed on this page, call ${LAB_PHONE} with the prescription — most tests can be done on the same home visit.`,
     },
     {
-      q: `${city} me lab test kaise book karein, aur payment ke kya option hain?`,
-      a: `Is page par koi test chunein aur "Book Now" form bharein, ya seedhe ${LAB_PHONE} par call karein. Aap sample collection ke waqt cash de sakte hain, ya UPI se — PhonePe, Google Pay ya Paytm.`,
+      q: `How do I book a lab test in ${city}, and what are the payment options?`,
+      a: `Choose a test on this page and fill in the "Book Now" form, or call ${LAB_PHONE} directly. You can pay at the time of collection, in cash or by UPI — PhonePe, Google Pay or Paytm.`,
     },
   ];
 
-  // Alternate-name FAQ (jaise Varanasi ke liye "Banaras"). Jo log official naam
-  // kabhi nahi type karte unhe capture karta hai, aur dono naam ek hi sheher ke
-  // hone ki baat plain fact ke roop me kehta hai — isse zyada koi claim nahi.
+  // The alternate-name FAQ (Banaras for Varanasi, for instance). It catches
+  // everyone who never types the official name, and states that the two names
+  // are one city as the plain fact it is — no claim beyond that.
   const alias = aliases[0];
   if (alias) {
     faqs.splice(3, 0, {
-      q: `Kya aap ${alias} me lab test karte hain?`,
-      a: `Haan — "${alias}" aur "${city}" ek hi sheher ke do naam hain, isliye is page ki har service applicable hai. Chahe aap "${alias}" me lab test dhoondein ya "${city}" me, aapko wahi free home sample collection aur 24-ghante me report milti hai.`,
+      q: `Do you carry out lab tests in ${alias}?`,
+      a: `Yes — "${alias}" and "${city}" are two names for the same city, so everything on this page applies. Whether you search for a lab test in ${alias} or in ${city}, you get the same free home sample collection and the same report within 24 hours.`,
     });
   }
 
@@ -444,20 +501,33 @@ export const defaultContent = (city, areas = []) => {
  */
 export const varanasiFaqs = [
   {
+    // ⚠ REWRITTEN. This answer used to promise "a fresh single-use needle and
+    // a sealed vacutainer opened in front of you" and transport "in a
+    // temperature-controlled box". Those are three of the exact claims removed
+    // on 23 Jul 2026 as unconfirmable (see the warning above defaultFaqs) —
+    // this FAQ was the one place they survived, and every city file since has
+    // carried a note calling it a known inconsistency rather than a precedent.
+    // It now claims only what the rest of the site claims.
     q: "Is home blood sample collection in Varanasi safe?",
-    a: "Yes. Every draw uses a fresh single-use needle and a sealed vacutainer opened in front of you, the phlebotomist is trained and identity-verified, and the sample is transported in a temperature-controlled box to protect result accuracy.",
+    a: "Yes. A trained phlebotomist carrying a verified ID card comes to your home and draws the sample in front of you — you are welcome to check the ID card before the collection begins. The whole visit takes about 10 minutes, and the sample is carried to the lab the same morning.",
   },
   {
     q: "Do I need to fast before every blood test?",
     a: "No. Only fasting blood sugar, lipid profile, insulin and most full body checkup packages need 10 to 12 hours of fasting. CBC, thyroid profile, HbA1c, vitamin D, vitamin B12 and dengue tests do not require fasting. Plain water is allowed while fasting.",
   },
   {
+    // ⚠ REWRITTEN. The old answer quoted market ranges nobody had surveyed
+    // (₹999–₹1,499 basic, ₹1,800–₹2,800 advanced, ₹3,000–₹5,000 comprehensive)
+    // on a page that prints the real price beside every package. Quoting the
+    // cards is the only version that cannot contradict the price list above it.
     q: "How much does a full body checkup cost in Varanasi?",
-    a: "A basic full body checkup in Varanasi typically costs between ₹999 and ₹1,499, an advanced package between ₹1,800 and ₹2,800, and a comprehensive package between ₹3,000 and ₹5,000 depending on the number of parameters included.",
+    a: "The Basic Full Body Checkup is ₹999 and covers 45 parameters, the Advanced Full Body is ₹1,999 for 72 parameters, and the Senior Citizen Pack is ₹2,999 for 88 parameters. These are the prices on the cards above — home sample collection is free on top of them, with no visiting charge.",
   },
   {
+    // ⚠ "SMS and email" corrected to WhatsApp and email, which is what every
+    // other page, the how-to steps and the schema all state.
     q: "How soon will I get my lab test report?",
-    a: "Routine tests such as CBC, sugar, lipid profile, LFT, KFT and thyroid are reported within 6 to 24 hours of the sample reaching the lab. Cultures take 48 to 72 hours. Reports are delivered as a PDF by SMS and email.",
+    a: "Routine tests such as CBC, sugar, lipid profile, LFT, KFT and thyroid are reported within 6 to 24 hours of the sample reaching the lab. Cultures take 48 to 72 hours. Reports are delivered as a PDF on WhatsApp and email.",
   },
   {
     q: "When should a dengue test be done in Varanasi?",
@@ -465,14 +535,76 @@ export const varanasiFaqs = [
   },
   {
     q: "Do I need a doctor's prescription to book a lab test?",
-    a: "Most routine tests and health packages can be booked without a prescription. Certain specialised tests require one as per regulation, and uploading your prescription helps ensure the exact panel your doctor advised is processed.",
+    a: "Most routine tests and health packages can be booked without a prescription. Certain specialised tests require one as per regulation, and sending a photo of your prescription helps ensure the exact panel your doctor advised is the one that is run.",
+  },
+  {
+    // Added: every other city answers the coverage question, and this page
+    // rendered only six FAQs where the others render eight.
+    q: "Which areas of Varanasi do you cover for home sample collection?",
+    a: "We collect samples across the city — Sarnath, Ramnagar, Bhelupur, Lanka, Sigra, Cantt and the areas around them. If you live nearby but are not sure whether your address is covered, call before booking and we will confirm. Do include a landmark in the address; it is more useful than a house number.",
+  },
+  {
+    q: "Do you carry out lab tests in Banaras?",
+    a: "Yes — \"Banaras\" and \"Varanasi\" are two names for the same city, so everything on this page applies. Whether you search for a lab test in Banaras or in Varanasi, you get the same free home sample collection, the same rates and the same report within 24 hours.",
   },
 ];
 
 /* ── Closing call strip ───────────────────────────────────────────────────── */
 
+/**
+ * ⚠ THE HEADING IS ONE TRACKED SEARCH PHRASE. NOT A SENTENCE AROUND ONE.
+ *
+ * Three versions of this were wrong before the rule below settled, and each
+ * failed differently — worth knowing, because each failure is tempting again:
+ *
+ *   `Book Your Health Checkup in ${city}`
+ *     A phrase nobody types into a search box.
+ *
+ *   `Full Body Checkup and Pathology Lab Test in ${city}`
+ *     Two keywords bolted together into something no person says out loud,
+ *     and the identical line on all ten city pages with a noun swapped. A
+ *     block repeated across ten pages is boilerplate: discounted at best, and
+ *     at worst the doorway signal this project already had to strip out of
+ *     the Deoria copy once.
+ *
+ *   "Blood Test at Home in Deoria — Book in One Call"
+ *     The phrase was right, but wrapping it in an invented tail pushed the
+ *     term the page is ranked for into the middle of a sentence and made the
+ *     heading about the tail. The tails were also all different for no reason
+ *     a reader benefits from.
+ *
+ * ── The rule ─────────────────────────────────────────────────────────────
+ *
+ *   1. The heading is ONE phrase from the tracked keyword list, title cased.
+ *      No tail after a dash, no second keyword joined with "and".
+ *   2. A different phrase per city. Where a city's list has several, take the
+ *      one its h1 does not already own — the h1 and this h2 competing for one
+ *      query wins one query instead of two. That is why Deoria takes "blood
+ *      test at home in deoria" and not "lab test in deoria", which its h1 has,
+ *      and why Azamgarh takes "pathology lab in azamgarh" rather than a third
+ *      "Blood Test at Home in <city>".
+ *   3. The strip says everything else already — the phone number under the
+ *      heading, "Book Now — Call Us" on the button. The heading does not need
+ *      to repeat that it is bookable.
+ *
+ * ── What is out of bounds ────────────────────────────────────────────────
+ * Superlatives, however well they rank. "Best pathology lab in gorakhpur" is
+ * on the tracked list and is deliberately NOT used: nothing on this site
+ * supports it, and it is the same class of unearned claim as the accreditation
+ * that had to be removed once already. That city takes its "blood test home
+ * collection" phrase instead. Read the warning above defaultFaqs before
+ * editing — free home collection, slots from 6 AM, report in 24 hours, cash or
+ * UPI, and nothing past that. NEVER "24 ghante khula lab".
+ *
+ * English, because these phrases are typed in English whatever language the
+ * reader speaks. The city name stays in — it is half of every phrase.
+ *
+ * Every city in src/data/lab/cities.js sets its own. This generated form is
+ * the fallback for the next city added; replace it with that city's own
+ * tracked phrase when you write its copy.
+ */
 export const defaultCallBanner = (city) => ({
-  heading: `Book Your Health Checkup in ${city}`,
+  heading: `Lab Test at Home in ${city}`,
   buttonText: "Book Now — Call Us",
 });
 

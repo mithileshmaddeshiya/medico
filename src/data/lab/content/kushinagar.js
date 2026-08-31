@@ -250,35 +250,35 @@ export const kushinagarContent = [
  */
 export const kushinagarFaqs = [
   {
-    q: "Kushinagar me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Khadda, Tamkuhi Raj ya Nebua Naurangia jaise door ke kasbon me bhi wahi rate lagta hai jo Padrauna me hai. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Kushinagar, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate in far towns such as Khadda, Tamkuhi Raj or Nebua Naurangia is the same as in Padrauna. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya Kushinagar ya Padrauna me aapka koi lab ya collection centre hai?",
-    a: "Nahi — hamara koi walk-in counter is jile me nahi hai, na Padrauna me aur na Kasia me, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Kushinagar or Padrauna?",
+    a: "No — we have no walk-in counter anywhere in this district, neither in Padrauna nor in Kasia, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Jila Kushinagar hai lekin main Padrauna me rehta hoon — kya ye page mere liye hai?",
-    a: "Haan. Kushinagar jile ka mukhyalaya Padrauna hi hai, aur Kushinagar (Kasia) wo teerth sthal hai jo wahan se kareeb 15 kilometre door hai. Is page ki har service dono jagah laagu hoti hai, aur rate bhi wahi hai. Aap \"Padrauna me blood test\" dhoondhein ya \"Kushinagar me lab test\" — booking ka tarika, slot aur report sab ek hi hai.",
+    q: "The district is Kushinagar but I live in Padrauna — is this page for me?",
+    a: "Yes. Padrauna is the district headquarters of Kushinagar, and Kushinagar (Kasia) is the pilgrimage town about 15 kilometres away. Everything on this page applies in both places, at the same rates. Whether you search for a blood test in Padrauna or a lab test in Kushinagar, the booking, the slots and the report are the same.",
   },
   {
-    q: "Kushinagar jile me aap kaun kaun se kasbe cover karte hain?",
-    a: "Padrauna, Kushinagar (Kasia), Hata, Ramkola, Tamkuhi Raj, Khadda, Captainganj, Sewrahi, Fazilnagar, Dudahi, Nebua Naurangia, Vishunpura, Sukrauli aur Motichak — aur inse lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se na ho to bhi ek baar call kar ke pooch lijiye. Pata likhte waqt tola ya purwa ka naam, post office, thana aur ek landmark zaroor likhiye — ek hi naam ke do gaon paas paas hona yahan aam hai, aur late visit ki sabse badi wajah yahi hoti hai.",
+    q: "Which towns in Kushinagar district do you cover?",
+    a: "Padrauna, Kushinagar (Kasia), Hata, Ramkola, Tamkuhi Raj, Khadda, Captainganj, Sewrahi, Fazilnagar, Dudahi, Nebua Naurangia, Vishunpura, Sukrauli and Motichak — and the villages adjoining them are usually covered too. If your village is not named here, please call anyway. When writing the address, do include the tola or purwa, the post office, the police station and a landmark — two villages of the same name close together is common here, and that is the single commonest reason a visit runs late.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kaunsa test book karein?",
-    a: "Koi test book mat kijiye. Tez bukhar ke saath jhatke, behoshi, gardan ki akdan, lagatar ulti ya bahut susti — ye AES ya dimaagi bukhar ke ishaare ho sakte hain, aur is belt me wo maamle aate rahe hain. Seedha najdeeki aspatal le jaaiye — Padrauna ka zila aspatal ya Gorakhpur ka BRD, jo bhi pahunch me ho. Ismein ek-ek ghanta maayne rakhta hai aur home collection ka intezaar khatarnak hai. Blood test iska pehla jawab hai hi nahi.",
+    q: "My child has a high fever with seizures — which test should I book?",
+    a: "Do not book any test. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness can point to acute encephalitis syndrome, and this belt has seen such cases. Go straight to the nearest hospital — the district hospital in Padrauna or BRD in Gorakhpur, whichever you can reach. Every hour counts here, and waiting for a home collection is dangerous. A blood test is not the first answer to this at all.",
   },
   {
-    q: "Bukhar aaya hai — dengue ka test kis din karana chahiye?",
-    a: "Dengue NS1 antigen sirf bukhar ke pehle 1 se 5 din me bharosemand hai; paanchve din ke baad wo aksar negative aa jaata hai aur tab Dengue IgM antibody karana chahiye. Typhoid ke Widal ke liye kam se kam 5 se 7 din ka bukhar chahiye — pehle karane par jhootha negative aata hai. Koi bhi bukhar ho, CBC saath me zaroor karayein: platelet count aur haematocrit hi wo do number hain jo doctor roz dekhta hai. Bukhar teen din se zyada khinch jaaye to intezaar mat kijiye.",
+    q: "There is a fever — on which day should the dengue test be done?",
+    a: "The Dengue NS1 antigen is reliable only during the first 1 to 5 days of fever; from day 5 it often turns negative, and the Dengue IgM antibody test should be used instead. The Widal test for typhoid needs at least 5 to 7 days of fever — done earlier it gives a false negative. Whatever the fever, always include a CBC: the platelet count and haematocrit are the two numbers a doctor follows day to day. If the fever runs beyond three days, do not wait.",
   },
   {
-    q: "Gorakhpur me doctor dikhana hai — test Kushinagar me karayein ya wahin?",
-    a: "Jo test doctor pehle se likh chuka hai ya jo har visit par dohraye jaate hain — HbA1c, TSH, creatinine, haemoglobin — unhe yahin ek din pehle karwa lijiye. Report 24 ghante me PDF me aa jaati hai, aur aap OPD me parcha le kar nahi, report le kar ghuste hain: ek poora din aur ek poora kiraya bach jaata hai. Follow-up test hamesha ek hi lab me karayein — alag machine aur method ki reference range thodi alag hoti hai, isliye number badla hua lagta hai jabki sehat waisi ki waisi hoti hai.",
+    q: "I have to see a doctor in Gorakhpur — should I have the tests done in Kushinagar or there?",
+    a: "Anything the doctor has already prescribed, or that is repeated at every visit — HbA1c, TSH, creatinine, haemoglobin — have done here a day earlier. The report arrives as a PDF within 24 hours, and you walk into the OPD holding a report rather than a prescription: a whole day and a whole fare saved. Always have follow-up tests done at the same lab — reference ranges differ slightly between analysers and methods, so the number can look changed when your health has not.",
   },
   {
-    q: "Ganne ke khet ya chini mill me kaam karte hain, lambe samay se khaansi hai — kaunsa test karayein?",
-    a: "Lambi khaansi ka jawab khoon ki jaanch nahi hai. Do hafte se zyada khaansi, shaam ko bukhar, raat ko paseena, wazan girna ya balgam me khoon ho to TB ka shak hota hai, aur uski jaanch balgam se hoti hai — najdeeki sarkari aspatal ya DOTS centre par, muft. TB ka antibody wala blood test bharosemand nahi hai aur hum wo karte bhi nahi. Jo hum kar sakte hain wo alag hai: dhoop me bhaari kaam karne walon me haemoglobin ki kami, Vitamin D aur B12 ki kami aur thyroid ki gadbadi aam hai — CBC, Vitamin D, Vitamin B12 aur TSH ek hi sample me ghar par ho jaate hain.",
+    q: "I work in the cane fields or at the sugar mill and have had a cough for a long time — which test should I have?",
+    a: "A long cough is not answered by a blood test. A cough lasting more than two weeks, an evening fever, night sweats, weight loss or blood in the sputum raises a suspicion of TB, and that is diagnosed from sputum — free of charge at the nearest government hospital or DOTS centre. The antibody blood test for TB is not reliable and we do not offer it. What we can do is separate: low haemoglobin, deficiencies of Vitamin D and B12 and thyroid problems are common among people doing heavy work in the sun — a CBC, Vitamin D, Vitamin B12 and TSH can all be done at home from a single sample.",
   },
 ];

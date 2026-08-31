@@ -310,37 +310,37 @@ export const balliaContent = [
  */
 export const balliaFaqs = [
   {
-    q: "Ballia me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Ballia me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Rasra, Bairia ya Belthara Road jaise door ke kasbon me bhi wahi rate lagta hai jo sheher me hai. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Ballia, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Ballia is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate in far towns such as Rasra, Bairia or Belthara Road is the same as in the city. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya Ballia me aapka koi lab ya collection centre hai — Station Road ya Bhrigu Ashram ke paas?",
-    a: "Nahi — hamara koi walk-in counter Ballia me nahi hai, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai, chahe aap sheher me hon ya jile ke kisi gaon me. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Ballia — near Station Road or Bhrigu Ashram?",
+    a: "No — we have no walk-in counter in Ballia, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there, whether you are in the city or in a village in the district. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Ballia jile me aap kaun kaun se ilaake cover karte hain — Rasra, Bairia aur diara ke gaon bhi?",
-    a: "Sheher me Station Road, Bhrigu Ashram, Kachehri, Chowk aur zila aspatal ke aas-paas, aur jile me Phephna, Rasra, Bansdih, Bairia, Sikandarpur, Belthara Road, Reoti, Maniyar, Sahatwar, Nagra, Chitbara Gaon, Garwar, Dubhar, Sohaon, Hanumanganj, Beruarbari aur Murli Chhapra tak — inse lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye. Pata likhte waqt tola ya purwa ka naam, post office, ek landmark aur ye zaroor bataiye ki aap bandh ke kis taraf hain — barsaat me diara ke raste badal jaate hain aur late visit ki sabse badi wajah yahi hoti hai.",
+    q: "Which areas of Ballia district do you cover — including Rasra, Bairia and the diara villages?",
+    a: "In the city: Station Road, Bhrigu Ashram, Kachehri, Chowk and around the district hospital. In the district: Phephna, Rasra, Bansdih, Bairia, Sikandarpur, Belthara Road, Reoti, Maniyar, Sahatwar, Nagra, Chitbara Gaon, Garwar, Dubhar, Sohaon, Hanumanganj, Beruarbari and Murli Chhapra — the villages adjoining them are usually covered too. If your village is not named here, please call anyway. When writing the address, include the tola or purwa, the post office, a landmark, and which side of the embankment you are on — the routes through the diara change during the rains, and that is the single commonest reason a visit runs late.",
   },
   {
-    q: "Handpump ke paani me arsenic ki baat sunte hain — kya iska koi blood test hota hai?",
-    a: "Arsenic ka pata paani ki jaanch se chalta hai, khoon ki jaanch se nahi — aur hum paani ki jaanch nahi karte, na is page par uska koi package hai. Gaon me shak ho to handpump ka paani block, Jal Nigam ya jal sansthan se jaanchwaiye, aur peene ka paani kisi jaanche hue source se lijiye; asli ilaaj wahi hai. Jaanch ka kaam sirf nigrani ka hai: lambe samay se ek hi sandigdh source ka paani pi rahe parivaar me saal me ek baar Liver Function Test, Kidney Function Test aur CBC dekh lena samajhdari hai. Chamdi par kaale-safed daag ya hatheli-talwe ka mota hona dikhe to seedha doctor ko dikhaiye aur unhe paani ka source zaroor bataiye.",
+    q: "We hear about arsenic in handpump water — is there a blood test for it?",
+    a: "Arsenic is detected by testing the water, not the blood — and we do not test water, nor is there any package for it on this page. If there is a concern in your village, have the handpump water tested by the block, Jal Nigam or the jal sansthan, and take your drinking water from a source that has been tested; that is the actual remedy. Testing has only a monitoring role here: for a family that has been drinking from one suspected source for a long time, a Liver Function Test, Kidney Function Test and CBC once a year is sensible. If you see dark or pale patches on the skin, or thickening of the palms and soles, see a doctor directly and be sure to tell them about the water source.",
   },
   {
-    q: "Garmi me report par asar padta hai kya — May-June me sample kab dena chahiye?",
-    a: "Haan, padta hai. Sharir me paani ki kami se khoon gaadha ho jaata hai aur urea, creatinine tatha haemoglobin jhoothe taur par badhe hue aa jaate hain. Isliye garmi me subah 6 se 8 baje ka slot lijiye. Fasting me saada paani peena mana nahi hai, balki zaroori hai — sirf chai, doodh, biscuit ya kuch khaana mana hai. BP ki dawa par hain aur garmi me chakkar, kamzori ya pindliyon me ainthan ho rahi hai to Kidney Function Test ke saath electrolytes dekh lijiye. Aur kisi ko loo lag jaaye — behoshi, bhram, ya pasina band — to test book karne ke bajaye seedha hospital le jaaiye.",
+    q: "Does the heat affect the report — when should the sample be given in May and June?",
+    a: "Yes, it does. Dehydration thickens the blood, and urea, creatinine and haemoglobin come back falsely raised. So in summer, take a 6 to 8 AM slot. Plain water is not just permitted during fasting, it is necessary — only tea, milk, biscuits or food are not. If you are on blood pressure medication and feeling dizzy or weak, or getting cramps in the calves during the heat, have a Kidney Function Test along with electrolytes. And if someone has heatstroke — fainting, confusion, or sweating that has stopped — take them straight to hospital rather than booking a test.",
   },
   {
-    q: "Bukhar me dengue aur typhoid ka test kis din karana chahiye?",
-    a: "Dengue me NS1 antigen bukhar ke pehle 1 se 5 din tak bharosemand hai; paanchve din ke baad wo aksar negative aa jaata hai aur tab Dengue IgM antibody karana padta hai. Typhoid me Widal ke liye kam se kam 5 se 7 din ka bukhar chahiye, warna titre badhte hi nahi; Typhidot IgM jaldi positive hota hai. Thand aur kanpkanpi ho to malaria antigen aur peripheral smear jodiye. Jo bhi karayein, CBC saath me zaroor karwaiye — girta platelet count wahi cheez hai jo roz dekhi jaati hai. Baadh ke baad peelapan, gehra peshab ya ulti jaisa lage to LFT ke saath Hepatitis A aur E IgM karaiye.",
+    q: "On which day of a fever should the dengue and typhoid tests be done?",
+    a: "For dengue, the NS1 antigen is reliable during the first 1 to 5 days of fever; from day 5 it often turns negative, and the Dengue IgM antibody test is used instead. For typhoid, the Widal test needs at least 5 to 7 days of fever before the titres rise; Typhidot IgM turns positive earlier. If there are chills and shivering, add a malaria antigen test and a peripheral smear. Whichever you do, always include a CBC — the falling platelet count is what is watched day to day. If there is yellowing, dark urine or nausea after a flood, have an LFT along with Hepatitis A and E IgM.",
   },
   {
-    q: "Ilaaj Varanasi ya Ganga paar Bihar me chal raha hai — kya follow-up jaanch Ballia me ghar par ho sakti hai?",
-    a: "Haan. Routine blood test kahin bhi ho sakta hai; ye zaroori nahi ki jaanch wahin ho jahan aapne dikhaya tha. Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, jise aap doctor ko dikha sakte hain ya bhej sakte hain. Diabetes me har teen mahine me HbA1c, saal me ek baar Lipid Profile aur Kidney Function Test ke saath urine microalbumin; thyroid me dose badalne ke 6 se 8 hafte baad TSH, uske baad har 6 se 12 mahine me. Ek hi test ko baar baar alag alag jagah se mat karaiye — reference range alag hone se tulna galat baithti hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "My treatment is in Varanasi or across the Ganga in Bihar — can the follow-up tests be done at home in Ballia?",
+    a: "Yes. A routine blood test can be done anywhere; it does not have to be done where you were seen. The report arrives within 24 hours as a PDF on WhatsApp and email, which you can show or forward to your doctor. For diabetes: HbA1c every three months, a Lipid Profile once a year, and a Kidney Function Test with urine microalbumin once a year. For thyroid: TSH 6 to 8 weeks after a change of dose, then every 6 to 12 months. Do not keep having the same test done at different places — reference ranges differ, and the comparison stops meaning anything.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
   {
-    q: "Ballia me booking kaise karein, aur doctor ka parcha bhejna zaroori hai?",
-    a: "Is page par test ya package chuniye aur form bhar dijiye — naam, mobile number, mohalla ya gaon aur ek landmark — ya seedha call kar dijiye. Confirm karne ke liye call aam taur par 30 minute ke andar aati hai, jismein slot, pata aur fasting ki baat tay ho jaati hai. Parcha zaroori nahi hai, lekin hai to uska photo bhej dijiye: Thyroid Total aur Free, Sugar Fasting aur PP, Widal aur Typhidot jaise milte julte naam ki wajah se galat test ho jaana sabse aam galti hai, aur photo hone par ye galti hoti hi nahi. Ghar me kai log karaa rahe hain to sabki booking ek hi slot me kar dijiye — ek visit me sabka sample ho jaayega.",
-    links: [{ href: "/contact", label: "Contact — number aur booking help" }],
+    q: "How do I book in Ballia, and do I need to send the doctor's prescription?",
+    a: "Choose a test or package on this page and fill in the form — name, mobile number, locality or village and a landmark — or simply call us. The confirmation call usually comes within 30 minutes and settles the slot, the address and the fasting instructions. A prescription is not required, but if you have one, send a photo: the commonest mistake is the wrong test being run because of similar names — Thyroid Total and Free, Sugar Fasting and PP, Widal and Typhidot — and with a photo that mistake simply does not happen. If several people at home are being tested, book them into one slot — every sample can be taken in a single visit.",
+    links: [{ href: "/contact", label: "Contact — number and booking help" }],
   },
 ];

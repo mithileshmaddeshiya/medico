@@ -311,37 +311,37 @@ export const azamgarhContent = [
  */
 export const azamgarhFaqs = [
   {
-    q: "Azamgarh me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Azamgarh me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Jile ke door wale kasbon me bhi wahi rate lagta hai jo sheher me hai. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Azamgarh, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Azamgarh is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate is the same in the far towns of the district as it is in the city. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya Azamgarh me aapka koi lab ya collection centre hai — Sidhari ya Civil Lines me?",
-    a: "Nahi — hamara koi walk-in counter Azamgarh me nahi hai, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai, chahe aap Sidhari me hon ya jile ke kisi gaon me. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Azamgarh — in Sidhari or Civil Lines?",
+    a: "No — we have no walk-in counter in Azamgarh, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there, whether you are in Sidhari or in a village in the district. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Azamgarh jile me aap kaun kaun se ilaake cover karte hain?",
-    a: "Sheher me Sidhari, Civil Lines, Kachehri, Chowk, Bhanwarnath, Pahadpur aur Rani Ki Sarai ke aas-paas, aur jile me Mubarakpur, Nizamabad, Bilariyaganj, Sarai Mir, Lalganj, Phulpur, Maharajganj, Atraulia, Mehnagar, Jeanpur, Sagri, Martinganj, Budhanpur, Jahanaganj, Ahiraula aur Deogaon tak — inse lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye. Pata likhte waqt tola ya purwa ka naam aur ek landmark (school, mandir, masjid, block office, tiraha) zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas of Azamgarh district do you cover?",
+    a: "In the city: Sidhari, Civil Lines, Kachehri, Chowk, Bhanwarnath, Pahadpur and around Rani Ki Sarai. In the district: Mubarakpur, Nizamabad, Bilariyaganj, Sarai Mir, Lalganj, Phulpur, Maharajganj, Atraulia, Mehnagar, Jeanpur, Sagri, Martinganj, Budhanpur, Jahanaganj, Ahiraula and Deogaon — the villages adjoining them are usually covered too. If your village is not named here, please call anyway. When writing the address, include the tola or purwa and a landmark (a school, temple, mosque, block office or junction), because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Zila aspatal ya medical college ki OPD me dikhana hai — kya test ek din pehle ghar par ho sakta hai?",
-    a: "Haan, aur yahi sabse kaam ka tarika hai. Parche par likhe blood aur urine ke test ek din pehle ghar par karwa lijiye; report 24 ghante ke andar WhatsApp par PDF me aa jaati hai, isliye doctor ke saamne baithte waqt wo haath me hoti hai aur ek hi visit me baat ban jaati hai. Warna OPD me number lagta hai, test likha jaata hai, phir line, aur report ke liye doosre din phir aana padta hai. Sirf X-ray, sonography, CT ya MRI jaisi imaging ke liye jaana zaroori hai — wo sample par nahi, machine par hoti hai.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "I have an OPD appointment at the district hospital or medical college — can the tests be done at home the day before?",
+    a: "Yes, and this is the most useful way to do it. Have the blood and urine tests on the prescription done at home a day earlier; the report arrives within 24 hours as a PDF on WhatsApp, so it is in your hand while you are sitting in front of the doctor and the visit settles the matter. Otherwise you queue for a number, the tests are prescribed, you queue again, and you return another day for the report. Only imaging such as an X-ray, sonography, CT or MRI requires going in person — those are done on a machine, not on a sample.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
   {
-    q: "Bukhar me dengue aur typhoid ka test kis din karana chahiye?",
-    a: "Dengue me NS1 antigen bukhar ke pehle 1 se 5 din tak bharosemand hai; paanchve din ke baad wo aksar negative aa jaata hai aur tab Dengue IgM antibody karana padta hai. Typhoid me Widal ke liye kam se kam 5 se 7 din ka bukhar chahiye, warna titre badhte hi nahi; Typhidot IgM jaldi positive hota hai. Thand aur kanpkanpi ho to malaria antigen aur peripheral smear jodiye. Jo bhi karayein, CBC saath me zaroor karwaiye — girta platelet count wahi cheez hai jo roz dekhi jaati hai. Bukhar ka panel do-teen din baad dohrana pad sakta hai, isliye ek hi samay ka slot lijiye.",
+    q: "On which day of a fever should the dengue and typhoid tests be done?",
+    a: "For dengue, the NS1 antigen is reliable during the first 1 to 5 days of fever; from day 5 it often turns negative, and the Dengue IgM antibody test is used instead. For typhoid, the Widal test needs at least 5 to 7 days of fever before the titres rise; Typhidot IgM turns positive earlier. If there are chills and shivering, add a malaria antigen test and a peripheral smear. Whichever you do, always include a CBC — the falling platelet count is what is watched day to day. A fever panel may need repeating after two or three days, so book a slot at the same time of day.",
   },
   {
-    q: "Subah ka waqt nahi nikal pata — kya sample shaam ko liya ja sakta hai?",
-    a: "Non-fasting test — CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12, Dengue aur Urine Routine — din me kabhi bhi ho sakte hain, aur home visit ke slot subah 6 baje se shaam tak chalte hain. Sirf fasting wale test — Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package — subah ke slot maangte hain, kyunki unme 10 se 12 ghante kuch nahi khana hota. Booking ke waqt apna waqt bata dijiye; jo test bina fasting ke hote hain unka slot aapke hisaab se rakha ja sakta hai.",
+    q: "I cannot spare time in the morning — can the sample be taken in the evening?",
+    a: "Non-fasting tests — CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12, Dengue and Urine Routine — can be done at any time of day, and home visit slots run from 6 AM until evening. Only the fasting tests — Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages — need a morning slot, because they require 10 to 12 hours without food. Tell us your timing when you book; anything that does not need fasting can be scheduled to suit you.",
   },
   {
-    q: "Sugar ya thyroid ki dawa chal rahi hai — follow-up jaanch kab kab karani chahiye?",
-    a: "Diabetes me har teen mahine me HbA1c (ismein fasting nahi chahiye), saal me ek baar Lipid Profile, aur saal me ek baar Kidney Function Test ke saath urine microalbumin — microalbumin wahi test hai jo sabse pehle ishaara deta hai ki kidney par asar shuru ho raha hai aur wahi sabse zyada chhoot jaata hai. Thyroid me dose badalne ke 6 se 8 hafte baad TSH dohraiye, uske baad har 6 se 12 mahine me. Ghar ke kai log dawa par hain to sabka follow-up ek hi slot me karwa lijiye — ek visit me sabka sample ho jaayega.",
+    q: "I am on medication for diabetes or thyroid — how often should the follow-up tests be done?",
+    a: "For diabetes: HbA1c every three months (no fasting needed), a Lipid Profile once a year, and a Kidney Function Test with urine microalbumin once a year. Microalbumin is the earliest sign that the kidneys are being affected, and it is also the test most often skipped. For thyroid: repeat TSH 6 to 8 weeks after any change of dose, then every 6 to 12 months. If several people in the house are on medication, book all the follow-ups into one slot — every sample can be taken in a single visit.",
   },
   {
-    q: "Azamgarh me booking kaise karein, aur doctor ka parcha bhejna zaroori hai?",
-    a: "Is page par test ya package chuniye aur form bhar dijiye — naam, mobile number, mohalla ya gaon aur ek landmark — ya seedha call kar dijiye. Confirm karne ke liye call aam taur par 30 minute ke andar aati hai, jismein slot, pata aur fasting ki baat tay ho jaati hai. Parcha zaroori nahi hai, lekin hai to uska photo bhej dijiye: Thyroid Total aur Free, Sugar Fasting aur PP, Widal aur Typhidot jaise milte julte naam ki wajah se galat test ho jaana sabse aam galti hai, aur photo hone par ye galti hoti hi nahi.",
-    links: [{ href: "/contact", label: "Contact — number aur booking help" }],
+    q: "How do I book in Azamgarh, and do I need to send the doctor's prescription?",
+    a: "Choose a test or package on this page and fill in the form — name, mobile number, locality or village and a landmark — or simply call us. The confirmation call usually comes within 30 minutes and settles the slot, the address and the fasting instructions. A prescription is not required, but if you have one, send a photo: the commonest mistake is the wrong test being run because of similar names — Thyroid Total and Free, Sugar Fasting and PP, Widal and Typhidot — and with a photo that mistake simply does not happen.",
+    links: [{ href: "/contact", label: "Contact — number and booking help" }],
   },
 ];

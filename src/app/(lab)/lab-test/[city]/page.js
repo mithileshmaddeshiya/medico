@@ -434,9 +434,15 @@ export default async function LabCityPage({ params }) {
            Asked Questions" on all six city pages — the one generic heading on
            an otherwise entirely city-specific page. The sub-line below it drops
            the city in return, so the pair states two things instead of one
-           thing twice. See the note in LabFaq. */
-        heading={`${cityName} Me Lab Test — Aksar Puche Jane Wale Sawaal`}
-        subheading="Home collection, fasting, report aur payment se jude seedhe jawab."
+           thing twice. See the note in LabFaq.
+
+           English, like the questions underneath it: the FAQs on this section
+           were rewritten out of Hinglish, and a Hinglish heading over English
+           answers reads as a section nobody finished. It is still a heading and
+           not a keyword slot — "Frequently Asked Questions About Lab Tests in
+           <city>" is a sentence; a comma-list of search phrases is not. */
+        heading={`Frequently Asked Questions About Lab Tests in ${cityName}`}
+        subheading="Straight answers on home collection, fasting, reports and payment."
       />
 
       <LabCta cta={cityData.cta} phone={phone} />
