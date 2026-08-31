@@ -12,7 +12,7 @@ import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import WelcomePopup from "@/components/lab/WelcomePopup";
-import { getLatestBlogs } from "@/data/blogs";
+import { blogs, getLatestBlogs } from "@/data/blogs";
 import {
   HOME_CALL_BANNER,
   HOME_CONTENT,
@@ -313,7 +313,21 @@ const cityListNode = (cities) => ({
 
 export default async function HomePage() {
   const cities = await getLabCities();
-  const guides = getLatestBlogs(3);
+  /* EVERY guide, newest first — not a top-three.
+
+     This used to be getLatestBlogs(3), and the "Padhne Ke Liye" group in the
+     footer link block showed exactly three of the five articles. The two it
+     dropped were the oldest, which are also the two with the most inbound
+     value to pass on — and a reader had no way to discover them from here.
+     The home page is the one page every other page links to, so what it links
+     back at is what gets crawled first; leaving articles out of that hand-off
+     is throwing away the whole point of the block.
+
+     `blogs.length` rather than a typed number so a new article never needs
+     this line edited again. If the list ever grows past a comfortable column
+     — say twenty — the fix is to link /blogs here instead of capping it back
+     to three and hiding articles again. */
+  const guides = getLatestBlogs(blogs.length);
 
   /* The booking form's dropdown: every city we serve, then "Other".
      Deliberately NOT every locality of every city — that is a 30-item select
