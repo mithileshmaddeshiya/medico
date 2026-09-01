@@ -76,6 +76,7 @@ import { ghazipurContent, ghazipurFaqs } from "./content/ghazipur";
 import { gopalganjContent, gopalganjFaqs } from "./content/gopalganj";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
+import { lucknowContent, lucknowFaqs } from "./content/lucknow";
 import { mauContent, mauFaqs } from "./content/mau";
 import { salempurContent, salempurFaqs } from "./content/salempur";
 import { siwanContent, siwanFaqs } from "./content/siwan";
@@ -192,6 +193,14 @@ const LAB_CITY_SEED = [
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
               sub: "Purvanchal ka referral hub — OPD se pehle report",
+            },
+            // Rajdhani, kareeb 320 km paschim. Is sheher se log SGPGI aur KGMU
+            // ke liye wahan jaate hain, aur Lucknow ka page is page par wapas
+            // aata hai — link dono taraf, warna ek naya URL crawl hi nahi hota.
+            {
+              href: "/lab-test/lucknow",
+              label: "Lucknow me lab test",
+              sub: "Rajdhani — bade sansthan me dikhana ho to report pehle taiyaar",
             },
             // Azamgarh se ilaaj ke liye Varanasi aana aam hai, isliye link dono
             // taraf hai — Azamgarh ka page bhi is page par aata hai. Ek naya URL
@@ -618,6 +627,14 @@ const LAB_CITY_SEED = [
               href: "/lab-test/varanasi",
               label: "Varanasi me lab test",
               sub: "Ilaaj Varanasi me chal raha ho to",
+            },
+            // Is sheher se aage ka referral aksar Lucknow jaata hai — SGPGI,
+            // KGMU aur RMLIMS wahin hain. Lucknow ka page is page par wapas
+            // aata hai, isliye link dono taraf chalta hai.
+            {
+              href: "/lab-test/lucknow",
+              label: "Lucknow me lab test",
+              sub: "Rajdhani ke bade sansthan me tareekh mili ho to",
             },
           ],
         },
@@ -2358,6 +2375,250 @@ const LAB_CITY_SEED = [
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
               sub: "Specialist ki OPD dikhani ho to report pehle taiyaar",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── LUCKNOW — THE FIRST METRO, AND THE FIRST CITY WHOSE DISTANCE IS
+       INTERNAL ──────────────────────────────────────────────────────────
+       Every other page in this seed argues about a journey BETWEEN towns.
+       Lucknow's argues about a journey inside one: Gomti Nagar to Alambagh,
+       Jankipuram to Telibagh, Chinhat to Rajajipuram — each roughly 20 to 25
+       km of city traffic, which is what actually postpones a fasting test
+       here. Nobody in this city is short of labs; they are short of a free
+       morning.
+
+       Read the header of content/lucknow.js before editing this city's copy.
+       It records why this is NOT Varanasi's "skip the queue" and NOT
+       Gorakhpur's "time it around your appointment", and it carries three
+       warnings that matter more here than anywhere else on the site:
+
+         · no accreditation claim, because Lucknow is where the accredited
+           chains actually operate and a borrowed claim is catchable here;
+         · no speed promise, because we are not faster than this city's
+           traffic and the page says so;
+         · SGPGI, KGMU, RMLIMS, Balrampur and Civil are named as GEOGRAPHY
+           only — no association, ever. Same rule as AIIMS on Gorakhpur. */
+    slug: "lucknow",
+    name: "Lucknow",
+    state: "Uttar Pradesh",
+
+    /* ⚠ VERIFY THIS LIST AGAINST THE ROUTE BEFORE PUSHING TRAFFIC AT IT.
+       These render in the footer, fill the booking form's dropdown, become
+       `areaServed` in the schema, and are what a "<mohalla> me blood test"
+       search matches on. An areaServed we cannot serve is a lie in schema
+       form — trim anything the round does not cover rather than leaving it in
+       to catch a query.
+
+       SIXTEEN, not the twelve every district gets, and that is a deliberate
+       exception rather than drift: a district's twelve are its block towns and
+       they cover it, whereas Lucknow has more than forty localities anyone
+       would recognise and a twelve-item list would simply be wrong for most
+       readers. Sixteen is the most a phone dropdown stays usable at. About
+       thirty more — Kaiserbagh, Nishatganj, Thakurganj, Aishbagh, Balaganj,
+       Daliganj, Nirala Nagar, LDA Colony, Bangla Bazaar, Krishna Nagar,
+       Sarojini Nagar, Vrindavan Yojana, Sushant Golf City, Gudamba, Triveni
+       Nagar, Dubagga, Amausi and the rest — are named in the page copy
+       instead, which is where they do their work anyway. Do NOT push this list
+       past sixteen; add to the copy. */
+    areas: [
+      "Hazratganj",
+      "Gomti Nagar",
+      "Indira Nagar",
+      "Aliganj",
+      "Mahanagar",
+      "Nishatganj",
+      "Chinhat",
+      "Jankipuram",
+      "Vikas Nagar",
+      "Rajajipuram",
+      "Alambagh",
+      "Charbagh",
+      "Aminabad",
+      "Chowk",
+      "Ashiyana",
+      "Telibagh",
+    ],
+
+    // Hazratganj / GPO PIN. Schema only — nobody on the page ever reads this
+    // field, so a wrong value would sit in the markup unnoticed.
+    postalCode: "226001",
+
+    /* City centre, and approximate on purpose — same rule as every other city,
+       and it matters most here: there is no walk-in counter in Lucknow, this
+       is a home-collection service area covering the whole city, and a precise
+       street pin would read as a branch address we do not have. */
+    geo: { lat: 26.8467, lng: 80.9462 },
+
+    updated: "2026-09-01",
+    order: 12,
+    published: true,
+
+    /* No CITY_ALIASES entry. "Lakhnau" is the same name transliterated, not a
+       different name the city is known by — the rule set with Deoria stands.
+       (Varanasi → Banaras is the only genuine alias on this site so far.) */
+
+    // 39 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 54 — inside the ~60 it will
+    // show. Primary keyword first, then the second-biggest query on this page.
+    title: "Lab Test in Lucknow — Blood Test at Home",
+
+    // ~151 characters, so it renders whole on desktop and mobile. Four
+    // localities are spent in the snippet on purpose: this page's whole
+    // argument is per-mohalla, and a searcher in Gomti Nagar who sees her own
+    // locality in the snippet clicks a result she would otherwise scroll past.
+    description:
+      "Lucknow me lab test aur blood test ghar baithe book karein — Gomti Nagar, Hazratganj, Indira Nagar, Alambagh. Free home collection, report 24 ghante me.",
+
+    /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
+       stopped being sr-only. The h1 opens with the phrase people actually type
+       and stops; the secondary terms live in h1Sub, inside a real sentence. */
+    hero: {
+      h1: "Lab Test in Lucknow — Blood Test Ghar Baithe",
+      h1Sub:
+        "Gomti Nagar se Alambagh tak poore Lucknow me free home sample collection — saare pathology test aur full body checkup, report 24 ghante me.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which would produce
+       "<template> in Lucknow" nine times plus one line per area — and in a
+       metro that is exactly the wrong shape. What this city's traffic actually
+       is: test-wise long-tail with a price intent, and above all MOHALLA-WISE
+       queries, because "pathology lab near <locality>" is how a metro is
+       searched. All seven neighbourhood terms below appear in one h2 and then
+       in prose in `home-collection-areas-lucknow`.
+
+       Ordered strongest first. `keywords` is a weak-to-zero ranking signal on
+       its own; the reason to keep it honest is that it is the checklist the
+       headings, FAQs and prose are written against. Every term below appears
+       in the visible copy — the two comparative ones ("Affordable…", "Best
+       Diagnostic Centre…") appear in the FAQ questions, whose answers refuse
+       the boast and give checkable facts instead.
+
+       ⚠ NO RT-PCR TERM, deliberately, even though it was on the brief. We do
+       not run RT-PCR (see `rt-pcr-lucknow` in content/lucknow.js, which says
+       so plainly and points the reader at the government hospitals and
+       molecular labs here that do). A keyword for a test we cannot perform is
+       the kind that gets a page filtered rather than ranked. Same rule as
+       GAMCA on Siwan, the recruitment medical on Ghazipur, RT-PCR on
+       Gopalganj. */
+    keywords: [
+      "Lab Test in Lucknow",
+      "MedicoBharat Lab Test Lucknow",
+      "Blood Test Home Collection in Lucknow",
+      "Lab Test at Home in Lucknow",
+      "Pathology Lab Near Me in Lucknow",
+      "MedicoBharat Pathology Lab Lucknow",
+      "Diagnostic Centre in Lucknow",
+      "Best Diagnostic Centre in Lucknow",
+      "Affordable Lab Tests in Lucknow",
+      "Book Blood Test Online in Lucknow",
+      "Same Day Lab Test Reports in Lucknow",
+      "Home Sample Collection in Lucknow",
+      "Full Body Checkup Package in Lucknow",
+      "Full Body Checkup at Home in Lucknow",
+      "Thyroid Test Price in Lucknow",
+      "Diabetes Checkup Lab in Lucknow",
+      "Liver Function Test in Lucknow",
+      "Kidney Function Test Package in Lucknow",
+      "Lipid Profile Test Price in Lucknow",
+      "CBC Test Price in Lucknow",
+      "Dengue Test in Lucknow",
+      // The seven mohalla queries from the brief, in the form they are typed.
+      "Pathology Lab Near Hazratganj Lucknow",
+      "Medical Lab Near Gomti Nagar Lucknow",
+      "Blood Testing Lab in Aliganj Lucknow",
+      "Blood Collection Centre in Indira Nagar Lucknow",
+      "Pathology Lab Near Alambagh Charbagh Lucknow",
+      "Diagnostic Lab Near Aminabad Lucknow",
+      "Blood Test at Home in Ashiyana Lucknow",
+      "लखनऊ में लैब टेस्ट",
+      "लखनऊ में ब्लड टेस्ट घर पर",
+      "लखनऊ में फुल बॉडी चेकअप",
+      "लखनऊ में थायराइड टेस्ट",
+    ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test Home Collection in Lucknow",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. This one takes "book blood test online lucknow".
+       `intro` and the five steps come from defaultHowTo and are unchanged. */
+    howTo: { heading: "How to book a blood test online in Lucknow" },
+
+    content: lucknowContent,
+    faqs: lucknowFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       This city has no neighbour in the seed — every other page here is in
+       Purvanchal, 250 to 320 km east — so there is no "aas-paas ke jile" group
+       to write, and inventing one would be the kind of link block a crawler
+       correctly discounts. The group is honestly titled as other cities where
+       the same service runs, and each `sub` says the distance rather than
+       implying proximity.
+
+       Lucknow has no guide of its own yet, so the reading group points at the
+       Varanasi guides, which are the site's fullest and are district-neutral
+       on the questions they answer. If a Lucknow guide is written, it goes
+       first in that group.
+
+       Varanasi's and Gorakhpur's own relatedLinks point back here — both are
+       cities this one is a referral destination for, and the link runs both
+       ways because a new URL is crawled from links, not from the sitemap. */
+    relatedLinks: {
+      heading: "Lucknow Ke Liye Aage Ki Jaankari",
+      intro:
+        "Kaun sa test kab karana chahiye, report ke numbers ka matlab, aur UP ke doosre sheher jahan yahi service chalti hai.",
+      groups: [
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/varanasi",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "UP Ke Doosre Sheher",
+          links: [
+            {
+              href: "/lab-test/varanasi",
+              label: "Varanasi me lab test",
+              sub: "Purvanchal ka sabse bada sheher, kareeb 320 km poorab",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Purvanchal ka referral hub — wahan se log yahan tak aate hain",
+            },
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Mandal mukhyalaya, Purvanchal ke beech me",
             },
           ],
         },
