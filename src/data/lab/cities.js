@@ -73,6 +73,7 @@ import { azamgarhContent, azamgarhFaqs } from "./content/azamgarh";
 import { balliaContent, balliaFaqs } from "./content/ballia";
 import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { ghazipurContent, ghazipurFaqs } from "./content/ghazipur";
+import { gopalganjContent, gopalganjFaqs } from "./content/gopalganj";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { mauContent, mauFaqs } from "./content/mau";
@@ -1879,8 +1880,17 @@ const LAB_CITY_SEED = [
         {
           title: "Aas-Paas Ke Jile",
           links: [
-            // Seema ke us paar ka sabse nazdeek page, isliye pehle. Siwan ka
-            // paschimi hissa Bhatni-Salempur ki taraf khulta hai.
+            // Bihar ka doosra page aur sabse nazdeek zila — kareeb 30 km,
+            // uttar ki taraf. Gopalganj ka page is page ke Gulf aur kala-azar
+            // wale hisson me link karta hai, isliye link dono taraf hai: ek
+            // naya URL sitemap se nahi, links se crawl hota hai.
+            {
+              href: "/lab-test/gopalganj",
+              label: "Gopalganj me lab test",
+              sub: "Kareeb 30 km uttar — Gandak patti aur Thawe ki taraf ka zila",
+            },
+            // Seema ke us paar ka sabse nazdeek page. Siwan ka paschimi hissa
+            // Bhatni-Salempur ki taraf khulta hai.
             {
               href: "/lab-test/salempur",
               label: "Salempur me lab test",
@@ -2112,6 +2122,242 @@ const LAB_CITY_SEED = [
               href: "/lab-test/azamgarh",
               label: "Azamgarh me lab test",
               sub: "Mandal mukhyalaya, uttar-paschim ki taraf",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── GOPALGANJ — THE DISTRICT WHERE NOTHING IS CLOSE ─────────────────
+       Bihar #2 on this site, and it must not repeat Bihar #1. Siwan's page
+       argues a three-way pull (Chhapra, Patna, Gorakhpur) and owns the Gulf
+       migration and kala-azar copy. Gopalganj's argument is one degree past
+       that: Siwan itself is ~30 km but is only another district town, and
+       after it Chhapra (~85 km), Muzaffarpur (~100 km across the Gandak),
+       Gorakhpur (~120 km on NH-27) and Patna (~150 km) sit in four different
+       directions — so the journey here is not one decision but four, and for
+       some weeks a year the Gandak decides which road is usable at all.
+
+       Read the header of content/gopalganj.js before editing this city's
+       copy; it records which argument belongs to which district and, more
+       importantly, the two places this page deliberately says NO — RT-PCR,
+       which we do not run, and a flooded diara tola, which a collection round
+       cannot reach. Neither of those is a gap to be filled in later. */
+    slug: "gopalganj",
+    name: "Gopalganj",
+    state: "Bihar",
+
+    /* ⚠ VERIFY THIS LIST AGAINST THE ROUTE BEFORE PUSHING TRAFFIC AT IT.
+       District headquarters plus the block towns along the main roads — the
+       ones a collection round can plausibly reach. They are not decorative:
+       they render in the footer, fill the booking form's dropdown, become
+       `areaServed` in the schema, and are what a "<kasba> me blood test"
+       search matches on. An areaServed we cannot serve is a lie in schema
+       form, so trim anything the round does not actually cover rather than
+       leaving it in to catch a query.
+
+       Kept to twelve. Vijayipur, Phulwaria, Panchdeori and Sasamusa are named
+       in the page copy instead — a twenty-item dropdown is unusable on a
+       phone. */
+    areas: [
+      "Gopalganj City",
+      "Thawe",
+      "Hathua",
+      "Mirganj",
+      "Kuchaikote",
+      "Barauli",
+      "Sidhwalia",
+      "Baikunthpur",
+      "Manjha",
+      "Uchkagaon",
+      "Bhore",
+      "Kateya",
+    ],
+
+    // Gopalganj town PIN. Schema only — nobody on the page ever reads this
+    // field, so a wrong value would sit in the markup unnoticed. Worth
+    // checking against a delivery slip.
+    postalCode: "841428",
+
+    /* Gopalganj town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. */
+    geo: { lat: 26.4676, lng: 84.4334 },
+
+    updated: "2026-09-01",
+    order: 11,
+    published: true,
+
+    /* No CITY_ALIASES entry. "Gopalgunj" is a misspelling of the same name,
+       not a different name the town is known by — the rule set with Deoria
+       stands. Note that there is also a Gopalganj in Bangladesh, which is why
+       "Bihar" is carried in the description and the Hindi section: the name
+       alone is ambiguous to a search engine, and disambiguating it in the copy
+       is worth more than any alias would be. */
+
+    // 41 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 56 — inside the ~60 it will
+    // show. Primary keyword first, then the second-biggest query on this page.
+    title: "Lab Test in Gopalganj — Blood Test at Home",
+
+    // ~152 characters, so it renders whole on desktop and mobile. Hinglish
+    // deliberately: the page is Hinglish and so is the searcher here. Bihar is
+    // named for the disambiguation reason noted above.
+    description:
+      "Gopalganj (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar, full body checkup. Free home collection, report 24 ghante me.",
+
+    /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
+       stopped being sr-only. The h1 opens with the phrase people actually type
+       and stops; the secondary terms live in h1Sub, inside a real sentence. */
+    hero: {
+      h1: "Lab Test in Gopalganj — Blood Test Ghar Baithe",
+      h1Sub:
+        "Pathology lab ke saare test aur full body checkup — Gopalganj (Bihar) me free home sample collection, report 24 ghante me WhatsApp par.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out instead of taking defaultKeywords(), which would only
+       produce "<template> in Gopalganj" nine times plus one line per area.
+       That misses what this district's traffic actually is: test-wise
+       long-tail, the in-town landmarks people navigate by (Station Road, the
+       bus stand, the market), the two block towns big enough to be searched on
+       their own (Thawe, Hathua), and Devanagari, which is how a large share of
+       this district types.
+
+       Ordered strongest first. `keywords` is a weak-to-zero ranking signal on
+       its own; the reason to keep it honest is that it is the checklist the
+       headings, FAQs and prose are written against. Every term below appears
+       in the visible copy — the two comparative ones ("Affordable…",
+       "Best Diagnostic Centre…") appear in the FAQ questions, and their
+       answers refuse the boast and give checkable facts instead.
+
+       ⚠ NO RT-PCR TERM, deliberately, even though it was on the brief. We do
+       not run RT-PCR (see `rt-pcr-covid-gopalganj` in content/gopalganj.js,
+       which says so plainly). A keyword for a test we cannot perform is the
+       kind that gets a page filtered rather than ranked — and it ends at a
+       doorstep with a phlebotomist who has to say no. Same rule as GAMCA on
+       Siwan and the recruitment medical on Ghazipur. */
+    keywords: [
+      "Lab Test in Gopalganj",
+      "MedicoBharat Lab Test Gopalganj",
+      "Blood Test Home Collection in Gopalganj",
+      "Lab Test at Home in Gopalganj",
+      "Pathology Lab Near Me in Gopalganj",
+      "MedicoBharat Pathology Gopalganj Bihar",
+      "Diagnostic Centre in Gopalganj",
+      "Best Diagnostic Centre in Gopalganj",
+      "Affordable Lab Tests in Gopalganj",
+      "Book Blood Test Online in Gopalganj",
+      "Same Day Lab Test Reports in Gopalganj",
+      "Home Sample Collection in Gopalganj",
+      "Full Body Checkup Package in Gopalganj",
+      "Full Body Checkup at Home in Gopalganj",
+      "Thyroid Test Price in Gopalganj",
+      "Diabetes Checkup Lab in Gopalganj",
+      "Liver Function Test in Gopalganj",
+      "CBC Test Price in Gopalganj",
+      "Dengue Test in Gopalganj",
+      "Lab Test Near Bus Stand Gopalganj",
+      "Blood Test Near Station Road Gopalganj",
+      "Blood Testing Lab in Gopalganj Market",
+      "Lab Test in Thawe Gopalganj",
+      "Blood Test in Hathua Gopalganj",
+      "Lab Test in Gopalganj Bihar",
+      "गोपालगंज में लैब टेस्ट",
+      "गोपालगंज में ब्लड टेस्ट घर पर",
+      "गोपालगंज में फुल बॉडी चेकअप",
+      "गोपालगंज में थायराइड टेस्ट",
+    ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test Home Collection in Gopalganj",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. This one takes "book blood test online gopalganj".
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a blood test online in Gopalganj" },
+
+    content: gopalganjContent,
+    faqs: gopalganjFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. The other cities are in
+       the footer too, but a footer is byte-identical on every lab page and
+       gets discounted as boilerplate; these anchors are descriptive and
+       per-city.
+
+       Gopalganj has no guide of its own yet, so the "test chunne me madad"
+       group points at the Deoria guide — the right fallback here rather than
+       Varanasi's, because Deoria is written from the same side of the border
+       and answers the same district-neutral questions.
+
+       Siwan comes first among the neighbours: it is the nearest page, the only
+       other Bihar page, and it carries the migration and kala-azar sections
+       this page links into rather than repeats. Siwan's own relatedLinks
+       points back here, so the link runs both ways — a new URL is crawled from
+       links, not from the sitemap.
+
+       Every href here is checked against a real route: the guides live in
+       src/data/blogs/ and the cities in the seed above. */
+    relatedLinks: {
+      heading: "Gopalganj Ke Liye Aage Ki Jaankari",
+      intro:
+        "Kaun sa test kab karana chahiye, report ke numbers ka matlab, aur aas-paas ke jile — sab ek jagah.",
+      groups: [
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — poori guide",
+              sub: "Package, bukhar ka din, bade sheher jaane se pehle ki taiyaari",
+            },
+            {
+              href: "/blogs/full-body-checkup/varanasi",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
+              label: "Blood test se pehle fasting aur taiyaari",
+            },
+            {
+              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+        {
+          title: "Aas-Paas Ke Jile",
+          links: [
+            {
+              href: "/lab-test/siwan",
+              label: "Siwan me lab test",
+              sub: "Kareeb 30 km — bahar jaane walon ki jaanch aur lamba bukhar wahan likha hai",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Seema ke us paar UP ka zila mukhyalaya",
+            },
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "NH-27 par Gorakhpur ki taraf, ganna patti ka ilaaka",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Specialist ki OPD dikhani ho to report pehle taiyaar",
             },
           ],
         },

@@ -425,10 +425,21 @@ export default async function LabCityPage({ params }) {
           a different query. At 6, Deoria's pathology-lab and booking answers
           were written and then never rendered, and Varanasi silently dropped
           its "Kya aap Banaras me lab test karte hain?" answer — the one that
-          catches everyone who never types the official name. */}
+          catches everyone who never types the official name.
+
+          Raised again from 8 to 12, and for the same reason found twice more:
+          Ghazipur and Siwan each carry nine questions, so both had been
+          dropping their ninth — the booking-and-payment answer — since the day
+          they shipped, with nothing anywhere to say so. Gopalganj carries
+          eleven, including the two the page exists to answer honestly (RT-PCR,
+          and "which is the best lab"). Twelve leaves headroom above the
+          longest list without ever letting a city document run away.
+
+          If a city ever needs more than twelve, that is the signal to split
+          the document — not to raise this number a third time. */}
       <LabFaq
         city={cityName}
-        faqs={cityData.faqs?.slice(0, 8)}
+        faqs={cityData.faqs?.slice(0, 12)}
         pageUrl={`${SITE}/lab-test/${cityData.slug}`}
         /* Names the town, because this <h2> used to be the string "Frequently
            Asked Questions" on all six city pages — the one generic heading on

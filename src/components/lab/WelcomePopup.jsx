@@ -115,7 +115,15 @@ export default function WelcomePopup({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="lab-pop-in my-auto w-full max-w-sm cursor-default"
+        /* Narrower on a phone than it used to be. With only the overlay's
+           px-4 to hold it back, `max-w-sm` (384px) meant the card ran to
+           within 16px of both edges on every handset — it read as a full
+           screen takeover rather than a card, and the page behind it, which
+           the light dim and 2px blur exist to keep visible, was gone anyway.
+           `max-w-xs` (320px) leaves a real margin on both sides at 360px and
+           up, and still clears the widest field label inside at the form's
+           px-5. Above `sm` there is room, so it goes back to 384px. */
+        className="lab-pop-in my-auto w-full max-w-xs cursor-default sm:max-w-sm"
       >
         <PopupLeadForm
           cityOptions={cityOptions}
