@@ -94,7 +94,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           SEO audit flags. Keyword-bearing, so it earns its place in the outline. */}
       <h2 className="sr-only">{heading}</h2>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-5 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-4 lg:grid-cols-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-5 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-2.5 sm:gap-y-4 lg:grid-cols-12">
 
         {/* BRAND — full width on phones (it is the tallest block; letting it
             span both columns keeps the short sections below it aligned instead
@@ -127,7 +127,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
               phone. Each is a 32px tap target that fills with the platform's
               colour on hover. */}
           {social.length > 0 && (
-            <ul className="mt-2 sm:mt-3 flex flex-wrap gap-2">
+            <ul className="mt-1.5 sm:mt-3 flex flex-wrap gap-2">
               {social.map((s) => {
                 const { Icon, brand } = SOCIAL_ICONS[s.type] ?? {
                   Icon: FaGlobe,
@@ -162,7 +162,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
             from every page. Only routes that actually exist are listed, so no
             link here can 404. */}
         <nav aria-label="Quick links" className="lg:col-span-2">
-          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Quick Links</h3>
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">Quick Links</h3>
           <ul className="space-y-1 text-[12.5px] text-slate-600">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
@@ -181,10 +181,26 @@ export default function LabFooter({ city = null, labCities = [] }) {
             other columns and leaving the rest of the footer as empty space. The
             localities now render as one full-width line under the grid — same
             text, same keywords, a fraction of the height. */}
-        <div className="lg:col-span-3">
+        {/* HIDDEN ON PHONES (below 640px), and this is the one block in the
+            footer that is. With thirteen cities it is by far the tallest column
+            here, and on a phone it renders as a single 13-line stack — the
+            footer's whole height, and the reason the blocks under it read as a
+            gap rather than a row.
+
+            `hidden sm:block`, NOT a conditional render. The links stay in the
+            HTML, so every city page is still reachable from every page for a
+            crawler and still passes link equity — a `display: none` list is
+            crawled, only a list that was never rendered is not. Do not "clean
+            this up" into `{isDesktop && ...}`: that would quietly cut thirteen
+            internal links out of the mobile-first index, which is the index
+            that counts.
+
+            Phone users are not stranded either — /lab-test lists every city,
+            the home page links them, and each city page cross-links the rest. */}
+        <div className="hidden sm:block lg:col-span-3">
           {otherCities.length > 0 && (
             <nav aria-label="Cities we serve">
-              <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
+              <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">
                 {city ? "Other Cities" : "Cities We Serve"}
               </h3>
               {/* Two columns, and it is the city count that put them there. At
@@ -203,11 +219,12 @@ export default function LabFooter({ city = null, labCities = [] }) {
                   cities when there is one; `columns` is presentation only, and
                   the reading order is unchanged.
 
-                  Held back below 380px. On a phone this block is already one
-                  half of a two-column footer grid, so on a 320px screen each
-                  sub-column would be about 68px — narrower than the word
-                  "Kushinagar". One column is the right answer at that width. */}
-              <ul className="min-[380px]:columns-2 gap-x-4 space-y-1 text-[12.5px] text-slate-600">
+                  This used to be held back below 380px, because on a 320px
+                  phone each sub-column came out around 68px — narrower than the
+                  word "Kushinagar". The block no longer renders at any phone
+                  width, so the narrowest case it now has to survive is a 640px
+                  tablet, where two sub-columns are comfortable. */}
+              <ul className="columns-2 gap-x-4 space-y-1 text-[12.5px] text-slate-600">
                 {otherCities.map((c) => (
                   // `break-inside-avoid` so a link is never split across the
                   // column boundary — a city name broken in half mid-word is
@@ -244,14 +261,17 @@ export default function LabFooter({ city = null, labCities = [] }) {
             DiagnosticLab schema on the page (see the city page). Consistent NAP
             across page, schema and footer is what local ranking is built on. No
             street address is invented — only what we can stand behind. */}
-        {/* Full width on phones: with the guides column gone there are three
-            short blocks under the brand, and a 2-column phone grid would leave
-            this one alone on a half-width row with the email breaking mid-word.
-            Across both columns it reads as the closing block it is. */}
-        <div className="col-span-2 lg:col-span-3">
-          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Contact</h3>
+        {/* Three widths, and each one is answering the block beside it.
+            From 380px to 640px it takes ONE column, because the city list is
+            hidden in that range and Quick Links would otherwise sit alone on a
+            half-width row — the gap this pass set out to close. Below 380px it
+            goes full width again: at that size half a row is about 140px and
+            the email breaks mid-word. From 640px the city list is back, so this
+            drops under it across both columns, as it always did. */}
+        <div className="col-span-2 min-[380px]:col-span-1 sm:col-span-2 lg:col-span-3">
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">Contact</h3>
 
-          <address className="not-italic space-y-1.5 text-[12.5px] text-slate-600">
+          <address className="not-italic space-y-1 sm:space-y-1.5 text-[12.5px] text-slate-600">
             <p className="font-semibold text-slate-700">
               {city
                 ? `MedicoBharat — Lab Test in ${city.name}`
@@ -292,7 +312,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           two. Only on a city page; sitewide mode has no localities. */}
       {city && (
         <div className="border-t border-emerald-100/70">
-          <p className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 text-[12px] leading-5 text-slate-600">
+          <p className="max-w-6xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2.5 text-[12px] leading-5 text-slate-600">
             <span className="font-semibold text-emerald-900">
               Areas We Cover in {city.name}:
             </span>{" "}
@@ -312,7 +332,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           requires the privacy notice to be reachable from where that collection
           happens. Do not remove them without replacing them. */}
       <div className="border-t border-emerald-100 bg-emerald-50/60">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 flex flex-col items-center gap-0.5 sm:gap-1 text-[11px] sm:text-[12px] text-slate-500 sm:flex-row sm:justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2.5 flex flex-col items-center gap-0.5 sm:gap-1 text-[11px] sm:text-[12px] text-slate-500 sm:flex-row sm:justify-between">
           <p className="text-center">
             © {new Date().getFullYear()} MedicoBharat. All Rights Reserved.
           </p>

@@ -37,6 +37,89 @@ export const LAB_EMAIL = "support.medicobharat@gmail.com";
  */
 export const LAB_OG_IMAGE = "/og/ogtag.jpg";
 
+/**
+ * The offer popup that opens once the reader has scrolled past the FAQ.
+ * Rendered by src/components/lab/OfferPopup.jsx on the home page and on every
+ * /lab-test/[city] page — the same two routes WelcomePopup is mounted on.
+ *
+ * ── IT IS ONE PICTURE AND ONE CALL BUTTON ────────────────────────────────
+ * Nothing about the offer is typed here: no price, no discount, no parameter
+ * count, no validity date. All of that lives inside the artwork, which is the
+ * only place it can be changed without a deploy. The phone number is the one
+ * exception, and it is not typed either — it comes from LAB_PHONE above, so
+ * the popup can never print a different number from the footer, the schema and
+ * the FAQs. NAP consistency is what local ranking is built on; a popup with
+ * its own hardcoded number is exactly how that breaks.
+ *
+ * ⚠ SET `image` TO A FILE THAT REALLY EXISTS IN /public. A missing path is a
+ * 404 and the popup opens as a blank grey box over the page — worse than no
+ * popup at all. Same rule the articles follow for their hero images.
+ *
+ * ⚠ AND THE ARTWORK IS A CLAIM. Whatever is painted into it is this business
+ * speaking, and the rule at the top of src/data/home.js applies to it in full:
+ * no NABL, no accreditation, no "certified", no other lab's name or logo, no
+ * invented ratings or test counts. If it advertises a price or a package, that
+ * price has to match the rate list in this file — a popup that undercuts the
+ * page behind it is the version of this a customer screenshots and arrives
+ * with.
+ *
+ * `aspect` is the artwork's own shape, written as a Tailwind ratio, so the box
+ * matches the file and nothing is cropped. Change the file, change this too.
+ */
+export const OFFER_POPUP = {
+  image: "/popupimg/faqpops.png",
+
+  /* 1313x1198. That is not a tidy ratio and there is no Tailwind class near it
+     — the closest, aspect-1/1, would crop about 9% off the artwork, and 9% off
+     this one takes the price card with it. So the ratio is written out exactly
+     as an arbitrary value: the box is the file, and nothing crops anywhere.
+     Replace the artwork and these two numbers change with it. */
+  aspect: "aspect-[1313/1198]",
+
+  /* The artwork carries the offer in pixels and a crawler cannot read pixels,
+     so this sentence is the machine-readable version of it.
+
+     ⚠ THE PRICE AND THE PARAMETER COUNT ARE DELIBERATELY NOT IN IT.
+     The artwork advertises "Advance — 95 Parameters — Offer Price ₹999". This
+     page's own rate list, `defaultTests()` below, sells:
+
+         Full Body Checkup (Basic)   ₹999   45 parameters
+         Advanced Full Body          ₹1999  72 parameters
+
+     So the picture offers the Advanced package at the Basic price, with a
+     parameter count that matches no package we run — and the long-form copy
+     further down this file repeats those figures in prose ("Advanced Full Body
+     ₹1,999 me 72 parameter"). Putting ₹999/95 into this `alt` would take that
+     contradiction out of the pixels and write it into the DOM as text, on the
+     same page as the price grid that says otherwise. A crawler reads two
+     prices for one package; a customer screenshots the cheaper one.
+
+     THE FIX IS ONE OF TWO THINGS, and neither is a code change:
+       · re-export the artwork with the figures that match — ₹999 with 45
+         parameters, or ₹1999 with 72; or
+       · if a genuine 95-parameter package at ₹999 is being launched, add it to
+         `defaultTests()` so the page and the popup say the same thing.
+     Until one of those happens, the numbers live only in the picture. */
+  alt: "MedicoBharat Offer — Full Body Checkup, Medicobharat Advance package. Accurate tests, trusted results, better health.",
+
+  /** The dialog's accessible name. Not painted anywhere, so it is typed here. */
+  title: "MedicoBharat Full Body Checkup offer",
+
+  /* TRUE because this artwork has no call bar of its own — the earlier cut
+     (faqpop.png) ended in a painted "Call: ..." strip and this one is cropped
+     above it. So the number is rendered under the picture as a real button
+     instead: tappable on a phone, readable by a crawler, and copyable, none of
+     which a number baked into a PNG can be.
+
+     If artwork with its own call bar is ever used again, set this back to false
+     — the component then makes the whole picture the `tel:` link instead, so
+     the painted bar works without the number being printed twice.
+
+     Either way the number itself comes from LAB_PHONE and is never typed. */
+  showCallButton: true,
+  ctaLabel: "Call",
+};
+
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 
 export const defaultHero = (city) => ({
