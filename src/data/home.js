@@ -178,6 +178,87 @@ export const HOME_HERO = {
     "MedicoBharat Lab Test — accurate tests, better health. Reliable lab tests, advanced technology, safe aur hygienic collection, home sample collection ke saath.",
 };
 
+/* ── Banner slider ────────────────────────────────────────────────────────
+   The auto-playing strip under the trust row, rendered by
+   src/components/home/HomeBannerSlider.jsx.
+
+   ── THE SHAPE IS A CONTRACT ──────────────────────────────────────────────
+   Every banner must be authored at the SAME ratio, because the slider gives
+   each slide one box and a slide of a different shape gets cropped to fit.
+   The box is 16:5 at every width, which is exactly what the files in
+   /public/swipper are (2242x701). Nothing is cropped anywhere — see the note
+   in the component for why a phone-specific ratio was tried and dropped.
+
+   ⚠ `src` MUST name a file that actually exists in /public. Next serves a
+   missing path as a 404 and the slide renders as a blank box, which on an
+   autoplaying strip reads as the site being broken. Same rule the articles
+   follow for their hero images.
+
+   ── WHAT A BANNER MAY NOT SAY ────────────────────────────────────────────
+   Whatever is painted into the artwork is a claim this business is making, and
+   a crawler cannot read it — so the `alt` has to carry the same words, which
+   means the rule at the top of this file applies to BOTH. No NABL, no
+   "certified", no accreditation, no test counts, no "100% accuracy", no
+   "India's best/largest", no other lab's name or logo. Only the five things we
+   actually do: free home collection, a trained phlebotomist with an ID card,
+   slots from 6 AM, reports in 24 hours, cash/UPI on collection.
+
+   This is not a style note. It is the reason slider2 is commented out below,
+   and the reason an `alt` here may read as slightly thinner than the picture
+   it describes. Where the two disagree, THE ARTWORK IS THE BUG. */
+export const HOME_BANNERS = [
+  {
+    src: "/swipper/slider1.png",
+    /* Written as the sentence the artwork says, not as a description of the
+       photograph — the alt is the only machine-readable copy of a banner.
+
+       ⚠ ONE LINE IS DELIBERATELY NOT CARRIED ACROSS. The third feature card in
+       this artwork reads "Fast reports with 100% accuracy". No laboratory can
+       stand behind 100% accuracy, so it is not repeated here and it should come
+       off the artwork — "Fast reports" alone is true and is already one of the
+       five confirmed claims. The small strip under the logo also has a garbled,
+       overlapping label between "ACCURATE TESTS" and "TRUSTED RESULTS"; it
+       looks like a rendering glitch in the source file and is worth a re-export
+       either way. */
+    alt: "MedicoBharat Lab Test — Accurate Diagnostics, Better Healthcare. Advanced technology, expert care aur reliable results; trained phlebotomist sample leta hua.",
+    href: "#book",
+    title: "Book a lab test at home with free sample collection",
+  },
+
+  {
+    src: "/swipper/slider2.png",
+
+    /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
+       /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
+       into its bottom bar. We are not NABL accredited, and the rule at the top
+       of this file says we must never imply it — this is the same claim the
+       project has already stripped out of the FAQs and the city pages once.
+
+       This slide was held back for that reason and then switched on at the
+       owner's explicit direction, after the problem was put to them. It is
+       recorded here so the next person does not find it and assume nobody
+       noticed. It is a live claim on the site's most-linked page until the file
+       is replaced.
+
+       THE FIX IS ONE RE-EXPORT, not a code change: swap that badge for
+       something we can stand behind — "Free Home Collection", "Reports in 24
+       Hours" and "Trained Phlebotomist" all fit the same slot and are all
+       already claimed elsewhere on the site. Keep it 2242x701 so it still
+       matches slide one, and nothing here needs touching.
+
+       Everything else on the banner is fine: "Precise Testing. Better Health.",
+       "Timely Reports" and "Home Sample Collection" are all true.
+
+       The alt below deliberately does NOT carry the NABL line. An alt is the
+       machine-readable copy of a banner, and writing that claim into the DOM
+       would hand a crawler a false accreditation in text — the one form of it
+       that outlives a swapped image file. */
+    alt: "MedicoBharat Lab Test — Precise Testing, Better Health. Accurate reports you can trust, timely reports aur home sample collection.",
+    href: "#book",
+    title: "Book a lab test at home with free sample collection",
+  },
+];
+
 /* ── How it works ─────────────────────────────────────────────────────────
    Four steps, with the actual timings the site promises elsewhere. The point
    of this block on a home page is to remove the one doubt that stops a first

@@ -1,3 +1,4 @@
+import HomeBannerSlider from "@/components/home/HomeBannerSlider";
 import HomeGuides from "@/components/home/HomeGuides";
 import HomeHero from "@/components/home/HomeHero";
 import HomeSteps from "@/components/home/HomeSteps";
@@ -8,12 +9,14 @@ import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
+import OfferPopup from "@/components/lab/OfferPopup";
 import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import WelcomePopup from "@/components/lab/WelcomePopup";
 import { blogs, getLatestBlogs } from "@/data/blogs";
 import {
+  HOME_BANNERS,
   HOME_CALL_BANNER,
   HOME_CONTENT,
   HOME_CTA,
@@ -29,6 +32,7 @@ import {
 import {
   LAB_OG_IMAGE,
   LAB_PHONE,
+  OFFER_POPUP,
   defaultFilters,
   defaultTests,
   defaultTrustStrip,
@@ -357,6 +361,14 @@ export default async function HomePage() {
           a popup lead lands exactly where a hero booking does. */}
       <WelcomePopup cityOptions={cityOptions} />
 
+      {/* The offer popup. Not a second on-load interruption: it waits until the
+          reader has scrolled past the FAQ block, so it only ever reaches
+          somebody who read this far and stayed. Artwork and copy come from
+          OFFER_POPUP in src/data/lab/defaults.js; the number is LAB_PHONE, the
+          same one the footer and the schema print. It renders nothing when no
+          image is configured. */}
+      <OfferPopup offer={OFFER_POPUP} phone={LAB_PHONE} />
+
       <HomeHero hero={HOME_HERO} cityOptions={cityOptions} />
 
       <LabTrustStrip promises={defaultTrustStrip()} />
@@ -372,6 +384,16 @@ export default async function HomePage() {
         phone={LAB_PHONE}
       />
 
+      {/* The banner strip, under the price cards. Below the fold on purpose: a
+          carousel near the top pushes the booking form down and takes the LCP
+          slot for an image the visitor did not ask for. Here it lands on a
+          reader who has just been through the rate list — the point at which a
+          promo has something to say — and hands off to the call banner below.
+
+          Content is HOME_BANNERS in src/data/home.js; the component renders
+          nothing when that array is empty, so pulling the banners is a data
+          edit, not a page edit. */}
+      <HomeBannerSlider banners={HOME_BANNERS} />
 
       {/* <HomeWhy data={HOME_WHY} /> */}
 

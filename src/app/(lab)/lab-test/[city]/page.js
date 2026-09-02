@@ -10,8 +10,9 @@ import LabHowTo from "@/components/lab/LabHowTo";
 import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
+import OfferPopup from "@/components/lab/OfferPopup";
 import WelcomePopup from "@/components/lab/WelcomePopup";
-import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
+import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import {
   BRAND_PROFILES,
@@ -394,6 +395,18 @@ export default async function LabCityPage({ params }) {
       <WelcomePopup
         cityOptions={cityOptions}
         title={`Book Lab Test in ${cityData.name}`}
+      />
+
+      {/* The offer popup, opening only once this city's FAQ block has been
+          scrolled past — see the header comment in OfferPopup. Same artwork and
+          same number on every city, because the offer is the company's, not the
+          town's; only the dialog's accessible name is localised. */}
+      <OfferPopup
+        offer={{
+          ...OFFER_POPUP,
+          title: `${OFFER_POPUP.title} — ${cityData.name}`,
+        }}
+        phone={LAB_PHONE}
       />
 
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
