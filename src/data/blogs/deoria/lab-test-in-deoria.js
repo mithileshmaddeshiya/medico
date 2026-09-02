@@ -134,7 +134,14 @@ export const labTestDeoria = {
     "Lab Test in Deoria",
     "Blood Test in Deoria",
     "Full Body Checkup in Deoria",
+    // The two "best ..." queries are targeted here and nowhere else, because
+    // this is the only Deoria post that answers them honestly — see the
+    // "Bharosemand Pathology Lab Kaise Chunein" section, which hands the reader
+    // a way to judge a lab instead of asking them to take our word for it. The
+    // word "best" appears in this array and never in the copy: calling
+    // ourselves the best is exactly the claim that section argues against.
     "Best Pathology Lab in Deoria",
+    "Best Lab Test in Deoria",
     "Pathology Lab in Deoria",
     "Diagnostic Centre in Deoria",
     // Both spellings kept on purpose: "centre" and "center" are two different
