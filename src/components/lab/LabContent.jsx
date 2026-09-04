@@ -293,7 +293,7 @@ export default function LabContent({ city, sections = [], related = null }) {
           </p>
         </header>
 
-        <div className="mt-6 grid gap-6 lg:mt-8 lg:grid-cols-[minmax(0,250px)_1fr] lg:gap-12">
+        <div className="mt-5 grid gap-6 sm:mt-6 lg:mt-8 lg:grid-cols-[minmax(0,250px)_1fr] lg:gap-12">
 
           {/* RAIL — jump links, desktop only. Doubles as a visible outline of the
               page for crawlers and as navigation for a long read. The lead is
@@ -397,13 +397,33 @@ export default function LabContent({ city, sections = [], related = null }) {
                     measured from. */}
                 <div ref={contentRef}>
                   {/* Lead — no heading here, it is the <h2> above. Its id stays
-                      so old links to #lab-test-in-varanasi still land. */}
+                      so old links to #lab-test-in-varanasi still land.
+
+                      ── THE PROSE IS TIGHTER ON A PHONE, DELIBERATELY ─────
+                      Line height 1.65 below 640px against 1.85 above it, the
+                      gap between paragraphs 10px against 14px, and the gap
+                      under the header 20px against 24px. One set of numbers
+                      cannot serve both widths: 1.85 is right for a 15px line
+                      running most of a laptop column, but the phone line is
+                      13.5px and about seven words long, so the same ratio put
+                      more air between the lines than there was ink on them and
+                      the guide read as a heap of loose sentences rather than
+                      paragraphs. 1.65 is still clear of the 1.5 floor for body
+                      text — this is tightening, not cramming, and it should
+                      not go below that.
+                      Every one of these is a responsive PAIR. Editing one half
+                      silently changes the other viewport too; keep both. */}
                   <div id={lead.id} className="scroll-mt-24">
                     {(lead.p ?? []).map((para, j) => (
                       <Paragraph
                         key={j}
                         para={para}
-                        className="mt-3.5 pl-4 text-[13.5px] first:mt-0 sm:text-[15px] leading-[1.85] text-slate-600"
+                        /* `sm:first:mt-0` is not redundant next to `first:mt-0`:
+                           the paragraph gap is a responsive pair now, and a
+                           plain `first:` utility sits OUTSIDE the sm media
+                           block, so `sm:mt-3.5` would win back inside it and
+                           push the first line of the guide down on desktop. */
+                        className="mt-2.5 sm:mt-3.5 first:mt-0 sm:first:mt-0 pl-4 text-[13.5px] sm:text-[15px] leading-[1.65] sm:leading-[1.85] text-slate-600"
                       />
                     ))}
                   </div>
@@ -413,7 +433,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       key={s.id}
                       id={s.id}
                       data-section
-                      className="mt-8 scroll-mt-24 border-t border-slate-200/70 pt-8 sm:mt-10 sm:pt-10"
+                      className="mt-7 scroll-mt-24 border-t border-slate-200/70 pt-7 sm:mt-10 sm:pt-10"
                     >
                       <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
                         <span
@@ -429,7 +449,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                         <Paragraph
                           key={j}
                           para={para}
-                          className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600"
+                          className="mt-2.5 pl-4 sm:mt-3.5 text-[13.5px] sm:text-[15px] leading-[1.65] sm:leading-[1.85] text-slate-600"
                         />
                       ))}
                     </div>
@@ -457,7 +477,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       index" reading, and the headings reuse the accent-bar
                       pairing the prose uses above. */}
                   {relatedGroups.length > 0 && (
-                    <div className="mt-8 border-t border-slate-200/70 pt-8 sm:mt-10 sm:pt-10">
+                    <div className="mt-7 border-t border-slate-200/70 pt-7 sm:mt-10 sm:pt-10">
                       <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
                         <span
                           aria-hidden
@@ -467,7 +487,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       </h3>
 
                       {related.intro && (
-                        <p className="mt-3.5 pl-4 text-[13.5px] sm:text-[15px] leading-[1.85] text-slate-600">
+                        <p className="mt-2.5 pl-4 sm:mt-3.5 text-[13.5px] sm:text-[15px] leading-[1.65] sm:leading-[1.85] text-slate-600">
                           {related.intro}
                         </p>
                       )}

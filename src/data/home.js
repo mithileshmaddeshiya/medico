@@ -185,9 +185,20 @@ export const HOME_HERO = {
    ── THE SHAPE IS A CONTRACT ──────────────────────────────────────────────
    Every banner must be authored at the SAME ratio, because the slider gives
    each slide one box and a slide of a different shape gets cropped to fit.
-   The box is 16:5 at every width, which is exactly what the files in
-   /public/swipper are (2242x701). Nothing is cropped anywhere — see the note
-   in the component for why a phone-specific ratio was tried and dropped.
+   Author them at 16:5, which is what the files in /public/swipper are
+   (2242x701): from 640px up that is exactly the box, and nothing is cropped.
+
+   ⚠ ON A PHONE THE BOX IS 16:6 AND THE ARTWORK IS STRETCHED ~20% TALLER to
+   fill it. Nothing is cropped anywhere — cropping for that height was tried
+   and it ate words (slider2 loses "Be" of "Better" at this ratio) — but it
+   does mean a phone shows this artwork 20% taller than it was drawn. Design
+   for that: a banner whose logo or type cannot carry a fifth more height
+   without looking squashed does not belong here as-is. The full trade, and
+   the two approaches rejected before it, are written out in the component.
+
+   Both of these are fixes for the real gap, which is that there is ONE cut of
+   each banner and it is a desktop shape. A phone-shaped cut (taller, type
+   scaled for a 390px screen) would need neither the stretch nor the crop.
 
    ⚠ `src` MUST name a file that actually exists in /public. Next serves a
    missing path as a 404 and the slide renders as a blank box, which on an

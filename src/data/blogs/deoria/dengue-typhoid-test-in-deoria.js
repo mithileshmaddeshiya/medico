@@ -75,6 +75,10 @@ const LAB_DEORIA_BOOK = "/lab-test/deoria#how-to-book-deoria";
 const LAB_DEORIA_PREPARE = "/lab-test/deoria#prepare-for-test-deoria";
 const LAB_DEORIA_GORAKHPUR = "/lab-test/deoria#gorakhpur-travel-deoria";
 
+/* The Varanasi sibling. The link runs both ways on purpose — that guide
+   links here too, and a one-way link tells a crawler two pages are related but
+   nothing about which one owns the subject. */
+const BLOG_DENGUE_VARANASI = "/blogs/dengue-typhoid-test/varanasi";
 const LAB_SALEMPUR = "/lab-test/salempur";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_KUSHINAGAR = "/lab-test/kushinagar";
@@ -531,6 +535,11 @@ export const dengueTyphoidDeoria = {
             href: LAB_KUSHINAGAR,
             label: "Kushinagar me lab test",
             sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi jila",
+          },
+          {
+            href: BLOG_DENGUE_VARANASI,
+            label: "Varanasi me dengue aur typhoid test",
+            sub: "Wahi guide, Varanasi ke liye",
           },
         ],
       },
