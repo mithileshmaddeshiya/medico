@@ -177,6 +177,26 @@ const LAB_CITY_SEED = [
               sub: "Package me kya hona chahiye, \"80+ parameters\" ka sach",
             },
             {
+              href: "/blogs/home-sample-collection/varanasi",
+              label: "Varanasi me ghar par blood test — poori prakriya",
+              sub: "Kis ilaake me aate hain, aur darwaze par kya hota hai",
+            },
+            {
+              href: "/blogs/diabetes-thyroid-test/varanasi",
+              label: "Varanasi me sugar, thyroid aur lipid test",
+              sub: "Fasting, PP ya HbA1c — aur thyroid ka daam kis par tay hai",
+            },
+            {
+              href: "/blogs/dengue-typhoid-test/varanasi",
+              label: "Varanasi me dengue aur typhoid test — kis din",
+              sub: "NS1, Widal, malaria aur platelet count ka matlab",
+            },
+            {
+              href: "/blogs/liver-kidney-test/varanasi",
+              label: "Varanasi me LFT aur KFT — kab karayein",
+              sub: "Peelapan, sugar aur BP wale saal me ek baar",
+            },
+            {
               href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
               label: "Blood test se pehle fasting aur taiyari",
             },

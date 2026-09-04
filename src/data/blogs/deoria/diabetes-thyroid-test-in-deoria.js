@@ -98,6 +98,10 @@ const LAB_DEORIA_HOME = "/lab-test/deoria#home-sample-collection-deoria";
 const LAB_DEORIA_ANAEMIA = "/lab-test/deoria#anaemia-women-children-deoria";
 
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
+/* The Varanasi sibling. The link runs both ways on purpose — that guide
+   links here too, and a one-way link tells a crawler two pages are related but
+   nothing about which one owns the subject. */
+const BLOG_DIABETES_VARANASI = "/blogs/diabetes-thyroid-test/varanasi";
 const LAB_SALEMPUR = "/lab-test/salempur";
 const LAB_KUSHINAGAR = "/lab-test/kushinagar";
 
@@ -618,6 +622,11 @@ export const diabetesThyroidDeoria = {
             href: LAB_KUSHINAGAR,
             label: "Kushinagar me lab test",
             sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi jila",
+          },
+          {
+            href: BLOG_DIABETES_VARANASI,
+            label: "Varanasi me sugar aur thyroid test",
+            sub: "Wahi guide, Varanasi ke liye",
           },
         ],
       },

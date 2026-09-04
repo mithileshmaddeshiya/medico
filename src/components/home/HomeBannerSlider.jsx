@@ -19,26 +19,43 @@ import "swiper/css/pagination";
  * and takes the LCP slot for an image nobody asked for. Being below the fold is
  * also why the slides load lazily; see the loading note further down.
  *
- * ── THE BOX IS THE ARTWORK'S OWN SHAPE, AT EVERY WIDTH ────────────────────
- * 16:5 — which is exactly what the banners in /public/swipper are (2242x701).
- * Nothing is cropped at any screen size, which is the same call HomeHero makes
- * for the same reason: these banners have their headline, their logo and their
- * feature labels PAINTED INTO THE FILE, and a crop does not trim empty space,
- * it eats words.
+ * ── 16:5 AND UNTOUCHED NORMALLY; 16:6 AND STRETCHED ON A PHONE ────────────
+ * The banners in /public/swipper are 16:5 (2242x701), and they have their
+ * headline, their logo and their feature labels PAINTED INTO THE FILE. From
+ * 640px up the box IS 16:5, so the artwork is shown exactly as drawn — same
+ * call HomeHero makes.
  *
- * It briefly ran two ratios — 2:1 on a phone stepping to 16:6 above 480px —
- * to keep the phone strip taller. That was written before there was real
- * artwork to look at, and it does not survive contact with it: a 16:5 banner
- * in a 5:2 box overflows 28% in width, so `object-cover` takes 14% off each
- * side, and on slider1 the MedicoBharat logo starts about 7% in. The phone
- * would have shown a banner with its own logo sliced off.
+ * Below 640px the box is 16:6 and the image is `object-fill`: it is STRETCHED
+ * about 20% vertically to reach the taller box. That is a deliberate choice
+ * between three bad options, and the other two were built and rejected first:
  *
- * ⚠ THE COST, STATED PLAINLY: on a 360px phone this strip is 112px tall, and
- * type designed for a 2242px-wide canvas is small at that size. The real fix
- * is not a different ratio here — it is a second, taller cut of each banner
- * for phones. Until that exists, whole-but-small beats cropped-and-broken.
+ *   CROP (`object-cover` in a taller box) — a 16:5 image in a 16:6 box
+ *   overflows 20% in width, so it loses 10% off EACH side, and there is
+ *   nothing spare there. Rendered and looked at, both slides: at 16:5.5 they
+ *   survive; at 16:5.75 slider2 loses the "P" of "Precise"; at 16:6 it loses
+ *   "Be" of "Better"; at 5:2 slider1's MedicoBharat logo is sliced off.
+ *   `object-position` buys nothing either — the left margin is ~5% (logo,
+ *   headline) and the bottom bar's third chip runs to the right edge, so
+ *   whichever side is favoured, the other loses a word. Cutting the artwork
+ *   is the one outcome that was explicitly ruled out.
  *
- * Change this ratio and change the note in home.js with it. They are one
+ *   LETTERBOX (`object-contain`, blurred copy of the slide behind it) — the
+ *   SECTION gets taller and the banner does not. It answers a different
+ *   complaint than the one that was made.
+ *
+ *   STRETCH (here) — nothing is cut, the width is untouched, and the strip
+ *   goes from 112px to ~134px on a 390px phone. The cost is geometry: type
+ *   and the logo are 20% taller than drawn. At this size it does not read as
+ *   distortion, which was checked by rendering it rather than assumed.
+ *
+ * ⚠ 16:6 IS THE CEILING, AND IT IS A DIFFERENT CEILING FROM BEFORE. What
+ * limits it now is how much distortion the wordmark can carry, not what falls
+ * off the edge — so DO NOT go further on the grounds that "nothing is being
+ * cut". Anything past ~20% starts to look like a squashed logo, which is
+ * worse than a short banner. Real height beyond this needs a second, taller
+ * cut of each banner authored for phones; see home.js.
+ *
+ * Change these ratios and change the note in home.js with them. They are one
  * decision written in two places.
  *
  * ── AUTOPLAY: IT IS MEANT TO NEVER STOP ───────────────────────────────────
@@ -116,6 +133,11 @@ export default function HomeBannerSlider({
     <section
       aria-label={heading}
       aria-roledescription={slides.length > 1 ? "carousel" : undefined}
+      /* px-4 on a phone, unchanged. It ran edge-to-edge for one revision to
+         squeeze ~8px more height out of the extra width, and that was the
+         wrong trade: it widens the banner to buy height, and the width is
+         supposed to stay where it is. Height comes from the ratio now, not
+         from eating the page margin. */
       className="mx-auto max-w-6xl px-4 sm:px-6 py-4 sm:py-6"
     >
       {/* The heading is for screen readers and the document outline only. The
@@ -191,7 +213,7 @@ export default function HomeBannerSlider({
 /** The box every slide shares — see the ratio note at the top of the file. */
 function BannerFrame({ children }) {
   return (
-    <div className="relative w-full aspect-16/5 overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-emerald-100 shadow-[0_18px_44px_-30px_rgba(6,78,59,0.55)]">
+    <div className="relative w-full aspect-16/6 sm:aspect-16/5 overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-emerald-100 shadow-[0_18px_44px_-30px_rgba(6,78,59,0.55)]">
       {children}
     </div>
   );
@@ -214,7 +236,16 @@ function BannerSlide({ banner }) {
          1152px content box, so the browser never fetches a larger source than
          the box can show. */
       sizes="(max-width: 1200px) 100vw, 1152px"
-      className="object-cover object-center"
+      /* `object-fill` below 640px is the whole point of the phone treatment,
+         not a slip: the box there is 16:6 and the artwork is 16:5, and filling
+         it stretches the picture rather than cutting 10% off each side of it.
+         The trade is written out at the top of this file — read it before
+         "fixing" this to object-cover, because that reintroduces the crop
+         that this was chosen over.
+         From 640px up the box is the artwork's own ratio, so cover and fill
+         would draw the same pixels; `sm:object-cover` is there so the day
+         someone changes the desktop ratio it crops instead of distorting. */
+      className="object-fill sm:object-cover sm:object-center"
     />
   );
 

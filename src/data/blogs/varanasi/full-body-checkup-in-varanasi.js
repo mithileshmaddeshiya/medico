@@ -95,7 +95,7 @@ const LAB_VARANASI_FULLBODY = "/lab-test/varanasi#full-body-checkup-varanasi";
 const LAB_VARANASI_PRICE = "/lab-test/varanasi#lab-test-price-varanasi";
 const LAB_VARANASI_POPULAR = "/lab-test/varanasi#popular-blood-tests-varanasi";
 const LAB_VARANASI_HOME = "/lab-test/varanasi#home-sample-collection-varanasi";
-const LAB_VARANASI_DIABETES = "/lab-test/varanasi#diabetes-thyroid-screening";
+const LAB_VARANASI_DIABETES = "/lab-test/varanasi#diabetes-thyroid-heart-screening";
 const LAB_VARANASI_WOMEN = "/lab-test/varanasi#pregnancy-women-health-tests";
 const LAB_VARANASI_REPORTS = "/lab-test/varanasi#reports-turnaround-time";
 const LAB_VARANASI_BOOK = "/lab-test/varanasi#book";
@@ -104,6 +104,13 @@ const BLOG_LAB_VARANASI = "/blogs/lab-test/varanasi";
 const BLOG_LAB_VARANASI_FASTING = "/blogs/lab-test/varanasi#fasting-aur-taiyari";
 const BLOG_LAB_VARANASI_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
 const BLOG_LAB_VARANASI_FEVER = "/blogs/lab-test/varanasi#bukhar-me-test-ka-din";
+/* The test-specific guides this article names in one line each and hands the
+   subject over to. They link back here for the package question, so the link
+   runs both ways — a one-way link tells a crawler two pages are related but
+   nothing about which one owns the subject. */
+const BLOG_DIABETES_VARANASI = "/blogs/diabetes-thyroid-test/varanasi";
+const BLOG_LIVER_KIDNEY_VARANASI = "/blogs/liver-kidney-test/varanasi";
+const BLOG_HOME_VARANASI = "/blogs/home-sample-collection/varanasi";
 
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_DEORIA = "/lab-test/deoria";
@@ -732,6 +739,21 @@ export const fullBodyCheckupVaranasi = {
           {
             href: BLOG_LAB_VARANASI_REPORT,
             label: "Report aa gayi — ab ise kaise padhein",
+          },
+          {
+            href: BLOG_DIABETES_VARANASI,
+            label: "Varanasi me sugar, thyroid aur lipid test",
+            sub: "Package ke teen sabse zaroori hisse, alag se",
+          },
+          {
+            href: BLOG_LIVER_KIDNEY_VARANASI,
+            label: "Varanasi me LFT aur KFT — kab karayein",
+            sub: "Package ke liver aur kidney wale hisse",
+          },
+          {
+            href: BLOG_HOME_VARANASI,
+            label: "Varanasi me ghar par blood test",
+            sub: "Package khaali pet hota hai — slot ka poora ganit",
           },
         ],
       },

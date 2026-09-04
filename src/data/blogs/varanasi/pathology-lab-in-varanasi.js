@@ -93,6 +93,12 @@ const BLOG_LAB_VARANASI = "/blogs/lab-test/varanasi";
 const BLOG_LAB_VARANASI_FASTING = "/blogs/lab-test/varanasi#fasting-aur-taiyari";
 const BLOG_LAB_VARANASI_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
 const BLOG_FULLBODY_VARANASI = "/blogs/full-body-checkup/varanasi";
+/* The four newer Varanasi guides. Each of them links back to this page for the
+   trust question, so every link here runs both ways. */
+const BLOG_HOME_VARANASI = "/blogs/home-sample-collection/varanasi";
+const BLOG_DIABETES_VARANASI = "/blogs/diabetes-thyroid-test/varanasi";
+const BLOG_DENGUE_VARANASI = "/blogs/dengue-typhoid-test/varanasi";
+const BLOG_LIVER_KIDNEY_VARANASI = "/blogs/liver-kidney-test/varanasi";
 const BLOG_LAB_DEORIA = "/blogs/lab-test/deoria";
 
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
@@ -505,6 +511,25 @@ export const pathologyLabVaranasi = {
             href: BLOG_FULLBODY_VARANASI,
             label: "Full body checkup me kya hona chahiye",
             sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+          },
+          {
+            href: BLOG_HOME_VARANASI,
+            label: "Varanasi me ghar par blood test",
+            sub: "Kis ilaake me aate hain, aur darwaze par kya hota hai",
+          },
+          {
+            href: BLOG_DIABETES_VARANASI,
+            label: "Varanasi me sugar, thyroid aur lipid test",
+            sub: "Thyroid ka daam kis baat par tay hota hai",
+          },
+          {
+            href: BLOG_DENGUE_VARANASI,
+            label: "Varanasi me dengue aur typhoid test — kis din",
+            sub: "Galat din ka test negative aata hai",
+          },
+          {
+            href: BLOG_LIVER_KIDNEY_VARANASI,
+            label: "Varanasi me LFT aur KFT — kab karayein",
           },
           {
             href: BLOG_LAB_DEORIA,

@@ -69,6 +69,10 @@ const LAB_DEORIA_HOME = "/lab-test/deoria#home-sample-collection-deoria";
 const LAB_DEORIA_GORAKHPUR = "/lab-test/deoria#gorakhpur-travel-deoria";
 const LAB_DEORIA_MIGRANT = "/lab-test/deoria#migrant-workers-checkup-deoria";
 
+/* The Varanasi sibling. The link runs both ways on purpose — that guide
+   links here too, and a one-way link tells a crawler two pages are related but
+   nothing about which one owns the subject. */
+const BLOG_LIVER_KIDNEY_VARANASI = "/blogs/liver-kidney-test/varanasi";
 const LAB_SALEMPUR = "/lab-test/salempur";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_KUSHINAGAR = "/lab-test/kushinagar";
@@ -542,6 +546,11 @@ export const liverKidneyDeoria = {
             href: LAB_KUSHINAGAR,
             label: "Kushinagar me lab test",
             sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi jila",
+          },
+          {
+            href: BLOG_LIVER_KIDNEY_VARANASI,
+            label: "Varanasi me LFT aur KFT",
+            sub: "Wahi guide, Varanasi ke liye",
           },
         ],
       },

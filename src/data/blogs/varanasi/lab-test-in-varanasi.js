@@ -102,6 +102,16 @@ const LAB_GORAKHPUR = "/lab-test/gorakhpur";
    sentence and hands the subject over — see the de-duplication note at the top
    of ./full-body-checkup-in-varanasi.js for what moved there and why. */
 const BLOG_FULLBODY_VARANASI = "/blogs/full-body-checkup/varanasi";
+/* The four newer guides. This article is the parent: it names each subject in
+   one table row or one sentence and hands it over, exactly as it already does
+   with the full-body guide above. Nothing below repeats their detail — two
+   pages arguing the same point in the same depth on one domain means Google
+   picks one and drops the other. */
+const BLOG_HOME_VARANASI = "/blogs/home-sample-collection/varanasi";
+const BLOG_DIABETES_VARANASI = "/blogs/diabetes-thyroid-test/varanasi";
+const BLOG_DENGUE_VARANASI = "/blogs/dengue-typhoid-test/varanasi";
+const BLOG_LIVER_KIDNEY_VARANASI = "/blogs/liver-kidney-test/varanasi";
+const BLOG_PATHOLOGY_VARANASI = "/blogs/pathology-lab/varanasi";
 const CONTACT = "/contact";
 
 export const labTestVaranasi = {
@@ -358,6 +368,14 @@ export const labTestVaranasi = {
           { text: "Bukhar ke poore panel ki list yahan hai", href: LAB_VARANASI_FEVER },
           ".",
         ],
+        [
+          "Bukhar ka poora hisaab — NS1, IgM aur IgG me farq, Widal ki seema, malaria kab, aur platelet count ka matlab — alag guide me hai: ",
+          {
+            text: "Varanasi me dengue aur typhoid test — kis din kaun sa",
+            href: BLOG_DENGUE_VARANASI,
+          },
+          ".",
+        ],
       ],
     },
 
@@ -422,6 +440,14 @@ export const labTestVaranasi = {
           " — parcha ho to upload kar dijiye, taaki wahi panel process ho jo doctor ne likha tha.",
         ],
         "Ghar me koi bujurg hai, bed-rest par hai, diabetic hai jinki vein patli ho gayi hai, ya operation ke baad recovery kar raha hai — booking ke waqt ye likh dijiye. Isse experienced phlebotomist bheja ja sakta hai aur do baar sui lagne ki nobat nahi aati.",
+        [
+          "Darwaze par poore pandrah minute me kya-kya hota hai, sheher ke kis ilaake me collection kaise pahunchti hai, aur bujurg, bachche ya bistar par pade mareez ke sample me kya alag hota hai — wo poori prakriya alag guide me hai: ",
+          {
+            text: "Varanasi me ghar par blood test",
+            href: BLOG_HOME_VARANASI,
+          },
+          ".",
+        ],
       ],
     },
 
@@ -636,6 +662,31 @@ export const labTestVaranasi = {
             href: BLOG_FULLBODY_VARANASI,
             label: "Varanasi me full body checkup — kya karayein",
             sub: "Package me kya hona chahiye, umar ke hisaab se kaun sa level",
+          },
+          {
+            href: BLOG_HOME_VARANASI,
+            label: "Varanasi me ghar par blood test",
+            sub: "Kis ilaake me aate hain, slot aur darwaze par kya hota hai",
+          },
+          {
+            href: BLOG_DIABETES_VARANASI,
+            label: "Varanasi me sugar, thyroid aur lipid test",
+            sub: "Fasting, PP ya HbA1c — aur TSH ki report ke baad kya",
+          },
+          {
+            href: BLOG_DENGUE_VARANASI,
+            label: "Varanasi me dengue aur typhoid test — kis din",
+            sub: "NS1, IgM, Widal aur platelet count ka matlab",
+          },
+          {
+            href: BLOG_LIVER_KIDNEY_VARANASI,
+            label: "Varanasi me LFT aur KFT — kab karayein",
+            sub: "Peelapan, sugar aur BP wale saal me ek baar",
+          },
+          {
+            href: BLOG_PATHOLOGY_VARANASI,
+            label: "Varanasi me pathology lab kaise chunein",
+            sub: "Poochhne layak paanch sawaal — aur hum kya daawa nahi karte",
           },
           {
             href: "/",
