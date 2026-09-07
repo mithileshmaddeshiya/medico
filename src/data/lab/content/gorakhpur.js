@@ -69,8 +69,8 @@
  * Paragraph parts of the form { text, href } render as in-prose links (see
  * LabContent). Every href must be a route that exists:
  *   /lab-test/{deoria,varanasi}            (src/data/lab/cities.js)
- *   /blogs/lab-test/varanasi  + anchors    (src/data/blogs/varanasi/)
- *   /blogs/full-body-checkup/varanasi      (src/data/blogs/varanasi/)
+ *   /blogs/lab-test/varanasi  + anchors    (content/blogs/varanasi/)
+ *   /blogs/full-body-checkup/varanasi      (content/blogs/varanasi/)
  *   /contact
  *
  * The /medicine-delivery/deoria link that used to sit in the reports section

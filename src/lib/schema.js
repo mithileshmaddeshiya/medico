@@ -34,7 +34,7 @@ import { SITE, SITE_PHONE_E164 } from "./site";
  *
  * Square (512×512) on purpose — see the note on `logo` below. Written here
  * rather than inline so the Organization node and the BlogPosting publisher in
- * src/data/blogs/shared.js cannot drift into describing the same company with
+ * src/lib/blogs/normalise.js cannot drift into describing the same company with
  * two different logos.
  */
 export const BRAND_LOGO = `${SITE}/brand/logo-square.png`;

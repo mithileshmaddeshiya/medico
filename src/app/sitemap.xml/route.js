@@ -1,4 +1,4 @@
-import { blogs } from "@/data/blogs";
+import { getBlogs } from "@/lib/blogs";
 import { getLabCities } from "@/lib/labCities";
 import { SITE } from "@/lib/site";
 
@@ -56,7 +56,7 @@ async function newestChildDate() {
     // STATIC_REVIEWED mirrors the newest of them. Bump it when you bump one there.
     STATIC_REVIEWED,
     ...cities.map((city) => city.updated),
-    ...blogs.map((blog) => blog.updatedAt),
+    ...(await getBlogs()).map((blog) => blog.updatedAt),
   ].filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(String(date ?? "")));
 
   // Plain string comparison is correct and total for ISO YYYY-MM-DD.

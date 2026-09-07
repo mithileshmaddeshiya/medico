@@ -150,7 +150,7 @@ const LAB_CITY_SEED = [
        The split is deliberate and the anchors say so: this page is the service
        (book, price, menu), the guide is the reading (which test, when, how to
        read the report). Every href is a route that exists — the guides in
-       src/data/blogs/varanasi/, the other cities in the seed below, and the
+       content/blogs/varanasi/, the other cities in the seed below, and the
        home page. The medicine-delivery links that used to sit in this block
        are gone with the section; do not add them back. */
     relatedLinks: {
@@ -393,7 +393,7 @@ const LAB_CITY_SEED = [
        them are the routes a reader on this page actually wants next.
 
        Every href here is checked against a real route: the guides live in
-       src/data/blogs/varanasi/ and the cities in the seed above. */
+       content/blogs/varanasi/ and the cities in the seed above. */
     relatedLinks: {
       heading: "Deoria Ke Liye Aage Ki Jaankari",
       intro:
@@ -608,7 +608,7 @@ const LAB_CITY_SEED = [
        discounted as boilerplate; these anchors are descriptive and per-city.
 
        Every href is checked against a real route: the lab cities in the seed
-       above and the guides in src/data/blogs/varanasi/. */
+       above and the guides in content/blogs/varanasi/. */
     relatedLinks: {
       heading: "Gorakhpur Ke Aas-paas MedicoBharat Ki Doosri Services",
       intro:
@@ -833,7 +833,7 @@ const LAB_CITY_SEED = [
        the district page is named first and links back (see Deoria's block).
 
        Every href is checked against a real route: the cities in the seed above
-       and the guides in src/data/blogs/varanasi/. */
+       and the guides in content/blogs/varanasi/. */
     relatedLinks: {
       heading: "Salempur Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
@@ -1038,7 +1038,7 @@ const LAB_CITY_SEED = [
        first and both link back (see their blocks above).
 
        Every href is checked against a real route: the cities in the seed above
-       and the guides in src/data/blogs/varanasi/. */
+       and the guides in content/blogs/varanasi/. */
     relatedLinks: {
       heading: "Azamgarh Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
@@ -1259,7 +1259,7 @@ const LAB_CITY_SEED = [
        back (see its block above).
 
        Every href is checked against a real route: the cities in the seed above
-       and the guides in src/data/blogs/varanasi/. */
+       and the guides in content/blogs/varanasi/. */
     relatedLinks: {
       heading: "Ballia Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
@@ -1472,7 +1472,7 @@ const LAB_CITY_SEED = [
        NOT link to from its prose. Azamgarh links back (see its block above).
 
        Every href is checked against a real route: the cities in the seed above
-       and the guides in src/data/blogs/varanasi/. */
+       and the guides in content/blogs/varanasi/. */
     relatedLinks: {
       heading: "Mau Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
@@ -1679,7 +1679,7 @@ const LAB_CITY_SEED = [
        referrals that go past Gorakhpur.
 
        Every href is checked against a real route: the cities in this seed and
-       the guides in src/data/blogs/. */
+       the guides in content/blogs/. */
     relatedLinks: {
       heading: "Kushinagar Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
@@ -1885,7 +1885,7 @@ const LAB_CITY_SEED = [
        first in that group, the way Deoria's does on its own page.
 
        Every href here is checked against a real route: the guides live in
-       src/data/blogs/ and the cities in the seed above. */
+       content/blogs/ and the cities in the seed above. */
     relatedLinks: {
       heading: "Siwan Ke Liye Aage Ki Jaankari",
       intro:
@@ -2108,7 +2108,7 @@ const LAB_CITY_SEED = [
        written, it goes first in that group.
 
        Every href here is checked against a real route: the guides live in
-       src/data/blogs/ and the cities in the seed above. */
+       content/blogs/ and the cities in the seed above. */
     relatedLinks: {
       heading: "Ghazipur Ke Liye Aage Ki Jaankari",
       intro:
@@ -2344,7 +2344,7 @@ const LAB_CITY_SEED = [
        links, not from the sitemap.
 
        Every href here is checked against a real route: the guides live in
-       src/data/blogs/ and the cities in the seed above. */
+       content/blogs/ and the cities in the seed above. */
     relatedLinks: {
       heading: "Gopalganj Ke Liye Aage Ki Jaankari",
       intro:

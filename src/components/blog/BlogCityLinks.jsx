@@ -30,8 +30,52 @@ import { ArrowUpRight } from "lucide-react";
  *
  * `current` is the article's own href — it is filtered out, because a page
  * linking to itself is noise in the link graph.
+ *
+ * ── WHY THE GUIDE COLUMN IS THIS CITY'S, NOT EVERY CITY'S ────────────────
+ * It used to list EVERY other article on the site. At fifteen posts that was a
+ * long column; at two hundred it is two hundred links at the foot of two
+ * hundred pages — forty thousand internal links, all of them the same set, on
+ * a block that repeats verbatim. That is not navigation, it is a link dump,
+ * and it is the pattern that gets a footer block discounted wholesale.
+ *
+ * So the column is now the reader's OWN town, capped, plus one row to /blogs
+ * which carries the complete set. Same town is also the better answer: someone
+ * reading about dengue testing in Deoria is far likelier to want Deoria's other
+ * guides than Varanasi's, and the cross-city links they might want are one hop
+ * away instead of zero.
+ *
+ * `city` is the article's city slug. Without it the column falls back to the
+ * first few of whatever it was given, which is a reasonable default rather than
+ * an empty block.
  */
-export default function BlogCityLinks({ labCities = [], posts = [], current = "" }) {
+
+/** Guides shown before the column hands off to /blogs. */
+const GUIDE_LIMIT = 5;
+
+export default function BlogCityLinks({
+  labCities = [],
+  posts = [],
+  current = "",
+  city = "",
+}) {
+  const others = posts.filter((post) => post.href !== current);
+  const sameCity = city ? others.filter((post) => post.city === city) : others;
+  // A town whose only guide is the one being read falls back to the newest few
+  // from anywhere — an empty column with a heading over it is worse than a
+  // slightly less relevant one.
+  const shown = (sameCity.length ? sameCity : others).slice(0, GUIDE_LIMIT);
+
+  const guideLinks = shown.map((post) => ({
+    href: post.href,
+    label: post.title,
+  }));
+
+  if (others.length) {
+    guideLinks.push({ href: "/blogs", label: "Sabhi guides — ek jagah" });
+  }
+
+  const cityName = shown.length && sameCity.length ? shown[0].cityName : null;
+
   const groups = [
     {
       title: "Lab test — sheher ke hisaab se",
@@ -42,11 +86,11 @@ export default function BlogCityLinks({ labCities = [], posts = [], current = ""
       })),
     },
     {
-      title: "Doosre guide",
-      note: "Isi tarah ke lekh, doosre sheher aur doosre sawaalon par.",
-      links: posts
-        .filter((post) => post.href !== current)
-        .map((post) => ({ href: post.href, label: post.title })),
+      title: cityName ? `${cityName} ke doosre guide` : "Doosre guide",
+      note: cityName
+        ? `${cityName} par likhe gaye baaki lekh — aur neeche sabhi sheher ke.`
+        : "Isi tarah ke lekh, doosre sheher aur doosre sawaalon par.",
+      links: guideLinks,
     },
     {
       // Always present, and always last: the home page carries the full price

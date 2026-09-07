@@ -1,0 +1,388 @@
+{
+  "title": "Salempur Me Lab Test — Kaun Sa Test Aur Kab",
+  "description": "Salempur me kaun sa lab test kab karayein — CBC, bukhar ka panel, thyroid, sugar aur vitamin. Kis din kaunsi jaanch sahi baithti hai, bina jargon ke.",
+  "keywords": [
+    "Lab test in Salempur",
+    "MedicoBharat Salempur",
+    "Blood test in Salempur",
+    "CBC blood test in Salempur",
+    "Thyroid test at home Salempur",
+    "Vitamin D & B12 test Salempur",
+    "Fever panel test home collection Salempur",
+    "Salempur me kaun sa test karayein",
+    "Blood test at home in Salempur",
+    "Dengue test in Salempur",
+    "Typhoid test in Salempur",
+    "Sugar test in Salempur",
+    "Salempur Bhatni Lar Bhatpar Rani lab test"
+  ],
+  "publishedAt": "2026-09-07",
+  "updatedAt": "2026-09-07",
+  "order": 10,
+  "readingMinutes": 10,
+  "takeaways": [
+    "Salempur me ab sawaal \"sample kahan dein\" nahi raha — sample ghar se ho jaata hai. Asli sawaal ye hai ki kaun sa test, aur kis din.",
+    "Bukhar me din ginna sabse zaroori hai: dengue NS1 sirf pehle 5 din tak bharosemand hai, aur Widal ke liye 5-7 din ka bukhar chahiye. Galat din ka test negative aata hai aur dobara karana padta hai.",
+    "Jo test aap baar-baar dohrate hain — HbA1c, TSH, creatinine, haemoglobin — unhe ek hi jagah se karaiye. Doctor badlav dekhta hai, sirf aaj ka number nahi.",
+    "Deoria ya Gorakhpur OPD dikhane ja rahe hain to blood test ek din pehle ghar par karwa lijiye. Ek trip me baat ban jaati hai, warna parcha lekar dobara aana padta hai.",
+    "Bachche ko tez bukhar ke saath jhatke, behoshi, gardan ki akdan ya lagatar ulti ho — test book mat kijiye, seedhe hospital jaaiye."
+  ],
+  "sections": [
+    {
+      "id": "salempur-me-lab-test-kaun-sa",
+      "heading": "Salempur Me Lab Test — Sawaal \"Kahan\" Ka Nahi Raha, \"Kaun Sa\" Ka Hai",
+      "lead": "Sample ghar se uth jaata hai. Jo faisla ab bhi aapko karna hai wo ye hai ki karana kya hai.",
+      "blocks": [
+        "Salempur tehsil mukhyalaya hai, lekin jaanch ke maamle me yahan ka reader hamesha ek qadam door khada rehta tha. Chhoti si shikayat par bhi parcha banne ke baad sawaal wahi hota tha — sample kahan dein. Deoria kareeb 30 kilometre, Gorakhpur kareeb 75. Ek CBC ke liye bhi subah khaali pet nikalna, tempo ya Bhatni se train pakadna, aur report lene doosre din phir jaana.",
+        [
+          "Home collection ne wo hissa hata diya hai. ",
+          { "text": "MedicoBharat Salempur me ghar se sample leta hai", "href": "/lab-test/salempur" },
+          " — free home collection, subah 6 baje se slot, aur 24 ghante ke andar WhatsApp aur email par PDF report. Iska matlab ye hai ki ab paisa aur din us cheez me nahi jaate jo aane-jaane me jaate the. Lekin isi wajah se ek nayi galti aam ho gayi hai: log zaroorat se zyada test kara lete hain, ya sahi test galat din par."
+        ],
+        "Yahi is guide ka kaam hai. Neeche har aam shikayat ke saamne wo test likha hai jo us waqt sach me kaam ka hota hai — aur wo bhi likha hai jo us waqt karana bekaar hai. Har extra number ka matlab nahi hota; kuch to sirf ghabrahat paida karte hain aur ek aur test ki line laga dete hain.",
+        {
+          "note": {
+            "title": "Hamara Salempur me koi walk-in counter nahi hai",
+            "text": "Ye home collection service hai. Kisi bazaar me hamari branch ya counter hone ka daawa is page par nahi kiya gaya. Aur jo jaanch machine par hoti hai — X-ray, ultrasound, ECG, CT scan — wo humse nahi hoti; unke liye imaging centre par jaana hi padega. Routine blood aur urine ki jaanch sample par hoti hai, aur wo ghar se ho jaati hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cbc-blood-test-salempur",
+      "heading": "CBC Blood Test In Salempur — Wo Ek Jaanch Jo Sabse Pehle Hoti Hai",
+      "lead": "Bukhar ho, kamzori ho, ya kuch samajh na aa raha ho — shuruaat aksar yahin se hoti hai.",
+      "blocks": [
+        "CBC ka poora naam Complete Blood Count hai, aur ye khoon ki ginti karta hai — kitne laal cell, kitne safed, kitne platelet. Isme fasting nahi lagti, sample kabhi bhi diya ja sakta hai, aur yahi wajah hai ki doctor ise sabse pehle likhta hai. Ye bimari ka naam nahi batata; ye batata hai ki sharir kis taraf ishaara kar raha hai.",
+        {
+          "list": [
+            "Haemoglobin (Hb) — khoon ki kami. Is belt me mahilaon, kishori ladkiyon aur bachchon me sabse zyada nikalne wali cheez yahi hai.",
+            "WBC (safed cell) — badhe hue matlab aksar bacteria ka infection, ghate hue aksar virus ka. Bukhar ki disha yahin se milti hai.",
+            "Platelet — dengue me sabse zyada dekha jaane wala number. Girta hua platelet roz dekha jaata hai, ek baar nahi.",
+            "RBC indices (MCV, MCH) — khoon ki kami kis wajah se hai, iron ki kami se ya vitamin ki kami se, iska pehla ishaara yahin milta hai.",
+            "ESR aksar CBC me shaamil nahi hota — wo alag test hai. Parche par likha ho to booking me alag se jodwaiye."
+          ]
+        },
+        [
+          "Ek chhoti si baat jo bahut kaam ki hai: CBC akela bahut kuch bata deta hai, lekin akela ilaaj tay nahi karta. Bukhar hai to iske saath din ke hisaab se panel jodna padta hai, aur kamzori hai to iske saath vitamin aur ferritin dekhe jaate hain. Dono neeche alag-alag hisson me hain. Daam ",
+          { "text": "service page ki rate list", "href": "/lab-test/salempur#lab-test-price-salempur" },
+          " par likha hai — is guide me price jaan-boojh kar nahi likha jaata, taaki wo ek hi jagah rahe aur purana na pada rahe."
+        ]
+      ]
+    },
+    {
+      "id": "fever-panel-test-salempur",
+      "heading": "Salempur Me Fever Panel Test — Bukhar Ke Kis Din Kaunsa Test",
+      "lead": "Sabse mehngi galti bimari pehchan-ne me nahi hoti. Din ginne me hoti hai.",
+      "blocks": [
+        "July se November ke beech is ilaake me bukhar ka bojh sabse zyada rehta hai. Aur sabse aam galti ye hoti hai ki test to sahi karaya jaata hai, par galat din par. Report negative aati hai, ghar wale nishchint ho jaate hain, aur ilaaj hafta bhar late ho jaata hai. Din ginna isliye jaanch se bhi pehle ki cheez hai.",
+        {
+          "table": {
+            "caption": "Bukhar ke kis din kaunsa test kaam ka hai",
+            "head": ["Bukhar ka din", "Kaunsa test", "Kyun"],
+            "rows": [
+              ["Din 1-2", "CBC (aur zaroorat ho to malaria antigen)", "Abhi kisi antibody test ka matlab nahi — sharir ne banaya hi nahi hai. CBC disha deta hai."],
+              ["Din 1-5", "Dengue NS1 antigen + CBC", "NS1 sirf shuruaati dinon me bharosemand hai. Paanchve din ke baad ye aksar negative aa jaata hai."],
+              ["Din 5 ke baad", "Dengue IgM (NS1 ki jagah)", "Ab antibody ban chuki hoti hai. Is stage par NS1 karana paisa barbaad karna hai."],
+              ["Din 5-7 ke baad", "Widal ya Typhidot IgM + CBC", "Widal ke liye titre badhne me waqt lagta hai. Pehle din ka Widal aksar bekaar hota hai."],
+              ["Thand aur kanpkanpi ke saath", "Malaria antigen + peripheral smear", "Kanpkanpi wala bukhar malaria ki taraf ishaara karta hai, chahe kaunsa bhi din ho."],
+              ["Bukhar 5 din se upar, wajah saaf nahi", "CBC + urine routine + ek baar doctor", "Kai baar wajah urine ka infection nikalta hai, aur wo teen naamon ki race me chhoot jaata hai."]
+            ]
+          }
+        },
+        "Widal ke saath ek aur baat samajh lena zaroori hai: is ilaake me typhoid endemic hai, isliye purane infection se bhi Widal positive aa sakta hai. Sirf usi ek report par ilaaj tay karna theek nahi. Typhidot IgM jaldi positive hota hai aur aksar isi wajah se saath me karaya jaata hai.",
+        [
+          "Bukhar me ghar se nikalna sabse bhaari kaam hota hai — aur yahi wo waqt hai jab home collection sabse zyada kaam aata hai. Bukhar ka panel do-teen din baad dohrana pad sakta hai, isliye slot subah ka lijiye aur dono baar lagbhag ek hi samay rakhiye. ",
+          { "text": "Ghar par sample kaise liya jaata hai", "href": "/blogs/home-sample-collection/salempur" },
+          " wo alag guide me hai."
+        ],
+        {
+          "note": {
+            "title": "Bachche me ye lakshan dikhein to test mat kijiye — hospital jaaiye",
+            "text": "Gorakhpur-Deoria-Kushinagar belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Tez bukhar ke saath jhatke, behoshi, gardan ka akad jaana, lagatar ulti, ya bachche ka sust pada rehna — ye emergency hai. Ismein ek-ek ghanta maayne rakhta hai. Blood test iska pehla jawab nahi hai, aur home collection ka intezaar khatarnak hai. Seedhe najdeeki hospital le jaaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thyroid-test-at-home-salempur",
+      "heading": "Thyroid Test At Home Salempur — TSH Kab Karayein, Aur Dobara Kab",
+      "lead": "Thyroid ki jaanch me sabse zyada galti dohraane ke waqt me hoti hai, karane me nahi.",
+      "blocks": [
+        "Thyroid ki shikayat chup rehti hai. Thakan, wazan ka badhna ya ghatna, baal girna, thand zyada lagna, mahilaon me periods ka bigadna, ya lambe samay se mann ka bujha rehna — inme se koi bhi akela kisi bimari ka saboot nahi hai, lekin ye wahi shikayatein hain jinke peeche aksar thyroid nikalta hai. Isme fasting nahi lagti, isliye slot kabhi bhi liya ja sakta hai.",
+        {
+          "list": [
+            "Parche par T3, T4 aur TSH likha hai — Thyroid Profile karaiye. Ye sabse aam panel hai.",
+            "Parche par FT3, FT4 likha hai — free wala test alag hai. Naam milta-julta hai, test alag hai. Photo bhej dijiye to ye galti hoti hi nahi.",
+            "Sirf follow-up hai aur doctor ne sirf TSH likha hai — sirf TSH karaiye. Poora profile dohraana har baar zaroori nahi hota.",
+            "Sample subah ka behtar rehta hai. TSH din bhar me thoda upar-neeche hota hai, isliye har baar lagbhag ek hi samay par karaiye — tabhi do report ki tulna sach me matlab rakhti hai.",
+            "Dawa chal rahi hai to sample dene se pehle us din ki goli mat khaiye; sample ke baad kha lijiye. Aur kaunsi dawa chal rahi hai, wo booking ke waqt bata dijiye."
+          ]
+        },
+        "Dohraane ka niyam seedha hai: dose badalne ke 6 se 8 hafte baad TSH dobara, aur uske baad — jab tak sab sthir hai — har 6 se 12 mahine me. Isse jaldi dohraana faayda nahi deta, kyunki dawa ka asar sthir hone me hi itna waqt lagta hai. Ye wahi jaanch hai jiske liye log poora din nahi lagana chahte aur isliye saal-saal bhar taalte rehte hain — ghar par ye das minute ka kaam hai.",
+        [
+          "Ek cheez jo yahan sabse zyada nuksan karti hai: har baar alag jagah se karana. Alag machine aur method ke reference range thode alag hote hain, isliye ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya. ",
+          { "text": "Isi wajah se ek hi lab par tike rehna kaam ka hai", "href": "/blogs/pathology-lab/salempur#ek-jagah-se-dohraiye-salempur" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "sugar-follow-up-salempur",
+      "heading": "Sugar Ki Dawa Chal Rahi Hai — Saal Bhar Ka Chhota Routine",
+      "lead": "Pehli jaanch se zyada kaam follow-up karta hai, aur follow-up hi sabse zyada chhoota hai.",
+      "blocks": [
+        "Diabetes me asli kaam pehli report par khatam nahi hota. Wo to sirf shuruaat hai. Jo cheez lambe samay me farak daalti hai wo ye hai ki chaar-paanch jaanch apne samay par dohrayi jaati rahein — aur kasbe me yahi sabse zyada chhootti hain, kyunki har baar ek din aur ek kiraya lagta tha.",
+        {
+          "table": {
+            "caption": "Sugar ki dawa chal rahi ho to kya, kab",
+            "head": ["Jaanch", "Kitni baar", "Fasting chahiye?"],
+            "rows": [
+              ["HbA1c", "Har 3 mahine (sthir ho to 6 mahine)", "Nahi"],
+              ["Fasting aur PP sugar", "Doctor jaise kahe — aksar mahine me ek baar", "Fasting me haan; PP naashte ke theek 2 ghante baad"],
+              ["Lipid Profile", "Saal me ek baar", "Haan, 10-12 ghante"],
+              ["Kidney Function Test + urine microalbumin", "Saal me ek baar", "Aam taur par nahi"],
+              ["Aankh aur pair ki jaanch", "Saal me ek baar, doctor ke paas", "Ye lab ka kaam nahi hai — ise lab test se mat badaliye"]
+            ]
+          }
+        },
+        "Is table me sabse zyada chhoota jaane wala naam urine microalbumin hai. Yahi wo test hai jo sabse pehle ishaara deta hai ki kidney par asar shuru ho raha hai — us waqt jab kuch bhi mehsoos nahi hota aur creatinine ab bhi normal dikhta hai. Saal me ek baar. Bas itna.",
+        [
+          "Fasting aur PP dono karane hon to do alag sample lagte hain — ek khaali pet, doosra naashte ke theek do ghante baad. Ek hi visit me dono nahi ho sakte, isliye booking ke waqt bata dijiye ki dono chahiye. HbA1c me ye jhanjhat hai hi nahi. Kis test me fasting lagti hai aur kisme nahi, uski poori baat ",
+          { "text": "service page ke fasting wale hisse", "href": "/lab-test/salempur#fasting-taiyari-salempur" },
+          " me likhi hai."
+        ]
+      ]
+    },
+    {
+      "id": "vitamin-d-b12-test-salempur",
+      "heading": "Vitamin D & B12 Test Salempur — Thakan Ka Sabse Anadekha Jawab",
+      "lead": "\"Kamzori hai\" sunkar log tonic le lete hain. Do jaanch aksar isse behtar jawab deti hain.",
+      "blocks": [
+        "Din bhar thakan, kaam me mann na lagna, haath-pair me jhunjhuni ya sunnpan, chalte-chalte saans phoolna, kamar aur pindliyon me dard — ye shikayatein itni aam hain ki inhe umar ya kaam ka hissa maan liya jaata hai. Bahut baar ye teen me se kisi ek cheez ka lakshan hoti hain: khoon ki kami, Vitamin B12 ki kami, ya Vitamin D ki kami.",
+        {
+          "list": [
+            "Vitamin B12 — is belt ke bahut se gharon ka khana shudh shakahari hai, aur B12 mukhya roop se maans, ande aur doodh se milta hai. Iski kami sirf khoon par nahi, nason par asar daalti hai — haath-pair ki jhunjhuni aur sunnpan wahin se aate hain. Isme fasting nahi lagti.",
+            "Vitamin D — dhoop ki kami yahan nahi hai, phir bhi kami nikalti hai. Zyadatar log dhoop me rehte to hain par dhaka hua sharir liye, aur kai mahilaein ghar ke andar hi rehti hain. Haddi aur pitth ka dard aur baar-baar thakan iske aam lakshan hain. Fasting nahi lagti.",
+            "Haemoglobin kam nikla to sirf Hb par mat rukiye — ferritin dekhiye. Hb batata hai ki kami hai; ferritin batata hai ki sharir ka iron ka bhandar khaali hai ya nahi. Iron ki goli kitne mahine chalegi, ye faisla ferritin se hota hai, Hb se nahi.",
+            "Thyroid ko is list se bahar mat rakhiye — thakan ki teen aam wajahon me wo bhi ek hai. Isiliye kai baar TSH inke saath hi karaya jaata hai."
+          ]
+        },
+        "Report par ek cheez ka dhyaan rakhiye. Vitamin ki kami ka ilaaj sirf goli nahi hai, aur goli ki khuraak kami ki gehrai par tay hoti hai — halki kami aur gehri kami ka course ek jaisa nahi hota. Isliye report aane par apne mann se koi high-dose supplement shuru mat kijiye; report dikha kar khuraak likhwa lijiye. Aur agar goli chal rahi hai to dobara test course poora hone ke baad hi karaiye, beech me nahi — beech ka number sirf yahi batata hai ki goli khayi ja rahi hai.",
+        [
+          "Mahilaon, kishori ladkiyon aur bachchon me ye teen jaanch sabse zyada kaam ki hain, aur sabse zyada taali jaati hain — kyunki inke liye ghar se nikalna hi sabse mushkil hissa tha. Ghar par ek hi visit me poore ghar ka sample ho jaata hai; ",
+          { "text": "kaise, wo yahan likha hai", "href": "/blogs/home-sample-collection/salempur#ek-visit-me-poora-ghar-salempur" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "umar-ke-hisaab-se-salempur",
+      "heading": "Umar Aur Kaam Ke Hisaab Se — Kis Ko Kaun Sa Test, Kitni Baar",
+      "lead": "Koi shikayat nahi hai tab bhi ek chhota saalana routine banta hai. Wo yahan hai.",
+      "blocks": [
+        "Neeche wali table un logon ke liye hai jinhe abhi koi shikayat nahi hai. Shikayat pehle se hai to ye table mat dekhiye — doctor ko dikhaiye aur wahi test karaiye jo wo kahe. Screening aur ilaaj do alag cheezein hain, aur inhe aapas me badalna sabse aam galti hai.",
+        {
+          "table": {
+            "caption": "Bina shikayat wale logon ke liye saalana routine",
+            "head": ["Kaun", "Kam se kam kya", "Kitni baar"],
+            "rows": [
+              ["18-30 saal", "CBC, Blood Sugar, Vitamin B12 aur D", "Do saal me ek baar; ek baseline ban jaata hai"],
+              ["30-45 saal", "CBC, sugar, Lipid Profile, LFT, KFT, Thyroid", "Saal me ek baar"],
+              ["45 saal ke upar", "Upar wala sab + HbA1c aur urine routine", "Saal me ek baar, bina naaga"],
+              ["55 ke upar / bujurg", "Upar wala sab + Vitamin D aur haddi ke marker", "Saal me ek baar, ghar par hi"],
+              ["Mahilaein aur kishori ladkiyaan", "CBC ke saath Hb aur ferritin, Vitamin D", "Saal me ek baar"],
+              ["Bahar kaam karne wale (chutti me ghar aaye)", "CBC, sugar, Lipid, LFT, Vitamin B12 aur D", "Har chutti par, ya saal me ek baar"]
+            ]
+          }
+        },
+        [
+          "Bahar kaam karne walon par ek alag baat: lambi shift, kam dhoop, bahar ka khana aur der raat ki neend — in chaaron ka asar sabse pehle lipid aur vitamin par dikhta hai. Chutti me ghar aayein to ye ek baar karwa lijiye; ye wo waqt hai jab aap khud maujood hain aur report par baat bhi kar sakte hain. ",
+          { "text": "Kaun sa package isme sahi baithta hai", "href": "/blogs/full-body-checkup/salempur" },
+          " wo alag guide me hai, aur ghar walon ka test bahar se book karne ka tareeka ",
+          { "text": "service page par", "href": "/lab-test/salempur#bahar-se-booking-salempur" },
+          " likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "doctor-se-pehle-ya-baad-salempur",
+      "heading": "Test Pehle Karayein Ya Doctor Ko Pehle Dikhayein — Kasbe Ka Sabse Aam Sawaal",
+      "lead": "Dono ka apna waqt hai. Ulta kar dene par ek din aur ek kiraya bekaar jaata hai.",
+      "blocks": [
+        "Yahan sabse aam raasta ye hai: shikayat hui, bazaar ki dukaan se do din ki dawa li, aaram nahi hua, phir kisi ne keh diya ki \"jaanch karwa lo\". Is kram me test aksar bina disha ke hota hai — jo naam yaad aata hai wahi karaya jaata hai, aur report lekar phir bhi doctor ke paas jaana padta hai, jo aksar dobara kuch aur likh deta hai.",
+        {
+          "list": [
+            "Nayi shikayat hai aur samajh nahi aa raha — pehle doctor. Ek dhang ka parcha aage ke teen chakkar bacha deta hai.",
+            "Doctor ne parcha likh diya hai — ab test ghar se karaiye. Parche ka photo booking ke waqt bhej dijiye, taaki wahi panel liya jaaye jo likha hai.",
+            "Deoria ya Gorakhpur OPD dikhane ja rahe hain — blood test ek din pehle ghar par karwa lijiye. Report haath me hogi to ek hi visit me baat ban jaayegi.",
+            "Koi shikayat nahi hai, sirf saalana checkup hai — package seedhe book kar lijiye, doctor ki zaroorat nahi.",
+            "Purani bimari ka follow-up hai — jo test pichhli baar hue the, wahi dohraiye. Naya kuch mat jodiye jab tak doctor ne na kaha ho."
+          ]
+        },
+        [
+          "Aur ye faisla bhi utna hi zaroori hai ki safar zaroori hai ya nahi. Routine blood aur urine ki jaanch sample par hoti hai — uske liye kahin jaana nahi hai. Safar tab banta hai jab baat imaging ya specialist ki ho: MRI, CT scan, sonography, endoscopy, biopsy ya kisi super-speciality OPD ki. ",
+          { "text": "Kab jaana hai aur kab nahi", "href": "/lab-test/salempur#deoria-gorakhpur-safar-salempur" },
+          " — us par service page par alag hissa hai. Trip banti hai to ",
+          { "text": "Deoria", "href": "/lab-test/deoria" },
+          " aur ",
+          { "text": "Gorakhpur", "href": "/lab-test/gorakhpur" },
+          " me bhi sample ghar se hi liya jaata hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-kya-dekhein-salempur",
+      "heading": "Report Aa Gayi — Sabse Pehle Kya Dekhein",
+      "lead": "Laal nishaan dekhkar ghabraana sabse aam pratikriya hai, aur sabse kam kaam ki.",
+      "blocks": [
+        "Report 24 ghante ke andar PDF me aa jaati hai. Kholte hi nazar un lines par jaati hai jo laal ya bold hain — aur wahin se bewajah ki ghabrahat shuru hoti hai. Ek tay kram se padhiye, kaam aasan ho jaayega.",
+        {
+          "list": [
+            "Sabse upar naam, umar aur gender milaiye. Reference range umar aur gender par badalti hai — galat header ka matlab galat matlab.",
+            "Sample kab liya gaya aur report kab bani, ye dono dekhiye. Bukhar wali report me din ka hisaab isi se lagta hai.",
+            "Har number ke bagal me us lab ki apni reference range likhi hoti hai. Doosri lab ki range se mat milaiye — range machine aur method ke saath badalti hai.",
+            "Halka sa upar-neeche hona apne aap me bimari nahi hai. Doctor ek number nahi, poora pattern dekhta hai — aur pichhli report se tulna karta hai.",
+            "Purani report saath rakhiye. Ek report ek photo hai; do report ek disha hain, aur disha hi kaam ki cheez hai.",
+            "PDF ko WhatsApp me pada mat chhodiye. Ek folder bana kar naam aur taareekh ke saath sambhaal lijiye — agli baar dhoondhne me poora din nahi jaayega."
+          ]
+        },
+        {
+          "note": {
+            "title": "Report par apne aap dawa shuru mat kijiye",
+            "text": "Ye guide ye samajhne ke liye hai ki kaun sa test kab kaam ka hai — ilaaj tay karne ke liye nahi. Koi number bahar aaya ho to report doctor ko dikhaiye. Internet par padh kar ya kisi jaan-pehchan wale ki purani dawa dekh kar shuru karna sabse aam aur sabse mehngi galti hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aage-kya-karein-lab-test-salempur",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Test tay hai to booking seedhi hai — ",
+          { "text": "Salempur ka service page", "href": "/lab-test/salempur" },
+          " kholiye, form bhariye, aur lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+        ],
+        [
+          "Test tay nahi hai to pehle ye tay kar lijiye ki saalana checkup karana hai ya kisi shikayat ka jawab dhoondhna hai. Pehle ke liye ",
+          { "text": "full body checkup wali guide", "href": "/blogs/full-body-checkup/salempur" },
+          " hai, aur ghar par sample kaise liya jaata hai ye ",
+          { "text": "home collection wali guide", "href": "/blogs/home-sample-collection/salempur" },
+          " me hai."
+        ],
+        [
+          "Aur agar sirf itna poochhna hai ki aapka gaon cover hota hai ya nahi, ya parche par likha test samajh nahi aa raha — ",
+          { "text": "call kar lijiye", "href": "/contact" },
+          ". Ek minute ka jawab hai, aur andaza lagane se behtar hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Salempur me lab test ghar se karane par report par koi farak padta hai?",
+      "answer": "Nahi. Sample kahan liya gaya, isse result nahi badalta — machine, method aur reference range wahi rehte hain. Routine blood aur urine ke saare aam test sirf sample par hote hain. Farak sirf itna hai ki aapko khaali pet nikalna nahi padta aur report lene doosre din dobara nahi jaana padta."
+    },
+    {
+      "question": "Bukhar aaye hue do din hue hain — abhi dengue ka test kara lein?",
+      "answer": "Pehle do din me NS1 kara sakte hain aur wo bharosemand rehta hai, lekin akela CBC bhi is waqt kaafi disha de deta hai. Sabse zaroori baat ye hai ki NS1 sirf bukhar ke pehle 5 din tak hi bharosemand hai; paanchve din ke baad IgM karana padta hai. Aur Widal ke liye 5 se 7 din ka bukhar chahiye — pehle din ka Widal aksar bekaar jaata hai."
+    },
+    {
+      "question": "Thyroid test ke liye khaali pet rehna padta hai?",
+      "answer": "Nahi, thyroid profile aur TSH me fasting nahi lagti — sample din me kabhi bhi diya ja sakta hai. Ek baat dhyaan rakhiye: TSH din bhar me thoda upar-neeche hota hai, isliye har baar lagbhag ek hi samay par karaiye, aur sample dene se pehle us din ki thyroid ki goli mat khaiye — sample ke baad kha lijiye."
+    },
+    {
+      "question": "CBC aur full body checkup me kya farak hai?",
+      "answer": "CBC ek test hai — sirf khoon ki ginti. Full body checkup ek package hai jisme CBC ke saath sugar, lipid, liver, kidney aur bade package me thyroid aur vitamin bhi aate hain. Koi ek shikayat hai to alag test theek rehta hai; saal ka routine karana hai to package me kharcha kam padta hai, kyunki alag-alag karane par wahi test kai guna mehnge padte hain."
+    },
+    {
+      "question": "Vitamin B12 ya D ka test karane se pehle goli band karni padegi?",
+      "answer": "Agar supplement ka course chal raha hai to beech me test karane ka matlab kam hai — us waqt ka number sirf ye batata hai ki goli khayi ja rahi hai. Course poora hone ke baad, doctor jitne samay baad kahe, tab dohraiye. Pehli baar test kara rahe hain to koi taiyaari nahi chahiye — inme fasting bhi nahi lagti."
+    },
+    {
+      "question": "Salempur me raat me ya 24 ghante sample collection hota hai?",
+      "answer": "Nahi. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye fasting wale test subah aur baaki test din me kabhi bhi ho jaate hain. Hum 24 ghante khula lab hone ka daawa nahi karte — hum 24 ghante me report milne ka karte hain. Raat me turant jaanch ki zaroorat ho to wo emergency hai, aur uske liye hospital jaana chahiye."
+    },
+    {
+      "question": "Parche par likha test samajh nahi aa raha — kya karein?",
+      "answer": "Parche ka photo booking ke waqt bhej dijiye, panel usi ke hisaab se book kar diya jaayega. Naam milte-julte hone se galti bahut hoti hai — Thyroid Profile Total aur Free alag hain, Sugar Fasting aur PP do alag sample hain, aur Widal aur Typhidot alag test hain. Photo hone par ye galti hoti hi nahi. Aur jo test parche par likha nahi hai use apne mann se mat jodiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Salempur Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me ye hai ki kaun sa test kab. Booking, coverage aur price service page par hain; ghar par sample lene ka tareeka alag guide me hai.",
+    "groups": [
+      {
+        "title": "Salempur Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/salempur",
+            "label": "Salempur me lab test — booking aur free home collection",
+            "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj aur Barhaj"
+          },
+          {
+            "href": "/lab-test/salempur#lab-test-price-salempur",
+            "label": "Salempur me lab test ka price aur rate list",
+            "sub": "CBC, thyroid, HbA1c, vitamin aur package — sab ek jagah"
+          },
+          {
+            "href": "/lab-test/salempur#fasting-taiyari-salempur",
+            "label": "Fasting ke niyam — kisme lagti hai, kisme nahi"
+          },
+          {
+            "href": "/lab-test/salempur#how-to-book-salempur",
+            "label": "Booking kaise hoti hai — form se report tak"
+          }
+        ]
+      },
+      {
+        "title": "Salempur Ke Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/pathology-lab/salempur",
+            "label": "Salempur me pathology lab aur diagnostic centre",
+            "sub": "Sample kahan jaata hai, aur lab chunte waqt kya poochhein"
+          },
+          {
+            "href": "/blogs/home-sample-collection/salempur",
+            "label": "Ghar par blood test — visit ke din kya hota hai",
+            "sub": "Pata, landmark, slot aur darwaze par kya dekhein"
+          },
+          {
+            "href": "/blogs/full-body-checkup/salempur",
+            "label": "Full body checkup — kaun sa package kis ke liye",
+            "sub": "Parameter ki ginti nahi, coverage dekhiye"
+          }
+        ]
+      },
+      {
+        "title": "Aas-paas Ke Jile",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test",
+            "sub": "Zila mukhyalaya — kareeb 30 kilometre"
+          },
+          {
+            "href": "/lab-test/gorakhpur",
+            "label": "Gorakhpur me lab test",
+            "sub": "OPD dikhana ho to report pehle taiyaar rakhiye"
+          },
+          {
+            "href": "/blogs/dengue-typhoid-test/deoria",
+            "label": "Bukhar ki jaanch — poori guide",
+            "sub": "Dengue, typhoid aur malaria — din ke hisaab se"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — coverage aur test chunne me madad"
+          }
+        ]
+      }
+    ]
+  }
+}

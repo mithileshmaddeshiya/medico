@@ -2,34 +2,54 @@ import Link from "next/link";
 import { linkTitle } from "@/lib/linkTitle";
 import { CalendarDays, Clock } from "lucide-react";
 
-import { blogs } from "@/data/blogs";
+import { getBlogs } from "@/lib/blogs";
 import { getLabCities } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, url } from "@/lib/site";
 
 /**
- * /blogs — the guide index.
+ * /blogs — THE hub. Every article on the site hangs off this one page.
  *
- * ── WHY IT EXISTS ─────────────────────────────────────────────────────────
- * `/blogs/<category>/<city>` served articles and `/blogs` itself was a 404 —
- * which is why the breadcrumbs on every post deliberately skip the middle level
- * and go Home → the town's lab page → the article. That was the right call while
- * the hub did not exist; it is not a reason to leave it missing.
+ * ── WHY EVERYTHING POINTS HERE ────────────────────────────────────────────
+ * This page existed for a while and nothing linked to it. It was in the
+ * sitemap, so Google knew the URL, but not one page on the site carried an
+ * anchor to it — three separate comments elsewhere in the codebase still said
+ * "/blogs has no hub page" and told the next person not to link it. Meanwhile
+ * every surface that wanted to show guides listed EVERY guide: the home page
+ * rendered the full set twice over (the card rail and the "Padhne Ke Liye"
+ * column), and the block at the foot of each article listed every other
+ * article on the site.
  *
- * Without a hub, an article was reachable only from the home page rail and from
- * the related-links block on a city page. Nothing crawled the set as a set, and
- * a new guide could only be found by whatever happened to link it.
+ * That shape works at fifteen posts and breaks at fifty. A rail that grows
+ * without limit takes over the home page; a footer block carrying two hundred
+ * links on every article is what Google reads as a link dump rather than
+ * navigation. And it is a lot of linking for very little crawl benefit — the
+ * same pages linked over and over from everywhere.
+ *
+ * So the links were inverted. Every other surface now shows a HANDFUL and
+ * hands off to this page, and this page carries the complete set. One hop from
+ * anywhere on the site to here, one hop from here to any article — which is
+ * the shape a crawler follows cleanly, and the shape that does not change when
+ * the tenth article becomes the two hundredth.
+ *
+ * The surfaces that feed it: the footer's quick links (every page on the
+ * site), the home page rail's "sabhi guides" button, the home page's "Aage
+ * Kahan Jaayein" column, and BlogCityLinks at the foot of every article.
+ *
+ * ── WHY IT GROUPS BY CITY ─────────────────────────────────────────────────
+ * A flat newest-first grid was fine for fifteen. At two hundred it is a wall
+ * with no structure, and the reader who wants Deoria has to scan all of it.
+ * The sections are the towns, in the order src/lib/blogs ranks them (the town
+ * with the newest guide first), with a jump nav above so any town is one tap
+ * away. Every article still renders as a real link in the HTML — nothing is
+ * paginated away or hidden behind a click, because a link a crawler cannot see
+ * is a link that does not count.
  *
  * ── WHAT IT DOES NOT DO ───────────────────────────────────────────────────
  * It does not introduce a "/blogs" breadcrumb level on the posts. The existing
  * trail — Home → <town> me lab test → article — is the truer hierarchy: a guide
  * about lab tests in Varanasi sits under Varanasi's service page, not under a
  * generic blog index. This page is a discovery surface, not a parent.
- *
- * ⚠ THE POSTS ARE THE THIN PART, NOT THIS PAGE. Two guides exist and both are
- * about Varanasi. Five of the six towns we serve have none. A hub over two
- * articles is close to a doorway page — this earns its place once each town has
- * its own guides, which is the single biggest content gap on the site.
  */
 export const metadata = {
   title: "Lab Test Guides — Kaun Sa Test Kab",
@@ -92,13 +112,23 @@ const readableDate = (iso) => {
 };
 
 export default async function BlogsIndexPage() {
-  const labCities = await getLabCities();
+  /* Metadata only — titles, descriptions, dates. The hub carries every article
+     the site has, and still costs the same per post whether that is fifteen or
+     fifteen hundred, because no article body is ever loaded here. */
+  const [labCities, posts] = await Promise.all([getLabCities(), getBlogs()]);
 
-  // Newest first. `blogs` is the normalised registry — never re-sort it in
-  // place, other callers read the same array.
-  const posts = [...blogs].sort((a, b) =>
-    String(b.publishedAt).localeCompare(String(a.publishedAt))
-  );
+  /* Grouped into towns, in the order src/lib/blogs already sorted them — the
+     town with the newest guide first, and within a town the sequence its author
+     chose. Insertion order of a Map is what preserves both, so this needs no
+     second sort and cannot disagree with the rest of the site. */
+  const byCity = new Map();
+  for (const post of posts) {
+    if (!byCity.has(post.city)) {
+      byCity.set(post.city, { city: post.city, name: post.cityName, posts: [] });
+    }
+    byCity.get(post.city).posts.push(post);
+  }
+  const cityGroups = [...byCity.values()];
 
   const pageUrl = url("/blogs");
 
@@ -108,11 +138,21 @@ export default async function BlogsIndexPage() {
     breadcrumb: `${pageUrl}#breadcrumb`,
   };
 
+  /* The articles in the exact order the page renders them, town by town. An
+     ItemList whose `position` values disagree with the visible order is telling
+     Google something the page does not — so this is derived from the same
+     groups the markup below iterates, not sorted a second time. */
+  const listed = cityGroups.flatMap((group) => group.posts);
+
   /* A CollectionPage whose ItemList members are the articles. Each entry is a
      bare `url` + `name` rather than an inlined BlogPosting: the full node lives
      on the article's own page, and repeating a partial copy here would put two
      descriptions of the same article into the index with different levels of
-     detail. */
+     detail.
+
+     Every article is listed, however many there are. This node is the machine
+     readable form of what makes this page the hub — one document that names the
+     complete set. */
   const jsonLd = graph(
     {
       "@type": "CollectionPage",
@@ -130,8 +170,8 @@ export default async function BlogsIndexPage() {
       "@type": "ItemList",
       "@id": ids.list,
       name: "MedicoBharat — lab test guides",
-      numberOfItems: posts.length,
-      itemListElement: posts.map((post, i) => ({
+      numberOfItems: listed.length,
+      itemListElement: listed.map((post, i) => ({
         "@type": "ListItem",
         position: i + 1,
         name: post.title,
@@ -176,6 +216,34 @@ export default async function BlogsIndexPage() {
             kab zaroori hai, full body checkup me kya-kya hona chahiye, aur
             report ke numbers ka matlab kya hai. Sab kuch seedhi bhasha me.
           </p>
+
+          {/* The jump nav. Real anchors to the sections below, so a reader who
+              wants one town gets there in a tap instead of scrolling past the
+              others — and so does Google, which reads these as the page's own
+              table of contents. Hidden when there is only one town, because a
+              nav offering one destination is furniture. */}
+          {cityGroups.length > 1 && (
+            <nav
+              aria-label="Sheher ke hisaab se guides"
+              className="mt-6 flex flex-wrap items-center gap-2"
+            >
+              <span className="text-[11.5px] font-semibold text-slate-500">
+                Sheher chuniye:
+              </span>
+              {cityGroups.map((group) => (
+                <a
+                  key={group.city}
+                  href={`#guides-${group.city}`}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-[12.5px] font-semibold text-emerald-800 ring-1 ring-emerald-200 transition hover:bg-emerald-600 hover:text-white hover:ring-emerald-600"
+                >
+                  {group.name}
+                  <span className="text-[11px] font-bold text-emerald-500/80 group-hover:text-white">
+                    {group.posts.length}
+                  </span>
+                </a>
+              ))}
+            </nav>
+          )}
         </div>
       </section>
 
@@ -187,46 +255,76 @@ export default async function BlogsIndexPage() {
           Sabhi guides
         </h2>
 
-        <ul className="grid gap-5 sm:grid-cols-2">
-          {posts.map((post) => {
-            const published = readableDate(post.publishedAt);
+        {/* One block per town. Every article renders as a real anchor in the
+            HTML — nothing paginated, nothing behind a "load more", because a
+            link a crawler cannot see is a link that does not count. */}
+        {cityGroups.map((group, index) => (
+          <div key={group.city} className={index ? "mt-12 sm:mt-14" : ""}>
+            <h3
+              id={`guides-${group.city}`}
+              className="scroll-mt-24 text-balance text-[19px] sm:text-[22px] font-extrabold tracking-tight text-slate-900"
+            >
+              {group.name} ke guides
+              <span className="ml-2 align-middle text-[12.5px] font-semibold text-slate-400">
+                {group.posts.length}
+              </span>
+            </h3>
 
-            return (
-              <li key={post.href}>
-                <Link
-                  href={post.href}
-                  title={linkTitle(post.href)}
-                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition hover:border-emerald-300 hover:shadow-[0_12px_30px_-18px_rgba(6,78,59,.45)]"
-                >
-                  <span className="text-[11px] font-bold uppercase tracking-wide text-emerald-700">
-                    {categoryLabel(post.category)} · {post.cityName}
-                  </span>
+            {/* Straight into the town's booking page from its own heading —
+                the reader who scrolled to this town is the reader most likely
+                to want it. Rendered only when that page exists. */}
+            {labCities.some((city) => city.slug === group.city) && (
+              <Link
+                href={`/lab-test/${group.city}`}
+                title={linkTitle(`/lab-test/${group.city}`)}
+                className="mt-1.5 inline-flex text-[12.5px] font-semibold text-emerald-700 underline-offset-4 hover:underline"
+              >
+                {group.name} me lab test book kariye →
+              </Link>
+            )}
 
-                  <h3 className="mt-2 text-balance text-[17px] font-bold leading-snug text-slate-900">
-                    {post.title}
-                  </h3>
+            <ul className="mt-5 grid gap-5 sm:grid-cols-2">
+              {group.posts.map((post) => {
+                const published = readableDate(post.publishedAt);
 
-                  <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-slate-600">
-                    {post.description}
-                  </p>
-
-                  <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] text-slate-500">
-                    {published && (
-                      <span className="inline-flex items-center gap-1.5">
-                        <CalendarDays aria-hidden className="h-3.5 w-3.5" />
-                        <time dateTime={post.publishedAt}>{published}</time>
+                return (
+                  <li key={post.href}>
+                    <Link
+                      href={post.href}
+                      title={linkTitle(post.href)}
+                      className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition hover:border-emerald-300 hover:shadow-[0_12px_30px_-18px_rgba(6,78,59,.45)]"
+                    >
+                      <span className="text-[11px] font-bold uppercase tracking-wide text-emerald-700">
+                        {categoryLabel(post.category)} · {post.cityName}
                       </span>
-                    )}
-                    <span className="inline-flex items-center gap-1.5">
-                      <Clock aria-hidden className="h-3.5 w-3.5" />
-                      {post.readingMinutes} min
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+
+                      <h4 className="mt-2 text-balance text-[17px] font-bold leading-snug text-slate-900">
+                        {post.title}
+                      </h4>
+
+                      <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-slate-600">
+                        {post.description}
+                      </p>
+
+                      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] text-slate-500">
+                        {published && (
+                          <span className="inline-flex items-center gap-1.5">
+                            <CalendarDays aria-hidden className="h-3.5 w-3.5" />
+                            <time dateTime={post.publishedAt}>{published}</time>
+                          </span>
+                        )}
+                        <span className="inline-flex items-center gap-1.5">
+                          <Clock aria-hidden className="h-3.5 w-3.5" />
+                          {post.readingMinutes} min
+                        </span>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
 
         {/* The hand-off out of a reading page and into a booking one. Built from
             the live city list, so it cannot point at a town we have stopped

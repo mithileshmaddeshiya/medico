@@ -66,6 +66,30 @@ const nextConfig = {
     root: import.meta.dirname,
   },
 
+  /**
+   * Ship content/blogs/ with the routes that read it at request time.
+   *
+   * The articles are plain JSON on disk (see src/lib/blogs/index.js) rather
+   * than imported modules — that is the whole point, since it keeps article
+   * text out of every page's JavaScript. The cost is that Next.js cannot see
+   * them by following imports, so its file tracer would leave them out of the
+   * deployment bundle.
+   *
+   * For /blogs and /blogs/<category>/<city> that would not bite: both are fully
+   * prerendered at build, when the repo is still on disk. The two sitemaps are
+   * the ones that matter — they carry `revalidate = 86400`, so they re-run on
+   * the server a day after the build, by which time only traced files exist. A
+   * missing content/ there is an empty sitemap, silently, in production.
+   *
+   * Keys are route globs, values are globs from the project root. See
+   * node_modules/next/dist/docs/01-app/03-api-reference/05-config/
+   * 01-next-config-js/output.md.
+   */
+  outputFileTracingIncludes: {
+    "/sitemap.xml": ["./content/blogs/**/*.json"],
+    "/sitemap/blogs.xml": ["./content/blogs/**/*.json"],
+  },
+
   images: {
     /**
      * The widths next/image is allowed to generate for a `sizes`-driven srcset.

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, Info } from "lucide-react";
 
-import { partsOf } from "@/data/blogs";
+import { partsOf } from "@/lib/blogs/normalise";
 
 /**
  * The body of an article.

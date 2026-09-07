@@ -11,7 +11,7 @@ import BlogShare from "@/components/blog/BlogShare";
 // `related` object and renders links — nothing in it is lab-specific, so it is
 // reused here rather than duplicated. See the note at the top of that file.
 import LabRelatedLinks from "@/components/lab/LabRelatedLinks";
-import { blogs, getBlog, getRelatedBlogs } from "@/data/blogs";
+import { getBlog, getBlogParams, getBlogs, getRelatedBlogs } from "@/lib/blogs";
 import { getLabCities, getLabCity } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, SITE_PHONE } from "@/lib/site";
@@ -51,13 +51,23 @@ const readableDate = (iso) => {
       });
 };
 
+/**
+ * One entry per file in content/blogs/, so every article is prerendered.
+ *
+ * With `dynamicParams = false` this list is also the whole of what the route
+ * serves: a URL with no file behind it 404s at the edge rather than reaching
+ * the page. That is what the `notFound()` below used to do at request time,
+ * and doing it here means a mistyped category never boots a render.
+ */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return blogs.map((blog) => ({ category: blog.category, city: blog.city }));
+  return getBlogParams();
 }
 
 export async function generateMetadata({ params }) {
   const { category, city } = await params;
-  const blog = getBlog(category, city);
+  const blog = await getBlog(category, city);
 
   if (!blog) return {};
 
@@ -102,7 +112,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
   const { category, city } = await params;
-  const blog = getBlog(category, city);
+  const blog = await getBlog(category, city);
 
   if (!blog) notFound();
 
@@ -114,12 +124,16 @@ export default async function BlogPage({ params }) {
      There used to be a second lookup here for the medicine section. That
      section is retired and its URLs are permanently redirected, so the article
      now has exactly one service page to point at. */
-  const [labCity, labCities] = await Promise.all([
+  const [labCity, labCities, allPosts] = await Promise.all([
     getLabCity(blog.city),
     getLabCities(),
+    /* Every other guide, for the link grid at the foot. Metadata only — this is
+       the index, not fifteen article bodies, so the grid stays the same weight
+       however many guides the site grows to. */
+    getBlogs(),
   ]);
 
-  const related = getRelatedBlogs(blog);
+  const related = await getRelatedBlogs(blog);
   const published = readableDate(blog.publishedAt);
   const updated =
     blog.updatedAt && blog.updatedAt !== blog.publishedAt
@@ -160,15 +174,21 @@ export default async function BlogPage({ params }) {
 
   /* Breadcrumbs.
      Every item must be a route that renders. There is deliberately NO "/blogs"
-     level here: that hub page does not exist, and a BreadcrumbList naming a 404
-     is worse than none — Google drops the whole rich result and spends crawl
-     budget finding out.
+     level here, and the reason has changed: it used to be that the hub 404'd,
+     and a BreadcrumbList naming a 404 is worse than none. The hub exists now
+     and is linked from the footer of every page, from the home page and from
+     the block at the foot of this one — so it is reachable, and this trail is
+     not what makes it reachable.
 
-     So the trail goes Home → the town's service page → this article. That is
-     also the truer hierarchy: the article is about lab tests in this town, and
-     the page above it is that town's lab page, not a generic blog index. When a
-     town has no service page the trail falls back to Home → article, which is a
-     valid two-item list. */
+     What keeps it out is the hierarchy. The trail goes Home → the town's
+     service page → this article, because that is what is true: the article is
+     about lab tests in this town, and the page above it is that town's lab
+     page, not a generic index of every guide the site has. Inserting "Guides"
+     would either displace the town — losing the strongest local signal on the
+     page — or claim a four-level nesting that does not exist.
+
+     When a town has no service page the trail falls back to Home → article,
+     which is a valid two-item list. */
   const parentCrumb = labCity
     ? { name: `${labCity.name} me lab test`, item: `${SITE}/lab-test/${labCity.slug}` }
     : null;
@@ -232,8 +252,10 @@ export default async function BlogPage({ params }) {
                 <Link href="/" title={linkTitle("/")} className="hover:text-emerald-700">Home</Link>
               </li>
 
-              {/* Same trail as the schema above — and the same reason there is
-                  no "Health Guides" level: /blogs does not exist. */}
+              {/* Same trail as the schema above, and the same reason there is
+                  no "Health Guides" level — the hub is reachable from the
+                  footer and from the link block below, it is just not this
+                  article's parent. */}
               {parentCrumb && (
                 <>
                   <li aria-hidden className="text-slate-300">/</li>
@@ -534,7 +556,12 @@ export default async function BlogPage({ params }) {
             {/* The generated grid: every lab town and every other guide. Built
                 from the live lists so it cannot point at a town we have
                 stopped serving. */}
-            <BlogCityLinks labCities={labCities} posts={blogs} current={blog.href} />
+            <BlogCityLinks
+              labCities={labCities}
+              posts={allPosts}
+              current={blog.href}
+              city={blog.city}
+            />
 
             {related.length > 0 && (
               <section aria-labelledby="blog-related-heading" className="mt-12">
