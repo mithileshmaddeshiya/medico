@@ -14,7 +14,7 @@ import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import WelcomePopup from "@/components/lab/WelcomePopup";
-import { blogs, getLatestBlogs } from "@/data/blogs";
+import { getLatestBlogs } from "@/lib/blogs";
 import {
   HOME_BANNERS,
   HOME_CALL_BANNER,
@@ -327,11 +327,23 @@ export default async function HomePage() {
      back at is what gets crawled first; leaving articles out of that hand-off
      is throwing away the whole point of the block.
 
-     `blogs.length` rather than a typed number so a new article never needs
-     this line edited again. If the list ever grows past a comfortable column
-     — say twenty — the fix is to link /blogs here instead of capping it back
-     to three and hiding articles again. */
-  const guides = getLatestBlogs(blogs.length);
+     Six, not all of them, and not three.
+
+     This used to be every guide the site had, on the reasoning that the home
+     page is the strongest internal link a new article can get so none should be
+     left out. The rail then grew a row per article on the page that has to sell
+     a booking above all else — and the same full list appeared a second time
+     further down, in "Aage Kahan Jaayein".
+
+     Capping it is only safe because /blogs now exists and is linked from the
+     rail, from that block and from the footer of every page. An article does
+     not need a row here to be reachable: it is one hop from a hub that
+     everything points at. That is also the shape that stops mattering how many
+     articles there are — see the note at the top of src/app/(main)/blogs/page.js.
+
+     Six fills two rows of three on a desktop and reads as a sample rather than
+     an index. Change the number here and nothing else needs touching. */
+  const guides = await getLatestBlogs(6);
 
   /* The booking form's dropdown: every city we serve, then "Other".
      Deliberately NOT every locality of every city — that is a 30-item select

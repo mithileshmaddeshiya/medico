@@ -29,7 +29,9 @@ import { LAB_PHONE } from "@/data/lab/defaults"
  *
  * Every one of those four destinations is still linked from the footer on
  * every route, so nothing is orphaned. If header links are ever wanted back,
- * they went exactly where the ECG sits now.
+ * they went exactly where the ECG sits now — and /blogs is the one with the
+ * best claim to a slot, since it is the single hub every article hangs off
+ * (see src/app/(main)/blogs/page.js).
  *
  * ── WHY THE CENTRE IS DESKTOP-ONLY EITHER WAY ────────────────────────────
  * `hidden md:flex`. Below `md` the logo and the call block already fill the

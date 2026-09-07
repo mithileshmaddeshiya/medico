@@ -43,7 +43,7 @@
  * sentence a crawler is already reading for topic. See LabContent.jsx.
  *
  * EVERY href BELOW MUST BE A ROUTE THAT RENDERS. The three city pages come
- * from src/data/lab/cities.js and the two guides from src/data/blogs/varanasi/.
+ * from src/data/lab/cities.js and the two guides from content/blogs/varanasi/.
  * If a city is ever unpublished, the links naming it here have to go with it.
  */
 
@@ -432,7 +432,7 @@ export const HOME_WHY = {
 
 /* ── Guides ───────────────────────────────────────────────────────────────
    The rail that links the articles. Same reasoning: the list is built from
-   src/data/blogs, never typed here. */
+   src/lib/blogs, never typed here. */
 export const HOME_GUIDES = {
   heading: "Test Chunne Aur Report Padhne Ki Guide",
   intro:
@@ -688,11 +688,29 @@ export const homeRelatedLinks = (labCities = [], guides = []) => {
     sub: "Rate list, ilaake aur booking form",
   }));
 
-  const guideLinks = guides.map((post) => ({
+  /* The newest four, then the hub — NOT every guide.
+
+     This column used to list every article the site had, and the card rail
+     higher up the same page listed them all a second time. Two unbounded copies
+     of the same list on one page: the home page grew by two rows per article
+     published, and the extra rows bought nothing, because a page that links the
+     same set twice is not linking it twice as hard.
+
+     Four is a sample. The row after them goes to /blogs, which carries the
+     complete set and is the one link the whole site funnels through. */
+  const guideLinks = guides.slice(0, 4).map((post) => ({
     href: post.href,
     label: post.title,
     sub: `${post.cityName} · ${post.readingMinutes} min read`,
   }));
+
+  if (guideLinks.length) {
+    guideLinks.push({
+      href: "/blogs",
+      label: "Sabhi guides dekhiye",
+      sub: "Har sheher ke lab test guides, ek jagah",
+    });
+  }
 
   const groups = [
     cityLinks.length && {

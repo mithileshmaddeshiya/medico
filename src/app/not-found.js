@@ -4,7 +4,7 @@ import { ArrowRight, Phone, Search } from "lucide-react";
 
 import LabFooter from "@/components/lab/LabFooter";
 import LabNavbar from "@/components/lab/LabNavbar";
-import { getLatestBlogs } from "@/data/blogs";
+import { getLatestBlogs } from "@/lib/blogs";
 import { LAB_PHONE } from "@/data/lab/defaults";
 import { getDefaultLabCity, getLabCities } from "@/lib/labCities";
 import { getShellData } from "@/lib/shell";
@@ -49,7 +49,7 @@ export default async function NotFound() {
     getDefaultLabCity(),
   ]);
 
-  const guides = getLatestBlogs(2);
+  const guides = await getLatestBlogs(2);
 
   return (
     <>

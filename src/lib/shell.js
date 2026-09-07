@@ -19,7 +19,7 @@ import { getLabCities } from "./labCities";
  * city page's `relatedLinks` (src/data/lab/cities.js) and from the home page's
  * homeRelatedLinks(), both with anchors that describe the article. If a
  * site-wide guide list is ever needed again, getLatestBlogs() in
- * src/data/blogs is what fed it.
+ * src/lib/blogs is what fed it.
  */
 export async function getShellData() {
   const labCities = await getLabCities();

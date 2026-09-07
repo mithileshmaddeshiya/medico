@@ -83,7 +83,7 @@
  * Paragraph parts shaped { text, href } render as real in-prose links (see
  * LabContent). Every href below must be a route that renders:
  *   /lab-test/{varanasi,ballia,mau,azamgarh}   (src/data/lab/cities.js)
- *   /blogs/lab-test/varanasi                   (src/data/blogs/varanasi/)
+ *   /blogs/lab-test/varanasi                   (content/blogs/varanasi/)
  *   /blogs/full-body-checkup/varanasi
  */
 

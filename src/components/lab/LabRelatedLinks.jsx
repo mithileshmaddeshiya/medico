@@ -22,8 +22,11 @@ import { ArrowUpRight } from "lucide-react";
  * and carries descriptive anchors ("Gorakhpur me lab test — OPD se pehle
  * report"), which is what actually passes a topical signal.
  *
- * It is also most of what links a city page into /blogs/* — those articles are
- * otherwise reachable from the header menu, the footer column and each other.
+ * It is also most of what links a city page into /blogs/* — a city page has no
+ * other in-body route into the guides. The sitewide paths are the footer's
+ * "Health Guides" link and the /blogs hub it points at, which carries every
+ * article; this block is what puts a few of them in context, on the page of the
+ * town they were written about.
  *
  * Shape:
  *   relatedLinks: {

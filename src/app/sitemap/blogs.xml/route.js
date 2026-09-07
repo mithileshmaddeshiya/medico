@@ -1,11 +1,11 @@
-import { blogs } from "@/data/blogs";
+import { getBlogs } from "@/lib/blogs";
 import { SITE } from "@/lib/site";
 
 export const revalidate = 86400; // regenerate once per day instead of every request
 
 /**
  * Every /blogs/<category>/<city> post, read off the registry in
- * src/data/blogs/ rather than hand-typed.
+ * content/blogs/ rather than hand-typed.
  *
  * A post whose metadata says robots.index === false is left out on purpose:
  * submitting a noindex URL is what Search Console flags as "Submitted URL marked
@@ -23,7 +23,7 @@ const lastmodOf = (blog) =>
     : "";
 
 export async function GET() {
-  const urls = blogs
+  const urls = (await getBlogs())
     .filter((blog) => blog?.category && blog?.city && blog?.robots?.index !== false)
     .map(
       (blog) => `

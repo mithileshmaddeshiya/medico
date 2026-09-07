@@ -35,11 +35,20 @@ const SOCIAL_ICONS = {
 /**
  * Footer navigation to the site's key pages. EVERY href here must be a route
  * that actually renders — a footer link that 404s bleeds crawl budget and
- * trust. These five are verified live (/, /about, /contact, /privacy, /terms);
- * do not add /blogs here, that hub route does not exist.
+ * trust. All six are verified live.
+ *
+ * /blogs was excluded for a long time on the correct grounds that the hub did
+ * not exist. It does now (src/app/(main)/blogs/page.js), and this is the link
+ * that makes it a hub rather than a page in the sitemap nobody points at: the
+ * footer is on every route, so from anywhere on the site every article is two
+ * clicks away — here, then the article. That is also the ONLY link the guides
+ * need from the sitewide chrome, which is why the individual posts were taken
+ * out of the footer and out of the home page's unbounded lists. One link that
+ * always works beats a column that grows by a row per article.
  */
 const QUICK_LINKS = [
   { href: "/", label: "Home", title: "MedicoBharat home — lab test rate list and booking" },
+  { href: "/blogs", label: "Health Guides", title: "Health guides — which test to take, fasting rules and reading a report" },
   { href: "/about", label: "About Us", title: "About MedicoBharat — who we are and where we collect samples" },
   { href: "/contact", label: "Contact Us", title: "Contact MedicoBharat — phone number and booking help" },
   { href: "/privacy", label: "Privacy Policy", title: "How MedicoBharat handles your personal and health data" },
