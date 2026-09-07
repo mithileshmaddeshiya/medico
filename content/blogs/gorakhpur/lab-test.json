@@ -1,0 +1,385 @@
+{
+  "title": "Gorakhpur Me Lab Test — Kaun Sa Test Aur Kab",
+  "description": "Gorakhpur me lab test kab karayein — OPD se pehle report taiyaar rakhne ka poora hisaab, CBC, thyroid, sugar aur vitamin B12 ki timing ek jagah.",
+  "keywords": [
+    "lab test in gorakhpur",
+    "medicobharat gorakhpur",
+    "blood test at home in gorakhpur",
+    "cbc test price in gorakhpur",
+    "thyroid test at home gorakhpur",
+    "diabetes test gorakhpur",
+    "blood sugar test gorakhpur",
+    "vitamin b12 test gorakhpur",
+    "opd se pehle report ke liye lab test gorakhpur",
+    "gorakhpur me kaun sa test karayein",
+    "pathology lab in gorakhpur",
+    "home sample collection gorakhpur"
+  ],
+  "publishedAt": "2026-09-07",
+  "updatedAt": "2026-09-07",
+  "order": 10,
+  "readingMinutes": 10,
+  "takeaways": [
+    "Gorakhpur me lab ki kami nahi hai — isliye bachat lab dhoondhne me nahi, test ki timing me hai. OPD ki taareekh se ulta gin kar sample dijiye.",
+    "OPD wale din subah sample dena sabse aam galti hai. Report us waqt tak nahi aati, aur ek poora din aur ek poori parchi dobara lagti hai.",
+    "Bukhar me din ginna test se bhi pehle ki cheez hai: dengue NS1 sirf pehle 5 din, Widal ke liye 5-7 din ka bukhar. Galat din ka test negative aata hai.",
+    "Jo number aap mahino tak track karte hain — HbA1c, TSH, creatinine, haemoglobin — unke liye lab badalte mat rahiye. Do machine ka farak sehat ka farak nahi hota.",
+    "Bachche ko tez bukhar ke saath jhatke, behoshi, gardan ki akdan ya lagatar ulti ho — test book mat kijiye, seedhe hospital jaaiye."
+  ],
+  "sections": [
+    {
+      "id": "lab-test-in-gorakhpur-timing",
+      "heading": "Lab Test In Gorakhpur — Yahan Sawaal Lab Ka Nahi, Timing Ka Hai",
+      "lead": "Har cheez is sheher me maujood hai. Yahi wajah hai ki har cheez me bheed hai.",
+      "blocks": [
+        "Deoria ya Salempur ka reader poochta hai ki bade lab kahan hain. Gorakhpur me wo sawaal hai hi nahi — yahan lab bahut hain. AIIMS Gorakhpur, BRD Medical College aur zila aspatal isi sheher me hain, isliye poora ilaaka yahin refer hota hai: Kushinagar, Maharajganj, Deoria, Sant Kabir Nagar, Basti aur Siddharthnagar se, Bihar ke seemavarti jilon se, aur Nepal border ke kasbon se.",
+        "Iska seedha natija ye hai ki bachat lab dhoondhne me nahi hoti. Bachat timing me hoti hai — test ko apni OPD ki taareekh ya admission ki date ke hisaab se pehle karwa lena. Yahi ek cheez hai jo is sheher me sabse zyada din bachati hai, aur yahi sabse kam ki jaati hai.",
+        [
+          { "text": "MedicoBharat Gorakhpur me ghar se sample leta hai", "href": "/lab-test/gorakhpur" },
+          " — free home collection, subah 6 baje se slot, trained phlebotomist ID card ke saath, aur 24 ghante ke andar WhatsApp aur email par PDF report. Sheher ke mohalle ho ya jile ke kasbe, sample aapke ghar par liya jaata hai. Is guide me ye hai ki us sample ko dena kab hai."
+        ],
+        {
+          "note": {
+            "title": "AIIMS aur BRD ka naam yahan sirf bhugol hai",
+            "text": "In sansthanon ka naam is page par isliye hai ki wahi wajah hain jinse Gorakhpur poore ilaake ka referral hub hai. Hamara unse koi sambandh, saajhedari ya intezaam nahi hai, aur hum unki taraf se sample nahi lete. Hamara Gorakhpur me koi walk-in counter bhi nahi hai — ye home collection service hai. X-ray, ultrasound, ECG aur CT scan machine par hote hain; wo hamari service me shaamil nahi hain.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "opd-se-pehle-report-lab-test-gorakhpur",
+      "heading": "OPD Se Pehle Report Ke Liye Lab Test Gorakhpur — Ulta Gin Kar Din Chuniye",
+      "lead": "OPD ki taareekh pehle se pata hoti hai. Isliye sample ka din bhi pehle se tay ho sakta hai.",
+      "blocks": [
+        "Sabse aam kram ye hai: log OPD wale din subah nikalte hain, parcha banwate hain, doctor test likh deta hai, sample us din ya agle din diya jaata hai, aur report lekar dobara aana padta hai. Do din, do kiraye, do baar line. Jabki OPD ki taareekh pehle se maloom thi.",
+        "Ulta ginna seedha hai. Report 24 ghante me aati hai, isliye sample OPD se ek din pehle diya jaaye to report us subah haath me hoti hai. Neeche wali table sirf isi hisaab ki hai.",
+        {
+          "table": {
+            "caption": "OPD ki taareekh se ulta gin kar sample ka din",
+            "head": ["OPD kab hai", "Sample kab dein", "Kyun"],
+            "rows": [
+              ["Kal subah", "Aaj subah 6-8 baje ka slot", "24 ghante me report — kal subah tak PDF haath me"],
+              ["Parso", "Kal subah ka slot", "Ek din ka margin bacha rehta hai, agar kuch dobara karana pade"],
+              ["Is hafte, taareekh tay nahi", "Taareekh tay hote hi, ek din pehle", "Bahut pehle ka test bhi theek nahi — doctor taaza number dekhna chahta hai"],
+              ["Follow-up hai, purani report hai", "Ek din pehle wahi test dohraiye", "Doctor purani aur nayi report saath rakh kar badlav dekhta hai"],
+              ["Fasting wale test hain (sugar, lipid)", "Ek din pehle, subah 6 baje ka pehla slot", "Khaali pet ka waqt sabse kam rehta hai aur naashta turant ho jaata hai"]
+            ]
+          }
+        },
+        "Do baatein jo is hisaab ko bigaad deti hain. Pehli — bahut purani report le jaana. Teen-chaar mahine purana sugar ya thyroid ka number doctor ke liye aaj ka faisla nahi banata; wo aksar dobara likh dega. Doosri — bina parche ke andaza laga kar test kara lena. Doctor kuch aur likh de to wo paisa aur wo din dono bekaar gaye.",
+        [
+          "Isliye sabse aasan tareeka ye hai: agar pichhli baar ka parcha paas hai, usi ka photo booking ke waqt bhej dijiye. Wahi panel book ho jaayega. Aur agar aap sheher ke bahar se aa rahe hain, to aur bhi zaroori ho jaata hai ki blood wala hissa apne sheher me ",
+          { "text": "ghar par karwa liya jaaye", "href": "/lab-test/gorakhpur#bahar-se-aane-wale-gorakhpur" },
+          " — yahan wahi kaam bachega jiske liye machine ya doctor khud chahiye."
+        ]
+      ]
+    },
+    {
+      "id": "cbc-test-price-in-gorakhpur",
+      "heading": "CBC Test Price In Gorakhpur — Aur Ye Test Sabse Pehle Kyun Likha Jaata Hai",
+      "lead": "Kam kharche wala test, aur aksar sabse zyada batane wala.",
+      "blocks": [
+        "CBC — Complete Blood Count — khoon ki ginti karta hai. Isme fasting nahi lagti, sample kabhi bhi diya ja sakta hai, aur yahi wajah hai ki doctor ise sabse pehle likhta hai. Ye bimari ka naam nahi batata; ye batata hai ki sharir kis taraf ishaara kar raha hai.",
+        {
+          "list": [
+            "Haemoglobin (Hb) — khoon ki kami. Mahilaon, kishori ladkiyon aur bachchon me sabse zyada nikalne wali cheez.",
+            "WBC — badhe hue matlab aksar bacteria ka infection, ghate hue aksar virus ka. Bukhar ki disha yahin se milti hai.",
+            "Platelet — dengue me sabse zyada dekha jaane wala number. Girta platelet roz dekha jaata hai, ek baar nahi.",
+            "MCV aur MCH — khoon ki kami iron ki wajah se hai ya vitamin ki, iska pehla ishaara yahin milta hai.",
+            "ESR aksar CBC me shaamil nahi hota — wo alag test hai. Parche par likha ho to alag se jodwaiye."
+          ]
+        },
+        [
+          "Daam ki baat par ek seedhi salaah: CBC ka rate is guide me nahi likha jaata, ",
+          { "text": "service page ki rate list", "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur" },
+          " par likha hai — taaki wo ek hi jagah rahe aur kabhi purana na pada rahe. Home collection uske upar free hai: na visiting charge, na travel charge. Sheher me rate poochte waqt asli sawaal ye nahi hai ki kitna kam hai, balki ye ki report par reference range chhapegi ya nahi — bina range wali sasti report padhi hi nahi ja sakti."
+        ],
+        "Aur CBC ke saath ek baat yaad rakhiye: ye akela ilaaj tay nahi karta. Bukhar hai to iske saath din ke hisaab se panel jodna padta hai; kamzori hai to iske saath vitamin aur ferritin dekhe jaate hain. Dono neeche alag hisson me hain."
+      ]
+    },
+    {
+      "id": "thyroid-test-at-home-gorakhpur",
+      "heading": "Thyroid Test At Home Gorakhpur — TSH Kab, Aur Dobara Kab",
+      "lead": "Is jaanch me galti karne me nahi, dohraane ke waqt me hoti hai.",
+      "blocks": [
+        "Thakan, wazan ka badhna ya ghatna, baal girna, thand zyada lagna, periods ka bigadna, mann ka bujha rehna — inme se koi bhi akela kisi bimari ka saboot nahi hai, lekin inke peeche aksar thyroid nikalta hai. Isme fasting nahi lagti, isliye slot kabhi bhi liya ja sakta hai — aur yahi wajah hai ki ye ghar par sabse aasan test hai.",
+        {
+          "list": [
+            "Parche par T3, T4 aur TSH likha hai — Thyroid Profile karaiye.",
+            "Parche par FT3, FT4 likha hai — free wala test alag hai. Naam milta-julta hai, test alag hai.",
+            "Follow-up hai aur doctor ne sirf TSH likha hai — sirf TSH karaiye. Poora profile har baar dohraana zaroori nahi.",
+            "Sample subah ka behtar hai. TSH din bhar me thoda upar-neeche hota hai, isliye har baar lagbhag ek hi samay par karaiye.",
+            "Dawa chal rahi hai to sample dene se pehle us din ki goli mat khaiye — sample ke baad kha lijiye. Aur kaunsi dawa chal rahi hai, booking ke waqt bata dijiye."
+          ]
+        },
+        "Dohraane ka niyam: dose badalne ke 6 se 8 hafte baad TSH dobara, aur uske baad — jab tak sab sthir hai — har 6 se 12 mahine me. Isse jaldi dohraana faayda nahi deta, kyunki dawa ka asar sthir hone me hi itna waqt lagta hai.",
+        [
+          "Ek cheez jo is sheher me khaas taur par nuksan karti hai: lab badalte rehna. Gorakhpur me vikalp bahut hain, isliye log har baar jahan sahulat ho wahin karwa lete hain. Alag analyser par TSH 4.5 aur 4.1 aane ka matlab thyroid ka badalna nahi, sirf machine ka badalna hai. ",
+          { "text": "Isi wajah se lab chunte waqt do cheezein dekhne layak hain", "href": "/blogs/pathology-lab/gorakhpur#ghar-se-sample-lene-wali-pathology-gorakhpur" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "diabetes-blood-sugar-test-gorakhpur",
+      "heading": "Diabetes Test Aur Blood Sugar Test Gorakhpur — Fasting, PP Ya HbA1c?",
+      "lead": "Teen naam, teen alag cheezein. Inhe aapas me badalna sabse aam galti hai.",
+      "blocks": [
+        "Sugar ke teen aam test hain aur teenon ek doosre ki jagah nahi le sakte. Farak samajh lena poori follow-up ki aadhi ladai jeet lena hai.",
+        {
+          "table": {
+            "caption": "Sugar ke teen test — kis me kya farak hai",
+            "head": ["Test", "Kya batata hai", "Fasting", "Kab kaam ka"],
+            "rows": [
+              ["Fasting Blood Sugar", "Khaali pet ka aaj ka level", "Haan, 8-10 ghante", "Pehli baar screening aur routine follow-up"],
+              ["PP (post-prandial) Sugar", "Naashte ke theek 2 ghante baad ka level", "Nahi, par naashte ka samay pakka", "Dawa kaam kar rahi hai ya nahi, ye yahan dikhta hai"],
+              ["HbA1c", "Pichhle 3 mahine ka ausat", "Nahi", "Lambe control ka sabse bharosemand number"]
+            ]
+          }
+        },
+        "Fasting aur PP dono karane hon to do alag sample lagte hain — ek khaali pet, doosra naashte ke theek do ghante baad. Ek hi visit me dono nahi ho sakte, isliye booking ke waqt bata dijiye ki dono chahiye taaki dono ka samay ek saath tay ho jaaye. HbA1c me ye jhanjhat hai hi nahi, aur usme fasting bhi nahi lagti — isliye wo ghar par sabse aasan padta hai.",
+        "Aur diabetes me asli kaam pehli report par khatam nahi hota. Jo cheez lambe samay me farak daalti hai wo ye hai ki kuch jaanch apne samay par dohrayi jaati rahein: HbA1c har teen mahine, Lipid Profile saal me ek baar, aur Kidney Function Test ke saath urine microalbumin saal me ek baar. In sab me sabse zyada chhoota jaane wala naam urine microalbumin hai — yahi sabse pehle ishaara deta hai ki kidney par asar shuru ho raha hai, us waqt jab kuch bhi mehsoos nahi hota aur creatinine ab bhi normal dikhta hai.",
+        [
+          "Aankh aur pair ki saalana jaanch is list me nahi hai, kyunki wo lab ka kaam hai hi nahi — wo doctor ke paas hoti hai. Use lab test se mat badaliye. Package me sugar ke saath aur kya-kya aata hai, ",
+          { "text": "wo full body checkup wali guide", "href": "/blogs/full-body-checkup/gorakhpur" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "vitamin-b12-test-gorakhpur",
+      "heading": "Vitamin B12 Test Gorakhpur — Thakan Ki Sabse Anadekhi Wajah",
+      "lead": "\"Kamzori hai\" par tonic shuru ho jaata hai. Do jaanch aksar isse behtar jawab deti hain.",
+      "blocks": [
+        "Din bhar thakan, kaam me mann na lagna, haath-pair me jhunjhuni ya sunnpan, chalte-chalte saans phoolna, kamar aur pindliyon me dard — ye shikayatein itni aam hain ki inhe umar ya kaam ka hissa maan liya jaata hai. Bahut baar ye teen me se kisi ek cheez ka lakshan hoti hain: khoon ki kami, Vitamin B12 ki kami, ya Vitamin D ki kami.",
+        {
+          "list": [
+            "Vitamin B12 — mukhya roop se maans, ande aur doodh se milta hai, isliye shudh shakahari gharon me iski kami aam hai. Iska asar sirf khoon par nahi, nason par bhi padta hai — haath-pair ki jhunjhuni aur sunnpan wahin se aate hain. Fasting nahi lagti.",
+            "Vitamin D — dhoop ki kami yahan nahi hai, phir bhi kami nikalti hai. Log dhoop me rehte to hain par dhaka hua sharir liye, aur kai mahilaein ghar ke andar hi rehti hain. Haddi aur pitth ka dard iske aam lakshan hain. Fasting nahi lagti.",
+            "Haemoglobin kam nikla to sirf Hb par mat rukiye — ferritin dekhiye. Hb batata hai ki kami hai; ferritin batata hai ki iron ka bhandar khaali hai ya nahi. Iron ki goli kitne mahine chalegi, ye faisla ferritin se hota hai.",
+            "Thyroid ko is list se bahar mat rakhiye — thakan ki teen aam wajahon me wo bhi ek hai."
+          ]
+        },
+        "Ek baat report ke baad ki. Vitamin ki goli ki khuraak kami ki gehrai par tay hoti hai — halki kami aur gehri kami ka course ek jaisa nahi hota. Isliye report aane par apne mann se koi high-dose supplement shuru mat kijiye; report dikha kar khuraak likhwa lijiye. Aur agar goli pehle se chal rahi hai to dobara test course poora hone ke baad karaiye, beech me nahi — beech ka number sirf ye batata hai ki goli khayi ja rahi hai.",
+        {
+          "note": {
+            "title": "Hostel, PG aur bahar khaane wale",
+            "text": "Gorakhpur me padhne aur naukri ke liye aaye bahut se log mess ya bahar ke khane par chalte hain, aur kai baar saalon tak. Aise me B12 aur Vitamin D dono ki kami milna aam hai, aur uska pehla lakshan sirf thakan hota hai. Saal me ek baar ye do jaanch karwa lena us thakan ka sabse sasta jawab hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bukhar-me-din-gorakhpur",
+      "heading": "Bukhar Aa Gaya — Test Ka Din Sabse Zaroori Cheez Hai",
+      "lead": "Test sahi, din galat — is sheher me ilaaj der se shuru hone ki sabse aam wajah yahi hai.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Pehle wo baat jo sabse zaroori hai",
+            "text": "Bachche ko tez bukhar ke saath jhatke aayein, behoshi ho, gardan akad jaaye, lagatar ulti ho ya wo sust pada rahe — to koi test book mat kijiye, seedhe najdeeki hospital le jaaiye. Gorakhpur-Kushinagar-Maharajganj belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Ismein ek-ek ghanta maayne rakhta hai, aur ghar par sample ka intezaar khatarnak hai.",
+            "tone": "warn"
+          }
+        },
+        "Baaki bukhar me sabse badi galti timing ki hoti hai. Report negative aati hai, ghar wale nishchint ho jaate hain, aur ilaaj hafta bhar peeche chala jaata hai.",
+        {
+          "table": {
+            "caption": "Bukhar ke kis din kaunsa test",
+            "head": ["Bukhar ka din", "Kaunsa test", "Kyun"],
+            "rows": [
+              ["Din 1-2", "CBC (zaroorat ho to malaria antigen)", "Antibody abhi bani hi nahi hoti. CBC disha deta hai."],
+              ["Din 1-5", "Dengue NS1 + CBC", "NS1 sirf shuruaati dinon me bharosemand hai."],
+              ["Din 5 ke baad", "Dengue IgM (NS1 ki jagah)", "Ab antibody ban chuki hoti hai; is stage par NS1 paisa barbaad karta hai."],
+              ["Din 5-7 ke baad", "Widal ya Typhidot IgM + CBC", "Widal ke liye titre badhne me waqt lagta hai."],
+              ["Thand aur kanpkanpi ke saath", "Malaria antigen + smear", "Kanpkanpi wala bukhar malaria ki taraf ishaara karta hai."],
+              ["Bukhar 5 din se upar, wajah saaf nahi", "CBC + urine routine + doctor", "Kai baar wajah urine ka infection nikalta hai, jo teen naamon ki race me chhoot jaata hai."]
+            ]
+          }
+        },
+        "Widal ke saath ek local baat: ye ilaaka typhoid ke liye endemic hai, isliye purane infection se bhi Widal halka positive nikal aata hai. Akele Widal par dawa shuru karna theek nahi. Aur dengue ka koi bhi test ho, CBC saath me zaroor jodiye — antigen ki report ek baar ki cheez hai, girta platelet count wo cheez hai jo roz dekhi jaati hai."
+      ]
+    },
+    {
+      "id": "umar-ke-hisaab-se-gorakhpur",
+      "heading": "Umar Ke Hisaab Se — Bina Shikayat Wale Logon Ka Saalana Routine",
+      "lead": "Koi shikayat nahi hai tab bhi ek chhota routine banta hai. Wo yahan hai.",
+      "blocks": [
+        "Neeche wali table sirf un logon ke liye hai jinhe abhi koi shikayat nahi hai. Shikayat pehle se hai to ye table mat dekhiye — doctor ko dikhaiye aur wahi test karaiye jo wo kahe. Screening aur ilaaj do alag cheezein hain.",
+        {
+          "table": {
+            "caption": "Bina shikayat wale logon ke liye saalana routine",
+            "head": ["Kaun", "Kam se kam kya", "Kitni baar"],
+            "rows": [
+              ["18-30 saal", "CBC, Blood Sugar, Vitamin B12 aur D", "Do saal me ek baar — ek baseline ban jaata hai"],
+              ["30-45 saal", "CBC, sugar, Lipid, LFT, KFT, Thyroid", "Saal me ek baar"],
+              ["45 ke upar", "Upar wala sab + HbA1c aur urine routine", "Saal me ek baar, bina naaga"],
+              ["55 ke upar", "Upar wala sab + Vitamin D", "Saal me ek baar, sample ghar par hi"],
+              ["Mahilaein aur kishori ladkiyaan", "CBC ke saath Hb aur ferritin, Vitamin D, TSH", "Saal me ek baar"],
+              ["Hostel, mess ya bahar ke khaane par", "CBC, sugar, LFT, Vitamin B12 aur D", "Saal me ek baar"]
+            ]
+          }
+        },
+        [
+          "Har baar lagbhag usi mahine me karaiye, taaki do saal ki report seedhi tuli ja sakein. Aur package me ye sab ek saath sasta padta hai — ",
+          { "text": "kaun sa package kis ke liye hai", "href": "/blogs/full-body-checkup/gorakhpur" },
+          ", wo alag guide me hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-kya-dekhein-gorakhpur",
+      "heading": "Report Aa Gayi — Sabse Pehle Kya Dekhein",
+      "lead": "Laal nishaan dekhkar ghabraana sabse aam pratikriya hai, aur sabse kam kaam ki.",
+      "blocks": [
+        "Report 24 ghante ke andar PDF me aa jaati hai. Ek tay kram se padhiye, kaam aasan ho jaayega — khaas kar tab jab wahi report agle din OPD me dikhani ho.",
+        {
+          "list": [
+            "Naam, umar aur gender milaiye. Reference range inhi par badalti hai, isliye galat header ka matlab galat matlab.",
+            "Sample lene ki taareekh aur samay dekhiye, sirf report banne ki nahi. Bukhar aur follow-up dono me din ka hisaab isi se lagta hai.",
+            "Har number ke bagal me us lab ki apni reference range honi chahiye. Doosri lab ki range se mat milaiye.",
+            "Test ka method chhapa hai to aur behtar — CLIA, ECLIA, ELISA. Hormone aur vitamin me ye farak asli hota hai.",
+            "Halka sa upar-neeche hona apne aap me bimari nahi hai. Doctor ek number nahi, poora pattern dekhta hai.",
+            "Purani report saath rakhiye. Ek report ek photo hai; do report ek disha hain, aur doctor disha dekhta hai."
+          ]
+        },
+        {
+          "note": {
+            "title": "Report par apne aap dawa shuru mat kijiye",
+            "text": "Ye guide ye samajhne ke liye hai ki kaun sa test kab kaam ka hai — ilaaj tay karne ke liye nahi. Koi number range se bahar ho to report doctor ko dikhaiye. Internet par padh kar ya kisi jaan-pehchan wale ki purani dawa dekh kar shuru karna sabse mehngi galti hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aage-kya-karein-lab-test-gorakhpur",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Test tay hai to ",
+          { "text": "Gorakhpur ka service page", "href": "/lab-test/gorakhpur" },
+          " kholiye aur form bhar dijiye — lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+        ],
+        [
+          "OPD ya operation ki taareekh saamne hai to sample ka din ",
+          { "text": "upar wali table", "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur" },
+          " se tay kar lijiye. Ghar par sample kaise liya jaata hai wo ",
+          { "text": "home collection wali guide", "href": "/blogs/home-sample-collection/gorakhpur" },
+          " me hai, aur aapke mohalle me collection aati hai ya nahi wo ",
+          { "text": "pathology lab wali guide", "href": "/blogs/pathology-lab/gorakhpur" },
+          " me."
+        ],
+        [
+          "Aur agar sirf itna poochhna hai ki parche par likha test kaunsa hai — ",
+          { "text": "call kar lijiye", "href": "/contact" },
+          ". Parche ka photo bhej dena sabse aasan tareeka hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "OPD se pehle report chahiye — Gorakhpur me sample kab dena chahiye?",
+      "answer": "OPD se ek din pehle. Report 24 ghante ke andar PDF me aati hai, isliye ek din pehle subah ka slot lene par report OPD wali subah haath me hoti hai. OPD wale din subah sample dena sabse aam galti hai — us waqt tak report nahi aati aur dobara aana padta hai. Fasting wale test hon to ek din pehle subah 6 baje ka pehla slot lijiye."
+    },
+    {
+      "question": "Gorakhpur me MedicoBharat ka koi lab ya walk-in counter hai?",
+      "answer": "Nahi. Gorakhpur me hum home collection service hain — koi walk-in counter nahi hai, aur kisi mohalle me apni branch hone ka daawa hum nahi karte. Routine blood aur urine ki jaanch ke liye iski zaroorat bhi nahi padti. X-ray, ultrasound, ECG ya CT scan ke liye imaging centre jaana hi hoga; wo hamari service me shaamil nahi hai."
+    },
+    {
+      "question": "CBC test ka price Gorakhpur me kya hai?",
+      "answer": "Har test ka daam service page ki rate list par ek hi jagah likha hai, taaki wo kabhi purana na pada rahe aur alag-alag page par alag na dikhe. Home collection uske upar free hai — na visiting charge, na travel charge. Rate confirmation call par bhi confirm kar diya jaata hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+    },
+    {
+      "question": "Thyroid test ke liye khaali pet rehna padta hai?",
+      "answer": "Nahi, thyroid profile aur TSH me fasting nahi lagti — sample din me kabhi bhi diya ja sakta hai. Do baatein dhyaan rakhiye: har baar lagbhag ek hi samay par karaiye kyunki TSH din bhar me thoda upar-neeche hota hai, aur sample dene se pehle us din ki thyroid ki goli mat khaiye — sample ke baad kha lijiye."
+    },
+    {
+      "question": "Fasting sugar aur PP sugar dono ek hi visit me ho sakte hain?",
+      "answer": "Nahi. Fasting sugar khaali pet liya jaata hai aur PP sugar naashte ke theek 2 ghante baad — ye do alag sample hain. Isliye subah ka jaldi wala slot lijiye, fasting sample dijiye, turant naashta kar lijiye, aur do ghante baad doosra sample. Booking ke waqt bata dijiye ki dono chahiye. HbA1c me ye jhanjhat nahi hai — usme fasting lagti hi nahi."
+    },
+    {
+      "question": "Main Gorakhpur ke bahar se aa raha hoon — test yahan karaun ya apne sheher me?",
+      "answer": "Blood aur urine ke saare aam test sirf sample par hote hain, isliye kis sheher me sample liya gaya isse result par koi asar nahi padta. Unhe apne sheher me ghar par karwa lijiye aur report saath laaiye. Gorakhpur aana tab banta hai jab machine ya doctor khud chahiye ho — MRI, CT scan, endoscopy, biopsy ya kisi super-speciality ki OPD."
+    },
+    {
+      "question": "Har baar alag lab se test karana theek hai?",
+      "answer": "Jo number aap mahino tak track karte hain — HbA1c, TSH, creatinine, haemoglobin — unke liye theek nahi hai. Do alag analyser par TSH 4.5 aur 4.1 aane ka matlab thyroid ka badalna nahi, sirf machine ka badalna hai. Doctor ko badlav dekhna hota hai, aur badlav tabhi dikhta hai jab baaki sab kuch same rahe."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Gorakhpur Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me ye hai ki kaun sa test kab. Mohalla-wise coverage, ghar par sample lene ka tareeka aur package alag guide me hain; price sirf service page par.",
+    "groups": [
+      {
+        "title": "Gorakhpur Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/gorakhpur",
+            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "sub": "Sheher ke mohalle aur jile ke kasbe"
+          },
+          {
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur",
+            "label": "Gorakhpur me lab test ka price aur rate list",
+            "sub": "CBC, thyroid, HbA1c, vitamin aur package — sab ek jagah"
+          },
+          {
+            "href": "/lab-test/gorakhpur#opd-se-pehle-report-gorakhpur",
+            "label": "OPD se pehle report taiyaar rakhiye"
+          },
+          {
+            "href": "/lab-test/gorakhpur#operation-se-pehle-test-gorakhpur",
+            "label": "Operation ya admission se pehle ke test"
+          }
+        ]
+      },
+      {
+        "title": "Gorakhpur Ke Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/pathology-lab/gorakhpur",
+            "label": "Gorakhpur me pathology lab aur mohalla-wise collection",
+            "sub": "Golghar, Civil Lines, Taramandal, Gorakhnath aur baaki"
+          },
+          {
+            "href": "/blogs/home-sample-collection/gorakhpur",
+            "label": "Ghar baithe blood test kaise karayein",
+            "sub": "Slot, flat ka pata aur darwaze par aapke haq"
+          },
+          {
+            "href": "/blogs/full-body-checkup/gorakhpur",
+            "label": "Full body checkup — kaun sa package kis ke liye",
+            "sub": "Lipid, LFT, KFT aur senior citizen package"
+          }
+        ]
+      },
+      {
+        "title": "Aas-paas Ke Jile",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test",
+            "sub": "Gorakhpur aane se pehle wahin ghar par karwa lijiye"
+          },
+          {
+            "href": "/lab-test/salempur",
+            "label": "Salempur me lab test",
+            "sub": "Bhatni, Lar aur Bhatpar Rani ke aas-paas"
+          },
+          {
+            "href": "/lab-test/kushinagar",
+            "label": "Kushinagar me lab test",
+            "sub": "Padrauna aur aas-paas ke kasbe"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — coverage aur test chunne me madad"
+          }
+        ]
+      }
+    ]
+  }
+}
