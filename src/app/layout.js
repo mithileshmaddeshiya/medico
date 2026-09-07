@@ -164,7 +164,7 @@ export const metadata = {
   // mark is identical wherever it appears.
   icons: {
     icon: [
-      { url: "/favicon/medicofav.ico", sizes: "any" },
+      { url: "/favicon/medicofav.icon", sizes: "any" },
       { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/brand/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
