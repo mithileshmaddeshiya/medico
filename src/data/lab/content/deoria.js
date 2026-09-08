@@ -54,16 +54,22 @@
  * left as redirects inside the prose. Every href below must be a route that
  * renders:
  *   /lab-test/{varanasi,gorakhpur}       (src/data/lab/cities.js)
- *   /blogs/{lab-test,full-body-checkup}/varanasi   (content/blogs/varanasi/)
+ *   /blogs/{lab-test,full-body-checkup}/deoria     (content/blogs/deoria/)
  *   /contact
+ *
+ * Both guide links used to point at Varanasi, from when that was the only
+ * town with any. Deoria has had its own set for a while, and this page is the
+ * strongest thing on the site pointing anywhere — so it should point at the
+ * guides written for this town, not at ones that name another.
  */
 
 /* Link targets used below. Kept as constants so a route rename is a one-line
    fix here instead of a hunt through the prose — and so a typo shows up as
    `undefined` in the href rather than as a silent 404 in production. */
 const LAB_VARANASI = "/lab-test/varanasi";
-const GUIDE_LAB_TEST = "/blogs/lab-test/varanasi";
-const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
+const GUIDE_LAB_TEST = "/blogs/lab-test/deoria";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/deoria";
+const GUIDE_LIVER_KIDNEY = "/blogs/liver-kidney-test/deoria";
 // Added once Gorakhpur went live. This page names the city a dozen times as
 // the place people travel to — leaving it as plain text while we serve it was
 // the site's single most obvious missing link.
@@ -198,7 +204,11 @@ export const deoriaContent = [
     p: [
       "Diabetes ab sirf sheher ki bimari nahi rahi; kasbon aur gaon me bhi utni hi tezi se badh rahi hai, aur bahut logon ko tab tak pata nahi chalta jab tak koi complication saamne na aa jaaye. 30 saal ke baad, ya pehle hi agar ghar me kisi ko diabetes hai, pet ke aas paas wazan zyada hai, ya pregnancy me sugar badha tha — to saal me ek baar Fasting Blood Sugar aur HbA1c karana chahiye.",
       "Ye lakshan dikhein to saal khatam hone ka intezaar mat kijiye: bahut pyaas lagna, raat me baar baar peshab, ghaav ka der se bharna, aankhon se dhundhla dikhna, ya bina koshish ke wazan girna. HbA1c ka ek bada faayda ye hai ki ismein fasting ki zaroorat nahi hoti — jinka khaane ka koi fix time nahi hai, unke liye yahi sabse aasan aur bharosemand test hai.",
-      "Jinhe pehle se diabetes hai, unka saal bhar ka plan seedha sa hai: har teen mahine me HbA1c, saal me ek baar Lipid Profile, aur saal me ek baar Kidney Function Test ke saath urine microalbumin. Microalbumin sabse pehla ishaara deta hai ki kidney par asar shuru ho raha hai — aur yahi test log sabse zyada chhodte hain.",
+      [
+        "Jinhe pehle se diabetes hai, unka saal bhar ka plan seedha sa hai: har teen mahine me HbA1c, saal me ek baar Lipid Profile, aur saal me ek baar Kidney Function Test ke saath urine microalbumin. Microalbumin sabse pehla ishaara deta hai ki kidney par asar shuru ho raha hai — aur yahi test log sabse zyada chhodte hain. KFT aur LFT me kya-kya aata hai, unki normal range kya hoti hai aur fasting lagti hai ya nahi — wo poora hisaab ",
+        { text: "LFT aur KFT wali guide", href: GUIDE_LIVER_KIDNEY },
+        " me hai.",
+      ],
       "Thyroid ke liye ek baar TSH un sabko karana chahiye jinko lagatar thakan hai, baal jhad rahe hain, periods gadbad hain, wazan bina wajah badh ya ghat raha hai, ya jo pregnancy plan kar rahi hain. Thyroid ki dawa pehle se chal rahi hai to dose badalne ke 6 se 8 hafte baad TSH dohraiye, uske baad har 6 se 12 mahine me.",
     ],
   },
@@ -245,7 +255,7 @@ export const deoriaContent = [
       "Number ko report par chhape reference range se hi milaiye, internet ke kisi chart se nahi. Range machine aur method ke hisaab se badalti hai, aur umar tatha ling ke hisaab se bhi. Thoda sa high ya low hona bahut aam hai aur aksar koi bimari nahi hoti — ye diagnosis nahi, doctor se poochne ka ishaara hai.",
       [
         "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Report ke numbers ka matlab kya hota hai aur kis flag par ghabrana nahi chahiye, ye ",
-        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kaise-padhein` },
+        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-me-kya-dekhein-deoria` },
         " me detail me likha hai.",
       ],
     ],

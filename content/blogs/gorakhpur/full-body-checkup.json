@@ -1,42 +1,48 @@
 {
-  "title": "Full Body Checkup In Gorakhpur — Package Kaise Chunein",
-  "description": "Gorakhpur me full body checkup package kaise chunein — lipid profile, LFT, KFT aur senior citizen package me kya hona chahiye, aur daam kis baat par tay hota hai.",
+  "title": "Full Body Checkup In Gorakhpur — Kaun Se Test Hote Hain",
+  "description": "Gorakhpur me full body checkup me kaun se test hote hain, khaali pet rehna zaroori hai ya nahi, report kitne ghante me, aur kis umar me kaun sa package.",
   "keywords": [
-    "full body checkup in gorakhpur",
-    "sasta full body checkup gorakhpur",
-    "senior citizen health package gorakhpur",
-    "lipid profile test in gorakhpur",
-    "liver function test lft price gorakhpur",
-    "kidney function test kft gorakhpur",
-    "health checkup package gorakhpur",
-    "full body test gorakhpur",
-    "blood test at home in gorakhpur",
-    "lab test in gorakhpur",
-    "diabetes test gorakhpur",
-    "medicobharat gorakhpur"
+    "full body checkup in Gorakhpur",
+    "full body checkup me kaun se test hote hain",
+    "full body checkup Gorakhpur",
+    "health checkup package Gorakhpur",
+    "whole body checkup Gorakhpur",
+    "full body checkup at home Gorakhpur",
+    "full body checkup khaali pet",
+    "full body checkup report kitne din me",
+    "full body checkup me kitne parameter hote hain",
+    "senior citizen health package Gorakhpur",
+    "annual health checkup Gorakhpur",
+    "family health checkup Gorakhpur",
+    "lipid profile test in Gorakhpur",
+    "blood test at home Gorakhpur",
+    "lab test in Gorakhpur"
   ],
   "publishedAt": "2026-09-07",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "order": 40,
-  "readingMinutes": 10,
+  "readingMinutes": 12,
   "takeaways": [
-    "Package parameter ki ginti se nahi, coverage se chuniye. 80 parameter wala package agar thyroid chhod deta hai to wo 45 parameter wale se kamzor hai.",
-    "Poora package khaali pet sirf ek test ki wajah se hota hai — lipid profile. Baaki zyadatar test me fasting lagti hi nahi.",
-    "LFT aur KFT package me aa jaate hain. Alag se tab karaiye jab koi shikayat ho, ya sugar-BP ki dawa chal rahi ho aur saal poora ho gaya ho.",
-    "Full body checkup screening hai, report card nahi. \"Sab normal hai\" ka matlab sirf itna hai ki jo test hue wo normal hain.",
-    "Package ka asli faayda doosri baar milta hai — do saal ki report saath rakh kar padhne par. Isliye har baar lagbhag usi mahine me karaiye."
+    "Full body checkup me aam taur par CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine aate hain — parameter ki ginti nahi, TEST ki list maangiye.",
+    "Khaali pet rehna lipid aur fasting sugar ki wajah se zaroori hota hai — 10 se 12 ghante, aur saada paani us dauraan bhi chalta hai.",
+    "Sample ki visit me 10–15 minute lagte hain aur zyadatar package ki report 24 ghante ke andar PDF me phone par aa jaati hai.",
+    "55 ke upar HbA1c, urine routine aur thyroid teenon package me hone chahiye — yahi teen sabse zyada chhoote hain.",
+    "Purani report sambhaal kar rakhiye. Ek akela number sirf number hai; do saal ka trend hi wo cheez hai jo doctor ko sabse zyada batati hai."
   ],
   "sections": [
     {
       "id": "full-body-checkup-in-gorakhpur",
-      "heading": "Full Body Checkup In Gorakhpur — Screening Hai, Report Card Nahi",
+      "heading": "Full Body Checkup Kya Hota Hai — Aur Kis Ke Liye Hota Hai",
       "lead": "Naam \"full body\" hai, lekin ye poore sharir ki jaanch nahi hoti.",
       "blocks": [
         "Full body checkup ek package hota hai — kuch blood aur urine ke test ek saath, ek hi sample me, ek tay daam par. Iska kaam un cheezon ko jaldi pakadna hai jo chup chaap badh rahi hoti hain: sugar, cholesterol, thyroid, liver, kidney aur vitamin ki kami. Inme se koi bhi shuruaat me kuch mehsoos nahi karati — yahi package ka poora point hai.",
         "Aur yahi baat sabse zyada galat samjhi jaati hai. \"Full body kara liya, sab theek hai\" — ye vaakya khatarnak hai. Package me cancer ki screening nahi hoti, dil ki bimari ka pakka pata nahi chalta, haddi aur jodon ki jaanch nahi hoti, aur jo cheezein machine par dikhti hain — X-ray, ultrasound, ECG — wo isme aati hi nahi. Wo hamari service me bhi shaamil nahi hain.",
         [
           "Isliye seedha niyam: koi shikayat pehle se hai to package mat chuniye — doctor ko dikhaiye aur wahi test karaiye jo wo kahe. Package un logon ke liye hai jinhe abhi kuch nahi hai. ",
-          { "text": "Shikayat ke hisaab se kaun sa test hota hai", "href": "/blogs/lab-test/gorakhpur" },
+          {
+            "text": "Shikayat ke hisaab se kaun sa test hota hai",
+            "href": "/blogs/lab-test/gorakhpur"
+          },
           " — wo alag guide me hai."
         ],
         {
@@ -50,35 +56,159 @@
     },
     {
       "id": "package-me-kya-hona-chahiye-gorakhpur",
-      "heading": "Package Me Kam Se Kam Kya Hona Chahiye — Ginti Mat Giniye",
+      "heading": "Achhe Package Me Kam Se Kam Kya Hona Chahiye — Paanch System",
       "lead": "Package ki taakat isme hai ki kya-kya shaamil hai, isme nahi ki kitne number chhapte hain.",
       "blocks": [
         "Package bechne ka sabse aam tareeka parameter ki ginti hai — 45, 72, 88. Lekin ginti apne aap me kuch nahi batati. Ek package 80 parameter de sakta hai jisme se 30 CBC ke andar ke hi hisse hon, aur thyroid usme ho hi na. Wo package 45 parameter wale se kamzor hai, chahe number bada dikhe.",
         {
           "table": {
             "caption": "Kisi bhi full body package me kya dhoondhna chahiye",
-            "head": ["Kya", "Ye kya batata hai", "Chhoot gaya to kya nahi pata chalega"],
+            "head": [
+              "Kya",
+              "Ye kya batata hai",
+              "Chhoot gaya to kya nahi pata chalega"
+            ],
             "rows": [
-              ["CBC", "Khoon ki ginti — Hb, WBC, platelet", "Khoon ki kami aur chhupa hua infection"],
-              ["Blood Sugar aur HbA1c", "Sugar ka aaj ka aur teen mahine ka haal", "Shuruaati diabetes, jo saalon tak chup rehti hai"],
-              ["Lipid Profile", "Cholesterol aur triglyceride", "Dil ki bimari ka sabse jaldi milne wala ishaara"],
-              ["Liver Function Test (LFT)", "Liver ka kaam", "Fatty liver aur peeliya ka shuruaati asar"],
-              ["Kidney Function Test (KFT) + urine routine", "Kidney ka kaam", "Kidney par shuru hota asar, jo shuruaat me bilkul chup rehta hai"],
-              ["Thyroid (TSH ya profile)", "Thyroid ka kaam", "Thakan, wazan aur periods ki sabse aam anadekhi wajah"],
-              ["Vitamin D aur B12", "Vitamin ki kami", "Thakan, jhunjhuni aur haddi ke dard ki asli wajah"]
+              [
+                "CBC",
+                "Khoon ki ginti — Hb, WBC, platelet",
+                "Khoon ki kami aur chhupa hua infection"
+              ],
+              [
+                "Blood Sugar aur HbA1c",
+                "Sugar ka aaj ka aur teen mahine ka haal",
+                "Shuruaati diabetes, jo saalon tak chup rehti hai"
+              ],
+              [
+                "Lipid Profile",
+                "Cholesterol aur triglyceride",
+                "Dil ki bimari ka sabse jaldi milne wala ishaara"
+              ],
+              [
+                "Liver Function Test (LFT)",
+                "Liver ka kaam",
+                "Fatty liver aur peeliya ka shuruaati asar"
+              ],
+              [
+                "Kidney Function Test (KFT) + urine routine",
+                "Kidney ka kaam",
+                "Kidney par shuru hota asar, jo shuruaat me bilkul chup rehta hai"
+              ],
+              [
+                "Thyroid (TSH ya profile)",
+                "Thyroid ka kaam",
+                "Thakan, wazan aur periods ki sabse aam anadekhi wajah"
+              ],
+              [
+                "Vitamin D aur B12",
+                "Vitamin ki kami",
+                "Thakan, jhunjhuni aur haddi ke dard ki asli wajah"
+              ]
             ]
           }
         },
         [
           "Pehli paanch line kam se kam wali shart hai. Aakhiri do — thyroid aur vitamin — wo hain jinke jud jaane se package se sach me kuch pata chalta hai. Kaunse package me kya-kya aata hai, ",
-          { "text": "service page par", "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur" },
+          {
+            "text": "service page par",
+            "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur"
+          },
           " likha hai."
         ]
       ]
     },
     {
+      "id": "full-body-checkup-me-kaun-se-test-gorakhpur",
+      "heading": "Full Body Checkup Me Kaun Se Test Hote Hain — Poori List",
+      "lead": "Naam se naam milaane wala jawab. Har test ke saath ye bhi ki usme kitne number chhapte hain aur uske liye khaali pet rehna padta hai ya nahi.",
+      "blocks": [
+        "Package me shaamil test har jagah bilkul ek jaise nahi hote, lekin ek dhaancha lagbhag har achhe package me common rehta hai. Neeche wahi dhaancha hai. Teesra column bataata hai ki ek akela test report par kitni lines chhapta hai — yahi wo cheez hai jisse \"80+ parameters\" jaisa number bana diya jaata hai.",
+        {
+          "table": {
+            "caption": "Aam full body package me shaamil test — parameter aur fasting",
+            "head": [
+              "Test",
+              "Ye kya dekhta hai",
+              "Report par lagbhag kitne number",
+              "Khaali pet?"
+            ],
+            "rows": [
+              [
+                "CBC (Complete Blood Count)",
+                "Khoon ki kami, infection, platelet",
+                "18 – 22",
+                "Nahi"
+              ],
+              [
+                "Fasting Blood Sugar",
+                "Sugar, us pal ka",
+                "1",
+                "Haan, 8–10 ghante"
+              ],
+              [
+                "HbA1c",
+                "Pichhle 3 mahine ki sugar",
+                "1 – 2",
+                "Nahi"
+              ],
+              [
+                "Lipid Profile",
+                "Cholesterol, triglycerides, HDL, LDL",
+                "5 – 8",
+                "Haan, 10–12 ghante"
+              ],
+              [
+                "LFT (Liver Function Test)",
+                "Bilirubin, SGPT, SGOT, protein",
+                "8 – 11",
+                "Akela ho to nahi"
+              ],
+              [
+                "KFT (Kidney Function Test)",
+                "Urea, creatinine, uric acid, electrolytes",
+                "6 – 9",
+                "Akela ho to nahi"
+              ],
+              [
+                "Thyroid (TSH, ya T3-T4-TSH)",
+                "Thyroid ka kaam",
+                "1 – 3",
+                "Nahi"
+              ],
+              [
+                "Urine Routine",
+                "Protein, sugar, pus cell, infection",
+                "10 – 15",
+                "Nahi"
+              ],
+              [
+                "Vitamin D aur Vitamin B12",
+                "Thakan, haddi aur nas se juda",
+                "2",
+                "Nahi"
+              ],
+              [
+                "Iron / Ferritin (advanced me)",
+                "Khoon ki kami ki wajah",
+                "1 – 3",
+                "Nahi"
+              ]
+            ]
+          }
+        },
+        "Isliye jab package par \"80+ parameters\" likha ho, to us number ka matlab 80 alag jaanch nahi hota. Upar wali list me se sirf CBC aur Urine Routine mila kar hi 30 se zyada line ban jaati hain. Sahi sawaal ginti ka nahi, list ka hai — \"kaun se TEST hain\", parameter kitne hain ye nahi.",
+        {
+          "note": {
+            "title": "Ye list ek aam dhaancha hai, koi tay menu nahi",
+            "text": "Alag package me isme se kuch test ho sakte hain aur kuch nahi. Booking se pehle test ki poori list maang lijiye aur usme se paanch system — khoon, sugar, dil, liver, kidney — dhoondhiye. In paanchon me se koi ek chhoot raha ho to package ka naam chahe kuch bhi ho, wo adhoora hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
       "id": "sasta-full-body-checkup-gorakhpur",
-      "heading": "Sasta Full Body Checkup Gorakhpur — Daam Kis Baat Par Tay Hota Hai",
+      "heading": "Gorakhpur Me Full Body Checkup Ka Daam Kis Baat Par Tay Hota Hai",
       "lead": "Sasta aur mehnga me farak ginti ka nahi, shaamil test ka hota hai.",
       "blocks": [
         "Is sheher me package ke vikalp bahut hain, aur daam me kaafi farak dikhta hai. Wo farak teen cheezon se aata hai: package me kaunse test hain, unme se kitne mehnge test hain, aur kya usme vitamin jaise test bhi hain. Vitamin D aur B12 apne aap me mehnge test hain — jis package me ye dono hain uska daam badhega hi, aur wo badha hua daam sach me kuch de raha hota hai.",
@@ -93,7 +223,10 @@
         },
         [
           "Har package aur har test ka daam ek hi jagah likha hai — ",
-          { "text": "Gorakhpur ki rate list", "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur" },
+          {
+            "text": "Gorakhpur ki rate list",
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur"
+          },
           " par. Is guide me price jaan-boojh kar nahi likha jaata, taaki wo ek hi jagah rahe aur kabhi purana na pada rahe. Kuch test us waqt ki zaroorat par tay hote hain aur unke card par 'Call for price' likha rehta hai — daam sample dene se pehle bata diya jaata hai."
         ],
         {
@@ -107,7 +240,7 @@
     },
     {
       "id": "lipid-profile-test-in-gorakhpur",
-      "heading": "Lipid Profile Test In Gorakhpur — Poora Package Khaali Pet Isi Wajah Se Hota Hai",
+      "heading": "Full Body Checkup Khaali Pet Kyun Hota Hai — Lipid Profile Ki Wajah",
       "lead": "Package me sirf yahi test fasting maangta hai. Isliye slot ka poora hisaab isi par tikka hai.",
       "blocks": [
         "Lipid Profile me cholesterol aur triglyceride ke chaar-paanch number aate hain — Total Cholesterol, LDL, HDL aur Triglycerides. Ye dil ki bimari ka sabse jaldi milne wala ishaara hai, aur wo ishaara aksar der se pakda jaata hai kyunki koi lakshan hota hi nahi.",
@@ -122,14 +255,69 @@
         },
         [
           "Isliye package ke liye subah 6 se 8 ka pehla slot lijiye: khaali pet ka waqt sabse kam rehta hai aur naashta sample ke turant baad ho jaata hai. ",
-          { "text": "Slot aur fasting ka poora hisaab", "href": "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur" },
+          {
+            "text": "Slot aur fasting ka poora hisaab",
+            "href": "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur"
+          },
           " home collection wali guide me hai."
         ]
       ]
     },
     {
+      "id": "checkup-me-kitna-time-report-kab-gorakhpur",
+      "heading": "Checkup Me Kitna Time Lagta Hai Aur Report Kitne Din Me Aati Hai",
+      "lead": "Sample dene me 10 minute, report aane me 24 ghante. Beech ka poora hisaab neeche hai.",
+      "blocks": [
+        "Full body checkup ka sabse bada dar yahi hota hai ki \"poora din chala jayega\". Jaata nahi hai. Poora package ek hi baar nas se liye gaye khoon par hota hai — har test ke liye alag sui nahi lagti. Ghar par sample lene wali visit me aam taur par 10 se 15 minute lagte hain, urine sample ka container saath me chhod diya jaata hai.",
+        {
+          "table": {
+            "caption": "Booking se report tak — kis cheez me kitna samay",
+            "head": [
+              "Kadam",
+              "Lagbhag kitna samay"
+            ],
+            "rows": [
+              [
+                "Form bharne ke baad confirmation call",
+                "Lagbhag 30 minute"
+              ],
+              [
+                "Ghar par sample lene ki visit",
+                "10 – 15 minute"
+              ],
+              [
+                "Fasting, agar package me lipid ya sugar hai",
+                "Raat 10 – 12 ghante"
+              ],
+              [
+                "Zyadatar package ki report",
+                "24 ghante ke andar, PDF phone par"
+              ],
+              [
+                "Vitamin D, B12 jaise test",
+                "Aam taur par usi 24 ghante me"
+              ],
+              [
+                "Urine culture, agar likha ho",
+                "48 – 72 ghante — culture ko badhna padta hai"
+              ]
+            ]
+          }
+        },
+        "Isi wajah se subah 6 baje se 8 baje ka pehla slot sabse aasan padta hai: fasting raat ki neend me poori ho jaati hai, sample ke turant baad naashta ho jaata hai, aur report usi shaam ya agle din subah tak haath me hoti hai.",
+        [
+          "Ghar par sample lene ke din kya hota hai — kaun aata hai, kya laata hai, aur bujurg ya bistar par pade mareez ka kya dhyaan rakha jaata hai — wo poora ",
+          {
+            "text": "ghar par sample wali guide",
+            "href": "/blogs/home-sample-collection/gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
       "id": "lft-kft-gorakhpur",
-      "heading": "Liver Function Test (LFT) Price Gorakhpur Aur Kidney Function Test (KFT) — Package Me Ya Alag?",
+      "heading": "LFT Aur KFT Package Me Aate Hain Ya Alag Se Karane Padte Hain",
       "lead": "Dono package me aa jaate hain. Alag se karane ka apna waqt hai, aur wo alag hai.",
       "blocks": [
         "LFT aur KFT do chup rehne wale ang ki jaanch hain. Liver aur kidney dono ki khaasiyat yahi hai ki wo kaafi door tak bina shikayat ke kaam karte rehte hain — jab tak lakshan dikhte hain, kaafi hissa peeche chhoot chuka hota hai. Isiliye ye dono har dhang ke package me hone chahiye.",
@@ -145,14 +333,17 @@
         "Alag se kab karaiye, ye tay karna aasan hai. Barsaat ke baad peeliya ke maamle is ilaake me badhte hain — aankhon ya peshab ka rang peela dikhe, bhookh mar jaaye, ya lagatar kamzori rahe to LFT alag se, doctor ke kehne par. Aur sugar ya BP ki dawa chal rahi ho to KFT saal me ek baar, urine microalbumin ke saath — microalbumin wahi test hai jo sabse pehle ishaara deta hai ki kidney par asar shuru ho raha hai, us waqt jab creatinine ab bhi normal dikhta hai. Yahi test package me aksar nahi hota aur sabse zyada chhoota hai.",
         [
           "Ek baat test se pehle bata dene wali: jo dawa chal rahi hai — dard ki goli, antibiotic, ayurvedic ya bina label wale nuskhe, aur sharaab — ye sab LFT aur KFT dono ke number par asar daal sakte hain. Booking ke waqt bata dijiye. In dono par vistaar se ",
-          { "text": "alag guide bhi hai", "href": "/blogs/liver-kidney-test/deoria" },
+          {
+            "text": "alag guide bhi hai",
+            "href": "/blogs/liver-kidney-test/deoria"
+          },
           "; wo Deoria ke naam se hai, lekin jaanch ki baat har jagah wahi hai."
         ]
       ]
     },
     {
       "id": "senior-citizen-health-package-gorakhpur",
-      "heading": "Senior Citizen Health Package Gorakhpur — 55 Ke Upar Kya Jodna Chahiye",
+      "heading": "Senior Citizen Health Package Gorakhpur — 55 Ke Upar Kya Jodein",
       "lead": "Is umar me package ka kaam badal jaata hai — screening se follow-up ki taraf.",
       "blocks": [
         "55 ke upar package chunne ka tareeka alag hai. Is umar me sirf \"kuch chhupa hua hai kya\" nahi dekha jaata; ye bhi dekha jaata hai ki jo pehle se chal raha hai wo kis disha me ja raha hai. Isliye senior citizen package me kuch cheezein zaroori ho jaati hain jo kam umar me optional thi.",
@@ -169,42 +360,75 @@
         "Do cheezein jo package me nahi aatin aur is umar me zaroori hain: aankh ki jaanch aur pair ki jaanch (khaas kar sugar wale mareezon me). Ye doctor ke paas hoti hain, lab me nahi — inhe lab test se mat badaliye. Isi tarah BP ki naapti ghar par hoti rehni chahiye; wo package ka hissa nahi hai.",
         [
           "Bujurgon ke liye ghar par sample lene ka faayda sabse zyada hai — nikalna hi sabse mushkil hissa hota hai. Booking me mareez ki haalat likh dijiye: bistar par hain, nas patli hai, ya khoon patla karne wali dawa chal rahi hai. ",
-          { "text": "Booking me aur kya likhna chahiye", "href": "/blogs/home-sample-collection/gorakhpur#bujurg-ghar-par-akele-gorakhpur" },
+          {
+            "text": "Booking me aur kya likhna chahiye",
+            "href": "/blogs/home-sample-collection/gorakhpur#bujurg-ghar-par-akele-gorakhpur"
+          },
           " — wo alag hisse me hai."
         ]
       ]
     },
     {
       "id": "package-aur-opd-gorakhpur",
-      "heading": "Package Karwa Kar Doctor Ko Dikhana Hai — Kram Ulta Mat Kijiye",
+      "heading": "OPD Dikhani Hai — Checkup Pehle Karayein Ya Doctor Ko Pehle Dikhayein",
       "lead": "Gorakhpur me ye galti sabse zyada hoti hai, kyunki OPD yahan har kisi ke plan me hoti hai.",
       "blocks": [
         "Bahut se log ye sochte hain ki package pehle karwa lein, phir report lekar doctor ke paas jaayein — \"ek hi baar me poora kaam ho jaayega\". Kabhi ye theek hota hai, kabhi bilkul nahi. Farak samajh lijiye.",
         {
           "table": {
             "caption": "Package pehle ya doctor pehle",
-            "head": ["Aapki haalat", "Kram kya ho", "Kyun"],
+            "head": [
+              "Aapki haalat",
+              "Kram kya ho",
+              "Kyun"
+            ],
             "rows": [
-              ["Koi shikayat nahi, saalana checkup hai", "Package pehle, doctor baad me (ya zaroorat hi nahi)", "Screening ke liye doctor ki parchi chahiye hi nahi"],
-              ["Koi nayi shikayat hai", "Doctor pehle, test baad me", "Package aapki shikayat ka jawab nahi deta — wo kuch aur test likh sakta hai"],
-              ["Purani bimari ka follow-up hai", "Jo test pichhli baar hue the wahi, OPD se ek din pehle", "Doctor purani aur nayi report saath rakh kar badlav dekhta hai"],
-              ["Doctor ne 'full body' likh diya hai", "Parche ka photo bhej dijiye, phir book kijiye", "Package me kya aata hai bata diya jaayega, taaki zaroori cheez chhoot na jaaye"],
-              ["Operation ya admission ki date hai", "Hospital ki apni list par chaliye", "Wahi list count hoti hai — package uski jagah nahi le sakta"]
+              [
+                "Koi shikayat nahi, saalana checkup hai",
+                "Package pehle, doctor baad me (ya zaroorat hi nahi)",
+                "Screening ke liye doctor ki parchi chahiye hi nahi"
+              ],
+              [
+                "Koi nayi shikayat hai",
+                "Doctor pehle, test baad me",
+                "Package aapki shikayat ka jawab nahi deta — wo kuch aur test likh sakta hai"
+              ],
+              [
+                "Purani bimari ka follow-up hai",
+                "Jo test pichhli baar hue the wahi, OPD se ek din pehle",
+                "Doctor purani aur nayi report saath rakh kar badlav dekhta hai"
+              ],
+              [
+                "Doctor ne 'full body' likh diya hai",
+                "Parche ka photo bhej dijiye, phir book kijiye",
+                "Package me kya aata hai bata diya jaayega, taaki zaroori cheez chhoot na jaaye"
+              ],
+              [
+                "Operation ya admission ki date hai",
+                "Hospital ki apni list par chaliye",
+                "Wahi list count hoti hai — package uski jagah nahi le sakta"
+              ]
             ]
           }
         },
         [
           "Aur agar OPD ki taareekh tay hai to sample ka din bhi tay hai — ek din pehle. Report 24 ghante me aati hai, isliye agli subah PDF haath me hogi. ",
-          { "text": "Poora ulta-ginti ka hisaab table me hai", "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur" },
+          {
+            "text": "Poora ulta-ginti ka hisaab table me hai",
+            "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur"
+          },
           ". Operation se pehle ke test par ",
-          { "text": "service page par alag hissa", "href": "/lab-test/gorakhpur#operation-se-pehle-test-gorakhpur" },
+          {
+            "text": "service page par alag hissa",
+            "href": "/lab-test/gorakhpur#operation-se-pehle-test-gorakhpur"
+          },
           " hai — aur wahan bhi wahi baat hai: hospital ki apni list hi chalti hai."
         ]
       ]
     },
     {
       "id": "do-saal-ki-report-gorakhpur",
-      "heading": "Do Saal Ki Report Saath Rakhiye — Package Ka Asli Faayda Yahi Hai",
+      "heading": "Full Body Checkup Ki Report Kaise Padhein — Kis Kram Me",
       "lead": "Pehla package ek photo hai. Doosra package se disha milti hai, aur disha hi kaam ki cheez hai.",
       "blocks": [
         "Package ki report lambi hoti hai aur usme kuch na kuch laal zaroor dikhta hai. Isliye padhne ka ek kram hona chahiye — aur uska sabse zaroori hissa pichhle saal ki report hai.",
@@ -230,25 +454,40 @@
     },
     {
       "id": "aage-kya-karein-full-body-gorakhpur",
-      "heading": "Aage Kya Karein",
+      "heading": "Gorakhpur Me Full Body Checkup Kaise Book Karein",
       "blocks": [
         [
           "Package tay hai to ",
-          { "text": "Gorakhpur ka service page", "href": "/lab-test/gorakhpur" },
+          {
+            "text": "Gorakhpur ka service page",
+            "href": "/lab-test/gorakhpur"
+          },
           " kholiye, package chuniye aur subah 6 se 8 ka slot lijiye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai. Har package me kya-kya aata hai wo ",
-          { "text": "yahan likha hai", "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur" },
+          {
+            "text": "yahan likha hai",
+            "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur"
+          },
           "."
         ],
         [
           "Package tay nahi hai to pehle ye tay kijiye ki screening karani hai ya kisi shikayat ka jawab chahiye. Doosre ke liye ",
-          { "text": "Gorakhpur ki lab test guide", "href": "/blogs/lab-test/gorakhpur" },
+          {
+            "text": "Gorakhpur ki lab test guide",
+            "href": "/blogs/lab-test/gorakhpur"
+          },
           " padhiye, aur ghar par sample kaise liya jaata hai ye ",
-          { "text": "home collection wali guide", "href": "/blogs/home-sample-collection/gorakhpur" },
+          {
+            "text": "home collection wali guide",
+            "href": "/blogs/home-sample-collection/gorakhpur"
+          },
           " me hai."
         ],
         [
           "Poore ghar ka checkup ek saath karana ho, ya package me kuch jodna ho — ",
-          { "text": "call kar lijiye", "href": "/contact" },
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
           ". Slot, coverage aur package teenon ek call me tay ho jaate hain."
         ]
       ]
@@ -286,6 +525,26 @@
     {
       "question": "Ghar ke chaar log ek saath full body checkup kara sakte hain?",
       "answer": "Haan, aur yahi sabse aasan tareeka hai. Sabki booking ek hi slot me kar dijiye — ek hi visit me sabka sample ho jaata hai. Har vyakti ka naam, umar aur package alag likhwaiye. Jinke test me fasting nahi lagti unhe bhookha rakhne ki zaroorat nahi. Report har vyakti ki alag PDF me aati hai."
+    },
+    {
+      "question": "Full body checkup me kaun se test hote hain?",
+      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12 aur iron bhi jud jaate hain. Har package me bilkul yahi list ho, ye zaroori nahi — isliye booking se pehle test ki list maangiye aur usme paanch system dhoondhiye: khoon, sugar, dil (lipid), liver aur kidney. In paanchon me se koi bhi chhoot raha ho to package adhoora hai, chahe usme parameter kitne bhi likhe hon."
+    },
+    {
+      "question": "Full body checkup me kitna time lagta hai?",
+      "answer": "Sample dene me 10 se 15 minute. Poora package ek hi baar nas se liye gaye khoon par hota hai, isliye har test ke liye alag sui nahi lagti; urine sample ka container saath me chhod diya jaata hai. Ghar par sample lene ki booking me confirmation call lagbhag 30 minute me aa jaati hai. Poora din kahin nahi jaata — sirf fasting ke 10 se 12 ghante planning maangte hain, aur wo raat ki neend me poore ho jaate hain."
+    },
+    {
+      "question": "Full body checkup ki report kitne ghante me aa jaati hai?",
+      "answer": "Zyadatar package ki report 24 ghante ke andar PDF me phone par aa jaati hai — CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine sab isi me. Vitamin D aur B12 bhi aam taur par usi samay me aa jaate hain. Sirf urine culture alag hai; usme 48 se 72 ghante lagte hain, kyunki culture ko badhne ka samay dena padta hai. Report phone par milti hai, isliye OPD me dikhane ke liye print le kar chalna zaroori nahi."
+    },
+    {
+      "question": "Full body checkup me kitne parameter hone chahiye?",
+      "answer": "Parameter ki ginti sabse kam kaam ki jaankari hai. Akela CBC hi report par 18 se 22 line chhapta hai aur urine routine 10 se 15 — dono mila kar hi 30 se zyada \"parameter\" ban jaate hain. Isliye 80 parameter wala package 45 parameter wale se kamzor ho sakta hai, agar usme thyroid ya HbA1c hai hi nahi. Ginti ke bajaye TEST ki list dekhiye, aur usme paanch system poore hain ya nahi ye dekhiye."
+    },
+    {
+      "question": "Gorakhpur me full body checkup ghar se sample de kar ho sakta hai?",
+      "answer": "Haan, poora package ghar par ho jaata hai. Home collection free hai aur phlebotomist ID card ke saath aata hai. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Payment sample lene ke waqt cash ya UPI se hota hai. Ek baat dhyaan rakhiye: X-ray, ECG aur ultrasound humare menu me nahi hain — wo machine par hote hain, sample par nahi. Parche par wo likhe hon to unke liye imaging centre jaana hoga."
     }
   ],
   "relatedLinks": {

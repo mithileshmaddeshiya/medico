@@ -1,26 +1,27 @@
 {
-  "title": "Deoria Me LFT Aur KFT Test — Liver Aur Kidney",
-  "description": "Deoria me LFT aur KFT test me kya-kya aata hai, SGPT aur creatinine kis baat se badalte hain, aur inme fasting lagti hai ya nahi.",
+  "title": "LFT Aur KFT Test In Deoria — Normal Range Aur Fasting",
+  "description": "Deoria me LFT aur KFT test — panel me kya-kya aata hai, SGPT aur creatinine ki normal range, fasting lagti hai ya nahi, aur report kitne ghante me aati hai.",
   "keywords": [
-    "LFT Test in Deoria",
-    "KFT Test in Deoria",
-    "Liver Function Test in Deoria",
-    "Kidney Function Test in Deoria",
-    "SGPT SGOT Test in Deoria",
-    "Creatinine Test in Deoria",
-    "Bilirubin Test Deoria",
-    "Urea Creatinine Test Deoria",
-    "Peeliya Ka Test Deoria",
-    "Liver Test at Home in Deoria",
-    "Blood Test at Home in Deoria",
-    "Home Sample Collection Deoria",
-    "Lab Test in Deoria",
-    "Kidney Test Barhaj Rudrapur Deoria"
+    "LFT test in Deoria",
+    "KFT test in Deoria",
+    "liver function test Deoria",
+    "kidney function test Deoria",
+    "SGPT normal range",
+    "creatinine normal range",
+    "bilirubin normal range",
+    "LFT test me kya kya hota hai",
+    "KFT test me kya kya hota hai",
+    "LFT KFT fasting",
+    "peeliya ka test Deoria",
+    "creatinine test Deoria",
+    "urine microalbumin test Deoria",
+    "blood test at home Deoria",
+    "lab test in Deoria"
   ],
   "publishedAt": "2026-09-02",
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-08",
   "order": 70,
-  "readingMinutes": 9,
+  "readingMinutes": 11,
   "takeaways": [
     "LFT aur KFT do panel hain, do akele test nahi — LFT me SGPT, SGOT aur bilirubin jaise hisse aate hain, KFT me creatinine aur urea jaise.",
     "Dono me aam taur par fasting nahi lagti. Fasting tab aati hai jab inke saath sugar ya lipid bhi ho raha ho, ya package me ho rahe hon.",
@@ -31,7 +32,7 @@
   "sections": [
     {
       "id": "lft-kft-kya-hain-deoria",
-      "heading": "LFT Aur KFT Kya Hain — Do Chup Rehne Wale Ang Ki Jaanch",
+      "heading": "LFT Aur KFT Test Kya Hota Hai — Poora Naam Aur Matlab",
       "lead": "Liver aur kidney dono kaafi der tak shikayat nahi karte. Isi liye inhe jaancha jaata hai.",
       "blocks": [
         "LFT ka poora naam Liver Function Test hai aur KFT ka Kidney Function Test. Dono ek akela test nahi, ek panel hain — yaani kai numbers ek saath, jinhe milakar padha jaata hai. Isi liye report me ek hi jagah paanch-chhah line dikhti hain, aur isi liye kisi ek line ko alag se uthakar matlab nikalna galat hota hai.",
@@ -47,7 +48,7 @@
     },
     {
       "id": "lft-test-deoria-kya-aata-hai",
-      "heading": "LFT Test In Deoria — Liver Function Test Me Kya-Kya Aata Hai",
+      "heading": "LFT Test Me Kya-Kya Hota Hai — Liver Function Test Ki Poori List",
       "lead": "Ek parche par likhi ek line, report me kai numbers.",
       "blocks": [
         "Jab doctor \"LFT\" likhta hai to wo ek panel maang raha hota hai. Alag-alag lab ke panel me thoda farak ho sakta hai, lekin aam taur par ismein ye hisse aate hain — aur inhe alag-alag nahi, ek saath padha jaata hai.",
@@ -73,7 +74,7 @@
     },
     {
       "id": "peeliya-aur-paani-deoria",
-      "heading": "Peeliya Aur Paani — Deoria Me Liver Ki Jaanch Kis Mausam Me Badhti Hai",
+      "heading": "Deoria Me Peeliya (Jaundice) Ho To Kaun Sa Test Pehle Karayein",
       "lead": "Barsaat ke baad ka paani yahan sirf bukhar nahi laata.",
       "blocks": [
         "Deoria jile me barsaat ke baad paani der tak thehra rehta hai, aur peene ke paani ka srot usi se prabhavit hota hai. Yahi wo mahine hote hain jab peeliya ke mamle badhte hain, aur ghar wale aksar ise dekhkar hi pehchan lete hain — aankhon ka peela pad jaana, peshab ka rang gehra ho jaana, bhookh ka bilkul khatam ho jaana, aur ulti.",
@@ -103,7 +104,7 @@
     },
     {
       "id": "kft-test-deoria-kya-aata-hai",
-      "heading": "KFT Test In Deoria — Kidney Function Test Me Kya Dekha Jaata Hai",
+      "heading": "KFT Test Me Kya-Kya Hota Hai — Kidney Function Test Ki Poori List",
       "lead": "Creatinine akela nahi padha jaata.",
       "blocks": [
         "KFT bhi ek panel hai. Ismein aam taur par ye hisse aate hain, aur inhe umar, wazan aur mareez ki halat ke saath milakar dekha jaata hai.",
@@ -135,8 +136,115 @@
       ]
     },
     {
+      "id": "lft-kft-normal-range-deoria",
+      "heading": "Report Par High Likha Hai — LFT Aur KFT Ki Normal Range Kya Hoti Hai",
+      "lead": "Number ke aage High ya Low likha dikhna aam hai. Sawaal ye hai ki kitna upar matlab rakhta hai.",
+      "blocks": [
+        "Report kholte hi nazar sabse pehle un lines par jaati hai jinke aage High likha hota hai. Neeche di gayi range balig logon ki aam range hai — sirf ye samajhne ke liye ki aapka number kis daayre me hai. Ye ilaaj tay karne ke liye nahi hai, aur is guide ka kaam apni report ka matlab khud nikaal lena nahi hai.",
+        {
+          "table": {
+            "caption": "LFT — aam range aur uska matlab",
+            "head": [
+              "Test",
+              "Aam range",
+              "Thoda upar hona",
+              "Kaafi upar hona"
+            ],
+            "rows": [
+              [
+                "Total Bilirubin",
+                "0.3 – 1.2 mg/dL",
+                "Bahut aam. Lambe samay khaali pet rehne se bhi hota hai.",
+                "2.5 se upar — peelapan aankh aur peshab me dikhne lagta hai. Doctor ko dikhaiye."
+              ],
+              [
+                "SGPT / ALT",
+                "Lagbhag 7 – 45 U/L",
+                "Ek shaam ki sharaab, ek dawa, ya bhaari khaana bhi kar deta hai.",
+                "Range se teen-chaar guna upar — wajah dhoondhi jaati hai, aur jaldi."
+              ],
+              [
+                "SGOT / AST",
+                "Lagbhag 8 – 40 U/L",
+                "SGPT ke saath thoda upar hona aam hai.",
+                "Akela SGOT bahut upar — muscle se bhi aa sakta hai, doctor tay karega."
+              ],
+              [
+                "Alkaline Phosphatase",
+                "Lagbhag 40 – 130 U/L",
+                "Bachchon aur kishoron me kudrati taur par zyada rehta hai.",
+                "Bile ke raaste aur haddi — dono dekhe jaate hain."
+              ],
+              [
+                "Albumin",
+                "3.5 – 5.2 g/dL",
+                "Halka kam hona akela kuch nahi kehta.",
+                "Kaafi kam — lambi bimari ya sujan ke saath padha jaata hai."
+              ]
+            ]
+          }
+        },
+        {
+          "table": {
+            "caption": "KFT — aam range aur uska matlab",
+            "head": [
+              "Test",
+              "Aam range",
+              "Kis wajah se jhootha hilta hai",
+              "Dhyaan maangne wali baat"
+            ],
+            "rows": [
+              [
+                "Creatinine",
+                "Purush 0.7 – 1.3, mahila 0.6 – 1.1 mg/dL",
+                "Paani ki kami, ek din pehle tez gym, protein powder.",
+                "Har report me thoda-thoda badhta jaana — trend hi asli baat hai."
+              ],
+              [
+                "Urea",
+                "Lagbhag 15 – 40 mg/dL",
+                "Kam paani aur zyada protein wala khaana.",
+                "Creatinine ke saath saath badhna."
+              ],
+              [
+                "Uric Acid",
+                "Purush 3.5 – 7.2, mahila 2.6 – 6.0 mg/dL",
+                "Ek din pehle daal, maans ya sharaab.",
+                "Jodo me dard ke saath badha hua hona."
+              ],
+              [
+                "Potassium",
+                "3.5 – 5.1 mmol/L",
+                "Sample der se pahunche to jhootha zyada dikh sakta hai.",
+                "Bahut zyada ya bahut kam — ye intezaar nahi maangta."
+              ],
+              [
+                "eGFR",
+                "90 se upar",
+                "Creatinine hila to ye bhi hilta hai.",
+                "60 se neeche — doctor ko dikhana zaroori hai."
+              ],
+              [
+                "Urine Microalbumin (ACR)",
+                "30 mg/g se kam",
+                "Bukhar ya bahut mehnat ke baad thoda badha aa sakta hai.",
+                "Sugar ya BP wale me badha hua — sabse pehla ishaara yahi deta hai."
+              ]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Upar wali range nahi — report par chhapi range chalti hai",
+            "text": "Har lab ka analyser aur method thoda alag hota hai, isliye reference range bhi thodi alag chhapti hai, aur aapke number par wahi lagti hai. Umar, gender, pregnancy aur chal rahi dawa se bhi wo badalti hai. Isliye report ke saath chhapi range dekhiye, aur matlab doctor se nikalwaiye — ek number apne aap me diagnosis nahi hota.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
       "id": "sugar-bp-wale-mareez-kft-deoria",
-      "heading": "Sugar Ya BP Ki Dawa Chal Rahi Hai — KFT Saal Me Ek Baar Kyun",
+      "heading": "Sugar Ya BP Hai To Kidney Ka Kaun Sa Test, Saal Me Kitni Baar",
       "lead": "Kidney par asar ka pehla ishara shikayat se bahut pehle aata hai.",
       "blocks": [
         "Deoria me sabse zyada KFT unhi logon ka hota hai jinhe kidney ki koi shikayat hai hi nahi — aur yahi iska sahi istemal hai. Sugar aur BP dono lambe samay me kidney par asar daal sakte hain, aur wo asar shuru me kisi lakshan ke bina hota hai. Isi liye dawa par chal rahe mareez ke liye saal me ek baar KFT aur urine microalbumin likha jaata hai; ye wahi jaanch hai jo sabse zyada chhoot jaati hai kyunki \"abhi to sab theek hai\".",
@@ -171,7 +279,7 @@
     },
     {
       "id": "lft-kft-table-deoria",
-      "heading": "Ek Nazar Me — LFT Aur KFT, Kis Ke Liye Aur Fasting Chahiye Ya Nahi",
+      "heading": "LFT KFT Test Se Pehle Fasting Lagti Hai? Kis Ko Kab Karana Chahiye",
       "lead": "Booking se pehle isi table par ek nazar daal lijiye.",
       "blocks": [
         "Ye aam salah hai, koi vyaktigat salah nahi. Doctor ne alag antaraal likha ho to wahi chalega — parche ki photo booking ke waqt bhej dijiye.",
@@ -241,7 +349,7 @@
     },
     {
       "id": "dawa-sharab-nuskha-deoria",
-      "heading": "Dawa, Sharaab Aur Bina Jaanch Wale Nuskhe — Test Se Pehle Batane Wali Baatein",
+      "heading": "LFT Test Se Pehle Kya Nahi Karna Chahiye — Sharaab, Dawa, Gym",
       "lead": "Ye jaankari chhipaane se report bekaar ho jaati hai, sahi nahi.",
       "blocks": [
         "Liver aur kidney ke numbers un cheezon se badalte hain jo aap roz lete hain. Lab ko aur doctor ko ye pata hona chahiye — is jaankari se koi faisla aapke khilaaf nahi hota, balki report ka sahi matlab nikalta hai.",
@@ -266,7 +374,7 @@
     },
     {
       "id": "ghar-se-sample-lft-kft-deoria",
-      "heading": "Deoria Me LFT Aur KFT Ghar Se Kaise Hote Hain",
+      "heading": "Deoria Me LFT Aur KFT Ghar Se Kaise Karayein — Aur Report Kab",
       "lead": "Dono khoon ke sample par hote hain — kahin jaana zaroori nahi.",
       "blocks": [
         "LFT aur KFT dono khoon ke sample par hote hain, aur urine routine ya microalbumin ke liye peshab ka sample ghar par hi de diya jaata hai — bartan collection ke waqt mil jaata hai ya pehle se bata diya jaata hai. Trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne leta hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
@@ -301,7 +409,7 @@
     },
     {
       "id": "report-ke-baad-lft-kft-deoria",
-      "heading": "Report Aa Gayi — Ab Kya, Aur Dobara Kab",
+      "heading": "LFT KFT Report Kaise Padhein — Dobara Test Kitne Din Baad",
       "lead": "Ek number ka badha hona bimari nahi hota.",
       "blocks": [
         "In dono panel me kisi ek line ke aage \"High\" likha mil jaana bahut aam hai. Wo apne aap me na diagnosis hai, na khatra. Doctor teen cheezein milakar padhta hai: aapke lakshan, purani report, aur zaroorat lage to dobara jaanch. Isi liye report ke saath purani report bhi le jaana chahiye — LFT aur KFT dono me farak hi asli jaankari deta hai.",
@@ -334,7 +442,7 @@
     },
     {
       "id": "aage-kya-karein-lft-kft-deoria",
-      "heading": "Aage Kya Karein",
+      "heading": "LFT Aur KFT Karane Se Pehle Chhoti Si Checklist",
       "lead": "Teen kadam, isi kram me.",
       "blocks": [
         {
@@ -398,6 +506,22 @@
     {
       "question": "LFT aur KFT dono likhe hain — kya do baar sample dena padega?",
       "answer": "Nahi. Dono khoon ke sample par hote hain aur ek hi visit me ho jaate hain; alag test ke liye alag rang ki tube bharni pad sakti hai, lekin sui ek hi baar lagti hai. Iske saath sugar, thyroid ya lipid bhi likha ho to wo bhi usi sample me ho jaate hain — bas fasting ka niyam un test ka lagu ho jaayega. Haan, doctor ne urine routine ya microalbumin likha hai to peshab ka sample alag se dena hoga; uske liye bartan collection ke waqt mil jaata hai ya pehle se bata diya jaata hai, aur aam taur par subah ka pehla peshab sabse achha maana jaata hai."
+    },
+    {
+      "question": "SGPT ki normal range kitni hoti hai aur 60 aana zyada hai kya?",
+      "answer": "Aam taur par SGPT (ALT) lagbhag 7 se 45 U/L ke beech chhapti hai, lekin aapki report par jo range chhapi hai wahi aapke number par lagti hai. 60 jaisa number range se thoda upar hai, aur itna upar hona bahut aam hai — ek shaam ki sharaab, dard ki ek goli, ya ek din ka bhaari khaana bhi ise hila deta hai. Isliye doctor akela number nahi dekhta; wo poora panel aur purani report saath me padhta hai, aur aksar kuch hafton baad dobara karne ko kehta hai."
+    },
+    {
+      "question": "Creatinine ki normal range kya hai — mahila aur purush me alag hoti hai?",
+      "answer": "Haan, alag hoti hai. Purushon me lagbhag 0.7 se 1.3 mg/dL aur mahilaon me 0.6 se 1.1 mg/dL aam range maani jaati hai — mahilaon me muscle kam hone ki wajah se kudrati taur par kam nikalta hai. Report par creatinine ke saath eGFR bhi chhapta hai, jo umar aur gender ko jod kar nikala jaata hai. eGFR 60 se neeche ho to intezaar mat kijiye, doctor ko dikhaiye."
+    },
+    {
+      "question": "Deoria me LFT KFT ki report kitne din me mil jaati hai?",
+      "answer": "Sample subah liya jaaye to report 24 ghante ke andar PDF me phone par aa jaati hai. Urine routine saath ho to wo bhi usi report me aata hai; sirf urine culture alag hai, usme 48 se 72 ghante lagte hain kyunki culture ko badhne ka samay dena padta hai. Report phone par milti hai, isliye Gorakhpur ya kisi bade shehar me dikhana ho to print le kar chalne ki majboori nahi rehti."
+    },
+    {
+      "question": "LFT KFT ka sample Barhaj, Rudrapur ya Bhatpar Rani se bhi ghar se liya jaata hai?",
+      "answer": "Haan. Deoria jile ke kasbon aur gaon se ghar par sample liya jaata hai, aur home collection ka koi alag charge nahi judta. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Booking me apna address landmark ke saath likhiye — gaon ke pate me landmark hi sabse tez tarika hota hai. Phlebotomist ID card ke saath aata hai, aur payment sample ke waqt cash ya UPI se hota hai."
     }
   ],
   "relatedLinks": {

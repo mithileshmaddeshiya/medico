@@ -1,27 +1,27 @@
 {
-  "title": "Varanasi Me LFT Aur KFT Test Kab Karayein",
-  "description": "Varanasi me liver function test (LFT) aur kidney function test (KFT) — kismein kya aata hai, kis ko kab karana chahiye, fasting aur report ka matlab.",
+  "title": "LFT Aur KFT Test In Varanasi — Range Aur Fasting",
+  "description": "Varanasi me LFT aur KFT test — panel me kya aata hai, normal range kya hoti hai, fasting lagti hai ya nahi, aur report kitne ghante me aati hai.",
   "keywords": [
-    "Kidney Function Test in Varanasi",
-    "Liver Function Test in Varanasi",
-    "KFT Test in Varanasi",
-    "LFT Test in Varanasi",
-    "Creatinine Test in Varanasi",
-    "SGPT SGOT Test Varanasi",
-    "Urine Microalbumin Test Varanasi",
-    "Jaundice Test in Varanasi",
-    "Bilirubin Test in Varanasi",
-    "Uric Acid Test in Varanasi",
-    "Blood Test in Varanasi",
-    "Lab Test in Varanasi",
-    "Pathology Lab in Varanasi",
-    "Blood Test at Home Varanasi",
-    "Free Home Sample Collection Varanasi"
+    "LFT test in Varanasi",
+    "KFT test in Varanasi",
+    "liver function test Varanasi",
+    "kidney function test Varanasi",
+    "LFT normal range",
+    "KFT normal range",
+    "creatinine normal range",
+    "SGPT SGOT normal range",
+    "LFT test me kya kya hota hai",
+    "KFT test me kya kya hota hai",
+    "LFT test se pehle fasting",
+    "creatinine test in Varanasi",
+    "bilirubin test Varanasi",
+    "urine microalbumin test Varanasi",
+    "blood test at home Varanasi"
   ],
   "publishedAt": "2026-09-04",
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-08",
   "order": 70,
-  "readingMinutes": 8,
+  "readingMinutes": 11,
   "takeaways": [
     "Liver aur kidney dono chup rehte hain — jab takleef shuru hoti hai tab tak kaafi hissa beet chuka hota hai.",
     "LFT se 24 ghante pehle sharaab nahi, aur KFT se ek din pehle bahut tez gym nahi — dono number hila dete hain.",
@@ -31,7 +31,7 @@
   "sections": [
     {
       "id": "lft-kft-kya-hain",
-      "heading": "LFT Aur KFT — Do Chup Rehne Wale Ang Ki Jaanch",
+      "heading": "LFT Aur KFT Test Kya Hota Hai — Aur Varanasi Me Kaun Karata Hai",
       "blocks": [
         "Liver aur kidney me ek baat common hai: dono me dard nahi hota. Jab tak koi lakshan saamne aata hai — peelapan, sujan, peshab ka kam hona, bahut thakan — tab tak kaafi kuch ho chuka hota hai. Isliye in dono ki jaanch takleef par nahi, sthiti par ki jaati hai: sugar hai, BP hai, dawa lambe samay se chal rahi hai, ya saal ka routine checkup hai.",
         "Doosri baat jo confusion paida karti hai: KFT aur RFT ek hi cheez hain — Kidney Function Test aur Renal Function Test. Lab alag naam se likh sakti hai; parche par jo likha hai wahi booking me daaliye.",
@@ -54,7 +54,7 @@
     },
     {
       "id": "lft-test-varanasi-kya-aata-hai",
-      "heading": "LFT Test In Varanasi — Liver Function Test Me Kya-Kya Aata Hai",
+      "heading": "LFT Test Me Kya-Kya Hota Hai — Liver Function Test Ki Poori List",
       "lead": "Ek panel, chhe-saat number — aur har ek alag baat kehta hai.",
       "blocks": [
         "Liver Function Test ek akela test nahi, ek panel hai. Usme enzyme bhi hote hain aur liver ka banaya hua protein bhi, aur doctor unhe ek saath padhta hai — akela ek number kam hi kuch batata hai.",
@@ -100,7 +100,7 @@
     },
     {
       "id": "peelapan-aur-paani-varanasi",
-      "heading": "Peelapan Aur Paani — Varanasi Me Liver Ki Jaanch Kis Mausam Me Badhti Hai",
+      "heading": "Varanasi Me Peelapan (Jaundice) Ho To Kaun Sa Test Pehle Karayein",
       "blocks": [
         "Varanasi ka apna ek pattern hai. Paani se failne wale Hepatitis A aur Hepatitis E garmi me aur monsoon ke baad badh jaate hain, khaas kar un ilaakon me jahan peene ka paani aur sewage line paas-paas chalti hain. Isliye is sheher me peelapan dikhne par LFT akela nahi karaya jaata — uske saath Hepatitis A IgM aur Hepatitis E IgM bhi dekhe jaate hain.",
         {
@@ -128,7 +128,7 @@
     },
     {
       "id": "kft-test-varanasi-kya-dekha-jaata-hai",
-      "heading": "KFT Test In Varanasi — Kidney Function Test Me Kya Dekha Jaata Hai",
+      "heading": "KFT Test Me Kya-Kya Hota Hai — Kidney Function Test Ki Poori List",
       "blocks": [
         "Kidney Function Test bhi ek panel hai. Ismein wo cheezein naapi jaati hain jo kidney ko sharir se bahar nikalni hoti hain, aur wo namak jinka santulan kidney rakhti hai.",
         {
@@ -176,8 +176,130 @@
       ]
     },
     {
+      "id": "lft-kft-normal-range",
+      "heading": "LFT Aur KFT Ki Normal Range Kya Hoti Hai",
+      "lead": "Report par har number ke saath uski range chhapi hoti hai. Ye rahi wo aam range, taaki report kholte hi samajh aa jaye ki kis number ko dekhna hai.",
+      "blocks": [
+        "Sabse zyada pucha jaane wala sawaal yahi hota hai — \"mera SGPT 62 hai, ye kitna zyada hai?\" Neeche di gayi range balig (adult) logon ke liye aam range hai. Ise samajhne ke liye rakhi gayi hai, apna ilaaj tay karne ke liye nahi.",
+        {
+          "table": {
+            "caption": "LFT — aam reference range (adult)",
+            "head": [
+              "Test",
+              "Aam range",
+              "Kis taraf jaana matlab rakhta hai"
+            ],
+            "rows": [
+              [
+                "Total Bilirubin",
+                "0.3 – 1.2 mg/dL",
+                "Badhna. 2.5 se upar jaate hi aankh aur peshab me peelapan dikhne lagta hai."
+              ],
+              [
+                "Direct Bilirubin",
+                "0.0 – 0.3 mg/dL",
+                "Total ke saath padha jaata hai — dono me se kaun sa badha hai, ye wajah batata hai."
+              ],
+              [
+                "SGPT / ALT",
+                "Lagbhag 7 – 45 U/L",
+                "Badhna. Liver cell ka sabse seedha enzyme."
+              ],
+              [
+                "SGOT / AST",
+                "Lagbhag 8 – 40 U/L",
+                "Badhna. Muscle se bhi aata hai, isliye SGPT ke saath padha jaata hai."
+              ],
+              [
+                "Alkaline Phosphatase",
+                "Lagbhag 40 – 130 U/L",
+                "Badhna. Bachchon aur kishoron me kudrati taur par zyada hoti hai."
+              ],
+              [
+                "Total Protein",
+                "6.0 – 8.3 g/dL",
+                "Ghatna. Lambe samay ki haalat ka andaza."
+              ],
+              [
+                "Albumin",
+                "3.5 – 5.2 g/dL",
+                "Ghatna. Sujan aur lambi bimari me girta hai."
+              ],
+              [
+                "GGT",
+                "Lagbhag 8 – 60 U/L",
+                "Badhna. Bile ke raaste aur sharaab dono se juda."
+              ]
+            ]
+          }
+        },
+        {
+          "table": {
+            "caption": "KFT — aam reference range (adult)",
+            "head": [
+              "Test",
+              "Aam range",
+              "Kis taraf jaana matlab rakhta hai"
+            ],
+            "rows": [
+              [
+                "Creatinine",
+                "Purush 0.7 – 1.3 mg/dL, mahila 0.6 – 1.1 mg/dL",
+                "Badhna. Mahilaon me kudrati taur par kam hota hai — muscle kam hone ki wajah se."
+              ],
+              [
+                "Urea",
+                "Lagbhag 15 – 40 mg/dL",
+                "Badhna. Paani ki kami se bhi badh jaata hai."
+              ],
+              [
+                "Uric Acid",
+                "Purush 3.5 – 7.2 mg/dL, mahila 2.6 – 6.0 mg/dL",
+                "Badhna. Jodo ke dard se juda."
+              ],
+              [
+                "Sodium",
+                "135 – 145 mmol/L",
+                "Dono taraf. Ulti-dast aur diuretic dawa me sabse pehle hilta hai."
+              ],
+              [
+                "Potassium",
+                "3.5 – 5.1 mmol/L",
+                "Dono taraf. Ye wo number hai jiska bahut zyada ya bahut kam hona intezaar nahi maangta."
+              ],
+              [
+                "eGFR",
+                "90 se upar",
+                "Ghatna. 60 se neeche aane par doctor ko dikhana zaroori hai."
+              ],
+              [
+                "Urine Microalbumin (ACR)",
+                "30 mg/g se kam",
+                "Badhna. Sugar aur BP me kidney ka sabse pehla ishaara yahi deta hai."
+              ]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Aapki report par chhapi range hi final hai",
+            "text": "Har lab ka analyser aur method thoda alag hota hai, isliye reference range bhi thodi alag chhapti hai — aur wahi range aapke number par lagti hai, upar wali nahi. Umar, gender, pregnancy aur chal rahi dawa se bhi range badal jaati hai. Isliye report ke saath chhapi range padhiye, aur number ka matlab doctor se hi nikalwaiye.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Thoda sa range se bahar hona bahut aam hai — kaise pata chale ki kaunsa flag intezaar kar sakta hai aur kaunsa nahi, wo poora hissa ",
+          {
+            "text": "report kaise padhein wale section",
+            "href": "/blogs/lab-test/varanasi#report-kaise-padhein"
+          },
+          " me alag se likha hai."
+        ]
+      ]
+    },
+    {
       "id": "sugar-bp-wale-kft-kyun",
-      "heading": "Sugar Ya BP Ki Dawa Chal Rahi Hai — KFT Saal Me Ek Baar Kyun",
+      "heading": "Sugar Ya BP Hai To Kidney Ka Kaun Sa Test Karayein, Kitni Baar",
       "lead": "Kidney par asar sabse pehle peshab me dikhta hai, khoon me nahi.",
       "blocks": [
         "Diabetes aur high BP — dono kidney par dheere-dheere asar daalte hain, aur wo asar shuruaat me creatinine me nahi dikhta. Sabse pehla ishaara peshab me thoda sa protein aana hota hai, aur wahi urine microalbumin pakadta hai. Ye us stage par pata chalta hai jab abhi bahut kuch kiya ja sakta hai — aur yahi wo test hai jo log sabse zyada chhodte hain, kyunki usme koi takleef nahi hoti.",
@@ -240,7 +362,7 @@
     },
     {
       "id": "dawa-sharaab-aur-nuskhe",
-      "heading": "Dawa, Sharaab Aur Bina Label Wale Nuskhe — Test Se Pehle Batane Wali Baatein",
+      "heading": "LFT Test Se Pehle Kya Nahi Karna Chahiye — Sharaab, Dawa, Gym",
       "blocks": [
         "Report padhne wale doctor ke liye sabse kaam ki jaankari wo hoti hai jo report par nahi likhi hoti: aap kya-kya le rahe hain. Liver aur kidney dono wahi ang hain jo sharir me aayi har cheez ko sambhaalte hain, isliye unke number us cheez se hilte hain.",
         {
@@ -264,9 +386,51 @@
     },
     {
       "id": "taiyari-aur-ghar-se-sample",
-      "heading": "Varanasi Me LFT Aur KFT Ghar Se Kaise Hote Hain",
+      "heading": "LFT KFT Test Se Pehle Fasting Lagti Hai? Aur Report Kitne Din Me",
       "blocks": [
         "Dono sample par hone wale test hain, isliye dono ghar par ho jaate hain. Urine routine bhi saath ho to sample ka container pehle se de diya jaata hai — subah ka pehla peshab sabse achha maana jaata hai.",
+        {
+          "table": {
+            "caption": "LFT aur KFT — fasting, sample aur report ka samay",
+            "head": [
+              "Baat",
+              "LFT",
+              "KFT"
+            ],
+            "rows": [
+              [
+                "Fasting",
+                "Akela ho to zaroori nahi",
+                "Akela ho to zaroori nahi"
+              ],
+              [
+                "Package ya lipid ke saath",
+                "10–12 ghante fasting",
+                "10–12 ghante fasting"
+              ],
+              [
+                "Sample",
+                "Khoon (nas se)",
+                "Khoon; urine routine saath ho to peshab bhi"
+              ],
+              [
+                "Ghar par ho sakta hai",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "Report",
+                "24 ghante ke andar, PDF phone par",
+                "24 ghante ke andar; urine culture ho to 48–72 ghante"
+              ],
+              [
+                "Sabse behtar slot",
+                "Subah 6 baje se",
+                "Subah 6 baje se — urine ka pehla sample bhi tabhi"
+              ]
+            ]
+          }
+        },
         {
           "list": [
             "Akela LFT ya KFT karana ho to fasting zaroori nahi. Package ya lipid ke saath ho raha ho to 10 se 12 ghante fasting lagegi.",
@@ -290,11 +454,12 @@
           },
           " me hai."
         ]
-      ]
+      ],
+      "lead": "Chhota jawab: akela LFT ya KFT ho to fasting nahi lagti. Package ke saath ho to lagti hai."
     },
     {
       "id": "report-aa-gayi-lft-kft",
-      "heading": "Report Aa Gayi — Ab Kya, Aur Dobara Kab",
+      "heading": "LFT KFT Report Kaise Padhein — Aur Dobara Test Kab Karayein",
       "blocks": [
         "In dono panel me akela ek number kam hi kuch batata hai. Doctor poora panel ek saath padhta hai, aur usse zyada wo purani report se tulna karta hai. Isliye do cheezein sabse kaam ki hain: purani report sambhaal kar rakhna, aur follow-up ek hi lab me karana.",
         {
@@ -317,7 +482,7 @@
     },
     {
       "id": "aage-kya-karein-lft-kft",
-      "heading": "Chhoti Si Checklist",
+      "heading": "LFT Aur KFT Karane Se Pehle Chhoti Si Checklist",
       "blocks": [
         {
           "list": [
@@ -382,6 +547,22 @@
     {
       "question": "Uric acid ka test KFT me aata hai ya alag hota hai?",
       "answer": "Aam taur par uric acid KFT panel ka hissa hota hai, lekin har lab ka panel bilkul ek jaisa nahi hota — isliye booking ke waqt confirm kar lijiye ki panel me kya-kya shamil hai. Jodo me dard, khaas kar paer ke angoothe me, uric acid dekhne ki sabse aam wajah hoti hai. Test se ek din pehle bahut zyada protein wala khaana aur sharaab dono number badha dete hain."
+    },
+    {
+      "question": "SGPT ki normal range kitni hoti hai?",
+      "answer": "Aam taur par SGPT (ALT) ki range lagbhag 7 se 45 U/L ke beech chhapti hai, aur SGOT (AST) ki 8 se 40 U/L. Lekin har lab ka analyser alag hota hai, isliye aapki report par jo range chhapi hai wahi aapke number par lagti hai. Ek baat aur — SGPT thoda sa badha hua hona bahut aam hai. Ek shaam ki sharaab, koi dawa, ya bhaari khaana bhi ise hila deta hai. Isliye doctor akela number nahi, poora panel aur purani report ek saath padhta hai."
+    },
+    {
+      "question": "Creatinine kitna hona chahiye, aur badha hua ho to kya karein?",
+      "answer": "Purushon me lagbhag 0.7 se 1.3 mg/dL aur mahilaon me 0.6 se 1.1 mg/dL aam range hai — mahilaon me kudrati taur par kam hota hai. Badha hua dikhe to pehle ye dekhiye ki sample dete waqt paani ki kami to nahi thi, ya ek din pehle bahut tez gym to nahi kiya tha; dono se creatinine jhootha badha dikhta hai. Report par eGFR bhi chhapta hai — wo 60 se neeche ho to intezaar mat kijiye, doctor ko dikhaiye."
+    },
+    {
+      "question": "LFT aur KFT ek saath karana chahiye ya alag-alag?",
+      "answer": "Doctor ke parche par jo likha hai wahi karaiye. Lekin ek saath karane ka ek practical faayda hai: dono ek hi baar nas se liye gaye khoon se ho jaate hain, isliye do baar sui lagne ki zaroorat nahi padti aur report bhi ek saath aati hai. Sugar ya BP ki dawa chal rahi hai to saal me ek baar dono karana aam salah hai — diabetes me fatty liver bhi aam hai aur kidney par asar bhi."
+    },
+    {
+      "question": "Varanasi me LFT KFT ka sample ghar se kab tak liya ja sakta hai?",
+      "answer": "Subah 6 baje se slot shuru hote hain, aur fasting wale case me pehla slot hi sabse aasan padta hai — sample ke turant baad naashta ho jaata hai. Poore Varanasi me home collection free hai, aur phlebotomist ID card ke saath aata hai. Payment sample ke waqt cash ya UPI se hota hai. Urine routine bhi saath karana ho to container pehle se de diya jaata hai, kyunki subah ka pehla peshab sabse achha maana jaata hai."
     }
   ],
   "relatedLinks": {
