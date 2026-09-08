@@ -1,42 +1,48 @@
 {
-  "title": "Salempur Me Ghar Par Blood Test Kaise Karayein",
-  "description": "Salempur me blood test at home — free sample collection kaise hoti hai, visit ke din kya hota hai, gaon ka pata kaise likhein aur slot kaise chunein.",
+  "title": "Blood Test At Home In Salempur — Free Sample Collection",
+  "description": "Salempur me ghar par blood test — free home sample collection, visit me kitna time, fasting ka slot, gaon ka pata kaise likhein aur report kab aati hai.",
   "keywords": [
-    "Blood test at home in Salempur",
-    "Best lab test at home free sample collection in Salempur",
-    "Home sample collection Salempur",
-    "Free home sample collection lab Salempur",
-    "Ghar par blood test Salempur",
-    "Trusted diagnostic center with home visit in Salempur",
-    "Blood sample collection at home Salempur",
-    "Pathology lab home visit Salempur",
-    "Bujurgon ka blood test ghar par Salempur",
-    "Bachche ka blood test Salempur",
-    "Lab test in Salempur",
-    "Home collection Bhatni Lar Bhatpar Rani"
+    "blood test at home in Salempur",
+    "home sample collection Salempur",
+    "free home sample collection Salempur",
+    "ghar par blood test Salempur",
+    "blood sample collection at home Salempur",
+    "pathology lab home visit Salempur",
+    "ghar par blood test kaise hota hai",
+    "blood test ke liye khaali pet kitne ghante",
+    "bujurgon ka blood test ghar par",
+    "bachche ka blood test ghar par",
+    "home collection Bhatni Lar Bhatpar Rani",
+    "lab test in Salempur",
+    "full body checkup at home Salempur",
+    "blood test report kitne din me",
+    "mahila phlebotomist home collection"
   ],
   "publishedAt": "2026-09-07",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "order": 30,
-  "readingMinutes": 10,
+  "readingMinutes": 12,
   "takeaways": [
-    "Sample ghar par lene se report par koi farak nahi padta — machine, method aur reference range wahi rehte hain. Farak sirf itna hai ki mareez ko nikalna nahi padta.",
-    "Poori visit lagbhag pandrah minute ki hoti hai, aur usme sabse zyada waqt sui me nahi, pehchan aur label me lagta hai — wahi hissa report ko sahi banata hai.",
-    "Late visit ki sabse badi wajah pata hoti hai, network ya slot nahi. Gaon ka naam kaafi nahi — tola, landmark aur do mobile number likhiye.",
-    "Fasting wale test ke liye subah 6 baje ka pehla slot sabse aasan hai: raat ka khana 9 baje tak, subah sirf saada paani, aur sample ke turant baad naashta.",
-    "Ghar ke kai log ek saath test kara rahe hain to sabka slot ek hi rakhiye — ek hi visit me sabka sample ho jaata hai."
+    "Khoon aur peshab ke sample par hone wale saare test ghar par ho jaate hain — X-ray, ECG aur ultrasound nahi, wo machine par hote hain.",
+    "Home collection free hai. Sample lene ki visit me 10 se 15 minute lagte hain aur confirmation call lagbhag 30 minute me aa jaati hai.",
+    "Fasting sirf fasting sugar, lipid aur package me lagti hai — 10 se 12 ghante. Subah 6 baje ka pehla slot sabse aasan padta hai.",
+    "Gaon ke pate me landmark aur do phone number — visit late hone ki sabse badi wajah yahi do cheezein chhoot jaana hai.",
+    "Ek hi visit me ghar ke chaar-paanch logon ka sample ho jaata hai. Sabki booking ek hi slot par kar dijiye."
   ],
   "sections": [
     {
       "id": "blood-test-at-home-salempur",
-      "heading": "Salempur Me Blood Test At Home — Suvidha Se Zyada, Ek Rukavat Ka Hatna",
-      "lead": "Sawaal ye nahi ki aaram mil raha hai. Sawaal ye hai ki test ho paayega ya nahi.",
+      "heading": "Ghar Par Blood Test Kya Hota Hai — Aur Salempur Me Kis Ke Liye",
+      "lead": "Yahan sawaal suvidha ka hai hi nahi. Sawaal ye hai ki test hoga bhi ya har baar ki tarah taal diya jayega.",
       "blocks": [
         "Ghar se sample lene ka matlab itna hi hai ki jo khoon ya peshab ka sample kisi counter par diya jaata, wo aapke ghar par le liya jaata hai. Sample kahan liya gaya isse report nahi badalti — machine, method aur reference range wahi rehte hain. Isliye ghar par karwane me kuch \"kam\" nahi hota.",
         "Lekin Salempur jaise tehsil me iska asli mol un logon ke liye hai jinke liye kahin pahunchna hi sabse badi rukavat hai. Bujurg jinke ghutne jawab de chuke hain aur bachche bahar kaam karte hain. Bistar par pade mareez. Bukhar me tapta hua aadmi jise bike par bithana hi galat hai. Chhote bachche. Aur wo mahilaein jo bahar jaakar line me lagne ke bajaye test hi taal deti hain. Yahan par ye suvidha nahi hai — kai gharon me ye ekmatra raasta hai.",
         [
           "Home collection ka koi alag charge nahi hai. Jo rate ",
-          { "text": "service page ki rate list", "href": "/lab-test/salempur#lab-test-price-salempur" },
+          {
+            "text": "service page ki rate list",
+            "href": "/lab-test/salempur#lab-test-price-salempur"
+          },
           " par likha hai, wahi dena hota hai — na visiting charge, na travel charge. Chhote kasbe me iska matlab bade sheher se zyada hai: aane-jaane ka dono taraf ka kiraya aur report lene ka doosra chakkar dono bach jaate hain."
         ],
         {
@@ -49,25 +55,103 @@
       ]
     },
     {
+      "id": "kaun-sa-test-ghar-par-ho-jaata-hai-salempur",
+      "heading": "Kaun Sa Test Ghar Par Ho Jaata Hai Aur Kaun Sa Nahi",
+      "lead": "Seedha niyam: jo sample par hota hai wo ghar par ho jaata hai; jo machine par hota hai wo nahi.",
+      "blocks": [
+        "Booking se pehle sabse zyada yahi poochha jaata hai — \"jo parche par likha hai wo ghar par ho jayega?\" Iska jawab ek line ka hai. Khoon ya peshab ka sample le kar jo jaanch hoti hai, wo poori ki poori ghar par ho jaati hai. Jismein mareez ko machine ke saamne hona zaroori hai, wo ghar par nahi hoti — aur wo humare menu me hai bhi nahi.",
+        {
+          "table": {
+            "caption": "Parche par likha test — ghar par hoga ya nahi",
+            "head": [
+              "Test",
+              "Ghar par?",
+              "Baat dhyaan rakhne wali"
+            ],
+            "rows": [
+              [
+                "CBC, Haemoglobin",
+                "Haan",
+                "Fasting nahi lagti — kisi bhi slot me"
+              ],
+              [
+                "Fasting Sugar, Lipid Profile",
+                "Haan",
+                "10–12 ghante khaali pet; subah ka pehla slot lijiye"
+              ],
+              [
+                "HbA1c",
+                "Haan",
+                "Fasting nahi lagti, kisi bhi waqt"
+              ],
+              [
+                "LFT, KFT",
+                "Haan",
+                "Akele hon to fasting nahi; package ke saath ho to lagti hai"
+              ],
+              [
+                "Thyroid (T3, T4, TSH)",
+                "Haan",
+                "Thyroid ki goli sample ke BAAD lijiye"
+              ],
+              [
+                "Vitamin D, Vitamin B12",
+                "Haan",
+                "Fasting nahi lagti"
+              ],
+              [
+                "Urine Routine, Urine Culture",
+                "Haan",
+                "Container pehle se diya jaata hai; subah ka pehla peshab"
+              ],
+              [
+                "Dengue, Typhoid, Malaria ke test",
+                "Haan",
+                "Bukhar ke kis din test hoga, ye maayne rakhta hai"
+              ],
+              [
+                "Full body checkup package",
+                "Haan",
+                "Poora package ek hi sample par ho jaata hai"
+              ],
+              [
+                "X-ray, ECG, Ultrasound",
+                "Nahi",
+                "Ye machine par hote hain — humare menu me nahi hain"
+              ]
+            ]
+          }
+        },
+        [
+          "Parche par machine wali jaanch bhi likhi ho to uske liye alag jagah jaana hoga; sample wale saare test tab tak ghar par ho jaayenge. Kis shikayat par kaun sa test hota hai, wo ",
+          {
+            "text": "Salempur ki lab test guide",
+            "href": "/blogs/lab-test/salempur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
       "id": "visit-ke-din-kya-hota-hai-salempur",
-      "heading": "Visit Ke Din Kya Hota Hai — Pandrah Minute Ka Poora Hisaab",
-      "lead": "Sui do minute ki hai. Baaki tera minute wo hain jo report ko sahi banate hain.",
+      "heading": "Ghar Par Blood Test Kaise Hota Hai — Visit Ke 15 Minute Ka Hisaab",
+      "lead": "Sui khud do minute ka kaam hai. Baaki pandrah minute wo hain jinse tay hota hai ki report par bharosa kiya ja sakta hai ya nahi.",
       "blocks": [
         "Log sochte hain sample lene wala aaya, sui lagayi aur chala gaya. Asal me visit ka zyadatar waqt un cheezon me jaata hai jo baad me report ki sacchai tay karti hain. Ek baar poora kram dekh lijiye, taaki darwaze par kuch anjaana na lage.",
         {
           "list": [
-            "Pehchan — phlebotomist ID card ke saath aata hai. Aap use dekh sakte hain aur dekhna chahiye; ye aapka haq hai, sankoch ki baat nahi.",
+            "Pehchan — jo aadmi aata hai wo ID card saath laata hai. Use maang kar dekh lena bilkul theek hai, aur dekh lena hi chahiye. Gaon me anjaan aadmi ko ghar me bulana ho to ye pehla kadam hai, jhijhak ki koi baat nahi.",
             "Milaan — kiska test hai, kaunsa test hai, aur booking me kya likha tha. Naam, umar aur test ka milaan yahin hota hai, kyunki reference range umar aur gender par badalti hai. Parcha saamne rakh dijiye.",
             "Taiyaari — haath saaf karna aur dastane. Iske aage sample lene ke saamaan ke baare me kuch bhi poochhna ho to poochh lijiye; poochhna aapka haq hai aur usse koi bura nahi maanta.",
             "Sample — aam blood test me do se teen minute. Alag test ke liye alag rang ki tube hoti hai, isliye ek se zyada tube bharna normal hai; ismein ghabraane wali koi baat nahi.",
-            "Label — tube par usi waqt, aapke saamne naam likha jaata hai. Poore kaam me sabse zaroori kadam yahi hai; galat label ka matlab galat report hai.",
-            "Payment aur parcha — cash ya UPI, wahi rate jo pehle bataya gaya tha. Booking ka number ya slip sambhaal lijiye, report usi se judti hai."
+            "Label — khoon ki tube par naam wahin, aapke saamne likha jaata hai. Ghar me do-teen logon ka sample ek saath ja raha ho to ye kadam sabse zaroori ho jaata hai. Ek tube par galat naam ka matlab hai ek aadmi ki report doosre ke naam par.",
+            "Payment — sample lene ke waqt hi, cash se ya UPI se, aur rate wahi jo call par bataya gaya tha. Booking ka number likh lijiye ya slip rakh lijiye; report usi se jodi jaati hai."
           ]
         },
         {
           "note": {
             "title": "Sui ke baad do minute daabiye, ragadiye mat",
-            "text": "Rui ko sui wali jagah par seedha daba kar do minute rakhiye aur haath seedha rakhiye. Ragadne se aur haath mod lene se hi zyadatar neel padta hai. Us haath se agle kuch ghante bhaari saamaan mat uthaiye. Neel pad bhi jaaye to wo apne aap kuch dinon me chala jaata hai.",
+            "text": "Rui ko upar se seedha dabaiye, do minute, aur haath seedha rakhiye — mod kar mat rakhiye. Neel zyadatar isi do minute me ban-ta hai, ragadne se ya haath mod lene se. Us haath se agle kuch ghante paani ki balti, boora ka bora ya koi bhaari saamaan mat uthaiye. Neel pad bhi jaye to kuch dinon me apne aap chala jaata hai.",
             "tone": "info"
           }
         }
@@ -75,7 +159,7 @@
     },
     {
       "id": "pata-aur-network-salempur",
-      "heading": "Gaon Ka Pata Aur Network — Salempur Me Late Visit Ki Do Asli Wajah",
+      "heading": "Gaon Ka Pata Kaise Likhein — Salempur Me Visit Late Kyun Hoti Hai",
       "lead": "Slot theek hota hai. Atakti wahan hai jahan pata aadha likha jaata hai.",
       "blocks": [
         "Sheher me pata ek line ka hota hai. Yahan nahi. Gaon ka naam akela kaafi nahi hota — ek hi naam ke do gaon paas-paas hone yahan aam baat hai, aur ghar tak ka raasta kisi map par saaf nahi dikhta. Booking bharte waqt paanch minute yahan lagaiye, visit lagbhag hamesha samay par ho jaayegi.",
@@ -91,48 +175,57 @@
         },
         [
           "Confirmation call lagbhag 30 minute me aati hai. Wo call jis number par aani chahiye, wo booking ke waqt bata dijiye — bahar se book kar rahe hain to apne number par bhi karwa sakte hain. Coverage kis-kis kasbe tak hai wo ",
-          { "text": "service page par", "href": "/lab-test/salempur#home-sample-collection-salempur" },
+          {
+            "text": "service page par",
+            "href": "/lab-test/salempur#home-sample-collection-salempur"
+          },
           " likha hai, aur aapka gaon naam se na dikhe to ek ",
-          { "text": "call kar lijiye", "href": "/contact" },
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
           " — cover hota hai to usi waqt slot ban jaayega."
         ]
       ]
     },
     {
       "id": "fasting-slot-ka-ganit-salempur",
-      "heading": "Fasting Wale Test Ka Slot — Khet, Doodh Aur Dukaan Ke Hisaab Se",
-      "lead": "Fasting mushkil isliye nahi hoti ki bhookh lagti hai; isliye hoti hai ki slot der ka le liya jaata hai.",
+      "heading": "Blood Test Ke Liye Khaali Pet Kitne Ghante — Aur Kaunsa Slot",
+      "lead": "Fasting bhookh ki wajah se mushkil nahi hoti. Wo tab mushkil hoti hai jab slot dopahar ka le liya jaye — phir subah se bhookhe baithna padta hai.",
       "blocks": [
-        "Fasting sirf kuch test me lagti hai — fasting sugar, lipid profile, aur zyadatar package (kyunki package me ye dono aa jaate hain). HbA1c, TSH, CBC, Vitamin D aur B12 me fasting bilkul nahi lagti. Ghar par sample lene ka sabse bada fayda yahi hai ki fasting todne ke liye kahin jaana nahi padta — sample ke turant baad naashta ho jaata hai.",
+        "Sabse pehle ek galat-fehmi door kar lijiye: har test ke liye khaali pet rehna zaroori nahi hota. Fasting sirf fasting sugar aur lipid profile me lagti hai, aur isi wajah se zyadatar package me lagti hai — kyunki package me ye dono aa jaate hain. HbA1c, TSH, CBC, Vitamin D aur B12 me bilkul nahi lagti. Ghar par sample dene ka sabse seedha faayda yahi hai ki bhookhe pet kahin nikalna nahi padta — sample uthte hi ho jaata hai aur naashta wahin.",
         "Is ilaake me subah ka slot sheher se bhi zyada kaam ka hai. Khet ka kaam, doodh ka kaam aur dukaan — sab subah shuru ho jaate hain, aur 10-12 ghante khaali pet rehne ke baad koi din bhar bhookha nahi baith sakta. Isliye:",
         {
           "list": [
-            "Subah 6 baje ka pehla slot lijiye. Slot jitna der ka hoga, khaali pet utni der rehni padegi.",
-            "Raat ka khana 9 baje tak kar lijiye — isse 10 se 12 ghante apne aap poore ho jaate hain.",
-            "Beech me sirf saada paani. Chai, doodh, biscuit, toffee ya paan — inme se kuch bhi fasting tod deta hai.",
-            "Paani peete rahiye. Paani ki kami me nas milna mushkil ho jaata hai, aur haemoglobin, urea tatha creatinine jhoothe taur par badhe hue aate hain.",
-            "14 ghante se zyada bhookhe rehna faayda nahi, nuksan karta hai. Zyada fasting achhi report nahi banati.",
+            "Subah 6 baje wala pehla slot hi lijiye. Slot jitna aage khiskega, bhookhe rehne ka waqt utna hi badhega.",
+            "Raat ka khana 9 baje tak nipta lijiye. Subah 6 ya 7 ka slot ho to 10 se 12 ghante ki fasting apne aap poori ho jaati hai — alag se kuch karna nahi padta.",
+            "Beech me sirf saada paani. Subah ki chai, doodh, ek biscuit, gud ka tukda ya paan — inme se koi bhi ek cheez fasting tod deti hai, aur phir sample dobara dena padta hai.",
+            "Paani band mat kijiye. Paani ki kami se do cheezein hoti hain: nas milna mushkil ho jaata hai, aur haemoglobin, urea tatha creatinine jhoothe taur par badhe hue chhapte hain.",
+            "14 ghante se zyada khaali pet rehna ulta nuksan karta hai. \"Jitna zyada khaali pet, utni sahi report\" — ye baat sach nahi hai.",
             "Naashta taiyaar rakhiye — sample ke turant baad kha sakte hain, aur bujurgon aur bachchon ke liye ye zaroori hai.",
-            "Niyamit dawa apne aap band mat kijiye. Booking ke waqt bata dijiye ki kya-kya chal raha hai."
+            "Roz chalne wali dawa apne aap band mat kijiye — sugar, BP, thyroid, koi bhi. Booking ke waqt bata dijiye ki kya-kya chal raha hai, aur kis waqt lete hain."
           ]
         },
         [
           "Sugar me fasting aur PP dono karane hon to do alag sample lagte hain — ek khaali pet, doosra naashte ke theek do ghante baad. Booking ke waqt hi bata dijiye ki dono chahiye, taaki dono ka samay ek saath tay ho jaaye. Kis test me fasting lagti hai aur kisme nahi, ",
-          { "text": "poori baat yahan hai", "href": "/lab-test/salempur#fasting-taiyari-salempur" },
+          {
+            "text": "poori baat yahan hai",
+            "href": "/lab-test/salempur#fasting-taiyari-salempur"
+          },
           "."
         ]
       ]
     },
     {
       "id": "ek-visit-me-poora-ghar-salempur",
-      "heading": "Ek Visit Me Poora Ghar — Salempur Me Sabse Kam Istemal Hone Wala Faayda",
-      "lead": "Ek slot me maa-baap, dada-dadi aur bachche — sabka sample ho jaata hai.",
+      "heading": "Ghar Ke Chaar Log Ek Saath Test Kara Sakte Hain — Ek Hi Visit Me",
+      "lead": "Ek hi slot me pitaji, maaji, dada-dadi aur bachche — sabka sample nipat jaata hai.",
       "blocks": [
         "Ghar me aksar ek se zyada logon ka test bakaya hota hai: pitaji ka sugar ka follow-up, maaji ka thyroid, dadi ka saalana checkup, aur bachche ka CBC. Log inhe alag-alag mahinon me karate hain kyunki purani aadat yahi thi — har test ka matlab ek trip. Ghar par sample lene par ye alag-alag karna bemaani hai.",
         {
           "list": [
-            "Sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaata hai.",
-            "Jinke test me fasting nahi lagti, unhe bhookha rakhne ki zaroorat nahi — sirf fasting wale log khaali pet rahein.",
+            "Sabki booking ek hi slot par kar dijiye, alag-alag mat kijiye. Ek hi visit me sabka sample le liya jaata hai.",
+            "Ghar me sabko bhookha rakhne ki zaroorat nahi. Sirf jinke test me fasting lagti hai wahi khaali pet rahein; baaki naashta kar sakte hain.",
             "Har vyakti ka naam, umar aur test alag likhwaiye. Ek hi ghar ke do logon ke naam milte-julte hon to ye aur zaroori ho jaata hai.",
             "Parcha jiska hai, uska photo alag se bhej dijiye. Ek saath teen parche bhejne par konsa kiska hai, ye likh dena behtar hai.",
             "Report bhi alag-alag PDF me aati hai, har vyakti ke naam se. Unhe ek hi folder me naam aur taareekh ke saath sambhaal lijiye."
@@ -140,45 +233,51 @@
         },
         [
           "Aur agar aap khud bahar kaam karte hain aur ghar walon ka test karana chahte hain — to booking ke liye ghar par hona zaroori nahi hai. Form kahin se bhi bhara ja sakta hai; bas pata, landmark aur wahan maujood kisi ka chalu number chahiye. Payment UPI se aap wahin se kar dete hain, aur report PDF me aapke phone par bhi aa jaati hai. ",
-          { "text": "Iska poora tareeka service page par", "href": "/lab-test/salempur#bahar-se-booking-salempur" },
+          {
+            "text": "Iska poora tareeka service page par",
+            "href": "/lab-test/salempur#bahar-se-booking-salempur"
+          },
           " likha hai."
         ]
       ]
     },
     {
       "id": "bujurg-aur-bistar-par-mareez-salempur",
-      "heading": "Bujurg Aur Bistar Par Pade Mareez — Kya Pehle Bata Dena Chahiye",
-      "lead": "Ye baatein booking ke waqt kaam aati hain, darwaze par nahi.",
+      "heading": "Bistar Par Pade Mareez Ka Blood Test Ghar Par Kaise Hota Hai",
+      "lead": "Ye baatein call par bata dene se kaam banta hai. Darwaze par bataane se der ho chuki hoti hai.",
       "blocks": [
         "Is ilaake ke bahut se gharon me sabse aam mamla yahi hai: bujurg ghar par hain, bachche bahar kaam karte hain, aur test har teen mahine par karana hota hai. Aise mareezon me sample lena thoda alag hota hai, aur phlebotomist us taiyaari ke saath aa sake — iske liye kuch baatein pehle bata deni chahiye.",
         {
           "list": [
             "Mareez bistar par hai, uth nahi sakta ya sahara chahiye — ye sabse zaroori jaankari hai, kyunki sample bistar par hi liya jaayega.",
-            "Nas patli ho chuki hai, ya pehle bhi sui me dikkat aati rahi hai. Pichhli baar kaunsa haath chala tha, ye yaad ho to bata dijiye.",
-            "Khoon patla karne wali dawa chal rahi hai — is haalat me dabav thoda zyada der rakhna padta hai.",
+            "Nas patli pad chuki hai, ya pehle bhi sui lagane me dikkat aati rahi hai. Pichhli baar kis haath se sample nikla tha — itna yaad ho to bata dijiye, kaam bahut aasan ho jaata hai.",
+            "Khoon patla karne wali dawa chal rahi ho to bata dijiye — us halat me sui wali jagah par dabav do minute se thoda zyada der rakhna padta hai.",
             "Paralysis, fracture ya kisi ek haath me dikkat — doosra haath istemal hoga, ye pehle se pata hona chahiye.",
-            "Sunayi kam deta hai ya yaadasht ki dikkat hai — ghar ka koi vyakti paas rahe, taaki milaan aur nirdesh dono aasan rahein.",
+            "Sunayi kam deta ho ya yaadasht kamzor ho to ghar ka koi ek aadmi paas hi rahe — naam milaana aur baat samjhana dono aasan ho jaata hai.",
             "Ek mobile number jo us waqt uthaya ja sake. Aap bahar rehte hain to apna number bhi dijiye aur ye bhi likhiye ki ghar par kaun milega."
           ]
         },
         [
           "Bujurg mareez ko sample se pehle paani pilate rahiye — fasting me bhi saada paani mana nahi hai, aur paani ki kami me nas milna mushkil ho jaata hai. Sugar ya BP ki dawa chal rahi ho to ghar par jaanch ka ek aur faayda hai: jo test chhoot jaate the wo ab nahi chhootte. ",
-          { "text": "Saal bhar ka wo chhota routine yahan likha hai", "href": "/blogs/lab-test/salempur#sugar-follow-up-salempur" },
+          {
+            "text": "Saal bhar ka wo chhota routine yahan likha hai",
+            "href": "/blogs/lab-test/salempur#sugar-follow-up-salempur"
+          },
           "."
         ]
       ]
     },
     {
       "id": "bachche-aur-mahilaayein-salempur",
-      "heading": "Bachche Aur Mahilaayein — Do Log Jinke Test Sabse Zyada Taale Jaate Hain",
+      "heading": "Bachche Ka Blood Test Ghar Par — Aur Mahila Phlebotomist Ki Request",
       "lead": "Dono ke liye ghar par sample lena sabse bada farak daalta hai, aur dono baar wajah alag hai.",
       "blocks": [
-        "Bachche ka test ghar par hone ka sabse bada fayda yahi hai ki wo apni jagah par, apne logon ke beech rehta hai. Kuch chhoti baatein visit ko bahut aasan bana deti hain.",
+        "Bachche ke liye ghar par sample dene ka faayda seedha hai: wo apne aangan me, apne logon ke beech rehta hai — na lab ki kataar, na anjaan kamra. Chaar chhoti baatein visit ko kaafi aasan bana deti hain.",
         {
           "list": [
-            "Bachche ko pehle se dara kar mat rakhiye, lekin jhooth bhi mat boliye ki \"kuch nahi hoga\". Itna kehna kaafi hai ki thodi der ke liye chubhega.",
-            "Bachcha kisi ki god me ho — maa ya pita ki. Lita kar zabardasti pakadne se kaam mushkil hota hai.",
-            "Sample se pehle paani ya doodh, bashart ki test me fasting na ho. Zyadatar bachchon ke test — CBC, vitamin, thyroid — me fasting nahi lagti.",
+            "Bachche se ye mat kahiye ki \"kuch nahi hoga\" — ek baar jhooth pakda gaya to agli baar wo paas bhi nahi aayega. Itna keh dena kaafi hai ki ek pal ke liye chubhega, bas.",
+            "Bachche ko kisi ki god me bithaiye — maa ya pita ki. Zameen par lita kar chaar log pakdenge to kaam aur mushkil ho jaata hai.",
+            "Sample se thodi der pehle paani ya doodh de dijiye — bashart ki test me fasting na lagti ho. Bachchon ke zyadatar test me lagti bhi nahi: CBC, vitamin aur thyroid, teenon me nahi.",
             "Bachche ke test me khoon bahut kam matra me liya jaata hai, aur umar ke hisaab se. Ghar sabse zyada ghabrata isi baat par hai, aur zaroorat sabse kam ismein hoti hai.",
             "Sui ke baad do minute dabaiye, phir bachche ko kuch khila dijiye — dhyaan hat jaata hai aur kamzori bhi nahi lagti."
           ]
@@ -186,28 +285,59 @@
         "Mahilaon ke liye wajah alag hai, aur wo aksar boli nahi jaati. Ghar ka kaam chhod kar nikalna, kisi ke saath jaana padna, bazaar me line me lagna — inme se koi bhi apne aap me bada kaam nahi lagta, lekin inhi ki wajah se test saalon tak taala jaata hai. Khoon ki kami, thyroid aur Vitamin D — teenon me mahilaon aur kishori ladkiyon me sabse zyada kami nikalti hai, aur teenon me fasting bhi nahi lagti. Ghar par ye das minute ka kaam hai, aur kisi ke saath jaane ki zaroorat nahi.",
         [
           "Mahila phlebotomist ki request booking ke waqt likh li jaati hai, lekin uska vaada nahi kiya jaata — jo vaada nibhaya na ja sake, wo darwaze par tootta hai. Thakan, khoon ki kami aur vitamin par kaun sa test kaam ka hai, ",
-          { "text": "wo yahan likha hai", "href": "/blogs/lab-test/salempur#vitamin-d-b12-test-salempur" },
+          {
+            "text": "wo yahan likha hai",
+            "href": "/blogs/lab-test/salempur#vitamin-d-b12-test-salempur"
+          },
           "."
         ]
       ]
     },
     {
       "id": "kuch-galat-ho-jaye-to-salempur",
-      "heading": "Nas Nahi Mili, Chakkar Aa Gaya — Jo Ho Sakta Hai Aur Uska Kya Kiya Jaata Hai",
-      "lead": "Ye kam hota hai, lekin hota hai. Pehle se pata ho to ghabrahat nahi hoti.",
+      "heading": "Nas Na Mile Ya Chakkar Aa Jaye To Kya Hota Hai",
+      "lead": "Aisa rozana nahi hota, lekin kabhi-kabhi hota hai. Pehle se pata rahe to us waqt ghabrahat nahi hoti.",
       "blocks": [
-        "Sample lena ek chhota lekin asli kaam hai, aur usme kuch cheezein ho sakti hain. Inhe chhipaane ka koi matlab nahi — ulta, pehle se pata hona hi sabse bada aaram hai.",
+        "Sample lena chhota kaam hai, par hai asli kaam — aur usme kabhi-kabhi cheezein ulti bhi padti hain. Inhe chhupane ka koi faayda nahi. Ulta, jo pehle se jaan leta hai wahi us waqt sabse shaant rehta hai.",
         {
           "table": {
             "caption": "Ghar par sample lete waqt jo ho sakta hai",
-            "head": ["Kya hua", "Kyun hota hai", "Kya kiya jaata hai"],
+            "head": [
+              "Kya hua",
+              "Kyun hota hai",
+              "Kya kiya jaata hai"
+            ],
             "rows": [
-              ["Pehli baar me nas nahi mili", "Patli nas, thand, ya paani ki kami", "Doosra haath dekha jaata hai; do koshish ke baad rukna hi theek hai, phir slot dobara tay hota hai"],
-              ["Neel pad gaya", "Sui ke baad ragadna ya dabav na rakhna", "Kuch dinon me apne aap chala jaata hai; us haath se bhaari kaam mat kijiye"],
-              ["Chakkar ya ghabrahat", "Khaali pet, garmi, ya sui ka dar", "Lita diya jaata hai, pair thode uthaye jaate hain, aur paani ya kuch meetha diya jaata hai"],
-              ["Ek se zyada tube bhari gayi", "Alag test ke liye alag rang ki tube hoti hai", "Ye normal hai — matra phir bhi bahut kam rehti hai"],
-              ["Sample dobara maanga gaya", "Sample kam pad gaya, ya us test ki shart poori nahi hui", "Dobara sample liya jaata hai; iska koi alag charge nahi hota"],
-              ["Slot par koi nahi pahuncha", "Aksar pata na milna ya phone na lagna", "Call karke naya samay tay hota hai — isliye do number aur landmark dena itna zaroori hai"]
+              [
+                "Pehli baar me nas nahi mili",
+                "Patli nas, thand, ya paani ki kami",
+                "Doosra haath dekha jaata hai. Do koshish ke baad ruk jaana hi sahi hai — phir naya slot tay kiya jaata hai"
+              ],
+              [
+                "Neel pad gaya",
+                "Sui ke baad ragadna ya dabav na rakhna",
+                "Kuch din me apne aap chala jaata hai — tab tak us haath se bhaari kaam mat kijiye"
+              ],
+              [
+                "Chakkar ya ghabrahat",
+                "Khaali pet, garmi, ya sui ka dar",
+                "Wahin lita diya jaata hai, pair thode uper kiye jaate hain, aur paani ya kuch meetha diya jaata hai"
+              ],
+              [
+                "Ek se zyada tube bhari gayi",
+                "Alag test ke liye alag rang ki tube hoti hai",
+                "Ye normal hai — matra phir bhi bahut kam rehti hai"
+              ],
+              [
+                "Sample dobara maanga gaya",
+                "Sample kam pad gaya, ya us test ki shart poori nahi hui",
+                "Naya sample liya jaata hai, aur uska koi alag paisa nahi lagta"
+              ],
+              [
+                "Slot par koi nahi pahuncha",
+                "Aksar pata na milna ya phone na lagna",
+                "Call karke naya waqt tay kiya jaata hai — isi liye do number aur landmark maanga jaata hai"
+              ]
             ]
           }
         },
@@ -216,49 +346,70 @@
     },
     {
       "id": "sample-ke-baad-salempur",
-      "heading": "Sample Ke Baad — Report Kab, Kahan Aur Use Sambhalna Kaise Hai",
+      "heading": "Blood Test Ki Report Kitne Din Me Aati Hai — Aur Kahan",
       "lead": "Sample chala gaya, ab aapka kaam sirf ek hai: report ko dhoondhne layak rakhna.",
       "blocks": [
         "Sample lene ke baad wo usi din processing ke liye bhej diya jaata hai, aur report 24 ghante ke andar PDF me aati hai — WhatsApp aur email par. Kaagaz ki copy ke intezaar me kahin jaane ki zaroorat nahi; PDF wahi report hai jo doctor ko dikhani hai.",
         {
           "list": [
-            "Report aate hi header milaiye — naam, umar, gender aur test. Galat header ka matlab galat matlab.",
+            "Report kholte hi sabse pehle upar ka hissa milaiye — naam, umar, gender aur test ka naam. Ghar me do logon ka sample ek saath gaya ho to ye milaan aur zaroori ho jaata hai.",
             "PDF ko WhatsApp me pada mat chhodiye. Phone ki gallery ya ek folder me, naam aur taareekh ke saath sambhaal lijiye.",
-            "Purani report ke saath rakhiye. Ek report ek photo hai; do report ek disha hain, aur doctor disha dekhta hai.",
+            "Nayi report purani ke saath hi rakhiye. Ek akeli report ek pal ki tasveer hai; do report ek raasta dikhati hain — aur doctor raasta dekhta hai, pal nahi.",
             "Bahar rehte hain to report ghar par bhi bhej dijiye — ya print karwa kar rakhwa dijiye, taaki doctor ko dikhate waqt haath me ho.",
             "Report par kuch samajh na aaye to andaza mat lagaiye. Doctor ko dikhaiye — ye guide test samajhne ke liye hai, ilaaj tay karne ke liye nahi."
           ]
         },
         [
           "Report ka header kaise padha jaata hai aur usme kya-kya dekhna chahiye, ",
-          { "text": "us par alag hissa hai", "href": "/blogs/pathology-lab/salempur#report-header-salempur" },
+          {
+            "text": "us par alag hissa hai",
+            "href": "/blogs/pathology-lab/salempur#report-header-salempur"
+          },
           ". Aur agli baar ka test kis mahine banta hai, ye ",
-          { "text": "lab test guide ki umar wali table", "href": "/blogs/lab-test/salempur#umar-ke-hisaab-se-salempur" },
+          {
+            "text": "lab test guide ki umar wali table",
+            "href": "/blogs/lab-test/salempur#umar-ke-hisaab-se-salempur"
+          },
           " se tay kar lijiye."
         ]
       ]
     },
     {
       "id": "aage-kya-karein-home-collection-salempur",
-      "heading": "Aage Kya Karein",
+      "heading": "Salempur Me Ghar Par Blood Test Kaise Book Karein",
       "blocks": [
         [
           "Test tay hai to ",
-          { "text": "Salempur ka service page", "href": "/lab-test/salempur" },
+          {
+            "text": "Salempur ka service page",
+            "href": "/lab-test/salempur"
+          },
           " kholiye aur form bhar dijiye — pata, landmark aur do number likhna mat bhooliye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
         ],
         [
           "Test tay nahi hai to pehle ",
-          { "text": "Salempur ki lab test guide", "href": "/blogs/lab-test/salempur" },
+          {
+            "text": "Salempur ki lab test guide",
+            "href": "/blogs/lab-test/salempur"
+          },
           " padh lijiye. Saal ka routine karana ho to ",
-          { "text": "full body checkup wali guide", "href": "/blogs/full-body-checkup/salempur" },
+          {
+            "text": "full body checkup wali guide",
+            "href": "/blogs/full-body-checkup/salempur"
+          },
           ", aur sample kahan jaata hai ye samajhna ho to ",
-          { "text": "pathology lab wali guide", "href": "/blogs/pathology-lab/salempur" },
+          {
+            "text": "pathology lab wali guide",
+            "href": "/blogs/pathology-lab/salempur"
+          },
           " dekh lijiye."
         ],
         [
           "Gaon cover hota hai ya nahi, ya mareez ki haalat batani hai — ",
-          { "text": "call kar lijiye", "href": "/contact" },
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
           ". Booking se pehle ye ek call sabse zyada waqt bachati hai."
         ]
       ]
@@ -296,6 +447,26 @@
     {
       "question": "Ek hi visit me ghar ke chaar logon ka test ho sakta hai?",
       "answer": "Haan. Sabki booking ek hi slot me kar dijiye aur har vyakti ka naam, umar aur test alag likhwaiye. Jinke test me fasting nahi lagti unhe bhookha rakhne ki zaroorat nahi — sirf fasting wale log khaali pet rahein. Report har vyakti ki alag PDF me aati hai."
+    },
+    {
+      "question": "Ghar par blood test kaise hota hai — poora tarika kya hai?",
+      "answer": "Form bharne ya call karne ke baad lagbhag 30 minute me confirmation call aati hai, jisme slot aur pata pakka kiya jaata hai. Tay samay par phlebotomist ID card ke saath ghar aata hai, naam aur test milaata hai, sample leta hai, aur tube par naam wahin aapke saamne likhta hai. Poori visit me 10 se 15 minute lagte hain. Payment sample lene ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar PDF me phone par aa jaati hai."
+    },
+    {
+      "question": "Blood test ke liye khaali pet kitne ghante rehna padta hai?",
+      "answer": "Jin test me fasting lagti hai unke liye 10 se 12 ghante. Lekin har test me nahi lagti — sirf fasting sugar, lipid profile aur zyadatar package me lagti hai. CBC, HbA1c, thyroid, Vitamin D aur B12 me bilkul nahi lagti. Raat ka khana 9 baje tak kar lijiye aur subah 6 ya 7 ka slot lijiye; itne me 10 se 12 ghante apne aap poore ho jaate hain. Beech me saada paani peete rahiye — wo fasting nahi todta. 14 ghante se zyada bhookhe rehna faayda nahi karta."
+    },
+    {
+      "question": "Salempur me ghar se sample dene par report kitne din me aati hai?",
+      "answer": "Zyadatar test ki report 24 ghante ke andar PDF me phone par aa jaati hai — CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid, vitamin aur urine routine sab isme. Sirf culture wale test alag hain; urine ya blood culture me 48 se 72 ghante lagte hain, kyunki culture ko badhne ka samay dena padta hai. Report WhatsApp ya email par milti hai, isliye Deoria ya Gorakhpur me dikhana ho to print le kar chalna zaroori nahi."
+    },
+    {
+      "question": "Bhatni, Lar ya Bhatpar Rani se bhi ghar par sample liya jaata hai?",
+      "answer": "Haan, Salempur ke aas-paas ke kasbon aur gaon se sample liya jaata hai, aur home collection ka koi alag charge nahi judta — door hone ki wajah se bhi nahi. Booking me pata landmark ke saath likhiye: gaon ka naam, sabse paas ka school, mandir, bank ya chauraha, aur do phone number. Gaon ke pate me landmark hi sabse tez tarika hota hai, aur visit late hone ki sabse aam wajah yahi cheez chhoot jaana hai."
+    },
+    {
+      "question": "Kya poora full body checkup bhi ghar par ho sakta hai?",
+      "answer": "Haan. Poora package ek hi baar nas se liye gaye khoon par ho jaata hai — har test ke liye alag sui nahi lagti. Urine routine bhi package me ho to container pehle se de diya jaata hai, aur subah ka pehla peshab sabse achha maana jaata hai. Package me lipid aur fasting sugar hote hain, isliye 10 se 12 ghante khaali pet rehna padega — subah 6 baje ka slot lijiye, sample ke turant baad naashta ho jaata hai."
     }
   ],
   "relatedLinks": {

@@ -69,9 +69,16 @@
  * Paragraph parts of the form { text, href } render as in-prose links (see
  * LabContent). Every href must be a route that exists:
  *   /lab-test/{deoria,varanasi}            (src/data/lab/cities.js)
- *   /blogs/lab-test/varanasi  + anchors    (content/blogs/varanasi/)
- *   /blogs/full-body-checkup/varanasi      (content/blogs/varanasi/)
+ *   /blogs/lab-test/gorakhpur + anchors    (content/blogs/gorakhpur/)
+ *   /blogs/full-body-checkup/gorakhpur     (content/blogs/gorakhpur/)
+ *   /blogs/home-sample-collection/gorakhpur + anchor
  *   /contact
+ *
+ * These used to point at the Varanasi guides, because when this page was
+ * written Varanasi was the only town with any. Gorakhpur has its own set now,
+ * and a Gorakhpur page linking a reader to a Varanasi guide sends them
+ * somewhere that names the wrong town in every heading — while leaving this
+ * town's own guides with almost nothing pointing at them.
  *
  * The /medicine-delivery/deoria link that used to sit in the reports section
  * is gone: that section is retired and the URL now 308s (see next.config.mjs).
@@ -83,12 +90,12 @@
    than as a silent 404 in production. */
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_VARANASI = "/lab-test/varanasi";
-const GUIDE_WHICH_TEST = "/blogs/lab-test/varanasi";
-const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
-const GUIDE_FEVER_DAYS = "/blogs/lab-test/varanasi#bukhar-me-test-ka-din";
-const GUIDE_FASTING = "/blogs/lab-test/varanasi#fasting-aur-taiyari";
-const GUIDE_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
-const GUIDE_AGE = "/blogs/lab-test/varanasi#umar-ke-hisaab-se-test";
+const GUIDE_WHICH_TEST = "/blogs/lab-test/gorakhpur";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/gorakhpur";
+const GUIDE_FEVER_DAYS = "/blogs/lab-test/gorakhpur#bukhar-me-din-gorakhpur";
+const GUIDE_FASTING = "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur";
+const GUIDE_REPORT = "/blogs/lab-test/gorakhpur#report-kya-dekhein-gorakhpur";
+const GUIDE_AGE = "/blogs/lab-test/gorakhpur#umar-ke-hisaab-se-gorakhpur";
 const CONTACT = "/contact";
 
 export const gorakhpurContent = [

@@ -1,25 +1,27 @@
 {
-  "title": "Deoria Me Full Body Checkup Kaise Chunein",
-  "description": "Deoria me full body checkup ka daam kis baat par tay hota hai, kis umar me kaun sa package sahi hai, aur ghar se sample kaise diya jaata hai.",
+  "title": "Full Body Checkup In Deoria — Kaun Se Test Hote Hain",
+  "description": "Deoria me full body checkup me kaun se test hote hain, basic aur advanced package me kya farak hai, khaali pet kitne ghante, aur report kitne din me.",
   "keywords": [
-    "Full Body Checkup in Deoria",
-    "Full Body Checkup Price in Deoria",
-    "Deoria Me Full Body Checkup Kitne Ka Hota Hai",
-    "Health Checkup Package Deoria",
-    "Whole Body Checkup Deoria",
-    "Full Body Test at Home in Deoria",
-    "Annual Health Checkup Deoria",
-    "Family Health Checkup Deoria",
-    "Lab Test in Deoria",
-    "Blood Test at Home in Deoria",
-    "Home Sample Collection Deoria",
-    "Full Body Checkup Deoria Sadar",
-    "Health Checkup Package Rudrapur Barhaj"
+    "full body checkup in Deoria",
+    "full body checkup me kaun se test hote hain",
+    "full body checkup price in Deoria",
+    "Deoria me full body checkup kitne ka hota hai",
+    "health checkup package Deoria",
+    "whole body checkup Deoria",
+    "full body checkup at home Deoria",
+    "full body checkup khaali pet",
+    "full body checkup report kitne din me",
+    "annual health checkup Deoria",
+    "family health checkup Deoria",
+    "blood test at home Deoria",
+    "home sample collection Deoria",
+    "lab test in Deoria",
+    "full body checkup Rudrapur Barhaj Deoria"
   ],
   "publishedAt": "2026-09-02",
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-08",
   "order": 40,
-  "readingMinutes": 10,
+  "readingMinutes": 12,
   "takeaways": [
     "Package ka daam test ki ginti se nahi, us me kaunse test hain isse tay hota hai — 60 saste parameters ek HbA1c ke barabar nahi hote.",
     "Do package tolna ho to ginti mat miliye, soochi milaiye: sugar, kidney, liver, thyroid, lipid aur khoon ki ginti — ye chhah hisse har poore package me hone chahiye.",
@@ -30,7 +32,7 @@
   "sections": [
     {
       "id": "full-body-checkup-deoria-matlab",
-      "heading": "Full Body Checkup Ka Matlab Kya Hai — Aur Deoria Me Log Ise Kab Karate Hain",
+      "heading": "Full Body Checkup Kya Hota Hai — Aur Kis Ke Liye Hota Hai",
       "lead": "Ye ek test nahi, ek soochi hai. Aur soochi hi ise poora ya aadha banati hai.",
       "blocks": [
         "\"Full body checkup\" koi ek jaanch nahi hai. Ye kai test ka ek bandal hai jo ek hi sample se, ek hi baar me ho jaata hai — sugar, kidney, liver, thyroid, cholesterol aur khoon ki ginti jaise hisse milkar ise banate hain. Isi liye do labs ke \"full body checkup\" ek doosre se bilkul alag ho sakte hain, aur dono apne aap ko poora bataate hain.",
@@ -54,7 +56,7 @@
     },
     {
       "id": "full-body-checkup-price-deoria",
-      "heading": "Deoria Me Full Body Checkup Kitne Ka Hota Hai — Daam Kis Baat Par Tay Hota Hai",
+      "heading": "Deoria Me Full Body Checkup Ka Daam Kis Baat Par Tay Hota Hai",
       "lead": "Ginti se nahi. Soochi se.",
       "blocks": [
         "Ye sabse zyada poochha jaane wala sawaal hai, aur iska seedha jawab ye hai: package ka daam is baat par tay hota hai ki us me kaunse test hain — kitne hain, us par nahi. Kuch test sasta padte hain: haemoglobin, blood group, urine routine. Kuch mehnge padte hain kyunki unke liye alag reagent aur alag machine lagti hai: HbA1c, thyroid profile, vitamin D, vitamin B12. Ek package me 60 saste parameters daal kar ginti badhayi ja sakti hai, aur wo phir bhi us package se kamzor rahega jismein 30 test hain lekin unme HbA1c, TSH, KFT aur lipid profile shaamil hain.",
@@ -124,7 +126,7 @@
     },
     {
       "id": "kis-ke-liye-kaun-sa-package-deoria",
-      "heading": "Kis Ke Liye Kaun Sa Package — Umar Aur Kaam Ke Hisaab Se",
+      "heading": "Kis Umar Me Kaun Sa Full Body Checkup Package Karayein",
       "lead": "Ek hi package sabke liye theek nahi hota. Yahan Deoria ke chhah aam mamle hain.",
       "blocks": [
         "Ye aam salah hai, koi vyaktigat salah nahi. Doctor ne aapke liye kuch alag likha ho to wahi chalega — parche ki photo booking ke waqt bhej dijiye aur usi hisaab se panel bana diya jaayega.",
@@ -186,8 +188,112 @@
       ]
     },
     {
+      "id": "full-body-checkup-me-kaun-se-test-deoria",
+      "heading": "Full Body Checkup Me Kaun Se Test Hote Hain — Basic Aur Advanced",
+      "lead": "Ek hi list, do column. Basic me kya-kya aata hai, aur advanced me uske upar kya judta hai.",
+      "blocks": [
+        "Deoria me aam taur par do tarah ke package saamne rakhe jaate hain — ek chhota, ek bada. Naam kuch bhi ho, farak asal me sirf itna hota hai ki upar wali list me se kitni cheezein usme hain. Neeche wahi list hai, dono ke hisaab se.",
+        {
+          "table": {
+            "caption": "Basic aur advanced package — kaun sa test kisme",
+            "head": [
+              "Test",
+              "Ye kya dekhta hai",
+              "Basic",
+              "Advanced"
+            ],
+            "rows": [
+              [
+                "CBC",
+                "Khoon ki kami, infection, platelet",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "Fasting Blood Sugar",
+                "Us waqt ki sugar",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "HbA1c",
+                "Pichhle teen mahine ki sugar",
+                "Aksar nahi",
+                "Haan"
+              ],
+              [
+                "Lipid Profile",
+                "Cholesterol aur triglycerides",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "LFT",
+                "Liver — bilirubin, SGPT, SGOT",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "KFT",
+                "Kidney — urea, creatinine, uric acid",
+                "Haan",
+                "Haan"
+              ],
+              [
+                "Thyroid",
+                "Sirf TSH",
+                "Kabhi-kabhi",
+                "T3, T4, TSH teenon"
+              ],
+              [
+                "Urine Routine",
+                "Protein, sugar, pus cell",
+                "Aksar nahi",
+                "Haan"
+              ],
+              [
+                "Urine Microalbumin",
+                "Kidney par sugar/BP ka pehla asar",
+                "Nahi",
+                "Haan"
+              ],
+              [
+                "Vitamin D aur B12",
+                "Thakan, kamzori, jhunjhuni",
+                "Nahi",
+                "Haan"
+              ],
+              [
+                "Iron / Ferritin",
+                "Khoon ki kami ki wajah",
+                "Nahi",
+                "Aksar haan"
+              ]
+            ]
+          }
+        },
+        "Table dekhne ka sabse kaam ka tareeka ye hai: basic wale column me jo \"Aksar nahi\" ya \"Nahi\" likha hai, wahi teen-chaar cheezein hain jinke liye advanced ka daam zyada hota hai. Ab sawaal ye ban jaata hai ki wo teen-chaar cheezein aapke liye zaroori hain ya nahi — aur us sawaal ka jawab umar aur ghar ki history deti hai, package ka naam nahi.",
+        {
+          "list": [
+            "30 se kam umar, koi shikayat nahi, ghar me sugar ya dil ki bimari nahi — basic kaafi hai.",
+            "30 ke upar, ya ghar me sugar/BP/dil ki bimari — HbA1c aur urine routine wala hi lijiye.",
+            "45 ke upar — urine microalbumin bina wala package mat lijiye. Yahi ek line sabse zyada chhoot-ti hai.",
+            "Thakan, kamzori ya haath-pair me jhunjhuni ki shikayat hai — Vitamin B12 aur D wala hi kaam ka hai.",
+            "Sugar ya BP ki dawa pehle se chal rahi hai — advanced, har saal, aur usi mahine ke aas-paas."
+          ]
+        },
+        {
+          "note": {
+            "title": "X-ray, ECG aur ultrasound is list me nahi hain",
+            "text": "Ye teenon machine par hote hain, sample par nahi, aur humare menu me nahi hain. Kai jagah \"full body\" ke naam par inhe bhi gina jaata hai — isliye do package tolte waqt ye farak dhyaan me rakhiye. Parche par ye likhe hon to unke liye imaging centre jaana hoga.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
       "id": "saal-me-kab-checkup-deoria",
-      "heading": "Saal Me Kab Karayein — Deoria Me Mahine Ka Farq Padta Hai",
+      "heading": "Full Body Checkup Saal Me Kitni Baar Aur Kis Mahine Karayein",
       "lead": "Routine checkup aur bukhar ka mausam ek saath nahi chalte.",
       "blocks": [
         "Routine full body checkup ka matlab hai apni sadharan halat ka number nikaalna. Isi liye ise us waqt nahi karana chahiye jab aap beemar hon. Bukhar ke dauraan aur uske turant baad CBC ke kai number apne aap upar-neeche rehte hain, aur us report ko baad me \"apna normal\" maan lena galat rahega — agle saal ki tulna bhi usi se bigadti hai.",
@@ -222,7 +328,7 @@
     },
     {
       "id": "do-package-kaise-tolen-deoria",
-      "heading": "Do Package Saamne Hain — Kaise Tay Karein Kaun Sa Behtar Hai",
+      "heading": "Do Package Saamne Hain — Kaun Sa Behtar Hai, Kaise Tay Karein",
       "lead": "Ginti chhod dijiye. Chhah hisse dhoondhiye.",
       "blocks": [
         "Deoria me aksar do package saamne rakhe jaate hain aur reader dono me se ginti bada wala chun leta hai. Ginti sabse kam kaam ki cheez hai. Dono soochiyan saamne rakhiye aur in chhah hisson par nishaan lagaiye — jitne hisse milein, package utna poora hai.",
@@ -263,7 +369,7 @@
     },
     {
       "id": "package-se-pehle-taiyari-deoria",
-      "heading": "Package Book Karne Se Pehle Chaar Cheezein Taiyaar Rakhiye",
+      "heading": "Full Body Checkup Se Pehle Kya Taiyaari Karni Hoti Hai",
       "lead": "Yahi chaar cheezein confirmation call ko do minute ka bana deti hain.",
       "blocks": [
         {
@@ -291,7 +397,7 @@
     },
     {
       "id": "poore-ghar-ka-checkup-deoria",
-      "heading": "Poore Ghar Ka Full Body Checkup Ek Saath — Deoria Me Sabse Aasan Tareeka",
+      "heading": "Poore Ghar Ka Full Body Checkup Ek Saath Kaise Karayein",
       "lead": "Ek subah, ek visit, sabka sample.",
       "blocks": [
         "Deoria me zyadatar ghar joint hain, aur sabse aam sawaal yahi hota hai — \"ghar me chaar log hain, kya chaar baar aana padega?\" Nahi. Ek hi visit me sabka sample liya ja sakta hai, aur collection tab bhi free rehta hai. Booking ke waqt sirf ye bata dijiye ki kitne log hain aur kis-kis ka kaun sa package hai, taaki phlebotomist utni taiyaari ke saath aaye.",
@@ -326,7 +432,7 @@
     },
     {
       "id": "report-aane-ke-baad-package-deoria",
-      "heading": "Package Ki Report Aa Gayi — Ab Ismein Kya Dekhein",
+      "heading": "Full Body Checkup Ki Report Kaise Padhein — Kis Kram Me",
       "lead": "Report lambi hoti hai. Usme se chaar cheezein hi turant maayne rakhti hain.",
       "blocks": [
         "Package ki report do-teen page ki hoti hai aur usmein kai jagah \"High\" ya \"Low\" likha mil jaata hai. Ghabraiye mat — range se thoda bahar hona bahut aam hai aur aksar harmless. Do kaam zaroor kijiye: poori report apne doctor ko dikhaiye, aur pichhle saal ki report saath rakhiye. Package ka asli fayda tulna me hai — saal bhar me kaunsa number kis taraf khiska, ye ek akeli report nahi bata sakti.",
@@ -349,7 +455,7 @@
     },
     {
       "id": "aage-kya-karein-fullbody-deoria",
-      "heading": "Aage Kya Karein",
+      "heading": "Deoria Me Full Body Checkup Kaise Book Karein",
       "lead": "Teen kadam, isi kram me.",
       "blocks": [
         {
@@ -413,6 +519,22 @@
     {
       "question": "Pichhle saal ki report kho gayi hai — kya package ka poora fayda ab bhi milega?",
       "answer": "Fayda hai — is saal ka number apne aap me kaam ka hai aur wahi agle saal ka aadhaar ban jaayega. Lekin poora fayda tulna me hai: saal bhar me creatinine, HbA1c ya haemoglobin kis taraf khiska, ye ek akeli report nahi bata sakti. Isliye is baar ki PDF sambhaal kar rakhiye — wo WhatsApp aur email dono par aati hai, isliye phone badalne par bhi email me padi rehti hai. Aur aage ke liye ek baat: jo number aap saal-dar-saal dekhenge unhe hamesha ek hi lab se karaiye, kyunki har lab ka analyser aur reference range apna hota hai."
+    },
+    {
+      "question": "Full body checkup me kaun se test hote hain?",
+      "answer": "Basic package me aam taur par CBC, fasting sugar, lipid profile, LFT (liver) aur KFT (kidney) aate hain. Advanced package me inke upar HbA1c, poora thyroid profile, urine routine, urine microalbumin, Vitamin D aur B12 jud jaate hain. Do package me farak asal me yahi teen-chaar cheezon ka hota hai. Chunte waqt ginti mat dekhiye — ye dekhiye ki paanch system poore hain ya nahi: khoon, sugar, dil, liver aur kidney."
+    },
+    {
+      "question": "Full body checkup ke liye khaali pet rehna zaroori hai?",
+      "answer": "Haan, zyadatar package ke liye 10 se 12 ghante khaali pet rehna padta hai. Wajah lipid profile aur fasting sugar hai — dono khaane par seedha hil jaate hain, khaas kar triglycerides. Us dauraan saada paani peena mana nahi hai, balki peete rahna behtar hai; sirf chai, doodh, juice aur khaana mana hai. Isi liye subah 6 se 8 ka pehla slot sabse aasan padta hai — raat ka khaana 9 baje tak kar lijiye aur naashta sample ke turant baad."
+    },
+    {
+      "question": "Deoria me full body checkup ki report kitne din me aa jaati hai?",
+      "answer": "Zyadatar package ki report 24 ghante ke andar PDF me phone par aa jaati hai — CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine sab isme. Vitamin D aur B12 bhi aam taur par usi samay me. Sirf urine culture alag hai, usme 48 se 72 ghante lagte hain. Gorakhpur me OPD dikhani ho to sample ek din pehle de dijiye — report phone par rehti hai, print le kar chalna zaroori nahi."
+    },
+    {
+      "question": "Full body checkup me kitna time lagta hai?",
+      "answer": "Ghar par sample lene ki visit me 10 se 15 minute lagte hain. Poora package ek hi baar nas se liye gaye khoon par ho jaata hai, isliye har test ke liye alag sui nahi lagti; urine ka container saath me chhod diya jaata hai. Booking ke baad confirmation call lagbhag 30 minute me aa jaati hai. Poora din kahin nahi jaata — sirf fasting ke 10 se 12 ghante planning maangte hain, aur wo raat me poore ho jaate hain."
     }
   ],
   "relatedLinks": {

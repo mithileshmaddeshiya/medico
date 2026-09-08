@@ -44,8 +44,14 @@
  * Paragraph parts of the form { text, href } render as real in-prose links (see
  * LabContent). Every href below must be a route that renders:
  *   /lab-test/{deoria,gorakhpur,varanasi}          (src/data/lab/cities.js)
- *   /blogs/{lab-test,full-body-checkup}/varanasi   (content/blogs/varanasi/)
+ *   /blogs/{lab-test,full-body-checkup}/salempur   (content/blogs/salempur/)
  *   /contact
+ *
+ * These used to point at the Varanasi guides, because when this page was
+ * written Varanasi was the only town with any. Salempur has its own set now,
+ * and sending a Salempur reader to a guide that names Varanasi in every
+ * heading helps nobody — while this town's own guides sit with almost nothing
+ * linking to them.
  */
 
 /* Link targets, kept as constants so a route rename is a one-line fix here
@@ -54,8 +60,9 @@
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_VARANASI = "/lab-test/varanasi";
-const GUIDE_LAB_TEST = "/blogs/lab-test/varanasi";
-const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
+const GUIDE_LAB_TEST = "/blogs/lab-test/salempur";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/salempur";
+const GUIDE_HOME_COLLECTION = "/blogs/home-sample-collection/salempur";
 
 export const salempurContent = [
   {
@@ -78,7 +85,11 @@ export const salempurContent = [
     p: [
       "Ek baat pehle saaf kar dena theek rahega: hamara koi walk-in counter Salempur me nahi hai, aur is page par kahin ye nahi likha jaayega ki hai. Ye home collection service hai — hum aapke ghar se sample lete hain, aur wahi sach hai jo yahan likha hai.",
       "Iska matlab kya nikalta hai, wo samajhne layak hai. Kasbe me jo chhote collection centre hain, wahan bhi sirf sample liya jaata hai; jaanch bade sheher ki lab me hi hoti hai aur report wahin se banti hai. Yaani sample ko safar to karna hi hai. Sawaal sirf itna hai ki us safar ki shuruaat aapke ghar se ho ya bazaar tak aapke chalne ke baad. Blood aur urine ke saare aam test sirf sample par hote hain, isliye ghar se shuruaat karna kisi tarah kam bharosemand nahi hai — bas ek trip kam ho jaati hai.",
-      "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Sample dene se pehle teen cheezein kar lijiye: uska ID card dekh lijiye, doctor ka parcha saamne rakh dijiye taaki wahi panel liya jaaye jo likha hai, aur jo test card par 'Call for price' likha hai uska daam pehle pooch lijiye. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Report 24 ghante ke andar aati hai — hum 24 ghante khula lab hone ka daawa nahi karte, 24 ghante me report milne ka karte hain.",
+      [
+        "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Sample dene se pehle teen cheezein kar lijiye: uska ID card dekh lijiye, doctor ka parcha saamne rakh dijiye taaki wahi panel liya jaaye jo likha hai, aur jo test card par 'Call for price' likha hai uska daam pehle pooch lijiye. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Report 24 ghante ke andar aati hai — hum 24 ghante khula lab hone ka daawa nahi karte, 24 ghante me report milne ka karte hain. Visit ke din kya-kya hota hai, kaun sa test ghar par ho jaata hai aur gaon ka pata kaise likhna chahiye — wo poora ",
+        { text: "ghar par sample wali guide", href: GUIDE_HOME_COLLECTION },
+        " me hai.",
+      ],
       "Ek aur baat jo kasbe me sabse zyada nuksan karti hai: jo test aap mahino tak dohrate hain — HbA1c, TSH, creatinine, haemoglobin — unhe har baar alag alag jagah se mat karaiye. Alag machine aur method ke reference range thode alag hote hain, isliye ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya. Doctor badlav dekhta hai, sirf aaj ka number nahi.",
     ],
   },

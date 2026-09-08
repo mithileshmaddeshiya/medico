@@ -1,43 +1,27 @@
 {
-  "title": "Varanasi Me Full Body Checkup — Kya Karayein",
-  "description": "Varanasi me full body checkup me kaun se test hone chahiye, sasta package me kya chhoot jaata hai, aur umar ke hisaab se kaun sa sahi hai.",
+  "title": "Full Body Checkup In Varanasi — Kaun Se Test Hote Hain",
+  "description": "Varanasi me full body checkup me kaun se test hote hain, kitne parameter hote hain, khaali pet kitne ghante, aur kis umar me kaun sa package sahi hai.",
   "keywords": [
     "full body checkup in Varanasi",
-    "Varanasi me full body checkup",
-    "full body health checkup Varanasi",
     "full body checkup me kaun se test hote hain",
     "full body checkup me kitne parameter hote hain",
-    "best full body checkup package Varanasi",
+    "full body health checkup Varanasi",
     "whole body checkup Varanasi",
     "health checkup package Varanasi",
-    "sasta full body checkup sahi hai ya nahi",
-    "basic vs advanced health package",
+    "full body checkup at home Varanasi",
+    "full body checkup khaali pet",
     "full body checkup kitne saal me ek baar",
-    "30 ki umar me kaun se test karayein",
-    "full body checkup me thyroid hai ya nahi",
     "full body checkup report kaise padhein",
-    "full body checkup se pehle fasting",
-    "pre employment medical checkup Varanasi",
-    "family health checkup package",
     "senior citizen health checkup Varanasi",
     "women health checkup package Varanasi",
-    "full body checkup at home Varanasi",
-    "home sample collection Varanasi",
-    "lab test in Varanasi",
-    "pathology lab in Varanasi",
-    "diagnostic centre in Varanasi",
-    "वाराणसी में फुल बॉडी चेकअप",
-    "फुल बॉडी चेकअप में कौन से टेस्ट होते हैं",
-    "फुल बॉडी चेकअप कितने साल में कराएं",
-    "घर से सैंपल कलेक्शन वाराणसी",
-    "full body checkup near me",
-    "health checkup package near me",
-    "MedicoBharat Varanasi"
+    "pre employment medical checkup Varanasi",
+    "family health checkup package Varanasi",
+    "lab test in Varanasi"
   ],
   "publishedAt": "2026-08-04",
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-09-08",
   "order": 40,
-  "readingMinutes": 9,
+  "readingMinutes": 13,
   "takeaways": [
     "Parameter ki ginti mat dekhiye, system giniye. Blood, sugar, heart, liver aur kidney — paanchon cover hone chahiye, warna wo full body checkup nahi hai.",
     "Ek CBC hi 18 se 22 parameter ginta hai. \"80+ parameters\" wale package me asal me 8 se 10 test hi ho sakte hain.",
@@ -47,7 +31,7 @@
   "sections": [
     {
       "id": "full-body-checkup-varanasi-kya-hai",
-      "heading": "Varanasi Me Full Body Checkup: Ginti Nahi, System Dekhiye",
+      "heading": "Full Body Checkup Kya Hota Hai — Aur Kis Ke Liye Hota Hai",
       "blocks": [
         "Varanasi me full body checkup ke offer ki kami nahi hai. Lanka, Sunderpur, Bhelupur, Sigra aur Cantt ke collection points par lage board, WhatsApp par ghoomte package, aur \"80+ parameters\" likhe hue pamphlet — sab ek hi baat par competition kar rahe hain: kaun kam paise me zyada parameter de raha hai. Aur yahi wo jagah hai jahan zyadatar log galat package khareed lete hain.",
         "Kyunki parameter ki ginti se ye pata hi nahi chalta ki aapke sharir ke kitne hisse actually check huye. Ek accha checkup wo hai jismein paanch system cover hote hain — khoon, sugar, heart ka risk, liver aur kidney — chahe uski ginti 55 ho. Ek bekaar checkup wo hai jismein 90 parameter hain lekin unme se 40 ek hi test ke sub-parameter hain, aur thyroid ya vitamin usme hai hi nahi.",
@@ -63,7 +47,7 @@
     },
     {
       "id": "package-me-kya-hona-chahiye",
-      "heading": "Full Body Checkup Me Kaun Se Test Hone Chahiye",
+      "heading": "Full Body Checkup Me Kaun Se Test Hone Chahiye — Paanch System",
       "lead": "Paanch system minimum, do system bonus. Isse kam kuch bhi ho to wo screening hai, full body checkup nahi.",
       "blocks": [
         {
@@ -132,10 +116,73 @@
     },
     {
       "id": "parameter-ginti-ka-sach",
-      "heading": "\"80+ Parameters\" Ka Matlab Kya Hota Hai",
+      "heading": "Full Body Checkup Me Kitne Parameter Hote Hain — 80+ Ka Sach",
       "lead": "Ye article ki sabse kaam ki baat hai — aur wahi jo koi pamphlet nahi likhta.",
       "blocks": [
         "Parameter aur test do alag cheezein hain. Test ek jaanch hai; parameter us jaanch se nikalne wala ek number. Ek CBC hi machine se 18 se 22 number nikalta hai — haemoglobin, RBC, WBC, platelet, MCV, MCH, MCHC, differential count, aur aage. Iska matlab ye hua ki sirf CBC, lipid profile aur LFT jodne se hi ginti 40 paar kar jaati hai, aur poster par \"40+ parameters\" chhap jaata hai — jabki asal me sirf teen test huye hain.",
+        {
+          "table": {
+            "caption": "Ek-ek test report par kitne number chhapta hai",
+            "head": [
+              "Test",
+              "Report par lagbhag kitne number",
+              "Yaani"
+            ],
+            "rows": [
+              [
+                "CBC",
+                "18 – 22",
+                "Akela ye ek test poore package ka chauthai \"parameter\" bana deta hai"
+              ],
+              [
+                "Urine Routine",
+                "10 – 15",
+                "Physical, chemical aur microscopic — teenon hisse ginte hain"
+              ],
+              [
+                "LFT",
+                "8 – 11",
+                "Bilirubin do tarah ka, teen enzyme, teen protein"
+              ],
+              [
+                "KFT",
+                "6 – 9",
+                "Electrolytes alag-alag gine jaate hain"
+              ],
+              [
+                "Lipid Profile",
+                "5 – 8",
+                "Kuch ratio bhi apne aap chhapte hain aur gine jaate hain"
+              ],
+              [
+                "Thyroid Profile",
+                "3",
+                "T3, T4, TSH — sirf TSH ho to 1"
+              ],
+              [
+                "HbA1c",
+                "1 – 2",
+                "Average sugar bhi saath chhapta hai"
+              ],
+              [
+                "Fasting Sugar",
+                "1",
+                "Ek number, aur bahut kaam ka"
+              ],
+              [
+                "Vitamin D",
+                "1",
+                "Ek number"
+              ],
+              [
+                "Vitamin B12",
+                "1",
+                "Ek number"
+              ]
+            ]
+          }
+        },
+        "Ginti kar lijiye: CBC aur urine routine — sirf ye do — mila kar hi 30 se zyada line ban jaati hain. Upar wali poori list, jo 10 test hai, lagbhag 55 se 65 \"parameter\" banti hai. Isliye \"80+ parameters\" ka matlab 80 alag jaanch kabhi nahi hota; wo lines ki ginti hai, tests ki nahi. Aur isi wajah se 88 parameter wala package 45 wale se kamzor ho sakta hai — agar us 88 me thyroid ya HbA1c hai hi nahi.",
         {
           "table": {
             "caption": "Package par likha hua, aur uska asli matlab",
@@ -194,7 +241,7 @@
     },
     {
       "id": "umar-ke-hisaab-se-package",
-      "heading": "Kis Umar Me Kaun Sa Package",
+      "heading": "Kis Umar Me Kaun Sa Full Body Checkup Package Karayein",
       "lead": "Package price dekh kar nahi, apni umar aur ghar ki history dekh kar chuniye.",
       "blocks": [
         {
@@ -249,7 +296,7 @@
     },
     {
       "id": "kis-ko-kaunsa-add-on",
-      "heading": "Apne Hisaab Se Package Me Kya Jodein",
+      "heading": "Package Me Apne Hisaab Se Kya Jodein — Add-On Ki List",
       "lead": "Ek hi package sab par fit nahi baithta. Ye rahe wo add-on jo aam taur par sabse zyada kaam aate hain.",
       "blocks": [
         {
@@ -316,7 +363,7 @@
     },
     {
       "id": "checkup-se-pehle-taiyari",
-      "heading": "Checkup Se Pehle: Sirf Teen Cheezein Yaad Rakhiye",
+      "heading": "Full Body Checkup Khaali Pet Hota Hai? Taiyaari Me Kya Karein",
       "blocks": [
         {
           "list": [
@@ -337,7 +384,7 @@
     },
     {
       "id": "family-package-aur-booking",
-      "heading": "Ghar Ke Chaar Log Ek Saath: Family Checkup Ka Sahi Tarika",
+      "heading": "Poore Ghar Ka Full Body Checkup Ek Saath Kaise Karayein",
       "blocks": [
         "Family checkup ka sabse bada fayda paise ka nahi, timing ka hai. Jab ghar ke chaar log ek hi subah, ek hi slot me sample dete hain, to chaaron report ek hi date ki hoti hain — aur doctor ek hi baithak me poore parivaar ka pattern dekh leta hai. Alag-alag hafton me karaya gaya checkup yahi cheez kho deta hai.",
         {
@@ -365,7 +412,7 @@
     },
     {
       "id": "report-me-kya-dekhein",
-      "heading": "Report Aa Gayi — Package Ki Report Me Sabse Pehle Kya Dekhein",
+      "heading": "Full Body Checkup Ki Report Kaise Padhein — Kis Kram Me",
       "lead": "60 number ek saath aayen to nazar kahin bhi ja sakti hai. Ye rahi tarteeb.",
       "blocks": [
         {
@@ -403,7 +450,7 @@
     },
     {
       "id": "kitne-saal-me-ek-baar",
-      "heading": "Full Body Checkup Kitne Saal Me Ek Baar",
+      "heading": "Full Body Checkup Kitne Saal Me Ek Baar Karana Chahiye",
       "blocks": [
         {
           "table": {
@@ -459,7 +506,7 @@
     },
     {
       "id": "pre-employment-aur-doosre-checkup",
-      "heading": "Job, Shaadi Aur Insurance Wale Checkup Alag Hote Hain",
+      "heading": "Job, Shaadi Aur Insurance Wala Checkup — Ye Alag Kyun Hote Hain",
       "blocks": [
         "Har checkup ek jaisa nahi hota, aur teen tarah ke checkup ke liye log aksar galat package le lete hain. Pre-employment ya job ke liye hone wale checkup me aam taur par CBC, blood group, blood sugar, LFT, KFT, urine routine, HBsAg, HIV aur kabhi-kabhi chest ka check maanga jaata hai — lekin asli list company ki hoti hai, isliye unse likhit me maang lijiye aur usi hisaab se book kijiye.",
         "Shaadi se pehle ya conceive karne se pehle wale panel me thalassemia screen, blood group aur Rh typing, TSH, CBC, HIV, HBsAg aur VDRL ka rehna aam hai. Rh-negative mahilaon ke liye blood group report kabhi late nahi honi chahiye. Aur operation se pehle wale panel me clotting time aur infection screening jud'te hain, jo saal ke routine package me nahi hote.",
@@ -475,7 +522,7 @@
     },
     {
       "id": "varanasi-ke-baahar-se",
-      "heading": "Varanasi Ke Baahar Se Aa Rahe Hain To",
+      "heading": "Varanasi Ke Baahar Se Aa Rahe Hain To Checkup Kab Karayein",
       "blocks": [
         "Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia aur Azamgarh se roz log Varanasi aate hain, kyunki specialist doctor aur bade diagnostic setup yahin hain. Lekin full body checkup ke liye safar ki zaroorat nahi hai. Package ke saare test — CBC, sugar, lipid, LFT, KFT, thyroid, vitamin, urine — sample par hote hain, aur sample aapke apne sheher me liya ja sakta hai. Safar tab banta hai jab baat MRI, CT scan, endoscopy ya kisi super-speciality OPD ki ho.",
         [
@@ -503,7 +550,7 @@
     },
     {
       "id": "package-chunne-ki-checklist",
-      "heading": "Package Kharidne Se Pehle Chhoti Si Checklist",
+      "heading": "Full Body Checkup Package Chunne Se Pehle Chhoti Si Checklist",
       "blocks": [
         {
           "list": [
@@ -563,6 +610,22 @@
     {
       "question": "Checkup me sab normal aaya to bhi doctor ko dikhana chahiye?",
       "answer": "Ek baar dikha lena behtar hai, khaas kar pehli report. Doctor wo cheez dekhta hai jo akela number nahi batata — jaise normal range ke andar rehte hue bhi HbA1c ka upari sire par hona, ya haemoglobin ka theek hona lekin ferritin ka kam hona. Aur report ek folder me sambhaal kar rakhiye: ek akela number sirf number hai, teen saal ka trend hi wo cheez hai jis par action liya jaata hai."
+    },
+    {
+      "question": "Full body checkup me kaun se test hote hain?",
+      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12, iron aur urine microalbumin bhi jud jaate hain. Har package me bilkul yahi list ho ye zaroori nahi. Isliye parameter ki ginti maangne ke bajaye TEST ki list maangiye, aur usme paanch system dhoondhiye — khoon, sugar, dil (lipid), liver aur kidney. In paanchon me se ek bhi chhoot raha ho to package adhoora hai."
+    },
+    {
+      "question": "Full body checkup me kitna time lagta hai?",
+      "answer": "Ghar par sample lene ki visit me 10 se 15 minute. Poora package ek hi baar nas se liye gaye khoon par hota hai, isliye har test ke liye alag sui nahi lagti; urine ka container saath me chhod diya jaata hai. Booking ke baad confirmation call lagbhag 30 minute me aa jaati hai. Poora din kahin nahi jaata — sirf fasting ke 10 se 12 ghante planning maangte hain, aur wo raat ki neend me poore ho jaate hain."
+    },
+    {
+      "question": "Full body checkup me kitne parameter hone chahiye?",
+      "answer": "Parameter ki ginti sabse kam kaam ki jaankari hai, kyunki wo report par chhapne wali lines ki ginti hai — alag jaanch ki nahi. Akela CBC 18 se 22 line chhapta hai aur urine routine 10 se 15; do test mila kar hi 30 se zyada \"parameter\" ho jaate hain. Isliye 80 parameter wala package 45 parameter wale se kamzor ho sakta hai. Sahi sawaal ye hai: package me kaun se TEST hain, aur unme paanch system poore hain ya nahi."
+    },
+    {
+      "question": "Varanasi me full body checkup ghar par ho jaata hai?",
+      "answer": "Haan, poora package ghar par ho jaata hai. Poore Varanasi me home collection free hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW aur Ramnagar se le kar Ring Road ki nayi colony tak. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan hai. Phlebotomist ID card ke saath aata hai, aur payment sample lene ke waqt cash ya UPI se hota hai. X-ray, ECG aur ultrasound is menu me nahi hain — wo machine par hote hain, sample par nahi."
     }
   ],
   "relatedLinks": {
