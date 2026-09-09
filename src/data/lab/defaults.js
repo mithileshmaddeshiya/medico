@@ -768,6 +768,31 @@ export const siteFooter = () => ({
  * Two localities, not four. Four is what pushed it over, and a reader scanning
  * a result does not need the full coverage list — that is what the page is for.
  */
+/**
+ * ⚠ ONE TITLE PAIRING PER CITY — THIS DEFAULT IS A SAFETY NET, NOT A PATTERN.
+ *
+ * Eleven of the thirteen cities used to carry this exact string with their own
+ * name in it: "Lab Test in Deoria — Blood Test at Home", "Lab Test in Ballia —
+ * Blood Test at Home", and so on down the list. Every one of them was a valid
+ * title on its own; together they were eleven results competing for one phrase
+ * pair with the town name as the only thing telling them apart, which is the
+ * cheapest kind of self-competition there is and reads as boilerplate in a SERP
+ * where two of them show at once.
+ *
+ * So every city now sets its own `title` in src/data/lab/cities.js, and no two
+ * repeat the same LEAD + TAIL pairing. The leads in use are "Lab Test in X",
+ * "Blood Test in X", "Blood Test at Home in X", "Pathology Lab in X" and
+ * "Diagnostic Centre in X"; the tails vary with what each page actually argues
+ * (free home collection, home sample collection, full body checkup, blood test
+ * booking, and so on). Which lead a city takes is not arbitrary — it is the
+ * term that city's own copy is written around.
+ *
+ * WHEN YOU ADD A CITY: set its `title` explicitly and check it against the
+ * others first. Leaving it to this default will hand it Deoria's pairing.
+ *
+ * The budget is unchanged: keep it at or under ~45 characters, because the root
+ * layout appends " | MedicoBharat" (15) and Google shows about 60.
+ */
 export const defaultTitle = (city) => `Lab Test in ${city} — Blood Test at Home`;
 
 /** Google truncates a description around here. Not a hard limit — a budget. */

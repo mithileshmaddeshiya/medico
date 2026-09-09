@@ -78,6 +78,7 @@ import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { lucknowContent, lucknowFaqs } from "./content/lucknow";
 import { mauContent, mauFaqs } from "./content/mau";
+import { padraunaContent, padraunaFaqs } from "./content/padrauna";
 import { salempurContent, salempurFaqs } from "./content/salempur";
 import { siwanContent, siwanFaqs } from "./content/siwan";
 import { varanasiContent } from "./content/varanasi";
@@ -113,6 +114,21 @@ const LAB_CITY_SEED = [
     updated: "2026-07-30",
     order: 1,
     published: true,
+
+    /* 45 characters; the root layout appends " | MedicoBharat" (template in
+       src/app/layout.js), so Google renders 60. That is the longest title in
+       the section and it sits exactly on the ~60 it will show — deliberate,
+       because the city's name is long and both halves earn their place, but do
+       not add a word to it.
+
+       This city inherited defaultTitle() until the section's titles were split
+       apart, and the default is "Lab Test in <city> — Blood Test at Home" —
+       which is exactly the pairing Deoria keeps. Two of our pages would have
+       carried the same formula again, so the flagship city now states its own:
+       the exact phrase first, then the promise that separates this service from
+       a walk-in lab. See the block comment above defaultTitle in
+       src/data/lab/defaults.js for the one-pairing-per-city rule. */
+    title: "Lab Test in Varanasi — Free Sample Collection",
     // This copy used to be defaultContent() — the fallback every city inherited
     // — even though every fact in it is Varanasi's. It is unchanged, just moved
     // under the city it was actually written about. See labContent/varanasi.js.
@@ -437,7 +453,15 @@ const LAB_CITY_SEED = [
             {
               href: "/lab-test/kushinagar",
               label: "Kushinagar me lab test",
-              sub: "Padrauna, Hata aur Tamkuhi Raj ka padosi zila",
+              sub: "Kasia, Hata aur Tamkuhi Raj ka padosi zila",
+            },
+            // Us jile ka mukhyalaya, jiska apna page hai. Ek naya URL sitemap
+            // se nahi, links se crawl hota hai — aur Padrauna ka page is page
+            // par wapas aata hai, isliye link dono taraf hai.
+            {
+              href: "/lab-test/padrauna",
+              label: "Padrauna me lab test",
+              sub: "Kushinagar ka mukhyalaya — sheher ke mohalle naam se",
             },
             // Jile ke andar ka page, isliye pehle. Salempur tehsil ka apna page
             // hai aur wahan ke reader ko yahi anchor us tak le jaata hai.
@@ -518,11 +542,17 @@ const LAB_CITY_SEED = [
        reader is often here for an OPD appointment and can save an entire trip
        by having the report in hand. See src/data/lab/content/gorakhpur.js. */
 
-    // 42 characters. It has to stay short: the root layout appends
-    // " | MedicoBharat" (template in src/app/layout.js), so Google renders 57 —
-    // just inside the ~60 it will show. Primary keyword first, then the second
-    // biggest query on the page; both survive truncation.
-    title: "Lab Test in Gorakhpur — Blood Test at Home",
+    /* 39 characters; the root layout appends " | MedicoBharat" (template in
+       src/app/layout.js), so Google renders 54 — inside the ~60 it will show.
+
+       It read "Lab Test in Gorakhpur — Blood Test at Home" until the section's
+       titles were split apart (see the block comment above defaultTitle in
+       src/data/lab/defaults.js): eleven cities shared that one pairing, so the
+       whole section chased one phrase with only the town name differing. This
+       page takes "pathology lab" as its lead because that is what a reader
+       heading to the referral hub types when they are looking for a place, and
+       keeps "Blood Test" as the tail so the bigger query survives beside it. */
+    title: "Pathology Lab in Gorakhpur — Blood Test",
 
     // ~157 characters, so it renders whole on desktop and mobile. Deliberately
     // NOT Deoria's description with the city swapped — it leads with the thing
@@ -620,7 +650,16 @@ const LAB_CITY_SEED = [
             {
               href: "/lab-test/kushinagar",
               label: "Kushinagar me lab test",
-              sub: "Padrauna aur Kasia — wahan se log yahin dikhane aate hain",
+              sub: "Kasia se Khadda tak — wahan se log yahin dikhane aate hain",
+            },
+            // Kareeb 50 km, aur us jile ka mukhyalaya. Padrauna ka page is
+            // sheher ko naam se leta hai (specialist aur imaging ke liye yahin
+            // aana padta hai), isliye link dono taraf hai — ek taraf ka link
+            // crawler ko sirf itna batata hai ki do page jude hain.
+            {
+              href: "/lab-test/padrauna",
+              label: "Padrauna me lab test",
+              sub: "Kareeb 50 km — OPD se pehle report ghar par taiyaar",
             },
             // Siwan ka page is sheher ko baar baar naam se leta hai — wahan se
             // log kareeb 110 km chal kar yahan dikhane aate hain, aur ye link
@@ -949,11 +988,12 @@ const LAB_CITY_SEED = [
     order: 5,
     published: true,
 
-    // 41 characters; the root layout appends " | MedicoBharat" (template in
-    // src/app/layout.js), so Google renders 56 — inside the ~60 it will show.
-    // Primary keyword first, then the second-biggest query on the page; both
-    // survive the truncation.
-    title: "Lab Test in Azamgarh — Blood Test at Home",
+    // 43 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 58 — inside the ~60 it will show.
+    // Primary keyword first, then this page's own second query. The tail used
+    // to be "Blood Test at Home", which ten other cities also carried — see the
+    // block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Lab Test in Azamgarh — Free Home Collection",
 
     // ~153 characters, so it renders whole on desktop and mobile. Written to
     // NOT read like the other cities' snippets: it names the span from the city
@@ -1169,11 +1209,12 @@ const LAB_CITY_SEED = [
     order: 6,
     published: true,
 
-    // 39 characters; the root layout appends " | MedicoBharat" (template in
-    // src/app/layout.js), so Google renders 54 — inside the ~60 it will show.
-    // Primary keyword first, then the second-biggest query on the page; both
-    // survive the truncation.
-    title: "Lab Test in Ballia — Blood Test at Home",
+    // 38 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 53 — inside the ~60 it will show.
+    // "Blood Test in Ballia" is the exact phrase and leads; the tail is this
+    // page's own, not the "Blood Test at Home" ten other cities carried — see
+    // the block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Blood Test in Ballia — Home Collection",
 
     // ~152 characters, so it renders whole on desktop and mobile. Written to
     // NOT read like the other cities' snippets: it names the span from the city
@@ -1397,12 +1438,14 @@ const LAB_CITY_SEED = [
        the keywords, an H2 in the copy, the lead paragraph, and an FAQ of its
        own in content/mau.js. */
 
-    // 36 characters; the root layout appends " | MedicoBharat" (template in
-    // src/app/layout.js), so Google renders 51 — comfortably inside the ~60 it
-    // will show. "Maunath Bhanjan" is deliberately NOT in the title: it would
-    // push the line to the truncation edge and cost the "blood test" half,
-    // which is the bigger query. It sits in the description instead.
-    title: "Lab Test in Mau — Blood Test at Home",
+    // 43 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 58 — inside the ~60 it will show.
+    // "Maunath Bhanjan" is deliberately NOT in the title: it would push the
+    // line past truncation. It sits in the description instead. The short town
+    // name leaves room for the package query, which is this page's own tail —
+    // the section no longer repeats one pairing across eleven cities, see the
+    // block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Lab Test in Mau — Full Body Checkup at Home",
 
     // ~154 characters, so it renders whole on desktop and mobile. Leads with
     // BOTH names because a large share of this district types the official one,
@@ -1606,34 +1649,46 @@ const LAB_CITY_SEED = [
        this city overrides anyway. The name is carried where it actually works:
        the description, the h1, the keywords, two H2s and three FAQs. */
 
-    // 43 characters; the root layout appends " | MedicoBharat" (template in
-    // src/app/layout.js), so Google renders 58 — just inside the ~60 it shows.
-    // "Padrauna" is deliberately NOT in the title: it would push the line past
-    // truncation and cost the "blood test" half, which is the bigger query. It
-    // leads the description instead, where there is room for it.
-    title: "Lab Test in Kushinagar — Blood Test at Home",
+    // 35 characters; the root layout appends " | MedicoBharat" (template in
+    // src/app/layout.js), so Google renders 50 — comfortably inside the ~60.
+    // "Padrauna" is deliberately NOT in the title, and now for a second reason
+    // as well: that town has its own page, and "Diagnostic Centre in Padrauna"
+    // is ITS title. This one takes the district's own exact phrase and stops.
+    title: "Blood Test in Kushinagar — Lab Test",
 
-    // ~158 characters, so it renders whole on desktop and mobile. Padrauna
-    // first, because that is where the readers are, then the block towns that
-    // are furthest from the headquarters — which is what distinguishes this
-    // result when more than one of our pages shows for a regional query.
+    // ~157 characters, so it renders whole on desktop and mobile. It used to
+    // open "Padrauna aur Kushinagar me lab test ghar baithe"; the headquarters
+    // now has its own page (/lab-test/padrauna) whose snippet leads with that
+    // name, so this one leads with the district and Kasia and names the block
+    // towns furthest from the headquarters. That is what distinguishes the two
+    // results when both show for one regional query.
     description:
-      "Padrauna aur Kushinagar me lab test ghar baithe — Hata, Ramkola, Khadda aur Tamkuhi Raj tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+      "Kushinagar jile me lab test ghar baithe — Kasia, Hata, Ramkola, Khadda aur Tamkuhi Raj tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
 
     // The h1 is screen-reader only (the hero is image + form), so it costs a
-    // reader nothing and carries the terms the URL cannot: the headquarters'
-    // name, "blood test", "pathology lab" and "full body checkup".
+    // reader nothing and carries the terms the URL cannot: the pilgrimage
+    // town's name, "blood test", "pathology lab" and "full body checkup". It
+    // read "Kushinagar Aur Padrauna" until the town got its own page — see the
+    // warning above `keywords`.
     hero: {
-      h1: "Lab Test in Kushinagar Aur Padrauna — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Kushinagar — Kasia Se Khadda Tak Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
        Written out rather than taking defaultKeywords(), which would produce
        "<template> in Kushinagar" nine times plus one line per area and miss the
-       three things this district's traffic actually is: Padrauna, which the URL
-       cannot carry and which half the district types; the block-town modifiers,
-       because a reader in Khadda or Tamkuhi Raj rarely types the district name;
+       two things this district's traffic actually is: the block-town modifiers,
+       because a reader in Khadda or Tamkuhi Raj rarely types the district name,
        and the district's own seasonal demand.
+
+       ⚠ "Lab Test in Padrauna" and "Blood Test in Padrauna" used to be the
+       third and fourth lines here. They were REMOVED when /lab-test/padrauna
+       shipped, and they must not come back: the headquarters town now has its
+       own page and those exact phrases are its title and h1. Two of our pages
+       chasing one exact phrase does not produce two ranking pages — it produces
+       one, with the other filtered as a near-duplicate. This page keeps the
+       district and Kasia; the town's own page keeps the town, and the two link
+       to each other in the copy and in relatedLinks below.
 
        `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
        it honest is that it is the checklist the page's headings, FAQs and prose
@@ -1642,8 +1697,8 @@ const LAB_CITY_SEED = [
     keywords: [
       "Lab Test in Kushinagar",
       "Blood Test in Kushinagar",
-      "Lab Test in Padrauna",
-      "Blood Test in Padrauna",
+      "Lab Test in Kasia",
+      "Blood Test at Home in Kushinagar",
       "Home Sample Collection in Kushinagar",
       "Pathology Lab in Kushinagar",
       "Diagnostic Centre in Kushinagar",
@@ -1661,11 +1716,12 @@ const LAB_CITY_SEED = [
 
     /* Same rule as the strip above — ONE tracked phrase, and a different one
        from the strip's, so the page uses two of its phrases rather than one
-       twice. One tracked phrase, used by the strip. This one carries Padrauna, which
-       half the district types and the URL cannot hold.
+       twice. This one carries Kasia — the pilgrimage town the district is named
+       after, which the URL holds but the strip's phrase does not. It carried
+       Padrauna until that town got its own page.
        `intro` and the five steps come from defaultHowTo and are unchanged:
        they describe a procedure, and a procedure is the same in every town. */
-    howTo: { heading: "How to book a lab test in Kushinagar and Padrauna" },
+    howTo: { heading: "How to book a lab test in Kushinagar and Kasia" },
 
     content: kushinagarContent,
     faqs: kushinagarFaqs,
@@ -1683,11 +1739,22 @@ const LAB_CITY_SEED = [
     relatedLinks: {
       heading: "Kushinagar Ke Aas-paas Aur Aage Ki Jaankari",
       intro:
-        "Jin sheheron me ilaaj ya imaging ke liye jaana padta hai, wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+        "Jile ke mukhyalaya ka apna page, wo sheher jahan ilaaj ya imaging ke liye jaana padta hai, aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
       groups: [
         {
           title: "Aas-paas Ke Sheher",
           links: [
+            // The other half of the two-way link with /lab-test/padrauna. The
+            // town page links back in its lead paragraph and in its own
+            // relatedLinks; a one-way link tells a crawler the two pages are
+            // related but not which one is the page for "Padrauna me blood
+            // test". The `sub` says out loud which reader belongs where, so
+            // the two pages read as a pair rather than as rivals.
+            {
+              href: "/lab-test/padrauna",
+              label: "Padrauna me lab test",
+              sub: "Jila mukhyalaya — sheher ke mohalle aur landmark wala page",
+            },
             {
               href: "/lab-test/gorakhpur",
               label: "Gorakhpur me lab test",
@@ -1720,6 +1787,237 @@ const LAB_CITY_SEED = [
             },
             {
               href: "/blogs/lab-test/varanasi#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── PADRAUNA — THE SECOND PAGE IN KUSHINAGAR DISTRICT ───────────────
+       The Salempur situation again, and sharper. Padrauna is the DISTRICT
+       HEADQUARTERS of Kushinagar, it is the first entry in that city's `areas`
+       list, and the Kushinagar page was written carrying both names because
+       nothing else covered the town. So this entry is the riskiest kind of
+       addition there is: two of our own pages, one district, overlapping names.
+
+       Two things make it safe, and if either is ever undone this entry should
+       be deleted rather than kept:
+
+       1. THE ARGUMENT IS DIFFERENT. Kushinagar's page is written for the reader
+          20–45 km out — distance, the cane season, the Gandak's flood weeks,
+          the AES warning. This page is written for the reader inside the town,
+          where the counters are: a counter is not a laboratory, the morning is
+          the real cost, how to judge a lab without believing a boast, and the
+          household's women's tests. See the header of content/padrauna.js.
+
+       2. THE EXACT-MATCH PHRASES WERE HANDED OVER. "Lab Test in Padrauna" and
+          "Blood Test in Padrauna" used to sit in Kushinagar's `keywords`, and
+          its `description` opened with the town's name. Both were changed when
+          this entry was added — the district page now leads with Kushinagar and
+          Kasia and links here for the town. Two pages chasing one exact phrase
+          is how you get one filtered page instead of two ranking ones.
+
+       The AES/encephalitis warning is deliberately NOT re-argued here: this
+       page states the rule in two lines and links to the district page's
+       section. That copy is the most safety-critical on the site and must live
+       in one place, or the two versions drift. */
+    slug: "padrauna",
+    name: "Padrauna",
+    state: "Uttar Pradesh",
+
+    /* MOHALLAS AND ROADS, not towns — that is the whole point of the split from
+       /lab-test/kushinagar, whose `areas` are the district's block towns. These
+       render in the footer, fill the booking form's dropdown, become
+       `areaServed` in the schema, and are what a "<landmark> ke paas blood
+       test" search matches on. "Padrauna" itself is deliberately absent: the
+       form renders `[name, ...areas, "Other"]`, so repeating it would print the
+       town twice in the dropdown.
+
+       ⚠ ONLY places INSIDE the town belong here. The schema builder renders
+       each entry as "<area>, Padrauna", so listing a separate town such as
+       Ramkola, Hata or Sewrahi would publish "Ramkola, Padrauna" — which names
+       a place that does not exist and claims a town as a locality of another.
+       Those towns are Kushinagar's `areas`, they are named in this page's prose
+       and in its coverage FAQ as NEARBY towns, and that is where they stay.
+       Do not pad this list; an areaServed we cannot serve is a lie in schema
+       form, and one we mis-describe is a different kind of lie. */
+    areas: [
+      "Durga Chowk",
+      "Central Bank Road",
+      "Station Road",
+      "Ramkola Road",
+      "Kasia Road",
+      "Tarya Sujan",
+    ],
+
+    // Padrauna town's PIN — the same one Kushinagar's entry carries, because
+    // that entry uses the headquarters' PIN rather than Kasia's (274403). Two
+    // entries sharing a postal code is correct here: they are two pages about
+    // one town's postal area, seen at two different scales. Schema only.
+    postalCode: "274304",
+
+    /* Padrauna town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. This is the same point Kushinagar's entry uses, which is
+       consistent rather than duplicated: its `geo` was already deliberately set
+       to Padrauna and not Kasia, because that is where the demand is. */
+    geo: { lat: 26.9008, lng: 83.98 },
+
+    updated: "2026-09-09",
+    order: 13,
+    published: true,
+
+    /* 42 characters; the root layout appends " | MedicoBharat" (template in
+       src/app/layout.js), so Google renders 57 — inside the ~60 it shows.
+
+       This is the ONLY page in the section that leads with "Diagnostic Centre",
+       and that is the point. Eleven city titles used to read "Lab Test in <X> —
+       Blood Test at Home", so the whole section competed for one phrase pair
+       with the town name as the only difference; every title is now a different
+       lead + tail pairing (see the block comment above defaultTitle in
+       src/data/lab/defaults.js). Here the lead term is the one this town types
+       when it is looking for a place rather than a test, and the tail keeps
+       "Blood Test" so the bigger query survives beside it.
+
+       "Centre" is the British spelling and it is used consistently on this page
+       — title, the H2 in content/padrauna.js, `keywords` and the FAQ. Google
+       treats the two spellings as the same word, so mixing them buys nothing
+       and just reads as a typo. */
+    title: "Diagnostic Centre in Padrauna — Blood Test",
+
+    // ~152 characters, so it renders whole on desktop and mobile. Written to
+    // NOT read like Kushinagar's snippet: that one names the district's block
+    // towns, this one names streets, which is what separates the two results
+    // when both show for one regional query.
+    description:
+      "Padrauna me blood test ghar baithe book karein — Durga Chowk, Bank Road, Station Road aur Ramkola Road tak free home sample collection, report 24 ghante me.",
+
+    /* The h1 renders as real text in the hero (see LabHero.jsx), so it opens
+       with the phrase people type and stops; the secondary terms sit in
+       `h1Sub`, inside a sentence. Budget: h1 under ~60 characters, h1Sub under
+       ~140. Same rule as Salempur's — do not turn either into a list of
+       comma-separated variants. */
+    hero: {
+      h1: "Lab Test in Padrauna — Blood Test Ghar Baithe",
+      h1Sub:
+        "Padrauna ke har mohalle me pathology lab ke test ghar par — free home sample collection, report 24 ghante me WhatsApp par.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Padrauna" nine times plus one line per area. The list is
+       the town's four intents, in the order they convert: the service itself,
+       the "where do I have to go" search (pathology lab / diagnostic centre /
+       medical laboratory, all three of which mean the same thing to the person
+       typing them), the booking search, and the two tests this town asks for
+       most.
+
+       The landmark long-tails ("pathology lab near Durga Chowk", "blood test
+       near Central Bank Road") are NOT listed here even though they are real
+       searches — they belong in the visible copy, where they appear in the
+       mohalla section and its FAQ, and a keywords list is not where a long-tail
+       is won. `keywords` is a weak-to-zero ranking signal by itself; the reason
+       to keep it honest is that it is the checklist the page's headings, FAQs
+       and prose are written against. Every term below appears in the visible
+       copy — a keyword that appears ONLY here is the kind that gets a page
+       filtered. */
+    keywords: [
+      "Lab Test in Padrauna",
+      "Blood Test in Padrauna",
+      "Blood Test at Home in Padrauna",
+      "Home Sample Collection in Padrauna",
+      "Pathology Lab in Padrauna",
+      "Diagnostic Centre in Padrauna",
+      "Medical Laboratory in Padrauna",
+      "Online Blood Test Booking in Padrauna",
+      "Full Body Checkup in Padrauna",
+      "Thyroid Test in Padrauna",
+      "Sugar Test in Padrauna",
+      "Lab Test Near Me in Padrauna"
+    ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Padrauna",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. This one takes "online blood test booking in padrauna", which the
+       booking section answers directly.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a blood test online in Padrauna" },
+
+    content: padraunaContent,
+    faqs: padraunaFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. This block matters more
+       here than on most cities: a brand-new URL inside a district that already
+       has a page gets crawled through links, not the sitemap alone, and the
+       link to the district page has to run BOTH ways or a crawler reads the two
+       as unrelated. Kushinagar's block links back — see its entry above.
+
+       Every href is checked against a real route: the cities in this seed and
+       the guides in content/blogs/deoria/. There is no content/blogs/padrauna/
+       yet, so nothing points at one. */
+    relatedLinks: {
+      heading: "Padrauna Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jile ke doosre kasbon ka page, wo sheher jahan imaging ya specialist ke liye jaana padta hai, aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar jile me lab test",
+              sub: "Kasia, Hata, Khadda aur Tamkuhi Raj ki taraf rehte hain to",
+            },
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Kareeb 50 km — specialist aur imaging wahin hain",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Dakshin ka padosi zila — wahan bhi yahi home collection",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/pathology-lab/deoria",
+              label: "Pathology lab kaise chunein — paanch sawaal",
+              sub: "Daam, ID card, report ka samay — kya poochhna chahiye",
+            },
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — is belt ke liye guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/full-body-checkup/deoria",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level",
+            },
+            {
+              href: "/blogs/diabetes-thyroid-test/deoria",
+              label: "Sugar, thyroid aur HbA1c — kis mahine kaunsa test",
+              sub: "Fasting, PP ya HbA1c, aur TSH kab dohrana hai",
+            },
+            {
+              href: "/blogs/lab-test/deoria#report-kaise-padhein",
               label: "Report aa gayi — ab ise kaise padhein",
             },
           ],
@@ -1796,11 +2094,12 @@ const LAB_CITY_SEED = [
        name (Varanasi → Banaras). Putting a wrong spelling in the metadata
        publishes it in our own name. */
 
-    // 37 characters. It has to stay short: the root layout appends
-    // " | MedicoBharat", so what Google renders is 52 — inside the ~60 it will
-    // show. Primary keyword first, then the second-biggest query on this page;
-    // both survive truncation.
-    title: "Lab Test in Siwan — Blood Test at Home",
+    // 38 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 53 — inside the ~60 it will
+    // show. The lead is the full service phrase rather than the bare "Lab Test
+    // in Siwan" this used to open with — one pairing per city now, see the
+    // block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Blood Test at Home in Siwan — Lab Test",
 
     // ~152 characters, so it renders whole on desktop and mobile. Hinglish
     // deliberately: the page is Hinglish and so is the searcher here, and a
@@ -2019,10 +2318,12 @@ const LAB_CITY_SEED = [
        different name (Varanasi → Banaras). Putting a wrong spelling in the
        metadata publishes it in our own name. */
 
-    // 40 characters. It has to stay short: the root layout appends
-    // " | MedicoBharat", so what Google renders is 55 — inside the ~60 it will
-    // show. Primary keyword first, then the second-biggest query on this page.
-    title: "Lab Test in Ghazipur — Blood Test at Home",
+    // 41 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 56 — inside the ~60 it will
+    // show. Primary keyword first, then this page's own second query — the
+    // "Blood Test at Home" tail it used to carry was on ten other cities too,
+    // see the block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Lab Test in Ghazipur — Blood Test Booking",
 
     // ~151 characters, so it renders whole on desktop and mobile. Hinglish
     // deliberately: the page is Hinglish and so is the searcher here, and a
@@ -2235,10 +2536,12 @@ const LAB_CITY_SEED = [
        alone is ambiguous to a search engine, and disambiguating it in the copy
        is worth more than any alias would be. */
 
-    // 41 characters. It has to stay short: the root layout appends
-    // " | MedicoBharat", so what Google renders is 56 — inside the ~60 it will
-    // show. Primary keyword first, then the second-biggest query on this page.
-    title: "Lab Test in Gopalganj — Blood Test at Home",
+    // 43 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 58 — inside the ~60 it will
+    // show. "Blood Test in Gopalganj" is the exact phrase and leads; the
+    // package query takes the tail, and that pairing is this page's own — see
+    // the block comment above defaultTitle in src/data/lab/defaults.js.
+    title: "Blood Test in Gopalganj — Full Body Checkup",
 
     // ~152 characters, so it renders whole on desktop and mobile. Hinglish
     // deliberately: the page is Hinglish and so is the searcher here. Bihar is
@@ -2482,10 +2785,12 @@ const LAB_CITY_SEED = [
        different name the city is known by — the rule set with Deoria stands.
        (Varanasi → Banaras is the only genuine alias on this site so far.) */
 
-    // 39 characters. It has to stay short: the root layout appends
-    // " | MedicoBharat", so what Google renders is 54 — inside the ~60 it will
-    // show. Primary keyword first, then the second-biggest query on this page.
-    title: "Lab Test in Lucknow — Blood Test at Home",
+    // 42 characters. It has to stay short: the root layout appends
+    // " | MedicoBharat", so what Google renders is 57 — inside the ~60 it will
+    // show. "Pathology lab" leads because in a city this size the search is for
+    // a PLACE, and this page's whole argument is that the nearest place on the
+    // map is not the nearest one in traffic. See content/lucknow.js.
+    title: "Pathology Lab in Lucknow — Home Collection",
 
     // ~151 characters, so it renders whole on desktop and mobile. Four
     // localities are spent in the snippet on purpose: this page's whole
