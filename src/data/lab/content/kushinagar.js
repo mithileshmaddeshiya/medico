@@ -10,13 +10,34 @@
  *
  * That splits the search demand in two, and it is not a small split: a person
  * in the district headquarters types "Padrauna me blood test", while the
- * district name is what anyone outside types. A page that carried only one of
- * those names would miss half its own district. So both names run through this
- * copy on purpose — the h1, the lead paragraph, an H2 of its own, several FAQs
- * and the Hindi section all carry the pair. Mau does the same thing with
- * "Maunath Bhanjan" (see content/mau.js); this is the same fix for a sharper
- * version of the same problem, because here the two names are two DIFFERENT
- * towns, not two names for one.
+ * district name is what anyone outside types. Mau has a version of this problem
+ * with "Maunath Bhanjan" (see content/mau.js), but here the two names are two
+ * DIFFERENT towns, not two names for one — and that is why the fix is not the
+ * same one.
+ *
+ * ── HOW THE SPLIT IS DRAWN NOW ───────────────────────────────────────────
+ * This page used to carry BOTH names everywhere — the h1, the lead paragraph,
+ * an H2, several FAQs and the Hindi section. Padrauna now has its own page at
+ * /lab-test/padrauna, so the exact-match phrases ("Lab Test in Padrauna",
+ * "Blood Test in Padrauna") were handed over to it and taken out of this page's
+ * title, description, h1, howTo heading and keywords. Two of our own pages
+ * chasing one exact phrase yields one ranking page and one filtered as a
+ * near-duplicate, not two.
+ *
+ * What each page keeps is the READER, not the noun:
+ *
+ *   THIS page  → the district. The reader 20–45 km from a counter. Distance,
+ *                the sugarcane season, the Gandak's flood weeks, and the AES
+ *                warning — which lives here, in full, and nowhere else.
+ *   Padrauna   → the town. The reader who already has a counter within walking
+ *                reach. The morning, the mohallas and their landmarks, how to
+ *                judge a lab, and the household's women's tests.
+ *
+ * Padrauna is still NAMED here — it is the headquarters, it is the first entry
+ * in this city's `areas`, and pretending otherwise would make the copy wrong.
+ * The lead paragraph names it and links to its page; keep that link, because it
+ * is half of the two-way link that tells a crawler which of the two pages is
+ * the one for "Padrauna me blood test".
  *
  * ── WHAT IS GENUINELY LOCAL HERE ─────────────────────────────────────────
  * Four things, and each earns a section rather than a sentence:
@@ -68,12 +89,16 @@
 export const kushinagarContent = [
   {
     id: "lab-test-in-kushinagar",
-    h: "Kushinagar Me Lab Test — Padrauna Se Kasia Tak Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Kushinagar Me Lab Test — Kasia Se Tamkuhi Raj Tak Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
     p: [
       "Kushinagar jile me jaanch ka asli kharcha test ki fees nahi, us tak pahunchne ka safar hai. Collection centre zyadatar Padrauna me hain — zila aspatal ke aas-paas, Bank Road aur purani bazar ke kareeb — aur jile ka bada hissa wahan se 20 se 45 kilometre door baitha hai. Khadda, Tamkuhi Raj, Sewrahi, Nebua Naurangia ya Fazilnagar se ek CBC ke liye nikalne ka matlab hai subah ki gaadi, khaali pet safar, counter par line, aur report lene ke liye doosre din phir wahi rasta. Ganne ke seson me, jab mill aur khet dono chal rahe hote hain, ye do din ki dihadi ka nuksan hai — aur wo aksar test ke daam se zyada baith jaata hai.",
       "Home sample collection isi rasta kharch ko khatam kar deta hai. Aap apna pata dete hain, apna slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — na kiraya, na khaali pet ka safar, na line, na doosra chakkar, aur na kaam se chhutti.",
       "Yahan routine pathology ke saare test aur health package book hote hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver Function Test, Kidney Function Test, Vitamin D, Vitamin B12, Dengue, Urine Routine aur Full Body Checkup. Doctor ka parcha hai to usi panel ke hisaab se booking ho jaati hai; koi test is page par naam se na dikhe to parche ke saath ek call kar lijiye — zyadatar test usi home visit me ho jaate hain.",
-      "Ek naam ki baat pehle hi saaf kar dena theek rahega, kyunki is jile me ye sabse zyada uljhan paida karti hai: jila Kushinagar hai, lekin jila mukhyalaya Padrauna hai. Kushinagar (Kasia) wo teerth sthal hai jahan Mahaparinirvan mandir aur Ramabhar stupa hain, aur wo Padrauna se kareeb 15 kilometre door hai. Aap \"Kushinagar me lab test\" dhoondhein ya \"Padrauna me blood test\" — ye page dono ke liye hai, aur service dono jagah wahi hai.",
+      [
+        "Ek naam ki baat pehle hi saaf kar dena theek rahega, kyunki is jile me ye sabse zyada uljhan paida karti hai: jila Kushinagar hai, lekin jila mukhyalaya Padrauna hai. Kushinagar (Kasia) wo teerth sthal hai jahan Mahaparinirvan mandir aur Ramabhar stupa hain, aur wo Padrauna se kareeb 15 kilometre door hai. Service dono jagah wahi hai — bas page do hain. Ye page poore jile ke liye hai: Kasia, Hata, Ramkola, Khadda, Tamkuhi Raj aur Sewrahi jaise kasbon aur unse lage gaon ke liye. Aap mukhyalaya sheher me hi rehte hain to ",
+        { text: "Padrauna wala page", href: "/lab-test/padrauna" },
+        " dekhiye — usme sheher ke mohalle aur landmark naam se likhe hain, Durga Chowk aur Bank Road se lekar Station Road aur Ramkola Road tak.",
+      ],
     ],
   },
 
@@ -85,7 +110,7 @@ export const kushinagarContent = [
        hai, yahan doori aur seson ka: ganne ki peraai ke mahino me aadha din
        nikaalna sabse mehnga padta hai. */
     id: "pathology-lab-diagnostic-centre-kushinagar",
-    h: "Kushinagar Ya Padrauna Me Pathology Lab Aur Diagnostic Centre Dhoondh Rahe Hain?",
+    h: "Kushinagar Ya Kasia Me Pathology Lab Aur Diagnostic Centre Dhoondh Rahe Hain?",
     p: [
       "Pehle ek baat saaf kar dena theek rahega: hamara koi walk-in counter Kushinagar jile me nahi hai, na Padrauna me aur na Kasia me — aur is page par kahin ye nahi likha jaayega ki hai. Ye home collection service hai. Hum aapke ghar se sample lete hain, aur wahi sach hai jo yahan likha hai.",
       "Iska matlab samajh lena kaam ka hai. Sheher ke chhote collection centre par bhi aam taur par sirf sample liya jaata hai; jaanch badi lab me hoti hai aur report wahin se banti hai. Yaani sample ko safar to karna hi hai. Sawaal sirf itna hai ki us safar ki shuruaat aapke ghar se ho, ya aapke gaadi pakadne, line lagane aur wapas aane ke baad. Blood aur urine ke saare aam test sirf sample par hote hain, isliye ghar se shuruaat karna kisi tarah kam bharosemand nahi hai — bas aadha din bach jaata hai.",
@@ -258,8 +283,14 @@ export const kushinagarFaqs = [
     a: "No — we have no walk-in counter anywhere in this district, neither in Padrauna nor in Kasia, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "The district is Kushinagar but I live in Padrauna — is this page for me?",
-    a: "Yes. Padrauna is the district headquarters of Kushinagar, and Kushinagar (Kasia) is the pilgrimage town about 15 kilometres away. Everything on this page applies in both places, at the same rates. Whether you search for a blood test in Padrauna or a lab test in Kushinagar, the booking, the slots and the report are the same.",
+    // The question stays — it is genuinely what the district asks — but the
+    // answer now hands the town reader to /lab-test/padrauna instead of
+    // claiming this page covers both equally. Same service, same rates; two
+    // pages, because a town reader and a block-town reader need different
+    // things. The link is part of the two-way pair; do not drop it.
+    q: "The district is Kushinagar but I live in Padrauna — which page is for me?",
+    a: "The service, the rates, the slots and the report are the same in both places, so either page will book you correctly. Padrauna is the district headquarters and Kushinagar (Kasia) is the pilgrimage town about 15 kilometres away, and each has its own page: if you live in Padrauna town, the Padrauna page names the mohallas and landmarks there, from Durga Chowk and Bank Road to Station Road and Ramkola Road. This page is written for the rest of the district — Kasia, Hata, Ramkola, Khadda, Tamkuhi Raj, Sewrahi and the villages around them.",
+    links: [{ href: "/lab-test/padrauna", label: "Lab test in Padrauna" }],
   },
   {
     q: "Which towns in Kushinagar district do you cover?",
