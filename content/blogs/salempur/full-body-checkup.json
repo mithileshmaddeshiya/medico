@@ -1,29 +1,32 @@
 {
-  "title": "Full Body Checkup In Salempur — Kaun Se Test Aur Kis Umar Me",
-  "description": "Salempur me full body checkup — package me kaun se test hote hain, kis umar me kaun sa plan, khaali pet kitne ghante, aur poore ghar ka ek saath kaise.",
+  "title": "Full Body Checkup In Salempur — Poore Ghar Ka Plan",
+  "description": "Salempur me full body checkup — package me kaun se test hote hain, khaali pet kitne ghante, kis umar me kaun sa plan, aur chutti ke teen din me poore ghar ka checkup kaise.",
   "keywords": [
     "full body checkup in Salempur",
     "full body checkup me kaun se test hote hain",
+    "Salempur me full body checkup kitne ka hota hai",
+    "full body checkup price in Salempur",
     "full body checkup Salempur",
     "health checkup package Salempur",
     "full body checkup at home Salempur",
-    "family health checkup Salempur",
-    "full body checkup khaali pet",
+    "poore ghar ka full body checkup ek saath",
+    "full body checkup khaali pet kitne ghante",
     "full body checkup kis umar me karayein",
+    "family health checkup Salempur",
     "annual health checkup Salempur",
     "lipid profile test in Salempur",
     "blood test at home Salempur",
     "home sample collection Salempur",
-    "lab test in Salempur",
-    "full body checkup Barhaj Bhatni",
+    "full body checkup Barhaj Bhatni Lar",
     "full body checkup Deoria jila"
   ],
   "publishedAt": "2026-09-07",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-10",
   "order": 40,
   "readingMinutes": 12,
   "takeaways": [
-    "Package me aam taur par CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine aate hain — parameter ki ginti nahi, TEST ki list maangiye.",
+    "Ek aam package me CBC, blood sugar, HbA1c, lipid profile, LFT, KFT, thyroid aur urine routine aate hain — sab ek hi baar liye gaye khoon aur ek urine sample par.",
+    "Daam package me kaunse test hain us par tay hota hai, parameter ki ginti par nahi — booking se pehle ginti nahi, TEST ki soochi maangiye.",
     "Paanch system har package me hone chahiye: khoon, sugar, dil, liver, kidney. Ek bhi chhoote to package adhoora hai.",
     "Khaali pet lipid aur fasting sugar ki wajah se rehna padta hai — 10 se 12 ghante, aur us dauraan saada paani chalta hai.",
     "Chutti me ghar aaye hain to teen din ka plan chalta hai: pehle din booking, doosre din subah sabka sample, teesre din report.",
@@ -32,18 +35,19 @@
   "sections": [
     {
       "id": "full-body-checkup-in-salempur",
-      "heading": "Full Body Checkup Ka Matlab Kya Hai — Aur Ye Kis Ke Liye Hai",
-      "lead": "Naam \"full body\" hai, lekin ye poore sharir ki jaanch nahi hoti. Ye screening hai.",
+      "heading": "Full Body Checkup Me Kya-Kya Hota Hai — Aur Ye Kis Ke Liye Hai",
+      "lead": "Pehle soochi, phir wo baat jo naam chhupa leta hai: \"full body\" me poora sharir nahi aata. Ye screening hai.",
       "blocks": [
-        "Full body checkup ka matlab ek package hota hai — kuch blood aur urine ke test ek saath, ek hi sample me, ek tay daam par. Iska kaam bimari pakadna nahi hai; iska kaam un cheezon ko jaldi pakadna hai jo chup chaap badh rahi hoti hain. Sugar, cholesterol, thyroid, liver, kidney aur vitamin ki kami — inme se koi bhi shuruaat me kuch mehsoos nahi karati.",
-        "Yahi baat sabse zyada galat samjhi jaati hai. \"Full body kara liya, sab theek hai\" — ye vaakya khatarnak hai. Package me cancer ki jaanch nahi hoti, dil ki bimari ka pakka pata nahi chalta, haddi aur jodon ki jaanch nahi hoti, aur jo cheezein machine par dikhti hain — X-ray, ultrasound, ECG — wo isme aati hi nahi. Wo hamari service me bhi shaamil nahi hain.",
+        "Package me aane wale test aam taur par ye hote hain: khoon ki ginti (CBC), blood sugar aur HbA1c, cholesterol ke liye lipid profile, liver ke liye LFT, kidney ke liye KFT, thyroid, aur urine routine. Bade plan me Vitamin D, Vitamin B12 aur urine microalbumin bhi shaamil ho jaate hain. In sab ke liye sui ek hi baar lagti hai — ek khoon ka sample aur ek urine ka — aur report aam taur par agle din phone par PDF me pahunch jaati hai.",
+        "Package ka kaam bimari pakadna nahi hai — un cheezon ko jaldi pakadna hai jo chup chaap badh rahi hoti hain: sugar, cholesterol, thyroid, liver, kidney aur vitamin ki kami. Inme se koi bhi shuruaat me kuch mehsoos nahi karati, aur jab tak mehsoos hoti hai tab tak kai saal nikal chuke hote hain. Isi liye ye un logon ke liye hai jinhe abhi koi shikayat nahi hai.",
+        "Ab wo baat jo naam nahi batata. Package ho jaane ke baad “ab sab theek hai” maan lena is jaanch ka sabse bada nuksan hai. Ismein cancer ki jaanch nahi hoti, dil ki bimari ka pakka pata nahi chalta, haddi aur jodon ki jaanch nahi hoti, aur jo cheezein machine par dikhti hain — X-ray, ultrasound, ECG — wo ismein aati hi nahi. Ye teenon machine par hote hain, khoon ke sample par nahi — isliye na wo package me aate hain aur na hamari list me.",
         [
           "Isliye seedha niyam ye hai: koi shikayat pehle se hai to package mat chuniye — doctor ko dikhaiye aur wahi test karaiye jo wo kahe. Package un logon ke liye hai jinhe abhi kuch nahi hai aur jo ek baseline banana chahte hain. ",
           {
-            "text": "Shikayat ke hisaab se kaun sa test hota hai",
+            "text": "Kis shikayat par kaun sa test hota hai",
             "href": "/blogs/lab-test/salempur"
           },
-          " — wo alag guide me hai."
+          " — wo baat alag guide me hai, aur jinhe pehle se koi takleef hai unhe wahin se shuru karna chahiye."
         ],
         {
           "note": {
@@ -55,8 +59,33 @@
       ]
     },
     {
+      "id": "chutti-me-poore-ghar-ka-checkup-salempur",
+      "heading": "Chutti Me Ghar Aaye Hain — Teen Din Me Poore Ghar Ka Checkup",
+      "lead": "Salempur me sabse zyada checkup unhi dinon me hote hain jab bahar kaam karne wale ghar aate hain.",
+      "blocks": [
+        "Yahan ka sabse aam pattern ye hai: ghar ka ek aadmi Delhi, Mumbai, Surat ya Gulf me hai, saal me ek-do baar chutti par aata hai, aur usi chutti me ghar ke bade-bujurgon ka checkup bhi karana hota hai. Chutti chhoti hoti hai, isliye kram galat ho jaye to report haath me aane se pehle wapsi ka din aa jaata hai.",
+        "Teen din ka seedha plan ye hai:",
+        {
+          "list": [
+            "Pehla din — sabki list ek jagah likh lijiye: kis-kis ka karana hai, kiski umar kya hai, aur kis-kis ki dawa chal rahi hai. Purani report ghar me kahin rakhi ho to wo bhi nikaal lijiye. Booking isi din kar dijiye, agli subah ka pehla slot maang kar.",
+            "Doosra din — subah 6 se 8 ke beech ek hi visit me sabka sample. Sabki fasting ek jaisi hogi, isliye raat 9 baje tak sabka khaana ho jaye. Naashta pehle se banwa kar rakhiye — sample ke turant baad sabko dena hai.",
+            "Teesra din — report phone par aa jaayegi. Chutti khatam hone se pehle jo sabse zaroori kaam hai wo yahi hai: report ko WhatsApp par ghar ke us aadmi ko bhej dijiye jo yahan rehta hai, aur ek copy apne paas rakhiye. Agla saal jab checkup hoga, tulna isi report se hogi."
+          ]
+        },
+        "Ek baat jo aksar chhoot jaati hai: bujurgon ka package apne aap alag banta hai. Umar ke saath HbA1c, urine routine aur thyroid teenon ki ahmiyat badh jaati hai, aur ye teenon hi sabse zyada chhoote hain. Ghar ke jawan logon ka package bujurgon par mat lagaiye.",
+        [
+          "Ek hi visit me poore ghar ka sample kaise liya jaata hai, aur bistar par pade mareez ka kya dhyaan rakha jaata hai — wo poora ",
+          {
+            "text": "ghar par sample wali guide",
+            "href": "/blogs/home-sample-collection/salempur#ek-visit-me-poora-ghar-salempur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
       "id": "coverage-vs-ginti-salempur",
-      "heading": "Package Me Kam Se Kam Kya Hona Chahiye — Paanch System",
+      "heading": "Package Poora Hai Ya Adhoora — Paanch Line Se Pata Chal Jaata Hai",
       "lead": "Package achha ya bura us list se tay hota hai jo usme shaamil hai — us ginti se nahi jo pamphlet par chhapi hai.",
       "blocks": [
         "Har jagah package ke saath ek bada number likha rehta hai — 45, 72, 88. Wo number is baat se banta hai ki report par kitni line chhapengi, is baat se nahi ki kitni alag jaanch hui. Ek akela CBC hi 18 se 22 line chhapta hai aur urine routine 10 se 15. Yaani do test mila kar hi \"35 parameters\" ho gaye. Isliye 88 wala package 45 wale se kamzor nikal sakta hai — agar us 88 me thyroid ya HbA1c hai hi nahi.",
@@ -198,7 +227,7 @@
     },
     {
       "id": "kis-ke-liye-kaun-sa-package-salempur",
-      "heading": "Kis Umar Me Kaun Sa Full Body Checkup Karayein",
+      "heading": "Bujurg, Jawan Aur Bachche — Ek Hi Ghar Me Teen Alag Package",
       "lead": "Package apne risk ke hisaab se chuniye, daam ke hisaab se nahi.",
       "blocks": [
         "Teen tarah ke plan hote hain — ek basic, ek advanced aur ek bujurgon ke liye. Farak sirf ginti ka nahi hai; farak ye hai ki kis umar me kya cheez chhupi hoti hai.",
@@ -257,7 +286,7 @@
     },
     {
       "id": "affordable-package-salempur",
-      "heading": "Salempur Me Full Body Checkup Ka Daam Kis Baat Par Tay Hota Hai",
+      "heading": "Salempur Me Full Body Checkup Kitne Ka Hota Hai — Daam Kis Par Tay Hota Hai",
       "lead": "Sasta aur mehnga package me farak ginti ka nahi, shaamil test ka hota hai.",
       "blocks": [
         "Package ka daam teen cheezon par tay hota hai: usme kaunse test hain, unme se kitne mehnge test hain, aur kya usme vitamin jaise test bhi hain. Vitamin D aur B12 apne aap me mehnge test hain — jis package me ye dono hain uska daam badhega hi, aur wo badha hua daam sach me kuch de raha hota hai.",
@@ -319,7 +348,7 @@
     },
     {
       "id": "package-book-karne-se-pehle-salempur",
-      "heading": "Full Body Checkup Se Pehle Kya Taiyaari Karni Hoti Hai",
+      "heading": "Sample Se Ek Raat Pehle — Kya Karein Aur Kya Bilkul Na Karein",
       "lead": "Package ek hi sample me ho jaata hai, lekin us ek sample ki taiyaari maayne rakhti hai.",
       "blocks": [
         "Package ki booking me sabse zyada gadbad slot aur fasting par hoti hai. Chaar cheezein pehle se tay kar lijiye, phir visit bilkul seedhi rehti hai.",
@@ -343,33 +372,8 @@
       ]
     },
     {
-      "id": "chutti-me-poore-ghar-ka-checkup-salempur",
-      "heading": "Chutti Me Ghar Aaye Hain — Teen Din Me Poore Ghar Ka Checkup",
-      "lead": "Salempur me sabse zyada checkup unhi dinon me hote hain jab bahar kaam karne wale ghar aate hain.",
-      "blocks": [
-        "Yahan ka sabse aam pattern ye hai: ghar ka ek aadmi Delhi, Mumbai, Surat ya Gulf me hai, saal me ek-do baar chutti par aata hai, aur usi chutti me ghar ke bade-bujurgon ka checkup bhi karana hota hai. Chutti chhoti hoti hai, isliye kram galat ho jaye to report haath me aane se pehle wapsi ka din aa jaata hai.",
-        "Teen din ka seedha plan ye hai:",
-        {
-          "list": [
-            "Pehla din — sabki list ek jagah likh lijiye: kis-kis ka karana hai, kiski umar kya hai, aur kis-kis ki dawa chal rahi hai. Purani report ghar me kahin rakhi ho to wo bhi nikaal lijiye. Booking isi din kar dijiye, agli subah ka pehla slot maang kar.",
-            "Doosra din — subah 6 se 8 ke beech ek hi visit me sabka sample. Sabki fasting ek jaisi hogi, isliye raat 9 baje tak sabka khaana ho jaye. Naashta pehle se banwa kar rakhiye — sample ke turant baad sabko dena hai.",
-            "Teesra din — report phone par aa jaayegi. Chutti khatam hone se pehle jo sabse zaroori kaam hai wo yahi hai: report ko WhatsApp par ghar ke us aadmi ko bhej dijiye jo yahan rehta hai, aur ek copy apne paas rakhiye. Agla saal jab checkup hoga, tulna isi report se hogi."
-          ]
-        },
-        "Ek baat jo aksar chhoot jaati hai: bujurgon ka package apne aap alag banta hai. Umar ke saath HbA1c, urine routine aur thyroid teenon ki ahmiyat badh jaati hai, aur ye teenon hi sabse zyada chhoote hain. Ghar ke jawan logon ka package bujurgon par mat lagaiye.",
-        [
-          "Ek hi visit me poore ghar ka sample kaise liya jaata hai, aur bistar par pade mareez ka kya dhyaan rakha jaata hai — wo poora ",
-          {
-            "text": "ghar par sample wali guide",
-            "href": "/blogs/home-sample-collection/salempur#ek-visit-me-poora-ghar-salempur"
-          },
-          " me hai."
-        ]
-      ]
-    },
-    {
       "id": "saal-me-kab-karayein-salempur",
-      "heading": "Full Body Checkup Saal Me Kitni Baar Aur Kis Mahine Karayein",
+      "heading": "Agla Checkup Kab Karayein — Aur Usi Mahine Me Kyun",
       "lead": "Mahine ka farak padta hai, aur dohraane ka waqt usse bhi zyada.",
       "blocks": [
         "Saalana checkup ke liye sabse aasan mahine wo hain jab bukhar ka mausam nahi hai — thand ke baad ya barsaat se pehle. Wajah seedhi hai: bukhar ke dinon me CBC aur liver ke number waise hi hile hue rehte hain, aur us waqt ka baseline aage ki tulna ke kaam nahi aata. Barsaat ke beech me package karana galat nahi hai, bas us report ko baseline mat maaniye.",
@@ -460,16 +464,16 @@
   ],
   "faqs": [
     {
-      "question": "Salempur me full body checkup me kya-kya aata hai?",
-      "answer": "Kam se kam paanch cheezein honi chahiye: CBC, blood sugar, lipid profile, liver function test, aur kidney function test ke saath urine routine. Bade package me thyroid, HbA1c aur Vitamin D tatha B12 bhi jud jaate hain. Kaunse package me kya-kya hai, uski poori list service page par likhi hai — parameter ki ginti se zyada yahi list dekhni chahiye."
+      "question": "Salempur me full body checkup ka daam kitna hota hai?",
+      "answer": "Daam package ki soochi se tay hota hai, uske parameter number se nahi. Thyroid, HbA1c, Vitamin D aur B12 alag reagent aur alag machine maangte hain, isliye jis plan me ye shaamil hain wo upar padta hai — aur us badhe hue daam ke badle sach me zyada jaankari milti hai. Jo plan inke bina sasta lagta hai, wo isliye sasta hai ki usme kam hai; kam daam me zyada nahi mil raha hota. Ghar se sample lene par koi visiting ya travel charge upar se nahi jodha jaata. Aaj ka rate Salempur ki rate list par har plan ke saamne likha rehta hai, aur booking wali call par poora amount sui lagne se pehle bata diya jaata hai."
     },
     {
       "question": "Full body checkup ke liye khaali pet rehna zaroori hai?",
       "answer": "Haan, zyadatar package fasting maangte hain — 10 se 12 ghante. Wajah lipid profile aur fasting sugar hain. Isliye subah 6 se 8 ka pehla slot lijiye, raat ka khana 9 baje tak kar lijiye, beech me sirf saada paani, aur naashta taiyaar rakhiye. 14 ghante se zyada bhookhe rehna faayda nahi, nuksan karta hai."
     },
     {
-      "question": "Package me price kya hai — is page par kyun nahi likha?",
-      "answer": "Har package aur har test ka daam service page ki rate list par ek hi jagah likha hai, taaki wo kabhi purana na pada rahe aur alag-alag page par alag na dikhe. Home collection uske upar free hai — na visiting charge, na travel charge. Payment sample lene ke waqt cash ya UPI se hota hai, aur rate confirmation call par bhi confirm ho jaata hai."
+      "question": "Main gaon me rehta hoon, Salempur kasbe me nahi — package ghar par ho jaayega?",
+      "answer": "Haan. Sample Salempur kasbe ke saath Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana aur Barhaj tak liya jaata hai, aur in kasbon se lage gaon bhi aam taur par cover hote hain. Aapke gaon ka naam is soochi me na ho to maan kar mat baithiye ki service nahi hai — ek call kar lijiye, cover hota hai to usi call par slot book ho jaayega. Pata likhte waqt tola ya purwa ka naam aur ek jaana-pehchana landmark zaroor daaliye — school, mandir, block office ya chauraha — kyunki yahan makan number se zyada kaam landmark aata hai."
     },
     {
       "question": "Zyada parameter wala package hamesha behtar hota hai?",
@@ -493,7 +497,7 @@
     },
     {
       "question": "Full body checkup me kaun se test hote hain?",
-      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12 aur urine microalbumin bhi jud jaate hain. Har jagah bilkul yahi list ho ye zaroori nahi, isliye booking se pehle test ki poori list maangiye. Usme paanch cheezein dhoondhiye — khoon, sugar, dil, liver aur kidney. Ye paanch poore hain to package theek hai."
+      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12 aur urine microalbumin bhi jud jaate hain. Har lab ka package bilkul yahi list de, ye zaroori nahi — isliye booking se pehle TEST ki poori soochi maangiye, parameter ki ginti nahi. Us soochi me paanch hisse dhoondhiye: khoon, sugar, dil (lipid), liver aur kidney. Ye paanch poore hain to package kaam ka hai; ek bhi chhoot raha hai to wo adhoora hai, chahe parameter kitne bhi likhe hon."
     },
     {
       "question": "Kis umar me full body checkup shuru karna chahiye?",
@@ -501,7 +505,7 @@
     },
     {
       "question": "Full body checkup ki report kitne din me aa jaati hai?",
-      "answer": "Zyadatar package ki report 24 ghante ke andar PDF me phone par aa jaati hai — CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine sab isme. Vitamin D aur B12 bhi aam taur par usi samay me. Sirf urine culture alag hai, usme 48 se 72 ghante lagte hain. Isliye chutti me ghar aaye hain to sample chutti khatam hone se kam se kam do din pehle de dijiye — report haath me le kar jaana hi asli faayda hai."
+      "answer": "Package ke saare aam test — CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine — 24 ghante ke andar PDF me phone par aa jaate hain, aur Vitamin D tatha B12 bhi utne hi samay me. Ek hi cheez is niyam se bahar hai: urine culture, jismein 48 se 72 ghante lagte hain kyunki organism ko pehle ugana padta hai. Isliye chutti me ghar aaye hain to sample chutti khatam hone se kam se kam do din pehle de dijiye — report haath me le kar jaana hi asli faayda hai."
     },
     {
       "question": "Salempur me ghar par hi sample de kar package karaya ja sakta hai?",
