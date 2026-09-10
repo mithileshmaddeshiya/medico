@@ -4,6 +4,8 @@
   "keywords": [
     "full body checkup in Gorakhpur",
     "full body checkup me kaun se test hote hain",
+    "Gorakhpur me full body checkup kitne ka hota hai",
+    "full body checkup price in Gorakhpur",
     "full body checkup Gorakhpur",
     "health checkup package Gorakhpur",
     "whole body checkup Gorakhpur",
@@ -14,16 +16,16 @@
     "senior citizen health package Gorakhpur",
     "annual health checkup Gorakhpur",
     "family health checkup Gorakhpur",
-    "lipid profile test in Gorakhpur",
     "blood test at home Gorakhpur",
     "lab test in Gorakhpur"
   ],
   "publishedAt": "2026-09-07",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-10",
   "order": 40,
   "readingMinutes": 12,
   "takeaways": [
-    "Full body checkup me aam taur par CBC, sugar, HbA1c, lipid, LFT, KFT, thyroid aur urine routine aate hain — parameter ki ginti nahi, TEST ki list maangiye.",
+    "Ek aam full body checkup me CBC, blood sugar, HbA1c, lipid profile, LFT, KFT, thyroid aur urine routine aate hain — sab ek hi baar liye gaye khoon aur ek urine sample par.",
+    "Daam package me kaunse test hain us par tay hota hai, parameter ki ginti par nahi — booking se pehle ginti nahi, test ki soochi maangiye.",
     "Khaali pet rehna lipid aur fasting sugar ki wajah se zaroori hota hai — 10 se 12 ghante, aur saada paani us dauraan bhi chalta hai.",
     "Sample ki visit me 10–15 minute lagte hain aur zyadatar package ki report 24 ghante ke andar PDF me phone par aa jaati hai.",
     "55 ke upar HbA1c, urine routine aur thyroid teenon package me hone chahiye — yahi teen sabse zyada chhoote hain.",
@@ -32,18 +34,19 @@
   "sections": [
     {
       "id": "full-body-checkup-in-gorakhpur",
-      "heading": "Full Body Checkup Kya Hota Hai — Aur Kis Ke Liye Hota Hai",
-      "lead": "Naam \"full body\" hai, lekin ye poore sharir ki jaanch nahi hoti.",
+      "heading": "Full Body Checkup Me Kya-Kya Hota Hai — Aur Ye Kis Ke Liye Hai",
+      "lead": "Seedha jawab pehle, phir wo baat jo naam nahi batata: \"full body\" me poora sharir nahi aata.",
       "blocks": [
-        "Full body checkup ek package hota hai — kuch blood aur urine ke test ek saath, ek hi sample me, ek tay daam par. Iska kaam un cheezon ko jaldi pakadna hai jo chup chaap badh rahi hoti hain: sugar, cholesterol, thyroid, liver, kidney aur vitamin ki kami. Inme se koi bhi shuruaat me kuch mehsoos nahi karati — yahi package ka poora point hai.",
-        "Aur yahi baat sabse zyada galat samjhi jaati hai. \"Full body kara liya, sab theek hai\" — ye vaakya khatarnak hai. Package me cancer ki screening nahi hoti, dil ki bimari ka pakka pata nahi chalta, haddi aur jodon ki jaanch nahi hoti, aur jo cheezein machine par dikhti hain — X-ray, ultrasound, ECG — wo isme aati hi nahi. Wo hamari service me bhi shaamil nahi hain.",
+        "Ek aam full body checkup me ye aate hain — CBC (khoon ki ginti), blood sugar, HbA1c, lipid profile (cholesterol), liver function test, kidney function test, thyroid aur urine routine. Bade package me Vitamin D aur Vitamin B12 bhi jud jaate hain. Ye saare test ek hi baar nas se liye gaye khoon aur ek urine sample par ho jaate hain, ek tay daam par, aur report aam taur par agle din phone par PDF me aa jaati hai.",
+        "Package ka kaam un cheezon ko jaldi pakadna hai jo chup chaap badh rahi hoti hain — sugar, cholesterol, thyroid, liver, kidney aur vitamin ki kami. Inme se koi bhi shuruaat me kuch mehsoos nahi karati. Jab tak mehsoos hota hai, tab tak kai saal nikal chuke hote hain. Yahi package ka poora point hai, aur yahi wajah hai ki ye un logon ke liye hai jinhe abhi koi shikayat nahi hai.",
+        "Ab wo baat jo naam nahi batata, aur jo sabse zyada galat samjhi jaati hai. Package ho jaane ke baad “ab sab theek hai” maan lena hi is jaanch ka sabse bada nuksan hai. Ismein cancer ki screening nahi hoti, dil ki bimari ka pakka pata nahi chalta, haddi aur jodon ki jaanch nahi hoti, aur jo cheezein machine par dikhti hain — X-ray, ECG, ultrasound — wo ismein aati hi nahi. Ye teenon machine par hote hain, sample par nahi, isliye hamare menu me bhi nahi hain.",
         [
           "Isliye seedha niyam: koi shikayat pehle se hai to package mat chuniye — doctor ko dikhaiye aur wahi test karaiye jo wo kahe. Package un logon ke liye hai jinhe abhi kuch nahi hai. ",
           {
-            "text": "Shikayat ke hisaab se kaun sa test hota hai",
+            "text": "Kis shikayat par kaun sa test hota hai",
             "href": "/blogs/lab-test/gorakhpur"
           },
-          " — wo alag guide me hai."
+          " — uska alag guide hai, aur shikayat wale reader ko wahin se shuru karna chahiye."
         ],
         {
           "note": {
@@ -55,11 +58,11 @@
       ]
     },
     {
-      "id": "package-me-kya-hona-chahiye-gorakhpur",
-      "heading": "Achhe Package Me Kam Se Kam Kya Hona Chahiye — Paanch System",
-      "lead": "Package ki taakat isme hai ki kya-kya shaamil hai, isme nahi ki kitne number chhapte hain.",
+      "id": "do-package-kaise-tolein-gorakhpur",
+      "heading": "Do Package Aamne-Saamne Rakh Kar Kaise Tolein — Ek Chhoti Soochi",
+      "lead": "Sheher me package ke vikalp bahut hain. Unhe tolne ka ek hi tareeka kaam karta hai, aur usme do minute lagte hain.",
       "blocks": [
-        "Package bechne ka sabse aam tareeka parameter ki ginti hai — 45, 72, 88. Lekin ginti apne aap me kuch nahi batati. Ek package 80 parameter de sakta hai jisme se 30 CBC ke andar ke hi hisse hon, aur thyroid usme ho hi na. Wo package 45 parameter wale se kamzor hai, chahe number bada dikhe.",
+        "Tareeka ye hai: dono package ki test soochi maangiye — parameter ki ginti nahi, TEST ke naam — aur neeche wali table ke saamne rakh kar tick lagaiye. Jis package me upar ki paanch line poori hain, wo aage hai; jisme thyroid aur vitamin bhi hain, wo usse aage. Ye do minute ka kaam saal bhar ka farak daal deta hai, kyunki jo test chhoot gaya uska pata agle saal chalta hai — aur tab tak wo saal ja chuka hota hai.",
         {
           "table": {
             "caption": "Kisi bhi full body package me kya dhoondhna chahiye",
@@ -108,7 +111,7 @@
           }
         },
         [
-          "Pehli paanch line kam se kam wali shart hai. Aakhiri do — thyroid aur vitamin — wo hain jinke jud jaane se package se sach me kuch pata chalta hai. Kaunse package me kya-kya aata hai, ",
+          "Pehli paanch line kam se kam wali shart hai. Neeche ke do — thyroid aur vitamin — optional lagte hain, lekin thakan, wazan badhne aur kamzori ki sabse aam wajah aksar wahin nikalti hai. Kaunse package me kya-kya aata hai, ",
           {
             "text": "service page par",
             "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur"
@@ -208,26 +211,26 @@
     },
     {
       "id": "sasta-full-body-checkup-gorakhpur",
-      "heading": "Gorakhpur Me Full Body Checkup Ka Daam Kis Baat Par Tay Hota Hai",
-      "lead": "Sasta aur mehnga me farak ginti ka nahi, shaamil test ka hota hai.",
+      "heading": "Gorakhpur Me Full Body Checkup Kitne Ka Hota Hai — Daam Kis Baat Par Tay Hota Hai",
+      "lead": "Sasta aur mehnga me farak ginti ka nahi, shaamil test ka hota hai — aur aaj ka rate ek hi jagah likha rehta hai.",
       "blocks": [
-        "Is sheher me package ke vikalp bahut hain, aur daam me kaafi farak dikhta hai. Wo farak teen cheezon se aata hai: package me kaunse test hain, unme se kitne mehnge test hain, aur kya usme vitamin jaise test bhi hain. Vitamin D aur B12 apne aap me mehnge test hain — jis package me ye dono hain uska daam badhega hi, aur wo badha hua daam sach me kuch de raha hota hai.",
+        "Is sheher me package ke vikalp bahut hain, aur daam me kaafi farak dikhta hai. Wo farak teen cheezon se aata hai: package me kaunse test hain, unme se kitne mehnge test hain, aur kya usme vitamin jaise test bhi hain. Vitamin D aur B12 alag reagent aur alag machine maangte hain, isliye jis package me ye dono hain uska daam upar rahega — aur us badhe hue daam ke badle asli jaankari mil rahi hoti hai, sirf ek lambi list nahi.",
         {
           "list": [
-            "Do package ka daam milaate waqt sirf number mat dekhiye — dono ki list saamne rakhiye aur upar wali saat cheezein tick kijiye. Jis package me thyroid ya vitamin nahi hai, wo sasta isliye hai kyunki usme kam hai.",
+            "Do package ka daam milaate waqt sirf number mat dekhiye — dono ki list saamne rakhiye aur upar wali saat cheezein tick kijiye. Jo package inke bina sasta pad raha hai, wo isliye sasta hai ki usme kam hai — kam daam me zyada nahi mil raha, kam mil raha hai.",
             "Package me bachat sabse zyada hoti hai. Wahi test alag-alag karane par kharcha kai guna ho jaata hai — yahi package ka poora point hai.",
-            "Home collection ka koi alag charge nahi hai. Package ka jo daam likha hai wahi dena hota hai — na visiting charge, na travel charge.",
+            "Ghar se sample lene ka koi alag charge is daam ke upar nahi jodha jaata. Package ka jo daam likha hai wahi dena hota hai — na visiting charge, na travel charge.",
             "Payment sample lene ke waqt hota hai, cash ya UPI se. Pehle se paisa dene ki zaroorat nahi.",
             "Report par reference range aur method chhapega ya nahi — ye poochhiye. Sabse sasti report agar padhi hi na ja sake to wo sasti nahi, bekaar hai."
           ]
         },
         [
-          "Har package aur har test ka daam ek hi jagah likha hai — ",
+          "Isi liye is guide me koi number nahi chhapa hai. Aaj ka daam har package aur har test ke saamne ek hi jagah likha rehta hai — ",
           {
             "text": "Gorakhpur ki rate list",
             "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur"
           },
-          " par. Is guide me price jaan-boojh kar nahi likha jaata, taaki wo ek hi jagah rahe aur kabhi purana na pada rahe. Kuch test us waqt ki zaroorat par tay hote hain aur unke card par 'Call for price' likha rehta hai — daam sample dene se pehle bata diya jaata hai."
+          " par. Rate ek jagah rahega to hamesha aaj ka rahega; do jagah likha number kabhi na kabhi ek jagah purana pad hi jaata hai, aur purana rate padhne wale ke saath dhokha hai. Kuch test us waqt ki zaroorat par tay hote hain aur unke card par 'Call for price' likha rehta hai — unka daam sample dene se pehle bata diya jaata hai, baad me nahi."
         ],
         {
           "note": {
@@ -246,10 +249,10 @@
         "Lipid Profile me cholesterol aur triglyceride ke chaar-paanch number aate hain — Total Cholesterol, LDL, HDL aur Triglycerides. Ye dil ki bimari ka sabse jaldi milne wala ishaara hai, aur wo ishaara aksar der se pakda jaata hai kyunki koi lakshan hota hi nahi.",
         {
           "list": [
-            "Isme fasting lagti hai — 10 se 12 ghante. Poora package isi ek test ki wajah se khaali pet hota hai. HbA1c, TSH, CBC, LFT, Vitamin D aur B12 me fasting lagti hi nahi.",
-            "Triglycerides khaane par sabse zyada upar-neeche hote hain. Ek din pehle bahut tala-bhuna khaya ho to number badha hua aa sakta hai — ek din pehle aam khana khaiye, na zyada parhez, na daawat.",
+            "Isi ek test ke liye 10 se 12 ghante khaali pet rehna padta hai. Baaki poora package isi ek shart ke peechhe chalta hai. HbA1c, TSH, CBC, LFT, Vitamin D aur B12 me fasting lagti hi nahi.",
+            "Triglycerides wo hissa hai jo khaane ke baad sabse tezi se badalta hai, aur isi wajah se poori report bhatka deta hai. Ek din pehle bahut tala-bhuna khaya ho to number badha hua aa sakta hai — ek din pehle aam khana khaiye, na zyada parhez, na daawat.",
             "Ek din pehle sharaab bilkul nahi. Triglycerides is par seedha badh jaate hain aur report ka matlab bigad jaata hai.",
-            "LDL ko \"kharaab\" aur HDL ko \"achha\" kehna aasan hai lekin adhoora hai. Doctor teenon ko saath me, aur sugar tatha BP ke saath milakar dekhta hai.",
+            "LDL ko “kharaab” aur HDL ko “achha” keh dena aasan hai, par usse aadhi baat hi samajh me aati hai. Doctor teenon ko saath me, aur sugar tatha BP ke saath milakar dekhta hai.",
             "Sugar ki dawa chal rahi hai to lipid saal me ek baar zaroor — ye wahi test hai jo follow-up me sabse zyada chhoota hai."
           ]
         },
@@ -435,10 +438,10 @@
         {
           "list": [
             "Pehle header — naam, umar, gender. Reference range inhi par badalti hai.",
-            "Phir wo paanch cheezein jo package ka asli kaam hain: sugar, lipid, liver, kidney aur CBC.",
+            "Uske baad wo paanch hisse jinke liye package karaya hi jaata hai: sugar, lipid, liver, kidney aur khoon ki ginti.",
             "Har number ke bagal me us lab ki apni reference range dekhiye. Doosri lab ki range se mat milaiye.",
             "Ab pichhle saal ki report kholiye aur wahi paanch cheezein milaiye. Number normal range me hai lekin har saal upar badh raha hai — ye baat ek saal ki report kabhi nahi bata sakti.",
-            "Halka sa upar-neeche hona apne aap me bimari nahi hai. Doctor pattern dekhta hai, ek number nahi.",
+            "Ek-do point ka upar-neeche hona apne aap me kisi bimari ka matlab nahi rakhta. Doctor pattern dekhta hai, ek number nahi.",
             "Vitamin ki kami nikli ho to apne mann se high-dose goli shuru mat kijiye — khuraak kami ki gehrai par tay hoti hai."
           ]
         },
@@ -446,7 +449,7 @@
         {
           "note": {
             "title": "\"Sab normal hai\" ka matlab \"sab theek hai\" nahi hota",
-            "text": "Package normal aane ka matlab itna hai ki jo test hue wo normal hain. Jo test hue hi nahi — cancer ki screening, dil ki jaanch, haddi aur jodon ki jaanch, aur X-ray ya ultrasound par dikhne wali cheezein — unke baare me ye report kuch nahi kehti. Isliye koi nayi shikayat ho to \"pichhle mahine full body kara liya tha\" kehkar use taaliye mat.",
+            "text": "Package normal aane ka matlab itna hai ki jo test hue wo normal hain. Jo test hue hi nahi — cancer ki screening, dil ki jaanch, haddi aur jodon ki jaanch, aur X-ray ya ultrasound par dikhne wali cheezein — unke baare me ye report kuch nahi kehti. Isliye koi nayi shikayat shuru ho to use ye keh kar mat taaliye ki pichhle mahine hi to poora checkup hua tha.",
             "tone": "warn"
           }
         }
@@ -495,12 +498,12 @@
   ],
   "faqs": [
     {
-      "question": "Gorakhpur me full body checkup me kya-kya aata hai?",
-      "answer": "Kam se kam paanch cheezein honi chahiye: CBC, blood sugar, lipid profile, liver function test (LFT), aur kidney function test (KFT) ke saath urine routine. Bade package me thyroid, HbA1c aur Vitamin D tatha B12 bhi jud jaate hain. Kaunse package me kya-kya hai uski poori list service page par hai — parameter ki ginti se zyada yahi list dekhni chahiye."
+      "question": "Gorakhpur me full body checkup kitne ka hota hai?",
+      "answer": "Daam is baat par tay hota hai ki package me kaunse test hain — kitne “parameter” likhe hain us par nahi. Jis package me HbA1c, thyroid, Vitamin D aur B12 shaamil hain wo upar padega, aur us badhe hue daam ke badle asli jaankari milti hai; jo package inke bina sasta hai wo isliye sasta hai ki usme kam hai. Ghar se sample lene ka koi alag charge daam ke upar nahi jodha jaata. Aaj ka rate har package ke saamne Gorakhpur ki rate list par likha rehta hai, aur booking confirm karne wali call par poora amount sample lene se pehle bata diya jaata hai."
     },
     {
       "question": "Full body checkup ke liye khaali pet rehna zaroori hai?",
-      "answer": "Haan, aur wajah aksar sirf ek test hoti hai — lipid profile, jisme 10 se 12 ghante fasting lagti hai (fasting sugar bhi ho to wo bhi). HbA1c, TSH, CBC, LFT, Vitamin D aur B12 me fasting lagti hi nahi. Isliye subah 6 se 8 ka pehla slot lijiye, raat ka khana 9 baje tak kar lijiye, beech me sirf saada paani, aur naashta taiyaar rakhiye."
+      "answer": "Haan, aur wajah aam taur par sirf ek test hoti hai — lipid profile, jiske liye 10 se 12 ghante khaali pet rehna padta hai (fasting sugar bhi package me ho to wo bhi). HbA1c, TSH, CBC, LFT, Vitamin D aur B12 ke liye fasting lagti hi nahi, isliye unke naam par bhookha rehna bekaar hai. Sabse aasan tareeka ye hai: raat ka khana 9 baje tak khatam kar lijiye, subah 6 se 8 wala pehla slot lijiye, beech me sirf saada paani, aur naashta pehle se taiyaar rakhiye taaki sample ke turant baad kha sakein."
     },
     {
       "question": "LFT aur KFT package me aate hain ya alag se karane padte hain?",
@@ -512,7 +515,7 @@
     },
     {
       "question": "Zyada parameter wala package hamesha behtar hota hai?",
-      "answer": "Nahi. Ginti apne aap me kuch nahi batati — ek package 80 parameter de sakta hai jisme thyroid ho hi na, aur wo 45 parameter wale se kamzor hoga. Do package milaate waqt dono ki list saamne rakhiye aur dekhiye ki CBC, sugar, lipid, LFT, KFT, thyroid aur vitamin me se kya-kya hai. Jo chhoot gaya, uska pata agle saal chalta hai."
+      "answer": "Nahi, aur is sheher me yahi galti sabse mehngi padti hai kyunki vikalp bahut hain. Akela CBC hi report par 18 se 22 line chhapta hai — yaani ginti badhana aasan hai aur uska matlab kuch nahi. Do package tolne ka tareeka ye hai: dono ki TEST soochi saamne rakhiye aur dekhiye ki CBC, sugar, lipid, LFT, KFT, thyroid aur vitamin me se kaun kaun sa hai. Jisme upar ki paanch line poori hain wo aage hai, chahe uska parameter number chhota dikhe."
     },
     {
       "question": "OPD dikhani hai — package pehle karwa lein ya doctor ko pehle dikhayein?",
@@ -520,19 +523,19 @@
     },
     {
       "question": "Package saal me kitni baar karana chahiye?",
-      "answer": "Umar 30 se kam aur koi shikayat nahi — do saal me ek baar kaafi hai. 30 ke upar saal me ek baar, aur har baar lagbhag usi mahine me, taaki do saal ki report seedhi tuli ja sakein. Ek-do mahine me dobara karana bekaar hai; number itni jaldi badalte nahi. Sugar, BP ya thyroid ki dawa chal rahi ho to follow-up alag chalta hai — use package se mat badaliye."
+      "answer": "Umar 30 se kam hai aur koi shikayat nahi to do saal me ek baar kaafi hai; 30 ke upar saal me ek baar. Har baar lagbhag usi mahine me karaiye, taaki do saal ki report seedhe aamne-saamne tuli ja sakein — yahi is jaanch ki sabse kaam ki cheez hai. Do mahine me dobara karane ka koi faayda nahi, kyunki ye number itni jaldi badalte hi nahi. Sugar, BP ya thyroid ki dawa chal rahi hai to uska follow-up alag chalta hai aur uski apni tareekhein hoti hain — use package se mat badaliye."
     },
     {
       "question": "Ghar ke chaar log ek saath full body checkup kara sakte hain?",
-      "answer": "Haan, aur yahi sabse aasan tareeka hai. Sabki booking ek hi slot me kar dijiye — ek hi visit me sabka sample ho jaata hai. Har vyakti ka naam, umar aur package alag likhwaiye. Jinke test me fasting nahi lagti unhe bhookha rakhne ki zaroorat nahi. Report har vyakti ki alag PDF me aati hai."
+      "answer": "Haan, aur ghar me ye sabse aasan tareeka hai. Sab logon ki booking ek hi slot me karwa dijiye — ek hi visit me sabka sample le liya jaata hai. Booking ke waqt har vyakti ka naam, umar aur uska package alag alag likhwaiye, warna report milaane me uljhan hoti hai. Jinke package me fasting wala test nahi hai unhe subah bhookha rakhne ki zaroorat nahi. Report har vyakti ki apni alag PDF me aati hai, saath me nahi."
     },
     {
       "question": "Full body checkup me kaun se test hote hain?",
-      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12 aur iron bhi jud jaate hain. Har package me bilkul yahi list ho, ye zaroori nahi — isliye booking se pehle test ki list maangiye aur usme paanch system dhoondhiye: khoon, sugar, dil (lipid), liver aur kidney. In paanchon me se koi bhi chhoot raha ho to package adhoora hai, chahe usme parameter kitne bhi likhe hon."
+      "answer": "Ek aam package me CBC, fasting blood sugar, HbA1c, lipid profile, LFT (liver), KFT (kidney), thyroid (TSH) aur urine routine aate hain; advanced package me Vitamin D, Vitamin B12 aur iron bhi jud jaate hain. Har lab ka package bilkul yahi list de, ye zaroori nahi — isliye booking se pehle test ki soochi maangiye aur usme paanch hisse dhoondhiye: khoon, sugar, dil (lipid), liver aur kidney. In paanch me se koi ek bhi na ho to package adhoora hai, chahe usme parameter kitne bhi likhe hon."
     },
     {
       "question": "Full body checkup me kitna time lagta hai?",
-      "answer": "Sample dene me 10 se 15 minute. Poora package ek hi baar nas se liye gaye khoon par hota hai, isliye har test ke liye alag sui nahi lagti; urine sample ka container saath me chhod diya jaata hai. Ghar par sample lene ki booking me confirmation call lagbhag 30 minute me aa jaati hai. Poora din kahin nahi jaata — sirf fasting ke 10 se 12 ghante planning maangte hain, aur wo raat ki neend me poore ho jaate hain."
+      "answer": "Sample dene me 10 se 15 minute. Poora package ek hi baar nas se liye gaye khoon par hota hai, isliye har test ke liye alag sui nahi lagti; urine sample ka container saath me chhod diya jaata hai. Ghar par sample lene ki booking me confirmation call lagbhag 30 minute me aa jaati hai. Is jaanch me aapka poora din kahin nahi jaata: planning sirf fasting ke 10 se 12 ghante maangte hain, aur wo ghante raat ki neend me hi nikal jaate hain."
     },
     {
       "question": "Full body checkup ki report kitne ghante me aa jaati hai?",
@@ -544,7 +547,7 @@
     },
     {
       "question": "Gorakhpur me full body checkup ghar se sample de kar ho sakta hai?",
-      "answer": "Haan, poora package ghar par ho jaata hai. Home collection free hai aur phlebotomist ID card ke saath aata hai. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Payment sample lene ke waqt cash ya UPI se hota hai. Ek baat dhyaan rakhiye: X-ray, ECG aur ultrasound humare menu me nahi hain — wo machine par hote hain, sample par nahi. Parche par wo likhe hon to unke liye imaging centre jaana hoga."
+      "answer": "Haan — package ka har test sample par hota hai, isliye poora package ghar par ho jaata hai. Home collection free hai aur phlebotomist ID card ke saath aata hai. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Payment sample lene ke waqt cash ya UPI se hota hai. Ek baat dhyaan me rakhiye: X-ray, ECG aur ultrasound is package me nahi aate — wo machine par hote hain, sample par nahi. Parche par unme se kuch likha ho to uske liye imaging centre alag se jaana hoga, aur wo trip package se bachti nahi."
     }
   ],
   "relatedLinks": {
