@@ -19,6 +19,18 @@
  *   state       (string)   Footer address line and the local-business schema.
  *   areas       (array)    Localities covered; rendered as text (SEO), offered
  *                          in the booking form, and listed in areaServed.
+ *   areaContext (string)   Optional; the place name each `areas` entry is
+ *                          QUALIFIED BY in the schema, which publishes them as
+ *                          "<area>, <areaContext>". Defaults to `name`, which
+ *                          is right whenever the city IS the district — Deoria's
+ *                          "Barhaj, Deoria" is how that address is written.
+ *                          Set it when the city is a TOWN and the areas are
+ *                          district towns rather than its own mohallas:
+ *                          Khalilabad sets "Sant Kabir Nagar", so the markup
+ *                          says "Mehdawal, Sant Kabir Nagar" and not "Mehdawal,
+ *                          Khalilabad" — which names a place that does not
+ *                          exist. Structured data that invents a place is worse
+ *                          than structured data that omits one.
  *   postalCode  (string)   Optional; local-business schema only.
  *   geo         { lat, lng } Optional; town-centre coordinates, schema only.
  *                          Use the town centre — this is a service area, not a
@@ -75,6 +87,7 @@ import { deoriaContent, deoriaFaqs } from "./content/deoria";
 import { ghazipurContent, ghazipurFaqs } from "./content/ghazipur";
 import { gopalganjContent, gopalganjFaqs } from "./content/gopalganj";
 import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
+import { khalilabadContent, khalilabadFaqs } from "./content/khalilabad";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { lucknowContent, lucknowFaqs } from "./content/lucknow";
 import { mauContent, mauFaqs } from "./content/mau";
@@ -674,6 +687,15 @@ const LAB_CITY_SEED = [
               href: "/lab-test/deoria",
               label: "Deoria me lab test",
               sub: "Gorakhpur ka safar bachane wala option",
+            },
+            // Kareeb 40 km paschim, isi line par. Us page ka poora tark ye hai
+            // ki wahan ke log aadhe Gorakhpur aur aadhe Basti chale jaate hain,
+            // aur is sheher ko wo naam se leta hai — isliye link dono taraf
+            // hai. Ek naya URL sitemap se nahi, links se crawl hota hai.
+            {
+              href: "/lab-test/khalilabad",
+              label: "Khalilabad me lab test",
+              sub: "Sant Kabir Nagar — kareeb 40 km, isi line par",
             },
             // Azamgarh mandal se log yahan OPD ke liye aate hain, isliye link
             // dono taraf hai — Azamgarh ka page bhi is page par aata hai.
@@ -2945,6 +2967,252 @@ const LAB_CITY_SEED = [
               label: "Azamgarh me lab test",
               sub: "Mandal mukhyalaya, Purvanchal ke beech me",
             },
+            // Khalilabad ka page is sheher ko naam se leta hai — main line
+            // seedhi yahan aati hai aur bade sansthan ke liye log yahi aate
+            // hain — isliye link dono taraf hai.
+            {
+              href: "/lab-test/khalilabad",
+              label: "Khalilabad me lab test",
+              sub: "Sant Kabir Nagar — Gorakhpur line par, kareeb 230 km poorab",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    /* ── KHALILABAD — SANT KABIR NAGAR ───────────────────────────────────
+       The first city on this site whose problem is NOT distance, and that is
+       why it is worth its own page rather than a mention on Gorakhpur's.
+
+       It sits between two bigger cities — Gorakhpur roughly 40 km east, Basti
+       roughly 35 km west — on the main Gorakhpur–Lucknow line. Every other page
+       here argues some version of "the big labs are far, skip the journey".
+       That argument is simply false in this town: the labs are an hour away in
+       either direction and people go to both. So the copy argues the opposite
+       and it is this page's own — because two cities are equally close, a
+       household's repeat tests get SCATTERED between them, and an HbA1c done in
+       Gorakhpur in March cannot be compared with one done in Basti in June.
+       Continuity, not distance. See content/khalilabad.js.
+
+       Two more things are this page's own: the daily commuter (this belt goes
+       up-down for work, which is why prescriptions sit for weeks) and the two
+       names — the district is Sant Kabir Nagar, the town is Khalilabad. Unlike
+       Kushinagar/Padrauna there is only ONE page here, so it carries both names
+       itself, the way Mau carries "Maunath Bhanjan".
+
+       ⚠ Basti has no page on this site. It is named in the copy as geography
+       and nothing links to /lab-test/basti — do not add such a link until that
+       page exists. */
+    slug: "khalilabad",
+    name: "Khalilabad",
+    state: "Uttar Pradesh",
+
+    /* Magahar first — Sant Kabir's memorial town, a few km out and the name
+       most searched alongside the district's — then the blocks and market towns
+       collection actually reaches. These render in the footer, fill the booking
+       form's dropdown, become `areaServed` in the schema, and are what a
+       "<kasba> me blood test" search matches on.
+
+       "Khalilabad" itself is deliberately absent: the form renders
+       `[name, ...areas, "Other"]`, so repeating it would print the town twice
+       in the dropdown. Kept to eleven — the smaller villages are named in the
+       page copy instead, because a twenty-item dropdown is unusable on a phone.
+       Do not pad this list; an areaServed we cannot serve is a lie in schema
+       form. */
+    areas: [
+      "Magahar",
+      "Mehdawal",
+      "Dhanghata",
+      "Bakhira",
+      "Hainsar Bazar",
+      "Santha",
+      "Baghauli",
+      "Nath Nagar",
+      "Semariyawan",
+      "Pauli",
+      "Belhar Kala",
+    ],
+
+    /* ⚠ THIS FIELD IS WHY THE LIST ABOVE IS ALLOWED TO HOLD TOWNS.
+       The schema publishes each area as "<area>, <areaContext>", and without
+       this it would default to the city's name and emit "Mehdawal, Khalilabad"
+       — a place that does not exist, because Mehdawal is a block town in the
+       same district, not a mohalla of this one. With it the markup says
+       "Mehdawal, Sant Kabir Nagar", which is how that address is actually
+       written. Every other city on this site is also its district, so this is
+       the only entry that needs it so far. */
+    areaContext: "Sant Kabir Nagar",
+
+    // Khalilabad town's PIN. Schema only, and worth re-checking against a
+    // delivery slip before any paid push: it is the one field here nobody on
+    // the page ever reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "272175",
+
+    /* Khalilabad town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. Google reads `geo` on a service-area business as "roughly
+       here", which is true. */
+    geo: { lat: 26.7745, lng: 83.0716 },
+
+    updated: "2026-09-12",
+    order: 14,
+    published: true,
+
+    /* No `aliases` entry, and none in CITY_ALIASES either. "Sant Kabir Nagar"
+       is the DISTRICT's name, not a second name for this town — the Kushinagar
+       case, not the Varanasi → Banaras case — so putting it in `aliases` would
+       be wrong on the facts. It is carried where it actually works instead: the
+       description, the h1Sub, the keywords, an H2 of its own, the lead
+       paragraph, two FAQs and the Hindi section.
+
+       ⚠ 43 characters; the root layout appends " | MedicoBharat" (template in
+       src/app/layout.js), so Google renders 58 — inside the ~60 it shows.
+
+       The tail is a PROMISE, not a keyword, and it is the only title in the
+       section that makes one. That is deliberate: this is a new URL competing
+       against established results in a two-city catchment, and "Report in 24
+       Hours" is the one thing on the page a reader can decide on from the SERP
+       alone. It is also the reason the copy has to keep qualifying it —
+       routine pathology in 24 hours, cultures in 48 to 72 — in the report
+       section and the last FAQ. EDIT THAT QUALIFICATION OUT AND THIS TITLE
+       BECOMES A CLAIM WE DO NOT KEEP. The pairing (lead "Lab Test in X", tail
+       "Report in 24 Hours") is unused by any other city; see the block comment
+       above defaultTitle in src/data/lab/defaults.js for that rule. */
+    title: "Lab Test in Khalilabad — Report in 24 Hours",
+
+    // ~154 characters, so it renders whole on desktop and mobile. Both names in
+    // the first six words, because half this district's searches use the
+    // district's name and half the town's — then the block towns, which is what
+    // distinguishes this result from Gorakhpur's when both show for one
+    // regional query.
+    description:
+      "Khalilabad aur Sant Kabir Nagar me blood test ghar baithe — Magahar, Mehdawal, Dhanghata aur Bakhira tak free home sample collection, report 24 ghante me.",
+
+    /* The h1 opens with the phrase people type and stops; the secondary terms
+       sit in `h1Sub`, inside a real sentence. Budget: h1 under ~60 characters,
+       h1Sub under ~140. The district's name goes in the sub-line rather than
+       the heading — it would double the heading's length for a name the reader
+       standing in Khalilabad does not use. */
+    hero: {
+      h1: "Lab Test in Khalilabad — Blood Test Ghar Baithe",
+      h1Sub:
+        "Sant Kabir Nagar jile me pathology lab ke test ghar par — free home sample collection, routine report 24 ghante me WhatsApp par.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Khalilabad" nine times plus one line per area and miss the
+       one thing this district's traffic actually is: it is searched under TWO
+       names. Both are carried explicitly rather than left to Google to infer,
+       because "Sant Kabir Nagar" and "Khalilabad" share no substring — an
+       engine has no way to guess they are the same place from the strings
+       alone, the way it might with "Maunath Bhanjan" and "Mau".
+
+       `keywords` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      "Lab Test in Khalilabad",
+      "Blood Test in Khalilabad",
+      "Blood Test at Home in Khalilabad",
+      "Home Sample Collection in Khalilabad",
+      "Pathology Lab in Khalilabad",
+      "Diagnostic Centre in Khalilabad",
+      "Lab Test in Sant Kabir Nagar",
+      "Blood Test in Sant Kabir Nagar",
+      "Full Body Checkup in Khalilabad",
+      "Thyroid Test in Khalilabad",
+      "Sugar Test in Khalilabad",
+      "Lab Test Near Me in Khalilabad"
+    ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Khalilabad",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. This one carries Mehdawal, the largest block town, which the URL
+       cannot hold and which its own readers type instead of the district name.
+       `intro` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test in Khalilabad and Mehdawal" },
+
+    content: khalilabadContent,
+    faqs: khalilabadFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not through the sitemap alone, so the two pages
+       this town's readers genuinely travel to are named first — Gorakhpur, and
+       Lucknow because the main line runs straight there and the big institutes
+       are at the other end of it. Both link back; see their blocks above.
+
+       Basti is the nearer neighbour on the other side and is NOT here, because
+       there is no page for it. Naming a town in the copy is honest; linking to
+       a route that does not exist is a 404.
+
+       Every href is checked against a real route: the cities in this seed and
+       the guides in content/blogs/deoria/. */
+    relatedLinks: {
+      heading: "Khalilabad Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Wo sheher jahan imaging, specialist ya bade sansthan ke liye jaana padta hai — wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Kareeb 40 km — OPD se pehle report haath me",
+            },
+            {
+              href: "/lab-test/lucknow",
+              label: "Lucknow me lab test",
+              sub: "Main line seedhi jaati hai — bade sansthan me dikhana ho to",
+            },
+            {
+              href: "/lab-test/deoria",
+              label: "Deoria me lab test",
+              sub: "Gorakhpur ke us paar ka zila — wahi service, wahi rate",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — is belt ke liye guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
+            },
+            {
+              href: "/blogs/pathology-lab/deoria",
+              label: "Pathology lab kaise chunein — paanch sawaal",
+              sub: "Daam, ID card, report ka samay — kya poochhna chahiye",
+            },
+            {
+              href: "/blogs/full-body-checkup/deoria",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level",
+            },
+            {
+              href: "/blogs/dengue-typhoid-test/deoria",
+              label: "Dengue aur typhoid — bukhar ke kis din kaunsa test",
+              sub: "NS1, Widal, malaria aur platelet count ka matlab",
+            },
+            {
+              href: "/blogs/lab-test/deoria#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
           ],
         },
       ],
@@ -3066,6 +3334,10 @@ function normalise(fields, id) {
     name,
     state: str(fields.state) || DEFAULT_STATE,
     areas: strList(fields.areas) ?? [],
+    // What each `areas` entry is qualified by in the schema. Falls back to the
+    // city's own name, which is correct wherever the city is also the district.
+    // See the field list at the top of this file for when to override it.
+    areaContext: str(fields.areaContext) || name,
     // Alternate names this city is searched by (e.g. Varanasi → "Banaras").
     aliases: strList(fields.aliases) ?? CITY_ALIASES[slug] ?? [],
     postalCode: fields.postalCode ? str(fields.postalCode) : null,

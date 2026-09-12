@@ -224,9 +224,20 @@ const diagnosticLabNode = (city) => {
         }
       : {}),
     // Every locality we serve, so the page can rank for "<test> in <locality>".
+    //
+    // Each area is qualified by `areaContext`, NOT by the city name. For most
+    // cities the two are the same string and this is "Barhaj, Deoria" — how
+    // that address is actually written. Where the city is a town and the areas
+    // are district towns, they differ: Khalilabad sets areaContext to "Sant
+    // Kabir Nagar", so this emits "Mehdawal, Sant Kabir Nagar" rather than
+    // "Mehdawal, Khalilabad", which would name a place that does not exist.
+    // See the field list at the top of src/data/lab/cities.js.
     areaServed: [
       { "@type": "City", name: city.name },
-      ...city.areas.map((area) => ({ "@type": "Place", name: `${area}, ${city.name}` })),
+      ...city.areas.map((area) => ({
+        "@type": "Place",
+        name: `${area}, ${city.areaContext ?? city.name}`,
+      })),
     ],
     // The collection window, written as a specification rather than the old
     // "Mo-Su 06:00-21:00" string: the string form is legacy and Google's local
