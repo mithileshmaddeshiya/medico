@@ -90,6 +90,7 @@ import { gorakhpurContent, gorakhpurFaqs } from "./content/gorakhpur";
 import { khalilabadContent, khalilabadFaqs } from "./content/khalilabad";
 import { kushinagarContent, kushinagarFaqs } from "./content/kushinagar";
 import { lucknowContent, lucknowFaqs } from "./content/lucknow";
+import { maharajganjContent, maharajganjFaqs } from "./content/maharajganj";
 import { mauContent, mauFaqs } from "./content/mau";
 import { padraunaContent, padraunaFaqs } from "./content/padrauna";
 import { salempurContent, salempurFaqs } from "./content/salempur";
@@ -696,6 +697,15 @@ const LAB_CITY_SEED = [
               href: "/lab-test/khalilabad",
               label: "Khalilabad me lab test",
               sub: "Sant Kabir Nagar — kareeb 40 km, isi line par",
+            },
+            // Is page ki copy pehle se kehti hai ki Maharajganj se log yahan
+            // refer ho kar aate hain. Ab us vaakya ka link bhi hai, aur us
+            // page se wapsi ka link bhi — ek taraf ka link crawler ko sirf
+            // itna batata hai ki do page jude hain.
+            {
+              href: "/lab-test/maharajganj",
+              label: "Maharajganj me lab test",
+              sub: "Kareeb 50 km uttar — Nautanwa aur Sonauli ki taraf tak",
             },
             // Azamgarh mandal se log yahan OPD ke liye aate hain, isliye link
             // dono taraf hai — Azamgarh ka page bhi is page par aata hai.
@@ -3198,6 +3208,217 @@ const LAB_CITY_SEED = [
               href: "/blogs/pathology-lab/deoria",
               label: "Pathology lab kaise chunein — paanch sawaal",
               sub: "Daam, ID card, report ka samay — kya poochhna chahiye",
+            },
+            {
+              href: "/blogs/full-body-checkup/deoria",
+              label: "Full body checkup me kya hona chahiye",
+              sub: "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level",
+            },
+            {
+              href: "/blogs/dengue-typhoid-test/deoria",
+              label: "Dengue aur typhoid — bukhar ke kis din kaunsa test",
+              sub: "NS1, Widal, malaria aur platelet count ka matlab",
+            },
+            {
+              href: "/blogs/lab-test/deoria#report-kaise-padhein",
+              label: "Report aa gayi — ab ise kaise padhein",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+
+  {
+    /* ── MAHARAJGANJ — THE BORDER DISTRICT ───────────────────────────────
+       ⚠ THE NAME IS NOT UNIQUE ON THIS SITE. "Maharajganj" is also a town in
+       AZAMGARH district and is already an \`areas\` entry there, so the schema
+       on /lab-test/azamgarh legitimately says "Maharajganj, Azamgarh". Both
+       are correct and both stay. What makes that safe is that this page names
+       the ambiguity in its own section and links to Azamgarh's page for the
+       other one — see content/maharajganj.js. Do not let either page start
+       claiming the other's Maharajganj.
+
+       WHAT THIS PAGE ARGUES, and it is not any other city's argument:
+         · Choosing a centre here is choosing a JOURNEY. The counters sit in
+           four bazaars (Sadar, Nautanwa, Siswa Bazar, Pharenda) while the
+           population is spread 25–60 km out across the Terai blocks. Padrauna
+           is the opposite case — a town reader with a counter in walking reach
+           — and its five-question checklist is deliberately not repeated.
+         · The border belt. Nautanwa and Sonauli run on trade and transport and
+           start before dawn; no other district on this site touches a border.
+         · One road, one city. Unlike Khalilabad (two cities) or Siwan (three),
+           everything here funnels to Gorakhpur ~50 km south, which is why
+           sequencing that one day properly is the page's most useful advice.
+
+       ⚠ SCOPE: the Indian side only. Sonauli is named because it is a town of
+       this district, never to imply collection across the border. */
+    slug: "maharajganj",
+    name: "Maharajganj",
+    state: "Uttar Pradesh",
+
+    /* The blocks and market towns collection actually reaches. These render in
+       the footer, fill the booking form's dropdown, become \`areaServed\` in the
+       schema, and are what a "<kasba> me blood test" search matches on.
+
+       No \`areaContext\` needed: this city IS its district, so the schema's
+       "<area>, Maharajganj" is how these addresses are actually written — the
+       Deoria case, not the Khalilabad one.
+
+       "Maharajganj" itself is deliberately absent: the form renders
+       \`[name, ...areas, "Other"]\`, so repeating it would print the town twice.
+       Do not pad this list; an areaServed we cannot serve is a lie in schema
+       form, and nothing across the border belongs in it. */
+    areas: [
+      "Nautanwa",
+      "Sonauli",
+      "Pharenda",
+      "Siswa Bazar",
+      "Nichlaul",
+      "Ghughli",
+      "Paniyara",
+      "Brijmanganj",
+      "Partawal",
+      "Laxmipur",
+      "Mithaura",
+    ],
+
+    // Maharajganj Sadar's PIN. Schema only, and worth re-checking against a
+    // delivery slip before any paid push: it is the one field here nobody on
+    // the page ever reads, so a wrong value would sit in the markup unnoticed.
+    postalCode: "273303",
+
+    /* Maharajganj town centre, and approximate on purpose — same rule as every
+       other city: there is no walk-in counter here, this is a home-collection
+       service area, and a precise street pin in the schema would be a claim we
+       cannot keep. */
+    geo: { lat: 27.144, lng: 83.5636 },
+
+    updated: "2026-09-12",
+    order: 15,
+    published: true,
+
+    /* ⚠ 43 characters; the root layout appends " | MedicoBharat" (template in
+       src/app/layout.js), so Google renders 58 — inside the ~60 it shows.
+
+       "Diagnostic Centre" leads because that is what this district types when
+       it wants a PLACE, and the page's own lead section answers exactly that
+       search — with the distance maths, not with a boast. Padrauna is the only
+       other city leading on that term and its tail is "Blood Test", so the
+       lead+tail pairing here is still unique; see the block comment above
+       defaultTitle in src/data/lab/defaults.js for that rule. "Lab Test" takes
+       the tail so the section's main phrase survives beside it. */
+    title: "Diagnostic Centre in Maharajganj — Lab Test",
+
+    // ~155 characters, so it renders whole on desktop and mobile. It names the
+    // far blocks rather than the headquarters, because that is what separates
+    // this result from Gorakhpur's when both show for one regional query — and
+    // because those are the readers for whom the service changes the most.
+    description:
+      "Maharajganj me lab test aur blood test ghar baithe — Nautanwa, Sonauli, Nichlaul aur Siswa Bazar tak free home sample collection, report 24 ghante me.",
+
+    /* The h1 opens with the phrase people type and stops; the secondary terms
+       sit in \`h1Sub\`, inside a real sentence. Budget: h1 under ~60 characters,
+       h1Sub under ~140. */
+    hero: {
+      h1: "Lab Test in Maharajganj — Blood Test Ghar Baithe",
+      h1Sub:
+        "Poore jile me pathology lab ke test ghar par — Sadar se Nautanwa aur Nichlaul tak free home sample collection, routine report 24 ghante me.",
+    },
+
+    /* ── Keywords ──────────────────────────────────────────────────────────
+       Written out rather than taking defaultKeywords(), which would produce
+       "<template> in Maharajganj" nine times plus one line per area and miss
+       the two things this district's traffic actually is: the "centre" search
+       (the term the title leads on, and the one a reader uses when they want a
+       place rather than a test), and the far block towns — a reader in
+       Nichlaul or Nautanwa rarely types the district's name.
+
+       \`keywords\` is a weak-to-zero ranking signal by itself; the reason to keep
+       it honest is that it is the checklist the page's headings, FAQs and prose
+       are written against. Every term below appears in the visible copy — a
+       keyword that appears ONLY here is the kind that gets a page filtered. */
+    keywords: [
+      "Diagnostic Centre in Maharajganj",
+      "Lab Test in Maharajganj",
+      "Blood Test in Maharajganj",
+      "Pathology Lab in Maharajganj",
+      "Blood Test at Home in Maharajganj",
+      "Home Sample Collection in Maharajganj",
+      "Full Body Checkup in Maharajganj",
+      "Thyroid Test in Maharajganj",
+      "Sugar Test in Maharajganj",
+      "Lab Test in Nautanwa",
+      "Blood Test in Sonauli",
+      "Lab Test Near Me in Maharajganj"
+    ],
+
+    /* Closing call strip. The heading IS one tracked search phrase, title
+       cased — no tail, no second keyword. See defaultCallBanner in
+       src/data/lab/defaults.js for which phrase each city takes and why. */
+    callBanner: {
+      heading: "Blood Test at Home in Maharajganj",
+    },
+
+    /* Same rule as the strip above — ONE tracked phrase, and a different one
+       from the strip's, so the page uses two of its phrases rather than one
+       twice. This one carries Nautanwa, the district's biggest town after
+       Sadar, which the URL cannot hold and which its own readers type.
+       \`intro\` and the five steps come from defaultHowTo and are unchanged:
+       they describe a procedure, and a procedure is the same in every town. */
+    howTo: { heading: "How to book a lab test in Maharajganj and Nautanwa" },
+
+    content: maharajganjContent,
+    faqs: maharajganjFaqs,
+
+    /* ── In-body internal links ────────────────────────────────────────────
+       Rendered by LabContent at the end of the guide. A brand-new URL gets
+       crawled through links, not the sitemap alone. Gorakhpur is named first
+       because it is the only referral city this district has, and it links
+       back (see its block above). Azamgarh is here for the name clash, not for
+       geography — it is the other Maharajganj's page, and a reader who landed
+       on the wrong one needs that link more than any other on this page.
+
+       Every href is checked against a real route: the cities in this seed and
+       the guides in content/blogs/deoria/. */
+    relatedLinks: {
+      heading: "Maharajganj Ke Aas-paas Aur Aage Ki Jaankari",
+      intro:
+        "Jahan specialist ya imaging ke liye jaana padta hai wahan bhi yahi home collection chalti hai — aur ye tay karne ke liye guide ki kaun sa test kab karana chahiye.",
+      groups: [
+        {
+          title: "Aas-paas Ke Sheher",
+          links: [
+            {
+              href: "/lab-test/gorakhpur",
+              label: "Gorakhpur me lab test",
+              sub: "Kareeb 50 km dakshin — OPD se pehle report haath me",
+            },
+            {
+              href: "/lab-test/kushinagar",
+              label: "Kushinagar me lab test",
+              sub: "Poorab ka padosi jila — wahi service, wahi rate",
+            },
+            {
+              href: "/lab-test/azamgarh",
+              label: "Azamgarh me lab test",
+              sub: "Azamgarh wale Maharajganj kasbe ke liye ye page hai",
+            },
+          ],
+        },
+        {
+          title: "Test Chunne Me Madad",
+          links: [
+            {
+              href: "/blogs/pathology-lab/deoria",
+              label: "Pathology lab kaise chunein — paanch sawaal",
+              sub: "Daam, ID card, report ka samay — kya poochhna chahiye",
+            },
+            {
+              href: "/blogs/lab-test/deoria",
+              label: "Kaun sa test kab karayein — is belt ke liye guide",
+              sub: "Shikayat, umar aur mausam ke hisaab se",
             },
             {
               href: "/blogs/full-body-checkup/deoria",
