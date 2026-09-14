@@ -124,7 +124,15 @@
             "text": "Alag-alag test book karne se package aam taur par kam padta hai. Lekin doctor ne agar sirf teen test likhe hain, to 40 test wala package sasta nahi — wo mehnga hai. Parcha haath me hai to wahi karwaiye; package tab lijiye jab koi shikayat na ho aur saal ka routine karana ho.",
             "tone": "info"
           }
-        }
+        },
+        [
+          "Dobara test, lab badalne aur bekaar safar me jaanch ka kharcha kaise badhta hai — aur use kam kaise rakhein — us par ",
+          {
+            "text": "kam kharch me health checkup ki guide",
+            "href": "/blogs/affordable-health-checkup/deoria"
+          },
+          " hai."
+        ]
       ]
     },
     {

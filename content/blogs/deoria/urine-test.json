@@ -1,0 +1,388 @@
+{
+  "title": "Urine Test In Deoria — Routine Ya Culture?",
+  "description": "Deoria me urine test — urine routine aur urine culture me kya farak hai, peshab me jalan par kaun sa test, aur ghar par urine sample sahi tareeke se kaise dein.",
+  "keywords": [
+    "urine test in Deoria",
+    "urine routine test Deoria",
+    "urine culture test Deoria",
+    "peshab ki jaanch Deoria",
+    "peshab me jalan kaun sa test",
+    "UTI test in Deoria",
+    "urine sample kaise dein",
+    "urine me pus cells ka matlab",
+    "urine test at home Deoria",
+    "lab test in Deoria"
+  ],
+  "publishedAt": "2026-09-14",
+  "order": 120,
+  "takeaways": [
+    "Urine test do tarah ka hota hai: urine routine batata hai ki peshab me kya-kya mila hai, aur urine culture batata hai ki kaunsa bacteria hai aur kaunsi antibiotic us par kaam karegi.",
+    "Culture ka sample antibiotic shuru karne se PEHLE dena chahiye — dawa ke baad diya gaya sample aksar jhootha negative aata hai.",
+    "Aadhi galat reportein sample dene ke tareeke se hoti hain: beech ki dhaar ka peshab, saaf container, aur container ke andar haath na lagana.",
+    "Peshab me jalan ke saath tez bukhar aur kamar ke ek taraf dard ho, to test ka intezaar mat kijiye — usi din doctor ko dikhaiye."
+  ],
+  "sections": [
+    {
+      "id": "urine-test-deoria-kya-hota-hai",
+      "heading": "Urine Test Me Kya Dekha Jaata Hai — Routine Aur Culture Do Alag Jaanch Hain",
+      "lead": "Parche par sirf “urine test” likha ho, to bhi asal sawaal ye hota hai ki routine chahiye ya culture.",
+      "blocks": [
+        "Seedha jawab pehle. Peshab ki jaanch me do alag test aate hain. Urine routine (jise urine R/M ya urine examination bhi likhte hain) ek hi sample me teen cheezein dekhta hai — peshab ka rang aur gaadhapan, usme sugar, protein ya khoon jaisa kuch ghula hai ya nahi, aur microscope ke neeche pus cells, RBC ya crystal. Iski report aam taur par 24 ghante ke andar aa jaati hai.",
+        "Urine culture iske aage ki jaanch hai. Isme sample ko lab me ugaya jaata hai, taaki pata chale ki peshab me sach me koi bacteria hai ya nahi, wo kaunsa hai, aur kaunsi antibiotic us par asar karegi. Bacteria ko ugne ka samay chahiye, isliye culture ki report 48 se 72 ghante me aati hai — isse jaldi ka vaada koi lab imaandari se nahi kar sakti.",
+        "Deoria me sabse aam galti yahi hoti hai ki jalan ya baar-baar peshab ki shikayat par sirf routine karwa kar antibiotic shuru kar di jaati hai. Kai baar ye theek rehta hai, lekin jab shikayat baar-baar lautti hai, ya dawa ke baad bhi theek nahi hoti, tab culture hi batata hai ki galti kahan hai.",
+        {
+          "note": {
+            "title": "Is guide me kya nahi hai",
+            "text": "Yahan ye likha hai ki kaunsi jaanch kab, sample kaise dein, aur report me kya dekhein. Kaunsi dawa leni hai, ye faisla sirf doctor ka hai — report ke number ke bharose khud se antibiotic shuru ya band mat kijiye.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urine-routine-me-kya-aata-hai-deoria",
+      "heading": "Urine Routine Test Me Kya-Kya Aata Hai — Teen Hisse, Ek Sample",
+      "lead": "Ek chhoti si shishi, lekin report par bees se zyada line.",
+      "blocks": [
+        "Urine routine ki report lambi dikhti hai, isliye log ghabra jaate hain. Asal me wo teen hisson me bati hoti hai, aur har hissa alag sawaal ka jawab deta hai.",
+        {
+          "table": {
+            "caption": "Urine routine ke teen hisse — aur har ek kya batata hai",
+            "head": [
+              "Hissa",
+              "Isme kya dekha jaata hai",
+              "Ye kis baat ka ishaara deta hai"
+            ],
+            "rows": [
+              [
+                "Physical (dekh kar)",
+                "Rang, saafi ya dhundhlapan, specific gravity",
+                "Paani ki kami, gaadha peshab, ya kuch mila hua"
+              ],
+              [
+                "Chemical (strip se)",
+                "Sugar, protein, ketone, khoon, bilirubin, nitrite, pH",
+                "Sugar ya kidney ki taraf ishaara, infection ki sambhavna"
+              ],
+              [
+                "Microscopy (microscope se)",
+                "Pus cells, RBC, epithelial cells, cast, crystal",
+                "Infection, khoon aana, ya sample ki gandagi"
+              ]
+            ]
+          }
+        },
+        "Ek baat samajh lena zaroori hai: urine routine ek chhanni hai, faisla nahi. Isme sugar dikhe to diabetes pakka nahi ho jaati — uske liye khoon ki jaanch hoti hai. Protein dikhe to kidney kharaab nahi ho jaati — thakan, bukhar ya bhaari mehnat ke baad bhi thoda protein aa jaata hai. Report doctor ko dikhane ka ishaara hai, apne aap me nidaan nahi.",
+        [
+          "Sugar ke mareez ke liye peshab me protein ka chhota sa roop — urine microalbumin — alag se dekha jaata hai, aur wo kidney ka sabse pehla ishaara hai. Wo baat ",
+          {
+            "text": "sugar aur BP wale mareez ki kidney jaanch",
+            "href": "/blogs/liver-kidney-test/deoria#sugar-bp-wale-mareez-kft-deoria"
+          },
+          " me detail me likhi hai."
+        ]
+      ]
+    },
+    {
+      "id": "urine-culture-kab-deoria",
+      "heading": "Urine Culture Test Kab Zaroori Hai — Aur Antibiotic Se Pehle Kyun",
+      "lead": "Culture ka sabse bada dushman wo antibiotic hai jo sample se ek din pehle shuru kar di gayi.",
+      "blocks": [
+        "Har jalan par culture zaroori nahi hota. Lekin kuch halaton me doctor aksar culture maangte hain, aur wahan routine se kaam chalana baad me mehnga padta hai.",
+        {
+          "list": [
+            "Infection baar-baar laut raha hai — saal me do-teen baar ya usse zyada.",
+            "Antibiotic ka poora course lene ke baad bhi jalan ya bukhar theek nahi hua.",
+            "Garbhavastha me peshab ki koi bhi shikayat — yahan doctor jaldi aur saaf jawab chahte hain.",
+            "Sugar ke mareez, bujurg, ya jinhe catheter laga ho.",
+            "Bachche ko bukhar hai aur doctor ko peshab ke infection ka shak hai."
+          ]
+        },
+        "Ab wo niyam jo sabse zyada toot-ta hai: culture ka sample antibiotic shuru karne se pehle dijiye. Dawa ki ek-do khuraak ke baad bhi bacteria dab jaate hain, lab me ugte nahi, aur report “no growth” aa jaati hai — jabki infection andar maujood hota hai. Agar dawa pehle hi shuru ho chuki hai, to sample dete waqt ye zaroor bata dijiye, taaki report padhne wala doctor usi hisaab se dekhe.",
+        "Culture ki report me do cheezein aati hain: kaunsa organism mila, aur ek soochi jisme har antibiotic ke saamne likha hota hai ki wo kaam karegi (sensitive) ya nahi (resistant). Yahi soochi doctor ko sahi dawa chunne me madad karti hai, isliye ise doctor ko poora dikhaiye, sirf pehla page nahi."
+      ]
+    },
+    {
+      "id": "peshab-me-jalan-deoria",
+      "heading": "Peshab Me Jalan, Baar-Baar Peshab Ya Dard — Kaun Sa Test Pehle",
+      "lead": "Zyadatar maamlon me shuruaat urine routine se hoti hai. Kuch lakshan aise hain jinme test nahi, doctor pehle.",
+      "blocks": [
+        "Peshab karte waqt jalan, baar-baar peshab jaane ki zaroorat lekin thoda-thoda aana, neeche pet me bhaaripan, ya peshab ka dhundhla aur badboo wala hona — ye UTI yaani peshab ke infection ke aam lakshan hain. In lakshanon me UTI test ki shuruaat aam taur par urine routine se hoti hai, aur doctor zaroorat samjhein to saath me culture bhi.",
+        {
+          "table": {
+            "caption": "Lakshan ke hisaab se pehla kadam — aam salah, nidaan nahi",
+            "head": [
+              "Kya ho raha hai",
+              "Pehla kadam",
+              "Kab"
+            ],
+            "rows": [
+              [
+                "Halki jalan, baar-baar peshab, bukhar nahi",
+                "Urine routine; doctor ko report dikhaiye",
+                "Ek-do din me"
+              ],
+              [
+                "Shikayat baar-baar lautti hai",
+                "Urine routine aur culture, dawa se pehle",
+                "Agli dawa shuru karne se pehle"
+              ],
+              [
+                "Garbhavastha me koi bhi peshab ki shikayat",
+                "Doctor ko turant bataiye; wo test likhenge",
+                "Usi din"
+              ],
+              [
+                "Tez bukhar, kanpkanpi, kamar ke ek taraf dard",
+                "Seedha doctor ya aspatal",
+                "Usi din, intezaar nahi"
+              ],
+              [
+                "Peshab me saaf khoon, ya peshab ruk jaana",
+                "Seedha doctor ya aspatal",
+                "Usi din"
+              ]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Ye lakshan test ka intezaar nahi karte",
+            "text": "Peshab me jalan ke saath tez bukhar, kanpkanpi, ulti, ya kamar ke ek taraf tez dard ho — to infection kidney tak pahunch sakta hai. Aise me home collection ka slot dhoondhne ke bajaye usi din doctor ko dikhaiye. Peshab poori tarah ruk jaaye, ya usme saaf khoon aaye, tab bhi yahi niyam hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urine-sample-kaise-dein-deoria",
+      "heading": "Urine Sample Kaise Dein — Galat Tareeke Se Aadhi Report Bekaar Ho Jaati Hai",
+      "lead": "Khoon ka sample lene wala leta hai. Peshab ka sample aap khud dete hain — isliye yahi hissa sabse zyada bigadta hai.",
+      "blocks": [
+        "Urine test ki reportein sabse zyada isliye dobara karani padti hain ki sample theek se nahi liya gaya. Report par “epithelial cells bahut zyada” likha aaye, to aksar matlab ye hota hai ki sample me bahar ki gandagi mil gayi — aur tab wo report kuch saaf nahi batati. Ye paanch kadam us galti ko khatam kar dete hain.",
+        {
+          "list": [
+            "Subah ka pehla peshab behtar hai — raat bhar jama hua peshab zyada saaf tasveer deta hai. Doctor ne koi aur samay bataya ho to wahi maaniye.",
+            "Pehle haath dhoiye, aur peshab ki jagah ko saade paani se saaf kar lijiye. Sabun ya antiseptic zaroori nahi.",
+            "Pehli dhaar toilet me jaane dijiye. Beech ki dhaar container me lijiye, aur aakhiri hissa phir toilet me. Isi ko midstream sample kehte hain.",
+            "Container ke andar ya dhakkan ke andar ki taraf ungli mat lagaiye, aur kisi doosri bottle se peshab daal kar mat bhariye.",
+            "Dhakkan kas kar band kijiye, aur sample ka samay yaad rakhiye — lene wale ko bataiye ki sample kab liya gaya."
+          ]
+        },
+        "Container ghar par sample lene aane wale ke paas hota hai. Isliye sabse aasan tareeka ye hai: slot subah ka lijiye, aur jab phlebotomist khoon ka sample lene aaye tabhi saaf container le kar peshab ka sample de dijiye — sample kuch ghante pada nahi rehta, aur sahi haalat me lab tak jaata hai.",
+        "Mahilaon ke liye ek zaroori baat: periods ke dinon me urine sample dene se bachiye, kyunki khoon mil jaane se report me RBC dikhte hain aur uska matlab gadbada jaata hai. Periods khatam hone ke do-teen din baad sample dijiye. Jaanch jaldi zaroori ho to sample dete waqt ye bata dijiye.",
+        [
+          "Chhote bachche ka peshab ka sample lena alag kaam hai — booking ke waqt bachche ki umar zaroor bataiye. Ghar par visit ke din kya hota hai, wo poora ",
+          {
+            "text": "ghar par sample wali guide",
+            "href": "/blogs/home-sample-collection/deoria#visit-ke-din-kya-hota-hai-deoria"
+          },
+          " me likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "urine-report-pus-cells-deoria",
+      "heading": "Urine Report Me Pus Cells, RBC Aur Epithelial Cells Ka Matlab",
+      "lead": "Har “High” bimari nahi hota — lekin kuch line aisi hain jinhe taalna nahi chahiye.",
+      "blocks": [
+        "Report padhte waqt number ko usi report par chhapi reference range se milaiye, kisi internet chart se nahi — range lab ke tareeke ke hisaab se thodi alag hoti hai. Neeche wo line hain jin par log sabse zyada atakte hain.",
+        {
+          "table": {
+            "caption": "Urine report ki aam line — seedhi bhasha me",
+            "head": [
+              "Report me likha hai",
+              "Aam matlab",
+              "Kya karein"
+            ],
+            "rows": [
+              [
+                "Pus cells thode (jaise 2–4/hpf)",
+                "Aksar normal ki seema me",
+                "Lakshan nahi hain to chinta nahi"
+              ],
+              [
+                "Pus cells kaafi zyada",
+                "Infection ki sambhavna",
+                "Doctor ko dikhaiye; culture ki zaroorat par baat kijiye"
+              ],
+              [
+                "RBC maujood",
+                "Infection, pathri, periods, ya bhaari mehnat",
+                "Doctor ko dikhaiye; periods me diya sample ho to dohraiye"
+              ],
+              [
+                "Epithelial cells bahut zyada",
+                "Sample me bahar ki gandagi",
+                "Midstream tareeke se sample dobara"
+              ],
+              [
+                "Sugar positive",
+                "Khoon ki sugar jaanchni chahiye",
+                "Fasting sugar ya HbA1c"
+              ],
+              [
+                "Protein positive",
+                "Bukhar, mehnat ya kidney — kai wajah",
+                "Doctor ki salah se dohraiye"
+              ],
+              [
+                "Ketone positive",
+                "Lamba bhookha rehna, ya sugar bahut badhna",
+                "Sugar ke mareez ho to usi din doctor"
+              ]
+            ]
+          }
+        },
+        [
+          "Peshab me sugar dikhe to agla kadam khoon ki jaanch hai — kaunsa sugar test kab, wo ",
+          {
+            "text": "sugar, thyroid aur lipid wali guide",
+            "href": "/blogs/diabetes-thyroid-test/deoria#sugar-test-kaunsa-form-deoria"
+          },
+          " me hai. Poori blood report padhne ka kram ",
+          {
+            "text": "yahan likha hai",
+            "href": "/blogs/lab-test/deoria#report-me-kya-dekhein-deoria"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "garmi-kam-paani-deoria",
+      "heading": "Deoria Ki Garmi, Khet Ka Kaam Aur Kam Paani — Peshab Ki Shikayat Kyun Badhti Hai",
+      "lead": "Mai-June me peshab ki shikayat lekar aane walon ki ginti yun hi nahi badhti.",
+      "blocks": [
+        "Deoria me garmiyon ke mahine lambe aur tapte hue hote hain, aur bahut se log din ka bada hissa khet, bazaar ya safar me bitaate hain. Paseena zyada nikalta hai aur paani utna nahi piya jaata. Nateeja ye hota hai ki peshab gaadha ho jaata hai, jalan mehsoos hoti hai, aur kai logon me infection ka khatra bhi badh jaata hai.",
+        "Iska ek seedha asar report par bhi padta hai. Bahut kam paani peene ke baad diya gaya sample gaadha hota hai, aur usme kuch line thodi upar dikh sakti hain. Isliye test ke ek din pehle se saamanya maatra me paani peete rahiye — zabardasti bahut zyada nahi, bas itna ki pyaas na rahe.",
+        "Safar ya bahar ke kaam me log jaan-boojh kar paani kam peete hain, taaki baar-baar peshab na jaana pade. Ye aadat garmi me sabse zyada nuksan karti hai. Peshab ko der tak rok kar rakhna bhi infection ki sambhavna badhata hai. Jin gharon me kisi ko baar-baar peshab ka infection hota hai, wahan ye do baatein — paani aur peshab na rokna — test se pehle ki sabse sasti dawa hain."
+      ]
+    },
+    {
+      "id": "ghar-se-urine-test-deoria",
+      "heading": "Deoria Me Urine Test Ghar Par Kaise Hota Hai",
+      "lead": "Khoon aur peshab — dono ek hi visit me.",
+      "blocks": [
+        "Urine test ke liye Deoria Sadar ki kisi counter par jaane ki zaroorat nahi. Sample Deoria sheher ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak ghar par liya jaata hai. Trained phlebotomist ID card ke saath aata hai, saaf container deta hai, aur khoon ki koi jaanch bhi likhi ho to dono sample ek hi visit me ho jaate hain.",
+        "Home collection free hai, slot subah 6 baje se shuru hote hain, aur routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aati hai — culture me 48 se 72 ghante. Payment sample lene ke waqt cash ya UPI se hota hai.",
+        [
+          "Hamara Deoria me koi walk-in counter nahi hai; ye ghar se sample lene ki service hai. Aaj ka rate ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par likha hai, aur booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se ya ek call se hoti hai."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-urine-deoria",
+      "heading": "Urine Test Karane Se Pehle — Chhoti Si Checklist",
+      "lead": "Chaar sawaal, booking se pehle.",
+      "blocks": [
+        {
+          "list": [
+            "Parche par routine likha hai ya culture? Samajh na aaye to parche ka photo booking ke waqt bhej dijiye.",
+            "Antibiotic shuru to nahi ho chuki? Culture ho raha hai to ye sabse pehle bataiye.",
+            "Periods ke din to nahi chal rahe? Chal rahe hon to do-teen din ruk jaaiye, jab tak jaanch jaldi zaroori na ho.",
+            "Bukhar ke saath kamar me ek taraf dard, ya peshab me saaf khoon? To test nahi, pehle doctor."
+          ]
+        },
+        [
+          "Peshab ke saath jodon me dard aur uric acid ki baat ho, to ",
+          {
+            "text": "uric acid test wali guide",
+            "href": "/blogs/uric-acid-test/deoria"
+          },
+          " dekhiye. Ghar ki sugar machine aur lab ki sugar report me farak ho, to ",
+          {
+            "text": "glucometer aur lab sugar test wali guide",
+            "href": "/blogs/glucometer-sugar-test/deoria"
+          },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Urine routine aur urine culture me kya farak hai?",
+      "answer": "Urine routine ek hi sample me peshab ka rang, usme sugar, protein ya khoon, aur microscope se pus cells tatha RBC dekhta hai; iski report aam taur par 24 ghante me aa jaati hai. Urine culture sample ko lab me ugaa kar batata hai ki koi bacteria hai ya nahi, kaunsa hai, aur kaunsi antibiotic us par kaam karegi. Bacteria ko ugne me samay lagta hai, isliye culture me 48 se 72 ghante lagte hain."
+    },
+    {
+      "question": "Peshab me jalan ho to kaun sa test karana chahiye?",
+      "answer": "Aam taur par shuruaat urine routine se hoti hai, aur shikayat baar-baar lautti ho ya dawa ke baad theek na ho to urine culture bhi. Culture ka sample antibiotic shuru karne se pehle dena chahiye. Lekin jalan ke saath tez bukhar, kanpkanpi, ulti ya kamar ke ek taraf dard ho, to test ka intezaar mat kijiye — usi din doctor ko dikhaiye."
+    },
+    {
+      "question": "Urine sample dene ka sahi tareeka kya hai?",
+      "answer": "Subah ka pehla peshab behtar rehta hai. Haath dhoiye, peshab ki jagah ko saade paani se saaf kijiye, pehli dhaar toilet me jaane dijiye, beech ki dhaar saaf container me lijiye, aur aakhiri hissa phir toilet me. Container ya dhakkan ke andar ungli mat lagaiye, aur kisi doosri bottle se peshab mat daaliye. Sample lene wale ko bataiye ki sample kis samay liya gaya."
+    },
+    {
+      "question": "Periods me urine test karwa sakte hain?",
+      "answer": "Behtar hai ki na karwayein. Periods ke khoon ke mil jaane se report me RBC dikhte hain aur uska matlab gadbada jaata hai, jisse test dobara karana pad sakta hai. Periods khatam hone ke do-teen din baad sample dijiye. Agar jaanch jaldi zaroori hai, to sample dete waqt ye zaroor bata dijiye."
+    },
+    {
+      "question": "Report me epithelial cells zyada aaye hain — iska kya matlab hai?",
+      "answer": "Aksar iska matlab hai ki sample me bahar ki gandagi mil gayi, yaani sample midstream tareeke se nahi liya gaya. Aisi report kuch saaf nahi batati, isliye doctor aam taur par sahi tareeke se sample dobara maangte hain: haath dho kar, jagah saaf kar ke, pehli dhaar chhod kar beech ki dhaar container me."
+    },
+    {
+      "question": "Kya urine test me sugar aane ka matlab diabetes hai?",
+      "answer": "Nahi, sirf peshab ki sugar se diabetes tay nahi hoti. Ye ek ishaara hai ki khoon ki sugar jaanchni chahiye — fasting blood sugar ya HbA1c. Diabetes ka nidaan khoon ki jaanch aur doctor ki salah se hota hai, peshab ki report se nahi."
+    },
+    {
+      "question": "Deoria me urine test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak sample ghar par liya jaata hai. Phlebotomist ID card ke saath aata hai aur saaf container deta hai, aur khoon ki jaanch bhi ho to dono sample ek hi visit me ho jaate hain. Home collection free hai, slot subah 6 baje se hain, aur payment sample ke waqt cash ya UPI se hota hai. Hamara Deoria me koi walk-in counter nahi hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me peshab ki jaanch chunna, sample dena aur report samajhna hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection",
+            "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list",
+            "sub": "Har test ka aaj ka daam ek jagah"
+          },
+          {
+            "href": "/lab-test/deoria#reports-deoria",
+            "label": "Report kab aur kaise aati hai"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/liver-kidney-test/deoria",
+            "label": "LFT aur KFT test — kidney ki poori jaanch",
+            "sub": "Creatinine, urea aur sugar-BP wale mareez"
+          },
+          {
+            "href": "/blogs/uric-acid-test/deoria",
+            "label": "Uric acid test — jodon ke dard me kab",
+            "sub": "Gathiya, fasting aur high report ka matlab"
+          },
+          {
+            "href": "/blogs/home-sample-collection/deoria",
+            "label": "Ghar par sample kaise liya jaata hai",
+            "sub": "Visit ke din ka poora hisaab"
+          }
+        ]
+      }
+    ]
+  }
+}
