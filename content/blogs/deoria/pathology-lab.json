@@ -115,7 +115,15 @@
           },
           " hai, jismein wahan ke ilaake aur booking form dono alag hain."
         ],
-        "Aap in kasbon ke aas-paas ke kisi gaon me rehte hain aur sure nahi hain ki address cover hota hai ya nahi — to booking se pehle ek call kar lijiye. Hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon."
+        "Aap in kasbon ke aas-paas ke kisi gaon me rehte hain aur sure nahi hain ki address cover hota hai ya nahi — to booking se pehle ek call kar lijiye. Hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon.",
+        [
+          "Rudrapur, Barhaj, Bhatpar Rani aur Lar me mausam ke hisaab se kaunsi jaanch zyada hoti hai aur report doctor tak kaise pahunchti hai, wo ",
+          {
+            "text": "tehsil ke hisaab se likhi guide",
+            "href": "/blogs/tehsil-home-collection/deoria"
+          },
+          " me hai."
+        ]
       ]
     },
     {
