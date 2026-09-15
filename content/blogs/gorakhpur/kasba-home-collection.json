@@ -1,0 +1,359 @@
+{
+  "title": "Sahjanwa, Pipraich, Chauri Chaura Me Blood Test Ghar Par",
+  "description": "Sahjanwa, GIDA, Pipraich, Chauri Chaura, Bansgaon, Gola Bazar aur Barhalganj me ghar par blood test — shift, kheti aur Gorakhpur OPD ke hisaab se booking.",
+  "keywords": [
+    "Blood test in Sahjanwa",
+    "Sahjanwa aur GIDA",
+    "Pipraich lab test",
+    "Chauri Chaura blood test",
+    "Bansgaon pathology",
+    "Gola Bazar lab test",
+    "Barhalganj pathology lab",
+    "Campierganj aur Khajni blood test"
+  ],
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "order": 70,
+  "takeaways": [
+    "Gorakhpur jile ke kasbon me jaanch ki sabse badi keemat test ka rate nahi, sheher tak ka safar hai — khaali pet, bus me, aur report lene ke liye doosra chakkar.",
+    "GIDA aur Sahjanwa me sample factory ki shift ke hisaab se rakhiye; raat ki shift wale fasting ka hisaab alag lagate hain.",
+    "Pipraich aur aas-paas ke ganna kisaan kataai aur mill ke mahino se pehle follow-up jaanch nipta lein — us waqt sabse zyada chhootti hai.",
+    "Gola aur Barhalganj jaise door ke kasbon se Gorakhpur OPD ho, to blood wala hissa ek din pehle ghar par karwa lijiye; trip sirf doctor ke liye."
+  ],
+  "sections": [
+    {
+      "id": "jila-sirf-sheher-nahi-gorakhpur",
+      "heading": "Gorakhpur Jila Sirf Sheher Nahi — Kasbe Me Jaanch Ka Sawaal Doori Aur Dincharya Ka Hai",
+      "lead": "Sheher me log traffic ginte hain. Kasbe me kiraya aur din.",
+      "blocks": [
+        "Gorakhpur ka naam aate hi Golghar aur Medical College Road yaad aata hai, lekin jile ki badi aabadi Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj jaise kasbon aur unke gaon me rehti hai. Yahan se ek CBC ya sugar ke liye bhi log subah khaali pet sheher ki bus pakadte hain, aur report lene phir aate hain. Kheti, dukaan ya factory ka ek din isi me chala jaata hai.",
+        "Ye guide har kasbe ki dincharya ke hisaab se likhi hai — kiska din kab shuru hota hai, kis mausam me kya chhootta hai, aur Gorakhpur OPD ke saath ghar ki jaanch kaise bithayein. Gaon ka pata aur landmark likhne ka tareeka pehle se likha hai, isliye yahan dohraaya nahi gaya.",
+        {
+          "note": {
+            "title": "Har kasbe me yahi baatein",
+            "text": "Home collection free hai; trained phlebotomist ID card ke saath aata hai; slot subah 6 baje se; report 24 ghante ke andar WhatsApp aur email par PDF me; payment sample ke waqt cash ya UPI se. Kasbe ke hisaab se rate nahi badalta. Kisi kasbe me hamara walk-in counter nahi hai.",
+            "tone": "info"
+          }
+        },
+        [
+          "Gaon ka pata kaise likhein, wo ",
+          {
+            "text": "pathology lab guide ke kasbon wale hisse",
+            "href": "/blogs/pathology-lab/gorakhpur#jile-ke-kasbe-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "blood-test-in-sahjanwa-gida",
+      "heading": "Blood Test In Sahjanwa Aur GIDA — Factory Ki Shift Se Pehle Sample",
+      "lead": "Shift ka samay hi yahan slot ka samay hai.",
+      "blocks": [
+        "Sahjanwa aur GIDA (Gorakhpur Industrial Development Authority) ki taraf hazaaron log factory aur godaam me kaam karte hain, aur kai parivaar bahar se aakar yahan kiraye par rehte hain. Yahan ki dincharya shift se chalti hai — subah ki, din ki ya raat ki. Blood test in Sahjanwa ka sabse aasan tareeka wahi hai jo shift me fit ho jaaye.",
+        {
+          "list": [
+            "Subah ki shift — fasting wala test 6 baje ke slot me, sample dekar naashta aur phir kaam.",
+            "Raat ki shift — fasting ka matlab aakhri khaane se 10-12 ghante hai, ghadi ka samay nahi. Shift ke baad sone se pehle ya uthne ke baad, jab 10-12 ghante poore hon, us hisaab se slot maangiye.",
+            "Kiraye ke kamre me rehte hain — makaan malik ka naam, gali aur sabse paas ki factory ya gate ka naam likhiye.",
+            "Kaam me dhool, dhuaan ya chemical ke paas rehte hain aur khaansi, saans ya chamdi ki takleef hai — doctor ko kaam ki baat zaroor bataiye. Uski jaanch doctor tay karega."
+          ]
+        },
+        {
+          "note": {
+            "title": "Company ka medical form",
+            "text": "Naukri ke liye company kabhi-kabhi medical form deti hai jismein blood test ke saath X-ray, aankh ya kaan ki jaanch bhi hoti hai. Hum sirf us list ki blood aur urine wali jaanch ka sample le sakte hain; baaki cheezon ke liye alag vyavastha karni hogi. Form ki photo booking me bhejiye.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pipraich-lab-test-ganna-mahine",
+      "heading": "Pipraich Lab Test — Ganna, Mill Aur Kataai Ke Mahine",
+      "lead": "Jis mahine khet sabse zyada maangta hai, usi mahine jaanch sabse zyada chhootti hai.",
+      "blocks": [
+        "Pipraich aur aas-paas ke gaon me bahut se parivaar ganne ki kheti se jude hain, aur mill ke chalne ke mahino me khet, katai aur dhulai ka kaam subah se raat tak chalta hai. Isi dauraan sugar ke mareez ki teen mahine wali HbA1c, BP ke mareez ki kidney ki jaanch, aur bujurgon ka routine — sab aage khisakte rehte hain.",
+        {
+          "list": [
+            "Kataai ka mausam shuru hone se pehle ek hafta chuniye aur ghar ke sab logon ki jaanch ek hi subah nipta lijiye.",
+            "Fasting wala test ho to 6 baje ka slot — sample ke baad naashta karke khet.",
+            "Test se ek din pehle bahut bhaari mehnat hui ho to booking me bata dijiye; creatinine jaisi jaanch par iska asar padta hai.",
+            "Khet me lagi chot ya chhala hafton tak na bhare — doctor ko dikhaiye; sugar ki jaanch aksar yahin se shuru hoti hai."
+          ]
+        },
+        [
+          "Pipraich lab test me sabse aam sugar ki jaanch hoti hai — fasting, PP aur HbA1c me kya farak hai, wo ",
+          {
+            "text": "diabetes wale section",
+            "href": "/blogs/lab-test/gorakhpur#diabetes-blood-sugar-test-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "chauri-chaura-blood-test",
+      "heading": "Chauri Chaura Blood Test — Sheher Jaane Wale Parivaar Aur Deoria Road Ki Taraf Ke Gaon",
+      "lead": "Roz sheher jaane wale ke liye sample ghar par hi kaam ka hai.",
+      "blocks": [
+        "Chauri Chaura Gorakhpur aur Deoria ke beech ka kasba hai, aur yahan se bahut log roz naukri, padhai ya vyapaar ke liye Gorakhpur jaate hain. Unke liye sheher me sample dena aasan lagta hai — lekin fasting wale test me yahi galti hai: ghar se khaali pet nikalna, bheed me pahunchna, aur din bhar kaam par pareshaan rehna.",
+        {
+          "list": [
+            "Chauri Chaura blood test ke liye subah 6-7 baje ka slot lijiye; sample dekar naashta kijiye aur apne samay par nikaliye.",
+            "Ghar ke bujurg din me akele hain to unki booking bhi usi subah, jab aap ghar par hon.",
+            "Deoria jile ki seema ke paas ke gaon me rehte hain aur samajh nahi aa raha ki kaunsa page — ek call kar lijiye, coverage saaf bata di jaayegi."
+          ]
+        },
+        [
+          "Deoria ki taraf ke ilaake ke liye ",
+          {
+            "text": "Deoria ka page",
+            "href": "/lab-test/deoria"
+          },
+          " alag hai."
+        ]
+      ]
+    },
+    {
+      "id": "bansgaon-gola-barhalganj-dakshin",
+      "heading": "Bansgaon, Gola Bazar Aur Barhalganj — Dakshin Ke Kasbe, Lamba Safar, Aur Ghaghra Ki Taraf Ke Gaon",
+      "lead": "Jitna door kasba, utna mehnga ek chhoota hua test.",
+      "blocks": [
+        "Jile ke dakshin me Bansgaon, Gola Bazar aur Barhalganj ki taraf ke gaon Gorakhpur sheher se kaafi door padte hain, aur Gola tatha Barhalganj ke kai gaon Ghaghra ki taraf hain. Yahan se Gorakhpur OPD ka matlab aksar poora din hota hai. Aise me agar blood test bhi sheher me karana pade aur report agle din mile, to ek OPD ki jagah do trip lagti hain.",
+        {
+          "list": [
+            "OPD ki taareekh tay hai aur parche par follow-up jaanch likhi hai — ek din pehle ghar par sample dijiye; report PDF me phone par aa jaayegi.",
+            "Barsaat aur baadh ke dinon me Ghaghra ki taraf ke kuch raaste lambe ho jaate hain — booking ke waqt raaste ki haalat bata dijiye; visit ho paayegi ya nahi, saaf bata diya jaayega.",
+            "Baadh ke baad peeli aankh, lagatar dast ya bukhar — ye mausam paani se hone wali bimariyon ka hai; garbhwati mahila ya bachche me ye lakshan hon to usi din doctor.",
+            "Mareez ki haalat gambhir ho aur raasta band — lab ka intezaar nahi, aspatal ka intezaam."
+          ]
+        },
+        [
+          "Bansgaon pathology ya Barhalganj pathology lab dhoondhne walon ke liye seedhi baat: in kasbon me hamara koi counter nahi hai; sample ghar se liya jaata hai. OPD se kitne din pehle sample dein, uski table ",
+          {
+            "text": "OPD wali guide",
+            "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur"
+          },
+          " me hai, aur Gola Bazar lab test ki booking bhi usi form se hoti hai."
+        ]
+      ]
+    },
+    {
+      "id": "campierganj-khajni-seema-gaon",
+      "heading": "Campierganj Aur Khajni — Jile Ki Seema Ke Gaon Kis Page Se Book Karein",
+      "lead": "Gaon Gorakhpur jile me hai ya padosi jile me, booking usi hisaab se.",
+      "blocks": [
+        "Campierganj aur Khajni ki taraf ke kai gaon jile ki seema ke paas hain, aur yahan ke log aksar padosi jile ke bazaar aur doctor tak bhi jaate hain. Booking me sabse aam confusion yahi hota hai ki form Gorakhpur ka bharein ya padosi jile ka.",
+        {
+          "list": [
+            "Gaon Gorakhpur jile me hai — Gorakhpur ka form. Campierganj aur Khajni blood test ki booking wahi se.",
+            "Gaon Maharajganj jile me hai — Maharajganj ka page.",
+            "Gaon Sant Kabir Nagar jile me hai — Khalilabad ka page.",
+            "Pakka nahi pata — ek call kar lijiye; pata sunkar sahi page aur coverage bata di jaayegi."
+          ]
+        },
+        [
+          "Padosi jilon ke page: ",
+          {
+            "text": "Maharajganj",
+            "href": "/lab-test/maharajganj"
+          },
+          ", ",
+          {
+            "text": "Khalilabad",
+            "href": "/lab-test/khalilabad"
+          },
+          " aur ",
+          {
+            "text": "Kushinagar",
+            "href": "/lab-test/kushinagar"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "kasba-ek-nazar-table-gorakhpur",
+      "heading": "Ek Nazar Me — Kasba, Dincharya Aur Booking Ki Ek Kaam Ki Baat",
+      "lead": "Booking se pehle bas ye table.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Gorakhpur jile ke kasbe",
+            "head": [
+              "Kasba",
+              "Dincharya ya mausam",
+              "Booking me kya bataayein"
+            ],
+            "rows": [
+              [
+                "Sahjanwa, GIDA",
+                "Factory ki shift",
+                "Shift ka samay; raat ki shift ho to aakhri khaane ka samay"
+              ],
+              [
+                "Pipraich",
+                "Ganna aur kataai ke mahine",
+                "Ghar ke sab logon ki ek saath booking"
+              ],
+              [
+                "Chauri Chaura",
+                "Roz sheher jaane wale",
+                "6-7 baje ka slot, bujurg bhi usi subah"
+              ],
+              [
+                "Bansgaon",
+                "Sheher ki OPD door",
+                "OPD ki taareekh, ek din pehle sample"
+              ],
+              [
+                "Gola Bazar, Barhalganj",
+                "Ghaghra ki taraf, barsaat me raasta",
+                "Us din raaste ki haalat"
+              ],
+              [
+                "Campierganj, Khajni",
+                "Jile ki seema ke gaon",
+                "Gaon kis jile me hai"
+              ]
+            ]
+          }
+        },
+        "Aapka gaon inme se kisi kasbe ke paas hai lekin naam se nahi likha, to maan kar mat baithiye ki service nahi hai. Ek call kar lijiye — cover hota hai to usi call par slot tay ho jaata hai."
+      ]
+    },
+    {
+      "id": "kasbe-se-sheher-ki-opd-gorakhpur",
+      "heading": "Kasbe Se Gorakhpur Ka Ek Trip — Usme Kya Karein, Kya Ghar Par Chhodein",
+      "lead": "Trip doctor aur machine ke liye. Sample ghar par.",
+      "blocks": [
+        "Kasbe se sheher ka har trip keemti hai, isliye use sirf un kaamon ke liye rakhiye jo ghar par ho hi nahi sakte: doctor se milna, ultrasound, X-ray, CT ya MRI, endoscopy. Khoon aur peshab ki jaanch ka nateeja is baat se nahi badalta ki sample kahan liya gaya — wo ghar par ho sakti hai.",
+        {
+          "list": [
+            "Trip se ek din pehle — ghar par sample.",
+            "Trip wale din — report ki PDF phone me, purani report bhi saath.",
+            "Doctor ne nayi jaanch likhi — wapas aakar ghar par, aur report WhatsApp par doctor ke bataye tareeke se.",
+            "Operation ki list mili hai — uski blood wali jaanch bhi ghar par; ECG aur X-ray ki vyavastha alag."
+          ]
+        },
+        [
+          "Operation se pehle ki list me kya hota hai, wo ",
+          {
+            "text": "pre-operative guide",
+            "href": "/blogs/pre-operative-test/gorakhpur"
+          },
+          " me hai, aur discharge ke baad ki follow-up jaanch ",
+          {
+            "text": "yahan",
+            "href": "/blogs/discharge-follow-up-test/gorakhpur"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-kasba-gorakhpur",
+      "heading": "Aage Kya Karein",
+      "lead": "Kisi bhi kasbe se teen kadam.",
+      "blocks": [
+        {
+          "list": [
+            "Gaon, tola aur ek landmark likhiye; gaon kis jile me hai, ye pakka kar lijiye.",
+            "Parche ki photo, dawa ki list aur ek chalu mobile number taiyaar rakhiye.",
+            "Fasting wala test ho to 6 baje ka slot — shift ya khet ke hisaab se."
+          ]
+        },
+        [
+          "Booking ke liye ",
+          {
+            "text": "Gorakhpur ka form",
+            "href": "/lab-test/gorakhpur#how-to-book-gorakhpur"
+          },
+          " bhariye ya ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          ". Sheher ke mohallon ki coverage ",
+          {
+            "text": "mohalla-wise guide",
+            "href": "/blogs/pathology-lab/gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Sahjanwa ya GIDA me ghar par blood test ho jaata hai?",
+      "answer": "Haan, Sahjanwa aur GIDA ki taraf sample ghar par ya kiraye ke kamre par liya jaata hai. Shift ka samay booking me bataiye, aur fasting wala test ho to aakhri khaane ke 10-12 ghante baad ka slot lijiye."
+    },
+    {
+      "question": "Pipraich ya Chauri Chaura me home collection ka alag charge lagta hai?",
+      "answer": "Nahi. Home collection free hai aur rate kasbe ke hisaab se nahi badalta. Aap sirf test ka likha hua rate dete hain, sample lene ke waqt cash ya UPI se."
+    },
+    {
+      "question": "Raat ki shift hai — fasting sugar ka sample kab dein?",
+      "answer": "Fasting ka matlab aakhri khaane se 10 se 12 ghante ka antaraal hai, ghadi ka koi tay samay nahi. Shift ke baad ya uthne ke baad jab ye antaraal poora ho, us samay ka slot maangiye aur booking me apni shift bataiye. Beech me saada paani pee sakte hain."
+    },
+    {
+      "question": "Barhalganj ya Gola Bazar me aapka pathology lab kahan hai?",
+      "answer": "In kasbon me hamara koi lab ya walk-in counter nahi hai. Ye home collection service hai — sample ghar par liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai."
+    },
+    {
+      "question": "Gorakhpur OPD ke liye Bansgaon se aana hai — test pehle karayein ya wahan?",
+      "answer": "Parche par follow-up jaanch pehle se likhi ho to OPD se ek din pehle ghar par sample de dijiye. Report phone par aa jaayegi aur ek hi trip me doctor se baat ho jaayegi. Nayi jaanch doctor OPD me likhega, wo wapas aakar ghar par ho sakti hai."
+    },
+    {
+      "question": "Campierganj ke paas ka gaon hai, pata nahi kaunsa jila lagta hai — booking kahan se karein?",
+      "answer": "Ek call kar lijiye. Pata sunkar bata diya jaayega ki booking Gorakhpur ke page se hogi ya Maharajganj jaise padosi jile ke page se, aur gaon cover hota hai ya nahi."
+    },
+    {
+      "question": "Company ne naukri ke liye medical form diya hai — kya poora ghar par ho jaayega?",
+      "answer": "Sirf us form ki blood aur urine wali jaanch ka sample ghar par liya ja sakta hai. X-ray, aankh, kaan ya doctor ki jaanch hamari service nahi hai; unke liye alag vyavastha karni hogi. Form ki photo booking me bhejiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Gorakhpur Jile Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me kasbon ke hisaab se baatein hain. Booking, sheher ki coverage aur baaki guide neeche hain.",
+    "groups": [
+      {
+        "title": "Booking",
+        "links": [
+          {
+            "href": "/lab-test/gorakhpur",
+            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "sub": "Sheher ke mohalle aur jile ke kasbe"
+          },
+          {
+            "href": "/lab-test/gorakhpur#home-sample-collection-gorakhpur",
+            "label": "Poore Gorakhpur me home sample collection"
+          },
+          {
+            "href": "/lab-test/maharajganj",
+            "label": "Maharajganj me lab test"
+          }
+        ]
+      },
+      {
+        "title": "Gorakhpur Ke Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/pathology-lab/gorakhpur",
+            "label": "Mohalla-wise pathology lab guide"
+          },
+          {
+            "href": "/blogs/pre-operative-test/gorakhpur",
+            "label": "Operation se pehle kaun se test"
+          },
+          {
+            "href": "/blogs/discharge-follow-up-test/gorakhpur",
+            "label": "Discharge ke baad follow-up test"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -730,24 +730,39 @@ const LAB_CITY_SEED = [
           ],
         },
         {
-          title: "Test Chunne Me Madad",
+          // Used to point at the Varanasi guides, from before Gorakhpur had its
+          // own. A Gorakhpur page linking to guides that name another town helps
+          // no reader, and leaves this city's own guides without their strongest
+          // inbound link.
+          title: "Gorakhpur Ke Liye Guide",
           links: [
             {
-              href: "/blogs/lab-test/varanasi",
-              label: "Kaun sa test kab karayein — poori guide",
-              sub: "Shikayat, umar aur mausam ke hisaab se",
+              href: "/blogs/lab-test/gorakhpur",
+              label: "OPD se pehle report — kaun sa test kab",
+              sub: "CBC, thyroid, sugar aur bukhar ke din ka hisaab",
             },
             {
-              href: "/blogs/full-body-checkup/varanasi",
-              label: "Full body checkup me kya hona chahiye",
+              href: "/blogs/pre-operative-test/gorakhpur",
+              label: "Operation se pehle kaun se test",
+              sub: "Motiyabind, CT scan aur endoscopy se pehle bhi",
             },
             {
-              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
-              label: "Fasting ke niyam aur test se pehle ki taiyaari",
+              href: "/blogs/discharge-follow-up-test/gorakhpur",
+              label: "Discharge ke baad follow-up test ghar par",
+              sub: "Apne jile me sample, report doctor tak",
             },
             {
-              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
-              label: "Report aa gayi — ab ise kaise padhein",
+              href: "/blogs/liver-kidney-test/gorakhpur",
+              label: "LFT aur KFT test in Gorakhpur",
+              sub: "Fatty liver, Hepatitis B aur dialysis ke mareez",
+            },
+            {
+              href: "/blogs/kasba-home-collection/gorakhpur",
+              label: "Sahjanwa, Pipraich aur Chauri Chaura me blood test",
+            },
+            {
+              href: "/blogs/full-body-checkup/gorakhpur",
+              label: "Full body checkup me kaun se test hote hain",
             },
           ],
         },

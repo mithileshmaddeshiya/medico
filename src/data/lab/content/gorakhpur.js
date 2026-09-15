@@ -96,6 +96,9 @@ const GUIDE_FEVER_DAYS = "/blogs/lab-test/gorakhpur#bukhar-me-din-gorakhpur";
 const GUIDE_FASTING = "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur";
 const GUIDE_REPORT = "/blogs/lab-test/gorakhpur#report-kya-dekhein-gorakhpur";
 const GUIDE_AGE = "/blogs/lab-test/gorakhpur#umar-ke-hisaab-se-gorakhpur";
+const GUIDE_PRE_OP = "/blogs/pre-operative-test/gorakhpur";
+const GUIDE_KASBA = "/blogs/kasba-home-collection/gorakhpur";
+const GUIDE_DISCHARGE = "/blogs/discharge-follow-up-test/gorakhpur";
 const CONTACT = "/contact";
 
 export const gorakhpurContent = [
@@ -141,7 +144,11 @@ export const gorakhpurContent = [
     h: "Operation Ya Admission Se Pehle Ke Test — Gorakhpur Me Ye Aksar Poochhe Jaate Hain",
     p: [
       "Gorakhpur me operation ki date mil jaane ke baad ek list thama di jaati hai, aur us list ke bina admission aage nahi badhta. Aam taur par usme yahi cheezein hoti hain: CBC, Blood Group aur Rh typing, Blood Sugar, Kidney Function Test, Liver Function Test, aur infection screening — HBsAg, Anti-HCV tatha HIV. Kuch surgery me clotting dekhne ke liye PT/INR bhi maanga jaata hai.",
-      "Yahan ek zaroori baat: list hamesha aapke hospital ki maanie, kisi article ki nahi — hamari bhi nahi. Har department aur har surgery ki apni zaroorat hoti hai, aur ek test chhoot jaane par date aage badh jaati hai. Parche ko saamne rakh kar wahi naam booking me daaliye.",
+      [
+        "Yahan ek zaroori baat: list hamesha aapke hospital ki maanie, kisi article ki nahi — hamari bhi nahi. Har department aur har surgery ki apni zaroorat hoti hai, aur ek test chhoot jaane par date aage badh jaati hai. Parche ko saamne rakh kar wahi naam booking me daaliye. Har test kyun maanga jaata hai, aur motiyabind, contrast CT ya endoscopy se pehle list kaise badalti hai — wo ",
+        { text: "operation se pehle ke test wali guide", href: GUIDE_PRE_OP },
+        " me hai.",
+      ],
       "Timing ka faayda yahan bhi wahi hai. Ye saare test sample par hote hain, isliye admission se do-teen din pehle ghar par sample de dijiye — report haath me le kar jaayenge to counter par ek chakkar kam lagega. Aur agar aap kisi ke saath tehar kar aaye hain, to sample us kamre par bhi liya ja sakta hai jahan aap ruke hain.",
       "Operation se pehle ka CBC aksar wo pehla mauka hota hai jab khoon ki kami pakad me aati hai. Haemoglobin kam nikal aaye to sirf iron ki goli shuru kar dena adhoora hai — ferritin, Vitamin B12 aur folate se pata chalta hai ki wajah kya hai. Ye baat operation ke liye bhi maayne rakhti hai, isliye report doctor ko waqt rehte dikha dijiye.",
     ],
@@ -167,7 +174,11 @@ export const gorakhpurContent = [
     h: "Poore Gorakhpur Me Home Sample Collection — Sheher Ke Mohalle Aur Jile Ke Kasbe",
     p: [
       "Sheher me collection in ilaakon me hoti hai: Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Bashharatpur, Jatepur, Padri Bazar, Kunraghat, Rapti Nagar, Bargadwa, Nausarh, Khorabar, Ramgarh Tal ke aas-paas ki colony aur Transport Nagar tarf ke naye mohalle.",
-      "Jile ke kasbon me bhi sample liya jaata hai — Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj tak. Aapka mohalla ya gaon upar naam se na ho to maan kar mat baithiye ki service nahi hai; ek call kar lijiye. Cover hota hai to usi waqt slot ban jaayega, aur nahi hota to hum saaf mana kar denge — taaki aap subah se khaali pet intezaar na karein.",
+      [
+        "Jile ke kasbon me bhi sample liya jaata hai — Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj tak. Aapka mohalla ya gaon upar naam se na ho to maan kar mat baithiye ki service nahi hai; ek call kar lijiye. Cover hota hai to usi waqt slot ban jaayega, aur nahi hota to hum saaf mana kar denge — taaki aap subah se khaali pet intezaar na karein. GIDA ki shift, Pipraich ke kataai ke mahine aur Ghaghra ki taraf ke raaste — har kasbe ki apni baat ",
+        { text: "kasbon wali guide", href: GUIDE_KASBA },
+        " me hai.",
+      ],
       "Pata likhne ka tareeka yahan thoda alag chahiye. Gorakhpur ke naye mohalle tezi se base hain aur bahut si galiyan map par theek nahi aatin, isliye plot number se zyada kaam landmark karta hai — school, mandir, bank, petrol pump, hospital gate ya chauraha. Ek landmark aur ek chaalu mobile number, bas itna kaafi hai. Der ki zyadatar wajah adhoora pata hoti hai.",
       "Ghar ke kai log ek saath karaa rahe hain to sabki booking ek hi slot me kar dijiye — ek visit me sabka sample ho jaayega. Koi bujurg hai, bistar par hai, jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai, to booking me ye likh dijiye taaki experienced phlebotomist bheja ja sake.",
     ],
@@ -186,7 +197,11 @@ export const gorakhpurContent = [
         { text: "Varanasi me lab test", href: LAB_VARANASI },
         ".",
       ],
-      "Bihar ke seemavarti jilon aur Nepal border ke kasbon se aane walon ke liye ek practical faayda: report kagaz par nahi, PDF me aati hai. Wo kho nahi sakti, bheeg nahi sakti, aur kisi bhi doctor ko — yahan, Lucknow me ya seema paar — sirf forward karni hoti hai.",
+      [
+        "Bihar ke seemavarti jilon aur Nepal border ke kasbon se aane walon ke liye ek practical faayda: report kagaz par nahi, PDF me aati hai. Wo kho nahi sakti, bheeg nahi sakti, aur kisi bhi doctor ko — yahan, Lucknow me ya seema paar — sirf forward karni hoti hai. Yahan ilaaj ke baad chhutti mil gayi hai to follow-up jaanch apne jile me kaise karayein, wo ",
+        { text: "discharge ke baad wali guide", href: GUIDE_DISCHARGE },
+        " me hai.",
+      ],
     ],
   },
 

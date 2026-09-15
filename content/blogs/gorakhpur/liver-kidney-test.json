@@ -1,0 +1,388 @@
+{
+  "title": "LFT Aur KFT Test In Gorakhpur — Report Aur Follow-Up",
+  "description": "Gorakhpur me LFT aur KFT test — fatty liver, Hepatitis B, dialysis aur sugar-BP ke mareez me kaunsi jaanch kitne din par, report kaise padhein, sample ghar se.",
+  "keywords": [
+    "LFT test in Gorakhpur",
+    "KFT test in Gorakhpur",
+    "Fatty liver",
+    "HBsAg positive",
+    "Dialysis ya kidney ke mareez",
+    "Creatinine badha hua",
+    "Kidney function test",
+    "Liver function test"
+  ],
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "order": 60,
+  "takeaways": [
+    "Gorakhpur me specialist ek baar dikh jaata hai, lekin LFT aur KFT ki asli kahani follow-up me hai. Pehli report sirf shuruaat hai; doctor faisla do-teen report ki disha dekh kar karta hai.",
+    "Ultrasound me fatty liver likha aaya hai to LFT ke saath sugar aur lipid bhi dekhe jaate hain — ye teenon ek hi kahani ke hisse hain.",
+    "Dialysis ya kidney ke mareez ke liye do niyam sabse zaroori hain: fistula wale haath se kabhi sample nahi, aur jinhe paani kam peene ko kaha gaya hai wo sample se pehle extra paani na piyen.",
+    "Gym ka creatine powder, dard ki goli aur pichhli raat ki sharaab — ye sab creatinine ya SGPT ko badal sakte hain. Booking ke waqt bataiye, taaki report sahi padhi jaaye."
+  ],
+  "sections": [
+    {
+      "id": "lft-kft-gorakhpur-follow-up",
+      "heading": "LFT Aur KFT Test In Gorakhpur — Pehli Report Nahi, Agli Report Faisla Karti Hai",
+      "lead": "Specialist sheher me hain. Follow-up aksar ghar par chhoot jaata hai.",
+      "blocks": [
+        "Liver aur kidney ke mamle me Gorakhpur poore ilaake ka centre hai — gastro aur kidney ke specialist, dialysis centre aur bade aspataal sab yahin hain. Isliye bahut se log pehli baar yahin jaanch karwate hain, report dikhate hain, dawa lete hain — aur phir teen mahine baad jo LFT ya KFT dohraana tha, wo reh jaata hai. Agli OPD me doctor ke paas sirf ek purani report hoti hai, aur faisla adhoora.",
+        "Ye guide pehli jaanch ki kam aur uske baad ki jaanch ki zyada hai: kis haalat me LFT test in Gorakhpur ya KFT kitne din par dohraaya jaata hai, report ki kaunsi line kya ishara karti hai, aur sample se pehle kin cheezon se number badal jaate hain.",
+        {
+          "note": {
+            "title": "Antaraal doctor tay karta hai",
+            "text": "Neeche likhe antaraal aam jaankari hain. Aapke doctor ne jo samay bataya hai, wahi chalega. Report dekh kar apne aap dawa shuru, band ya kam-zyada mat kijiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lft-kft-report-line-gorakhpur",
+      "heading": "Report Ki Line-Line — LFT Aur KFT Me Kya Aata Hai, Aur Upar-Neeche Ka Aam Ishara",
+      "lead": "Ek line ka matlab. Diagnosis nahi.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "LFT aur KFT ki aam line aur unka aam ishara",
+            "head": [
+              "Report ki line",
+              "Kya naapti hai",
+              "Upar ho to aam taur par",
+              "Neeche ho to aam taur par"
+            ],
+            "rows": [
+              [
+                "Bilirubin (total, direct)",
+                "Peeliya ka rang dene wala padarth",
+                "Peeliya — liver, pitt ki nali ya khoon tootne ki taraf",
+                "Aam taur par chinta nahi"
+              ],
+              [
+                "SGPT (ALT), SGOT (AST)",
+                "Liver koshikaon par dabaav",
+                "Fatty liver, hepatitis, sharaab, kuch dawa",
+                "Aam taur par chinta nahi"
+              ],
+              [
+                "Alkaline phosphatase, GGT",
+                "Pitt ki nali aur liver",
+                "Nali me rukawat, sharaab (GGT), haddi se bhi ALP",
+                "Kam maayne ka"
+              ],
+              [
+                "Albumin",
+                "Liver ka banaya protein",
+                "Kam maayne ka",
+                "Lambi liver bimari, kuposhan, peshab me protein jaana"
+              ],
+              [
+                "Creatinine (aur eGFR)",
+                "Kidney ki chhaanne ki kshamta",
+                "Kidney par bojh, paani ki kami, creatine powder",
+                "Kam maanspeshi wale logon me aam"
+              ],
+              [
+                "Urea",
+                "Protein ke tootne ka kachra",
+                "Paani ki kami, kidney, zyada protein",
+                "Kam maayne ka"
+              ],
+              [
+                "Potassium",
+                "Dil aur maanspeshi ke liye zaroori namak",
+                "Kidney kamzor, kuch BP ki dawa — usi din doctor",
+                "Dast-ulti, kuch peshab badhane wali dawa"
+              ],
+              [
+                "Uric acid",
+                "Purine ke tootne ka kachra",
+                "Jodon ka dard (gout), kidney",
+                "Kam maayne ka"
+              ]
+            ]
+          }
+        },
+        "Har lab ka panel thoda alag hota hai — kisi me GGT ya uric acid shaamil hai, kisi me alag se jodna padta hai. Parche ki photo booking me bhej dijiye, taaki wahi line aaye jo doctor dekhna chahta hai."
+      ]
+    },
+    {
+      "id": "fatty-liver-test-gorakhpur",
+      "heading": "Ultrasound Me Fatty Liver Likha Aaya — Ab Kaunsa Blood Test",
+      "lead": "Sheher ki naukri ki sabse chup bimari.",
+      "blocks": [
+        "Gorakhpur me pet ke kisi aur wajah se ultrasound karwaya, aur report me ek line aa gayi: \"fatty liver\". Bahut se logon ke saath aisa hota hai — daftar ki kursi, bike se aana-jaana, bahar ka tala hua khaana aur der raat ki neend. Fatty liver apne aap me koi dard nahi deta, isliye log ise line padh kar bhool jaate hain. Lekin yahi wo haalat hai jo saalon me liver ko nuksan pahuncha sakti hai, aur jiska sugar aur dil se gehra rishta hai.",
+        {
+          "list": [
+            "LFT — SGPT aur SGOT kitne badhe hain. Fatty liver me ye aksar thode badhe hote hain, kabhi bilkul normal bhi.",
+            "Lipid profile — triglycerides aur cholesterol. Isme 10 se 12 ghante ki fasting lagti hai.",
+            "Fasting sugar ya HbA1c — fatty liver aur sugar aksar saath chalte hain.",
+            "Doctor zaroorat samjhe to HBsAg aur Anti-HCV, taaki doosri wajah kaat di jaaye."
+          ]
+        },
+        "Dobara jaanch ka antaraal doctor batata hai; aam taur par wazan aur khaan-paan me badlaav ke kuch mahine baad dekha jaata hai ki SGPT aur lipid me farak aaya ya nahi. Ek hi lab se dohraaiye — tulna tabhi kaam ki hai. Ultrasound hamari service nahi hai; hum sirf khoon ki jaanch ka sample lete hain.",
+        [
+          "Barsaat ke baad hone wale peeliya aur Hepatitis A/E ki jaanch par ",
+          {
+            "text": "service page ka alag section",
+            "href": "/lab-test/gorakhpur#water-jaundice-gorakhpur"
+          },
+          " hai."
+        ]
+      ]
+    },
+    {
+      "id": "hbsag-positive-lft-gorakhpur",
+      "heading": "HBsAg Positive Aaya Hai — Ghabrahat Se Pehle Ye Samajh Lijiye",
+      "lead": "Bahut se log apna Hepatitis B kisi aur jaanch me pehli baar jaante hain.",
+      "blocks": [
+        "Operation se pehle ki screening, blood donation, pregnancy ki jaanch, ya videsh jaane ka medical — Gorakhpur me bahut logon ko HBsAg positive hone ka pata inhi me se kisi mauke par chalta hai, jab koi takleef hi nahi thi. Pehla jhatka bada hota hai. Lekin ye jaanna der se jaanne se kahin behtar hai.",
+        {
+          "list": [
+            "Pehla kadam doctor, khaas kar liver ya pet ke specialist. Hepatitis B me har mareez ko turant dawa nahi chahiye hoti — ye faisla aage ki jaanch se hota hai.",
+            "Doctor aam taur par LFT aur Hepatitis B ki kuch aur jaanch likhta hai, jisse pata chale ki virus kitna sakriya hai. Unme se kaunsi jaanch ka sample ghar se ho sakta hai, ye parche ke saath booking par pooch lijiye.",
+            "LFT kitne-kitne mahine par dohraana hai, ye doctor tay karta hai. Ye follow-up saalon chal sakta hai, isliye ek hi lab par tikna aur har report sambhaalna zaroori hai.",
+            "Ghar ke logon — jeevan saathi aur bachchon — ki jaanch aur zaroorat ho to Hepatitis B ka tika, iske baare me doctor se zaroor poochhiye.",
+            "Anti-HCV (Hepatitis C) positive ho to bhi pehla kadam doctor hai; iske aage ki jaanch alag hoti hai."
+          ]
+        },
+        {
+          "note": {
+            "title": "Ye niji jaankari hai",
+            "text": "HBsAg ya HCV ki report sirf apne doctor aur zaroori logon tak rakhiye. Kisi WhatsApp group me mat daaliye.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dialysis-kidney-mareez-gorakhpur",
+      "heading": "Dialysis Ya Kidney Ke Mareez — Baar-Baar Ki Jaanch Ghar Par, Do Niyam Ke Saath",
+      "lead": "Yahan \"paani peete rahiye\" wali aam salah ulti pad sakti hai.",
+      "blocks": [
+        "Gorakhpur ke dialysis centre me aas-paas ke jilon se mareez hafte me do-teen baar aate hain. Unki jaanch bhi baar-baar hoti hai — creatinine, urea, potassium, haemoglobin, aur doctor ke kahe anusar calcium aur phosphorus. Dialysis ke din ke alawa bhi jaanch karani ho, to ghar par sample ek din ka safar bachata hai. Lekin in mareezon ke liye kuch niyam baaki sab se alag hain:",
+        {
+          "list": [
+            "Fistula wale haath se kabhi khoon mat nikalwaiye, aur us haath par BP ki patti bhi nahi. Booking ke waqt aur phlebotomist ke aate hi ye saaf bata dijiye.",
+            "Doctor ne paani kam peene ko kaha hai to sample se pehle extra paani mat pijiye. Aam mareezon ko di jaane wali \"paani peete rahiye\" salah aap par lagu nahi.",
+            "Sample dialysis se pehle ka chahiye ya baad ka, ye nephrologist batata hai — dono ke number bilkul alag aate hain. Parche par likha na ho to pooch lijiye.",
+            "Potassium bahut upar likha aaye to report ka intezaar mat kijiye; usi din doctor ko bataiye.",
+            "Har report ek folder me taareekh ke saath rakhiye — kidney ke mamle me doctor mahino ki disha dekhta hai."
+          ]
+        },
+        [
+          "Sugar aur BP ke mareez me kidney ki pehli jaanch — urine microalbumin — kyun sabse zyada chhootti hai, us par ",
+          {
+            "text": "full body checkup guide",
+            "href": "/blogs/full-body-checkup/gorakhpur#lft-kft-gorakhpur"
+          },
+          " me likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "creatinine-badha-gym-dawa-gorakhpur",
+      "heading": "Creatinine Badha Hua Ya SGPT Upar — Pehle Ye Chaar Wajah Kaat Lijiye",
+      "lead": "Kai baar number bimari nahi, pichhle din ki kahani batata hai.",
+      "blocks": [
+        "Sheher me ek naya pattern bahut dikhta hai: jawaan log gym jaate hain, protein aur creatine powder lete hain, routine checkup karwate hain, aur creatinine badha dekh kar ghabra jaate hain. Kai baar wajah kidney nahi, wo powder ya pichhle din ki bhaari kasrat hoti hai. Isi tarah SGPT ek raat ki party ke baad upar aa sakta hai. Report doctor ko dikhane se pehle ye bataane layak baatein note kar lijiye:",
+        {
+          "list": [
+            "Creatine ya protein powder, ya koi body-building injection — kaunsa aur kab se.",
+            "Test se ek-do din pehle bahut bhaari kasrat, lambi daud ya bhaari mehnat.",
+            "Pichhle 24-48 ghante me sharaab.",
+            "Dard ki goli, antibiotic, TB ki dawa, ya bina label ka koi nuskha — naam ya photo ke saath."
+          ]
+        },
+        "Inme se kuch bhi tha, to doctor aksar kuch din baad, us wajah ko hata kar, usi lab se dobara test likhta hai. Aur kuch bhi nahi tha, to report ko halke me mat lijiye — doctor ko dikhaiye.",
+        {
+          "note": {
+            "title": "In report ke saath usi din doctor",
+            "text": "Bahut badha creatinine ke saath peshab kam hona, saans phoolna ya sujan; potassium bahut upar-neeche; bahut badha bilirubin ke saath susti, ulti ya baat samajh na aana. Aise me agle hafte ki OPD ka intezaar nahi kiya jaata.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sugar-bp-kitni-baar-kft-gorakhpur",
+      "heading": "Kidney Function Test Aur Liver Function Test — Kis Ko, Kitni Baar",
+      "lead": "Aam antaraal. Aapka doctor jo kahe, wahi aakhri.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Kis haalat me LFT ya KFT aam taur par kitni baar",
+            "head": [
+              "Haalat",
+              "Jaanch",
+              "Aam antaraal"
+            ],
+            "rows": [
+              [
+                "Bina shikayat, 30 ke upar",
+                "LFT, KFT (package me)",
+                "Saal me ek baar"
+              ],
+              [
+                "Sugar ya BP ki dawa",
+                "KFT aur urine microalbumin",
+                "Saal me ek baar, zaroorat par jaldi"
+              ],
+              [
+                "Fatty liver",
+                "LFT, lipid, sugar",
+                "Doctor ke bataye mahino par"
+              ],
+              [
+                "Hepatitis B ya C",
+                "LFT aur doctor ki likhi aur jaanch",
+                "Doctor ke bataye antaraal par, saalon tak"
+              ],
+              [
+                "TB ki dawa",
+                "LFT",
+                "Doctor ke bataye samay par; peeliya ya ulti ho to turant"
+              ],
+              [
+                "Dialysis ya kidney ki bimari",
+                "Creatinine, urea, potassium, Hb aur doctor ki likhi jaanch",
+                "Nephrologist ke niyam se"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "taiyari-ghar-se-lft-kft-gorakhpur",
+      "heading": "Sample Se Pehle Aur Ghar Par Visit — Kya Dhyaan Rakhein",
+      "lead": "Ek sample me dono, das minute me.",
+      "blocks": [
+        {
+          "list": [
+            "LFT aur KFT aam taur par bina fasting ke hote hain. Saath me lipid ya fasting sugar likha ho to 10 se 12 ghante ki fasting aur subah ka slot.",
+            "Aam mareez saada paani peete rahein; paani ki kami me urea-creatinine jhoothe taur par badhe aate hain. Kidney ke jin mareezon ko paani ki seema batayi gayi hai, wo apne doctor ki salah maanein.",
+            "Test se 24 ghante pehle sharaab nahi, aur ek din pehle bahut bhaari kasrat nahi.",
+            "Dawa ki list aur parche ki photo booking me dijiye. Microalbumin likha ho to peshab ka container visit me milega."
+          ]
+        },
+        "Trained phlebotomist ID card ke saath aata hai, slot subah 6 baje se shuru hote hain, home collection ka koi alag charge nahi hai, payment sample ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
+        [
+          "Flat ya colony ka pata kaise likhein aur traffic ke hisaab se slot kaise chunein, wo ",
+          {
+            "text": "home collection guide",
+            "href": "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur"
+          },
+          " me hai. Rate ",
+          {
+            "text": "Gorakhpur ki rate list",
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-lft-kft-gorakhpur",
+      "heading": "Aage Kya Karein",
+      "lead": "Teen kadam.",
+      "blocks": [
+        {
+          "list": [
+            "Pichhli saari LFT-KFT report ek folder me taareekh ke saath jama kijiye.",
+            "Doctor se poochh kar agli jaanch ki taareekh phone me daal dijiye.",
+            "Dawa, powder aur nuskhon ki list ke saath booking kijiye."
+          ]
+        },
+        [
+          "Booking ke liye ",
+          {
+            "text": "Gorakhpur ka form",
+            "href": "/lab-test/gorakhpur#how-to-book-gorakhpur"
+          },
+          " bhariye ya ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          ". Operation ya contrast CT se pehle creatinine aur infection screening par ",
+          {
+            "text": "alag guide",
+            "href": "/blogs/pre-operative-test/gorakhpur"
+          },
+          " hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Gorakhpur me LFT aur KFT test ke liye khaali pet rehna padta hai?",
+      "answer": "Aam taur par nahi. LFT aur KFT bina fasting ke ho jaate hain. Saath me lipid profile ya fasting sugar likha ho to 10 se 12 ghante ki fasting rakhiye aur subah ka slot lijiye."
+    },
+    {
+      "question": "Ultrasound me fatty liver aaya hai — kaunsa blood test karayein?",
+      "answer": "Doctor aam taur par LFT, lipid profile aur fasting sugar ya HbA1c likhta hai, aur zaroorat par Hepatitis B tatha C ki jaanch. Dobara kab dekhna hai, ye doctor batayega; tulna ke liye har baar ek hi lab se karwaiye."
+    },
+    {
+      "question": "HBsAg positive aaya hai aur koi takleef nahi — kya karein?",
+      "answer": "Pehle liver ya pet ke specialist ko dikhaiye. Har mareez ko turant dawa nahi chahiye hoti; ye aage ki jaanch se tay hota hai. LFT ka follow-up doctor ke bataye antaraal par saalon chal sakta hai. Ghar walon ki jaanch aur tike ke baare me bhi doctor se poochhiye."
+    },
+    {
+      "question": "Dialysis ke mareez ka sample ghar par liya ja sakta hai?",
+      "answer": "Haan, lekin booking ke waqt bataiye ki mareez dialysis par hai aur fistula kis haath me hai — us haath se kabhi sample nahi liya jaata. Sample dialysis se pehle ka chahiye ya baad ka, ye nephrologist se pooch lijiye. Paani ki seema batayi gayi ho to sample se pehle extra paani mat pijiye."
+    },
+    {
+      "question": "Gym jaate hain aur creatine lete hain — creatinine badha aaya hai, kya kidney kharab hai?",
+      "answer": "Zaroori nahi. Creatine powder aur bhaari kasrat creatinine ko badha sakte hain. Doctor ko ye baat bataiye; wo aksar kuch din powder aur bhaari kasrat rok kar usi lab se dobara test likhta hai. Peshab kam ho, sujan ho ya saans phoole to usi din doctor ko dikhaiye."
+    },
+    {
+      "question": "KFT me uric acid aata hai ya alag se karana padta hai?",
+      "answer": "Kuch lab ke KFT panel me uric acid shaamil hota hai, kuch me alag se jodna padta hai. Parche ki photo booking me bhej dijiye, jo likha hai wahi panel book hoga."
+    },
+    {
+      "question": "LFT KFT ki report kitne ghante me aati hai?",
+      "answer": "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Pichhli report bhi saath rakhiye, taaki doctor badlaav dekh sake."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Gorakhpur Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me liver aur kidney ki jaanch aur uska follow-up hai. Booking aur baaki guide neeche hain.",
+    "groups": [
+      {
+        "title": "Gorakhpur Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/gorakhpur",
+            "label": "Gorakhpur me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur",
+            "label": "LFT, KFT aur baaki test ka rate"
+          },
+          {
+            "href": "/lab-test/gorakhpur#water-jaundice-gorakhpur",
+            "label": "Barsaat ke baad peeliya — LFT aur hepatitis"
+          }
+        ]
+      },
+      {
+        "title": "Gorakhpur Ke Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/pre-operative-test/gorakhpur",
+            "label": "Operation se pehle kaun se test"
+          },
+          {
+            "href": "/blogs/discharge-follow-up-test/gorakhpur",
+            "label": "Discharge ke baad follow-up test"
+          },
+          {
+            "href": "/blogs/full-body-checkup/gorakhpur",
+            "label": "Full body checkup — kaun se test hote hain"
+          }
+        ]
+      }
+    ]
+  }
+}
