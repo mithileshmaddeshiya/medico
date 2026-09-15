@@ -1,0 +1,280 @@
+{
+  "title": "PCOD Test In Deoria — Kaun Se Hormone Test Karayein",
+  "description": "PCOD ya PCOS ka koi ek test nahi hota. Deoria me LH, FSH, prolactin, testosterone, thyroid, AMH aur sugar test kab, period ke kaun se din, aur kyun karayein.",
+  "keywords": [
+    "PCOD test in Deoria",
+    "PCOD me kaun sa test hota hai",
+    "PCOS blood test",
+    "hormone test for women",
+    "LH FSH test kab karayein",
+    "prolactin test",
+    "AMH test kya hai",
+    "period late hone par kaun sa test",
+    "PCOD aur thyroid",
+    "blood test at home Deoria"
+  ],
+  "publishedAt": "2026-09-15",
+  "order": 170,
+  "takeaways": [
+    "PCOD ka koi ek blood test nahi hai. Nidaan lakshan, kuch hormone test aur ultrasound ko saath dekh kar hota hai — aur pehle un bimariyon ko hataya jaata hai jo bilkul PCOD jaisi dikhti hain.",
+    "Thyroid (TSH) aur prolactin sabse pehle dekhe jaate hain, kyunki dono periods bigaad dete hain aur inka ilaaj alag hai.",
+    "LH, FSH aur estradiol aam taur par period ke doosre se paanchve din ke beech liye jaate hain. Galat din ka sample galat tasveer deta hai.",
+    "PCOD sirf periods ki baat nahi — sugar aur cholesterol ki jaanch bhi utni hi zaroori hai, chahe wazan zyada ho ya na ho."
+  ],
+  "sections": [
+    {
+      "id": "pcod-ka-koi-ek-test-nahi-deoria",
+      "heading": "PCOD Ka Koi Ek Test Nahi Hota — Pehle Ye Samajh Lijiye",
+      "lead": "\"PCOD ka test karwa do\" — ye maang lab par roz aati hai. Iska seedha jawab thoda lamba hai.",
+      "blocks": [
+        "Deoria aur aas-paas ke kasbon me periods ki gadbad, chehre par baal, muhaase aur wazan badhna le kar bahut si ladkiyan aur mahilayein doctor ke paas jaati hain, aur aksar sabse pehle yahi sunti hain ki \"PCOD ho sakta hai\". Aam bol-chaal me PCOD aur PCOS ek hi baat ke liye bole jaate hain; doctor ki bhasha me iska naam PCOS (polycystic ovary syndrome) hai.",
+        "Sabse zaroori baat ye hai ki PCOD ka koi ek blood test nahi hota jiska report \"positive\" ya \"negative\" aaye. Doctor aam taur par teen cheezein dekhte hain, aur inme se kam se kam do hon tab PCOS ka shak pakka hota hai:",
+        {
+          "list": [
+            "Periods ka der se, bahut kam, ya mahino tak na aana — yaani anda theek se na banna.",
+            "Male hormone (androgen) badhne ke sanket — chehre, thodi ya pet par mote baal, zyada muhaase, sir ke baal patle hona — ya khoon ki jaanch me testosterone zyada.",
+            "Ultrasound me ovary ka roop; vayask mahilaon me kuch doctor iske badle AMH test bhi dekhte hain."
+          ]
+        },
+        "Aur ye tabhi, jab thyroid, prolactin aur kuch aur hormone ki gadbad jaisi wajah pehle hata di jaayein — kyunki wo bilkul PCOD jaise lakshan deti hain. Isi liye PCOD ke naam par ek nahi, kai test likhe jaate hain.",
+        {
+          "note": {
+            "title": "Ultrasound hamari service nahi hai",
+            "text": "PCOD ki jaanch me aksar pelvis ka ultrasound bhi likha jaata hai. Wo machine par hota hai aur humse nahi hota — uske liye imaging centre jaana padega. Hormone aur sugar ke blood test ka sample ghar par diya ja sakta hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pcod-lakshan-kab-test-deoria",
+      "heading": "Period Late Ho, Baal Badhein Ya Wazan — Kab Hormone Test Ki Soch Aati Hai",
+      "lead": "Lakshan jitne saaf likh kar le jaayenge, test ki list utni sahi banegi.",
+      "blocks": [
+        "Doctor ke paas jaane se pehle ye baatein ek kaagaz par likh lijiye. Test ki list isi se banti hai:",
+        {
+          "list": [
+            "Pichhle chhah mahine ke periods ki tareekh — kitne din ke antar par aaye, kitne din chale.",
+            "Chehre, thodi, chhaati ya pet par baal kab se badhe, aur kya tezi se badh rahe hain.",
+            "Muhaase, sir ke baal jhadna, gardan ya bagal ki twacha kaali aur mote hona.",
+            "Wazan kitna badha, aur kitne samay me.",
+            "Pregnancy me dikkat aa rahi hai to kab se koshish ho rahi hai.",
+            "Koi hormone ki goli, garbh nirodhak goli ya doosri dawa chal rahi hai ya nahi."
+          ]
+        },
+        "Period chhoot gaya hai to sabse pehla test pregnancy ka hai — ghar ki kit ya beta hCG — chahe aapko lagta ho ki iski sambhavna nahi hai. Ye sirf ek baat hata deta hai, aur baaki jaanch ka matlab badal deta hai.",
+        {
+          "note": {
+            "title": "Ye lakshan PCOD nahi, turant doctor wale hain",
+            "text": "Kuch hi mahino me aawaz bhaari hona, bahut tezi se baal badhna, ya pet me gaanth jaisa lagna; ya bahut zyada bleeding ke saath chakkar aur kamzori; ya pet ke neeche achanak tez dard — in me PCOD maan kar intezaar mat kijiye, jaldi doctor ko dikhaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pcod-me-kaun-sa-test-deoria",
+      "heading": "PCOD Me Kaun Sa Test Hota Hai — Poori List Aur Har Test Ka Kaam",
+      "lead": "Har naam ke saath ye bhi likha hai ki kab lena hai. Yahi hissa sabse zyada galat hota hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "PCOD / PCOS me aam taur par likhe jaane wale blood test",
+            "head": ["Test", "Kyun dekha jaata hai", "Kab aur kaise"],
+            "rows": [
+              ["Pregnancy test (kit ya beta hCG)", "Period chhootne ki sabse aam wajah hatane ke liye", "Sabse pehle"],
+              ["TSH (thyroid)", "Thyroid ki kami periods bigaadti hai, wazan badhati hai", "Kisi bhi din"],
+              ["Prolactin", "Badha prolactin periods rok deta hai", "Subah, aaram ke baad"],
+              ["Total testosterone (kabhi SHBG ke saath)", "Male hormone badha hai ya nahi", "Aam taur par subah"],
+              ["LH, FSH, estradiol", "Ovary aur dimaag ke hormone ka santulan", "Period ke doosre se paanchve din"],
+              ["17-OH progesterone", "Adrenal gland ki ek bimari jo PCOD jaisi dikhti hai", "Subah, doctor ki salah se"],
+              ["AMH", "Ovary me andon ka bhandaar; PCOS me aksar zyada", "Kisi bhi din"],
+              ["Fasting sugar / HbA1c, kabhi GTT", "PCOS me sugar badhne ka khatra zyada", "Fasting sugar ke liye 8–10 ghante khaali pet"],
+              ["Lipid profile", "Cholesterol aur triglycerides", "Doctor jo fasting kahe"]
+            ]
+          }
+        },
+        "Har mahila ko ye saare test ek saath nahi chahiye. Doctor lakshan aur umar dekh kar inme se chunte hain. Thyroid, sugar, HbA1c aur lipid hamare menu par naam se hain; LH, FSH, prolactin, testosterone aur AMH jaise hormone test menu par naam se nahi dikhte — parche ki photo ke saath call kar lijiye, booking usi list ke hisaab se hoti hai."
+      ]
+    },
+    {
+      "id": "lh-fsh-test-kab-deoria",
+      "heading": "LH, FSH Test Period Ke Kaun Se Din Karayein — Aur Prolactin Kaise",
+      "lead": "Hormone test ka nateeja is baat par tika hai ki sample kis din aur kis waqt liya gaya.",
+      "blocks": [
+        "Mahila ke hormone mahine bhar ek jagah nahi rukte — period ke saath upar-neeche hote rehte hain. Isliye LH, FSH aur estradiol ka sample aam taur par period ke doosre se paanchve din ke beech liya jaata hai. Din ginne ka tareeka ye hai: jis din se theek se bleeding shuru hui, wo pehla din.",
+        {
+          "table": {
+            "caption": "Hormone test ka sahi din aur samay — aam salah",
+            "head": ["Test", "Sahi samay", "Kya dhyaan rakhein"],
+            "rows": [
+              ["LH, FSH, estradiol", "Period ka din 2 se 5", "Mahino se period nahi aaya to doctor din batayenge"],
+              ["Prolactin", "Subah, uthne ke kuch der baad, aaram se baith kar", "Tanaav, bhaari kasrat aur neend ki kami se thoda badh sakta hai"],
+              ["Testosterone", "Subah", "Garbh nirodhak goli nateeje ko badal deti hai"],
+              ["Progesterone (ovulation dekhne ke liye)", "Aam taur par agle period se kareeb ek hafta pehle", "28 din ke chakra me lagbhag 21va din"],
+              ["TSH, AMH", "Kisi bhi din", "Thyroid ki goli chal rahi ho to sample aam taur par goli se pehle"]
+            ]
+          }
+        },
+        {
+          "list": [
+            "Garbh nirodhak ya hormone ki goli chal rahi hai to test se pehle doctor ko bataiye. Kuch test ke liye doctor goli rokne ko kehte hain — khud se band mat kijiye.",
+            "Prolactin thoda sa badha aaye to doctor aksar dobara, sahi tareeke se sample le kar dekhte hain, kyunki ek report ka halka badhaav aksar tanaav ya samay ki wajah se hota hai.",
+            "Kuch dawaiyan — jaise ulti aur acidity ki kuch dawa, aur kuch dimaagi dawaiyan — prolactin badhati hain. Chal rahi dawa ka naam booking aur doctor dono ko bataiye."
+          ]
+        },
+        "Ghar par sample dene ka ek faayda yahan saaf hai: din 2 ya din 3 ka sample tay din par hi chahiye, aur us din safar karna aksar sabse mushkil hota hai. Period shuru hote hi ek din pehle booking kar lijiye, subah ka slot le lijiye."
+      ]
+    },
+    {
+      "id": "thyroid-prolactin-pcod-deoria",
+      "heading": "PCOD Aur Thyroid — Pehle Thyroid Aur Prolactin Kyun Dekhe Jaate Hain",
+      "lead": "Do bimariyan jo PCOD ka roop le kar aati hain, aur jinka ilaaj bilkul alag hai.",
+      "blocks": [
+        "Thyroid ki kami (hypothyroidism) me wazan badhta hai, thakan rehti hai, periods aniyamit ya zyada hote hain, aur baal jhadte hain — lagbhag wahi shikayat jo PCOD me hoti hai. Isi tarah prolactin badhne par periods ruk jaate hain, aur kabhi stan se doodh jaisa paani aata hai. Dono me ilaaj PCOD wala nahi hota, isliye doctor inhe sabse pehle hataate hain.",
+        "Ye bhi ho sakta hai ki PCOD aur thyroid dono saath hon — aisa kam nahi hai. Isliye TSH normal aane ka matlab ye nahi ki PCOD nahi, aur PCOD pakka hone ka matlab ye nahi ki thyroid dekhne ki zaroorat nahi.",
+        [
+          "TSH, T3 aur T4 ki report kaise padhein aur dobara jaanch kab, wo ",
+          { "text": "thyroid wale hisse", "href": "/blogs/diabetes-thyroid-test/deoria#thyroid-report-aur-dobara-jaanch" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "pcod-sugar-cholesterol-deoria",
+      "heading": "PCOD Me Sugar Aur Cholesterol Test Kyun — Chahe Wazan Theek Ho",
+      "lead": "Periods theek karna ilaaj ka ek hissa hai. Aage ki sugar se bachna doosra.",
+      "blocks": [
+        "PCOS me sharir insulin ka asar kam maanne lagta hai (insulin resistance). Iska nateeja ye ho sakta hai ki kam umar me hi sugar badhne lage, pregnancy me sugar ho, aur cholesterol-triglycerides upar jaayein. Ye khatra sirf zyada wazan wali mahilaon me nahi — dubli-patli mahilaon me bhi PCOS ho sakta hai aur sugar ki jaanch unhe bhi chahiye.",
+        {
+          "list": [
+            "Doctor aam taur par fasting sugar ya HbA1c likhte hain; kai guideline zyada sahi jaankari ke liye glucose tolerance test (GTT) ko behtar maanti hain.",
+            "Lipid profile se cholesterol aur triglycerides dekhe jaate hain.",
+            "Ye jaanch ek baar ki nahi — doctor aksar har ek-do saal, ya zyada khatra ho to jaldi, dohrane ko kehte hain.",
+            "\"Fasting insulin\" test aksar maanga jaata hai, lekin PCOS ke nidaan me ise zaroori nahi maana jaata. Doctor ne likha ho tabhi karaiye."
+          ]
+        },
+        [
+          "Fasting sugar, HbA1c aur lipid profile ke fasting niyam ek table me ",
+          { "text": "yahan hain", "href": "/blogs/diabetes-thyroid-test/deoria#kitni-baar-aur-fasting-table-deoria" },
+          ". Pregnancy ki koshish ho rahi hai ya pregnancy ho gayi hai, to uske test ",
+          { "text": "pregnancy blood test guide", "href": "/blogs/pregnancy-blood-test/deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "amh-test-kya-hai-deoria",
+      "heading": "AMH Test Kya Hai — Kya Batata Hai, Aur Kya Bilkul Nahi",
+      "lead": "AMH ka number dekh kar sabse zyada galat nateeje nikaale jaate hain.",
+      "blocks": [
+        "AMH (anti-Müllerian hormone) ovary me bache andon ke bhandaar ka andaaza deta hai. PCOS me ovary me chhote follicle zyada hote hain, isliye AMH aksar zyada aata hai. Iska sample kisi bhi din diya ja sakta hai.",
+        {
+          "list": [
+            "AMH zyada hona apne aap me PCOS ka nidaan nahi. Doctor ise lakshan aur baaki jaanch ke saath hi padhte hain.",
+            "AMH kam hona ye nahi batata ki pregnancy nahi hogi. Ye andon ki ginti ka andaaza hai, unki quality ya is mahine ki sambhavna ka nahi.",
+            "Kishoriyon me — period shuru hone ke kuch saal tak — AMH aur ultrasound dono se PCOS tay nahi kiya jaata. Us umar me doctor lakshan dekh kar chalte hain.",
+            "Garbh nirodhak goli AMH ko kuch kam dikha sakti hai; ye baat doctor ko bataiye."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghar-par-hormone-test-deoria",
+      "heading": "Deoria Me PCOD Ke Hormone Test Ghar Par Kaise Karayein",
+      "lead": "Tay din ka sample, subah ka waqt, aur ghar ka aaram — teeno ek saath.",
+      "blocks": [
+        "Hormone test ke saath do dikkatein hoti hain: sample period ke tay din chahiye, aur prolactin jaise test ke liye subah aaram se diya gaya sample. Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar ya Bhatni se Sadar tak ka safar dono ko bigaad deta hai. Isliye ye sample ghar par dena sabse aasaan hai.",
+        {
+          "list": [
+            "Parche ki photo booking ke waqt bhej dijiye, aur bataiye ki period ka kaun sa din chal raha hai.",
+            "Fasting sugar ya lipid bhi saath hai to raat ke khaane ke baad kuch mat khaiye; saada paani pee sakti hain.",
+            "Chal rahi har goli ka naam likh kar rakhiye.",
+            "Report kis number par chahiye, wahi number dijiye."
+          ]
+        },
+        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Kuch hormone test me 24 ghante se zyada lag sakta hai — booking par samay bata diya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        [
+          "Daam ke liye ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          ", aur booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se. Mahila phlebotomist ki request aur ghar par sample se judi baatein ",
+          { "text": "home collection guide", "href": "/blogs/home-sample-collection/deoria#mahilaon-ke-liye-ghar-par-sample-deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-pcod-deoria",
+      "heading": "PCOD Test Se Pehle — Teen Sawaal Khud Se Poochhiye",
+      "lead": "Inka jawab likh kar le jaayengi to na test bekaar jaayega, na doctor ki visit.",
+      "blocks": [
+        {
+          "list": [
+            "Period chhoota hai to pregnancy ki jaanch ho gayi? Nahi, to sabse pehle wahi.",
+            "LH-FSH likha hai to aaj period ka kaun sa din hai? Din 2 se 5 ke bahar ho to doctor se poochh kar hi sample dijiye.",
+            "Koi hormone ya garbh nirodhak goli chal rahi hai? To doctor ko pehle bataiye."
+          ]
+        },
+        [
+          "Thakan, baal jhadna aur khoon ki kami bhi saath ho to Vitamin D, B12 aur CBC ki baat ",
+          { "text": "is guide", "href": "/blogs/vitamin-b12-d-test/deoria" },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "PCOD me kaun sa test hota hai?",
+      "answer": "PCOD ka koi ek test nahi hota. Doctor aam taur par pregnancy test, TSH, prolactin, testosterone, LH, FSH, kabhi AMH aur 17-OH progesterone, aur sugar tatha lipid profile likhte hain. Iske saath aksar ultrasound bhi hota hai. Nidaan lakshan aur in jaanch ko saath dekh kar hota hai."
+    },
+    {
+      "question": "LH aur FSH test period ke kaun se din karana chahiye?",
+      "answer": "Aam taur par period ke doosre se paanchve din ke beech — jis din theek se bleeding shuru hui, use pehla din gina jaata hai. Mahino se period nahi aaya ho to doctor batayenge ki sample kab dena hai."
+    },
+    {
+      "question": "Kya PCOD ke test ke liye khaali pet rehna zaroori hai?",
+      "answer": "Hormone test ke liye aam taur par fasting zaroori nahi. Lekin PCOD me saath me fasting sugar aur lipid profile bhi likhe jaate hain, jinke liye 8 se 10 ghante khaali pet rehna padta hai. Isliye sabka sample subah khaali pet ek saath dena sabse aasaan hai. Prolactin aur testosterone ke liye bhi subah ka sample behtar maana jaata hai."
+    },
+    {
+      "question": "PCOD aur thyroid me kya farak hai?",
+      "answer": "Dono me wazan badhna, periods ki gadbad aur baal jhadna ho sakta hai, lekin wajah aur ilaaj alag hain. Thyroid ki kami TSH test se pakad me aati hai. Isliye PCOD ki jaanch me TSH sabse pehle dekha jaata hai. Dono ek saath bhi ho sakte hain."
+    },
+    {
+      "question": "AMH test kam aaya hai, kya pregnancy nahi hogi?",
+      "answer": "Aisa nahi hai. AMH ovary me bache andon ki ginti ka andaaza deta hai, unki quality ya is mahine pregnancy ki sambhavna nahi batata. Kam AMH wali bahut si mahilayein pregnant hoti hain. Is report ka matlab apne doctor se samjhiye."
+    },
+    {
+      "question": "PCOD me sugar test kyun karaya jaata hai?",
+      "answer": "PCOS me sharir par insulin ka asar kam hota hai, jisse kam umar me sugar badhne aur pregnancy me sugar hone ka khatra zyada rehta hai. Ye khatra dubli-patli mahilaon me bhi hota hai. Isliye doctor fasting sugar, HbA1c ya GTT aur lipid profile likhte hain aur samay-samay par dohrate hain."
+    },
+    {
+      "question": "Deoria me PCOD ke hormone test ghar par ho sakte hain?",
+      "answer": "Haan, blood sample Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liya jaata hai. Thyroid, sugar, HbA1c aur lipid menu par hain; LH, FSH, prolactin, testosterone aur AMH ke liye parche ke saath call kijiye. Ultrasound hamari service nahi hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me PCOD ke hormone test, unka sahi din aur matlab hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Thyroid, sugar, HbA1c aur lipid ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch", "sub": "HbA1c, TSH aur fasting ki table" },
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "Beta hCG, GTT aur thyroid" },
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" }
+        ]
+      }
+    ]
+  }
+}

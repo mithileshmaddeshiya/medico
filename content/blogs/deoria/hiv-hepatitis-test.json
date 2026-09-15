@@ -1,0 +1,269 @@
+{
+  "title": "HIV Aur Hepatitis B Test In Deoria — Kab Karayein",
+  "description": "Deoria me HIV, HBsAg aur Hepatitis C test kab karayein — window period kitna hai, reactive report ka matlab, aur jokhim ke baad 72 ghante me kya karein.",
+  "keywords": [
+    "HIV test in Deoria",
+    "HBsAg test Deoria",
+    "hepatitis B test",
+    "hepatitis C test Anti HCV",
+    "HIV test kitne din baad karayein",
+    "HIV window period",
+    "HBsAg positive ka matlab",
+    "VDRL test",
+    "surgery se pehle HIV HBsAg test",
+    "blood test at home Deoria"
+  ],
+  "publishedAt": "2026-09-15",
+  "order": 180,
+  "takeaways": [
+    "Jokhim ke turant baad test karane se sankraman pakad me nahi aata. HIV, Hepatitis B aur C — teeno ka apna window period hai, aur test ka sahi din usi se tay hota hai.",
+    "Jokhim ke baad pehle 72 ghante test ke nahi, ilaaj ke hote hain. HIV se bachaav ki dawa (PEP) jitni jaldi shuru ho utna behtar — usi din aspatal jaiye.",
+    "Screening report \"reactive\" aane ka matlab aakhri nidaan nahi. Pushti ke liye alag jaanch hoti hai, aur uske baad hi koi faisla.",
+    "Hepatitis B aur HIV ke saath log lamba, saamanya jeevan jeete hain. Hepatitis C aaj goliyon se theek ho sakta hai. Jaldi pata chalna hi sabse bada faayda hai."
+  ],
+  "sections": [
+    {
+      "id": "hiv-hepatitis-test-kyun-deoria",
+      "heading": "HIV Aur Hepatitis Test Kyun Karaye Jaate Hain — Zyadatar Wajah Routine Hai",
+      "lead": "Is test ka naam sunte hi log ghabra jaate hain. Asal me zyadatar ye parche ki ek saamanya line hai.",
+      "blocks": [
+        "Deoria me HIV, HBsAg aur Anti-HCV ka test sabse zyada un logon ka hota hai jinhe koi shikayat nahi — bas kisi kaam se pehle ye jaanch maangi gayi hai. Operation, pregnancy, dialysis, endoscopy, daant ka bada ilaaj, khoon dena, videsh ki naukri ya kuch company ki medical — in sab me ye screening aam hai. Isliye parche par ye naam dekh kar ye mat maaniye ki doctor ko koi shak hai.",
+        "Doosri wajah hai jokhim. In teeno sankraman ka rasta aam taur par ek jaisa hai: khoon aur sharir ke taral. Isliye test ki salah di jaati hai jab:",
+        {
+          "list": [
+            "Bina suraksha ke sambandh bana ho, ya kisi naye ya ek se zyada saathi ke saath.",
+            "Kisi ke saath suyi, syringe, blade ya ustra saajha hua ho — sadak kinare daadhi banwaana, naak-kaan chhidwaana ya tattoo bhi isme aate hain.",
+            "Bina jaanch wala khoon chadha ho, ya bahar kisi aisi jagah ilaaj hua ho jahan saaf aujaar par shak ho.",
+            "Aspatal ya lab me kaam karte waqt suyi chubh gayi ho.",
+            "Peeliya ho, ya ghar me kisi ko Hepatitis B ho — khaas kar maa ko."
+          ]
+        },
+        {
+          "note": {
+            "title": "Ye jaanch aapki marzi se hoti hai",
+            "text": "HIV ki jaanch ke liye aapki sahmati zaroori hai — kanoon bhi yahi kehta hai — aur uska nateeja aapki niji jaankari hai. Booking ke waqt apna hi mobile number aur email dijiye, kyunki report usi par aati hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pehle-72-ghante-pep-deoria",
+      "heading": "Jokhim Hua Hai? Pehle 72 Ghante Test Ke Nahi, Aspatal Ke Hain",
+      "lead": "Is guide ka sabse zaroori hissa yahi hai, isliye sabse upar hai.",
+      "blocks": [
+        "Bahut se log jokhim ke agle din hi test karate hain, report negative dekh kar nishchint ho jaate hain, aur wahi samay gawa dete hain jo sabse keemti tha. Agle din ka test us jokhim ke baare me kuch nahi batata — kyunki sankraman itni jaldi khoon me pakad me aata hi nahi.",
+        "Us samay jo kaam aata hai, wo hai HIV se bachaav ki dawa, jise PEP (post-exposure prophylaxis) kehte hain. Ye jokhim ke 72 ghante ke andar shuru honi chahiye — aur jitni jaldi, utna behtar. Hepatitis B ke jokhim me bhi, agar pehle se tika nahi laga, to doctor jaldi tika aur kabhi ek injection ki salah dete hain.",
+        {
+          "note": {
+            "title": "Aaj hi kya karein",
+            "text": "Suyi chubhi ho, jokhim wala sambandh hua ho, ya kisi ke khoon ke sampark me aaye hon — to usi din sarkari zila aspatal ya kisi bade aspatal ki emergency me jaiye aur saaf bataiye ki jokhim kab hua. Sarkari aspataalon me aam taur par ICTC hota hai, jahan HIV ki jaanch aur salah muft aur gopniy hoti hai; zaroorat par wahan se ART centre bheja jaata hai. Test uske baad, sahi din par.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "window-period-kitne-din-baad-deoria",
+      "heading": "HIV Test Kitne Din Baad Karayein — Window Period Ki Poori Table",
+      "lead": "Sahi din se pehle ka negative, negative nahi hota. Wo sirf \"abhi pata nahi\" hota hai.",
+      "blocks": [
+        "Window period wo samay hai jab sankraman sharir me hota hai, lekin test use pakad nahi paata. Ye test ke prakaar par nirbhar karta hai — isliye report par test ka naam aur method dekhna zaroori hai.",
+        {
+          "table": {
+            "caption": "Window period — jokhim ke kitne din baad test kaam ka hai (aam taur par)",
+            "head": ["Test", "Kya dhoondhta hai", "Zyadatar kab tak pakad me", "Pakke nateeje ke liye aam salah"],
+            "rows": [
+              ["HIV — lab ka antigen-antibody (4th generation) test", "HIV ka p24 antigen aur antibody", "Kareeb 4 se 6 hafte", "3 mahine baad dobara"],
+              ["HIV — sirf antibody wala rapid test", "Sirf antibody", "Kai logon me 6 se 12 hafte", "3 mahine baad"],
+              ["HBsAg (Hepatitis B)", "Hepatitis B virus ka hissa", "Aam taur par 4 se 6 hafte, kabhi 9–10 hafte", "Doctor ki salah se dobara"],
+              ["Anti-HCV (Hepatitis C)", "Hepatitis C ki antibody", "Aam taur par 8 se 11 hafte", "Kabhi 6 mahine tak; zaroorat par HCV RNA"],
+              ["VDRL / RPR (syphilis)", "Sankraman ka sanket", "Kareeb 3 se 6 hafte", "Positive ho to TPHA se pushti"]
+            ]
+          }
+        },
+        "Isliye aam salah ye rehti hai: jokhim ke kareeb 6 hafte baad pehla test, aur 3 mahine baad dobara. Beech ke samay me suraksha ka dhyaan rakhiye, kyunki agar sankraman hua hai to wo doosre tak pahunch sakta hai — bhale report abhi negative ho.",
+        "Jokhim ke kuch hafte baad bukhar, gale me dard, badan par daane ya gaanth sujna — ye HIV ke shuruaati sankraman me ho sakte hain, lekin aam virus wale bukhar me bhi hote hain. Aise lakshan hon to doctor ko jokhim ki baat zaroor bataiye."
+      ]
+    },
+    {
+      "id": "reactive-report-ka-matlab-deoria",
+      "heading": "Report Me \"Reactive\" Likha Hai — Iska Matlab Kya Hai, Aur Kya Nahi",
+      "lead": "Screening test ka kaam jaal phenkna hai. Pakka jawab uske baad ki jaanch deti hai.",
+      "blocks": [
+        "HIV, HBsAg aur Anti-HCV ki report aksar \"Reactive / Non-reactive\" me aati hai. Non-reactive ka matlab hai us test me sankraman ka sanket nahi mila — bas window period ka dhyaan rakhiye. Reactive ka matlab hai sanket mila, aur ab pushti ki jaanch honi hai. Kabhi-kabhi screening test bina sankraman ke bhi reactive aa jaata hai — isi liye ek report par koi faisla nahi kiya jaata.",
+        {
+          "table": {
+            "caption": "Reactive report ke baad doctor aam taur par kya karte hain",
+            "head": ["Report", "Iska matlab", "Aage aam taur par"],
+            "rows": [
+              ["HIV reactive", "Sanket mila, nidaan abhi nahi", "Sarkari niyam ke hisaab se alag tareeke ke test se pushti — ICTC me muft; phir ART centre"],
+              ["HBsAg reactive", "Hepatitis B virus abhi sharir me hai", "LFT, HBeAg, HBV DNA; 6 mahine baad dobara, taaki pata chale sankraman naya hai ya purana"],
+              ["Anti-HCV reactive", "Kabhi Hepatitis C hua tha — abhi hai ya nahi, pata nahi", "HCV RNA se pata chalta hai ki virus abhi hai ya nahi"],
+              ["VDRL reactive", "Sanket mila; kabhi doosri wajah se bhi aata hai", "TPHA jaisi jaanch se pushti"]
+            ]
+          }
+        },
+        {
+          "list": [
+            "Reactive report le kar internet par nateeja mat dhoondhiye. Usi hafte doctor ya sarkari aspatal ke ICTC me jaiye.",
+            "Ghar me pati-patni ya bachchon ki jaanch kab karani hai, ye doctor ki salah se tay kijiye.",
+            "Pushti se pehle koi dawa shuru mat kijiye, aur kisi \"desi ilaaj\" ke bharose samay mat gawaiye."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hbsag-hepatitis-b-test-deoria",
+      "heading": "HBsAg Test — Hepatitis B Positive Aaye To Aage Kya",
+      "lead": "Hepatitis B aam hai, aur zyadatar log ise jaane bina saalon tak rehte hain.",
+      "blocks": [
+        "HBsAg Hepatitis B ki sabse aam screening jaanch hai. Hepatitis B liver ko nuksan pahuncha sakta hai, lekin sahi samay par pata chale to doctor liver ki nigraani rakhte hain aur zaroorat par dawa dete hain. Bahut se logon me dawa ki zaroorat bhi nahi padti — bas saal me ek-do baar jaanch.",
+        {
+          "list": [
+            "Hepatitis B khaana saath khaane, bartan, gale milne, haath milane ya mahilaon ke doodh pilaane se nahi failta. Aise logon ko ghar me alag karna galat hai.",
+            "Ye khoon, sambandh aur maa se bachche me — khaas kar janm ke samay — failta hai. Isliye pregnancy me HBsAg zaroor dekha jaata hai: maa positive ho to bachche ko janm ke turant baad tika aur injection de kar bachaya ja sakta hai.",
+            "Ghar ke baaki logon ki jaanch aur tika — doctor aksar yahi pehli salah dete hain.",
+            "Hepatitis B se bachaav ka tika maujood hai. Tika lagwaane se pehle kuch logon ko doctor HBsAg aur tika lagne ke baad Anti-HBs test ki salah dete hain — khaas kar aspatal me kaam karne walon ko."
+          ]
+        },
+        [
+          "HBsAg positive ho to liver kaisa kaam kar raha hai, ye LFT batata hai — SGPT, bilirubin aur baaki numbers ka matlab ",
+          { "text": "LFT wali guide", "href": "/blogs/liver-kidney-test/deoria#lft-test-deoria-kya-aata-hai" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "hepatitis-c-anti-hcv-test-deoria",
+      "heading": "Hepatitis C Test (Anti-HCV) — Aaj Iska Ilaaj Goliyon Se Hota Hai",
+      "lead": "Jo bimari kabhi saalon ki injection wali thi, wo aaj kuch mahine ki goli me theek ho jaati hai.",
+      "blocks": [
+        "Hepatitis C zyadatar khoon ke raaste failta hai — saajha suyi, bina saaf kiye aujaar, ya bahut pehle bina jaanch ke chadha khoon. Iske saalon tak koi lakshan nahi hote, aur liver chup-chaap kharaab hota rehta hai. Isi liye ek baar ki jaanch bhi kaam ki hai.",
+        "Anti-HCV test antibody dhoondhta hai. Ek baar sankraman ho jaaye to ye antibody aksar ilaaj ke baad bhi bani rehti hai, isliye reactive report ka matlab ye nahi ki virus abhi bhi hai. HCV RNA jaanch batati hai ki virus abhi sharir me hai ya nahi — aur agar hai, to aaj ke ilaaj se zyadatar log poori tarah theek ho jaate hain."
+      ]
+    },
+    {
+      "id": "surgery-pregnancy-screening-deoria",
+      "heading": "Surgery, Pregnancy Aur Dialysis Se Pehle HIV, HBsAg Aur HCV Test",
+      "lead": "Yahan test ka maqsad aapko jaanchna nahi, sabki suraksha hai.",
+      "blocks": [
+        "Deoria se bahut se mareez operation ke liye Gorakhpur, Lucknow ya Varanasi jaate hain, aur admission ki list me ye teeno test lagbhag hamesha hote hain. Operation theatre, endoscopy aur dialysis me aujaar aur khoon ke sampark ki wajah se ye jaanch sabki suraksha ke liye hai — mareez ki bhi aur staff ki bhi. Report reactive aaye to bhi operation aam taur par hota hai, bas savdhaani alag rakhi jaati hai.",
+        {
+          "table": {
+            "caption": "Kab ye screening aam taur par maangi jaati hai",
+            "head": ["Mauka", "Aam taur par kaun se test", "Dhyaan dene ki baat"],
+            "rows": [
+              ["Operation / admission", "HIV, HBsAg, Anti-HCV", "Kitni purani report chalegi, ye aspatal batata hai"],
+              ["Pregnancy (pehli ANC visit)", "HIV, HBsAg, VDRL", "Maa se bachche me jaane se bachaav ke liye"],
+              ["Dialysis", "HIV, HBsAg, Anti-HCV — samay-samay par dohraaye jaate hain", "Dialysis centre ka schedule maaniye"],
+              ["Endoscopy / daant ka bada ilaaj", "HBsAg, Anti-HCV, kabhi HIV", "Clinic ki list dekhiye"],
+              ["Videsh naukri / medical", "Company ki list ke hisaab se", "Report ka format pehle poochh lijiye"]
+            ]
+          }
+        },
+        [
+          "Pregnancy me ye test baaki jaanch ke saath kab hote hain, uski table ",
+          { "text": "pregnancy blood test guide", "href": "/blogs/pregnancy-blood-test/deoria#mahine-ke-hisaab-se-pregnancy-test-deoria" },
+          " me hai. Operation se pehle ki poori list ki samajh ",
+          { "text": "is guide", "href": "/blogs/pre-operative-test/gorakhpur" },
+          " me hai — list Gorakhpur ke aspataalon ki baat karti hai, par test wahi rehte hain."
+        ]
+      ]
+    },
+    {
+      "id": "ghar-par-hiv-hepatitis-test-deoria",
+      "heading": "Deoria Me HIV, HBsAg Aur HCV Test Ghar Par Kaise Karayein",
+      "lead": "Sample ghar par, report aapke apne phone par.",
+      "blocks": [
+        "Ye test sirf khoon ke sample par hote hain, aur inke liye khaali pet rehna zaroori nahi. Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Operation se pehle ki poori list — CBC, sugar, KFT, LFT ke saath — ek hi sample me ho jaati hai.",
+        {
+          "list": [
+            "Ye test hamare menu par naam se nahi dikhte. Parche ki photo ke saath call kijiye, booking usi list ke hisaab se hoti hai.",
+            "Booking me apna hi mobile number aur email dijiye — report WhatsApp aur email par PDF me usi par aati hai.",
+            "Jokhim ke baad test karana hai, to pehle upar ki window period table se sahi din dekh lijiye, aur 72 ghante ke andar ho to test se pehle aspatal jaiye."
+          ]
+        },
+        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Deoria me hamara walk-in counter nahi hai — ye ghar se sample lene ki service hai. Pushti ki jaanch aur counselling ke liye sarkari ICTC sabse sahi jagah hai.",
+        [
+          "Rate ke liye ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " dekhiye, aur booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se ya seedha call karke kijiye."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-hiv-hepatitis-deoria",
+      "heading": "Test Se Pehle — Teen Sawaal Khud Se Poochhiye",
+      "lead": "Inke jawab se tay hota hai ki aaj test, baad me test, ya pehle aspatal.",
+      "blocks": [
+        {
+          "list": [
+            "Ye routine screening hai (operation, pregnancy, naukri) ya kisi jokhim ke baad? Routine hai to parche ke hisaab se booking kar dijiye.",
+            "Jokhim hua hai to kitne din pehle? 72 ghante ke andar — pehle aspatal. 6 hafte se kam — test karaiye par 3 mahine baad dobara.",
+            "Report kis number par jaayegi? Apna hi dijiye."
+          ]
+        },
+        [
+          "Peeliya, bukhar ya kamzori ke saath kaun sa test pehle, uski guide ",
+          { "text": "lakshan ke hisaab se test", "href": "/blogs/symptom-test/deoria" },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "HIV test kitne din baad karana chahiye?",
+      "answer": "Lab ka 4th generation (antigen-antibody) test zyadatar sankraman ko kareeb 4 se 6 hafte me pakad leta hai. Pakke nateeje ke liye aam taur par jokhim ke 3 mahine baad dobara test ki salah di jaati hai. Jokhim ke agle din ka test us jokhim ke baare me kuch nahi batata."
+    },
+    {
+      "question": "Jokhim ke turant baad kya karna chahiye?",
+      "answer": "Test ka intezaar mat kijiye — usi din sarkari zila aspatal ya kisi bade aspatal ki emergency me jaiye. HIV se bachaav ki dawa (PEP) jokhim ke 72 ghante ke andar shuru honi chahiye, aur jitni jaldi utna behtar. Hepatitis B ke jokhim me bhi doctor jaldi tika ya injection de sakte hain."
+    },
+    {
+      "question": "HBsAg positive hone ka matlab kya hai?",
+      "answer": "Iska matlab hai Hepatitis B virus abhi sharir me hai. Ye naya sankraman hai ya purana, ye doctor LFT, HBeAg, HBV DNA aur 6 mahine baad dobara jaanch se tay karte hain. Bahut se log saalon tak saamanya jeevan jeete hain; kuch ko dawa chahiye hoti hai. Ghar ke logon ki jaanch aur tika zaroori hai."
+    },
+    {
+      "question": "Report me reactive likha hai — kya HIV pakka hai?",
+      "answer": "Nahi. Reactive screening report ka matlab hai sanket mila, aur ab pushti ki jaanch honi hai. Kabhi screening test bina sankraman ke bhi reactive aa jaata hai. Pushti ke liye alag tareeke ke test hote hain, jo sarkari ICTC me muft aur gopniy hote hain. Us jaanch se pehle koi faisla mat kijiye."
+    },
+    {
+      "question": "Anti-HCV reactive hai, kya Hepatitis C abhi bhi hai?",
+      "answer": "Zaroori nahi. Anti-HCV antibody aksar sankraman theek hone ke baad bhi bani rehti hai. Virus abhi sharir me hai ya nahi, ye HCV RNA jaanch batati hai. Agar virus hai, to aaj goliyon se zyadatar log poori tarah theek ho jaate hain."
+    },
+    {
+      "question": "HIV aur HBsAg test ke liye khaali pet rehna zaroori hai?",
+      "answer": "Nahi, in test ke liye fasting zaroori nahi. Lekin operation se pehle ki list me fasting sugar ya lipid bhi ho, to un par fasting ke niyam lagenge — tab sabka sample subah ek saath dena aasaan rehta hai."
+    },
+    {
+      "question": "Deoria me HIV aur Hepatitis B test ghar par ho sakta hai?",
+      "answer": "Haan, blood sample Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liya jaata hai. Ye test menu par naam se nahi hain, isliye parche ke saath call kijiye. Report 24 ghante ke andar aapke diye number aur email par PDF me aati hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me HIV aur Hepatitis test ka sahi samay aur report ka matlab hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
+          { "href": "/lab-test/deoria#how-to-book-deoria", "label": "Booking kaise hoti hai" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — liver ki jaanch", "sub": "Hepatitis B me liver kaise dekha jaata hai" },
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "HBsAg, HIV aur VDRL ki screening" },
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" }
+        ]
+      }
+    ]
+  }
+}
