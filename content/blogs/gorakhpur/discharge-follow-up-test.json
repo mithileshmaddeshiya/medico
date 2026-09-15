@@ -1,0 +1,407 @@
+{
+  "title": "Gorakhpur Me Ilaaj Ke Baad Follow-Up Test Ghar Par",
+  "description": "Gorakhpur me operation ya bhartee ke baad chhutti mili — follow-up blood test apne jile me ghar par kaise, report doctor tak kaise, aur kab turant aspataal.",
+  "keywords": [
+    "Discharge ke baad blood test",
+    "Operation ke baad blood test ghar par",
+    "Follow-up jaanch apne jile me",
+    "Discharge summary",
+    "Dengue ke baad platelet test",
+    "Follow-up jaanch"
+  ],
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "order": 80,
+  "takeaways": [
+    "Gorakhpur se chhutti milna ilaaj ka ant nahi hai. Discharge summary me jo \"itne din baad ye jaanch\" likha hai, wahi agle hafton ka asli ilaaj hai — aur wahi sabse zyada chhootta hai.",
+    "Follow-up ki khoon wali jaanch ke liye 50-100 kilometre wapas aana zaroori nahi. Sample apne jile me ghar par ho sakta hai, aur report PDF me phone par aati hai.",
+    "Chhutti se pehle doctor se teen sawaal poochh lijiye: kaunsi jaanch, kitne din baad, aur report kaise dikhani hai.",
+    "Operation ke baad bukhar, ghaav se mawaad ya khoon, saans ki dikkat, peshab band ya kaali latrine — in me report ka intezaar nahi, seedha aspatal."
+  ],
+  "sections": [
+    {
+      "id": "chhutti-ke-baad-ilaaj-gorakhpur",
+      "heading": "Chhutti Mil Gayi — Ab Ilaaj Ghar Par Chalega, Aur Wahi Sabse Kamzor Kadi Hai",
+      "lead": "Aspataal me har subah koi jaanch karta tha. Ghar par koi nahi.",
+      "blocks": [
+        "Gorakhpur ke bade aspataalon me Kushinagar, Maharajganj, Deoria, Sant Kabir Nagar aur Bihar ke seemavarti jilon se mareez aate hain. Bhartee ke dauraan roz khoon ki jaanch hoti hai, doctor roz dekhta hai. Phir chhutti milti hai, parivaar mareez ko lekar sau kilometre door ghar pahunchta hai — aur discharge summary ki wo line, \"7 din baad CBC aur KFT karwa kar dikhayein\", kisi thaile me pade kaagaz me dab jaati hai.",
+        "Ye guide usi line ke liye hai — discharge ke baad blood test kab, kahan aur kaise. Follow-up jaanch isliye likhi jaati hai kyunki kuch dikkatein ghar jaane ke baad hi dikhti hain — khoon ki kami, infection ka lautna, dawa ka kidney ya liver par asar, ya platelet ka dobara girna. Uske liye Gorakhpur wapas aana zaroori nahi; zaroori hai jaanch ka sahi din par hona aur report ka doctor tak pahunchna.",
+        {
+          "note": {
+            "title": "Follow-up ki list doctor ki hai",
+            "text": "Discharge summary me jo jaanch aur jo din likha hai, wahi karwaiye. Neeche likhi baatein aam jaankari hain. Dawa badalna ya band karna sirf doctor ka faisla hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "discharge-summary-follow-up-line",
+      "heading": "Discharge Summary Me Follow-Up Wali Line Kaise Dhoondhein — Aur Chhutti Se Pehle Teen Sawaal",
+      "lead": "Kaagaz lamba hai. Kaam ki line do-teen hi hain.",
+      "blocks": [
+        "Discharge summary aksar kai panno ki hoti hai aur English ke medical shabdon se bhari. Parivaar ke liye usme teen hisse sabse kaam ke hain:",
+        {
+          "list": [
+            "\"Diagnosis\" — kis bimari ka ilaaj hua. Aage kisi bhi doctor ko sabse pehle yahi dikhana hai.",
+            "\"Medications on discharge\" — ghar par kaunsi dawa, kitni baar, kitne din. Isi ki photo booking ke waqt bhi kaam aati hai.",
+            "\"Follow-up\" ya \"Review\" — kab dikhana hai aur usse pehle kaunsi jaanch. Aksar \"Review after 7 days with CBC, KFT\" jaisa likha hota hai."
+          ]
+        },
+        "Chhutti ke din, counter chhodne se pehle, doctor ya nurse se ye teen sawaal poochh lijiye aur jawab summary par hi likhwa lijiye:",
+        {
+          "list": [
+            "Kaunsi jaanch karani hai, aur kitne din baad?",
+            "Report kaise dikhani hai — OPD aakar, ya kisi aur tareeke se?",
+            "Kin lakshanon me report ka intezaar kiye bina turant wapas aana hai?"
+          ]
+        },
+        "Summary ki har panne ki saaf photo phone me rakhiye. Kaagaz kho jaata hai, bheeg jaata hai; photo nahi."
+      ]
+    },
+    {
+      "id": "kis-ilaaj-ke-baad-kaunsi-jaanch",
+      "heading": "Kis Ilaaj Ke Baad Aam Taur Par Kaunsi Follow-Up Jaanch Likhi Jaati Hai",
+      "lead": "Aam pattern — aapki summary ki list hi aakhri.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Chhutti ke baad aam follow-up jaanch",
+            "head": [
+              "Ilaaj ya bhartee ki wajah",
+              "Aam follow-up jaanch",
+              "Doctor kya dekhna chahta hai"
+            ],
+            "rows": [
+              [
+                "Koi bhi bada operation",
+                "CBC, zaroorat par KFT",
+                "Khoon ki kami, infection ka ishara"
+              ],
+              [
+                "Dengue ya tez bukhar",
+                "CBC (platelet)",
+                "Platelet wapas chadh raha hai ya nahi"
+              ],
+              [
+                "Typhoid",
+                "CBC, doctor ke kahe anusar aur jaanch",
+                "Infection ka jaana, khoon ki ginti"
+              ],
+              [
+                "Peeliya ya liver ki bimari",
+                "LFT",
+                "Bilirubin aur SGPT neeche aa rahe hain ya nahi"
+              ],
+              [
+                "Kidney par asar ya dehydration",
+                "KFT, sodium-potassium",
+                "Creatinine aur namak ka santulan"
+              ],
+              [
+                "Sugar bigadne par bhartee",
+                "Fasting/PP sugar, baad me HbA1c",
+                "Nayi dawa ya insulin se sugar kaabu me hai ya nahi"
+              ],
+              [
+                "Khoon patla karne wali dawa shuru hui",
+                "PT/INR",
+                "Dawa ki matra sahi hai ya nahi"
+              ],
+              [
+                "TB ki dawa shuru hui",
+                "LFT",
+                "Dawa liver par bojh to nahi daal rahi"
+              ]
+            ]
+          }
+        },
+        [
+          "Dengue ke baad platelet test kab aur kitni baar, uska din ke hisaab se hisaab ",
+          {
+            "text": "bukhar wali table",
+            "href": "/blogs/lab-test/gorakhpur#bukhar-me-din-gorakhpur"
+          },
+          " me hai, aur LFT-KFT ki report ki har line ka matlab ",
+          {
+            "text": "LFT-KFT guide",
+            "href": "/blogs/liver-kidney-test/gorakhpur#lft-kft-report-line-gorakhpur"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "apne-jile-me-sample-kaunsa-page",
+      "heading": "Follow-Up Jaanch Apne Jile Me — Kaunse Page Se Book Karein",
+      "lead": "Jaanch wahan jahan mareez hai. Doctor jahan hai, wahan sirf report.",
+      "blocks": [
+        "Chhutti ke baad follow-up jaanch — khaas kar operation ke baad blood test ghar par — sabse aasan tab hai jab booking usi jile ke page se ho jahan mareez ab hai. Har jile ka apna page, apna form aur apne kasbe hain:",
+        {
+          "list": [
+            [
+              "Kushinagar jila — Padrauna, Kasia, Hata, Tamkuhi Raj aur aas-paas: ",
+              {
+                "text": "Kushinagar",
+                "href": "/lab-test/kushinagar"
+              },
+              " ya ",
+              {
+                "text": "Padrauna",
+                "href": "/lab-test/padrauna"
+              },
+              "."
+            ],
+            [
+              "Maharajganj jila — Nautanwa, Sonauli, Pharenda, Siswa Bazar aur aas-paas: ",
+              {
+                "text": "Maharajganj",
+                "href": "/lab-test/maharajganj"
+              },
+              "."
+            ],
+            [
+              "Deoria jila — ",
+              {
+                "text": "Deoria",
+                "href": "/lab-test/deoria"
+              },
+              "; Salempur, Bhatni aur Lar ki taraf ke liye ",
+              {
+                "text": "Salempur",
+                "href": "/lab-test/salempur"
+              },
+              "."
+            ],
+            [
+              "Sant Kabir Nagar — Khalilabad, Mehdawal, Magahar aur aas-paas: ",
+              {
+                "text": "Khalilabad",
+                "href": "/lab-test/khalilabad"
+              },
+              "."
+            ],
+            [
+              "Bihar ke seemavarti jile — ",
+              {
+                "text": "Siwan",
+                "href": "/lab-test/siwan"
+              },
+              " aur ",
+              {
+                "text": "Gopalganj",
+                "href": "/lab-test/gopalganj"
+              },
+              "."
+            ],
+            [
+              "Gorakhpur jile ke kasbe — Sahjanwa, Pipraich, Chauri Chaura, Gola aur Barhalganj: ",
+              {
+                "text": "kasbon wali guide",
+                "href": "/blogs/kasba-home-collection/gorakhpur"
+              },
+              "."
+            ]
+          ]
+        },
+        {
+          "note": {
+            "title": "Nepal me sample nahi",
+            "text": "Nepal ki taraf se aaye mareezon ke liye hum Nepal me sample nahi lete. Seema ke is taraf Nautanwa aur Sonauli jaise kasbon ki coverage Maharajganj ke page par likhi hai.",
+            "tone": "info"
+          }
+        },
+        "Page par gaon naam se na dikhe to ek call kar lijiye — cover hota hai to usi call par slot tay ho jaata hai, aur nahi hota to saaf bata diya jaata hai."
+      ]
+    },
+    {
+      "id": "operation-ke-baad-ghar-par-sample",
+      "heading": "Operation Ke Baad Blood Test Ghar Par — Bistar, Taanke Aur Catheter Ke Saath",
+      "lead": "Mareez ko hilaana na pade, bas itni taiyaari.",
+      "blocks": [
+        "Operation ke baad ke pehle hafton me mareez ko bus ya jeep me baitha kar jaanch ke liye le jaana sabse bhaari kaam hai — taanke khinchte hain, dard hota hai, aur infection ka khatra badhta hai. Ghar par sample isi liye kaam ka hai. Booking ke waqt ye baatein bata dijiye:",
+        {
+          "list": [
+            "Mareez bistar par hai aur uth nahi sakta — sample bistar par hi liya jaayega.",
+            "Kis haath me drip lagi thi ya abhi cannula hai, kis taraf taanke hain — us taraf se bach kar sample.",
+            "Dialysis ka fistula hai to us haath se kabhi sample nahi.",
+            "Catheter laga hai aur urine ki jaanch likhi hai — catheter ki thaili se peshab lena sahi tareeka nahi hai; doctor ya nurse se poochhiye ki sample kaise lena hai.",
+            "Khoon patla karne wali dawa chal rahi hai — sui ke baad thodi der zyada dabaav."
+          ]
+        },
+        "Trained phlebotomist ID card ke saath aata hai, slot subah 6 baje se shuru hote hain, home collection ka koi alag charge nahi hai, aur payment sample ke waqt cash ya UPI se hota hai."
+      ]
+    },
+    {
+      "id": "report-gorakhpur-doctor-tak",
+      "heading": "Report Gorakhpur Ke Doctor Tak — Bina Kaagaz Ke",
+      "lead": "PDF phone par aati hai. Aage ka raasta doctor ke niyam se.",
+      "blocks": [
+        "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Is PDF ko doctor tak pahunchane ka tareeka har doctor aur aspataal ka alag hota hai — isliye chhutti ke waqt jo poochha tha, wahi raasta apnaiye.",
+        {
+          "list": [
+            "OPD me dikhana hai — follow-up jaanch OPD se ek-do din pehle ghar par karwaiye, aur report ki PDF ke saath jaaiye. Ek trip me baat ho jaayegi.",
+            "Doctor ne report bhejne ka koi tareeka bataya hai — usi se bhejiye, aur saath me mareez ka naam aur discharge ki taareekh likhiye.",
+            "Gaon ya kasbe ke kisi doctor ko pehle dikhana hai — discharge summary ki photo aur nayi report dono saath dikhaiye.",
+            "Har report aur summary ek hi folder me, taareekh ke saath."
+          ]
+        },
+        [
+          "OPD ki taareekh se ulta gin kar sample ka din kaise tay karein, wo ",
+          {
+            "text": "OPD wali table",
+            "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "turant-aspatal-lakshan-discharge",
+      "heading": "Kin Lakshanon Me Follow-Up Jaanch Ka Intezaar Nahi, Seedha Aspatal",
+      "lead": "Follow-up routine ke liye hai, emergency ke liye nahi.",
+      "blocks": [
+        {
+          "list": [
+            "Operation ke baad tez bukhar ya kanpkanpi.",
+            "Ghaav se mawaad, badbu, lagatar khoon, ya ghaav ke aas-paas laali aur sujan badhna.",
+            "Saans lene me dikkat, seene me dard, ya ek pair me achanak sujan aur dard.",
+            "Peshab lagbhag band, ya bahut kam.",
+            "Kaali ya khooni latrine, khoon ki ulti — khaas kar khoon patla karne wali dawa me.",
+            "Aankh aur peshab ka peelapan badhna, bahut susti ya baat samajh na aana.",
+            "Dengue se lautne ke baad masudon ya naak se khoon, lagatar ulti, ya pet me tez dard."
+          ]
+        },
+        {
+          "note": {
+            "title": "108 aur 102",
+            "text": "UP me sarkari ambulance 108 par aati hai, aur garbhwati mahila tatha chhote bachchon ke liye 102 par. Najdeeki aspataal ka naam aur ye number ghar me likh kar rakhiye. Raat me ya 24 ghante sample collection ka hum daawa nahi karte — emergency me lab nahi, aspataal.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiimardar-gorakhpur-me-ruke",
+      "heading": "Mareez Abhi Bhartee Hai Aur Aap Gorakhpur Me Ruke Hain",
+      "lead": "Chhutti se pehle ka waqt — aapki apni jaanch ka bhi.",
+      "blocks": [
+        "Bhartee mareez ki jaanch aspataal ki apni vyavastha se hoti hai; is service se aspataal ke andar sample nahi liya jaata. Lekin mareez ke saath hafton se ruke tiimardar aksar apni sehat bhool jaate hain — sugar ki dawa ka follow-up, BP, ya lagatar thakan. Aap kisi kamre ya rishtedaar ke yahan ruke hain, to apni jaanch ka sample wahan liya ja sakta hai.",
+        [
+          "Hospital ke paas ruke hain to pata aur landmark kaise likhein, wo ",
+          {
+            "text": "Medical College Road wale hisse",
+            "href": "/blogs/pathology-lab/gorakhpur#medical-college-road-asuran-gorakhnath"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-discharge-gorakhpur",
+      "heading": "Aage Kya Karein",
+      "lead": "Chhutti ke din hi teen kaam.",
+      "blocks": [
+        {
+          "list": [
+            "Discharge summary ke har panne ki photo, aur follow-up wali line par gol ghera.",
+            "Doctor se teen sawaal — kaunsi jaanch, kitne din baad, report kaise.",
+            "Follow-up ki taareekh se ek-do din pehle apne jile ke page se ghar par sample book."
+          ]
+        },
+        [
+          "Mareez Gorakhpur me hi hai to ",
+          {
+            "text": "Gorakhpur ka form",
+            "href": "/lab-test/gorakhpur#how-to-book-gorakhpur"
+          },
+          " bhariye, ya ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          ". Operation se pehle ki jaanch par ",
+          {
+            "text": "pre-operative guide",
+            "href": "/blogs/pre-operative-test/gorakhpur"
+          },
+          " hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Gorakhpur se discharge hua hai — follow-up blood test ke liye wapas aana zaroori hai?",
+      "answer": "Khoon aur peshab ki follow-up jaanch ke liye wapas aana zaroori nahi. Sample apne jile me ghar par ho sakta hai aur report 24 ghante ke andar PDF me aati hai. Doctor ko dikhana hai to OPD se ek-do din pehle jaanch karwa lijiye, taaki report saath ho."
+    },
+    {
+      "question": "Discharge summary me \"review after 7 days with CBC\" likha hai — iska matlab kya hai?",
+      "answer": "Matlab ye hai ki saat din baad doctor ko dikhana hai, aur usse pehle CBC karwa kar report saath le jaani hai. Sample chhathe din ya dikhane se ek din pehle dein, taaki report taaza ho aur samay par haath me aa jaaye."
+    },
+    {
+      "question": "Operation ke baad mareez bistar par hai — ghar par sample kaise hoga?",
+      "answer": "Sample bistar par hi liya jaata hai. Booking ke waqt bataiye ki mareez uth nahi sakta, kis taraf taanke ya drip thi, fistula hai ya nahi, aur khoon patla karne wali dawa chal rahi hai ya nahi."
+    },
+    {
+      "question": "Dengue se thik hokar ghar aaye hain — platelet test kitne din baad karayein?",
+      "answer": "Ye discharge ke waqt doctor batata hai; aam taur par kuch din baad ek CBC dekhi jaati hai ki platelet wapas chadh raha hai. Masudon ya naak se khoon, lagatar ulti ya pet me tez dard ho to jaanch ka intezaar mat kijiye, seedha aspataal jaaiye."
+    },
+    {
+      "question": "Hum Kushinagar me rehte hain — follow-up jaanch kis page se book karein?",
+      "answer": "Kushinagar ya Padrauna ke page se. Maharajganj, Deoria, Salempur, Khalilabad, Siwan aur Gopalganj ke bhi apne page hain. Jahan mareez abhi hai, usi jile ke page se booking kijiye."
+    },
+    {
+      "question": "Kya aap Nepal me bhi follow-up ka sample lete hain?",
+      "answer": "Nahi. Nepal me hum sample nahi lete. Seema ke is taraf Nautanwa aur Sonauli jaise kasbon ki coverage Maharajganj ke page par likhi hai."
+    },
+    {
+      "question": "Report Gorakhpur ke doctor ko kaise bhejein?",
+      "answer": "Report WhatsApp aur email par PDF me aati hai. Doctor ya aspataal report kaise dekhte hain, ye chhutti ke waqt hi pooch lijiye aur usi tareeke se bhejiye. OPD me dikhana ho to PDF aur discharge summary dono saath rakhiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Chhutti Ke Baad Aage Kya Dekhein",
+    "intro": "Is guide me follow-up jaanch ka tareeka hai. Apne jile ki booking aur Gorakhpur ki baaki guide neeche hain.",
+    "groups": [
+      {
+        "title": "Apne Jile Me Booking",
+        "links": [
+          {
+            "href": "/lab-test/kushinagar",
+            "label": "Kushinagar me lab test"
+          },
+          {
+            "href": "/lab-test/maharajganj",
+            "label": "Maharajganj me lab test"
+          },
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test"
+          },
+          {
+            "href": "/lab-test/khalilabad",
+            "label": "Khalilabad me lab test"
+          }
+        ]
+      },
+      {
+        "title": "Gorakhpur Ke Guide",
+        "links": [
+          {
+            "href": "/blogs/pre-operative-test/gorakhpur",
+            "label": "Operation se pehle kaun se test"
+          },
+          {
+            "href": "/blogs/liver-kidney-test/gorakhpur",
+            "label": "LFT aur KFT test in Gorakhpur"
+          },
+          {
+            "href": "/blogs/lab-test/gorakhpur",
+            "label": "OPD se pehle report — kaun sa test kab"
+          }
+        ]
+      }
+    ]
+  }
+}

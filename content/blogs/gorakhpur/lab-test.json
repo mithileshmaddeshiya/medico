@@ -72,6 +72,13 @@
           "Isliye sabse aasan tareeka ye hai: agar pichhli baar ka parcha paas hai, usi ka photo booking ke waqt bhej dijiye. Wahi panel book ho jaayega. Aur agar aap sheher ke bahar se aa rahe hain, to aur bhi zaroori ho jaata hai ki blood wala hissa apne sheher me ",
           { "text": "ghar par karwa liya jaaye", "href": "/lab-test/gorakhpur#bahar-se-aane-wale-gorakhpur" },
           " — yahan wahi kaam bachega jiske liye machine ya doctor khud chahiye."
+        ],
+        [
+          "OPD ke baad operation ki list mil gayi ho to ",
+          { "text": "operation se pehle ke test", "href": "/blogs/pre-operative-test/gorakhpur" },
+          " alag guide me hain, aur chhutti ke baad ki jaanch ke liye ",
+          { "text": "discharge ke baad wali guide", "href": "/blogs/discharge-follow-up-test/gorakhpur" },
+          "."
         ]
       ]
     },
@@ -353,6 +360,18 @@
             "href": "/blogs/full-body-checkup/gorakhpur",
             "label": "Full body checkup — kaun sa package kis ke liye",
             "sub": "Lipid, LFT, KFT aur senior citizen package"
+          },
+          {
+            "href": "/blogs/pre-operative-test/gorakhpur",
+            "label": "Operation se pehle kaun se test"
+          },
+          {
+            "href": "/blogs/liver-kidney-test/gorakhpur",
+            "label": "LFT aur KFT test in Gorakhpur"
+          },
+          {
+            "href": "/blogs/kasba-home-collection/gorakhpur",
+            "label": "Sahjanwa, Pipraich aur Chauri Chaura me blood test"
           }
         ]
       },
