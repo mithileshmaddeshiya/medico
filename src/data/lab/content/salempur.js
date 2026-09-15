@@ -63,6 +63,8 @@ const LAB_VARANASI = "/lab-test/varanasi";
 const GUIDE_LAB_TEST = "/blogs/lab-test/salempur";
 const GUIDE_FULL_BODY = "/blogs/full-body-checkup/salempur";
 const GUIDE_HOME_COLLECTION = "/blogs/home-sample-collection/salempur";
+const GUIDE_KASBA = "/blogs/kasba-home-collection/salempur";
+const GUIDE_PARENTS = "/blogs/parents-blood-test/salempur";
 
 export const salempurContent = [
   {
@@ -99,6 +101,11 @@ export const salempurContent = [
     h: "Salempur Ke Aas-paas Home Sample Collection — Bhatni, Lar, Bhatpar Rani, Bhagalpur Aur Majhauli Raj",
     p: [
       "Collection Salempur kasbe ke saath aas-paas ke ilaakon me bhi hoti hai — Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana aur Barhaj tak. In kasbon se lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se nahi hai to maan kar mat baithiye ki service nahi hai; booking se pehle ek call kar lijiye — cover hota hai to usi waqt slot book ho jaayega, aur nahi hota to hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon.",
+      [
+        "Bhatni se train pakadni ho, Bhagalpur ki taraf barsaat me raasta kharab ho, ya Rampur Karkhana me kheti ka mahina chal raha ho — har kasbe ki apni baat ",
+        { text: "Bhatni, Lar aur Majhauli wali guide", href: GUIDE_KASBA },
+        " me alag se likhi hai.",
+      ],
       "Yahan ke pate sheher jaise nahi hote, aur late visit ki sabse badi wajah yahi hoti hai. Gaon ka naam kaafi nahi hai — tola ya purwa ka naam likhiye, saath me ek aisa landmark jo har koi jaanta ho: primary school, mandir ya masjid, block office, bank, petrol pump, chauraha, ya bijli ka transformer. Ek hi naam ke do gaon paas paas hone bhi aam baat hai, isliye post office ya thana ka naam likh dena aur bhi behtar rehta hai.",
       "Mobile number wahi dijiye jo us waqt aapke paas chalu rahega, aur ho sake to ek doosra number bhi likh dijiye. Kai gaon me network ek hi kone me aata hai — agar phlebotomist ka phone nahi laga to wahi ek call chhoot jaane se poori visit atak jaati hai.",
       "Fasting wale test ke liye subah 6 baje se slot shuru hote hain, aur is ilaake me iska faayda sheher se zyada hai. Khet ka kaam, doodh ka kaam ya dukaan — sab subah shuru ho jaate hain, aur 10–12 ghante khaali pet rehne ke baad koi din bhar bhookha nahi baith sakta. Jaldi wala slot lijiye, sample dijiye, aur turant naashta kar lijiye.",
@@ -120,7 +127,11 @@ export const salempurContent = [
     p: [
       "Is ilaake ke bahut se gharon me kamane wala bahar hai — Mumbai, Delhi, Surat, Punjab ya khadi desh — aur ghar par maa-baap. Bimari ki khabar phone par milti hai, aur wahin se sabse badi bebasi shuru hoti hai: parcha kaun le jaayega, sample kahan dega, report kaun laayega. Aksar test isliye nahi hota ki koi le jaane wala nahi hai, isliye nahi ki paise nahi hain.",
       "Booking ke liye ghar par hona zaroori nahi hai. Aap kahin se bhi form bhar sakte hain ya call kar sakte hain — bas ghar ka pata, landmark, aur wahan maujood kisi ka chalu mobile number dijiye. Confirm karne ke liye call aam taur par 30 minute ke andar aati hai; wo call kis number par aani chahiye, ye booking ke waqt bata dijiye — apne number par bhi karwa sakte hain.",
-      "Parcha ghar par hai to uska photo WhatsApp par mangwa lijiye aur wahi bhej dijiye, taaki jo panel doctor ne likha hai wahi liya jaaye. Test ke naam milte julte hote hain — Thyroid Profile Total aur Free, Widal aur Typhidot, Sugar Fasting aur PP — aur parche ka photo hone par ye galti hoti hi nahi.",
+      [
+        "Parcha ghar par hai to uska photo WhatsApp par mangwa lijiye aur wahi bhej dijiye, taaki jo panel doctor ne likha hai wahi liya jaaye. Test ke naam milte julte hote hain — Thyroid Profile Total aur Free, Widal aur Typhidot, Sugar Fasting aur PP — aur parche ka photo hone par ye galti hoti hi nahi. Booking se pehle maa-baap se kya poochhein, fasting me sugar ki dawa ka kya karein, aur door rehkar emergency ka plan kaise banayein — wo sab ",
+        { text: "bahar rehkar maa-baap ke blood test wali guide", href: GUIDE_PARENTS },
+        " me hai.",
+      ],
       "Payment sample lene ke waqt hota hai, cash ya UPI se. UPI chuniye to ye ghar walon par bojh nahi rehta — PhonePe, Google Pay ya Paytm se aap wahin se kar dete hain. Report bhi 24 ghante me WhatsApp aur email par PDF me aati hai, isliye wo aapke phone par bhi utni hi aasani se pahunch jaati hai jitni ghar par.",
       [
         "Chhutti me khud ghar aa rahe hain to apna ek baseline checkup bhi isi bahane karwa lijiye — bahar lambi shift, kam dhoop aur bahar ka khana jhelne walon me vitamin ki kami aur badha hua lipid bahut aam milta hai. Kis umar me kaun sa package theek rehta hai, wo ",
@@ -224,7 +235,7 @@ export const salempurContent = [
       "Number ko report par chhape reference range se hi milaiye, internet ke kisi chart se nahi. Range machine aur method ke hisaab se badalti hai, aur umar tatha ling ke hisaab se bhi. Thoda sa high ya low hona bahut aam hai aur aksar koi bimari nahi hoti — ye diagnosis nahi, doctor se poochne ka ishaara hai. WhatsApp par report kisi group me mat daaliye; ye aapki niji jaankari hai.",
       [
         "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Numbers ka matlab kya hota hai aur kis flag par ghabrana nahi chahiye, ye ",
-        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kaise-padhein` },
+        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kya-dekhein-salempur` },
         " me detail me likha hai.",
       ],
     ],

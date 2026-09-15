@@ -122,6 +122,11 @@
           " aur ",
           { "text": "Varanasi", "href": "/lab-test/varanasi" },
           " me bhi sample isi tarah ghar se liya jaata hai. Jis jile me aap us waqt hain, booking wahin ke page se kijiye — coverage aur slot wahin ke likhe hote hain."
+        ],
+        [
+          "Bhatni, Majhauli Raj, Bhagalpur aur Rampur Karkhana me booking ke waqt kya alag dhyaan rakhna hai, wo ",
+          { "text": "kasbon wali guide", "href": "/blogs/kasba-home-collection/salempur" },
+          " me hai."
         ]
       ]
     },

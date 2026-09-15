@@ -153,6 +153,11 @@
           "Fasting aur PP dono karane hon to do alag sample lagte hain — ek khaali pet, doosra naashte ke theek do ghante baad. Ek hi visit me dono nahi ho sakte, isliye booking ke waqt bata dijiye ki dono chahiye. HbA1c me ye jhanjhat hai hi nahi. Kis test me fasting lagti hai aur kisme nahi, uski poori baat ",
           { "text": "service page ke fasting wale hisse", "href": "/lab-test/salempur#fasting-taiyari-salempur" },
           " me likhi hai."
+        ],
+        [
+          "Kidney ki jaanch me creatinine ke saath eGFR aur microalbumin kyun dekhe jaate hain, wo ",
+          { "text": "LFT aur KFT wali guide", "href": "/blogs/liver-kidney-test/salempur#sugar-bp-bujurg-kft-salempur" },
+          " me hai."
         ]
       ]
     },
@@ -356,6 +361,19 @@
             "href": "/blogs/full-body-checkup/salempur",
             "label": "Full body checkup — kaun sa package kis ke liye",
             "sub": "Parameter ki ginti nahi, coverage dekhiye"
+          },
+          {
+            "href": "/blogs/kasba-home-collection/salempur",
+            "label": "Bhatni, Lar aur Majhauli me blood test ghar par",
+            "sub": "Har kasbe se booking me kya dhyaan rakhein"
+          },
+          {
+            "href": "/blogs/parents-blood-test/salempur",
+            "label": "Bahar rehkar maa-baap ka blood test"
+          },
+          {
+            "href": "/blogs/urine-test/salempur",
+            "label": "Urine test — routine ya culture"
           }
         ]
       },
