@@ -939,25 +939,39 @@ const LAB_CITY_SEED = [
           ],
         },
         {
-          title: "Test Chunne Me Madad",
+          // Used to point at the Varanasi guides, from before Salempur had its
+          // own. Linking this page to guides that name another town helps no
+          // reader, and leaves Salempur's own guides without the one link most
+          // likely to get them crawled.
+          title: "Salempur Ke Liye Guide",
           links: [
             {
-              href: "/blogs/lab-test/varanasi",
-              label: "Kaun sa test kab karayein — poori guide",
-              sub: "Shikayat, umar aur mausam ke hisaab se",
+              href: "/blogs/lab-test/salempur",
+              label: "Salempur me kaun sa test kab karayein",
+              sub: "Bukhar, thyroid, sugar aur vitamin — din aur umar ke hisaab se",
             },
             {
-              href: "/blogs/full-body-checkup/varanasi",
-              label: "Full body checkup me kya hona chahiye",
-              sub: "\"80+ parameters\" ka sach, aur kya chhod dena chahiye",
+              href: "/blogs/kasba-home-collection/salempur",
+              label: "Bhatni, Lar aur Majhauli me blood test ghar par",
+              sub: "Har kasbe se booking me kya dhyaan rakhein",
             },
             {
-              href: "/blogs/lab-test/varanasi#fasting-aur-taiyari",
-              label: "Blood test se pehle fasting aur taiyaari",
+              href: "/blogs/parents-blood-test/salempur",
+              label: "Bahar rehkar maa-baap ka blood test",
+              sub: "Parcha, payment, report aur emergency plan — phone se",
             },
             {
-              href: "/blogs/lab-test/varanasi#report-kaise-padhein",
-              label: "Report aa gayi — ab ise kaise padhein",
+              href: "/blogs/liver-kidney-test/salempur",
+              label: "LFT aur KFT test in Salempur",
+              sub: "Sugar-BP wale bujurg, peeliya aur bahar se laute kaamgar",
+            },
+            {
+              href: "/blogs/urine-test/salempur",
+              label: "Urine test in Salempur — routine ya culture",
+            },
+            {
+              href: "/blogs/full-body-checkup/salempur",
+              label: "Full body checkup — poore ghar ka plan",
             },
           ],
         },
