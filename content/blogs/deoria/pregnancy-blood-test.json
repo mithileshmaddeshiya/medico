@@ -1,0 +1,321 @@
+{
+  "title": "Pregnancy Me Kaun Se Blood Test Hote Hain — Deoria",
+  "description": "Deoria me pregnancy ke blood test — beta hCG, CBC, blood group, sugar (GTT), thyroid aur HBsAg-HIV — kis mahine kaun sa, kyun, aur sample ghar par kaise dein.",
+  "keywords": [
+    "pregnancy me kaun se test hote hain",
+    "pregnancy blood test in Deoria",
+    "beta hCG test Deoria",
+    "ANC profile test",
+    "pregnancy me sugar test GTT",
+    "pregnancy me thyroid test",
+    "pregnancy me haemoglobin kitna hona chahiye",
+    "Rh negative blood group pregnancy",
+    "garbhavastha me blood test",
+    "blood test at home Deoria"
+  ],
+  "publishedAt": "2026-09-15",
+  "order": 150,
+  "takeaways": [
+    "Pregnancy ke blood test ek baar me khatam nahi hote. Pehle teen mahine ek badi list hoti hai, 24 se 28 hafte ke beech sugar ki jaanch, aur aakhri mahino me khoon aur peshab dobara dekhe jaate hain.",
+    "Ghar ki kit positive aane ke baad beta hCG blood test pregnancy ki pushti karta hai, lekin bachcha kahan aur kaisa hai, ye ultrasound batata hai — aur ultrasound hamari service nahi hai.",
+    "Blood group Rh negative aaye to ghabraiye nahi, doctor ko usi hafte bataiye — iska intezaam hota hai, bas samay par.",
+    "Pet me ek taraf tez dard, bleeding, chakkar, ya BP ke saath tez sirdard aur dhundhla dikhna — in me test nahi, usi din aspatal."
+  ],
+  "sections": [
+    {
+      "id": "pregnancy-blood-test-deoria-shuruaat",
+      "heading": "Pregnancy Me Blood Test — Pehle Ye Teen Baatein Samajh Lijiye",
+      "lead": "Jaanch ki list doctor banata hai. Ye guide sirf ye batati hai ki us list me har naam kyun hai.",
+      "blocks": [
+        "Deoria me pregnancy ki khabar aate hi do sawaal sabse pehle aate hain: kaun se test karane hain, aur unke liye kitni baar Sadar ya Gorakhpur jaana padega. Pehle sawaal ka seedha jawab ye hai ki pregnancy me blood test ek soochi me hote hain, jo mahine ke hisaab se badalti hai — aur us soochi ko aapka doctor, sarkari aspatal ki ANC OPD, ya ASHA didi ke saath bana ANC card tay karta hai.",
+        {
+          "list": [
+            "Pehli baat: har pregnancy ki list thodi alag hoti hai. Pehle ki pregnancy, sugar, BP, thyroid, umar aur khoon ki kami dekh kar doctor test jodte-ghatate hain.",
+            "Doosri baat: blood aur urine ki jaanch sample par hoti hai, isliye unke liye safar zaroori nahi. Ultrasound machine par hota hai — wo hamari service nahi hai, uske liye imaging centre jaana hi padega.",
+            "Teesri baat: sarkari aspatal aur ANC camp me bhi ye jaanch hoti hai. Kahan karayein, ye aapki suvidha ka faisla hai; zaroori ye hai ki koi jaanch chhoote nahi aur report ANC card ke saath rahe."
+          ]
+        },
+        {
+          "note": {
+            "title": "Ye guide doctor ki salah ki jagah nahi",
+            "text": "Yahan aam taur par hone wali jaanch aur unka matlab likha hai. Aapke liye kaun sa test kab hai, report theek hai ya nahi, aur dawa kya leni hai — ye faisla aapka doctor karta hai. Parche par jo likha hai, wahi karaiye.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beta-hcg-test-deoria",
+      "heading": "Beta hCG Test — Ghar Ki Kit Positive Aayi, Ab Blood Test Kyun",
+      "lead": "Kit haan ya na batati hai. Beta hCG ek number batata hai — aur doctor ko aksar number chahiye.",
+      "blocks": [
+        "Ghar par jo pregnancy kit use hoti hai, wo peshab me hCG hormone dhoondhti hai. Beta hCG blood test wahi hormone khoon me naapta hai, aur ek maatra ke roop me report deta hai. Kit se pehle bhi ye pakad me aa sakta hai, aur jab kit par halki si line aaye aur shak bana rahe, tab bhi kaam aata hai.",
+        "Doctor beta hCG aksar ek baar nahi, do baar dekhte hain — kareeb 48 ghante ke antar par. Shuru ke hafton me theek chal rahi pregnancy me ye maatra aam taur par har do-teen din me lagbhag doguni hoti hai. Isliye ek akela number utna nahi batata jitna do number ka farak batata hai. Dono sample ek hi lab se hon, to tulna saaf rehti hai.",
+        {
+          "table": {
+            "caption": "Kit, beta hCG aur ultrasound — kaun kya batata hai",
+            "head": ["Jaanch", "Kya batati hai", "Kya nahi batati"],
+            "rows": [
+              ["Ghar ki urine kit", "Pregnancy hai ya nahi — haan ya na", "Kitne din ki, kahan hai, theek hai ya nahi"],
+              ["Beta hCG blood test", "Hormone ki maatra; do report me badhne ki raftaar", "Bachcha bachchedaani me hai ya nahi, dhadkan"],
+              ["Ultrasound", "Bachcha kahan hai, kitne hafte ka, dhadkan", "Khoon ki kami, sugar, thyroid — ye blood test se"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "In lakshanon me test ka intezaar mat kijiye",
+            "text": "Kit positive hai aur pet ke ek taraf tez dard, bleeding, chakkar ya behoshi jaisa lage, ya kandhe me ajeeb dard ho — to usi din aspatal jaiye. Bachchedaani ke bahar thehri pregnancy me aise lakshan aate hain, aur usme der jaan ka khatra ban sakti hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pehle-teen-mahine-anc-profile-deoria",
+      "heading": "Pehle Teen Mahine Ke Test — ANC Profile Me Aam Taur Par Kya Hota Hai",
+      "lead": "Pehli ANC visit ki list sabse lambi hoti hai. Har naam ke peeche ek sawaal hai.",
+      "blocks": [
+        "Bahut se labs aur doctor pehli timahi ki jaanch ko ek saath \"ANC profile\" ya \"antenatal profile\" likh dete hain. Naam kuch bhi ho, andar aam taur par yahi cheezein hoti hain:",
+        {
+          "table": {
+            "caption": "Pehli ANC visit — aam jaanch aur unka kaam",
+            "head": ["Test", "Kyun dekha jaata hai", "Fasting"],
+            "rows": [
+              ["CBC / haemoglobin", "Khoon ki kami — pregnancy me sabse aam dikkat", "Nahi"],
+              ["Blood group aur Rh", "Rh negative ho to aage ka intezaam; delivery me khoon ki zaroorat", "Nahi"],
+              ["Blood sugar (aur kabhi HbA1c)", "Pehle se chhupi sugar to nahi", "Doctor jo tareeka likhe"],
+              ["TSH (thyroid)", "Kam thyroid ka asar bachche ke vikas par pad sakta hai", "Nahi"],
+              ["HBsAg", "Hepatitis B — maa se bachche me jaane se roka ja sakta hai", "Nahi"],
+              ["HIV", "Samay par pata chale to bachche ko bachaya ja sakta hai", "Nahi"],
+              ["VDRL / syphilis ki jaanch", "Ilaaj aasaan hai, chhoot jaaye to bachche ko nuksan", "Nahi"],
+              ["Urine routine (kabhi culture)", "Bina jalan wala infection, protein, sugar", "Nahi"]
+            ]
+          }
+        },
+        "Kuch doctor iske saath thalassemia ki jaanch (HPLC), Hepatitis C, ya rubella bhi likhte hain — ye pariwar ke itihaas aur pehle ki pregnancy par nirbhar karta hai. Inme se kuch test hamare menu par naam se nahi dikhte; parche ki photo ke saath call kar lijiye, booking usi list ke hisaab se hoti hai.",
+        [
+          "HBsAg aur HIV jaise test kab aur kyun hote hain, aur report me \"reactive\" ka matlab kya hai — uski alag guide ",
+          { "text": "HIV aur Hepatitis B test", "href": "/blogs/hiv-hepatitis-test/deoria" },
+          " me hai. Peshab ka sample sahi tareeke se kaise dein, wo ",
+          { "text": "urine test wali guide", "href": "/blogs/urine-test/deoria#urine-sample-kaise-dein-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "pregnancy-me-haemoglobin-deoria",
+      "heading": "Pregnancy Me Haemoglobin Kitna Hona Chahiye",
+      "lead": "Purvanchal me pregnancy ki sabse aam, aur sabse zyada nazarandaaz ki jaane wali dikkat.",
+      "blocks": [
+        "WHO ke hisaab se pregnancy me haemoglobin 11 g/dL se kam ho to use khoon ki kami (anaemia) maana jaata hai. Hamare ilaake me bahut si mahilayein pregnancy shuru hi kam haemoglobin ke saath karti hain — kheti ka kaam, kam aaram, pet ke keede aur jaldi-jaldi pregnancy iski aam wajah hain.",
+        "Pregnancy me khoon ka paani wala hissa zyada badhta hai, isliye haemoglobin thoda neeche aana apne aap me aam hai. Isi wajah se doctor ise ek baar nahi, har timahi me dekhte hain — taaki pata chale ki goli ka asar ho raha hai ya nahi.",
+        {
+          "list": [
+            "Iron aur folic acid ki goli doctor ya ASHA ki batayi maatra me lijiye. Khud se maatra badhana ya band karna theek nahi.",
+            "Haemoglobin kam hai lekin iron ki goli se nahi badh raha, to doctor ferritin, aur kabhi thalassemia ki jaanch likh sakte hain — har kam haemoglobin iron ki kami nahi hota.",
+            "Saans phoolna, dil ki dhadkan tez lagna, ya chehra bahut peela — ye report ka intezaar karne wali baatein nahi, doctor ko jaldi dikhaiye."
+          ]
+        },
+        [
+          "CBC report me haemoglobin, MCV aur baaki numbers kaise padhein, uski poori table ",
+          { "text": "CBC normal range wali guide", "href": "/blogs/cbc-test/deoria#cbc-normal-range-table-deoria" },
+          " me hai, aur ferritin ki baat ",
+          { "text": "khoon ki kami wale hisse", "href": "/blogs/vitamin-b12-d-test/deoria#haemoglobin-ferritin-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "rh-negative-blood-group-deoria",
+      "heading": "Blood Group Rh Negative Aaya — Ghabraiye Nahi, Samay Par Bataiye",
+      "lead": "Report par \"Negative\" dekh kar bahut se ghar ghabra jaate hain. Iska ilaaj pehle se tay hai.",
+      "blocks": [
+        "Blood group ke saath jo \"positive\" ya \"negative\" likha hota hai, wo Rh factor hai. Zyadatar logon ka Rh positive hota hai. Agar maa Rh negative ho aur bachcha pita se Rh positive le, to maa ka sharir bachche ke khoon ke khilaaf antibody bana sakta hai — aam taur par pehli pregnancy se zyada agli pregnancy me dikkat aati hai.",
+        "Achhi baat ye hai ki iska rokne ka tareeka pehle se maujood hai. Doctor aam taur par pati ka blood group poochhte hain, zaroorat par ICT (indirect Coombs test) naam ki jaanch likhte hain, aur tay samay par ek injection ki salah dete hain. Kab aur kaise — ye doctor ka faisla hai; aapka kaam bas itna hai ki report usi hafte doctor tak pahunche aur ANC card par blood group saaf likha ho.",
+        {
+          "note": {
+            "title": "Pehle ki pregnancy ki baat zaroor bataiye",
+            "text": "Pehle koi pregnancy rahi ho — chahe wo kuch hafton me hi khatam ho gayi ho — to Rh negative maa ke liye ye jaankari doctor ke liye bahut maayne rakhti hai. Ise chhupaiye nahi.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pregnancy-me-sugar-test-gtt-deoria",
+      "heading": "Pregnancy Me Sugar Test — GTT Kab Hota Hai Aur Kaise Diya Jaata Hai",
+      "lead": "Pregnancy wali sugar ke aksar koi lakshan nahi hote. Isliye ise dhoondhna padta hai.",
+      "blocks": [
+        "Pregnancy me kai mahilaon ki sugar badh jaati hai, bhale pehle kabhi na rahi ho. Ise gestational diabetes kehte hain. Iska asar bachche ke wazan aur delivery par padta hai, aur baad me maa ko diabetes hone ka khatra bhi badhata hai. Isliye sugar ki jaanch pehli visit par, aur phir 24 se 28 hafte ke beech dobara ki jaati hai.",
+        "Iske liye aksar GTT (glucose tolerance test) likha jaata hai — glucose ka ghol pila kar tay samay baad khoon liya jaata hai. Sarkari guideline me aam taur par 75 gram glucose de kar 2 ghante baad ek sample liya jaata hai; kuch doctor khaali pet se shuru karke ek aur do ghante par bhi sample lete hain. Kaunsa tareeka aapke liye hai, ye parche par likha hota hai — wahi maaniye.",
+        {
+          "table": {
+            "caption": "GTT ke din — sahi nateeje ke liye",
+            "head": ["Baat", "Kya karein", "Kyun"],
+            "rows": [
+              ["Glucose ka ghol", "Tay samay me, poora pee lijiye", "Kam piya to report jhoothi neeche aa sakti hai"],
+              ["Ghol ke baad", "Baith kar aaram kijiye; na khaana, na chai", "Chalna-phirna aur khaana dono number badalte hain"],
+              ["Ulti ho jaaye", "Turant bataiye", "Aam taur par us din ka test maanya nahi rehta, doosre din dohrana padta hai"],
+              ["Samay", "Ghol peene ka waqt likh lijiye", "Sample theek usi hisaab se liya jaana hai"],
+              ["Booking", "Pehle hi bata dijiye ki GTT hai", "Taaki slot aur sample ka samay usi hisaab se tay ho"]
+            ]
+          }
+        },
+        [
+          "Fasting sugar, HbA1c aur baaki sugar test me kya farak hai, wo ",
+          { "text": "sugar aur thyroid wali guide", "href": "/blogs/diabetes-thyroid-test/deoria#sugar-test-kaunsa-form-deoria" },
+          " me hai. Pregnancy me ghar ki glucometer machine ki reading se nidaan nahi hota — kyun, wo ",
+          { "text": "glucometer wali guide", "href": "/blogs/glucometer-sugar-test/deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "pregnancy-me-thyroid-test-deoria",
+      "heading": "Pregnancy Me Thyroid Test — Report Ki Range Alag Kyun Padhi Jaati Hai",
+      "lead": "Jo TSH bina pregnancy ke normal hai, wo pregnancy me doctor ke liye zyada bhi ho sakta hai.",
+      "blocks": [
+        "Pregnancy me thyroid hormone ki zaroorat badh jaati hai, aur shuru ke hafton me bachcha poori tarah maa ke thyroid par nirbhar hota hai. Isliye kai doctor pehli visit par hi TSH likhte hain. Yahan ek baat dhyaan dene wali hai: report par chhapi reference range aksar bina pregnancy wale vayaskon ki hoti hai. Pregnancy me doctor timahi ke hisaab se alag seema dekhte hain — isliye report par \"Normal\" likha hone par bhi doctor ko dikhaana zaroori hai.",
+        {
+          "list": [
+            "Thyroid ki goli pehle se chal rahi hai to pregnancy pata chalte hi doctor ko bataiye. Maatra aksar badalni padti hai — khud se mat badaliye.",
+            "Goli subah khaali pet lene wali hai, to sample aam taur par goli se pehle diya jaata hai. Doctor ne alag kaha ho to wahi maaniye.",
+            "Pregnancy me TSH doctor aksar 4 se 6 hafte me dohrate hain, khaas kar jab dawa ki maatra badli ho."
+          ]
+        },
+        [
+          "TSH, T3 aur T4 ka matlab aur thyroid report ke baad dobara jaanch kab — ye ",
+          { "text": "thyroid wale hisse", "href": "/blogs/diabetes-thyroid-test/deoria#thyroid-report-aur-dobara-jaanch" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "mahine-ke-hisaab-se-pregnancy-test-deoria",
+      "heading": "Mahine Ke Hisaab Se Pregnancy Ke Test — Ek Nazar Me Table",
+      "lead": "ANC card ke saath is table ko rakh lijiye. Kaunsi jaanch baaki hai, ek nazar me dikh jaayega.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Pregnancy me blood aur urine test — aam kram",
+            "head": ["Samay", "Aam taur par kaun se test", "Dhyaan dene ki baat"],
+            "rows": [
+              ["Pregnancy ki pushti", "Beta hCG (zaroorat par do baar)", "Dono sample ek hi lab se"],
+              ["Pehli ANC visit (12 hafte tak)", "CBC, blood group-Rh, sugar, TSH, HBsAg, HIV, VDRL, urine routine", "Report ANC card ke saath rakhiye"],
+              ["24–28 hafte", "GTT, CBC", "GTT ke din khaana-chalna nahi"],
+              ["Teesri timahi", "CBC, urine protein; zaroorat par sugar, ICT (Rh negative me)", "BP badha ho to peshab me protein zaroor"],
+              ["Delivery se pehle", "Jo aspatal maange — aksar CBC, blood group, HBsAg, HIV", "Aspatal ki list hi aakhri"]
+            ]
+          }
+        },
+        "Ye kram aam hai, niyam nahi. Sugar ki shikayat, pehle ki pregnancy me dikkat, judwa bachche, ya BP ho to doctor jaanch jaldi aur zyada baar karate hain.",
+        {
+          "note": {
+            "title": "BP, sujan aur sirdard — ek saath aayein to usi din",
+            "text": "Pregnancy ke aakhri mahino me tez sirdard, aankhon ke aage dhundhla ya chamak, chehre aur haathon me achanak sujan, pet ke upar dard, ya bachche ki harkat kam lage — to test book karne ke bajaye usi din aspatal jaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ghar-par-pregnancy-blood-test-deoria",
+      "heading": "Deoria Me Pregnancy Ka Blood Test Ghar Par Kaise Karayein",
+      "lead": "Pehli timahi ki ulti aur aakhri mahino ka bhaari pet — dono me bus ka safar sabse mushkil hai.",
+      "blocks": [
+        "Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar ya Bhatni se Deoria Sadar tak aana, line me baithna aur report ke liye doosra din nikaalna — pregnancy me ye sab bojh hai. Blood aur urine ke sample ghar par diye ja sakte hain, aur report sidha aapke phone par aati hai, jise ANC visit par doctor ko dikhaya ja sakta hai.",
+        {
+          "list": [
+            "Booking ke waqt bataiye ki pregnancy hai aur kitne mahine ki — aur parche ya ANC card ki photo bhej dijiye, taaki koi test chhoote nahi.",
+            "GTT ho to ye pehle hi bataiye, taaki slot usi hisaab se tay ho.",
+            "Peshab ka sample dena ho to subah ka pehla peshab, beech ki dhaar se, saaf dabbe me — dabba sample lene wale ke aane se pehle mat bhariye.",
+            "Report kis number par chahiye, wahi number dijiye. Report WhatsApp aur email par PDF me aati hai."
+          ]
+        },
+        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Deoria me hamara koi walk-in counter nahi hai — ye ghar se sample lene ki service hai.",
+        [
+          "Rate ke liye ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " dekhiye, aur booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se ya seedha call karke kijiye. Ghar par mahilaon ke sample se judi baatein ",
+          { "text": "home collection guide", "href": "/blogs/home-sample-collection/deoria#mahilaon-ke-liye-ghar-par-sample-deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-pregnancy-deoria",
+      "heading": "Pregnancy Ke Test Se Pehle — Teen Sawaal Khud Se Poochhiye",
+      "lead": "Inka jawab haan hai, to aap sahi raaste par hain.",
+      "blocks": [
+        {
+          "list": [
+            "Kya ANC card ya parcha haath me hai? List wahi se banegi, article se nahi.",
+            "Kya pichhli sabhi report ek jagah rakhi hain? Haemoglobin aur TSH ki tulna pichhli report se hi hoti hai.",
+            "Kya koi aisa lakshan hai jisme test nahi, aspatal chahiye — bleeding, pet me tez dard, tez sirdard, bachche ki harkat kam? To pehle aspatal."
+          ]
+        },
+        [
+          "Periods theek na aane ya pregnancy me dikkat ki wajah hormone ho sakti hai — PCOD me kaun se test hote hain, wo ",
+          { "text": "PCOD test wali guide", "href": "/blogs/pcod-hormone-test/deoria" },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Pregnancy me kaun se blood test hote hain?",
+      "answer": "Pehli ANC visit par aam taur par CBC (haemoglobin), blood group aur Rh, blood sugar, TSH, HBsAg, HIV, VDRL aur urine routine hote hain. 24 se 28 hafte ke beech GTT se sugar dobara dekhi jaati hai, aur teesri timahi me CBC tatha peshab me protein. Aapke liye list doctor tay karta hai — pehle ki pregnancy, sugar, BP aur thyroid dekh kar."
+    },
+    {
+      "question": "Beta hCG test kab karana chahiye?",
+      "answer": "Jab ghar ki kit par pregnancy ka shak ho, line halki ho, ya doctor ko hormone ki maatra dekhni ho. Doctor aksar kareeb 48 ghante ke antar par do baar beta hCG dekhte hain, kyunki shuru ke hafton me theek chal rahi pregnancy me ye maatra aam taur par do-teen din me lagbhag doguni hoti hai. Bachcha bachchedaani me hai ya nahi, ye ultrasound batata hai."
+    },
+    {
+      "question": "Pregnancy me haemoglobin kitna hona chahiye?",
+      "answer": "WHO ke hisaab se pregnancy me haemoglobin 11 g/dL se kam ho to use khoon ki kami maana jaata hai. Pregnancy me haemoglobin thoda neeche aana aam hai, isliye doctor ise har timahi me dekhte hain. Goli se na badhe to ferritin ya thalassemia ki jaanch bhi likhi ja sakti hai."
+    },
+    {
+      "question": "Pregnancy me GTT test kaise hota hai?",
+      "answer": "Glucose ka ghol pila kar tay samay baad khoon liya jaata hai. Sarkari guideline me aam taur par 75 gram glucose ke 2 ghante baad ek sample hota hai; kuch doctor khaali pet aur ek-do ghante par bhi sample lete hain. Ghol ke baad baith kar aaram kijiye, kuch khaiye-peeyiye nahi, aur ulti ho jaaye to turant bataiye — us din ka test aksar dohrana padta hai."
+    },
+    {
+      "question": "Blood group Rh negative hai to pregnancy me kya karein?",
+      "answer": "Ghabraiye nahi, report usi hafte doctor ko dikhaiye. Doctor aksar pati ka blood group poochhte hain, zaroorat par ICT jaanch likhte hain aur tay samay par injection ki salah dete hain. Pehle koi pregnancy rahi ho, chahe jaldi khatam ho gayi ho, to ye baat doctor ko zaroor bataiye."
+    },
+    {
+      "question": "Kya pregnancy ke blood test ghar par ho sakte hain?",
+      "answer": "Haan, blood aur urine ke sample Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liye jaate hain. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par. Ultrasound hamari service nahi hai — uske liye imaging centre jaana padega."
+    },
+    {
+      "question": "Pregnancy me thyroid report normal hai, phir bhi doctor chinta kyun kar rahe hain?",
+      "answer": "Report par chhapi range aksar bina pregnancy wale vayaskon ki hoti hai. Pregnancy me doctor timahi ke hisaab se TSH ki alag seema dekhte hain, isliye jo number aam taur par normal hai, wo pregnancy me thoda zyada maana ja sakta hai. Dawa ka faisla doctor par chhodiye aur TSH unki batayi tareekh par dohraiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me pregnancy ke blood test ka kram aur unka matlab hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, thyroid, sugar aur har test ka daam" },
+          { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein", "sub": "Haemoglobin, WBC aur platelet ek table me" },
+          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch", "sub": "HbA1c, TSH aur fasting ke niyam" },
+          { "href": "/blogs/hiv-hepatitis-test/deoria", "label": "HIV aur Hepatitis B test — kab aur kaise", "sub": "Pregnancy ki screening aur report ka matlab" },
+          { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" }
+        ]
+      }
+    ]
+  }
+}

@@ -154,7 +154,12 @@
             "text": "yahan vistaar se likha hai",
             "href": "/blogs/pathology-lab/deoria#report-aur-ek-hi-lab-deoria"
           },
-          "."
+          ". Report me platelet \"150\" likha hai ya \"1.5 lakh\" — units ka ye farak ",
+          {
+            "text": "CBC report wali guide",
+            "href": "/blogs/cbc-test/deoria#report-units-lakh-deoria"
+          },
+          " me samjhaya gaya hai."
         ]
       ]
     },

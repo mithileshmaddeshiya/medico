@@ -1,0 +1,309 @@
+{
+  "title": "CBC Test Normal Range — Report Kaise Padhein, Deoria",
+  "description": "CBC test me kya-kya hota hai, haemoglobin, WBC aur platelet ki normal range kya hai, report ke units ka farak, aur Deoria me CBC ghar par kaise karayein.",
+  "keywords": [
+    "CBC test normal range",
+    "CBC report kaise padhein",
+    "CBC test me kya kya hota hai",
+    "haemoglobin normal range",
+    "platelet count normal range",
+    "WBC count high ka matlab",
+    "TLC DLC test",
+    "MCV low ka matlab",
+    "CBC test in Deoria",
+    "blood test at home Deoria"
+  ],
+  "publishedAt": "2026-09-15",
+  "order": 160,
+  "takeaways": [
+    "CBC ek test nahi, kareeb 15 se 20 numbers ka ek set hai — haemoglobin, laal kan, safed kan (TLC, DLC) aur platelet. Iske liye khaali pet rehna zaroori nahi.",
+    "Internet ki range se pehle apni report par chhapi reference range dekhiye. Machine, lab, umar aur purush-mahila ke hisaab se range thodi alag hoti hai.",
+    "Report me platelet \"150\" likha ho aur saath me 10³/µL, to wo 1.5 lakh hi hai. Aadhi ghabrahat units na samajhne se hoti hai.",
+    "Ek number thoda upar-neeche aane se zyada zaroori ye hai ki lakshan kya hain aur pichhli report se kitna badla. Faisla doctor karta hai."
+  ],
+  "sections": [
+    {
+      "id": "cbc-test-kya-hai-deoria",
+      "heading": "CBC Test Kya Hai — Aur Doctor Ise Sabse Pehle Kyun Likhte Hain",
+      "lead": "Bukhar ho, kamzori ho, ya saal ka checkup — parche par pehla naam aksar yahi hota hai.",
+      "blocks": [
+        "CBC yaani Complete Blood Count khoon ki poori ginti hai. Ek chhote se sample se ye batata hai ki khoon me laal kan (jo oxygen le jaate hain), safed kan (jo infection se ladte hain) aur platelet (jo khoon jamaate hain) kitne hain aur kaise dikhte hain. Isi liye Deoria me bukhar, thakan, chakkar, khoon ki kami, pregnancy, operation se pehle, aur saal ke health checkup — lagbhag har jagah ye pehla test hota hai.",
+        "CBC ke liye khaali pet rehna zaroori nahi. Sample din me kabhi bhi diya ja sakta hai. Haan, agar CBC ke saath fasting sugar ya lipid bhi likha ho, to un par fasting ke niyam lagenge — tab sabhi ka sample subah ek saath de dena aasaan rehta hai.",
+        {
+          "note": {
+            "title": "Report padhna seekhiye, nidaan khud mat kijiye",
+            "text": "Is guide se aap samajh payenge ki report me kaun sa number kya hai aur doctor se kya poochhna hai. Lekin ek number se bimari tay nahi hoti — doctor lakshan, jaanch aur pichhli report saath dekh kar faisla karte hain.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cbc-me-kya-kya-hota-hai-deoria",
+      "heading": "CBC Test Me Kya-Kya Hota Hai — Report Ke Har Hisse Ka Matlab",
+      "lead": "Report teen hisson me bati hoti hai. Ek baar ye samajh aa gaya, to baaki aasaan hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "CBC report ke hisse — naam aur kaam",
+            "head": ["Report me naam", "Poora naam", "Ye kya batata hai"],
+            "rows": [
+              ["Hb", "Haemoglobin", "Khoon me oxygen le jaane wala protein — khoon ki kami ka pehla sanket"],
+              ["RBC count", "Laal kan ki ginti", "Laal kan kitne hain"],
+              ["PCV / HCT", "Packed cell volume", "Khoon me laal kan ka hissa — paani ki kami me badh jaata hai"],
+              ["MCV, MCH, MCHC", "Laal kan ka size aur rang", "Khoon ki kami iron se hai ya B12 se, iska ishaara"],
+              ["RDW", "Laal kan ke size me farak", "Size me zyada farak — aksar iron ki kami me badhta hai"],
+              ["TLC / WBC", "Total safed kan", "Infection, sujan, ya kuch bimariyon me upar-neeche"],
+              ["DLC", "Neutrophil, lymphocyte, eosinophil, monocyte, basophil", "Safed kan ke kaun se prakaar badhe ya ghate"],
+              ["Platelet count", "Platelet ki ginti", "Khoon jamne ki kshamta — dengue me sabse zyada dekha jaata hai"],
+              ["MPV", "Platelet ka size", "Platelet naye ban rahe hain ya nahi, iska ishaara"]
+            ]
+          }
+        },
+        "ESR aksar CBC ke saath hi parche par likha jaata hai, par wo CBC ka hissa hamesha nahi hota — alag test hai. Isliye booking ke waqt dekh lijiye ki parche me \"CBC\" likha hai ya \"CBC with ESR\"."
+      ]
+    },
+    {
+      "id": "cbc-normal-range-table-deoria",
+      "heading": "CBC Test Normal Range — Vayaskon Ke Liye Ek Table",
+      "lead": "Ye aam range hai. Aapki report par chhapi range hi aakhri hai.",
+      "blocks": [
+        "Neeche vayaskon ki woh range hai jo zyadatar labs ki report me isi ke aas-paas dikhti hai. Har lab ki machine aur tareeka thoda alag hota hai, isliye aapki report me seema thodi upar-neeche ho sakti hai. Bachchon, pregnancy aur bahut bujurgon me range alag hoti hai.",
+        {
+          "table": {
+            "caption": "CBC normal range (vayask) — aam taur par",
+            "head": ["Parameter", "Purush", "Mahila"],
+            "rows": [
+              ["Haemoglobin", "13 – 17 g/dL", "12 – 15 g/dL"],
+              ["RBC count", "4.5 – 5.5 million/µL", "3.8 – 4.8 million/µL"],
+              ["PCV / HCT", "40 – 50 %", "36 – 46 %"],
+              ["MCV", "80 – 100 fL", "80 – 100 fL"],
+              ["MCH", "27 – 32 pg", "27 – 32 pg"],
+              ["MCHC", "32 – 36 g/dL", "32 – 36 g/dL"],
+              ["RDW-CV", "11.5 – 14.5 %", "11.5 – 14.5 %"],
+              ["TLC / WBC", "4,000 – 11,000 /µL", "4,000 – 11,000 /µL"],
+              ["Neutrophil", "40 – 75 %", "40 – 75 %"],
+              ["Lymphocyte", "20 – 40 %", "20 – 40 %"],
+              ["Eosinophil", "1 – 6 %", "1 – 6 %"],
+              ["Monocyte", "2 – 10 %", "2 – 10 %"],
+              ["Platelet count", "1.5 – 4.5 lakh /µL", "1.5 – 4.5 lakh /µL"]
+            ]
+          }
+        },
+        "Report par jo number range ke bahar ho, uske aage aksar \"H\" (High) ya \"L\" (Low) likha hota hai, ya wo mote akshar me hota hai. Range se thoda sa bahar hona — jaise haemoglobin 11.8 ya TLC 11,300 — aam taur par apne aap me khatre ki ghanti nahi hai. Wahi number agar lakshanon ke saath hai, ya pichhli report se bahut badla hai, tab doctor ke liye maayne rakhta hai."
+      ]
+    },
+    {
+      "id": "report-units-lakh-deoria",
+      "heading": "Report Me Platelet 150 Likha Hai Ya 1.5 Lakh? Units Ka Farak Samjhiye",
+      "lead": "Deoria me CBC report dekh kar hone wali sabse aam ghabrahat ka asli wajah yahi hai.",
+      "blocks": [
+        "Alag-alag machine ek hi number ko alag unit me likhti hai. Koi platelet \"1,50,000 /cumm\" likhti hai, koi \"1.5 lakh\", aur koi \"150 × 10³/µL\". Teeno ek hi baat hain. Isi tarah µL aur cumm (cubic millimetre) bhi ek hi naap hai. Unit dekhe bina do report ki tulna karenge to lagega ki platelet ek din me hazaar guna gir gaye.",
+        {
+          "table": {
+            "caption": "Ek hi number, teen tarah se — kaise milaayein",
+            "head": ["Report me likha", "Matlab", "Aam bhasha me"],
+            "rows": [
+              ["Platelet 150 × 10³/µL", "1,50,000 /µL", "1.5 lakh"],
+              ["Platelet 0.8 lakh/cumm", "80,000 /µL", "80 hazaar"],
+              ["TLC 7.5 × 10³/µL", "7,500 /µL", "7,500"],
+              ["TLC 12,400 /cumm", "12,400 /µL", "Saamanya se thoda zyada"],
+              ["Hb 110 g/L", "11.0 g/dL", "11 gram"]
+            ]
+          }
+        },
+        "Isliye jo report aap mahino tak track kar rahe hain — jaise dengue ke dinon ka platelet ya khoon ki kami me haemoglobin — use ek hi lab se karaiye. Unit aur range dono ek jaise rahenge, aur tulna seedhi hogi."
+      ]
+    },
+    {
+      "id": "haemoglobin-kam-mcv-deoria",
+      "heading": "Haemoglobin Kam Aaya — MCV Batata Hai Ki Aage Kaun Sa Test",
+      "lead": "Kam haemoglobin ek jawab nahi, ek sawaal hai: kyun kam hai?",
+      "blocks": [
+        "WHO ke hisaab se purushon me haemoglobin 13 se kam, bina pregnancy wali mahilaon me 12 se kam, aur pregnancy me 11 g/dL se kam ho to khoon ki kami (anaemia) maana jaata hai. Purvanchal me ye bahut aam hai, khaas kar mahilaon, kishoriyon aur bachchon me. Lekin iski wajah har baar ek nahi hoti, aur yahi wajah CBC ka MCV wala number ishaara karta hai.",
+        {
+          "table": {
+            "caption": "Kam haemoglobin ke saath MCV — aam ishaara",
+            "head": ["MCV", "Laal kan", "Aam wajah jiski taraf ishaara", "Doctor aksar aage kya dekhte hain"],
+            "rows": [
+              ["80 se kam", "Chhote", "Iron ki kami, ya thalassemia ka trait", "Ferritin; zaroorat par HPLC"],
+              ["80 – 100", "Saamanya size", "Haal ki bleeding, lambi bimari, kidney", "Lakshan ke hisaab se KFT aadi"],
+              ["100 se zyada", "Bade", "Vitamin B12 ya folate ki kami, kuch dawaiyan, sharaab", "Vitamin B12, folate"]
+            ]
+          }
+        },
+        "Ek zaroori baat: thalassemia trait me bhi laal kan chhote hote hain aur haemoglobin thoda kam rehta hai, lekin wahan iron ki kami nahi hoti. Aise me bina jaanch ke mahino tak iron ki goli khaate rehna bekaar hai. Isliye kam haemoglobin me doctor aksar ferritin dekh kar hi aage badhte hain.",
+        [
+          "Ferritin, Vitamin B12 aur khoon ki kami ki poori baat ",
+          { "text": "Vitamin D, B12 aur CBC wali guide", "href": "/blogs/vitamin-b12-d-test/deoria#haemoglobin-ferritin-deoria" },
+          " me hai. Pregnancy me haemoglobin kaise dekha jaata hai, wo ",
+          { "text": "pregnancy blood test guide", "href": "/blogs/pregnancy-blood-test/deoria#pregnancy-me-haemoglobin-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "wbc-count-high-low-deoria",
+      "heading": "WBC Count High Ya Low — TLC Aur DLC Ka Matlab",
+      "lead": "Kul ginti se zyada ye maayne rakhta hai ki kaun sa safed kan badha.",
+      "blocks": [
+        "TLC safed kan ki kul ginti hai, aur DLC batata hai ki unme kis prakaar ke kitne pratishat hain. Doctor dono ko saath padhte hain, kyunki alag-alag bimari alag prakaar ke kan ko badhati hai.",
+        {
+          "table": {
+            "caption": "Safed kan — kya badha, aam taur par kis taraf ishaara",
+            "head": ["Report me", "Aam taur par kis taraf ishaara"],
+            "rows": [
+              ["TLC aur neutrophil dono zyada", "Bacteria wala infection, sujan, ya steroid jaisi dawa"],
+              ["Lymphocyte zyada", "Virus wala bukhar; kuch lambi bimariyan"],
+              ["Eosinophil zyada", "Allergy, dama, ya pet ke keede — gaon-kasbon me kaafi aam"],
+              ["TLC kam", "Kuch virus wale bukhar (dengue me aksar), typhoid me kabhi, kuch dawaiyan"],
+              ["Monocyte zyada", "Infection se ubarte waqt, ya kuch lambi bimariyon me"]
+            ]
+          }
+        },
+        "Bukhar ke doosre-teesre din TLC aur platelet dono ka neeche aana dengue jaisi bimari ki taraf ishaara ho sakta hai — lekin nidaan uske test aur doctor se hota hai, CBC akele se nahi.",
+        {
+          "note": {
+            "title": "Report me ye likha ho to usi din doctor",
+            "text": "Report me \"blast\" ya \"atypical cells\" likha ho, TLC bahut zyada ya bahut kam ho, haemoglobin 7 se neeche ho, ya platelet bahut kam ho aur saath me bleeding ho — to agle hafte ka intezaar mat kijiye, report le kar usi din doctor ko dikhaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "platelet-count-normal-range-deoria",
+      "heading": "Platelet Count Normal Range — Aur Kab Report Jhoothi Kam Aati Hai",
+      "lead": "Har kam platelet dengue nahi, aur har kam platelet sach bhi nahi.",
+      "blocks": [
+        "Vayaskon me platelet count aam taur par 1.5 se 4.5 lakh ke beech hota hai. Barsaat ke baad Deoria me log platelet ko sabse zyada dhyaan se dekhte hain, kyunki dengue me ye girta hai. Lekin ek report ka ek number poori kahani nahi batata — kitni tezi se gir raha hai, aur saath me kya lakshan hain, ye zyada maayne rakhta hai.",
+        {
+          "list": [
+            "Kabhi-kabhi sample ki nali me platelet aapas me chipak jaate hain, aur machine unhe gin nahi paati. Tab report me platelet kam aata hai jabki sharir me theek hote hain. Bina lakshan ke achanak bahut kam platelet aaye to doctor aksar dobara sample ya smear dekhne ko kehte hain.",
+            "Virus wale bukhar ke baad platelet kuch dinon tak thode kam reh sakte hain aur phir apne aap theek ho jaate hain.",
+            "Platelet badhane ke naam par bikne wale nuskhe aur juice report ka number nahi, bimari ki disha tay karte hain — isliye inke bharose doctor ko dikhaane me der mat kijiye."
+          ]
+        },
+        [
+          "Dengue me platelet ko roz kaise dekha jaata hai aur kis haalat me aspatal chahiye, wo ",
+          { "text": "platelet count wale hisse", "href": "/blogs/dengue-typhoid-test/deoria#platelet-count-deoria" },
+          " me vistaar se hai."
+        ]
+      ]
+    },
+    {
+      "id": "cbc-sahi-aaye-deoria",
+      "heading": "CBC Report Sahi Aaye — Sample Se Pehle Kin Baaton Ka Dhyaan Rakhein",
+      "lead": "Fasting nahi chahiye, lekin kuch cheezein number badal deti hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "CBC se pehle — kya number par asar daalta hai",
+            "head": ["Baat", "Asar", "Kya karein"],
+            "rows": [
+              ["Paani ki kami (garmi, dast, ulti)", "Haemoglobin aur PCV jhoothe upar dikh sakte hain", "Saamanya paani peete rahiye"],
+              ["Test se pehle bhaari mehnat", "TLC thoda badh sakta hai", "Sample se pehle tez kasrat ya bhaari kaam mat kijiye"],
+              ["Haal me khoon chadha ho", "Haemoglobin asli halat nahi batata", "Doctor ko tareekh bataiye"],
+              ["Steroid ya kuch aur dawa", "TLC aur platelet par asar", "Dawa band mat kijiye, naam bataiye"],
+              ["Alag-alag lab", "Range aur unit badal jaate hain", "Tulna wali report ek hi lab se"]
+            ]
+          }
+        },
+        [
+          "Report ke header me kya dekhein aur ek hi lab se jaanch kyun, wo ",
+          { "text": "report aur ek hi lab wale hisse", "href": "/blogs/pathology-lab/deoria#report-aur-ek-hi-lab-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "ghar-se-cbc-test-deoria",
+      "heading": "Deoria Me CBC Test Ghar Par Kaise Karayein",
+      "lead": "CBC ke liye fasting nahi chahiye, isliye slot jab suvidha ho tab.",
+      "blocks": [
+        "Bukhar me mareez ko bus ya tempo se Deoria Sadar le jaana, ya dengue ke dinon me roz platelet ke liye chakkar lagana — ye sabse thakane wala kaam hai. CBC ka sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi.",
+        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. CBC ke saath sugar, thyroid ya KFT bhi likha ho to sab ek hi baar me ho jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        [
+          "CBC ka aaj ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hai — is guide me jaan-boojh kar koi daam nahi likha. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " dekhiye ya seedha call kijiye. Package me CBC pehle se shaamil hota hai, isliye ",
+          { "text": "full body checkup guide", "href": "/blogs/full-body-checkup/deoria" },
+          " bhi ek baar dekh lijiye."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-cbc-deoria",
+      "heading": "CBC Report Aa Gayi — Doctor Se Ye Teen Sawaal Poochhiye",
+      "lead": "Report ko doctor ke saamne rakhne se pehle ye sawaal likh lijiye.",
+      "blocks": [
+        {
+          "list": [
+            "Jo number range ke bahar hai, wo mere lakshanon se mel khaata hai ya nahi?",
+            "Kya iske liye aage koi test chahiye — jaise ferritin, B12, ya dengue ki jaanch?",
+            "CBC dobara kab karani hai, aur kya wo isi lab se karani chahiye?"
+          ]
+        },
+        [
+          "Lakshan ke hisaab se kaun sa test pehle, uski guide ",
+          { "text": "yahan hai", "href": "/blogs/symptom-test/deoria" },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "CBC test me kya-kya hota hai?",
+      "answer": "CBC me haemoglobin, RBC count, PCV, MCV, MCH, MCHC, RDW, safed kan ki kul ginti (TLC), unke prakaar (DLC — neutrophil, lymphocyte, eosinophil, monocyte, basophil) aur platelet count aata hai. ESR aksar saath me likha jaata hai, lekin wo alag test hai."
+    },
+    {
+      "question": "CBC test ki normal range kya hai?",
+      "answer": "Vayaskon me aam taur par haemoglobin purushon me 13–17 aur mahilaon me 12–15 g/dL, TLC 4,000–11,000 /µL, aur platelet 1.5–4.5 lakh /µL hota hai. MCV 80–100 fL rehta hai. Har lab ki range thodi alag hoti hai, isliye apni report par chhapi reference range hi maaniye."
+    },
+    {
+      "question": "CBC test ke liye khaali pet rehna zaroori hai?",
+      "answer": "Nahi. CBC din me kabhi bhi ho sakta hai. Lekin agar saath me fasting sugar ya lipid profile bhi hai, to un par fasting ke niyam lagenge, isliye tab sabka sample subah ek saath dena aasaan rehta hai."
+    },
+    {
+      "question": "Report me platelet 150 likha hai, kya ye bahut kam hai?",
+      "answer": "Unit dekhiye. Agar saath me 10³/µL likha hai, to 150 ka matlab 1,50,000 yaani 1.5 lakh hai, jo aam taur par normal range ki nichli seema hai. Alag machine ek hi number ko alag unit me likhti hain, isliye do report ki tulna hamesha unit dekh kar kijiye."
+    },
+    {
+      "question": "WBC count high hone ka matlab kya hai?",
+      "answer": "Aam taur par ye infection ya sujan ki taraf ishaara karta hai. Neutrophil badhe hon to aksar bacteria wala infection, lymphocyte badhe hon to aksar virus wala, aur eosinophil badhe hon to allergy ya pet ke keede. Bahut zyada WBC, ya report me blast cells likha ho, to usi din doctor ko dikhaiye."
+    },
+    {
+      "question": "MCV low ka matlab kya hai?",
+      "answer": "MCV kam hone ka matlab laal kan saamanya se chhote hain. Iski sabse aam wajah iron ki kami hai, lekin thalassemia trait me bhi aisa hota hai. Isliye doctor aksar ferritin dekh kar hi iron ki goli ka faisla karte hain, aur zaroorat par HPLC jaanch likhte hain."
+    },
+    {
+      "question": "Deoria me CBC test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me CBC ka sample ghar par liya jaata hai. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me CBC report padhne ka tareeka hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC aur har test ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/vitamin-b12-d-test/deoria", "label": "Vitamin D, B12 aur ferritin — khoon ki kami ki jaanch", "sub": "Kam haemoglobin ke baad kaun sa test" },
+          { "href": "/blogs/dengue-typhoid-test/deoria", "label": "Dengue aur typhoid test — kis din kaun sa", "sub": "Bukhar me platelet kaise dekhein" },
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain" }
+        ]
+      }
+    ]
+  }
+}

@@ -441,6 +441,26 @@ const LAB_CITY_SEED = [
               label: "Deoria me kaun sa test kab karayein — poori guide",
               sub: "Package, bukhar ka din, Gorakhpur se pehle ki taiyaari",
             },
+            // Test-wise Deoria guides. A new article two levels down is found
+            // through links like these long before its sitemap entry counts.
+            {
+              href: "/blogs/cbc-test/deoria",
+              label: "CBC test normal range — report kaise padhein",
+              sub: "Haemoglobin, WBC aur platelet ek table me",
+            },
+            {
+              href: "/blogs/pregnancy-blood-test/deoria",
+              label: "Pregnancy me kaun se blood test hote hain",
+              sub: "Beta hCG, GTT, thyroid aur blood group",
+            },
+            {
+              href: "/blogs/pcod-hormone-test/deoria",
+              label: "PCOD test — kaun se hormone test karayein",
+            },
+            {
+              href: "/blogs/hiv-hepatitis-test/deoria",
+              label: "HIV aur Hepatitis B test — kab karayein",
+            },
             {
               href: "/blogs/lab-test/varanasi",
               label: "Kaun sa test kab karayein — poori guide",
