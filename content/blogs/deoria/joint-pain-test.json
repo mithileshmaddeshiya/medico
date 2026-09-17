@@ -1,0 +1,276 @@
+{
+  "title": "Jodon Ke Dard Ka Test — RA Factor, CRP, ESR, Deoria",
+  "description": "Jodon ke dard me kaun sa blood test — RA factor, anti-CCP, CRP, ESR, uric acid — unki normal range, aur Deoria me sample ghar par kaise dein.",
+  "keywords": [
+    "jodon ke dard ka test",
+    "RA factor test",
+    "RA factor normal range",
+    "CRP test normal range",
+    "ESR test normal range",
+    "anti CCP test",
+    "arthritis blood test",
+    "gathiya ka test",
+    "chikungunya ke baad jodon me dard",
+    "joint pain test in Deoria"
+  ],
+  "publishedAt": "2026-09-17",
+  "order": 220,
+  "takeaways": [
+    "Jodon ke dard ka koi ek test nahi. Dard ka pattern — kitne jod, subah kitni der jakdan, sujan hai ya nahi, bukhar ke baad shuru hua ya nahi — tay karta hai ki kaun si jaanch chahiye.",
+    "RA factor positive hona gathiya (rheumatoid arthritis) ka pakka saboot nahi, aur negative hona inkaar bhi nahi. Anti-CCP zyada sateek hai.",
+    "ESR aur CRP sirf batate hain ki sharir me sujan hai; kahan aur kyun, ye nahi batate.",
+    "Ghutne ki ghisaai (osteoarthritis) blood test me nahi dikhti — uske liye X-ray hota hai, jo hamari service nahi hai."
+  ],
+  "sections": [
+    {
+      "id": "jodon-ke-dard-ka-koi-ek-test-nahi-deoria",
+      "heading": "Jodon Ke Dard Ka Koi Ek Test Nahi — Pehle Dard Ka Pattern Samjhiye",
+      "lead": "Doctor sabse pehle sawaal poochhte hain, test baad me likhte hain. Wahi sawaal aap bhi khud se poochhiye.",
+      "blocks": [
+        "Deoria me jodon ka dard sabse aam shikayat hai — kheti ka kaam, zameen par baithna, bhaari bojh uthana, umar, aur barsaat ke baad chikungunya jaisa bukhar. Lekin \"arthritis ka test\" naam ki koi ek jaanch nahi hai. Gathiya ke das alag roop hain, aur har ek ka sanket alag test deta hai.",
+        {
+          "table": {
+            "caption": "Dard ka pattern aur uski taraf ishaara — aam taur par",
+            "head": ["Dard kaisa hai", "Aam taur par kis taraf ishaara", "Aksar pehli jaanch"],
+            "rows": [
+              ["Dono haathon ki ungliyan, kalaai; subah 1 ghante se zyada jakdan; sujan", "Rheumatoid arthritis (gathiya)", "RA factor, anti-CCP, ESR, CRP, CBC"],
+              ["Ek jod achanak laal, garam, bahut dard — aksar pair ka angootha", "Gout", "Uric acid, CRP"],
+              ["Ghutne me chalne par dard, aaraam se kam; 50 ke baad; sujan kam", "Ghisaai (osteoarthritis)", "Blood test aksar normal — doctor X-ray likhte hain"],
+              ["Bukhar ke baad kai jodon me tez dard, hafton tak", "Chikungunya ke baad", "Chikungunya IgM (shuruaat me), CBC, CRP"],
+              ["Kamar me dard subah zyada, kasrat se kam — jawan purush", "Ankylosing spondylitis", "HLA-B27, ESR, CRP"],
+              ["Jawan mahila, jodon me dard + chehre par daane, muh ke chhale, baal jhadna", "Lupus jaisi autoimmune bimari", "ANA, CBC, urine routine"],
+              ["Poore badan me dard, haddiyon me dukhan, thakan", "Vitamin D ki kami, thyroid", "Vitamin D, calcium, TSH"],
+              ["Bachcha ya kishor — gale ki kharash ke 2-3 hafte baad jodon me badalta dard", "Rheumatic fever", "ASO titre, CRP, ESR — doctor ko jaldi"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Ye table nidaan nahi hai",
+            "text": "Ye soochi aapko doctor se sahi sawaal poochhne me madad ke liye hai. Kaun sa test chahiye aur report ka matlab kya hai — ye doctor lakshan aur jaanch dekh kar hi tay karte hain.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ra-factor-test-deoria",
+      "heading": "RA Factor Test — Normal Range, Aur Positive Aane Ka Asli Matlab",
+      "lead": "Sabse zyada likha jaane wala, aur sabse zyada galat samjha jaane wala test.",
+      "blocks": [
+        "RA factor (Rheumatoid Factor) ek antibody hai jo rheumatoid arthritis ke kai mareezon me milti hai. Aam taur par report me 14 IU/mL (kuch labs me 20) se kam ko negative maana jaata hai. Lekin is test ki do seemaayein jaanna zaroori hai, warna report bewajah dara degi ya jhootha dilaasa degi.",
+        {
+          "list": [
+            "RA factor positive hai, par gathiya nahi — ye bujurgon me, hepatitis C, TB, kuch lambi infection aur kai swasth logon me bhi halka positive aa jaata hai.",
+            "RA factor negative hai, par gathiya hai — shuruaati rheumatoid arthritis me kaafi mareezon ka RA factor negative hota hai.",
+            "Number bahut zyada ho aur saath me anti-CCP bhi positive ho, tab rheumatoid arthritis ki sambhavna kaafi mazboot hoti hai."
+          ]
+        },
+        "Isliye sirf RA factor dekh kar na painkiller shuru karna theek hai, na \"sab theek hai\" maan lena. Haathon ke chhote jodon me sujan aur subah der tak jakdan ho, to rheumatoid arthritis ka ilaaj jitna jaldi shuru ho, jod utne bachte hain — ye wo bimari hai jismein saal bhar ki der jodon ka nuksan kar deti hai."
+      ]
+    },
+    {
+      "id": "anti-ccp-test-deoria",
+      "heading": "Anti-CCP Test — RA Factor Se Zyada Sateek Kyun",
+      "lead": "Jab RA factor uljhan paida kare, doctor aksar isi ko likhte hain.",
+      "blocks": [
+        "Anti-CCP bhi rheumatoid arthritis me banne wali antibody hai, lekin ye doosri bimariyon me bahut kam milti hai. Isliye anti-CCP positive ho to rheumatoid arthritis ki taraf ishaara RA factor se kahin zyada pakka hota hai. Ye kai baar lakshan poore aane se pehle hi positive ho jaata hai, aur jin mareezon me ye positive hota hai unme jodon ke nuksan ka khatra zyada maana jaata hai — isliye ilaaj ki raftaar tay karne me bhi kaam aata hai.",
+        {
+          "table": {
+            "caption": "RA factor aur anti-CCP saath me — aam taur par",
+            "head": ["RA factor", "Anti-CCP", "Aam taur par matlab"],
+            "rows": [
+              ["Positive", "Positive", "Rheumatoid arthritis ki mazboot sambhavna"],
+              ["Negative", "Positive", "Sambhavna bani rehti hai — doctor lakshan dekhte hain"],
+              ["Positive", "Negative", "Doosri wajah bhi ho sakti hai — umar, infection"],
+              ["Negative", "Negative", "RA kam sambhav, par lakshan hon to doctor aage dekhte hain"]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "crp-esr-normal-range-deoria",
+      "heading": "CRP Aur ESR Test Normal Range — Sujan Ka Thermometer",
+      "lead": "Ye batate hain ki aag lagi hai. Kahan lagi hai, ye nahi batate.",
+      "blocks": [
+        "ESR aur CRP dono sharir me sujan (inflammation) ke sanket hain. Gathiya me ye badh jaate hain, lekin infection, TB, chot, pregnancy, khoon ki kami aur kai doosri haalat me bhi badhte hain. Isliye inka asli kaam nidaan nahi, nigrani hai — ilaaj ke baad inka neeche aana batata hai ki sujan kam ho rahi hai.",
+        {
+          "table": {
+            "caption": "ESR aur CRP ki normal range — aam taur par (lab ke hisaab se badalti hai)",
+            "head": ["Test", "Aam normal", "Dhyaan dein"],
+            "rows": [
+              ["CRP (C-Reactive Protein)", "Aam taur par 5 – 6 mg/L se kam", "Kuch labs mg/dL me likhti hain — 0.5 mg/dL = 5 mg/L"],
+              ["hs-CRP", "1 mg/L se kam kam jokhim", "Ye dil ke jokhim ke liye hai, gathiya ke liye nahi"],
+              ["ESR — purush", "15 – 20 mm/hr tak", "Umar ke saath badhta hai: lagbhag umar ÷ 2"],
+              ["ESR — mahila", "20 – 30 mm/hr tak", "Lagbhag (umar + 10) ÷ 2; pregnancy aur khoon ki kami me zyada"]
+            ]
+          }
+        },
+        "CRP jaldi badhta aur jaldi girta hai — din ke hisaab se badalta hai. ESR dheere badalta hai aur hafton tak upar reh sakta hai. Isliye 70 saal ki mahila ka ESR 35 aana apne aap me koi bimari nahi, aur bukhar ke doosre din CRP 40 aana gathiya nahi, aksar infection hai.",
+        [
+          "ESR aksar CBC ke saath likha jaata hai — CBC report ke baaki hisse ",
+          { "text": "CBC normal range guide", "href": "/blogs/cbc-test/deoria#cbc-normal-range-table-deoria" },
+          " me samjhaaye gaye hain."
+        ]
+      ]
+    },
+    {
+      "id": "chikungunya-ke-baad-jod-dard-deoria",
+      "heading": "Bukhar Utar Gaya, Jodon Ka Dard Nahi — Chikungunya Ke Baad Kya Jaanch",
+      "lead": "Barsaat ke baad Deoria me ye shikayat har saal lautti hai.",
+      "blocks": [
+        "July se November ke beech machhar se failne wale bukhar me dengue ke saath chikungunya bhi aata hai. Chikungunya ki pehchaan hai tez bukhar ke saath jodon me itna dard ki uthna-baithna mushkil ho jaaye — aur bukhar utarne ke baad bhi haath-pair ke jodon ka dard kai hafte, kabhi mahino tak rehta hai.",
+        {
+          "list": [
+            "Bukhar ke pehle hafte: dengue NS1 ke saath chikungunya ki jaanch (IgM aam taur par 5-7 din ke baad positive) aur CBC — doctor din dekh kar likhte hain.",
+            "Bukhar ke hafton baad sirf jodon ka dard: aam taur par jaanch ki zaroorat kam, lekin sujan badhe ya 3 mahine se zyada chale to doctor RA factor, anti-CCP aur CRP dekh sakte hain.",
+            "Painkiller khud se lambe samay tak mat lijiye — kidney aur pet dono par asar hota hai. Dengue ka shak ho to kuch painkiller khatarnak bhi hain."
+          ]
+        },
+        [
+          "Bukhar ke kis din kaun sa test, uski poori table ",
+          { "text": "dengue-typhoid guide", "href": "/blogs/dengue-typhoid-test/deoria#kis-din-kaun-sa-test-table-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "uric-acid-vitamin-d-jod-dard-deoria",
+      "heading": "Uric Acid, Vitamin D Aur Thyroid — Jodon Ke Dard Me Ye Kab Dekhe Jaate Hain",
+      "lead": "Har jod dard gathiya nahi. Kai baar wajah khoon ki saadhaaran kami hoti hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Jodon aur badan dard me baaki aam jaanch",
+            "head": ["Jaanch", "Kab sochi jaati hai", "Fasting"],
+            "rows": [
+              ["Uric acid", "Ek jod achanak laal-garam, khaas kar angootha", "Aksar nahi; doctor ke kehne par subah"],
+              ["Vitamin D", "Poore badan me dard, haddiyon me dukhan, maanspeshi kamzor", "Nahi"],
+              ["Calcium", "Vitamin D ke saath, haddi ki kamzori", "Nahi"],
+              ["TSH", "Jakdan, thakan, wazan badhna ke saath dard", "Nahi"],
+              ["CBC", "Kamzori, bukhar, ya lambe samay painkiller", "Nahi"],
+              ["KFT", "Lambe samay painkiller, ya gout", "Nahi"]
+            ]
+          }
+        },
+        [
+          "Uric acid kab aur kaise karayein, aur high aaye to kya — ",
+          { "text": "uric acid test guide", "href": "/blogs/uric-acid-test/deoria#uric-acid-kab-karayein-deoria" },
+          ". Vitamin D ki kami Deoria me dhoop hone par bhi kyun milti hai — ",
+          { "text": "Vitamin D test guide", "href": "/blogs/vitamin-b12-d-test/deoria#vitamin-d-test-deoria" },
+          ". Thyroid report ki range — ",
+          { "text": "thyroid test guide", "href": "/blogs/thyroid-test/deoria" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "ghutne-ka-dard-xray-deoria",
+      "heading": "Ghutne Ka Dard 50 Ke Baad — Blood Test Normal, Phir Bhi Dard Kyun",
+      "lead": "Ghisaai khoon me nahi dikhti.",
+      "blocks": [
+        "Deoria me 50 saal ke baad sabse aam jod dard ghutne ki ghisaai (osteoarthritis) hai — seedhiyaan chadhne, zameen par baithne aur uthne me dard, chalne ke baad badhna aur aaraam se kam hona. Is bimari me RA factor, CRP aur ESR aam taur par normal aate hain. Blood test yahan bimari pakadne ke liye nahi, balki doosri wajah hatane ke liye hote hain.",
+        {
+          "note": {
+            "title": "X-ray hamari service nahi hai",
+            "text": "MedicoBharat Deoria me X-ray, ultrasound aur ECG nahi karta — hum sirf khoon aur peshab ka sample ghar par lete hain. Ghutne ki ghisaai ke liye doctor jo X-ray likhein, wo centre par hi hoga. Kram ye rakhiye: blood test ghar par, report le kar X-ray aur doctor ek hi din.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jod-dard-turant-doctor-deoria",
+      "heading": "Kab Test Ka Intezaar Nahi — Jod Dard Ki Emergency",
+      "lead": "Ek laal, garam, suja jod aur bukhar — ye usi din ka kaam hai.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Usi din doctor ya aspatal",
+            "text": "Ek jod achanak bahut suj jaaye, laal-garam ho, hilaana na ho sake, aur saath me bukhar ho — ye jod ke andar infection ho sakta hai, jo kuch hi dino me jod kharab kar deta hai. Bachche me gale ki kharash ke baad jod dard ke saath saans phoolna ya dil ki dhadkan tez ho, ya chot ke baad jod suj jaaye — in sab me ghar ke test ka intezaar mat kijiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jod-dard-test-ghar-par-deoria",
+      "heading": "Deoria Me Jodon Ke Dard Ka Blood Test Ghar Par Kaise Karayein",
+      "lead": "Jis mareez ko chalne me dard hai, use test ke liye bahar kyun le jaana.",
+      "blocks": [
+        "Ghutne ya kamar ke dard wale bujurg ko tempo me bitha kar Deoria Sadar le jaana, line me khada karna — yahi sabse bada kasht hai. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se; zyadatar jod dard ke test me fasting nahi lagti.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "CBC, Vitamin D, thyroid aur KFT hamare menu me hain. RA factor, anti-CCP, CRP, ESR, HLA-B27 ya ANA parche par likha ho to booking se pehle parche ki photo ke saath call kijiye — saaf bata diya jaayega."
+          ]
+        },
+        [
+          "Test ke aaj ke daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hain — is guide me daam nahi likha. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " dekhiye. Lakshan ke hisaab se baaki test ",
+          { "text": "lakshan guide", "href": "/blogs/symptom-test/deoria#peshab-sujan-jodon-dard-deoria" },
+          " me hain."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Jodon ke dard me kaun sa blood test karana chahiye?",
+      "answer": "Ye dard ke pattern par nirbhar hai. Haathon ke chhote jodon me sujan aur subah der tak jakdan ho to aksar RA factor, anti-CCP, ESR, CRP aur CBC. Ek jod achanak laal-garam ho to uric acid. Poore badan me dard aur thakan ho to Vitamin D, calcium aur TSH. Kaun sa chahiye, ye doctor lakshan dekh kar tay karte hain."
+    },
+    {
+      "question": "RA factor ki normal range kya hai?",
+      "answer": "Aam taur par 14 IU/mL se kam (kuch labs me 20 se kam) ko negative maana jaata hai. Lekin RA factor bujurgon, hepatitis C, TB aur kuch swasth logon me bhi halka positive aa sakta hai, aur shuruaati rheumatoid arthritis me negative bhi reh sakta hai. Isliye ise lakshan aur anti-CCP ke saath padha jaata hai."
+    },
+    {
+      "question": "RA factor positive hai to kya gathiya pakka hai?",
+      "answer": "Nahi. RA factor positive hona rheumatoid arthritis ka pakka saboot nahi hai. Agar lakshan hain aur anti-CCP bhi positive hai, tab sambhavna mazboot hoti hai. Nidaan rheumatologist ya doctor lakshan, jaanch aur zaroorat par X-ray dekh kar karte hain."
+    },
+    {
+      "question": "CRP test ki normal range kya hai?",
+      "answer": "CRP aam taur par 5-6 mg/L se kam normal maana jaata hai. Kuch labs mg/dL me likhti hain, jahan 0.5 mg/dL = 5 mg/L. CRP infection, chot aur gathiya — kisi bhi sujan me badhta hai, isliye akele isse bimari tay nahi hoti."
+    },
+    {
+      "question": "ESR zyada hone ka matlab kya hai?",
+      "answer": "ESR zyada hona sharir me kahin sujan ya lambi bimari ka sanket hai — gathiya, TB, infection, khoon ki kami ya pregnancy me ye badhta hai. Umar ke saath bhi badhta hai: purushon me lagbhag umar ÷ 2 aur mahilaon me (umar + 10) ÷ 2 tak saamanya maana jaata hai."
+    },
+    {
+      "question": "Chikungunya ke baad jodon ka dard kitne din rehta hai?",
+      "answer": "Kai logon me bukhar utarne ke baad bhi jodon ka dard kuch hafte, aur kuch me mahino tak rehta hai. Sujan badhe ya dard 3 mahine se zyada chale to doctor ko dikhaiye; wo RA factor, anti-CCP aur CRP jaisi jaanch likh sakte hain. Painkiller khud se lambe samay tak na lein."
+    },
+    {
+      "question": "Deoria me jodon ke dard ka test ghar par ho sakta hai?",
+      "answer": "Haan, sample ghar par liya jaata hai — Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me. CBC, Vitamin D, thyroid aur KFT menu me hain; RA factor, CRP ya anti-CCP jaisi jaanch ke liye parche ke saath call kijiye. X-ray hamari service nahi hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me jodon ke dard ki jaanch samjhaayi gayi hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/uric-acid-test/deoria", "label": "Uric acid test — kab karayein", "sub": "Gout yaani gathiya ke lakshan" },
+          { "href": "/blogs/vitamin-b12-d-test/deoria", "label": "Vitamin D aur B12 test — thakan aur badan dard" },
+          { "href": "/blogs/dengue-typhoid-test/deoria", "label": "Dengue aur typhoid test — bukhar ke kis din kaun sa" }
+        ]
+      }
+    ]
+  }
+}

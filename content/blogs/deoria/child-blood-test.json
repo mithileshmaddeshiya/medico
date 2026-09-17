@@ -1,0 +1,311 @@
+{
+  "title": "Bachchon Ka Blood Test — Kab Aur Kaun Sa, Deoria",
+  "description": "Bachchon me khoon ki kami, bukhar, pet ke keede aur peeliya me kaun sa blood test, bachchon ki normal range, aur Deoria me sample ghar par kaise.",
+  "keywords": [
+    "bachchon ka blood test",
+    "baby blood test",
+    "bachchon me khoon ki kami test",
+    "bachchon ka haemoglobin kitna hona chahiye",
+    "bachche ko bukhar me kaun sa test",
+    "stool test for worms",
+    "thalassemia test",
+    "bachchon me vitamin D ki kami",
+    "child blood test in Deoria",
+    "child blood test at home Deoria"
+  ],
+  "publishedAt": "2026-09-17",
+  "order": 230,
+  "takeaways": [
+    "Bachchon ki normal range vayaskon se alag hoti hai — haemoglobin, platelet, WBC aur TSH sab umar ke hisaab se padhe jaate hain. Report par umar sahi likhwaiye.",
+    "Bachchon me sabse zyada chhoot jaane wali jaanch khoon ki kami (CBC) hai. Kam haemoglobin ke saath MCV bahut kam ho to thalassemia trait bhi dekhna padta hai.",
+    "Zyadatar bachchon ke test me fasting nahi lagti, aur sample umar ke hisaab se bahut thoda liya jaata hai.",
+    "Tez bukhar ke saath jhatke, behoshi, gardan akadna ya sustpan — ye lab test ka nahi, turant aspatal ka waqt hai."
+  ],
+  "sections": [
+    {
+      "id": "bachchon-ka-blood-test-kab-deoria",
+      "heading": "Bachchon Ka Blood Test Kab Zaroori Hota Hai",
+      "lead": "Chhote bachche ko sui lagwaana koi nahi chahta — isliye jaanna zaroori hai ki kab ye sach me kaam ka hai.",
+      "blocks": [
+        "Bachchon me blood test routine me kam aur zaroorat par zyada hota hai. Deoria me doctor sabse zyada in haalaton me bachchon ka test likhte hain: teen din se zyada bukhar, chehra aur naakhun peele dikhna, bhookh na lagna aur wazan na badhna, peeliya, baar-baar pet dard, aur padhai me dhyan na lagna ya bahut thakan.",
+        {
+          "table": {
+            "caption": "Bachche ki shikayat aur aam taur par pehli jaanch",
+            "head": ["Shikayat", "Aksar pehli jaanch", "Fasting"],
+            "rows": [
+              ["Peela chehra, thakan, mitti ya chaak khaana", "CBC; zaroorat par ferritin", "Nahi"],
+              ["3 din se zyada bukhar", "CBC; din ke hisaab se dengue, typhoid, malaria", "Nahi"],
+              ["Aankh ya peshab peela, ulti, bhookh khatam", "LFT, Hepatitis A IgM", "Nahi"],
+              ["Pet dard, gudaa me khujli, wazan na badhna", "Stool routine; CBC (eosinophil)", "Nahi"],
+              ["Peshab me jalan, bukhar bina kisi aur wajah", "Urine routine aur culture", "Nahi"],
+              ["Haddi dard, pair tedhe, dhoop kam", "Vitamin D, calcium", "Nahi"],
+              ["Bahut pyaas, baar-baar peshab, dobara bistar geela, wazan girna", "Blood sugar — usi din", "Nahi"],
+              ["Kad na badhna, bahut sustpan, kabz", "TSH, CBC", "Nahi"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Kaun sa test — faisla bachchon ke doctor ka",
+            "text": "Ye soochi samajhne ke liye hai. Bachche ka kaun sa test karana hai, ye bachchon ke doctor lakshan aur jaanch dekh kar tay karein. Bina zaroorat \"poora checkup\" bachche ke liye zyada sui aur zyada uljhan hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bachchon-me-khoon-ki-kami-deoria",
+      "heading": "Bachchon Me Khoon Ki Kami — Haemoglobin Kitna Hona Chahiye",
+      "lead": "Purvanchal ke har doosre ghar ki kahani — aur sabse chupchaap chalne wali.",
+      "blocks": [
+        "Rashtriya survey baar-baar batate hain ki Uttar Pradesh me 5 saal se chhote bachchon ka bada hissa khoon ki kami (anaemia) se prabhavit hai. Bachcha chidchida rehta hai, jaldi thakta hai, padhai me pichhadta hai, aur baar-baar beemar padta hai — lekin ghar wale ise \"kamzor bachcha\" maan kar chhod dete hain.",
+        {
+          "table": {
+            "caption": "Bachchon me khoon ki kami — WHO ki seema (haemoglobin g/dL)",
+            "head": ["Umar", "Is se kam ho to khoon ki kami"],
+            "rows": [
+              ["6 mahine – 5 saal", "11.0"],
+              ["5 – 11 saal", "11.5"],
+              ["12 – 14 saal", "12.0"],
+              ["15 saal ke upar — ladki", "12.0"],
+              ["15 saal ke upar — ladka", "13.0"]
+            ]
+          }
+        },
+        "Sirf haemoglobin dekh kar iron ki goli shuru kar dena aadha kaam hai. CBC ka MCV bataata hai ki laal kan chhote hain ya nahi. Chhote laal kan aur kam haemoglobin ki sabse aam wajah iron ki kami hai — aur iski aam jad hai pet ke keede, doodh zyada aur khaana kam, aur jaldi chaay ki aadat.",
+        {
+          "note": {
+            "title": "Iron dene ke baad bhi haemoglobin na badhe",
+            "text": "Teen mahine iron ke baad bhi haemoglobin na sudhre, MCV bahut kam ho, ya ghar me kisi ko thalassemia ho — to doctor HPLC jaanch se thalassemia trait dekhte hain. Trait wale bachche ko iron ki goli ki zaroorat aksar nahi hoti, aur shaadi se pehle is jaanch ka maayne aur bhi bada hai.",
+            "tone": "info"
+          }
+        },
+        [
+          "CBC report ke baaki number — MCV, WBC aur platelet — ",
+          { "text": "CBC guide", "href": "/blogs/cbc-test/deoria#haemoglobin-kam-mcv-deoria" },
+          " me samjhaaye gaye hain. Service page ka ",
+          { "text": "anaemia wala hissa", "href": "/lab-test/deoria#anaemia-women-children-deoria" },
+          " bhi dekhiye."
+        ]
+      ]
+    },
+    {
+      "id": "bachchon-ki-cbc-normal-range-deoria",
+      "heading": "Bachchon Ki CBC Normal Range — Vayaskon Se Alag Kyun",
+      "lead": "Chhote bachche ka WBC 12,000 aur lymphocyte zyada hona aksar normal hai.",
+      "blocks": [
+        "Bachchon ka khoon badhte sharir ke saath badalta hai. Isliye vayaskon ki range se bachche ki report padhenge to kai normal number \"H\" ya \"L\" jaise lagenge. Lab report par umar sahi likhi ho to reference range bhi umar ke hisaab se lagti hai — booking ke waqt bachche ki sahi umar zaroor bataiye.",
+        {
+          "table": {
+            "caption": "Bachchon ki CBC — aam taur par dikhne wali range (lab ke hisaab se badalti hai)",
+            "head": ["Parameter", "1 – 5 saal", "6 – 12 saal"],
+            "rows": [
+              ["Haemoglobin (g/dL)", "11 – 13.5", "11.5 – 15.5"],
+              ["TLC / WBC (/µL)", "5,500 – 15,500", "4,500 – 13,500"],
+              ["Lymphocyte (%)", "Aksar 40 – 60 (vayaskon se zyada)", "30 – 50"],
+              ["Platelet (lakh /µL)", "1.5 – 4.5", "1.5 – 4.5"],
+              ["MCV (fL)", "70 – 86", "77 – 95"]
+            ]
+          }
+        },
+        "Chhote bachchon me lymphocyte ka neutrophil se zyada hona aam baat hai; vayaskon me yahi pattern virus ki taraf ishaara karta. Is farak ki wajah se bachche ki report bachchon ke doctor ko hi dikhaiye."
+      ]
+    },
+    {
+      "id": "bachche-ko-bukhar-test-deoria",
+      "heading": "Bachche Ko Bukhar — Kaun Sa Test Kis Din",
+      "lead": "Bukhar ke pehle din ka test aksar kuch nahi batata. Din ginna seekhiye.",
+      "blocks": [
+        "Barsaat ke baad Deoria me bachchon ka bukhar sabse aam wajah hai jiske liye log test karaate hain. Vayaskon ki tarah bachchon me bhi test ka din maayne rakhta hai — galat din ka test negative aa kar jhootha dilaasa de deta hai.",
+        {
+          "table": {
+            "caption": "Bachche ke bukhar me test — aam taur par kis din",
+            "head": ["Test", "Kab kaam ka", "Kya dhyaan rakhein"],
+            "rows": [
+              ["CBC", "2-3 din se zyada bukhar par, aur dengue me roz ya doctor ke kehne par", "Platelet aur WBC dono dekhe jaate hain"],
+              ["Dengue NS1", "Bukhar ke 1 – 5 din", "5 din baad aksar negative"],
+              ["Dengue IgM", "Bukhar ke 5-6 din ke baad", "Pehle karane se negative aa sakta hai"],
+              ["Malaria antigen / smear", "Thand-kanpkanpi wala bukhar, kisi bhi din", "Bukhar ke waqt sample behtar"],
+              ["Widal / Typhidot", "Widal 5-7 din baad; Typhidot pehle", "Sirf Widal par ilaaj theek nahi"],
+              ["Urine routine + culture", "Chhote bachche ka bukhar bina khaansi-zukaam ke", "Antibiotic se pehle sample"]
+            ]
+          }
+        },
+        [
+          "Bukhar ke din aur test ki poori baat ",
+          { "text": "dengue-typhoid guide", "href": "/blogs/dengue-typhoid-test/deoria#kis-din-kaun-sa-test-table-deoria" },
+          " me hai, aur urine sample ka sahi tareeka ",
+          { "text": "urine test guide", "href": "/blogs/urine-test/deoria#urine-sample-kaise-dein-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "aes-dimaagi-bukhar-chetavani-deoria",
+      "heading": "Dimaagi Bukhar (AES / JE) — Is Haalat Me Lab Test Book Mat Kijiye",
+      "lead": "Gorakhpur–Deoria–Kushinagar belt ke har ghar ko ye chetavani yaad honi chahiye.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Seedha najdeeki aspatal — 108 par call",
+            "text": "Bachche ko tez bukhar ke saath jhatke aayein, behoshi ho, wo pehchaan na paaye, gardan akad jaaye, lagatar ulti ho, ya bahut sust pada rahe — ye dimaagi bukhar (AES/Japanese Encephalitis) ho sakta hai. Home collection ka intezaar mat kijiye, jhaad-phoonk me samay mat gavaiye. Har ghanta maayne rakhta hai. Sarkaari aspatal me iski jaanch aur ilaaj ki vyavastha hoti hai.",
+            "tone": "warn"
+          }
+        },
+        "Japanese Encephalitis se bachaav ka teeka sarkaari tikaakaran me diya jaata hai. Bachche ka tikaakaran card dekhiye, aur koi teeka chhoota ho to najdeeki swasthya kendra se poochhiye."
+      ]
+    },
+    {
+      "id": "pet-ke-keede-peeliya-deoria",
+      "heading": "Pet Ke Keede Aur Peeliya — Stool Test Aur LFT Kab",
+      "lead": "Dono ki jad aksar ek hai: paani aur saaf-safai.",
+      "blocks": [
+        "Nange pair khelna, haath bina dhoye khaana, aur baadh ke baad ganda paani — isi wajah se Deoria me bachchon me pet ke keede aur paani se failne wala peeliya dono aam hain. Keede chupchaap khoon choos kar khoon ki kami badhate hain, isliye CBC me eosinophil zyada aana aur haemoglobin kam aana aksar saath milta hai.",
+        {
+          "list": [
+            "Pet ke keede: stool routine me keede ke ande dikh sakte hain, lekin ek sample me na dikhna keede na hone ka saboot nahi. Sarkaar ka National Deworming Day saal me do baar school aur aanganwadi me keede ki dawa deta hai — ye mauka mat chhodiye.",
+            "Peeliya: aankh aur peshab peela, bhookh khatam, ulti — bachchon me aksar Hepatitis A. Doctor LFT aur Hepatitis A IgM likhte hain. Zyadatar bachche aaraam aur saaf paani se theek ho jaate hain, lekin sustpan, behoshi, ya khoon ki ulti ho to turant aspatal.",
+            "Stool sample saaf, sookhe dabbe me, taaza, aur peshab mile bina — sample kab aur kaise dena hai, booking ke waqt poochh lijiye."
+          ]
+        },
+        [
+          "Peeliya me LFT ke number kaise padhein, wo ",
+          { "text": "LFT KFT guide", "href": "/blogs/liver-kidney-test/deoria#peeliya-aur-paani-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "bachchon-me-vitamin-d-thyroid-sugar-deoria",
+      "heading": "Vitamin D, Thyroid Aur Sugar — Bachchon Me Kab Sochein",
+      "lead": "Kam aam, lekin chhootne par nuksan zyada.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Bachchon me kam aam lekin zaroori jaanch",
+            "head": ["Jaanch", "Kab sochi jaati hai"],
+            "rows": [
+              ["Vitamin D, calcium", "Haddi ya pair dard, pair tedhe, daant der se, bahut kam dhoop — khaas kar ghar ke andar rehne wale bachche"],
+              ["TSH", "Kad na badhna, padhai me pichhadna, sustpan, kabz, wazan badhna; ghar me thyroid"],
+              ["Blood sugar", "Bahut pyaas, baar-baar peshab, sukhi aadat ke baad dobara bistar geela, bina wajah wazan girna"],
+              ["Blood group", "Operation, khoon ki zaroorat, ya school/document ke liye"],
+              ["Lipid profile", "Ghar me kam umar me heart attack ya bahut zyada cholesterol — doctor ki salah se"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Bachche me sugar ke lakshan — usi din",
+            "text": "Bachchon ki diabetes (Type 1) tezi se bigadti hai. Pyaas, baar-baar peshab aur wazan girne ke saath ulti, pet dard, tez saans ya sustpan ho — to test ka intezaar nahi, seedha aspatal.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Vitamin D ki kami Deoria me dhoop hone par bhi kyun milti hai, wo ",
+          { "text": "Vitamin D guide", "href": "/blogs/vitamin-b12-d-test/deoria#vitamin-d-test-deoria" },
+          " me hai. Bachchon ki TSH range vayaskon se alag kyun padhi jaati hai — ",
+          { "text": "thyroid test guide", "href": "/blogs/thyroid-test/deoria#tsh-normal-range-table-deoria" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "bachche-ka-sample-taiyari-deoria",
+      "heading": "Bachche Ka Sample — Taiyaari Jo Sui Ko Aasan Banaye",
+      "lead": "Ghabrahat bachche se zyada ghar walon ki hoti hai.",
+      "blocks": [
+        {
+          "list": [
+            "Booking ke waqt bachche ki sahi umar, wazan aur kaun se test hain — ye bataiye. Umar se hi report ki range lagti hai.",
+            "Zyadatar test me fasting nahi. Bachche ko paani aur doodh pilaate rahiye — paani ki kami se nas dhoondhna mushkil hota hai.",
+            "Bachcha maa ya pita ki god me ho. Pehle se \"injection\" bol kar daraaiye mat, aur \"kuch nahi hoga\" jaisa jhooth bhi mat boliye.",
+            "Khoon umar ke hisaab se bahut thoda liya jaata hai — kuch hi ml — jo sharir jaldi poora kar leta hai.",
+            "Sui ke baad do minute dabaiye, phir bachche ko uski pasand ki cheez dijiye.",
+            "Kuch hafte ke bahut chhote shishu ke liye booking se pehle call karke baat kar lijiye — kai baar ye sample bachchon ke aspatal me hi behtar hota hai, aur hum ye saaf bata denge."
+          ]
+        },
+        [
+          "Ghar par bachche ka sample kaise liya jaata hai, uski baaki baatein ",
+          { "text": "home collection guide", "href": "/blogs/home-sample-collection/deoria#bachchon-ka-sample-deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "bachchon-ka-blood-test-ghar-par-deoria",
+      "heading": "Deoria Me Bachchon Ka Blood Test Ghar Par Kaise Karayein",
+      "lead": "Bukhar me tapte bachche ko bus-tempo me le jaane se behtar hai sample ghar par.",
+      "blocks": [
+        "Beemar bachche ko dhoop ya baarish me Deoria Sadar le jaana, line me baithna aur doosre beemar logon ke beech intezaar — yahi sabse badi pareshani hai. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — bachche ki neend aur school ke hisaab se chuniye.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — bachchon ke doctor ko seedha bhej sakte hain.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Maa ka CBC ya Vitamin D bhi karana ho to ek hi visit me."
+          ]
+        },
+        [
+          "CBC, Vitamin D aur dengue test ke aaj ke daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hain — is guide me daam nahi likha. Stool, urine culture, HPLC ya Hepatitis A jaisi jaanch parche par ho to parche ki photo ke saath call kijiye. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Bachchon ka haemoglobin kitna hona chahiye?",
+      "answer": "WHO ke hisaab se 6 mahine se 5 saal tak 11 g/dL, 5 se 11 saal tak 11.5 g/dL, aur 12 se 14 saal tak 12 g/dL se kam haemoglobin ho to khoon ki kami maani jaati hai. Kam haemoglobin ki wajah jaanne ke liye doctor CBC ka MCV aur zaroorat par ferritin dekhte hain."
+    },
+    {
+      "question": "Bachche ko bukhar me kaun sa blood test karana chahiye?",
+      "answer": "2-3 din se zyada bukhar ho to aam taur par CBC. Dengue ka shak ho to bukhar ke pehle 5 din NS1 aur uske baad IgM. Thand-kanpkanpi ho to malaria test, aur 5-7 din ke bukhar me typhoid ki jaanch. Chhote bachche me bina khaansi-zukaam ka bukhar ho to urine test bhi. Jhatke ya behoshi ho to test nahi, seedha aspatal."
+    },
+    {
+      "question": "Kya bachchon ke blood test me fasting chahiye?",
+      "answer": "Zyadatar nahi. CBC, Vitamin D, thyroid, LFT, dengue aur malaria jaise test me fasting nahi lagti. Bachche ko paani aur doodh pilaate rahiye. Agar doctor ne fasting sugar ya lipid likha hai, to bachche ki umar ke hisaab se fasting kitni der, ye doctor se poochhiye."
+    },
+    {
+      "question": "Bachche se kitna khoon liya jaata hai?",
+      "answer": "Bahut thoda — umar aur test ke hisaab se kuch hi ml. Itna khoon bachche ka sharir jaldi poora kar leta hai. Kai test ek hi sample se ho jaate hain, isliye saare test ek hi baar me karana behtar hai."
+    },
+    {
+      "question": "Bachchon me pet ke keede ka test kaise hota hai?",
+      "answer": "Stool routine test me keede ke ande dekhe jaate hain. Ek sample me na dikhna keede na hone ka pakka saboot nahi hai. CBC me eosinophil zyada aur haemoglobin kam aana bhi keede ki taraf ishaara kar sakta hai. Sarkaari deworming abhiyaan me saal me do baar keede ki dawa di jaati hai."
+    },
+    {
+      "question": "Thalassemia ka test kab karana chahiye?",
+      "answer": "Jab bachche me haemoglobin kam ho, MCV bahut kam ho, aur iron dene ke baad bhi haemoglobin na sudhre — ya ghar me kisi ko thalassemia ho. Iske liye HPLC test hota hai. Shaadi se pehle bhi ye jaanch kaam ki hai, kyunki do trait wale mata-pita ke bachche ko gambhir thalassemia ho sakta hai."
+    },
+    {
+      "question": "Deoria me bachchon ka blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bachchon ka sample ghar par liya jaata hai. Booking ke waqt bachche ki umar zaroor bataiye. Bahut chhote shishu ke liye pehle call kijiye. Home collection free hai aur report 24 ghante ke andar aati hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me bachchon ke blood test ki baat hai. Booking, rate aur test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, Vitamin D aur har test ka daam" },
+          { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" },
+          { "href": "/blogs/dengue-typhoid-test/deoria", "label": "Dengue aur typhoid test — bukhar ke kis din kaun sa" },
+          { "href": "/blogs/home-sample-collection/deoria", "label": "Deoria me ghar par blood test kaise hota hai", "sub": "Bachche ka sample ghar par" }
+        ]
+      }
+    ]
+  }
+}

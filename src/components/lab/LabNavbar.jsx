@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { Phone } from "lucide-react"
 
 import { LAB_PHONE } from "@/data/lab/defaults"
+import NavCartButton from "@/components/lab/cart/NavCartButton"
 
 /**
  * The site's one header.
@@ -65,7 +66,7 @@ export default function LabNavbar() {
                 <div className="max-w-6xl mx-auto pl-3 pr-2 sm:px-5 md:px-8 flex items-center justify-between gap-2 sm:gap-3 h-16 sm:h-20">
 
                     {/* LOGO */}
-                    <Link href="/" className="flex items-center shrink-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with free sample collection">
+                    <Link href="/" className="flex items-center min-w-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with free sample collection">
                         {/* 320×90 is the artwork's real 3.56:1 ratio, and the file
                             is the trimmed WebP rather than the original PNG.
 
@@ -99,7 +100,7 @@ export default function LabNavbar() {
                             alt="MedicoBharat — lab test at home"
                             width={320}
                             height={90}
-                            className="h-9 sm:h-10 md:h-11 w-auto object-contain"
+                            className="h-9 sm:h-10 md:h-11 w-auto max-w-full object-contain object-left"
                             priority
                         />
                     </Link>
@@ -114,7 +115,7 @@ export default function LabNavbar() {
                         capsule with a line of copy, which read as a badge
                         making a claim; this reads as what it is, a heartbeat
                         ticking along behind the bar. Low opacity keeps it from
-                        competing with the call button, which is the only thing
+                        competing with the cart and call buttons, the only things
                         in this header anyone is meant to press.
 
                         The trace itself is animated in CSS — `.ecg-line` in
@@ -159,8 +160,9 @@ export default function LabNavbar() {
                         </svg>
                     </div>
 
-                    {/* RIGHT: the call block — the header's only action. */}
-                    <div className="flex items-center gap-1.5 shrink-0">
+                    {/* RIGHT: the cart, then the call block. */}
+                    <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+                        <NavCartButton />
                         <a
                             href={tel}
                             aria-label={`Call us at ${LAB_PHONE}`}
