@@ -1,61 +1,28 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import {
-  Activity,
   ArrowRight,
-  Beaker,
-  Bug,
-  ChartLine,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   Clock,
-  Droplets,
-  FlaskConical,
-  Gauge,
-  HeartPulse,
   PhoneCall,
-  Pill,
   Search,
   ShieldCheck,
-  Sparkles,
-  Stethoscope,
-  Sun,
-  Thermometer,
-  UserRound,
   X,
 } from "lucide-react";
 import LabBookingModal from "./LabBookingModal";
+import AddToCartControl from "./cart/AddToCartControl";
+import AddedToCartSheet from "./cart/AddedToCartSheet";
+import CartDrawer from "./cart/CartDrawer";
+import { cart, OPEN_CART_HASH, useCartItems } from "./cart/cartStore";
+import { iconFor, tint } from "./testIcons";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-/**
- * Icons cannot travel through Firestore, so a test stores its icon as a string
- * and this registry maps it back. An unknown name falls back to the flask
- * rather than crashing — a typo in the console is a wrong icon, never a 500.
- */
-const ICONS = {
-  gauge: Gauge,
-  droplets: Droplets,
-  activity: Activity,
-  "chart-line": ChartLine,
-  flask: FlaskConical,
-  beaker: Beaker,
-  "heart-pulse": HeartPulse,
-  stethoscope: Stethoscope,
-  sun: Sun,
-  pill: Pill,
-  bug: Bug,
-  sparkles: Sparkles,
-  "user-round": UserRound,
-  thermometer: Thermometer,
-  "shield-check": ShieldCheck,
-  clock: Clock,
-};
 
 // Cards per view — fractional values leave the next card peeking so the
 // swipe gesture is discoverable on touch devices.
@@ -66,19 +33,6 @@ const BREAKPOINTS = {
   768:  { slidesPerView: 3.2,  spaceBetween: 16 },
   1024: { slidesPerView: 4,    spaceBetween: 16 },
 };
-
-// Full class strings — Tailwind only picks up literals, never built-up names.
-// A tint typed wrong in Firestore falls back to emerald instead of putting the
-// literal "undefined" into a className.
-const TINT = {
-  rose: "bg-rose-50 text-rose-600 ring-rose-100",
-  emerald: "bg-emerald-50 text-emerald-600 ring-emerald-100",
-  amber: "bg-amber-50 text-amber-600 ring-amber-100",
-  sky: "bg-sky-50 text-sky-600 ring-sky-100",
-  violet: "bg-violet-50 text-violet-600 ring-violet-100",
-  teal: "bg-teal-50 text-teal-600 ring-teal-100",
-};
-const tint = (key) => TINT[key] ?? TINT.emerald;
 
 // Matching solid colour for the left rail on the phone rows.
 const RAIL = {
@@ -129,6 +83,25 @@ export default function LabServices({
   const [booking, setBooking] = useState(null);
   const [edge, setEdge] = useState({ begin: true, end: false });
   const swiperRef = useRef(null);
+
+  // Priced tests go in the cart; "Call for price" ones keep the enquiry form.
+  const cartItems = useCartItems();
+  const [cartOpen, setCartOpen] = useState(false);
+
+  // The header's cart icon opens this section's drawer. Arriving with #cart
+  // (the icon tapped on a page without a test section) opens it on load.
+  useEffect(() => {
+    const unregister = cart.registerOpener(() => setCartOpen(true));
+    if (window.location.hash === OPEN_CART_HASH) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      cart.open();
+    }
+    return unregister;
+  }, []);
+
+  // Phone "Added to cart" sheet — the test that was just added, or null.
+  const [justAdded, setJustAdded] = useState(null);
+  useEffect(() => cart.registerAnnouncer((test) => setJustAdded(test)), []);
 
   // Two ways in, never both at once: typing searches every test, and the chips
   // step aside while it does. A search that also silently obeys a chip the
@@ -281,19 +254,20 @@ export default function LabServices({
             <>
               <ul className="space-y-2.5">
                 {mobileList.map((t) => {
-                  const Icon = ICONS[t.icon] ?? FlaskConical;
+                  const Icon = iconFor(t.icon);
                   const save = t.price && t.mrp ? t.mrp - t.price : 0;
+                  const qty = t.price ? (cartItems[t.id] ?? 0) : 0;
 
                   return (
                     <li key={t.id}>
-                      {/* The whole row is the button. A thumb aiming at a small
-                          "Book" pill misses; a 100%-wide target does not. The
-                          pill stays as a span so the markup keeps one control. */}
-                      <button
-                        type="button"
-                        onClick={() => setBooking(t.name)}
-                        aria-label={`${t.price ? "Book" : "Enquire about"} ${t.name}`}
-                        className="group relative block w-full overflow-hidden rounded-2xl bg-white text-left ring-1 ring-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.05)] active:scale-[0.985] active:ring-emerald-300 transition-all duration-150"
+                      {/* A row, not one big button: a priced test carries its
+                          own add / quantity control, so the row itself can no
+                          longer be the tap target. Ring turns green once the
+                          test is in the cart. */}
+                      <div
+                        className={`group relative block w-full overflow-hidden rounded-2xl bg-white text-left shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all duration-150 ${
+                          qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80"
+                        }`}
                       >
                         {/* Colour rail — the row's category read at a glance */}
                         <span
@@ -401,12 +375,21 @@ export default function LabServices({
                             )}
                           </div>
 
-                          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)]">
-                            {t.price ? "Book Now" : "Enquire"}
-                            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.4} />
-                          </span>
+                          {t.price ? (
+                            <AddToCartControl test={t} qty={qty} />
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => setBooking(t.name)}
+                              aria-label={`Enquire about ${t.name}`}
+                              className="inline-flex h-9 shrink-0 cursor-pointer items-center gap-1 rounded-full bg-white px-4 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-300 active:scale-[0.97] transition-all"
+                            >
+                              Enquire
+                              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.4} />
+                            </button>
+                          )}
                         </div>
-                      </button>
+                      </div>
                     </li>
                   );
                 })}
@@ -490,11 +473,14 @@ export default function LabServices({
             className="pt-2 pb-5.5"
           >
           {visible.map((t) => {
-            const Icon = ICONS[t.icon] ?? FlaskConical;
+            const Icon = iconFor(t.icon);
+            const qty = t.price ? (cartItems[t.id] ?? 0) : 0;
             return (
               <SwiperSlide key={t.id} className="h-auto">
                 <article
-                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:ring-emerald-200 hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)] hover:-translate-y-0.5 transition-all duration-200"
+                  className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)] hover:-translate-y-0.5 transition-all duration-200 ${
+                    qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80 hover:ring-emerald-200"
+                  }`}
                 >
                   {/* Discount ribbon — only when an MRP is set on the test */}
                   {t.price && t.mrp && (
@@ -579,14 +565,20 @@ export default function LabServices({
                           : "Free home sample collection"}
                     </p>
 
-                    <button
-                      type="button"
-                      onClick={() => setBooking(t.name)}
-                      className="cursor-pointer mt-1.5 flex w-full items-center justify-center gap-1.5 rounded-lg bg-emerald-50 py-1.5 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-100 transition-all duration-200 group-hover:bg-linear-to-r group-hover:from-emerald-600 group-hover:to-teal-600 group-hover:text-white group-hover:ring-transparent active:scale-[0.98]"
-                    >
-                      {t.price ? "Book Now" : "Enquire Now"}
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </button>
+                    <div className="mt-2">
+                      {t.price ? (
+                        <AddToCartControl test={t} qty={qty} block />
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => setBooking(t.name)}
+                          className="cursor-pointer flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-emerald-50 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-100 transition-all duration-200 group-hover:bg-linear-to-r group-hover:from-emerald-600 group-hover:to-teal-600 group-hover:text-white group-hover:ring-transparent active:scale-[0.98]"
+                        >
+                          Enquire Now
+                          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </article>
               </SwiperSlide>
@@ -603,6 +595,24 @@ export default function LabServices({
           onClose={() => setBooking(null)}
         />
       )}
+
+      <AddedToCartSheet
+        test={justAdded}
+        onClose={() => setJustAdded(null)}
+        onGoToCart={() => {
+          setJustAdded(null);
+          setCartOpen(true);
+        }}
+      />
+      <CartDrawer
+        open={cartOpen}
+        onClose={() => setCartOpen(false)}
+        items={cartItems}
+        tests={tests}
+        city={city}
+        cityOptions={cityOptions}
+        phone={phone}
+      />
     </section>
   );
 }

@@ -103,7 +103,7 @@ export default function HomeHero({ hero, cityOptions }) {
             <LabLeadCard
               title={hero.formTitle}
               cityOptions={cityOptions}
-              className="max-w-85 mx-auto lg:mr-0"
+              className="max-w-xl mx-auto lg:max-w-85 lg:mr-0"
             />
           </div>
         </div>

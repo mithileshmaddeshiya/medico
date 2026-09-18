@@ -166,7 +166,7 @@ export const HOME_HERO = {
   // arranged. A text-free cut of the same photograph exists at
   // /navheroimage/heroempty.webp — switching back to it is what makes a
   // readable h1 possible again, and HomeHero has the note on how.
-  image: "/navheroimage/herosecimg.webp",
+  image: "/navheroimage/imageheorlab.png",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
@@ -219,7 +219,7 @@ export const HOME_HERO = {
    it describes. Where the two disagree, THE ARTWORK IS THE BUG. */
 export const HOME_BANNERS = [
   {
-    src: "/swipper/slider1.png",
+    src: "/swipper/slider12.png",
     /* Written as the sentence the artwork says, not as a description of the
        photograph — the alt is the only machine-readable copy of a banner.
 
@@ -237,7 +237,7 @@ export const HOME_BANNERS = [
   },
 
   {
-    src: "/swipper/slider2.png",
+    src: "/swipper/slider23.png",
 
     /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
        /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
@@ -267,6 +267,39 @@ export const HOME_BANNERS = [
     alt: "MedicoBharat Lab Test — Precise Testing, Better Health. Accurate reports you can trust, timely reports aur home sample collection.",
     href: "#book",
     title: "Book a lab test at home with free sample collection",
+  },
+
+  {
+    src: "/swipper/slider34.png",
+
+    /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
+       /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
+       into its bottom bar. We are not NABL accredited, and the rule at the top
+       of this file says we must never imply it — this is the same claim the
+       project has already stripped out of the FAQs and the city pages once.
+
+       This slide was held back for that reason and then switched on at the
+       owner's explicit direction, after the problem was put to them. It is
+       recorded here so the next person does not find it and assume nobody
+       noticed. It is a live claim on the site's most-linked page until the file
+       is replaced.
+
+       THE FIX IS ONE RE-EXPORT, not a code change: swap that badge for
+       something we can stand behind — "Free Home Collection", "Reports in 24
+       Hours" and "Trained Phlebotomist" all fit the same slot and are all
+       already claimed elsewhere on the site. Keep it 2242x701 so it still
+       matches slide one, and nothing here needs touching.
+
+       Everything else on the banner is fine: "Precise Testing. Better Health.",
+       "Timely Reports" and "Home Sample Collection" are all true.
+
+       The alt below deliberately does NOT carry the NABL line. An alt is the
+       machine-readable copy of a banner, and writing that claim into the DOM
+       would hand a crawler a false accreditation in text — the one form of it
+       that outlives a swapped image file. */
+    alt: "track your health",
+    href: "#book",
+    title: "Book a lab test at home collection",
   },
 ];
 

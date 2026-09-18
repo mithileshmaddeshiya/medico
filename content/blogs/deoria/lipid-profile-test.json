@@ -1,0 +1,296 @@
+{
+  "title": "Cholesterol Normal Range — Lipid Profile Test, Deoria",
+  "description": "LDL, HDL, triglycerides aur total cholesterol ki normal range, lipid profile report kaise padhein, fasting kitni der, aur Deoria me test ghar par kaise ho.",
+  "keywords": [
+    "cholesterol normal range",
+    "lipid profile test",
+    "lipid profile normal range",
+    "LDL cholesterol normal range",
+    "HDL cholesterol kam hone ka matlab",
+    "triglycerides normal range",
+    "cholesterol test fasting",
+    "VLDL normal range",
+    "cholesterol test in Deoria",
+    "lipid profile test at home Deoria"
+  ],
+  "publishedAt": "2026-09-17",
+  "order": 200,
+  "takeaways": [
+    "Lipid profile me chaar mukhya number hain: total cholesterol 200 se kam, LDL 100 se kam, HDL 40 (purush) ya 50 (mahila) se zyada, aur triglycerides 150 se kam — aam taur par theek maane jaate hain.",
+    "Sabse zaroori number LDL hai, lekin aapka LDL kitna hona chahiye ye aapke jokhim par tay hota hai. Sugar ya dil ki bimari wale ka lakshya kaafi neeche hota hai.",
+    "Sample se pehle 10-12 ghante sirf saada paani, aur ek din pehle sharaab nahi. Ek chai bhi triglycerides hila deti hai.",
+    "Cholesterol koi dard ya lakshan nahi deta. Seene me dard ho to lab test nahi — seedha aspatal."
+  ],
+  "sections": [
+    {
+      "id": "lipid-profile-kya-hai-deoria",
+      "heading": "Lipid Profile Test Kya Hai — Cholesterol Ki Jaanch Kyun Zaroori",
+      "lead": "Jo cheez mehsoos nahi hoti, uska ek hi pata hai — ye jaanch.",
+      "blocks": [
+        "Lipid profile khoon me charbi (fat) ke alag-alag hisson ko naapta hai. Cholesterol sharir ke liye zaroori bhi hai — hormone aur koshikaayein isi se banti hain — lekin jab \"bura\" cholesterol zyada ho jaata hai to wo dheere-dheere nason ki deewar par jamta hai. Saalon tak koi lakshan nahi hota, aur pehla ishaara kai baar seedha heart attack ya lakwa hota hai.",
+        "Deoria aur poore Purvanchal me ye jaanch ab sirf bade sheher walon ki nahi rahi. Sugar, BP, pet ke aas-paas badhta wazan, tambaku, aur ghar se door lambi shift ka baitha kaam — ye sab yahan bhi aam hain. Isi liye doctor ke parche par \"Lipid Profile\" ab CBC aur sugar ke baad sabse zyada likha jaane wala test hai.",
+        {
+          "table": {
+            "caption": "Lipid profile report ke hisse — kaun sa kya hai",
+            "head": ["Report me naam", "Aam bhasha me", "Kya maayne rakhta hai"],
+            "rows": [
+              ["Total Cholesterol", "Kul cholesterol", "Pehli nazar ka number — akela kaafi nahi"],
+              ["LDL Cholesterol", "\"Bura\" cholesterol", "Nason me jamta hai — ilaaj isi par tay hota hai"],
+              ["HDL Cholesterol", "\"Achha\" cholesterol", "Nason se cholesterol hatata hai — zyada behtar"],
+              ["Triglycerides (TG)", "Khoon me charbi", "Meetha, maida, sharaab aur sugar se badhta hai"],
+              ["VLDL", "Triglyceride le jaane wala hissa", "Aksar TG ÷ 5 se nikala jaata hai"],
+              ["Non-HDL Cholesterol", "Total – HDL", "Saare bure hisse ek saath — TG zyada ho tab kaam ka"],
+              ["TC/HDL ratio, LDL/HDL ratio", "Anupaat", "Jokhim ka andaaza — kam behtar"]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cholesterol-normal-range-table-deoria",
+      "heading": "Cholesterol Normal Range — LDL, HDL Aur Triglycerides Ki Table",
+      "lead": "Ye vayaskon ke liye aam taur par maani jaane wali seema hai (mg/dL me).",
+      "blocks": [
+        "Lipid profile ki range doosre test jaisi \"normal\" aur \"abnormal\" me nahi, balki darjon me bati hoti hai — kyunki cholesterol jitna kam, jokhim utna kam. Report par bhi aksar yahi darje likhe hote hain: desirable, borderline, high.",
+        {
+          "table": {
+            "caption": "Lipid profile normal range (vayask, mg/dL) — aam taur par",
+            "head": ["Test", "Theek (desirable)", "Borderline", "Zyada (high)"],
+            "rows": [
+              ["Total Cholesterol", "200 se kam", "200 – 239", "240 ya zyada"],
+              ["LDL Cholesterol", "100 se kam", "130 – 159 (100–129 lagbhag theek)", "160 ya zyada; 190+ bahut zyada"],
+              ["HDL Cholesterol", "60 ya zyada achha", "Purush 40–59, mahila 50–59", "Kam hona bura: purush 40 se kam, mahila 50 se kam"],
+              ["Triglycerides", "150 se kam", "150 – 199", "200 – 499; 500+ bahut zyada"],
+              ["Non-HDL Cholesterol", "130 se kam", "130 – 159", "160 ya zyada"],
+              ["VLDL", "30 se kam", "—", "30 se zyada"]
+            ]
+          }
+        },
+        "HDL akela aisa number hai jahan zyada hona achha hai. Bharat me ek aam pattern ye milta hai ki total cholesterol theek-thaak ho, lekin HDL kam aur triglycerides zyada — aur ye pattern bhi dil ke liye utna hi jokhim wala hai. Isliye sirf total cholesterol dekh kar \"sab theek hai\" maan lena galti hai.",
+        {
+          "note": {
+            "title": "Mmol/L me report ho to",
+            "text": "Kuch reports mmol/L me hoti hain. Cholesterol ke liye mmol/L ko 38.67 se guna karein to mg/dL milta hai (5.2 mmol/L ≈ 200 mg/dL). Triglycerides ke liye 88.57 se guna karein (1.7 mmol/L ≈ 150 mg/dL). Unit dekhe bina do report mat milaiye.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ldl-kitna-hona-chahiye-deoria",
+      "heading": "LDL Kitna Hona Chahiye? Har Kisi Ka Lakshya Ek Nahi",
+      "lead": "Ek swasth jawan aur ek sugar ke mareez ki \"normal\" LDL alag hai.",
+      "blocks": [
+        "Report par chhapi \"100 se kam\" wali seema aam aadmi ke liye hai. Doctor ilaaj ka lakshya aapke kul jokhim ke hisaab se tay karte hain — umar, sugar, BP, dhumrapaan, ghar me kam umar me dil ki bimari, aur pehle heart attack ya lakwa hua ho ya nahi.",
+        {
+          "table": {
+            "caption": "LDL ka lakshya — aam taur par jokhim ke hisaab se (doctor tay karte hain)",
+            "head": ["Kaun", "Aam taur par LDL lakshya"],
+            "rows": [
+              ["Koi bimari nahi, kam jokhim", "100 – 130 se kam"],
+              ["Sugar, BP ya kai jokhim ek saath", "100 se kam, kai baar 70 se kam"],
+              ["Pehle heart attack, stent, bypass ya lakwa", "Aksar 55 – 70 se kam"],
+              ["LDL 190 ya zyada, bina kisi wajah", "Khaandaani cholesterol ki jaanch — ghar walon ki bhi"]
+            ]
+          }
+        },
+        "LDL 190 se upar ho, ya ghar me 55 saal se pehle kisi purush ya 65 se pehle kisi mahila ko heart attack hua ho, to ye khaandaani (familial) cholesterol ho sakta hai. Aise me sirf apna nahi, bhai-behen aur bachchon ka lipid profile bhi karana samajhdaari hai."
+      ]
+    },
+    {
+      "id": "triglycerides-high-deoria",
+      "heading": "Triglycerides High Aaye — Sabse Pehle Ye Teen Baatein Jaanchiye",
+      "lead": "Triglycerides sabse jaldi badalne wala number hai — ghabrahat se pehle sample dekhiye.",
+      "blocks": [
+        {
+          "list": [
+            "Kya sample sach me khaali pet tha? Raat 11 baje ka khaana, subah ki chai ya ek biscuit — triglycerides 50-100 tak upar dikha sakte hain.",
+            "Kya pichhli shaam sharaab li thi? Ek shaam ki sharaab bhi agli subah ka TG badha deti hai.",
+            "Kya sugar control me hai? Bina control ki sugar triglycerides badhane ki sabse aam wajah hai — HbA1c saath me dekhiye."
+          ]
+        },
+        "In teeno ke baad bhi TG 200 se zyada aaye, to meetha, maida, chawal ki zyada matra, meethe peya aur sharaab kam karna sabse jaldi asar dikhata hai. Sust thyroid, kidney ki bimari aur kuch dawaiyan bhi TG aur LDL badhati hain — isliye doctor kabhi TSH aur KFT bhi saath likhte hain.",
+        {
+          "note": {
+            "title": "Triglycerides 500 se upar",
+            "text": "Itna zyada TG pancreas me sujan (pancreatitis) ka khatra badhata hai. Report aate hi doctor ko dikhaiye. Aur saath me pet ke upari hisse me tez dard jo peeth tak jaaye, ya lagatar ulti ho — to seedha aspatal.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Sugar ka kaun sa test aur HbA1c ki range kya hai, wo ",
+          { "text": "HbA1c aur sugar level chart", "href": "/blogs/hba1c-sugar-test/deoria" },
+          " me hai. Sust thyroid cholesterol kaise badhata hai, ",
+          { "text": "thyroid test guide", "href": "/blogs/thyroid-test/deoria#kise-thyroid-test-karana-chahiye-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "cholesterol-test-fasting-deoria",
+      "heading": "Cholesterol Test Se Pehle Fasting Kitni Der? Taiyaari Ke Niyam",
+      "lead": "Galat taiyaari ka nateeja — dobara sample, dobara intezaar.",
+      "blocks": [
+        "Aaj kai guidelines bina fasting ke lipid profile ko bhi maanti hain, kyunki total cholesterol aur HDL khaane se kam badalte hain. Lekin triglycerides aur calculated LDL khaane ke baad kaafi badal jaate hain. Isliye jab tak doctor na kahe, 10 se 12 ghante ki fasting wala subah ka sample hi sabse bharosemand hai — aur pichhli report se tulna bhi tabhi seedhi hoti hai.",
+        {
+          "table": {
+            "caption": "Lipid profile se pehle — kya karein, kya nahi",
+            "head": ["Kya", "Niyam"],
+            "rows": [
+              ["Khaana", "Raat 8-9 baje tak halka khaana, phir 10-12 ghante kuch nahi"],
+              ["Paani", "Saada paani peete rahiye — mana nahi, zaroori hai"],
+              ["Chai, doodh, biscuit, gutkha", "Sample tak kuch nahi"],
+              ["Sharaab", "Kam se kam 24 ghante pehle se nahi"],
+              ["Rozana ki dawa (BP, sugar, cholesterol)", "Doctor ne mana na kiya ho to band mat kijiye; sugar ki dawa sample ke baad naashte ke saath"],
+              ["Bhaari mehnat / gym", "Ek din pehle zyada nahi"],
+              ["14 ghante se zyada bhookh", "Nahi — isse bhi report bigadti hai"]
+            ]
+          }
+        },
+        [
+          "Fasting wale sabhi test ek hi subah kaise nipatayein, wo ",
+          { "text": "Deoria service page ke taiyaari wale hisse", "href": "/lab-test/deoria#prepare-for-test-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "kise-kab-lipid-profile-deoria",
+      "heading": "Lipid Profile Kise Aur Kitni Baar Karana Chahiye",
+      "lead": "Pehli jaanch ki umar aur dohraane ka waqt — ek table me.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Lipid profile kitni baar — aam salah (doctor badal sakte hain)",
+            "head": ["Kaun", "Kitni baar"],
+            "rows": [
+              ["20 saal ke upar, koi jokhim nahi", "Har 4 – 5 saal me ek baar"],
+              ["35-40 ke upar", "Har 1 – 2 saal"],
+              ["Sugar, BP, motapa, tambaku", "Saal me ek baar"],
+              ["Cholesterol ki dawa (statin) nayi shuru", "6 – 12 hafte baad, phir har 6 – 12 mahine"],
+              ["Ghar me kam umar me heart attack ya bahut zyada cholesterol", "Jawani me hi ek baar, bachchon ka bhi doctor ki salah se"],
+              ["PCOD ya thyroid", "Doctor ki salah se, aam taur par saal me ek baar"]
+            ]
+          }
+        },
+        "Deoria se bahut log saal me ek-do baar hi ghar aate hain — Delhi, Mumbai, Punjab, Gujarat ya khadi desh se. Bahar ka khaana, lambi shift aur kam chalna-phirna lipid badhane ki sabse aam kahani hai. Chhutti ke pehle hafte subah ka ek slot le kar lipid, sugar aur liver ek saath kara lena, aur report doctor ko dikha kar hi wapas jaana — yahi sabse vyavhaarik tareeka hai.",
+        [
+          "PCOD me cholesterol kyun dekha jaata hai, wo ",
+          { "text": "PCOD test guide", "href": "/blogs/pcod-hormone-test/deoria#pcod-sugar-cholesterol-deoria" },
+          " me hai. Sugar aur BP walon ke liye kidney ki jaanch ",
+          { "text": "LFT KFT guide", "href": "/blogs/liver-kidney-test/deoria#sugar-bp-wale-mareez-kft-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "statin-dawa-aur-report-deoria",
+      "heading": "Cholesterol Ki Dawa Chal Rahi Hai — Report Normal Aaye To Kya Band Karein?",
+      "lead": "Seedha jawab: nahi, khud se nahi.",
+      "blocks": [
+        "Statin jaisi cholesterol ki dawa lene ke baad report normal aana ye nahi batata ki bimari chali gayi — ye batata hai ki dawa kaam kar rahi hai. Dawa band karte hi kuch hafton me LDL wapas purane star par aa jaata hai. Dawa kam karni ho ya badalni ho, to faisla doctor ka hai.",
+        {
+          "list": [
+            "Dawa shuru hone ke 6-12 hafte baad lipid profile — kabhi doctor LFT bhi saath likhte hain.",
+            "Maanspeshiyon me naya aur tez dard ho, ya peshab ka rang gehra ho, to doctor ko bataiye — tab CPK jaisi jaanch likhi ja sakti hai.",
+            "Ghar ke nuskhe, lehsun ya kisi kadhe ke bharose dawa mat chhodiye. Khaan-paan aur chalna dawa ke saath chalte hain, uski jagah nahi.",
+            "Har baar ek hi lab se jaanch — taaki farak dawa ka dikhe, machine ka nahi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seene-me-dard-lab-nahi-deoria",
+      "heading": "Seene Me Dard, Saans Phoolna — Ye Lab Test Ka Waqt Nahi Hai",
+      "lead": "Lipid profile bhavishya ka jokhim batata hai, aaj ka heart attack nahi.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Turant aspatal jaaiye",
+            "text": "Seene me dabaav ya dard jo baayen haath, jabde ya peeth tak jaaye, saath me paseena, ghabrahat, saans phoolna ya chakkar — ye heart attack ke lakshan ho sakte hain. Lab test book mat kijiye, home collection ka intezaar mat kijiye. Seedha najdeeki aspatal ya 108 par call kijiye.",
+            "tone": "warn"
+          }
+        },
+        "Ek aur baat saaf rakhni zaroori hai: MedicoBharat Deoria me ECG, ECHO, TMT, X-ray ya ultrasound nahi karta. Ye machine par hone wali jaanch hain aur inke liye centre jaana hi padega. Hum khoon aur peshab ka sample ghar par lete hain. Dil ki jaanch ke liye doctor jo blood test likhein — lipid profile, sugar, HbA1c, KFT — wo ghar par ho jaate hain, aur report le kar aap ECG ya cardiologist ke paas ja sakte hain."
+      ]
+    },
+    {
+      "id": "lipid-profile-ghar-par-deoria",
+      "heading": "Deoria Me Lipid Profile Test Ghar Par Kaise Karayein",
+      "lead": "Fasting wala test hai — isliye subah 6 baje wala slot sabse kaam ka.",
+      "blocks": [
+        "Lipid profile ke liye 10-12 ghante bhookhe rehkar bus ya tempo se Deoria Sadar jaana, line me lagna aur phir report ke liye doosra chakkar — isi wajah se log ye test taalte rehte hain. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Slot subah 6 baje se — sample dijiye aur turant naashta kar lijiye.",
+            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Lipid ke saath sugar, HbA1c, LFT ya thyroid bhi likha ho to sab ek hi sample me."
+          ]
+        },
+        [
+          "Lipid Profile ka aaj ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hai — is guide me daam nahi likha. Lipid, sugar, liver aur kidney ek saath chahiye to package sasta padta hai; ",
+          { "text": "full body checkup guide", "href": "/blogs/full-body-checkup/deoria" },
+          " dekh lijiye. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Cholesterol ki normal range kya hai?",
+      "answer": "Vayaskon me aam taur par total cholesterol 200 mg/dL se kam, LDL 100 se kam, HDL purushon me 40 aur mahilaon me 50 se zyada (60 se upar achha), aur triglycerides 150 se kam theek maane jaate hain. Sugar ya dil ki bimari walon ke liye LDL ka lakshya aur neeche hota hai, jo doctor tay karte hain."
+    },
+    {
+      "question": "Lipid profile test ke liye kitne ghante fasting chahiye?",
+      "answer": "Aam taur par 10 se 12 ghante, jismein sirf saada paani piya ja sakta hai. Chai, doodh, biscuit ya gutkha bhi nahi. Test se kam se kam 24 ghante pehle sharaab na lein. 14 ghante se zyada bhookhe rehna bhi theek nahi."
+    },
+    {
+      "question": "HDL kam hone ka matlab kya hai?",
+      "answer": "HDL \"achha\" cholesterol hai jo nason se cholesterol hatata hai. Purushon me 40 aur mahilaon me 50 mg/dL se kam HDL dil ki bimari ka jokhim badhata hai, chahe total cholesterol theek ho. Tambaku chhodna, roz tez chalna, wazan kam karna aur triglycerides ghatana HDL sudhaarne me madad karte hain."
+    },
+    {
+      "question": "Triglycerides high aane ke kya kaaran hain?",
+      "answer": "Sabse aam kaaran hain: sample ke waqt poori fasting na hona, pichhli shaam sharaab, bina control ki sugar, zyada meetha-maida-chawal, motapa, sust thyroid aur kuch dawaiyan. Triglycerides 500 se upar ho to pancreatitis ka khatra hota hai, isliye turant doctor ko dikhaiye."
+    },
+    {
+      "question": "Cholesterol ki dawa se report normal aa gayi, kya dawa band kar dein?",
+      "answer": "Nahi, khud se nahi. Report isliye normal hai kyunki dawa kaam kar rahi hai; band karte hi LDL kuch hafton me wapas badh jaata hai. Dose kam karna ya badalna doctor ka faisla hai."
+    },
+    {
+      "question": "Kya lipid profile se heart attack ka pata chalta hai?",
+      "answer": "Nahi. Lipid profile bhavishya me dil ki bimari ka jokhim batata hai, aaj ka heart attack nahi. Seene me dard, paseena ya saans phoolne par lab test ka intezaar mat kijiye — seedha aspatal jaaiye ya 108 par call kijiye."
+    },
+    {
+      "question": "Deoria me lipid profile test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me lipid profile ka sample ghar par liya jaata hai. Slot subah 6 baje se, home collection free, aur report 24 ghante ke andar WhatsApp tatha email par PDF me. Daam Deoria ki rate list par dekhiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me lipid profile report padhne ka tareeka hai. Booking, rate aur test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Lipid Profile aur har test ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Fasting aur sample se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/hba1c-sugar-test/deoria", "label": "HbA1c normal range aur sugar level chart", "sub": "Triglycerides ke saath sugar bhi dekhiye" },
+          { "href": "/blogs/thyroid-test/deoria", "label": "Thyroid test normal range — TSH, T3, T4" },
+          { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — normal range aur fasting" }
+        ]
+      }
+    ]
+  }
+}

@@ -462,6 +462,28 @@ const LAB_CITY_SEED = [
               label: "HIV aur Hepatitis B test — kab karayein",
             },
             {
+              href: "/blogs/thyroid-test/deoria",
+              label: "Thyroid test normal range — TSH, T3, T4",
+              sub: "TSH high ya low ka matlab",
+            },
+            {
+              href: "/blogs/lipid-profile-test/deoria",
+              label: "Cholesterol normal range — lipid profile report",
+              sub: "LDL, HDL aur triglycerides ek table me",
+            },
+            {
+              href: "/blogs/hba1c-sugar-test/deoria",
+              label: "HbA1c normal range aur sugar level chart",
+            },
+            {
+              href: "/blogs/joint-pain-test/deoria",
+              label: "Jodon ke dard ka test — RA factor, CRP, ESR",
+            },
+            {
+              href: "/blogs/child-blood-test/deoria",
+              label: "Bachchon ka blood test — kab aur kaun sa",
+            },
+            {
               href: "/blogs/lab-test/varanasi",
               label: "Kaun sa test kab karayein — poori guide",
               sub: "Shikayat, umar aur mausam ke hisaab se",

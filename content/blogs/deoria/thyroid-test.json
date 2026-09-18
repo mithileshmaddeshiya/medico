@@ -1,0 +1,307 @@
+{
+  "title": "Thyroid Test Normal Range — TSH, T3, T4 Report, Deoria",
+  "description": "TSH, T3 aur T4 ki normal range kya hai, TSH high ya low ka matlab, thyroid test khaali pet ya nahi, aur Deoria me thyroid test ghar par kaise karayein.",
+  "keywords": [
+    "thyroid test normal range",
+    "TSH normal range",
+    "TSH high ka matlab",
+    "TSH low ka matlab",
+    "T3 T4 TSH test",
+    "thyroid profile test",
+    "thyroid test khali pet",
+    "hypothyroidism test",
+    "anti TPO test",
+    "thyroid test in Deoria",
+    "thyroid test at home Deoria"
+  ],
+  "publishedAt": "2026-09-17",
+  "order": 190,
+  "takeaways": [
+    "Thyroid ki report me sabse pehle TSH dekha jaata hai. Vayaskon me ye aam taur par 0.4 se 4.5 mIU/L ke aas-paas hota hai — lekin aakhri range wahi hai jo aapki report par chhapi hai.",
+    "TSH ulta chalta hai: TSH zyada matlab thyroid kam kaam kar raha hai (hypothyroid), TSH kam matlab thyroid zyada kaam kar raha hai (hyperthyroid).",
+    "Thyroid test ke liye fasting zaroori nahi. Bas thyroid ki goli sample dene ke baad lijiye, aur biotin wali multivitamin 2-3 din pehle rok dijiye.",
+    "Dawa ka dose badla hai to TSH 6 se 8 hafte baad dohraiye — usse pehle karaya test sirf uljhan badhata hai."
+  ],
+  "sections": [
+    {
+      "id": "thyroid-test-kya-hai-deoria",
+      "heading": "Thyroid Test Kya Hai — TSH, T3 Aur T4 Teen Alag Number Kyun",
+      "lead": "Gale ki ek chhoti granthi poore sharir ki raftaar tay karti hai. Test usi raftaar ko naapta hai.",
+      "blocks": [
+        "Thyroid gale ke saamne ek titli jaisi granthi hai jo do hormone banati hai — T4 (thyroxine) aur T3. Ye hormone tay karte hain ki sharir khaana kitni tezi se jalata hai, dil kitna tez chalta hai, garmi-sardi kaisi lagti hai, aur man kaisa rehta hai. In hormone ko kitna banana hai, iska hukm dimaag ki pituitary granthi TSH (Thyroid Stimulating Hormone) bhej kar deti hai.",
+        "Isliye thyroid ki jaanch me teen number aate hain. TSH batata hai ki dimaag thyroid se kitna kaam maang raha hai, aur T3-T4 batate hain ki thyroid asal me kitna de raha hai. Deoria me doctor ke parche par ye do tarah se likha milta hai — sirf \"TSH\", ya \"Thyroid Profile\" / \"T3, T4, TSH\". Pehli screening me akela TSH kaafi hota hai; TSH bahar nikle ya doctor poori tasveer dekhna chahe to teeno.",
+        {
+          "table": {
+            "caption": "Thyroid report ke naam — kaun sa kya batata hai",
+            "head": ["Report me naam", "Kya hai", "Kab dekha jaata hai"],
+            "rows": [
+              ["TSH", "Dimaag ka hukm — thyroid ko kitna kaam karna hai", "Har thyroid jaanch me sabse pehle"],
+              ["Total T4 / Free T4 (FT4)", "Thyroid ka mukhya hormone", "TSH bahar ho to, ya dawa ka asar dekhne ke liye"],
+              ["Total T3 / Free T3 (FT3)", "Zyada taakatwar hormone", "Khaas kar hyperthyroid (TSH kam) me"],
+              ["Anti-TPO", "Thyroid ke khilaaf antibody", "TSH border par ho, ya pregnancy plan ho — wajah jaanne ke liye"]
+            ]
+          }
+        },
+        "\"Free\" wala T3-T4 wo hissa hai jo sach me sharir ke kaam aata hai, aur \"Total\" me protein se chipka hissa bhi gina jaata hai. Pregnancy ya kuch dawaon me total badal jaata hai jabki free theek rehta hai — isliye doctor kabhi Free T4 alag se likhte hain."
+      ]
+    },
+    {
+      "id": "tsh-normal-range-table-deoria",
+      "heading": "Thyroid Test Normal Range — TSH, T3 Aur T4 Ki Table",
+      "lead": "Ye aam range hai. Machine aur method ke hisaab se aapki report ki range thodi alag hogi.",
+      "blocks": [
+        "Neeche vayaskon ki woh range hai jo zyadatar labs ki report me isi ke aas-paas milti hai. TSH ki upari seema par sabse zyada farak dikhta hai — kisi lab me 4.2, kisi me 4.5, kisi me 5.0 tak. Isliye apni report par \"Biological Reference Interval\" wala column hi aakhri maaniye.",
+        {
+          "table": {
+            "caption": "Thyroid test normal range (vayask, bina pregnancy) — aam taur par",
+            "head": ["Test", "Aam normal range", "Unit"],
+            "rows": [
+              ["TSH", "0.4 – 4.5", "mIU/L (µIU/mL — dono ek hi)"],
+              ["Total T4", "5 – 12", "µg/dL"],
+              ["Free T4 (FT4)", "0.8 – 1.8", "ng/dL"],
+              ["Total T3", "80 – 200", "ng/dL"],
+              ["Free T3 (FT3)", "2.3 – 4.2", "pg/mL"],
+              ["Anti-TPO", "Aam taur par 35 se kam (lab ke hisaab se)", "IU/mL"]
+            ]
+          }
+        },
+        "Teen samooh me range alag padhi jaati hai. Pregnancy me TSH ki range har trimester me neeche rakhi jaati hai. 70 saal ke upar TSH thoda upar rehna aksar umar ki baat hoti hai, bimari nahi. Aur naye janme shishu aur chhote bachchon me TSH ki range vayaskon se kaafi alag hoti hai.",
+        [
+          "Pregnancy me thyroid ki range aur uske niyam ",
+          { "text": "pregnancy thyroid test wale hisse", "href": "/blogs/pregnancy-blood-test/deoria#pregnancy-me-thyroid-test-deoria" },
+          " me alag se likhe hain."
+        ]
+      ]
+    },
+    {
+      "id": "tsh-high-low-matlab-deoria",
+      "heading": "TSH High Ya Low Ka Matlab — Report Ke Chaar Aam Pattern",
+      "lead": "TSH ko hamesha T4 ke saath padhiye. Dono milkar hi kahani poori karte hain.",
+      "blocks": [
+        "TSH ka ek seedha niyam yaad rakhiye: ye thyroid ka ulta chalta hai. Thyroid sust ho to dimaag zyada TSH bhej kar use jagata hai — TSH badh jaata hai. Thyroid zaroorat se zyada chale to dimaag TSH band kar deta hai — TSH gir jaata hai.",
+        {
+          "table": {
+            "caption": "TSH aur T4 saath me — aam taur par kis taraf ishaara",
+            "head": ["TSH", "Free T4 / T4", "Aam taur par matlab", "Aam lakshan"],
+            "rows": [
+              ["Zyada", "Kam", "Hypothyroidism — thyroid sust", "Thakan, wazan badhna, thand lagna, kabz, baal jhadna, periods zyada"],
+              ["Zyada", "Normal", "Subclinical hypothyroid — shuruaati ya halka", "Aksar koi lakshan nahi, ya halki thakan"],
+              ["Kam", "Zyada", "Hyperthyroidism — thyroid tez", "Dil tez dhadakna, wazan girna, garmi lagna, haath kaanpna, bechaini"],
+              ["Kam", "Normal", "Subclinical hyperthyroid — halka", "Kabhi-kabhi dhadkan; bujurgon me dhyaan zaroori"]
+            ]
+          }
+        },
+        "Bharat me sabse aam pattern pehla hai — TSH zyada, yaani hypothyroidism — aur ye mahilaon me purushon se kai guna zyada milta hai. Iski sabse aam wajah autoimmune thyroid (Hashimoto) hai, jismein sharir apni hi thyroid ke khilaaf antibody bana leta hai. Anti-TPO test isi ko pakadta hai.",
+        {
+          "note": {
+            "title": "Ek report se dawa shuru nahi hoti",
+            "text": "TSH 5-8 ke beech ho aur T4 normal ho, to doctor aksar 6 se 12 hafte baad TSH dohraate hain, kyunki bukhar, beemari ya neend ki kami ke baad TSH kuch waqt ke liye upar aa sakta hai. TSH 10 se upar ho, ya pregnancy plan ho, to faisla jaldi hota hai. Dawa shuru karni hai ya nahi — ye doctor tay karte hain.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thyroid-test-khali-pet-deoria",
+      "heading": "Thyroid Test Khaali Pet Hota Hai? Sample Se Pehle Ki Taiyaari",
+      "lead": "Fasting nahi chahiye — lekin kuch cheezein report badal deti hain.",
+      "blocks": [
+        "Akele thyroid test ke liye khaali pet rehna zaroori nahi hai. Phir bhi subah ka sample lena behtar hai, kyunki TSH raat me thoda badhta hai aur dopahar tak thoda ghatta hai. Har baar lagbhag ek hi samay par sample denge to do report ki tulna seedhi hogi. Aur agar thyroid ke saath sugar ya lipid bhi likha hai, to un par fasting lagegi — tab sabka sample subah ek saath.",
+        {
+          "table": {
+            "caption": "Thyroid test se pehle — kya asar daalta hai",
+            "head": ["Baat", "Asar", "Kya karein"],
+            "rows": [
+              ["Thyroid ki goli (Thyronorm, Eltroxin aadi)", "Goli ke turant baad T4 upar dikh sakta hai", "Test wale din goli sample dene ke baad lijiye"],
+              ["Biotin / baal-naakhun wali multivitamin", "TSH jhootha kam aur T4 jhootha zyada aa sakta hai", "2-3 din pehle band kijiye, doctor ko bataiye"],
+              ["Haal ki tez beemari ya bukhar", "TSH kuch hafte upar-neeche rehta hai", "Theek hone ke baad test, ya doctor ko bataiye"],
+              ["Steroid ya kuch aur dawaiyan", "TSH dab sakta hai", "Dawa band mat kijiye, naam bataiye"],
+              ["Alag-alag lab", "Range aur method badal jaata hai", "Follow-up ek hi lab se"]
+            ]
+          }
+        },
+        [
+          "Sample se pehle ki baaki taiyaari — paani, dawa aur fasting ke niyam — ",
+          { "text": "Deoria service page ke taiyaari wale hisse", "href": "/lab-test/deoria#prepare-for-test-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "kise-thyroid-test-karana-chahiye-deoria",
+      "heading": "Kise Thyroid Test Karana Chahiye — Lakshan Aur Jokhim Ki Soochi",
+      "lead": "Thyroid ke lakshan dheere aate hain, isliye log unhe umar ya kaam ki thakan samajh lete hain.",
+      "blocks": [
+        "Deoria me thakan, wazan badhna aur baal jhadna itne aam shikayat hain ki log sabse aakhir me thyroid ke baare me sochte hain. Neeche wali kisi bhi baat par ek baar TSH kara lena sasta aur seedha raasta hai.",
+        {
+          "list": [
+            "Lagatar thakan aur neend, jo aaraam se theek na ho.",
+            "Bina khaana badhaye wazan badhna, ya bina koshish ke wazan girna.",
+            "Periods zyada, kam, ya aniyamit; pregnancy na theharna; ya baar-baar garbhpaat.",
+            "Baal jhadna, chamdi sookhi, chehre ya aankhon ke neeche sujan.",
+            "Dil ki dhadkan tez, haath kaanpna, bahut garmi lagna.",
+            "Gale me sujan ya gaanth dikhna.",
+            "Ghar me maa, behen ya kisi aur ko thyroid ki bimari.",
+            "Pregnancy plan ho, ya pregnancy ki pehli jaanch ho.",
+            "Sugar (khaas kar Type 1) ya koi autoimmune bimari ho.",
+            "Cholesterol badha hua aaye — sust thyroid bhi LDL badhata hai."
+          ]
+        },
+        [
+          "Periods ki gadbad me thyroid ke saath prolactin aur baaki hormone kaise dekhe jaate hain, wo ",
+          { "text": "PCOD test guide", "href": "/blogs/pcod-hormone-test/deoria#thyroid-prolactin-pcod-deoria" },
+          " me hai. Thakan me thyroid ke saath khoon aur vitamin ki jaanch ",
+          { "text": "Vitamin D aur B12 guide", "href": "/blogs/vitamin-b12-d-test/deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "thyroid-dawa-follow-up-deoria",
+      "heading": "Thyroid Ki Dawa Chal Rahi Hai — TSH Kab-Kab Dohrayein",
+      "lead": "Is bimari me asli kaam pehli report nahi, dose ka theek baithna hai.",
+      "blocks": [
+        "Hypothyroidism ki dawa aam taur par lambi chalti hai, aur dose TSH dekh kar hi tay hota hai. TSH dawa badalne ke turant baad nahi badalta — naya santulan banne me kuch hafte lagte hain. Isliye jaldi test karane se dose baar-baar galat disha me badalta hai.",
+        {
+          "table": {
+            "caption": "Thyroid ki dawa par TSH kab dohrayein — aam niyam",
+            "head": ["Haalat", "TSH kab"],
+            "rows": [
+              ["Dawa nayi shuru hui", "6 – 8 hafte baad"],
+              ["Dose badla gaya", "6 – 8 hafte baad"],
+              ["Dose theek baith gaya", "Har 6 – 12 mahine"],
+              ["Pregnancy ho gayi", "Turant doctor ko bataiye — jaanch jaldi-jaldi hoti hai"],
+              ["Brand ya goli badli", "Aksar 6 – 8 hafte baad ek baar"]
+            ]
+          }
+        },
+        {
+          "list": [
+            "Goli subah khaali pet, saade paani se, aur naashte se kareeb aadha-ek ghanta pehle — roz ek hi tarah.",
+            "Calcium, iron ki goli aur antacid thyroid ki goli se kuch ghante door rakhiye, warna goli poori nahi lagti.",
+            "TSH theek aaya hai to dawa khud band mat kijiye — theek isliye aaya hai kyunki dawa chal rahi hai.",
+            "Har report ek hi lab se, aur purani PDF sambhaal kar — doctor do report ka farak dekhte hain."
+          ]
+        },
+        [
+          "Ek hi lab se follow-up kyun, aur report ke header me kya dekhein — ",
+          { "text": "report aur ek hi lab", "href": "/blogs/pathology-lab/deoria#report-aur-ek-hi-lab-deoria" },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "gala-sujan-goitre-deoria",
+      "heading": "Gale Me Sujan Ya Gaanth — Blood Test Kya Batata Hai Aur Kya Nahi",
+      "lead": "Gaanth ka size aur banawat khoon se nahi, jaanch machine se dikhti hai.",
+      "blocks": [
+        "Terai aur uske aas-paas ke ilaakon me pehle ghenga (goitre) kaafi dikhta tha, aur aayodin wale namak ke baad ye kam hua hai. Aaj bhi gale me sujan ya gaanth dikhe to TSH pehla kadam hai — isse pata chalta hai ki thyroid ka kaam badla hai ya nahi.",
+        "Lekin gaanth kaisi hai, kitni badi hai, aur usme kuch aur jaanch chahiye ya nahi — ye blood test nahi bata sakta. Iske liye doctor aksar gale ki sonography likhte hain, aur zaroorat par FNAC. Ye dono machine aur doctor par hote hain.",
+        {
+          "note": {
+            "title": "Sonography hamari service nahi hai",
+            "text": "MedicoBharat Deoria me sirf khoon aur peshab ke sample ghar par leta hai. X-ray, ultrasound/sonography aur ECG hum nahi karte — inke liye aapko imaging centre jaana hi hoga. Sahi kram ye hai: TSH ghar par kara lijiye, aur report le kar sonography ke liye jaaiye, taaki doctor ek hi visit me dono dekh lein.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thyroid-test-ghar-par-deoria",
+      "heading": "Deoria Me Thyroid Test Ghar Par Kaise Karayein",
+      "lead": "Fasting nahi chahiye, isliye slot jab suvidha ho — bas subah ho to behtar.",
+      "blocks": [
+        "TSH aur Thyroid Profile dono khoon ke sample par hote hain, aur sample kahan liya gaya isse number nahi badalta. Isliye Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home collection free hai, aur trained phlebotomist ID card ke saath aata hai.",
+            "Slot subah 6 baje se shuru — thyroid ki goli sample ke baad aaraam se le lijiye.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample lene ke waqt, cash ya UPI se.",
+            "Ghar me maa aur behen ka bhi TSH karana ho, to sabka ek hi visit me ho jaata hai."
+          ]
+        },
+        [
+          "Thyroid Profile ka aaj ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hai — is guide me jaan-boojh kar daam nahi likha. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " dekhiye. Anti-TPO jaisi jaanch parche par likhi ho to booking ke waqt parche ki photo ke saath poochh lijiye. Sugar aur lipid ke saath thyroid ek saath kaise dekhein, wo ",
+          { "text": "sugar, thyroid aur lipid guide", "href": "/blogs/diabetes-thyroid-test/deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-thyroid-deoria",
+      "heading": "Thyroid Report Aa Gayi — Doctor Se Ye Teen Sawaal Poochhiye",
+      "lead": "Report ke saath ye sawaal likh kar le jaaiye.",
+      "blocks": [
+        {
+          "list": [
+            "Mera TSH range ke bahar hai — kya T4 aur Anti-TPO bhi dekhna chahiye?",
+            "Dawa abhi shuru karni hai, ya kuch hafte baad test dohra kar faisla hoga?",
+            "Agla TSH kab karana hai, aur goli kis samay leni hai?"
+          ]
+        },
+        [
+          "Lakshan ke hisaab se kaun sa test pehle karayein, uski poori guide ",
+          { "text": "yahan hai", "href": "/blogs/symptom-test/deoria#thyroid-test-tsh-price-deoria" },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "TSH ki normal range kya hai?",
+      "answer": "Vayaskon me TSH aam taur par 0.4 se 4.5 mIU/L ke aas-paas hota hai. Har lab ki upari seema thodi alag hoti hai — kahin 4.2, kahin 5.0 — isliye apni report par chhapi reference range hi maaniye. Pregnancy, bujurgon aur bachchon me range alag padhi jaati hai."
+    },
+    {
+      "question": "TSH high hone ka matlab kya hai?",
+      "answer": "TSH zyada hone ka aam matlab hai ki thyroid sust hai (hypothyroidism) aur dimaag use zyada hukm bhej raha hai. Agar T4 bhi kam hai to ye poora hypothyroid hai; T4 normal hai to halka ya shuruaati (subclinical). Beemari ke baad TSH thodi der ke liye bhi badh sakta hai, isliye doctor aksar dohraa kar faisla karte hain."
+    },
+    {
+      "question": "TSH low hone ka matlab kya hai?",
+      "answer": "TSH kam hone ka aam matlab hai ki thyroid zaroorat se zyada hormone bana raha hai (hyperthyroidism). Dil tez dhadakna, wazan girna, garmi lagna aur haath kaanpna iske lakshan hain. Thyroid ki dawa ka dose zyada ho to bhi TSH gir jaata hai. T3 aur T4 saath dekh kar doctor tay karte hain."
+    },
+    {
+      "question": "Thyroid test khaali pet karana zaroori hai?",
+      "answer": "Nahi. Akele thyroid test ke liye fasting zaroori nahi hai. Phir bhi subah ka sample behtar hai aur har baar lagbhag ek hi samay par dena chahiye. Thyroid ki goli sample dene ke baad lijiye, aur biotin wali multivitamin 2-3 din pehle band kar dijiye."
+    },
+    {
+      "question": "Thyroid ki dawa ke baad TSH kab dohrana chahiye?",
+      "answer": "Dawa shuru hone ya dose badalne ke 6 se 8 hafte baad. Dose theek baith jaane ke baad aam taur par har 6 se 12 mahine me. Pregnancy ho jaaye to turant doctor ko bataiye, kyunki tab jaanch jaldi-jaldi hoti hai."
+    },
+    {
+      "question": "TSH aur Thyroid Profile me kya farak hai?",
+      "answer": "TSH ek akela test hai jo screening aur dawa ke follow-up me kaafi hota hai. Thyroid Profile me T3, T4 aur TSH teeno aate hain, aur ye tab likha jaata hai jab TSH bahar ho ya doctor poori tasveer dekhna chahein. Kaun sa chahiye, ye parche se tay hota hai."
+    },
+    {
+      "question": "Deoria me thyroid test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me TSH aur Thyroid Profile ka sample ghar par liya jaata hai. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me thyroid report padhne ka tareeka hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Thyroid Profile aur har test ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile report", "sub": "Sust thyroid bhi LDL badhata hai" },
+          { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "Pregnancy me thyroid ki alag range" }
+        ]
+      }
+    ]
+  }
+}

@@ -616,6 +616,26 @@
             "label": "HIV aur Hepatitis B test — kab karayein"
           },
           {
+            "href": "/blogs/thyroid-test/deoria",
+            "label": "Thyroid test normal range — TSH, T3, T4"
+          },
+          {
+            "href": "/blogs/lipid-profile-test/deoria",
+            "label": "Cholesterol normal range — lipid profile report"
+          },
+          {
+            "href": "/blogs/hba1c-sugar-test/deoria",
+            "label": "HbA1c normal range aur sugar level chart"
+          },
+          {
+            "href": "/blogs/joint-pain-test/deoria",
+            "label": "Jodon ke dard ka test — RA factor, CRP, ESR"
+          },
+          {
+            "href": "/blogs/child-blood-test/deoria",
+            "label": "Bachchon ka blood test — kab aur kaun sa"
+          },
+          {
             "href": "/blogs/full-body-checkup/varanasi",
             "label": "Full body checkup me kya hona chahiye",
             "sub": "Package me kya chhoot jaata hai, umar ke hisaab se kaun sa level"

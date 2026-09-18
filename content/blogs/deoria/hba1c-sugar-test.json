@@ -1,0 +1,289 @@
+{
+  "title": "HbA1c Normal Range Aur Sugar Level Chart — Deoria",
+  "description": "HbA1c normal range, fasting aur PP sugar kitni honi chahiye, HbA1c se average sugar ki table, aur Deoria me sugar test ghar par kaise karayein.",
+  "keywords": [
+    "HbA1c normal range",
+    "sugar level chart",
+    "normal sugar level",
+    "fasting sugar normal range",
+    "PP sugar normal range",
+    "HbA1c test kya hai",
+    "prediabetes range",
+    "HbA1c to average sugar",
+    "sugar test in Deoria",
+    "HbA1c test at home Deoria"
+  ],
+  "publishedAt": "2026-09-17",
+  "order": 210,
+  "takeaways": [
+    "HbA1c 5.7% se kam normal, 5.7 se 6.4% prediabetes, aur 6.5% ya zyada diabetes ki seema hai.",
+    "Fasting sugar 100 mg/dL se kam normal, 100–125 prediabetes, 126 ya zyada diabetes. Khaane ke 2 ghante baad 140 se kam normal, 200 ya zyada diabetes.",
+    "HbA1c pichhle 2-3 mahine ki average sugar batata hai aur iske liye fasting nahi chahiye. Khoon ki kami ya haal me khoon chadha ho to HbA1c galat aa sakta hai.",
+    "Ek report se diabetes tay nahi hoti — lakshan na hon to doctor aksar doosre din ya doosre test se pushti karte hain."
+  ],
+  "sections": [
+    {
+      "id": "hba1c-test-kya-hai-deoria",
+      "heading": "HbA1c Test Kya Hai — Teen Mahine Ki Sugar Ek Number Me",
+      "lead": "Glucometer aaj ki sugar batata hai. HbA1c batata hai ki pichhle teen mahine kaise gaye.",
+      "blocks": [
+        "Khoon ke laal kan me haemoglobin hota hai. Khoon me jitni zyada sugar ghoomti hai, utni hi zyada sugar is haemoglobin se chipak jaati hai — aur laal kan kareeb 3 mahine jeete hain. HbA1c isi chipke hue hisse ka pratishat hai. Isliye ye ek din ki nahi, pichhle 8 se 12 hafte ki average sugar ka aaina hai.",
+        "Iska sabse bada faayda: HbA1c ke liye khaali pet rehna zaroori nahi, aur kal raat ki mithai ya aaj subah ki chai isse nahi badalti. Deoria me jinka khaane ka koi tay samay nahi — kheti, dukaan, safar — unke liye yahi sabse vyavhaarik aur bharosemand sugar test hai.",
+        {
+          "table": {
+            "caption": "Sugar ke teen test — kaun sa kya batata hai",
+            "head": ["Test", "Kya naapta hai", "Fasting", "Kab kaam ka"],
+            "rows": [
+              ["Fasting Blood Sugar (FBS)", "Us subah ki sugar", "8 – 10 ghante", "Screening, dawa ka asar"],
+              ["PP (Post Prandial) Sugar", "Khaane ke 2 ghante baad", "Khaana khaakar", "Khaane ke baad sugar kitni uchhalti hai"],
+              ["HbA1c", "2-3 mahine ki average", "Zaroori nahi", "Screening, aur har 3 mahine ka control"],
+              ["Random Blood Sugar (RBS)", "Kisi bhi waqt", "Nahi", "Lakshan hon tab turant"]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "hba1c-normal-range-chart-deoria",
+      "heading": "HbA1c Normal Range Aur Sugar Level Chart — Ek Table Me",
+      "lead": "Vayaskon ke liye jaanch ki woh seema jispar doctor diabetes tay karte hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Normal, prediabetes aur diabetes — vayaskon ke liye (bina pregnancy)",
+            "head": ["Test", "Normal", "Prediabetes", "Diabetes"],
+            "rows": [
+              ["HbA1c", "5.7% se kam", "5.7 – 6.4%", "6.5% ya zyada"],
+              ["Fasting sugar", "70 – 99 mg/dL", "100 – 125 mg/dL", "126 mg/dL ya zyada"],
+              ["Khaane ke 2 ghante baad (PP / OGTT)", "140 mg/dL se kam", "140 – 199 mg/dL", "200 mg/dL ya zyada"],
+              ["Random sugar", "—", "—", "200 ya zyada, saath me lakshan"]
+            ]
+          }
+        },
+        "\"Umar ke hisaab se sugar level\" bahut search hota hai, lekin vayaskon me diabetes tay karne ki seema umar se nahi badalti — 30 saal ho ya 70, fasting 126 ka matlab wahi hai. Umar se jo badalta hai wo hai ilaaj ka lakshya: bujurgon me, jinhe sugar girne ka khatra zyada hai, doctor aksar HbA1c ka lakshya thoda dheela rakhte hain.",
+        "Pregnancy me sugar ki seema alag aur kadi hoti hai, aur wahan GTT alag tareeke se hota hai.",
+        [
+          "Pregnancy ki sugar jaanch ",
+          { "text": "GTT wale hisse", "href": "/blogs/pregnancy-blood-test/deoria#pregnancy-me-sugar-test-gtt-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "hba1c-to-average-sugar-deoria",
+      "heading": "HbA1c Ko Average Sugar Me Kaise Samjhein — Badalne Ki Table",
+      "lead": "7% sunne me chhota lagta hai. Average sugar me dekhiye to baat saaf hoti hai.",
+      "blocks": [
+        "HbA1c ka har 1% lagbhag 28-29 mg/dL average sugar ke barabar hai. Ye table report ko ghar walon ko samjhaane me sabse kaam aati hai.",
+        {
+          "table": {
+            "caption": "HbA1c aur lagbhag average sugar (eAG)",
+            "head": ["HbA1c", "Lagbhag average sugar (mg/dL)", "Aam matlab"],
+            "rows": [
+              ["5%", "97", "Normal"],
+              ["5.7%", "117", "Prediabetes shuru"],
+              ["6%", "126", "Prediabetes"],
+              ["6.5%", "140", "Diabetes ki seema"],
+              ["7%", "154", "Kai mareezon ka aam lakshya"],
+              ["8%", "183", "Control kamzor"],
+              ["9%", "212", "Kharab control"],
+              ["10%", "240", "Bahut kharab — doctor se jaldi milein"],
+              ["12%", "298", "Turant doctor"]
+            ]
+          }
+        },
+        "Isi wajah se glucometer ki subah ki reading theek aane par bhi HbA1c zyada aa sakta hai — kyunki din bhar, khaas kar khaane ke baad, sugar upar rehti hai jo subah ki ungli wali reading nahi pakadti.",
+        [
+          "Machine aur lab ki reading me farak kyun aata hai, wo ",
+          { "text": "glucometer vs lab guide", "href": "/blogs/glucometer-sugar-test/deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "hba1c-galat-kab-deoria",
+      "heading": "HbA1c Report Galat Kab Aati Hai — Khoon Ki Kami Wale Dhyaan Dein",
+      "lead": "Purvanchal me ye baat khaas hai, kyunki yahan khoon ki kami bahut aam hai.",
+      "blocks": [
+        "HbA1c laal kan par tika hai. Isliye jahan laal kan ki umar ya banawat badli ho, wahan HbA1c asli sugar se upar ya neeche aa sakta hai. Deoria me mahilaon aur kishoriyon me khoon ki kami aam hai, aur thalassemia trait bhi milta hai — isliye ye list sirf kitaabi nahi.",
+        {
+          "table": {
+            "caption": "HbA1c par asar daalne wali haalat",
+            "head": ["Haalat", "HbA1c par asar", "Doctor aksar kya dekhte hain"],
+            "rows": [
+              ["Iron ki kami (anaemia)", "Jhootha zyada aa sakta hai", "CBC, ferritin; fasting aur PP sugar saath"],
+              ["Haal me khoon chadha ho (2-3 mahine me)", "Asli halat nahi batata", "Fasting/PP sugar par bharosa"],
+              ["Khoon tootna, bleeding, dialysis", "Jhootha kam aa sakta hai", "Glucose readings"],
+              ["Thalassemia ya haemoglobin ka variant", "Method ke hisaab se galat", "Lab se method; doosre test"],
+              ["Pregnancy", "Kam aa sakta hai", "GTT"],
+              ["Kidney ki lambi bimari", "Upar-neeche", "Glucose readings saath"]
+            ]
+          }
+        },
+        [
+          "Kam haemoglobin me aage kaun sa test, wo ",
+          { "text": "CBC guide", "href": "/blogs/cbc-test/deoria#haemoglobin-kam-mcv-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "pp-sugar-sahi-tareeka-deoria",
+      "heading": "Fasting Aur PP Sugar Test Kaise Dein — Sabse Zyada Galti Yahin Hoti Hai",
+      "lead": "Ghadi galat chali to report bhi galat.",
+      "blocks": [
+        {
+          "list": [
+            "Fasting: raat ka khaana 9 baje tak, phir 8-10 ghante sirf saada paani. Subah chai nahi, toffee nahi, gutkha nahi.",
+            "Sugar ki goli ya insulin: fasting sample se pehle nahi — sample ke baad naashte ke saath. Doctor ne alag bataya ho to wahi maaniye.",
+            "PP: ghadi pehle kaur (bite) se chalti hai, khaana khatm hone se nahi. Theek 2 ghante baad sample.",
+            "PP ke liye khaana wahi roz jaisa — us din bahut kam ya bahut zyada khaane se report aapki asli halat nahi dikhayegi.",
+            "Beech ke 2 ghante me chai, phal ya kuch aur nahi, aur so jaana ya bhaari kaam bhi nahi.",
+            "Beemari, bukhar ya steroid ki dawa ke dauraan sugar kuch waqt ke liye badh sakti hai — doctor ko bataiye."
+          ]
+        },
+        "Ghar par ye kaam aasan hai: fasting sample subah 6-7 baje, phir naashta, aur phlebotomist ke saath PP ka samay tay kar lijiye. Booking ke waqt hi bata dijiye ki fasting aur PP dono chahiye."
+      ]
+    },
+    {
+      "id": "diabetes-mareez-hba1c-lakshya-deoria",
+      "heading": "Sugar Ke Mareez — HbA1c Kitna Rakhein Aur Kitni Baar Karayein",
+      "lead": "Diagnosis ek din ka kaam hai. Control saal bhar ka.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Diabetes me HbA1c — aam lakshya aur jaanch ka samay (doctor tay karte hain)",
+            "head": ["Kaun", "Aam HbA1c lakshya", "Kitni baar"],
+            "rows": [
+              ["Zyadatar vayask mareez", "7% se kam", "Control nahi hai to har 3 mahine"],
+              ["Jawan, naya diabetes, koi aur bimari nahi", "Kai baar 6.5% se kam", "Har 3 mahine"],
+              ["Bujurg, baar-baar sugar girna, dil-kidney ki bimari", "Aksar 7.5 – 8% tak", "Har 3 – 6 mahine"],
+              ["Control stable", "Lakshya par", "Har 6 mahine"]
+            ]
+          }
+        },
+        "HbA1c ke saath saal me ek baar lipid profile, KFT aur urine microalbumin, aur aankh ke parde ki jaanch bhi diabetes ki routine ka hissa hai. Microalbumin wo test hai jo kidney par asar sabse pehle pakadta hai, aur log sabse zyada isi ko chhodte hain.",
+        [
+          "Sugar walon ki kidney jaanch ",
+          { "text": "LFT KFT guide", "href": "/blogs/liver-kidney-test/deoria#sugar-bp-wale-mareez-kft-deoria" },
+          " me hai, aur cholesterol ki range ",
+          { "text": "lipid profile guide", "href": "/blogs/lipid-profile-test/deoria" },
+          " me. HbA1c ka follow-up plan ",
+          { "text": "sugar-thyroid guide", "href": "/blogs/diabetes-thyroid-test/deoria#hba1c-follow-up-deoria" },
+          " me bhi hai."
+        ]
+      ]
+    },
+    {
+      "id": "prediabetes-aaya-deoria",
+      "heading": "Report Me Prediabetes Aaya — Ye Chetavani Hai, Faisla Nahi",
+      "lead": "Is star par kiya gaya badlaav sabse zyada kaam karta hai.",
+      "blocks": [
+        "HbA1c 5.7-6.4% ya fasting 100-125 ka matlab abhi diabetes nahi, lekin sharir sugar sambhaalne me thakne laga hai. Achhi khabar ye hai ki is star par wazan thoda kam karna, roz 30-40 minute tez chalna, aur meetha, maida, meethe peya tatha chawal ki matra ghatana kaafi logon ko diabetes tak pahunchne se rok deta hai.",
+        {
+          "list": [
+            "Saal me ek baar HbA1c ya fasting sugar dohraiye — zyada jokhim ho to jaldi.",
+            "Saath me lipid profile aur BP bhi dekhiye; ye teeno aksar saath chalte hain.",
+            "PCOD, pregnancy me pehle sugar badhi thi, ya ghar me diabetes hai — to niyamit jaanch aur zaroori.",
+            "Bina doctor ke sugar ki goli shuru mat kijiye."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sugar-emergency-deoria",
+      "heading": "Kab Report Ka Intezaar Nahi Karna — Sugar Ki Emergency",
+      "lead": "Lab test aaj ki emergency ka jawab nahi hai.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Turant aspatal",
+            "text": "Sugar ke mareez me behoshi, bahut ghabrahat-paseena-kaanpna (sugar girna), ya tez pyaas ke saath ulti, pet dard, tez saans aur sustpan (sugar bahut badhna) — lab test book mat kijiye. Sugar girne ka shak ho aur mareez nigal sakta ho to turant cheeni ya glucose dijiye, aur aspatal le jaaiye.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Machine me sugar bahut kam aaye to kya karein, wo ",
+          { "text": "glucometer guide ke is hisse", "href": "/blogs/glucometer-sugar-test/deoria#kam-sugar-emergency-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "hba1c-ghar-par-deoria",
+      "heading": "Deoria Me HbA1c Aur Sugar Test Ghar Par Kaise Karayein",
+      "lead": "HbA1c ke liye fasting nahi — fasting sugar saath ho to subah ka slot.",
+      "blocks": [
+        "Har teen mahine HbA1c ke liye bujurg mareez ko Deoria Sadar le jaana hi wo wajah hai jisse follow-up chhoot jaata hai. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — fasting sugar ke baad dawa aur naashta turant.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — pichhli report ke saath rakhiye.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "HbA1c, fasting sugar, lipid aur KFT ek hi sample visit me."
+          ]
+        },
+        [
+          "Blood Sugar aur HbA1c ka aaj ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hai — is guide me daam nahi likha. Booking ke liye ",
+          { "text": "Deoria ka service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " dekhiye."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "HbA1c ki normal range kya hai?",
+      "answer": "HbA1c 5.7% se kam normal hai, 5.7 se 6.4% prediabetes, aur 6.5% ya usse zyada diabetes ki seema hai. Diabetes ke zyadatar mareezon ka aam lakshya 7% se kam hota hai, lekin bujurgon aur kuch mareezon me doctor ise alag tay karte hain."
+    },
+    {
+      "question": "Normal sugar level kitna hona chahiye?",
+      "answer": "Vayaskon me fasting sugar 70 se 99 mg/dL aur khaane ke 2 ghante baad 140 mg/dL se kam normal hai. Fasting 100-125 prediabetes aur 126 ya zyada diabetes ki seema hai. Khaane ke 2 ghante baad 200 ya zyada bhi diabetes ki seema hai."
+    },
+    {
+      "question": "HbA1c test ke liye khaali pet rehna zaroori hai?",
+      "answer": "Nahi. HbA1c pichhle 2-3 mahine ki average sugar batata hai, isliye aaj ka khaana isse nahi badalta. Lekin agar saath me fasting sugar ya lipid profile bhi hai, to unke liye 8-12 ghante ki fasting chahiye."
+    },
+    {
+      "question": "HbA1c 7 ka matlab kitni sugar hai?",
+      "answer": "HbA1c 7% lagbhag 154 mg/dL ki average sugar ke barabar hai. 8% lagbhag 183, 9% lagbhag 212 aur 10% lagbhag 240 mg/dL hai. Har 1% HbA1c lagbhag 28-29 mg/dL average sugar ka farak hai."
+    },
+    {
+      "question": "Kya umar ke saath normal sugar level badalta hai?",
+      "answer": "Vayaskon me diabetes tay karne ki seema umar se nahi badalti — fasting 126 aur HbA1c 6.5% har umar me wahi hai. Umar ke saath ilaaj ka lakshya badal sakta hai: bujurgon me sugar girne ka khatra dekhte hue doctor aksar HbA1c ka lakshya thoda dheela rakhte hain."
+    },
+    {
+      "question": "HbA1c kitne mahine me dobara karana chahiye?",
+      "answer": "Diabetes control me nahi hai ya dawa badli hai to har 3 mahine. Control stable hai to har 6 mahine. Prediabetes me saal me ek baar, ya doctor ki salah ke hisaab se."
+    },
+    {
+      "question": "Deoria me HbA1c test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me HbA1c aur sugar test ka sample ghar par liya jaata hai. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me sugar aur HbA1c ki range hai. Booking, rate aur test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Blood Sugar, HbA1c aur har test ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Fasting aur sample se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/glucometer-sugar-test/deoria", "label": "Glucometer vs lab sugar test — farak kyun", "sub": "Machine ki reading kab galat aati hai" },
+          { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile report" },
+          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch — kitni baar" }
+        ]
+      }
+    ]
+  }
+}
