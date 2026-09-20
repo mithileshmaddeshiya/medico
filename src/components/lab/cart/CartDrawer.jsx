@@ -53,10 +53,10 @@ function loadCheckout() {
 }
 
 const inputBase =
-  "w-full rounded-xl border bg-white px-3.5 py-2.5 text-[14px] text-slate-900 placeholder:text-slate-400 outline-none transition-all focus:ring-4";
+  "w-full border bg-white px-3.5 py-2 text-[14px] text-slate-900 placeholder:text-slate-400 outline-none transition-colors focus:ring-2";
 const inputOk = `${inputBase} border-slate-200 focus:border-emerald-500 focus:ring-emerald-500/15`;
 const inputBad = `${inputBase} border-red-400 bg-red-50/40 focus:border-red-500 focus:ring-red-500/15`;
-const labelClass = "mb-1.5 block text-[12.5px] font-semibold text-slate-700";
+const labelClass = "mb-1 block text-[12px] font-semibold text-slate-700";
 
 const STEPS = ["Cart", "Details", "Confirmed"];
 
@@ -261,10 +261,10 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
       <div
         ref={panelRef}
         tabIndex={-1}
-        className="lab-pop-in absolute inset-x-0 bottom-0 flex h-[92dvh] flex-col overflow-hidden rounded-t-3xl bg-slate-50 shadow-2xl outline-none sm:inset-y-0 sm:left-auto sm:right-0 sm:h-auto sm:w-110 sm:rounded-none sm:rounded-l-3xl"
+        className="lab-pop-in absolute inset-x-0 bottom-0 flex h-[92dvh] flex-col overflow-hidden border-slate-200 bg-slate-100 shadow-2xl outline-none sm:inset-y-0 sm:left-auto sm:right-0 sm:h-auto sm:w-110 sm:border-l"
       >
         {/* ── HEADER ─────────────────────────────────────────────── */}
-        <div className="shrink-0 border-b border-slate-200/70 bg-white px-4 pb-3 pt-2 sm:px-5 sm:pt-4">
+        <div className="shrink-0 border-b border-slate-200 bg-white px-4 pb-3 pt-2 sm:px-5 sm:pt-4">
           <div aria-hidden className="mx-auto mb-2 h-1.5 w-10 rounded-full bg-slate-200 sm:hidden" />
           <div className="flex items-center gap-2">
             {step === 1 && (
@@ -272,12 +272,12 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                 type="button"
                 onClick={() => !busy && setStep(0)}
                 aria-label="Back to cart"
-                className="-ml-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 hover:text-slate-800"
+                className="-ml-1 flex h-8 w-8 cursor-pointer items-center justify-center text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-800"
               >
                 <ArrowLeft className="h-4.5 w-4.5" strokeWidth={2.3} />
               </button>
             )}
-            <h2 className="flex-1 text-[17px] font-extrabold tracking-tight text-slate-900">
+            <h2 className="flex-1 text-[17px] font-bold tracking-tight text-slate-900">
               {step === 0 ? "Your Cart" : step === 1 ? "Checkout" : "Booking Confirmed"}
               {step === 0 && bill.count > 0 && (
                 <span className="ml-2 align-middle text-[12px] font-semibold text-slate-400">
@@ -290,7 +290,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
               onClick={close}
               disabled={busy}
               aria-label="Close cart"
-              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-slate-100 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-800 disabled:opacity-40"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center border border-slate-200 bg-white text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 disabled:opacity-40"
             >
               <X className="h-4 w-4" strokeWidth={2.4} />
             </button>
@@ -325,10 +325,10 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
         {/* ── STEP 0: CART ───────────────────────────────────────── */}
         {step === 0 && (
           <>
-            <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 sm:px-5">
+            <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-3 sm:px-5">
               {bill.count === 0 ? (
                 <div className="flex flex-col items-center px-4 py-12 text-center">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/50">
+                  <span className="flex h-16 w-16 items-center justify-center border border-slate-200 bg-white text-slate-400">
                     <ShoppingBag className="h-7 w-7" strokeWidth={1.8} />
                   </span>
                   <p className="mt-5 text-[16px] font-bold text-slate-900">Your cart is empty</p>
@@ -338,7 +338,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                   <button
                     type="button"
                     onClick={close}
-                    className="mt-5 cursor-pointer rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_8px_18px_-10px_rgba(5,150,105,0.9)] active:scale-[0.98]"
+                    className="mt-5 cursor-pointer bg-emerald-600 px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-emerald-700"
                   >
                     Browse tests
                   </button>
@@ -346,13 +346,13 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
               ) : (
                 <>
                   {/* ITEMS — one card, rows split by dividers, like a real cart */}
-                  <section className="overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200/80">
-                    <p className="border-b border-slate-100 px-3.5 py-2.5 text-[12.5px] font-bold text-slate-900">
+                  <section className="overflow-hidden border border-slate-200 bg-white">
+                    <p className="border-b border-slate-200 bg-slate-50 px-3.5 py-2.5 text-[11.5px] font-semibold uppercase tracking-wider text-slate-500">
                       Tests in your cart{" "}
-                      <span className="font-semibold text-slate-400">({bill.count})</span>
+                      <span className="text-slate-400">({bill.count})</span>
                     </p>
 
-                    <ul className="divide-y divide-slate-100">
+                    <ul className="divide-y divide-slate-200">
                       {bill.lines.map((line) => {
                         const t = byId.get(line.id);
                         const Icon = iconFor(t?.icon);
@@ -363,14 +363,14 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                         return (
                           <li key={line.id} className="px-3.5 py-3">
                             <div className="flex gap-3">
-                              <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ring-1 ${tint(t?.tint)}`}>
+                              <span className={`flex h-11 w-11 shrink-0 items-center justify-center ring-1 ${tint(t?.tint)}`}>
                                 <Icon className="h-5.5 w-5.5" strokeWidth={1.8} />
                               </span>
                               <div className="min-w-0 flex-1">
                                 <p className="text-[14px] font-bold leading-snug text-slate-900">{line.name}</p>
                                 {t?.sub && <p className="truncate text-[11.5px] text-slate-500">{t.sub}</p>}
                                 <span
-                                  className={`mt-1 inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                                  className={`mt-1 inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] font-medium ${
                                     line.fasting ? "bg-amber-50 text-amber-700" : "bg-slate-100 text-slate-600"
                                   }`}
                                 >
@@ -382,7 +382,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
 
                             <div className="mt-2.5 flex items-center justify-between gap-2 pl-15">
                               <div className="flex flex-wrap items-baseline gap-x-1.5">
-                                <span className="text-[15.5px] font-extrabold tabular-nums text-slate-900">
+                                <span className="text-[15.5px] font-bold tabular-nums text-slate-900">
                                   {inr(line.lineTotal)}
                                 </span>
                                 {off > 0 && (
@@ -398,17 +398,17 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                               <div
                                 role="group"
                                 aria-label={`Persons for ${line.name}`}
-                                className="inline-flex h-8 shrink-0 items-center overflow-hidden rounded-lg ring-1 ring-emerald-300"
+                                className="inline-flex h-8 shrink-0 items-center overflow-hidden border border-slate-300"
                               >
                                 <button
                                   type="button"
                                   onClick={() => cart.setQty(line.id, line.qty - 1)}
                                   aria-label={`One less ${line.name}`}
-                                  className="flex h-full w-8 cursor-pointer items-center justify-center text-emerald-700 hover:bg-emerald-50"
+                                  className="flex h-full w-8 cursor-pointer items-center justify-center text-slate-600 transition-colors hover:bg-slate-100"
                                 >
                                   <Minus className="h-3.5 w-3.5" strokeWidth={2.6} />
                                 </button>
-                                <span className="flex h-full w-7 items-center justify-center bg-emerald-50 text-[13px] font-bold tabular-nums text-emerald-800">
+                                <span className="flex h-full w-8 items-center justify-center border-x border-slate-300 text-[13px] font-semibold tabular-nums text-slate-900">
                                   {line.qty}
                                 </span>
                                 <button
@@ -416,7 +416,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                                   onClick={() => cart.setQty(line.id, line.qty + 1)}
                                   disabled={line.qty >= MAX_QTY}
                                   aria-label={`One more ${line.name}`}
-                                  className="flex h-full w-8 cursor-pointer items-center justify-center text-emerald-700 hover:bg-emerald-50 disabled:cursor-not-allowed disabled:text-emerald-300"
+                                  className="flex h-full w-8 cursor-pointer items-center justify-center text-slate-600 transition-colors hover:bg-slate-100 disabled:cursor-not-allowed disabled:text-slate-300"
                                 >
                                   <Plus className="h-3.5 w-3.5" strokeWidth={2.6} />
                                 </button>
@@ -431,7 +431,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                                 type="button"
                                 onClick={() => cart.remove(line.id)}
                                 aria-label={`Remove ${line.name}`}
-                                className="inline-flex cursor-pointer items-center gap-1 rounded-md px-1.5 py-1 text-[11.5px] font-semibold text-slate-500 transition-colors hover:bg-red-50 hover:text-red-600"
+                                className="inline-flex cursor-pointer items-center gap-1 px-1.5 py-1 text-[11.5px] font-medium text-slate-500 transition-colors hover:bg-red-50 hover:text-red-600"
                               >
                                 <Trash2 className="h-3.5 w-3.5" strokeWidth={2.2} />
                                 Remove
@@ -445,7 +445,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     <button
                       type="button"
                       onClick={close}
-                      className="flex w-full cursor-pointer items-center justify-center gap-1.5 border-t border-slate-100 py-3 text-[13px] font-bold text-emerald-700 transition-colors hover:bg-emerald-50/60"
+                      className="flex w-full cursor-pointer items-center justify-center gap-1.5 border-t border-slate-200 py-3 text-[13px] font-semibold text-emerald-700 transition-colors hover:bg-emerald-50/60"
                     >
                       <Plus className="h-4 w-4" strokeWidth={2.6} />
                       Add more tests
@@ -453,8 +453,8 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                   </section>
 
                   {/* PRICE DETAILS */}
-                  <section ref={billRef} className="mt-3 scroll-mt-3 overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200/80">
-                    <p className="border-b border-slate-100 px-3.5 py-2.5 text-[12px] font-bold uppercase tracking-wide text-slate-500">
+                  <section ref={billRef} className="mt-3 scroll-mt-3 overflow-hidden border border-slate-200 bg-white">
+                    <p className="border-b border-slate-200 bg-slate-50 px-3.5 py-2.5 text-[11.5px] font-semibold uppercase tracking-wider text-slate-500">
                       Price details
                     </p>
                     <dl className="space-y-2.5 px-3.5 py-3 text-[13.5px]">
@@ -474,13 +474,13 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                         <dt>Home collection charges</dt>
                         <dd className="font-semibold text-emerald-600">FREE</dd>
                       </div>
-                      <div className="flex justify-between border-t border-dashed border-slate-200 pt-3 text-[15.5px] font-extrabold text-slate-900">
+                      <div className="flex justify-between border-t border-slate-200 pt-3 text-[15px] font-bold text-slate-900">
                         <dt>Total amount</dt>
                         <dd className="tabular-nums">{inr(bill.total)}</dd>
                       </div>
                     </dl>
                     {bill.savings > 0 && (
-                      <p className="flex items-center gap-2 border-t border-emerald-100 bg-emerald-50 px-3.5 py-2.5 text-[12.5px] font-bold text-emerald-700">
+                      <p className="flex items-center gap-2 border-t border-slate-200 bg-emerald-50 px-3.5 py-2.5 text-[12.5px] font-semibold text-emerald-700">
                         <BadgePercent className="h-4 w-4 shrink-0" strokeWidth={2.3} />
                         You will save {inr(bill.savings)} on this booking
                       </p>
@@ -503,11 +503,11 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
             </div>
 
             {bill.count > 0 && (
-              <div className="shrink-0 border-t border-slate-200/70 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-6px_16px_-10px_rgba(15,23,42,0.15)] sm:px-5">
+              <div className="shrink-0 border-t border-slate-200 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-5">
                 <div className="flex items-center gap-3">
                   <div className="min-w-0">
                     <div className="flex items-baseline gap-1.5">
-                      <p className="text-[19px] font-extrabold leading-none tabular-nums text-slate-900">{inr(bill.total)}</p>
+                      <p className="text-[19px] font-bold leading-none tabular-nums text-slate-900">{inr(bill.total)}</p>
                       {bill.savings > 0 && (
                         <p className="text-[11.5px] tabular-nums text-slate-400 line-through">{inr(bill.mrpTotal)}</p>
                       )}
@@ -515,7 +515,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     <button
                       type="button"
                       onClick={() => billRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
-                      className="mt-1 cursor-pointer text-[11.5px] font-bold text-emerald-700 hover:underline"
+                      className="mt-1 cursor-pointer text-[11.5px] font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
                     >
                       View price details
                     </button>
@@ -523,7 +523,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="ml-auto flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl bg-linear-to-r from-emerald-600 to-teal-600 text-[15px] font-bold text-white shadow-[0_4px_12px_-4px_rgba(5,150,105,0.5)] transition-all hover:from-emerald-700 hover:to-teal-700 active:scale-[0.99]"
+                    className="ml-auto flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 bg-emerald-600 text-[15px] font-semibold text-white transition-colors hover:bg-emerald-700"
                   >
                     Continue
                     <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
@@ -537,21 +537,29 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
         {/* ── STEP 1: DETAILS & PAYMENT ──────────────────────────── */}
         {step === 1 && (
           <form onSubmit={submit} noValidate className="flex min-h-0 flex-1 flex-col">
-            <div className="flex-1 space-y-3 overflow-y-auto overscroll-contain px-4 py-4 sm:px-5">
+            <div className="flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-4 py-3 sm:px-5">
               {/* CONTACT — name and mobile only. The team calls this number to
                   fix the slot and take the address, so nothing else is asked. */}
-              <section className="overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200/80">
-                <div className="flex items-center gap-2.5 border-b border-slate-100 px-4 py-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-[12px] font-bold text-white">
+              <section className="overflow-hidden border border-slate-200 bg-white">
+                <div className="flex items-center gap-2.5 border-b border-slate-200 bg-slate-50 px-4 py-2.5">
+                  <span className="flex h-6 w-6 items-center justify-center bg-slate-900 text-[11px] font-semibold text-white">
                     1
                   </span>
                   <div className="min-w-0">
                     <p className="text-[13.5px] font-bold text-slate-900">Contact details</p>
-                    <p className="text-[11px] text-slate-500">We will call this number to confirm your slot</p>
+                    <p className="text-[10.5px] leading-tight text-slate-500">We will call this number to confirm your slot</p>
                   </div>
                 </div>
 
-                <div className="space-y-3.5 px-4 py-4">
+                {/* The three fields read centred, so each input needs its left and right
+                    padding to MATCH. The icon is an absolutely positioned overlay and
+                    text-align centres within the CONTENT box, not the border box — pad
+                    only the icon's side and the text lands visibly off to the right.
+
+                    One-sided pl- and pr- rather than px-: Tailwind emits the one-sided
+                    utilities after the axis ones, so they reliably beat the px-3.5 inside
+                    inputBase. Two competing px- classes on one element is a coin toss. */}
+                <div className="space-y-2.5 px-4 py-3.5">
                   <div>
                     <label htmlFor={`${uid}-name`} className={labelClass}>
                       Full name <span className="text-red-500">*</span>
@@ -574,7 +582,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                         autoCapitalize="words"
                         enterKeyHint="next"
                         placeholder="Patient's full name"
-                        className={`${invalid === "name" ? inputBad : inputOk} h-12 pl-11`}
+                        className={`${invalid === "name" ? inputBad : inputOk} h-11 pl-10 pr-10 text-center`}
                       />
                     </div>
                   </div>
@@ -603,7 +611,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                         enterKeyHint="next"
                         maxLength={10}
                         placeholder="10-digit mobile number"
-                        className={`${invalid === "phone" ? inputBad : inputOk} h-12 pl-22 pr-10 tracking-wide tabular-nums`}
+                        className={`${invalid === "phone" ? inputBad : inputOk} h-11 pl-20 pr-20 text-center tracking-wide tabular-nums`}
                       />
                       {phoneOk && (
                         <CheckCircle2
@@ -636,7 +644,8 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                         autoComplete="address-level2"
                         autoCapitalize="words"
                         enterKeyHint="done"
-                        className={`${invalid === "city" ? inputBad : inputOk} h-12 pl-11`}
+                        placeholder="Enter your city"
+                        className={`${invalid === "city" ? inputBad : inputOk} h-11 pl-10 pr-10 text-center`}
                       />
                     </div>
                   </div>
@@ -644,19 +653,19 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
               </section>
 
               {/* PAYMENT */}
-              <fieldset className="overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200/80">
+              <fieldset className="overflow-hidden border border-slate-200 bg-white">
                 <legend className="sr-only">Payment method</legend>
-                <div className="flex items-center gap-2.5 border-b border-slate-100 px-4 py-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-[12px] font-bold text-white">
+                <div className="flex items-center gap-2.5 border-b border-slate-200 bg-slate-50 px-4 py-2.5">
+                  <span className="flex h-6 w-6 items-center justify-center bg-slate-900 text-[11px] font-semibold text-white">
                     2
                   </span>
                   <div className="min-w-0">
                     <p className="text-[13.5px] font-bold text-slate-900">Payment method</p>
-                    <p className="text-[11px] text-slate-500">Choose how you would like to pay</p>
+                    <p className="text-[10.5px] leading-tight text-slate-500">Choose how you would like to pay</p>
                   </div>
                 </div>
 
-                <div className="space-y-2.5 p-3">
+                <div className="space-y-2 p-2.5">
                   {[
                     {
                       key: "online",
@@ -677,10 +686,10 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     return (
                       <label
                         key={key}
-                        className={`block cursor-pointer rounded-xl p-3.5 transition-all ${
+                        className={`block cursor-pointer border p-3 transition-colors ${
                           active
-                            ? "bg-emerald-50/60 ring-2 ring-emerald-500"
-                            : "bg-white ring-1 ring-slate-200 hover:ring-emerald-300"
+                            ? "border-emerald-600 bg-emerald-50/60"
+                            : "border-slate-200 bg-white hover:border-slate-400"
                         }`}
                       >
                         <input
@@ -709,14 +718,14 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                               />
                             </span>
                             <span className="mt-0.5 block text-[11.5px] leading-snug text-slate-500">{sub}</span>
-                            <span className="mt-2 flex flex-wrap gap-1.5">
+                            <span className="mt-1.5 flex flex-wrap gap-1.5">
                               {chips.map((c) => (
                                 <span
                                   key={c}
-                                  className={`rounded-md px-2 py-0.5 text-[10.5px] font-semibold ring-1 ${
+                                  className={`border px-2 py-0.5 text-[10.5px] font-medium ${
                                     active
-                                      ? "bg-white text-emerald-700 ring-emerald-200"
-                                      : "bg-slate-50 text-slate-500 ring-slate-200"
+                                      ? "border-emerald-200 bg-white text-emerald-700"
+                                      : "border-slate-200 bg-slate-50 text-slate-500"
                                   }`}
                                 >
                                   {c}
@@ -724,7 +733,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                               ))}
                             </span>
                             {key === "online" && (
-                              <span className="mt-2 flex items-center gap-1 text-[10.5px] font-medium text-slate-400">
+                              <span className="mt-1.5 flex items-center gap-1 text-[10.5px] font-medium text-slate-400">
                                 <Lock className="h-3 w-3" strokeWidth={2.4} />
                                 Secured by Razorpay
                               </span>
@@ -743,10 +752,10 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
               </p>
             </div>
 
-            <div className="shrink-0 border-t border-slate-200/70 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-6px_16px_-10px_rgba(15,23,42,0.15)] sm:px-5">
+            <div className="shrink-0 border-t border-slate-200 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-5">
               <div className="flex items-center gap-3">
                 <div className="min-w-0">
-                  <p className="text-[19px] font-extrabold leading-none tabular-nums text-slate-900">{inr(bill.total)}</p>
+                  <p className="text-[19px] font-bold leading-none tabular-nums text-slate-900">{inr(bill.total)}</p>
                   <p className="mt-1 text-[11.5px] font-medium text-slate-500">
                     {bill.count} {bill.count === 1 ? "test" : "tests"}
                     {bill.savings > 0 && <span className="font-semibold text-emerald-700"> · saved {inr(bill.savings)}</span>}
@@ -755,7 +764,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                 <button
                   type="submit"
                   disabled={busy}
-                  className="ml-auto flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl bg-linear-to-r from-emerald-600 to-teal-600 px-3 text-[14.5px] font-bold text-white shadow-[0_4px_12px_-4px_rgba(5,150,105,0.5)] transition-all hover:from-emerald-700 hover:to-teal-700 active:scale-[0.99] disabled:cursor-wait disabled:opacity-80"
+                  className="ml-auto flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 bg-emerald-600 px-3 text-[14.5px] font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-wait disabled:opacity-70"
                 >
                   {busy ? (
                     <>
@@ -783,10 +792,10 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
         {step === 2 && done && (
           <>
             <div className="flex-1 overflow-y-auto px-5 py-8 text-center">
-              <span className="lab-pop-in mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 ring-8 ring-emerald-50/60">
-                <CheckCircle2 className="h-11 w-11 text-emerald-600" strokeWidth={1.8} />
+              <span className="lab-pop-in mx-auto flex h-16 w-16 items-center justify-center border border-emerald-200 bg-emerald-50">
+                <CheckCircle2 className="h-8 w-8 text-emerald-600" strokeWidth={1.8} />
               </span>
-              <p className="mt-5 text-[20px] font-extrabold tracking-tight text-slate-900">
+              <p className="mt-5 text-[20px] font-bold tracking-tight text-slate-900">
                 {done.method === "online" ? "Payment successful" : "Booking confirmed"}
               </p>
               <p className="mx-auto mt-1.5 max-w-xs text-[13px] leading-relaxed text-slate-500">
@@ -796,7 +805,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
               </p>
 
               {done.paymentId && (
-                <p className="mx-auto mt-4 inline-flex rounded-lg bg-slate-100 px-3 py-1.5 font-mono text-[11.5px] text-slate-600">
+                <p className="mx-auto mt-4 inline-flex border border-slate-200 bg-slate-50 px-3 py-1.5 font-mono text-[11.5px] text-slate-600">
                   Payment ID: {done.paymentId}
                 </p>
               )}
@@ -807,18 +816,18 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                   "Slots start from 6 AM, so fasting tests can be done before breakfast.",
                   "Report arrives on WhatsApp and email within 24 hours.",
                 ].map((text) => (
-                  <li key={text} className="flex gap-2.5 rounded-xl bg-white p-3 ring-1 ring-slate-200/70">
+                  <li key={text} className="flex gap-2.5 border border-slate-200 bg-white p-3">
                     <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" strokeWidth={3} />
                     {text}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="shrink-0 border-t border-slate-200/70 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-5">
+            <div className="shrink-0 border-t border-slate-200 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-5">
               <button
                 type="button"
                 onClick={close}
-                className="h-12 w-full cursor-pointer rounded-xl bg-slate-900 text-[14.5px] font-bold text-white transition-colors hover:bg-slate-800"
+                className="h-12 w-full cursor-pointer bg-slate-900 text-[14.5px] font-semibold text-white transition-colors hover:bg-slate-800"
               >
                 Done
               </button>

@@ -1,3 +1,4 @@
+import FloatingCartButton from "@/components/lab/cart/FloatingCartButton";
 import LabNavbar from "@/components/lab/LabNavbar";
 
 // Lab Test section layout — wraps /lab-test/[city].
@@ -10,6 +11,7 @@ export default function LabLayout({ children }) {
     <>
       <LabNavbar />
       <main className="flex-1">{children}</main>
+      <FloatingCartButton />
     </>
   );
 }

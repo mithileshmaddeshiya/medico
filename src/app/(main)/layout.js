@@ -1,3 +1,4 @@
+import FloatingCartButton from "@/components/lab/cart/FloatingCartButton";
 import LabFooter from "@/components/lab/LabFooter";
 import LabNavbar from "@/components/lab/LabNavbar";
 import { getShellData } from "@/lib/shell";
@@ -24,6 +25,7 @@ export default async function MainLayout({ children }) {
       <LabNavbar />
       <main className="flex-1">{children}</main>
       <LabFooter labCities={labCities} />
+      <FloatingCartButton />
     </>
   );
 }
