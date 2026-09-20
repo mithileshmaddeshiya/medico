@@ -91,7 +91,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
   const bill = useMemo(() => priceCart(items, tests), [items, tests]);
   const byId = useMemo(() => new Map(tests.map((t) => [t.id, t])), [tests]);
   const contactPhone = phone || LAB_PHONE;
-  const phoneOk = /^[6-9]d{9}$/.test(mobile);
+  const phoneOk = /^[6-9]\d{9}$/.test(mobile);
 
   // Emptied while on checkout (e.g. in another tab) — nothing left to pay for.
   const step = rawStep === 1 && bill.count === 0 ? 0 : rawStep;
