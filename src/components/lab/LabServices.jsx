@@ -24,11 +24,12 @@ import { iconFor, tint } from "./testIcons";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Cards per view, EVERY breakpoint — the phone slides too. Fractional values
-// leave the next card peeking so the swipe gesture is discoverable on touch.
+// Cards per view, EVERY breakpoint — the phone slides too. A phone shows ONE
+// card, full width and centred — a peeking 1.12 made every card sit off to
+// the left. From 480px up, fractions leave the next card peeking.
 const BREAKPOINTS = {
-  0:    { slidesPerView: 1.12, spaceBetween: 12 },
-  480:  { slidesPerView: 1.6,  spaceBetween: 14 },
+  0:    { slidesPerView: 1,    spaceBetween: 16 },
+  480:  { slidesPerView: 1.5,  spaceBetween: 14 },
   640:  { slidesPerView: 2.15, spaceBetween: 16 },
   900:  { slidesPerView: 2.6,  spaceBetween: 18 },
   1024: { slidesPerView: 3,    spaceBetween: 20 },
@@ -272,11 +273,17 @@ export default function LabServices({
               }}
               onSlideChange={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
               onResize={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
+              /* Padding is INLINE on purpose. swiper/css sets `.swiper
+                 { padding: 0 }` unlayered, which beats Tailwind's layered
+                 utilities — a `px-1 pb-6` class here silently did nothing, and
+                 the full-width phone card had its ring and shadow clipped at
+                 both screen edges. Swiper subtracts this padding when it sizes
+                 the slides, so the card still fits exactly. */
               style={{
                 "--swiper-pagination-color": "#0d9488",
                 "--swiper-pagination-bottom": "0px",
+                padding: "6px 6px 28px",
               }}
-              className="pt-1 pb-6"
             >
               {visible.map((t) => (
                 <SwiperSlide key={t.id} className="h-auto">
