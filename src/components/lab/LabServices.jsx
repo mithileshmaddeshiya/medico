@@ -1,22 +1,22 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { createElement, useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import {
   ArrowRight,
-  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Clock,
+  House,
   PhoneCall,
   Search,
-  ShieldCheck,
+  Utensils,
+  UtensilsCrossed,
   X,
 } from "lucide-react";
 import LabBookingModal from "./LabBookingModal";
 import AddToCartControl from "./cart/AddToCartControl";
-import AddedToCartSheet from "./cart/AddedToCartSheet";
 import CartDrawer from "./cart/CartDrawer";
 import { cart, OPEN_CART_HASH, useCartItems } from "./cart/cartStore";
 import { iconFor, tint } from "./testIcons";
@@ -24,26 +24,15 @@ import { iconFor, tint } from "./testIcons";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Cards per view — fractional values leave the next card peeking so the
-// swipe gesture is discoverable on touch devices.
+// Cards per view, EVERY breakpoint — the phone slides too. Fractional values
+// leave the next card peeking so the swipe gesture is discoverable on touch.
 const BREAKPOINTS = {
-  0:    { slidesPerView: 1.1,  spaceBetween: 12 },
-  480:  { slidesPerView: 2.1,  spaceBetween: 12 },
-  640:  { slidesPerView: 2.4,  spaceBetween: 16 },
-  768:  { slidesPerView: 3.2,  spaceBetween: 16 },
-  1024: { slidesPerView: 4,    spaceBetween: 16 },
+  0:    { slidesPerView: 1.12, spaceBetween: 12 },
+  480:  { slidesPerView: 1.6,  spaceBetween: 14 },
+  640:  { slidesPerView: 2.15, spaceBetween: 16 },
+  900:  { slidesPerView: 2.6,  spaceBetween: 18 },
+  1024: { slidesPerView: 3,    spaceBetween: 20 },
 };
-
-// Matching solid colour for the left rail on the phone rows.
-const RAIL = {
-  rose: "bg-rose-400",
-  emerald: "bg-emerald-500",
-  amber: "bg-amber-400",
-  sky: "bg-sky-400",
-  violet: "bg-violet-400",
-  teal: "bg-teal-500",
-};
-const rail = (key) => RAIL[key] ?? RAIL.emerald;
 
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
 const offPct = (price, mrp) => Math.round(((mrp - price) / mrp) * 100);
@@ -52,10 +41,6 @@ const offPct = (price, mrp) => Math.round(((mrp - price) / mrp) * 100);
 // "diabetes" or "heart" then work as searches, not only as chips.
 const haystack = (t) =>
   `${t.name} ${t.sub ?? ""} ${(t.tags ?? []).join(" ")}`.toLowerCase();
-
-// How many tests the phone list shows before "View all" is tapped — enough to
-// scroll past quickly, few enough that the FAQ below stays reachable.
-const MOBILE_PREVIEW = 4;
 
 /**
  * `tests`, `filters` and `phone` come from the city document (or its generated
@@ -79,7 +64,6 @@ export default function LabServices({
 }) {
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
-  const [expanded, setExpanded] = useState(false);
   const [booking, setBooking] = useState(null);
   const [edge, setEdge] = useState({ begin: true, end: false });
   const swiperRef = useRef(null);
@@ -99,10 +83,6 @@ export default function LabServices({
     return unregister;
   }, []);
 
-  // Phone "Added to cart" sheet — the test that was just added, or null.
-  const [justAdded, setJustAdded] = useState(null);
-  useEffect(() => cart.registerAnnouncer((test) => setJustAdded(test)), []);
-
   // Two ways in, never both at once: typing searches every test, and the chips
   // step aside while it does. A search that also silently obeys a chip the
   // patient set earlier is the fastest way to make this section confusing.
@@ -116,21 +96,15 @@ export default function LabServices({
       : tests.filter((t) => (t.tags ?? []).includes(filter));
   }, [query, filter, tests]);
 
-  // Any change to the query or chip starts the phone list collapsed again.
-  const pickFilter = (key) => {
-    setFilter(key);
-    setExpanded(false);
-  };
+  const pickFilter = (key) => setFilter(key);
 
   const search = (value) => {
     setQuery(value);
-    setExpanded(false);
     if (value.trim()) setFilter("All");
   };
 
   const heading =
     filters.find((f) => f.key === filter)?.heading ?? "Lab Tests & Test Packages";
-  const mobileList = expanded ? visible : visible.slice(0, MOBILE_PREVIEW);
 
   // overflow-x-clip — the arrows sit half outside the slider, so nothing of
   // theirs may leak into the page's horizontal scroll on small screens.
@@ -155,10 +129,9 @@ export default function LabServices({
           </p>
         )}
 
-
-        {/* SEARCH — the fastest path to a named test. On a phone, scanning a
-            slider for "Vitamin D" means swiping through everything else first;
-            typing three letters skips all of it. */}
+        {/* SEARCH — the fastest path to a named test. Scanning a slider for
+            "Vitamin D" means swiping through everything else first; typing
+            three letters skips all of it. */}
         <div className="mx-auto mt-3 max-w-md">
           <div className="relative">
             <Search
@@ -187,14 +160,15 @@ export default function LabServices({
           </div>
         </div>
 
-        {/* CATEGORIES — tablet and up only. On a phone the chips took two rows
-            above the fold and pushed the tests down; the search box and the
-            price-ordered list cover the same ground in less space.
+        {/* CATEGORIES — one row. On a phone it scrolls sideways instead of
+            wrapping, so the chips never take two rows above the fold (that is
+            why they used to be hidden there). `-mx-4 px-4` lets the row run to
+            the screen edge while the first chip still lines up with the page.
 
-            Also hidden while a search is running: the box and the chips do the
-            same job, and showing both at once is what made this area busy. */}
+            Hidden while a search is running: the box and the chips do the same
+            job, and showing both at once is what made this area busy. */}
         {!searching && (
-          <div className="mt-2.5 hidden flex-wrap justify-center gap-1.5 sm:flex sm:gap-2">
+          <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
             {filters.map((f) => {
               const active = filter === f.key;
               // Packages are a different kind of thing from a test category and
@@ -207,9 +181,9 @@ export default function LabServices({
                   type="button"
                   onClick={() => pickFilter(f.key)}
                   aria-pressed={active}
-                  className={`cursor-pointer rounded-full px-3.5 py-2 text-[12px] sm:px-4 sm:py-1.5 sm:text-[12.5px] font-semibold transition-all duration-200 ${
+                  className={`shrink-0 cursor-pointer rounded-full px-4 py-2 text-[12.5px] sm:text-[13px] font-semibold transition-all duration-200 ${
                     active
-                      ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)]"
+                      ? "bg-teal-50 text-teal-700 ring-[1.5px] ring-teal-600 shadow-[0_4px_12px_-6px_rgba(13,148,136,0.6)]"
                       : pkg
                         ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 hover:ring-emerald-400"
                         : "bg-white text-slate-600 ring-1 ring-slate-200 hover:ring-slate-300 hover:text-slate-900"
@@ -223,7 +197,7 @@ export default function LabServices({
         )}
 
         {/* NO MATCH — a dead end is where a booking is lost, so it ends in a
-            phone number rather than an apology. Shown at every breakpoint. */}
+            phone number rather than an apology. */}
         {visible.length === 0 && (
           <div className="mx-auto mt-4 max-w-md rounded-xl bg-white px-4 py-6 text-center ring-1 ring-slate-200">
             <p className="text-[13px] sm:text-[14px] font-semibold text-slate-800">
@@ -244,348 +218,78 @@ export default function LabServices({
           </div>
         )}
 
-        {/* ── PHONE: a plain vertical list ───────────────────────────────
-            A slider is the wrong shape on a small screen — a patient looking
-            for one test has to swipe past every other one, and a card only
-            half in view reads as clipped. Rows are scannable top-to-bottom,
-            each with its price and its own Book button. */}
-        <div className="mt-3 sm:hidden">
-          {visible.length > 0 && (
-            <>
-              <ul className="space-y-2.5">
-                {mobileList.map((t) => {
-                  const Icon = iconFor(t.icon);
-                  const save = t.price && t.mrp ? t.mrp - t.price : 0;
-                  const qty = t.price ? (cartItems[t.id] ?? 0) : 0;
-
-                  return (
-                    <li key={t.id}>
-                      {/* A row, not one big button: a priced test carries its
-                          own add / quantity control, so the row itself can no
-                          longer be the tap target. Ring turns green once the
-                          test is in the cart. */}
-                      <div
-                        className={`group relative block w-full overflow-hidden rounded-2xl bg-white text-left shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all duration-150 ${
-                          qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80"
-                        }`}
-                      >
-                        {/* Colour rail — the row's category read at a glance */}
-                        <span
-                          aria-hidden
-                          className={`absolute inset-y-0 left-0 w-1 ${rail(t.tint)}`}
-                        />
-
-                        {/* Discount corner — the strongest reason to tap, so it
-                            sits at the top edge rather than in the price row. */}
-                        {save > 0 && (
-                          <span className="absolute right-0 top-0 rounded-bl-xl bg-linear-to-r from-emerald-600 to-teal-600 px-2 py-0.5 text-[9.5px] font-bold tracking-wide text-white">
-                            {offPct(t.price, t.mrp)}% OFF
-                          </span>
-                        )}
-
-                        <div className="flex gap-3 p-3 pl-3.5">
-                          <span
-                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-1 ${tint(t.tint)}`}
-                          >
-                            <Icon className="h-5 w-5" strokeWidth={1.8} />
-                          </span>
-
-                          <div className="min-w-0 flex-1">
-                            {/* ── NOT AN h3 — DELIBERATELY ────────────────────
-                                This component renders the test list TWICE: this
-                                phone list (`sm:hidden`) and the desktop carousel
-                                below (`hidden sm:block`). Both are in the DOM at
-                                once, so when both used <h3> every test emitted a
-                                duplicate heading on every page of the site.
-
-                                The carousel keeps the headings because it always
-                                holds the COMPLETE set of tests. This list is
-                                `visible.slice(0, 4)` until the reader taps "show
-                                more" — a document outline that changes depending
-                                on whether someone tapped a button is not an
-                                outline. The names are also carried by the JSON-LD
-                                `makesOffer` block, the guide prose and the FAQs,
-                                so nothing is lost by styling rather than marking
-                                these up as headings.
-
-                                `font-bold` at the same size renders identically.
-
-                                The "Top" badge is a sibling, not a child: inside
-                                the heading its text content became "CBC TestTop",
-                                which is what a crawler indexed and what a screen
-                                reader announced. `aria-hidden` because "Popular"
-                                is already stated by the tag copy on the card. */}
-                            <div className="flex items-center gap-1.5 pr-14">
-                              <p className="min-w-0 truncate text-[14.5px] font-bold leading-snug text-slate-900">
-                                {t.name}
-                              </p>
-                              {(t.tags ?? []).includes("Popular") && (
-                                <span
-                                  aria-hidden
-                                  className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
-                                >
-                                  Top
-                                </span>
-                              )}
-                            </div>
-                            <p className="mt-0.5 truncate text-[11.5px] leading-snug text-slate-500">
-                              {t.sub}
-                            </p>
-
-                            {/* Two small facts, dot-separated on one line — a
-                                wrapping meta row is what made these feel cramped */}
-                            <p className="mt-1.5 truncate text-[10.5px] font-medium text-slate-600">
-                              {t.params > 0 && (
-                                <span className="font-bold text-emerald-700">
-                                  {t.params} parameters ·{" "}
-                                </span>
-                              )}
-                              {t.fasting ? "Fasting required" : "No fasting"} · Report in 24 hrs
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center justify-between gap-3 border-t border-slate-100 bg-slate-50/70 py-2 pl-3.5 pr-3">
-                          <div className="min-w-0">
-                            {t.price ? (
-                              <>
-                                <div className="flex items-baseline gap-1.5">
-                                  <span className="text-[18px] font-extrabold leading-none text-slate-900">
-                                    {inr(t.price)}
-                                  </span>
-                                  {t.mrp && (
-                                    <span className="text-[11.5px] font-medium text-slate-400 line-through">
-                                      {inr(t.mrp)}
-                                    </span>
-                                  )}
-                                </div>
-                                <p className="mt-1 truncate text-[10px] font-semibold text-emerald-700">
-                                  {save > 0 ? `You save ${inr(save)}` : "Free home collection"}
-                                </p>
-                              </>
-                            ) : (
-                              <>
-                                <span className="text-[13px] font-bold leading-none text-teal-700">
-                                  Call for price
-                                </span>
-                                <p className="mt-1 text-[10px] font-medium text-slate-500">
-                                  Custom package · free home visit
-                                </p>
-                              </>
-                            )}
-                          </div>
-
-                          {t.price ? (
-                            <AddToCartControl test={t} qty={qty} />
-                          ) : (
-                            <button
-                              type="button"
-                              onClick={() => setBooking(t.name)}
-                              aria-label={`Enquire about ${t.name}`}
-                              className="inline-flex h-9 shrink-0 cursor-pointer items-center gap-1 rounded-full bg-white px-4 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-300 active:scale-[0.97] transition-all"
-                            >
-                              Enquire
-                              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.4} />
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-
-              {visible.length > MOBILE_PREVIEW && (
-                <button
-                  type="button"
-                  onClick={() => setExpanded((v) => !v)}
-                  className="mt-3 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-white py-2.5 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-200 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:scale-[0.99] transition-transform"
-                >
-                  {expanded ? "Show less" : `View all ${visible.length} tests`}
-                  <ChevronDown
-                    className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                      expanded ? "rotate-180" : ""
-                    }`}
-                    strokeWidth={2.4}
-                  />
-                </button>
-              )}
-            </>
-          )}
-        </div>
-
-        {/* ── TABLET & DESKTOP: the slider ───────────────────────────────
+        {/* ── THE SLIDER — every screen size ─────────────────────────────
+            One carousel for phone and desktop alike, auto-sliding on both. It
+            used to be desktop-only with a separate vertical list on the phone;
+            one set of cards also means one <h3> per test in the DOM, where the
+            old pair rendered every test twice.
             `key` remounts it so a new filter or search resets to card 1. */}
-        <div className={`relative mt-2 hidden ${visible.length > 0 ? "sm:block" : ""}`}>
+        {visible.length > 0 && (
+          <div className="relative mt-3">
 
-          {/* ARROWS — sit on the left/right edge of the slider, vertically centred
-              on the cards (the -11px offsets the slider's pb-5.5 pagination strip).
-              Desktop only; on touch devices the swipe gesture is enough. */}
-          <button
-            type="button"
-            onClick={() => swiperRef.current?.slidePrev()}
-            disabled={edge.begin}
-            aria-label="Previous tests"
-            className="absolute left-0 top-[calc(50%-11px)] z-10 hidden h-9 w-9 -translate-x-1/2 -translate-y-1/2 sm:flex items-center justify-center rounded-full bg-white text-slate-700 ring-1 ring-slate-200 shadow-md transition-all hover:ring-teal-400 hover:text-teal-600 disabled:opacity-40 disabled:hover:ring-slate-200 disabled:hover:text-slate-700 disabled:cursor-not-allowed"
-          >
-            <ChevronLeft className="h-4.5 w-4.5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => swiperRef.current?.slideNext()}
-            disabled={edge.end}
-            aria-label="Next tests"
-            className="absolute right-0 top-[calc(50%-11px)] z-10 hidden h-9 w-9 translate-x-1/2 -translate-y-1/2 sm:flex items-center justify-center rounded-full bg-white text-slate-700 ring-1 ring-slate-200 shadow-md transition-all hover:ring-teal-400 hover:text-teal-600 disabled:opacity-40 disabled:hover:ring-slate-200 disabled:hover:text-slate-700 disabled:cursor-not-allowed"
-          >
-            <ChevronRight className="h-4.5 w-4.5" />
-          </button>
+            {/* ARROWS — on the slider's left/right edge, vertically centred on
+                the cards (the -11px offsets the pagination strip). sm and up
+                only; on a phone the swipe and the autoplay are enough. */}
+            <button
+              type="button"
+              onClick={() => swiperRef.current?.slidePrev()}
+              disabled={edge.begin}
+              aria-label="Previous tests"
+              className="absolute left-0 top-[calc(50%-11px)] z-10 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 sm:flex items-center justify-center rounded-full bg-white text-slate-700 ring-1 ring-slate-200 shadow-md transition-all hover:ring-teal-400 hover:text-teal-600 disabled:opacity-40 disabled:hover:ring-slate-200 disabled:hover:text-slate-700 disabled:cursor-not-allowed"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => swiperRef.current?.slideNext()}
+              disabled={edge.end}
+              aria-label="Next tests"
+              className="absolute right-0 top-[calc(50%-11px)] z-10 hidden h-10 w-10 translate-x-1/2 -translate-y-1/2 sm:flex items-center justify-center rounded-full bg-white text-slate-700 ring-1 ring-slate-200 shadow-md transition-all hover:ring-teal-400 hover:text-teal-600 disabled:opacity-40 disabled:hover:ring-slate-200 disabled:hover:text-slate-700 disabled:cursor-not-allowed"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
 
-          <Swiper
-            key={`${filter}|${query}`}
-            modules={[Pagination, Keyboard, Autoplay]}
-            breakpoints={BREAKPOINTS}
-            /* The slider is display:none below sm — observers re-measure it
-               when it becomes visible instead of leaving it at zero width. */
-            observer
-            observeParents
-            keyboard={{ enabled: true }}
-            grabCursor
-            watchOverflow
-            loop
-            /* Autoplay pauses while the pointer is over the cards and resumes
-               after a manual swipe / arrow click instead of stopping for good. */
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{ clickable: true, dynamicBullets: true }}
-            onSwiper={(s) => {
-              swiperRef.current = s;
-              setEdge({ begin: s.isBeginning, end: s.isEnd });
-            }}
-            onSlideChange={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
-            onResize={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
-            style={{
-              "--swiper-pagination-color": "#0d9488",
-              "--swiper-pagination-bottom": "0px",
-            }}
-            className="pt-2 pb-5.5"
-          >
-          {visible.map((t) => {
-            const Icon = iconFor(t.icon);
-            const qty = t.price ? (cartItems[t.id] ?? 0) : 0;
-            return (
-              <SwiperSlide key={t.id} className="h-auto">
-                <article
-                  className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)] hover:-translate-y-0.5 transition-all duration-200 ${
-                    qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80 hover:ring-emerald-200"
-                  }`}
-                >
-                  {/* Discount ribbon — only when an MRP is set on the test */}
-                  {t.price && t.mrp && (
-                    <span className="absolute right-0 top-3 rounded-l-full bg-emerald-600 py-0.5 pl-2 pr-2.5 text-[9.5px] font-bold tracking-wide text-white shadow-sm">
-                      {offPct(t.price, t.mrp)}% OFF
-                    </span>
-                  )}
-
-                  <div className="flex-1 p-2.5 sm:p-3">
-                    <span
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ring-1 ${tint(t.tint)}`}
-                    >
-                      <Icon className="h-4.5 w-4.5" strokeWidth={1.8} />
-                    </span>
-
-                    {/* Badge outside the heading — see the note on the mobile
-                        card above for why. */}
-                    <div className="mt-2 flex items-center gap-1.5">
-                      <h3 className="min-w-0 truncate text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug">
-                        {t.name}
-                      </h3>
-                      {(t.tags ?? []).includes("Popular") && (
-                        <span
-                          aria-hidden
-                          className="shrink-0 rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
-                        >
-                          Top
-                        </span>
-                      )}
-                    </div>
-                    <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-slate-500 leading-snug">
-                      {t.sub}
-                    </p>
-
-                    <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[10.5px] font-medium text-slate-600">
-                      {/* Packages only — the parameter count is what a patient
-                          compares a checkup on, so it leads the meta row. */}
-                      {t.params && (
-                        <span className="inline-flex items-center gap-1 text-emerald-700">
-                          <ShieldCheck className="h-3 w-3" strokeWidth={2.2} />
-                          {t.params} parameters
-                        </span>
-                      )}
-                      <span className="inline-flex items-center gap-1">
-                        <span
-                          className={`h-1.5 w-1.5 shrink-0 rounded-full ${
-                            t.fasting ? "bg-amber-500" : "bg-emerald-500"
-                          }`}
-                        />
-                        {t.fasting ? "Fasting required" : "No fasting"}
-                      </span>
-                      <span className="inline-flex items-center gap-1">
-                        <Clock className="h-3 w-3 text-slate-400" strokeWidth={2.2} />
-                        Report in 24 hrs
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* PRICE + CTA */}
-                  <div className="border-t border-slate-100 bg-slate-50/60 px-2.5 py-2 sm:px-3">
-                    {t.price ? (
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="text-[19px] font-extrabold leading-none text-slate-900">
-                          {inr(t.price)}
-                        </span>
-                        {t.mrp && (
-                          <span className="text-[11.5px] font-medium text-slate-400 line-through">
-                            {inr(t.mrp)}
-                          </span>
-                        )}
-                      </div>
-                    ) : (
-                      <div className="text-[13px] font-bold leading-none text-teal-700">
-                        Call for price
-                      </div>
-                    )}
-                    <p className="mt-0.5 text-[10px] text-slate-500">
-                      {!t.price
-                        ? "Custom package · free home visit"
-                        : t.params
-                          ? "Free home collection · one report"
-                          : "Free home sample collection"}
-                    </p>
-
-                    <div className="mt-2">
-                      {t.price ? (
-                        <AddToCartControl test={t} qty={qty} block />
-                      ) : (
-                        <button
-                          type="button"
-                          onClick={() => setBooking(t.name)}
-                          className="cursor-pointer flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-emerald-50 text-[12.5px] font-bold text-emerald-700 ring-1 ring-emerald-100 transition-all duration-200 group-hover:bg-linear-to-r group-hover:from-emerald-600 group-hover:to-teal-600 group-hover:text-white group-hover:ring-transparent active:scale-[0.98]"
-                        >
-                          Enquire Now
-                          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                </article>
-              </SwiperSlide>
-            );
-          })}
-          </Swiper>
-        </div>
+            <Swiper
+              key={`${filter}|${query}`}
+              modules={[Pagination, Keyboard, Autoplay]}
+              breakpoints={BREAKPOINTS}
+              keyboard={{ enabled: true }}
+              grabCursor
+              watchOverflow
+              loop
+              /* Autoplay pauses while the pointer is over the cards and resumes
+                 after a manual swipe / arrow click instead of stopping for good.
+                 3s rather than 2.5s: the cards carry more to read now. */
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              pagination={{ clickable: true, dynamicBullets: true }}
+              onSwiper={(s) => {
+                swiperRef.current = s;
+                setEdge({ begin: s.isBeginning, end: s.isEnd });
+              }}
+              onSlideChange={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
+              onResize={(s) => setEdge({ begin: s.isBeginning, end: s.isEnd })}
+              style={{
+                "--swiper-pagination-color": "#0d9488",
+                "--swiper-pagination-bottom": "0px",
+              }}
+              className="pt-1 pb-6"
+            >
+              {visible.map((t) => (
+                <SwiperSlide key={t.id} className="h-auto">
+                  <TestCard
+                    test={t}
+                    qty={t.price ? (cartItems[t.id] ?? 0) : 0}
+                    onEnquire={() => setBooking(t.name)}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
       </div>
 
       {booking && (
@@ -596,14 +300,6 @@ export default function LabServices({
         />
       )}
 
-      <AddedToCartSheet
-        test={justAdded}
-        onClose={() => setJustAdded(null)}
-        onGoToCart={() => {
-          setJustAdded(null);
-          setCartOpen(true);
-        }}
-      />
       <CartDrawer
         open={cartOpen}
         onClose={() => setCartOpen(false)}
@@ -614,5 +310,153 @@ export default function LabServices({
         phone={phone}
       />
     </section>
+  );
+}
+
+/**
+ * One test or package card.
+ *
+ *   ┌──────────────────────────────┬─────────┐
+ *   │ Name                         │   45    │  ← count corner: parameters for a
+ *   │                              │ Params  │    package, the test's icon else
+ *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
+ *   │ Includes: …                            │
+ *   │ 44% OFF · You save ₹80                 │
+ *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
+ *   │ fasting · home collection · 24h report │
+ *   ├────────────────────────────────────────┤
+ *   │ ₹999 ₹1,800            [ Add to cart ] │  ← tinted footer
+ *   └────────────────────────────────────────┘
+ *
+ * ── ONLY WHAT WE CAN STAND BEHIND ────────────────────────────────────────
+ * The three facts along the bottom are the test's own `fasting` flag and two
+ * of the five confirmed promises (free home collection, report in 24 hours).
+ * Nothing like "recommended for everyone", no invented test counts: a single
+ * test with no `params` gets its icon in the corner, never a made-up number.
+ */
+function TestCard({ test: t, qty, onEnquire }) {
+  const save = t.price && t.mrp ? t.mrp - t.price : 0;
+  const Fasting = t.fasting ? Utensils : UtensilsCrossed;
+
+  return (
+    <article
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_-2px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_-14px_rgba(13,148,136,0.35)] ${
+        qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80 hover:ring-teal-200"
+      }`}
+    >
+      {/* ── HEAD: name + count corner ─────────────────────────────────── */}
+      <div className="flex items-stretch">
+        <div className="min-w-0 flex-1 px-4 pt-4 pb-3">
+          {/* The "Top" badge is a sibling of the heading, never a child —
+              inside it, the heading's text became "CBC TestTop", which is what
+              a crawler indexed and a screen reader announced. */}
+          <h3 className="text-[15.5px] sm:text-[16.5px] font-bold leading-snug text-slate-900 line-clamp-2">
+            {t.name}
+          </h3>
+          {(t.tags ?? []).includes("Popular") && (
+            <span
+              aria-hidden
+              className="mt-1.5 inline-flex rounded-md bg-amber-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
+            >
+              Top booked
+            </span>
+          )}
+        </div>
+
+        <div className="flex w-[84px] shrink-0 flex-col items-center justify-center rounded-bl-2xl bg-linear-to-b from-teal-100/80 via-teal-50 to-white px-2 py-3 text-teal-700">
+          {t.params > 0 ? (
+            <>
+              <span className="text-[26px] font-extrabold leading-none tabular-nums">
+                {t.params}
+              </span>
+              <span className="mt-1 text-[12px] font-semibold leading-none">
+                Parameters
+              </span>
+            </>
+          ) : (
+            <span
+              className={`flex h-11 w-11 items-center justify-center rounded-2xl ring-1 ${tint(t.tint)}`}
+            >
+              {createElement(iconFor(t.icon), { className: "h-5.5 w-5.5", strokeWidth: 1.8 })}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* ── BODY: what is in it ───────────────────────────────────────── */}
+      <div className="mx-4 flex-1 border-t border-dashed border-slate-200 py-3">
+        <p className="text-[13px] leading-relaxed text-slate-600 line-clamp-3">
+          <span className="font-bold text-slate-800">Includes: </span>
+          {t.sub}
+        </p>
+
+        {save > 0 && (
+          <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700 ring-1 ring-emerald-100">
+            {offPct(t.price, t.mrp)}% OFF
+            <span className="h-1 w-1 rounded-full bg-emerald-400" aria-hidden />
+            You save {inr(save)}
+          </p>
+        )}
+      </div>
+
+      {/* ── FACTS ─────────────────────────────────────────────────────── */}
+      <ul className="mx-4 grid grid-cols-3 gap-2 border-t border-dashed border-slate-200 py-3 text-[10.5px] sm:text-[11px] leading-tight text-slate-500">
+        <li className="flex items-start gap-1.5">
+          <Fasting className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          {t.fasting ? "Fasting required" : "No fasting required"}
+        </li>
+        <li className="flex items-start gap-1.5">
+          <House className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          Free home collection
+        </li>
+        <li className="flex items-start gap-1.5">
+          <Clock className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          Report in 24 hours
+        </li>
+      </ul>
+
+      {/* ── FOOTER: price + action ────────────────────────────────────── */}
+      <div className="flex items-center justify-between gap-3 bg-linear-to-r from-teal-50 to-cyan-50/70 px-4 py-3">
+        <div className="min-w-0">
+          {t.price ? (
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-[21px] font-extrabold leading-none text-slate-900">
+                {inr(t.price)}
+              </span>
+              {t.mrp && (
+                <span className="text-[12.5px] font-medium text-slate-400 line-through">
+                  {inr(t.mrp)}
+                </span>
+              )}
+            </div>
+          ) : (
+            <>
+              <span className="text-[15px] font-bold leading-none text-teal-700">
+                Call for price
+              </span>
+              <p className="mt-1 text-[10.5px] font-medium text-slate-500">
+                Custom package
+              </p>
+            </>
+          )}
+        </div>
+
+        {t.price ? (
+          <div className="w-[128px] shrink-0">
+            <AddToCartControl test={t} qty={qty} block />
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={onEnquire}
+            aria-label={`Enquire about ${t.name}`}
+            className="inline-flex h-9 w-[128px] shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 active:scale-[0.97]"
+          >
+            Enquire
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={2.4} />
+          </button>
+        )}
+      </div>
+    </article>
   );
 }

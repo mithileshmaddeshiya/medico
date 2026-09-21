@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import HomeBannerSlider from "@/components/home/HomeBannerSlider";
 import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
@@ -12,6 +13,7 @@ import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import OfferPopup from "@/components/lab/OfferPopup";
 import WelcomePopup from "@/components/lab/WelcomePopup";
+import { HOME_BANNERS } from "@/data/home";
 import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
 import {
@@ -439,7 +441,14 @@ export default async function LabCityPage({ params }) {
           />
         </div>
       </div>
-      
+
+      {/* The same banner strip as the home page, in the same slot — under the
+          price cards, handing off to the call banner. Content is HOME_BANNERS
+          in src/data/home.js, shared across every city: the artwork is the
+          company's, not the town's, and every slide links to this page's own
+          #book form. */}
+      <HomeBannerSlider banners={HOME_BANNERS} />
+
       <LabCallBanner banner={cityData.callBanner} phone={phone} />
       <LabHowTo data={cityData.howTo} />
 

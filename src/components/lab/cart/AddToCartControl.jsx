@@ -21,11 +21,10 @@ export default function AddToCartControl({ test, qty = 0, block = false }) {
         type="button"
         onClick={() => {
           cart.add(test.id);
-          // The "Added to cart" sheet, with a way straight to the cart. The
-          // toast is only the fallback for a page that has no sheet mounted.
-          if (!cart.announce(test)) {
-            toast.success(`${test.name} added to cart`, { id: "lab-cart" });
-          }
+          // A small toast, not a sheet — the "Added to cart" bottom sheet was
+          // removed because it covered the page after every add. The floating
+          // cart pill (FloatingCartButton) is the way to the cart on a phone.
+          toast.success(`${test.name} added to cart`, { id: "lab-cart" });
         }}
         aria-label={`Add ${test.name} to cart`}
         className={`${width} cursor-pointer inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-[0_10px_20px_-10px_rgba(5,150,105,0.95)] active:scale-[0.97]`}

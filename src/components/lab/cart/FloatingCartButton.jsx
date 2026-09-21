@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/navigation";
 import { ChevronRight, ShoppingBasket } from "lucide-react";
-import { MAX_QTY } from "@/lib/labCart";
 import { cart, OPEN_CART_HASH, useCartItems } from "./cartStore";
 
 /**
@@ -11,9 +10,9 @@ import { cart, OPEN_CART_HASH, useCartItems } from "./cartStore";
  *
  * WHY IT EXISTS: NavCartButton — the header's cart icon — is `hidden
  * sm:inline-flex`, because the phone header is already carrying the logo and
- * the call block and has no room for a third control. That left a hole: on a
- * phone, once the "Added to cart" sheet was dismissed, there was NO way back
- * to the cart. A patient could fill a cart and never find it again.
+ * the call block and has no room for a third control. Without this pill a
+ * phone has NO way to the cart — adding a test only shows a toast — so a
+ * patient could fill a cart and never find it again.
  *
  * This is the phone half of that pair, so the two are exact complements:
  * `sm:hidden` here, `hidden sm:inline-flex` there. Never both, never neither.
@@ -44,10 +43,9 @@ export default function FloatingCartButton() {
   const router = useRouter();
   const items = useCartItems();
 
-  const count = Object.values(items).reduce(
-    (sum, q) => sum + Math.min(MAX_QTY, Math.max(0, Math.floor(Number(q) || 0))),
-    0
-  );
+  // Distinct tests, not total quantity: the same test booked 3 times is still
+  // one item in the basket, so the badge shows 1.
+  const count = Object.values(items).filter((q) => Math.floor(Number(q) || 0) > 0).length;
 
   // 0 on the server and on the first paint, then filled in from storage — the
   // same snapshot rule as the rest of the cart, so no hydration mismatch.

@@ -2,13 +2,12 @@
 
 import { useRouter } from "next/navigation";
 import { ShoppingCart } from "lucide-react";
-import { MAX_QTY } from "@/lib/labCart";
 import { cart, OPEN_CART_HASH, useCartItems } from "./cartStore";
 
 /**
  * The header's cart icon, on every route.
  *
- * The badge counts from the stored cart alone — ids and quantities — because
+ * The badge counts from the stored cart alone — which tests are in it — because
  * the header has no price list. Prices, names and the bill live in the drawer,
  * which belongs to the test section (LabServices), so a tap:
  *
@@ -24,10 +23,9 @@ export default function NavCartButton() {
   const router = useRouter();
   const items = useCartItems();
 
-  const count = Object.values(items).reduce(
-    (sum, q) => sum + Math.min(MAX_QTY, Math.max(0, Math.floor(Number(q) || 0))),
-    0
-  );
+  // Distinct tests, not total quantity: the same test booked 3 times is still
+  // one item in the basket, so the badge shows 1.
+  const count = Object.values(items).filter((q) => Math.floor(Number(q) || 0) > 0).length;
 
   const onClick = () => {
     if (cart.open()) return;
