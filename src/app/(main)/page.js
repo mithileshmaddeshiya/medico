@@ -33,11 +33,10 @@ import {
   LAB_OG_IMAGE,
   LAB_PHONE,
   OFFER_POPUP,
-  defaultFilters,
-  defaultTests,
   defaultTrustStrip,
 } from "@/data/lab/defaults";
 import { getLabCities } from "@/lib/labCities";
+import { getCatalog } from "@/lib/testCatalog";
 import {
   BRAND_PROFILES,
   GBP_MAP_URL,
@@ -194,7 +193,7 @@ const IDS = {
  * `areaServed` is built from the live city list rather than typed, so it can
  * never claim a town we have stopped serving.
  */
-const labNode = (cities) => ({
+const labNode = (cities, tests) => ({
   "@type": ["DiagnosticLab", "MedicalBusiness"],
   "@id": IDS.lab,
   name: "MedicoBharat",
@@ -252,7 +251,7 @@ const labNode = (cities) => ({
   ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
   // The real price list, straight off the same cards the page renders. The
   // markup can therefore never disagree with what a patient sees.
-  makesOffer: defaultTests()
+  makesOffer: tests
     .filter((test) => typeof test.price === "number")
     .map((test) => ({
       "@type": "Offer",
@@ -315,8 +314,16 @@ const cityListNode = (cities) => ({
   })),
 });
 
+/*
+ * The test cards and chips are read from MySQL (src/lib/testCatalog.js). The
+ * page stays prerendered and is rebuilt in the background at most once a
+ * minute, so a price changed in the database shows here within ~60s.
+ */
+export const revalidate = 60;
+
 export default async function HomePage() {
   const cities = await getLabCities();
+  const { tests, filters } = await getCatalog();
   /* EVERY guide, newest first — not a top-three.
 
      This used to be getLatestBlogs(3), and the "Padhne Ke Liye" group in the
@@ -362,7 +369,7 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: ldJson(
-            graph(webPageNode(), labNode(cities), cityListNode(cities))
+            graph(webPageNode(), labNode(cities, tests), cityListNode(cities))
           ),
         }}
       />
@@ -386,13 +393,13 @@ export default async function HomePage() {
       <LabTrustStrip promises={defaultTrustStrip()} />
 
       {/* The price grid, same component and same data as every city page — so
-          a price change in src/data/lab/defaults.js lands here and on all
-          three city pages at once, and they can never disagree. No `city`
-          prop: this page serves all of them. */}
+          a price change in the lab_tests table lands here and on every city
+          page at once, and they can never disagree. No `city` prop: this page
+          serves all of them. */}
       <LabServices
         cityOptions={cityOptions}
-        tests={defaultTests()}
-        filters={defaultFilters()}
+        tests={tests}
+        filters={filters}
         phone={LAB_PHONE}
       />
 

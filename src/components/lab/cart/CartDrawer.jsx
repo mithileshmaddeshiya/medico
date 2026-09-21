@@ -141,7 +141,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
   };
 
   const finish = (result) => {
-    cart.clear();
+    cart.checkedOut();
     setDone(result);
     setStep(2);
     setBusy(false);
@@ -151,6 +151,8 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
     const result = await postLead({
       ...customer,
       test: `PAY AT COLLECTION ${inr(bill.total)} · ${summariseLines(bill.lines)}`,
+      // Lets the server save the priced order and close this cart in MySQL.
+      cart: { id: cart.id(), items, city },
     });
     if (!result.ok) {
       setBusy(false);
@@ -171,7 +173,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
       const res = await fetch("/api/checkout/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ city, items, customer }),
+        body: JSON.stringify({ city, items, customer, cartId: cart.id() }),
       });
       order = await res.json().catch(() => ({}));
       if (!res.ok || !order.ok) return fail(order.error || "Could not start the payment.");

@@ -67,6 +67,15 @@ const nextConfig = {
   },
 
   /**
+   * The MySQL driver (src/lib/db.js) is loaded with Node's own require at
+   * runtime instead of being bundled — it is not on Next's built-in list, and
+   * bundling it breaks its optional native/dynamic requires. See
+   * node_modules/next/dist/docs/01-app/03-api-reference/05-config/
+   * 01-next-config-js/serverExternalPackages.md.
+   */
+  serverExternalPackages: ["mysql2"],
+
+  /**
    * Ship content/blogs/ with the routes that read it at request time.
    *
    * The articles are plain JSON on disk (see src/lib/blogs/index.js) rather

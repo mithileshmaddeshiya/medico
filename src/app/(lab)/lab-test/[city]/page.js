@@ -16,6 +16,7 @@ import WelcomePopup from "@/components/lab/WelcomePopup";
 import { HOME_BANNERS } from "@/data/home";
 import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
+import { getCatalog } from "@/lib/testCatalog";
 import {
   BRAND_PROFILES,
   GBP_MAP_URL,
@@ -30,6 +31,11 @@ import { SITE } from "@/lib/site";
 // A slug that is not in the list is a city we do not serve → a real 404, which
 // the page already handles by calling notFound() on an unknown slug.
 export const dynamicParams = false;
+
+// The test cards and chips come from MySQL (src/lib/testCatalog.js). Pages stay
+// prerendered and rebuild in the background at most once a minute, so a price
+// changed in the database reaches every city page within ~60s.
+export const revalidate = 60;
 
 // Every city we serve is prerendered at build time from the local data.
 export async function generateStaticParams() {
@@ -363,10 +369,15 @@ const breadcrumbNode = (city) => {
 export default async function LabCityPage({ params }) {
   const { city } = await params;
 
-  const cityData = await getLabCity(city);
+  const cityFile = await getLabCity(city);
   // A city we do not serve is a genuine 404 — redirecting it to Varanasi used
   // to hand Google a page whose content never matched the URL that was crawled.
-  if (!cityData) notFound();
+  if (!cityFile) notFound();
+
+  // Tests and chips from the database, the rest of the city from its file.
+  // Overlaid here so the grid AND the schema's makesOffer read the same list.
+  const { tests, filters } = await getCatalog();
+  const cityData = { ...cityFile, tests, filters };
 
   // The booking form's dropdown is scoped to THIS city — its name, its own
   // localities, then "Other". It used to list every live city, which put

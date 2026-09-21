@@ -1,5 +1,6 @@
 import { firebaseConfig } from "@/lib/firebaseConfig";
 import { notifyOwnerOnWhatsapp } from "@/lib/notifyWhatsapp";
+import { markOrderPaid } from "@/lib/labStore";
 import { fetchOrder, verifyPaymentSignature } from "@/lib/razorpay";
 
 /**
@@ -14,6 +15,9 @@ import { fetchOrder, verifyPaymentSignature } from "@/lib/razorpay";
  * The lead goes into the same `labLeads` collection, with the same fields, as
  * a form booking (see src/app/api/lab-lead/route.js), so the team works paid
  * and unpaid bookings from one list. The payment is spelled out in `test`.
+ *
+ * In MySQL the order saved by /api/checkout/order is marked paid, the lead is
+ * saved and linked to it, and the cart is closed (src/lib/labStore.js).
  */
 
 const FIRESTORE = `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents`;
@@ -77,7 +81,16 @@ export async function POST(request) {
       test: `PAID ONLINE ${inr(order.amount)} · ${notes.tests ?? ""} · ${paymentId}`.slice(0, 400),
     };
 
-    await saveLead(lead);
+    const [firestore, mysql] = await Promise.allSettled([
+      saveLead(lead),
+      markOrderPaid({ razorpayOrderId: orderId, paymentId, lead }),
+    ]);
+    if (firestore.status === "rejected") {
+      console.error(`[checkout] payment ${paymentId}: Firestore did not save the lead`, firestore.reason);
+    }
+    if (mysql.status === "rejected") {
+      console.error(`[checkout] payment ${paymentId}: MySQL did not record it`, mysql.reason);
+    }
 
     try {
       await notifyOwnerOnWhatsapp(lead);

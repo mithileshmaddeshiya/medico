@@ -1,28 +1,27 @@
 import { validateLead } from "@/components/lab/leadForm";
-import { LAB_CITIES } from "@/data/lab/cities";
-import { defaultTests } from "@/data/lab/defaults";
 import { priceCart, summariseLines } from "@/lib/labCart";
+import { getTests, recordOnlineOrder } from "@/lib/labStore";
 import { createOrder, razorpayConfigured, razorpayKeyId } from "@/lib/razorpay";
 
 /**
  * Starts an online payment for a cart.
  *
  * The browser sends test ids and quantities only. The amount is worked out
- * HERE, from the server's own price list for the page's city, and that is the
+ * HERE, from the price list in MySQL as it is right now, and that is the
  * amount the Razorpay order is created for — so the checkout widget can only
  * ever charge what the price list says.
  *
  * The patient's details ride along as order notes. That way the booking is
  * visible in the Razorpay dashboard even if the confirmation step after
  * payment never reaches us (closed tab, dropped network).
+ *
+ * The order and its priced lines are also saved to MySQL with status
+ * "created"; /api/checkout/verify flips it to "paid". An order still "created"
+ * later on is a payment window that was opened and never completed.
  */
 
 const MAX = { name: 80, city: 80, address: 400 };
 const clean = (value, max) => String(value ?? "").trim().slice(0, max);
-
-/** The city page's own price list; the shared default everywhere else. */
-const testsFor = (cityName) =>
-  LAB_CITIES.find((c) => c.name === cityName)?.tests ?? defaultTests();
 
 export async function POST(request) {
   let body;
@@ -44,7 +43,8 @@ export async function POST(request) {
     return Response.json({ ok: false, error: problem.message }, { status: 400 });
   }
 
-  const cart = priceCart(body?.items, testsFor(clean(body?.city, MAX.city)));
+  const priceListCity = clean(body?.city, MAX.city) || null;
+  const cart = priceCart(body?.items, await getTests({ fresh: true }));
   if (cart.lines.length === 0) {
     return Response.json(
       { ok: false, error: "Your cart is empty — please add a test first." },
@@ -77,6 +77,20 @@ export async function POST(request) {
         tests: summary,
       },
     });
+
+    try {
+      await recordOnlineOrder({
+        cartId: body?.cartId,
+        customer,
+        bill: cart,
+        priceListCity,
+        razorpayOrderId: order.id,
+      });
+    } catch (err) {
+      // The payment can still go ahead: /verify saves the lead even without
+      // this row, and Razorpay holds the order either way.
+      console.error("[checkout] Razorpay order created but not saved to MySQL", err);
+    }
 
     return Response.json({
       ok: true,
