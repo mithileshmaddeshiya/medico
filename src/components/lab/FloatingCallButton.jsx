@@ -41,10 +41,13 @@ export default function FloatingCallButton({ phone, label = "Book Now" }) {
           href={tel}
           aria-label={`Call MedicoBharat at ${phone} to book a test`}
           title={`Call ${phone} to book a lab test`}
-          className="flex h-11 items-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-5 text-[14px] font-bold text-white shadow-[0_10px_22px_-10px_rgba(5,150,105,0.95)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98]"
+          // Phone: a round icon-only button, so the centred cart pill fits on
+          // the same bottom row on a 360px screen (see FloatingCartButton).
+          // sm and up: the full "Book Now" pill.
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-r from-emerald-600 to-teal-600 text-[14px] font-bold text-white shadow-[0_10px_22px_-10px_rgba(5,150,105,0.95)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 active:scale-[0.98] sm:h-11 sm:w-auto sm:gap-2 sm:px-5"
         >
-          <Phone className="h-4 w-4 shrink-0" strokeWidth={2.4} />
-          {label}
+          <Phone className="h-5 w-5 shrink-0 sm:h-4 sm:w-4" strokeWidth={2.4} />
+          <span className="hidden sm:inline">{label}</span>
         </a>
 
         {/* Sits on the pill's top-right corner, outside it. A real <button>, not

@@ -111,7 +111,7 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
   return (
     <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_30px_70px_-25px_rgba(2,44,34,0.6)] ring-1 ring-slate-900/10">
       {/* ── HEADER IMAGE ───────────────────────────────────────────────────
-          formpopimg.png is drawn for this popup and nothing else: logo,
+          formpopimg.webp is drawn for this popup and nothing else: logo,
           headline, four promise icons, then a "Book Lab Test at Home" pill and
           a decorative wave along the bottom.
 

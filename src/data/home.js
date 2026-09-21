@@ -153,11 +153,11 @@ export const HOME_HERO = {
   // The home page gets its own banner rather than reusing the city heroes'
   // asset — the two pages sit next to each other in search results, and an
   // identical image makes the home page look like just another city page.
-  // 1699x926, so the hero box is aspect-11/6. Replacing this file with a
+  // 2758x1504, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
   //
   // WebP, not the original PNG: this is the LCP element on the site's most
-  // linked page, marked `priority`. Same pixels, 91 KB instead of 1516 KB.
+  // linked page, marked `priority`. 131 KB.
   //
   // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
   // It carries its own headline, four icon labels and a contact bar. That is
@@ -166,7 +166,7 @@ export const HOME_HERO = {
   // arranged. A text-free cut of the same photograph exists at
   // /navheroimage/heroempty.webp — switching back to it is what makes a
   // readable h1 possible again, and HomeHero has the note on how.
-  image: "/navheroimage/imageheorlab.png",
+  image: "/navheroimage/imageheorlab.webp",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
@@ -219,7 +219,7 @@ export const HOME_HERO = {
    it describes. Where the two disagree, THE ARTWORK IS THE BUG. */
 export const HOME_BANNERS = [
   {
-    src: "/swipper/slider12.png",
+    src: "/swipper/slider12.webp",
     /* Written as the sentence the artwork says, not as a description of the
        photograph — the alt is the only machine-readable copy of a banner.
 
@@ -237,7 +237,7 @@ export const HOME_BANNERS = [
   },
 
   {
-    src: "/swipper/slider23.png",
+    src: "/swipper/slider23.webp",
 
     /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
        /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
@@ -270,7 +270,7 @@ export const HOME_BANNERS = [
   },
 
   {
-    src: "/swipper/slider34.png",
+    src: "/swipper/slider34.webp",
 
     /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
        /public/swipper/slider2.png has "NABL Accredited Laboratories" printed

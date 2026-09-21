@@ -67,7 +67,7 @@ export const LAB_OG_IMAGE = "/og/ogtag.jpg";
  * matches the file and nothing is cropped. Change the file, change this too.
  */
 export const OFFER_POPUP = {
-  image: "/popupimg/faqpops.png",
+  image: "/popupimg/faqpops.webp",
 
   /* 1313x1198. That is not a tidy ratio and there is no Tailwind class near it
      — the closest, aspect-1/1, would crop about 9% off the artwork, and 9% off
@@ -135,16 +135,14 @@ export const defaultHero = (city) => ({
   // form off the screen.
   h1Sub: `Ghar baithe blood test book kijiye — free home sample collection ${city} me, report 24 ghante me.`,
 
-  // One banner for every city page. 1696x927, so LabHero's hero box is
-  // aspect-11/6 — replacing this file with a different shape means changing
-  // that class too, otherwise the contact bar along the bottom gets cropped.
-  //
-  // WebP, not the original PNG: the source was 1.8 MB and this is the LCP
-  // element on six pages, marked `priority`, for an audience on mobile data.
-  // Same pixel dimensions, 128 KB instead of 1829 KB.
+  // One banner for every city page — the same "Health Checkup, up to 50% off"
+  // artwork the home hero uses (HOME_HERO.image in src/data/home.js).
+  // 2758x1504, so LabHero's hero box stays aspect-11/6 — replacing this file
+  // with a different shape means changing that class too, otherwise the
+  // contact bar along the bottom gets cropped.
   //
   // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
-  // It carries its own headline, a ₹200 price pill and three icon labels, so
+  // It carries its own headline, a 50%-off pill and three icon labels, so
   // LabHero prints no visible heading of its own — two headlines, one in
   // pixels and one in text, sat on top of each other however they were
   // arranged. A text-free cut of the same photograph exists at
@@ -155,7 +153,7 @@ export const defaultHero = (city) => ({
   // headline that is identical on all of them — so the dominant element of six
   // pages competing for six different towns is byte-identical. Only the
   // sr-only h1 and the alt below carry the city name.
-  image: "/navheroimage/herocity.webp",
+  image: "/navheroimage/imageheorlab.webp",
 
   // The banner has its copy burned into the artwork and a crawler cannot read
   // pixels, so the alt carries that wording rather than describing the photo.

@@ -21,12 +21,13 @@ import PopupLeadForm from "./PopupLeadForm";
  * Two faces, one pipe: nothing about where a lead ends up can drift between
  * this and the form on the page behind it.
  *
- * ── ONCE PER VISIT, NOT ONCE PER PAGE ────────────────────────────────────
- * The "seen" flag is written the moment the popup opens, not when it is
- * closed — otherwise moving from the home page to a city page would open it
- * again, and again, for a visitor who is browsing. sessionStorage rather than
- * localStorage: it should come back on a fresh visit tomorrow, just not four
- * times in one.
+ * ── ONCE PER PAGE, PER VISIT ─────────────────────────────────────────────
+ * The "seen" flag is keyed by path, so the home page and each city page open
+ * it once — a visitor who lands on home and then moves to their city still
+ * sees it there. It is written the moment the popup opens, not when it is
+ * closed, so reloading or coming back to the same page does not reopen it.
+ * sessionStorage rather than localStorage: it should come back on a fresh
+ * visit tomorrow.
  *
  * Every storage call is wrapped: in a private window, or with site data
  * blocked, sessionStorage *throws* on access rather than returning null. An
@@ -36,11 +37,14 @@ import PopupLeadForm from "./PopupLeadForm";
 
 const SEEN_KEY = "mb:welcome-popup";
 
+// Keyed by path, so the home page and every city page each open it once.
+const seenKey = () => `${SEEN_KEY}:${window.location.pathname}`;
+
 export default function WelcomePopup({
   cityOptions,
   // Artwork drawn for this popup: it carries the branding AND the heading, so
   // the card below prints neither. Shown whole — see PopupLeadForm.
-  image = "/navheroimage/formpopimg.png",
+  image = "/navheroimage/formpopimg.webp",
   imageAlt = "MedicoBharat lab test at home — free home sample collection",
   // Not painted anywhere: this is the dialog's accessible name, which the
   // image cannot supply.
@@ -55,7 +59,7 @@ export default function WelcomePopup({
   useEffect(() => {
     let seen = false;
     try {
-      seen = sessionStorage.getItem(SEEN_KEY) === "1";
+      seen = sessionStorage.getItem(seenKey()) === "1";
     } catch {
       seen = false;
     }
@@ -64,7 +68,7 @@ export default function WelcomePopup({
     const timer = setTimeout(() => {
       setOpen(true);
       try {
-        sessionStorage.setItem(SEEN_KEY, "1");
+        sessionStorage.setItem(seenKey(), "1");
       } catch {
         // Storage is unavailable — the popup still opens, it just cannot
         // remember that it did.
