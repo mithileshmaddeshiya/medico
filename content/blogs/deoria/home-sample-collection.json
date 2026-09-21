@@ -410,7 +410,9 @@
             "href": "/blogs/dengue-typhoid-test/deoria",
             "label": "Deoria me dengue aur typhoid test kab karayein",
             "sub": "Bukhar ke kis din kaunsa test, aur platelet ka matlab"
-          }
+          },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup — senior citizen test" }
         ]
       },
       {

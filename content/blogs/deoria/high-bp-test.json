@@ -1,0 +1,277 @@
+{
+  "title": "High BP Me Kaun Se Blood Test Karayein — Deoria",
+  "description": "High BP me kaun se blood aur urine test karayein — kidney, sugar, cholesterol, sodium-potassium, kitni baar, aur Deoria me ghar par sample kaise dein.",
+  "keywords": [
+    "high BP me kaun se test",
+    "BP ke mareez ke liye blood test",
+    "hypertension blood test",
+    "BP ki dawa aur kidney test",
+    "creatinine test BP",
+    "potassium test",
+    "urine albumin test",
+    "BP aur sugar test",
+    "BP checkup Deoria",
+    "blood test for high BP in Deoria",
+    "हाई बीपी में कौन सी जांच"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 280,
+  "takeaways": [
+    "BP machine se naapa jaata hai, blood test se nahi. Blood test ye batata hai ki BP ne kidney aur dil par kya asar kiya, aur kahin BP ki koi aur wajah to nahi.",
+    "Pehli baar BP nikla ho to ek baar ki poori jaanch: CBC, sugar/HbA1c, lipid, creatinine, sodium-potassium, urine aur TSH.",
+    "BP ki dawa par creatinine aur potassium saal me 1-2 baar — dawa shuru hone ya badalne ke kuch hafte baad bhi.",
+    "BP 180/120 se upar ke saath sir me tez dard, seene me dard, dhundhla dikhna ya ek taraf kamzori ho to ye emergency hai — seedha aspataal."
+  ],
+  "sections": [
+    {
+      "id": "bp-me-blood-test-kyun-deoria",
+      "heading": "BP Machine Se Naapa Jaata Hai — Phir Blood Test Kyun?",
+      "lead": "BP ka number aaj ki baat batata hai. Blood test batata hai ki saalon ke BP ne sharir me kya badla.",
+      "blocks": [
+        "High BP (hypertension) ko chup-chaap maarne wali bimari kaha jaata hai, kyunki zyadatar logon ko koi lakshan nahi hota. Deoria me bahut se log BP ka pata tab chalta hai jab kisi aur kaam se doctor ke paas jaate hain — ya jab kidney, dil ya lakwa ki pareshani ho chuki hoti hai.",
+        "Blood aur urine test teen sawaalon ka jawab dete hain. Pehla, kya BP ne kidney ko nuksan pahunchaya hai — creatinine aur peshab me protein isko pakadte hain. Doosra, kya saath me sugar aur cholesterol bhi hai, jo milkar dil aur lakwa ka khatra kai guna badhaate hain. Teesra, khaas kar kam umar me, kya BP kisi aur bimari ki wajah se hai — kidney, thyroid ya hormone ki gadbad.",
+        {
+          "note": {
+            "title": "ECG hamari service nahi hai",
+            "text": "BP ke mareez ki shuruaati jaanch me doctor aksar ECG bhi likhte hain. MedicoBharat Deoria me sirf khoon aur peshab ke sample ghar par leta hai — ECG, echo, X-ray aur ultrasound hum nahi karte. Blood test ghar par kara lijiye aur report le kar ECG ke saath doctor ko dikhaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pehli-baar-bp-test-list-deoria",
+      "heading": "Pehli Baar BP Nikla — Kaun Se Blood Aur Urine Test Karayein",
+      "lead": "Ye doctor ki aam shuruaati soochi hai. Isse BP ka asar aur saath ki bimariyaan dono dikhti hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "High BP ki shuruaati jaanch — aam taur par",
+            "head": ["Test", "Kyun"],
+            "rows": [
+              ["Creatinine, urea (KFT) aur eGFR", "Kidney kitni theek kaam kar rahi hai"],
+              ["Sodium, potassium", "Namak ka santulan; kam potassium kabhi hormone wali BP ka ishaara"],
+              ["Urine routine + urine albumin", "Peshab me protein — kidney par BP ka sabse pehla nishaan"],
+              ["Fasting sugar + HbA1c", "BP aur sugar aksar saath aate hain"],
+              ["Lipid Profile", "Cholesterol — dil aur lakwa ka jokhim"],
+              ["CBC", "Khoon ki kami ya zyada khoon (dono BP par asar daalte hain)"],
+              ["TSH", "Thyroid ki gadbad BP badha sakti hai"],
+              ["Uric acid", "BP ke saath aksar badha hota hai; kuch BP dawa ise badhati hain"]
+            ]
+          }
+        },
+        [
+          "Kidney ke number — creatinine, urea aur eGFR — kaise padhein, wo ",
+          { "text": "LFT aur KFT normal range", "href": "/blogs/liver-kidney-test/deoria#lft-kft-normal-range-deoria" },
+          " me hai. Sugar, thyroid aur lipid ek saath kaise dekhein, uske liye ",
+          { "text": "sugar, thyroid aur lipid guide", "href": "/blogs/diabetes-thyroid-test/deoria" },
+          " dekhiye."
+        ]
+      ]
+    },
+    {
+      "id": "bp-aur-kidney-test-deoria",
+      "heading": "BP Aur Kidney — Creatinine Aur Peshab Me Protein Kyun Sabse Zaroori",
+      "lead": "BP kidney ko bigaadta hai, aur bigdi kidney BP badhaati hai. Ye chakra jaldi todna hai.",
+      "blocks": [
+        "Kidney me khoon ko chhanne wali bahut patli naliyaan hoti hain. Saalon tak BP zyada rahe to ye naliyaan sakht aur kamzor ho jaati hain. Shuruaat me koi lakshan nahi hota — na sujan, na peshab me badlav. Sabse pehla nishaan peshab me thoda sa protein (albumin) aana hai, aur baad me creatinine badhna.",
+        {
+          "list": [
+            "BP ki dawa par saal me kam se kam ek baar creatinine aur urine albumin.",
+            "Sugar aur BP dono hon to har 6 mahine.",
+            "Creatinine pichhli report se lagatar badh raha ho to doctor ko jaldi dikhaiye, bhale range ke andar ho.",
+            "Dard ki goli (painkiller) lambe samay tak lena BP ke mareez ki kidney ke liye khaas taur par nuksaandeh hai — doctor se poochh kar hi lijiye."
+          ]
+        },
+        [
+          "Sugar aur BP ke mareez me kidney ki jaanch kitni baar, uski poori baat ",
+          { "text": "sugar-BP mareez aur KFT", "href": "/blogs/liver-kidney-test/deoria#sugar-bp-wale-mareez-kft-deoria" },
+          " me hai. Urine report me protein ka matlab ",
+          { "text": "urine report guide", "href": "/blogs/urine-test/deoria#urine-report-pus-cells-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "bp-dawa-aur-report-deoria",
+      "heading": "BP Ki Dawa Aur Report — Kaun Si Dawa Kaun Sa Number Badalti Hai",
+      "lead": "Dawa shuru ya badalne ke kuch hafte baad ek jaanch ye pakka karti hai ki dawa sharir ko suit kar rahi hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Aam BP dawa aur uske saath ki jaanch",
+            "head": ["Dawa ka prakaar (misaal)", "Kya dekhein", "Kyun"],
+            "rows": [
+              ["ACE inhibitor / ARB (ramipril, enalapril, telmisartan, losartan)", "Creatinine, potassium", "Potassium badh sakta hai; shuru me creatinine thoda badhta hai"],
+              ["Diuretic — peshab wali goli (hydrochlorothiazide, chlorthalidone, furosemide)", "Sodium, potassium, uric acid, sugar", "Sodium-potassium gir sakte hain; uric acid aur sugar badh sakte hain"],
+              ["Beta blocker (atenolol, metoprolol)", "Sugar, lipid", "Kuch logon me sugar thoda badhta hai"],
+              ["Calcium channel blocker (amlodipine)", "Koi khaas jaanch nahi", "Pairon me sujan aam; lab par asar kam"]
+            ]
+          }
+        },
+        "Kai BP goliyon me do dawa ek saath hoti hain — jaise telmisartan ke saath hydrochlorothiazide. Aise me dono ki jaanch lagti hai. Apni goli ka poora naam (dabbe par chhota likha hota hai) doctor ya booking ke waqt bataiye.",
+        {
+          "note": {
+            "title": "Report dekh kar dawa mat chhodiye",
+            "text": "Potassium ya creatinine thoda badla ho to bhi BP ki dawa khud band mat kijiye — achanak dawa band karne se BP tezi se badh sakta hai. Report doctor ko dikhaiye; zaroorat ho to wo dose ya dawa badlenge.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kam-umar-me-bp-test-deoria",
+      "heading": "Kam Umar Me High BP — 30 Se Pehle BP Nikle To Wajah Dhoondhiye",
+      "lead": "Jawaani me BP aksar kisi aur bimari ka lakshan hota hai.",
+      "blocks": [
+        "40-50 ke baad BP zyadatar umar, wazan, namak aur pariwaar ki wajah se hota hai. Lekin 30 se pehle BP nikle, bahut zyada ho, ya teen dawaon se bhi control na ho, to doctor iski wajah dhoondhte hain — kyunki wajah ka ilaaj ho jaaye to BP bhi theek ho sakta hai.",
+        {
+          "list": [
+            "Kidney ki bimari — creatinine, urine routine aur albumin.",
+            "Thyroid — TSH.",
+            "Potassium bina dawa ke kam — kuch hormone (jaise aldosterone) ki gadbad ka ishaara; iski aage ki jaanch doctor likhte hain.",
+            "Neend me kharraate aur saans rukna, zyada sharaab, dard ki goliyaan, steroid, ya kuch garbhnirodhak goliyaan — ye bhi BP badhaate hain."
+          ]
+        },
+        "Is umar me BP ko \"tension\" ya \"kaam ka dabaav\" maan kar chhod dena sabse aam galti hai. Ek baar poori jaanch karwa kar doctor se wajah pakki kijiye."
+      ]
+    },
+    {
+      "id": "bp-sugar-cholesterol-saath-deoria",
+      "heading": "BP, Sugar Aur Cholesterol Saath Hon — Teeno Ki Jaanch Ek Sample Me",
+      "lead": "Teeno milkar dil aur lakwa ka khatra jodte nahi, guna karte hain.",
+      "blocks": [
+        "Deoria me BP ke kai mareez ko sugar bhi hota hai, aur dono ke saath cholesterol bhi badha milta hai. Har ek ka lakshya alag hai, lekin jaanch ek hi subah ke fasting sample me ho jaati hai — HbA1c, lipid profile, creatinine, potassium aur urine albumin.",
+        {
+          "table": {
+            "caption": "BP ke mareez ki follow-up jaanch — aam kram",
+            "head": ["Kab", "Kya"],
+            "rows": [
+              ["Dawa shuru hone ya badalne ke 2-4 hafte baad", "Creatinine, potassium (ACE/ARB ya diuretic par)"],
+              ["Har 6 mahine (sugar bhi ho to)", "HbA1c, creatinine, urine albumin"],
+              ["Saal me ek baar", "Lipid profile, CBC, sodium-potassium, urine routine, uric acid"]
+            ]
+          }
+        },
+        [
+          "Cholesterol ki normal range aur LDL kitna hona chahiye, wo ",
+          { "text": "lipid profile guide", "href": "/blogs/lipid-profile-test/deoria#ldl-kitna-hona-chahiye-deoria" },
+          " me hai. HbA1c ka lakshya ",
+          { "text": "HbA1c guide", "href": "/blogs/hba1c-sugar-test/deoria#diabetes-mareez-hba1c-lakshya-deoria" },
+          " me. BP ke saath uric acid badha ho to ",
+          { "text": "uric acid test guide", "href": "/blogs/uric-acid-test/deoria" },
+          " dekhiye."
+        ]
+      ]
+    },
+    {
+      "id": "namak-garmi-bp-deoria",
+      "heading": "Namak, Garmi Aur BP — Purvanchal Ki Rasoi Ka Hisaab",
+      "lead": "BP ki dawa jitna hi zaroori hai namak ka hisaab.",
+      "blocks": [
+        "Achaar, papad, namkeen, chokha me upar se namak, aur chai ke saath namak wale biscuit — Purvanchal ki rasoi me namak chhupa hua bahut hota hai. Namak kam karna BP ki kai dawaon jitna asar dikhata hai. Lekin ek ulti baat bhi hai: peshab wali BP goli lene wale bujurg agar garmi me paseena bahaayein aur namak-paani bahut kam kar dein, to sodium gir sakta hai.",
+        {
+          "list": [
+            "Upar se namak, achaar aur namkeen kam kijiye — khaana banate waqt ka namak dheere-dheere ghataiye.",
+            "Peshab wali BP goli par hain aur garmi me uljhan, chakkar ya bahut kamzori ho, to sodium-potassium ki jaanch karaiye; gambhir lakshan me seedha aspataal.",
+            "Gutkha, khaini aur cigarette BP ko tezi se badhaate hain — ye chhodna dawa jitna zaroori hai."
+          ]
+        },
+        [
+          "Bujurgon me sodium girne ke lakshan ",
+          { "text": "bujurgon ke health checkup", "href": "/blogs/senior-citizen-checkup/deoria#bujurgon-me-sodium-kam-deoria" },
+          " me detail me likhe hain."
+        ]
+      ]
+    },
+    {
+      "id": "bp-emergency-lakshan-deoria",
+      "heading": "BP Ke Saath Ye Lakshan Hon To Test Nahi, Seedha Aspataal",
+      "lead": "Ye report ka intezaar karne wali haalat nahi hai.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Emergency ke lakshan",
+            "text": "BP 180/120 ya usse upar ho aur saath me sir me bahut tez dard, seene me dard ya bhaaripan, saans phoolna, dhundhla dikhna, chehra tedha hona, ek taraf ke haath-pair me kamzori, bolne me dikkat ya behoshi ho — to turant nazdeeki bade aspataal ki emergency me jaaiye — der mat kijiye, aur ghar par report ka intezaar bilkul nahi.",
+            "tone": "warn"
+          }
+        },
+        "Bina lakshan ke BP ek baar zyada aaye to ghabraiye nahi — 5 minute baith kar dobara naapiye, aur agle 1-2 din alag samay par naap kar doctor ko dikhaiye."
+      ]
+    },
+    {
+      "id": "bp-test-ghar-par-deoria",
+      "heading": "Deoria Me BP Ke Mareez Ka Blood Test Ghar Par",
+      "lead": "Har chhe mahine ki jaanch ke liye kaam chhod kar jaane ki zaroorat nahi.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — fasting sample de kar BP aur sugar ki goli samay par.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Test ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " par, booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se. Parche par urine albumin ya electrolytes jaisa koi test likha ho to booking ke waqt parche ki photo ke saath poochh lijiye. Fasting wale din dawa kaise lein, wo ",
+          { "text": "blood test se pehle fasting", "href": "/blogs/blood-test-fasting/deoria#dawa-aur-fasting-deoria" },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "High BP me kaun se blood test karane chahiye?",
+      "answer": "Aam taur par creatinine aur urea (kidney), sodium-potassium, urine routine aur urine albumin, fasting sugar aur HbA1c, lipid profile, CBC, TSH aur uric acid. Doctor ECG bhi likhte hain, jo blood test nahi hai."
+    },
+    {
+      "question": "BP ki dawa lene walon ko kaun sa test kitni baar karana chahiye?",
+      "answer": "Creatinine aur potassium saal me kam se kam 1-2 baar, aur dawa shuru hone ya badalne ke 2-4 hafte baad bhi. Sugar saath ho to HbA1c aur urine albumin har 6 mahine. Lipid profile saal me ek baar."
+    },
+    {
+      "question": "Kya BP ki dawa se kidney kharab hoti hai?",
+      "answer": "Aam taur par nahi — BP control me na rehna kidney ko zyada nuksan pahunchata hai. Kuch dawa (ACE/ARB) shuru me creatinine thoda badhaati hain aur potassium badha sakti hain, isliye kuch hafte baad jaanch hoti hai. Dawa khud band mat kijiye, report doctor ko dikhaiye."
+    },
+    {
+      "question": "BP ke mareez ko potassium test kyun karana chahiye?",
+      "answer": "Kuch BP dawa potassium badhaati hain (ACE/ARB) aur kuch ghataati hain (peshab wali goli). Dono haalat me dil ki dhadkan par asar pad sakta hai. Bina dawa ke potassium kam ho to ye hormone wali BP ka ishaara bhi ho sakta hai."
+    },
+    {
+      "question": "BP test ke liye fasting zaroori hai?",
+      "answer": "Creatinine, potassium, CBC aur TSH ke liye nahi. Lekin BP ki jaanch me aksar fasting sugar aur lipid profile bhi hote hain, isliye subah 10-12 ghante ki fasting ke baad sab ka sample ek saath dena behtar hai. BP ki goli samay par paani ke saath le sakte hain."
+    },
+    {
+      "question": "Deoria me BP ke mareez ka blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me. ECG hamari service nahi hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me BP ke mareez ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "KFT, lipid, HbA1c ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — normal range" },
+          { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile" },
+          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup" }
+        ]
+      }
+    ]
+  }
+}

@@ -281,7 +281,9 @@
         "links": [
           { "href": "/blogs/glucometer-sugar-test/deoria", "label": "Glucometer vs lab sugar test — farak kyun", "sub": "Machine ki reading kab galat aati hai" },
           { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile report" },
-          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch — kitni baar" }
+          { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch — kitni baar" },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
+          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" }
         ]
       }
     ]

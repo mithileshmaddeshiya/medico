@@ -183,7 +183,17 @@
             "text": "full body checkup me kya-kya hona chahiye",
             "href": "/blogs/full-body-checkup/varanasi"
           },
-          "."
+          ". Maa-baap ke liye ",
+          {
+            "text": "bujurgon ka health checkup",
+            "href": "/blogs/senior-citizen-checkup/deoria"
+          },
+          " aur ghar ki mahilaon ke liye ",
+          {
+            "text": "mahilaon ka health checkup umar ke hisaab se",
+            "href": "/blogs/women-health-checkup/deoria"
+          },
+          " alag se likhe hain."
         ]
       ]
     },
@@ -415,7 +425,12 @@
             "text": "yahan",
             "href": "/lab-test/deoria#prepare-for-test-deoria"
           },
-          " hai."
+          " hai. Kitne ghante fasting, chai-paani ki chhoot aur fasting wale din dawa kaise lein — ye sab ",
+          {
+            "text": "blood test se pehle fasting guide",
+            "href": "/blogs/blood-test-fasting/deoria"
+          },
+          " me hai."
         ]
       ]
     },
@@ -440,8 +455,8 @@
           },
           " me hai. Report ke numbers ko line-by-line samajhna ho to uspar poora hissa alag guide me hai: ",
           {
-            "text": "report aa gayi — ab ise kaise padhein",
-            "href": "/blogs/lab-test/varanasi#report-kaise-padhein"
+            "text": "blood test report kaise padhein — H, L aur range",
+            "href": "/blogs/blood-test-report/deoria"
           },
           "."
         ]
@@ -635,6 +650,12 @@
             "href": "/blogs/child-blood-test/deoria",
             "label": "Bachchon ka blood test — kab aur kaun sa"
           },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
+          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup — senior citizen test" },
+          { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" },
+          { "href": "/blogs/high-bp-test/deoria", "label": "High BP me kaun se blood test karayein" },
+          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" },
           {
             "href": "/blogs/full-body-checkup/varanasi",
             "label": "Full body checkup me kya hona chahiye",

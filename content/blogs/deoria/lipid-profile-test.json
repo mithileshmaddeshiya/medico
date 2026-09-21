@@ -288,7 +288,9 @@
         "links": [
           { "href": "/blogs/hba1c-sugar-test/deoria", "label": "HbA1c normal range aur sugar level chart", "sub": "Triglycerides ke saath sugar bhi dekhiye" },
           { "href": "/blogs/thyroid-test/deoria", "label": "Thyroid test normal range — TSH, T3, T4" },
-          { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — normal range aur fasting" }
+          { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — normal range aur fasting" },
+          { "href": "/blogs/high-bp-test/deoria", "label": "High BP me kaun se blood test karayein" },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" }
         ]
       }
     ]

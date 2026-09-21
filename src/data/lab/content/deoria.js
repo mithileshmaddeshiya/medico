@@ -70,6 +70,8 @@ const LAB_VARANASI = "/lab-test/varanasi";
 const GUIDE_LAB_TEST = "/blogs/lab-test/deoria";
 const GUIDE_FULL_BODY = "/blogs/full-body-checkup/deoria";
 const GUIDE_LIVER_KIDNEY = "/blogs/liver-kidney-test/deoria";
+const GUIDE_FASTING = "/blogs/blood-test-fasting/deoria";
+const GUIDE_REPORT = "/blogs/blood-test-report/deoria";
 // Added once Gorakhpur went live. This page names the city a dozen times as
 // the place people travel to — leaving it as plain text while we serve it was
 // the site's single most obvious missing link.
@@ -243,6 +245,11 @@ export const deoriaContent = [
       "Fasting sample se pehle chai, doodh wali chai, biscuit, toffee ya gutkha — kuch bhi nahi. Ek chai bhi sugar aur lipid ki report badal deti hai, aur phir wahi test dobara karana padta hai. Sirf saada paani.",
       "Lipid Profile ya Liver Function Test se kam se kam 24 ghante pehle sharaab bilkul na lein — ek shaam ki peene se hi triglycerides aur liver enzymes kaafi badh jaate hain. Kidney function ya CPK karana ho to ek din pehle bahut bhaari mehnat ya gym avoid kijiye.",
       "Dawa ka aam niyam ye hai ki apni rozana ki goliyan usi samay lijiye, jab tak doctor mana na kare. Do exception hain: thyroid ki goli sample dene ke baad leni chahiye, aur biotin ya multivitamin kisi bhi hormone test se 2 se 3 din pehle band kar dena chahiye. Phlebotomist ko bata dijiye ki aap kaun kaun si dawa le rahe hain, aur doctor ka parcha saamne rakhiye taaki wahi panel liya jaaye jo likha hai.",
+      [
+        "Kaun se test khaali pet hote hain, sugar ki goli ya insulin fasting wale din kab lein, aur vrat ya Chhath ke aas-paas test kab karayein — ye sab ",
+        { text: "blood test se pehle fasting guide", href: GUIDE_FASTING },
+        " me detail me hai.",
+      ],
     ],
   },
 
@@ -256,7 +263,9 @@ export const deoriaContent = [
       [
         "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Report ke numbers ka matlab kya hota hai aur kis flag par ghabrana nahi chahiye, ye ",
         { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-me-kya-dekhein-deoria` },
-        " me detail me likha hai.",
+        " me hai, aur H-L flag, units tatha reference range ki poori guide ",
+        { text: "blood test report kaise padhein", href: GUIDE_REPORT },
+        " me.",
       ],
     ],
   },

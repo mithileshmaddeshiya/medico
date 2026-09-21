@@ -313,7 +313,9 @@
           { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein", "sub": "Haemoglobin, WBC aur platelet ek table me" },
           { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch", "sub": "HbA1c, TSH aur fasting ke niyam" },
           { "href": "/blogs/hiv-hepatitis-test/deoria", "label": "HIV aur Hepatitis B test — kab aur kaise", "sub": "Pregnancy ki screening aur report ka matlab" },
-          { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" }
+          { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
+          { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" },
+          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" }
         ]
       }
     ]
