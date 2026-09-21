@@ -9,7 +9,7 @@
  * NOTE HOW SHORT AN ENTRY IS. Only the facts that differ between cities live
  * here; every word on the page — hero, tests, prices, FAQs, SEO copy, CTA —
  * comes from src/data/lab/defaults.js with the city's name filled in. That is
- * what keeps adding a city cheap.
+ * what keeps adding a city .
  *
  * ── Adding a city ───────────────────────────────────────────────────────
  * Add an object to LAB_CITY_SEED below with:
