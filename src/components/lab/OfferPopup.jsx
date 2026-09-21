@@ -37,11 +37,11 @@ import { Phone, X } from "lucide-react";
  * the cheapest fix is to check WelcomePopup's key here before opening, not to
  * delete this.
  *
- * ── ONCE PER VISIT, WRITTEN ON OPEN ──────────────────────────────────────
- * The seen flag is set the moment it opens, not when it is closed — otherwise
- * moving from the home page to a city page would open it again for somebody
- * who is simply browsing. sessionStorage, not localStorage: it should come
- * back on a fresh visit tomorrow, just not four times today.
+ * ── ONCE PER PAGE, PER VISIT, WRITTEN ON OPEN ────────────────────────────
+ * The seen flag is keyed by path, so the home page and each city page open it
+ * once. It is set the moment it opens, not when it is closed, so scrolling
+ * back up and down the same page does not reopen it. sessionStorage, not
+ * localStorage: it should come back on a fresh visit tomorrow.
  *
  * Every storage call is wrapped. In a private window, or with site data
  * blocked, sessionStorage THROWS on access rather than returning null, and an
@@ -50,6 +50,9 @@ import { Phone, X } from "lucide-react";
  */
 
 const SEEN_KEY = "mb:offer-popup";
+
+// Keyed by path, so the home page and every city page each open it once.
+const seenKey = () => `${SEEN_KEY}:${window.location.pathname}`;
 
 /** The element this popup watches. See the warning above. */
 const FAQ_SELECTOR = "#faq";
@@ -62,7 +65,7 @@ export default function OfferPopup({ offer, phone }) {
 
     let seen = false;
     try {
-      seen = sessionStorage.getItem(SEEN_KEY) === "1";
+      seen = sessionStorage.getItem(seenKey()) === "1";
     } catch {
       seen = false;
     }
@@ -74,7 +77,7 @@ export default function OfferPopup({ offer, phone }) {
     const show = () => {
       setOpen(true);
       try {
-        sessionStorage.setItem(SEEN_KEY, "1");
+        sessionStorage.setItem(seenKey(), "1");
       } catch {
         // Storage unavailable — it opens, it just cannot remember it did.
       }
