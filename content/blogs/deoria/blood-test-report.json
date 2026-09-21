@@ -1,0 +1,290 @@
+{
+  "title": "Blood Test Report Kaise Padhein — H, L Aur Range, Deoria",
+  "description": "Blood test report me H aur L ka matlab, reference range aur units kaise padhein, aur kaun sa number turant doctor ko dikhayein — Deoria ke liye saral guide.",
+  "keywords": [
+    "blood test report kaise padhe",
+    "blood report me H aur L ka matlab",
+    "reference range kya hai",
+    "blood test report normal range",
+    "lab report kaise samjhe",
+    "report me high low ka matlab",
+    "biological reference interval",
+    "pathology report reading",
+    "blood test report online",
+    "blood test report in Deoria",
+    "ब्लड टेस्ट रिपोर्ट कैसे पढ़ें"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 250,
+  "takeaways": [
+    "Har number ko usi line me chhapi \"reference range\" se milaiye — internet ke chart se nahi. Range machine, method, umar aur ling ke hisaab se badalti hai.",
+    "H ya L ka matlab bimari nahi. Reference range swasth logon ke beech ke 95% ko dikhati hai, isliye har 20 swasth logon me se lagbhag 1 kisi test me range ke bahar aata hi hai.",
+    "Kuch number intezaar nahi karte — bahut kam haemoglobin ya platelet, bahut zyada ya bahut kam sugar, aur bahut badha creatinine ya potassium. Inke saath tabiyat kharab ho to usi din doctor.",
+    "Ek report se zyada kaam ki cheez hai report ka silsila. Purani PDF sambhaaliye aur follow-up ek hi lab se karaiye."
+  ],
+  "sections": [
+    {
+      "id": "report-ke-chaar-column-deoria",
+      "heading": "Blood Test Report Ke Chaar Column — Test, Result, Unit Aur Reference Range",
+      "lead": "Report dekhne me bhari lagti hai, lekin har line me bas chaar cheezein hoti hain.",
+      "blocks": [
+        "Deoria me zyadatar report ab WhatsApp par PDF me aati hai, aur khol kar sabse pehle log laal ya bold number dhoondhte hain. Usse pehle ek minute me report ki banawat samajh lijiye — phir har page aasaan lagega.",
+        {
+          "table": {
+            "caption": "Report ki ek line — kya kya likha hota hai",
+            "head": ["Column", "Kya hai", "Misaal"],
+            "rows": [
+              ["Test / Investigation", "Kis cheez ki jaanch", "Haemoglobin"],
+              ["Result / Observed value", "Aapka number", "11.2"],
+              ["Unit", "Kis naap me", "g/dL"],
+              ["Biological Reference Interval", "Is lab me swasth logon ki range", "12.0 – 15.5"],
+              ["Flag (H / L / *)", "Range ke upar ya neeche", "L"]
+            ]
+          }
+        },
+        "Report ke upar wala hissa (header) bhi utna hi zaroori hai. Usme naam, umar, ling, sample lene ki tareekh aur samay, aur report banne ka samay hota hai. Umar aur ling galat chhape hon to range bhi galat lagti hai — jaise mahila ki report me purush ki haemoglobin range. Header par naam aur umar ek baar zaroor milaiye.",
+        "Kuch report me har test ke neeche \"Method\" likha hota hai — jaise CLIA, ECLIA, Enzymatic. Aam padhne wale ke liye iska matlab bas itna hai ki alag method ki report ke number seedhe milaaye nahi ja sakte."
+      ]
+    },
+    {
+      "id": "h-aur-l-ka-matlab-deoria",
+      "heading": "Report Me H Aur L Ka Matlab — High, Low Aur Bold Number",
+      "lead": "Flag ek ishaara hai, diagnosis nahi.",
+      "blocks": [
+        "H (High) matlab number range se upar, L (Low) matlab range se neeche. Kuch lab isko bold, laal rang ya star (*) se dikhate hain. Bas itna hi — isme ye nahi likha ki kitna chinta ka vishay hai.",
+        "Reference range swasth logon ke beech ke 95% number se banti hai. Iska seedha matlab hai ki 20 swasth logon me se lagbhag 1 ka number kisi bhi test me range ke thoda bahar aayega hi. Aur agar ek report me 20 alag test hain — jaise full body checkup me hote hain — to ek-do flag bina kisi bimari ke aa jaana bahut aam hai.",
+        {
+          "table": {
+            "caption": "Flag ko kaise tolen — aam soch",
+            "head": ["Haalat", "Aam taur par matlab"],
+            "rows": [
+              ["Range ke thoda bahar, aur koi lakshan nahi", "Aksar maamuli; doctor dohraane ko keh sakte hain"],
+              ["Ek hi disha me kai jude number (jaise Hb, MCV, RBC sab kam)", "Ek kahani ban rahi hai — doctor ko dikhaiye"],
+              ["Range se bahut door", "Doctor ko jaldi dikhaiye"],
+              ["Pichhli report se lagatar badhta ya ghatta", "Number se zyada ye silsila maayne rakhta hai"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Report se khud dawa shuru mat kijiye",
+            "text": "Iron kam dikhe to iron ki goli, sugar thoda upar ho to desi nuskha, cholesterol upar ho to kisi ki bataayi dawa — ye sab bina doctor ke karna report ko aur uljhaata hai. Flag doctor se poochhne ka kaaran hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "report-units-samjhein-deoria",
+      "heading": "Report Ke Units — Lakh, /µL, mg/dL Aur mmol/L Ka Chakkar",
+      "lead": "Aadhi uljhan number se nahi, unit se hoti hai.",
+      "blocks": [
+        "Ek hi cheez alag lab me alag unit me likhi ja sakti hai. Isliye do report milaate waqt pehle unit milaiye. Sabse aam uljhan platelet aur WBC me hoti hai — koi \"1.5 lakh\" likhta hai, koi \"150 ×10³/µL\", koi \"150000 /cumm\". Teeno ek hi number hain.",
+        {
+          "table": {
+            "caption": "Ek number, alag likhawat — aam misaal",
+            "head": ["Test", "Ek tarah", "Doosri tarah", "Barabar"],
+            "rows": [
+              ["Platelet", "1.5 lakh", "150 ×10³/µL", "150000 /cumm"],
+              ["WBC", "7,000 /cumm", "7.0 ×10³/µL", "7 ×10⁹/L"],
+              ["Sugar", "100 mg/dL", "5.6 mmol/L", "mmol/L × 18 = mg/dL"],
+              ["Haemoglobin", "12 g/dL", "120 g/L", "g/L ÷ 10 = g/dL"],
+              ["Creatinine", "1.0 mg/dL", "88 µmol/L", "µmol/L ÷ 88 = mg/dL"]
+            ]
+          }
+        },
+        [
+          "CBC ki report me units aur lakh wala hisaab ",
+          { "text": "CBC guide ke units wale hisse", "href": "/blogs/cbc-test/deoria#report-units-lakh-deoria" },
+          " me detail me hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-ka-kaunsa-hissa-deoria",
+      "heading": "Report Ka Har Hissa — Kaun Si Guide Me Uski Normal Range",
+      "lead": "Full body checkup ki report kai panel ka jod hai. Har panel ki apni guide hai.",
+      "blocks": [
+        "Ek badi report ko panel me baant kar padhiye — pehle CBC, phir sugar, phir lipid, liver, kidney, thyroid aur vitamin. Har panel ki normal range, H/L ka matlab aur kab chinta karein, uski alag guide Deoria ke liye likhi hai:",
+        {
+          "list": [
+            ["CBC — haemoglobin, WBC, platelet: ", { "text": "CBC normal range aur report", "href": "/blogs/cbc-test/deoria#cbc-normal-range-table-deoria" }],
+            ["Sugar aur HbA1c: ", { "text": "HbA1c normal range aur sugar level chart", "href": "/blogs/hba1c-sugar-test/deoria#hba1c-normal-range-chart-deoria" }],
+            ["Cholesterol, LDL, HDL, triglycerides: ", { "text": "lipid profile normal range", "href": "/blogs/lipid-profile-test/deoria#cholesterol-normal-range-table-deoria" }],
+            ["SGPT, bilirubin, creatinine, urea: ", { "text": "LFT aur KFT normal range", "href": "/blogs/liver-kidney-test/deoria#lft-kft-normal-range-deoria" }],
+            ["TSH, T3, T4: ", { "text": "thyroid test normal range", "href": "/blogs/thyroid-test/deoria#tsh-normal-range-table-deoria" }],
+            ["Vitamin D, B12, ferritin: ", { "text": "Vitamin D aur B12 guide", "href": "/blogs/vitamin-b12-d-test/deoria" }],
+            ["Uric acid: ", { "text": "uric acid test guide", "href": "/blogs/uric-acid-test/deoria" }],
+            ["Urine routine — pus cells, protein, sugar: ", { "text": "urine report kaise padhein", "href": "/blogs/urine-test/deoria#urine-report-pus-cells-deoria" }],
+            ["RA factor, CRP, ESR: ", { "text": "jodon ke dard ka test", "href": "/blogs/joint-pain-test/deoria" }]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "report-turant-doctor-deoria",
+      "heading": "Kaun Sa Number Intezaar Nahi Karta — Usi Din Doctor Ko Dikhayein",
+      "lead": "Ye seemaayein aam ishaare hain. Tabiyat kharab ho to number chahe jo ho, seedha doctor.",
+      "blocks": [
+        "Zyadatar H/L agle OPD tak ruk sakte hain. Lekin kuch number aise hain jinke saath — khaas kar agar lakshan bhi hain — usi din doctor ya aspataal jaana chahiye. Deoria me raat me doctor dhoondhna mushkil hota hai, isliye aise number subah dikhte hi kadam uthaiye.",
+        {
+          "table": {
+            "caption": "Aam taur par jaldi dikhaane wale number",
+            "head": ["Test", "Chinta wala number (lagbhag)", "Saath me kya dekhein"],
+            "rows": [
+              ["Haemoglobin", "7 g/dL se kam", "Saans phoolna, chakkar, bahut kamzori"],
+              ["Platelet", "20,000 se kam, ya tezi se girta", "Masoodon/naak se khoon, kaale dast, laal chakatte"],
+              ["Blood sugar", "70 se kam, ya 300 se upar", "Paseena, behoshi, ulti, bahut pyaas, susti"],
+              ["Potassium", "6.0 se upar ya 3.0 se kam", "Kamzori, dhadkan me gadbad"],
+              ["Sodium", "125 se kam", "Uljhan, chakkar, daure — bujurgon me zyada"],
+              ["Creatinine", "Pichhli report se achanak kai guna", "Peshab kam hona, sujan"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Emergency me report ka intezaar mat kijiye",
+            "text": "Behoshi, daura, saans ki takleef, seene me dard, ya bachche me tez bukhar ke saath jhatke — ye report ka nahi, turant aspataal ka maamla hai.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Sugar girne ya bahut badhne par kya karein, uski baat ",
+          { "text": "sugar emergency wale hisse", "href": "/blogs/hba1c-sugar-test/deoria#sugar-emergency-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-galat-kab-deoria",
+      "heading": "Report Kab Galat Aa Sakti Hai — Sample Ki Taiyaari Aur Haal Ki Beemari",
+      "lead": "Number sahi hai ya nahi, ye kai baar sample dene se pehle hi tay ho jaata hai.",
+      "blocks": [
+        {
+          "list": [
+            "Fasting galat — chai pi li, ya 14 ghante se zyada bhookhe rahe: sugar aur triglycerides galat.",
+            "Paani ki kami, garmi ya nirjala vrat: haemoglobin, urea aur creatinine jhoothe badhe.",
+            "Haal me bukhar, dast ya infection: WBC, ESR, CRP, liver enzymes aur TSH kuch hafte badle hue.",
+            "Pichhli shaam sharaab ya bhaari daawat: triglycerides aur SGPT upar.",
+            "Biotin wali multivitamin: thyroid aur kuch hormone test galat.",
+            "Bhaari kasrat ya mazdoori ke agle din: CPK aur creatinine thode upar."
+          ]
+        },
+        [
+          "Inme se zyadatar galtiyaan sample se pehle ki taiyaari se bachti hain — poori list ",
+          { "text": "blood test se pehle fasting guide", "href": "/blogs/blood-test-fasting/deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "purani-report-sambhalein-deoria",
+      "heading": "Purani Report Sambhaaliye — Doctor Number Nahi, Silsila Dekhte Hain",
+      "lead": "HbA1c 7.2 achchha hai ya bura? Pichhli baar 9 tha to bahut achchha, 6.5 tha to nahi.",
+      "blocks": [
+        "Sugar, thyroid, kidney, haemoglobin — jo cheezein mahino tak dekhi jaati hain, unme ek report se zyada kaam ki cheez hai pichhli reports se tulna. Deoria se bahut log Gorakhpur, Lucknow ya Varanasi ke doctor ko dikhate hain, aur har baar kaagaz ki file saath le jaana mushkil hota hai. PDF phone me ho to ye kaam aasaan hai.",
+        {
+          "list": [
+            "Phone me ek folder ya WhatsApp par khud ko bheja hua chat — har report wahan, tareekh ke saath.",
+            "Follow-up ek hi lab se, taaki method aur range badalne se farak na dikhe.",
+            "Doctor ko dikhaate waqt nayi report ke saath pichhli do report bhi kholiye.",
+            "Dawa kab shuru hui ya dose kab badla, wo tareekh bhi likh lijiye."
+          ]
+        },
+        [
+          "Ek hi lab se follow-up kyun zaroori hai, uski baat ",
+          { "text": "report aur ek hi lab", "href": "/blogs/pathology-lab/deoria#report-aur-ek-hi-lab-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-doctor-sawaal-deoria",
+      "heading": "Report Le Kar Doctor Ke Paas — Ye Chaar Sawaal Poochhiye",
+      "lead": "Internet ya kisi app ka anumaan doctor ki jagah nahi le sakta, lekin sahi sawaal visit ko kaam ka bana dete hain.",
+      "blocks": [
+        {
+          "list": [
+            "Jo number range se bahar hain, kya wo meri beemari ya dawa se jude hain, ya maamuli hain?",
+            "Kya koi test dohraana hai — kab, aur khaali pet ya nahi?",
+            "Kya koi aur test chahiye jo is report me nahi hai?",
+            "Agli jaanch kab, aur kin lakshan par usse pehle aana hai?"
+          ]
+        },
+        "Report ki PDF doctor ko pehle hi WhatsApp kar dijiye, agar wo lete hain — visit me samay bachta hai."
+      ]
+    },
+    {
+      "id": "ghar-par-test-report-deoria",
+      "heading": "Deoria Me Blood Test Ghar Par Aur Report WhatsApp Par",
+      "lead": "Sample ghar par, report phone par — report lene doosra chakkar nahi.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free, trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Report kab aati hai aur culture jaise test me zyada samay kyun lagta hai, wo ",
+          { "text": "Deoria service page ke report wale hisse", "href": "/lab-test/deoria#reports-deoria" },
+          " me hai. Test ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " par."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Blood test report me H aur L ka matlab kya hai?",
+      "answer": "H ka matlab result range se upar (High) aur L ka matlab range se neeche (Low). Ye sirf ishaara hai, bimari ka faisla nahi. Range ke thoda bahar number swasth logon me bhi aam hai — doctor lakshan aur baaki report ke saath tay karte hain."
+    },
+    {
+      "question": "Reference range kya hoti hai?",
+      "answer": "Reference range (Biological Reference Interval) us lab me swasth logon ke beech ke 95% number ki range hai. Ye machine, method, umar aur ling ke hisaab se badalti hai, isliye apni report par chhapi range hi maaniye, internet ka chart nahi."
+    },
+    {
+      "question": "Report me ek-do number high hon to kya bimari hai?",
+      "answer": "Zaroori nahi. Bade package me 20-40 test hote hain, aur 1-2 ka range ke thoda bahar aana swasth logon me bhi aam hai. Chinta tab hai jab number range se bahut door ho, kai jude number ek hi disha me hon, ya lakshan bhi hon."
+    },
+    {
+      "question": "Do lab ki report me alag number kyun aate hain?",
+      "answer": "Alag machine, method aur reference range ki wajah se. Sample ka samay, fasting aur haal ki beemari se bhi number badalta hai. Isliye follow-up ek hi lab se karaiye aur tulna ek jaisi taiyaari wali report se kijiye."
+    },
+    {
+      "question": "Kaun si report dekh kar turant doctor ke paas jaana chahiye?",
+      "answer": "Bahut kam haemoglobin (lagbhag 7 se kam), bahut kam ya tezi se girta platelet, sugar 70 se kam ya 300 se upar, potassium bahut badha, sodium bahut kam, ya creatinine achanak kai guna — khaas kar agar tabiyat bhi kharab ho. Behoshi, daura ya saans ki takleef me report ka intezaar mat kijiye."
+    },
+    {
+      "question": "Deoria me blood test report kitni der me milti hai?",
+      "answer": "Zyadatar routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Culture jaise test me 48-72 ghante lagte hain kyunki organism ko ugaana padta hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me report padhne ka tareeka hai. Har test ki normal range uski apni guide me hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria#reports-deoria", "label": "Report kab aur kaise milti hai" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" }
+        ]
+      },
+      {
+        "title": "Normal Range Guide",
+        "links": [
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range" },
+          { "href": "/blogs/thyroid-test/deoria", "label": "Thyroid test normal range — TSH, T3, T4" },
+          { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile" },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" }
+        ]
+      }
+    ]
+  }
+}

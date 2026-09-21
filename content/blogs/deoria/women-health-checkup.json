@@ -1,0 +1,266 @@
+{
+  "title": "Mahilaon Ka Health Checkup — Umar Ke Hisaab Se, Deoria",
+  "description": "20, 30, 40 aur 50 ke baad mahilaon ke blood test — khoon ki kami, thyroid, sugar, Vitamin D aur menopause ki jaanch, Deoria me ghar par sample.",
+  "keywords": [
+    "women health checkup Deoria",
+    "mahilaon ke liye blood test",
+    "mahila health checkup",
+    "40 ke baad mahilaon ke test",
+    "menopause ke baad kaun se test",
+    "mahilaon me khoon ki kami ki jaanch",
+    "women full body checkup",
+    "thyroid test for women",
+    "Vitamin D test women",
+    "women blood test at home Deoria",
+    "महिलाओं की खून की जांच"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 270,
+  "takeaways": [
+    "Uttar Pradesh me lagbhag har doosri mahila me khoon ki kami milti hai. Thakan aur chakkar ko \"ghar ka kaam\" samajhne se pehle ek CBC kara lijiye.",
+    "Mahilaon me thyroid ki bimari purushon se kai guna zyada hai. 30 ke baad, ya periods, wazan aur thakan ki shikayat par TSH ek baar zaroor.",
+    "40 ke baad aur menopause ke aas-paas sugar, cholesterol aur Vitamin D badalte hain — saal ki jaanch me in teeno ko jodiye.",
+    "Periods ke dauraan blood test ho sakta hai, lekin urine test 2-3 din baad kijiye. Hormone test (LH, FSH) period ke khaas din par hote hain."
+  ],
+  "sections": [
+    {
+      "id": "mahilaon-ka-checkup-kyun-deoria",
+      "heading": "Mahilaon Ka Health Checkup Kyun Chhoot Jaata Hai — Aur Kyun Zaroori Hai",
+      "lead": "Ghar me sabki jaanch ki fikr karne wali mahila apni jaanch sabse aakhir me karati hai.",
+      "blocks": [
+        "Deoria ke gharon me aam dekha jaata hai: bachchon ka bukhar, saas-sasur ki sugar, pati ka BP — sab ki report samay par, lekin maa ki apni thakan \"kaam ki thakan\" maan li jaati hai. Mahilaon ki kuch bimariyaan khaas taur par isi chup me badhti hain — khoon ki kami, thyroid, Vitamin D ki kami, aur 40 ke baad sugar tatha cholesterol.",
+        "Sarkaari sarvekshan (NFHS-5) ke hisaab se Uttar Pradesh me 15-49 saal ki lagbhag aadhi mahilaon me khoon ki kami (anaemia) hai. Iska matlab ye nahi ki har mahila bimaar hai — matlab ye hai ki ek saadi CBC yahan ki mahilaon ke liye sabse kaam ki jaanch hai, aur wo sasti bhi hai.",
+        {
+          "note": {
+            "title": "Is guide me kya nahi hai",
+            "text": "Pap smear, mammography, ultrasound aur haddi ki jaanch (BMD) mahilaon ke checkup ka zaroori hissa hain, lekin ye khoon ki jaanch nahi hain aur hamari service nahi hain. Inke liye gynaecologist ya imaging centre jaana hoga. Ye guide sirf blood aur urine test ki hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "umar-ke-hisaab-se-test-mahila-deoria",
+      "heading": "Umar Ke Hisaab Se Mahilaon Ke Blood Test — 20, 30, 40 Aur 50 Ke Baad",
+      "lead": "Ye aam kram hai. Lakshan ya pariwaar me bimari ho to doctor jaldi aur zyada jaanch kehte hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Mahilaon ke liye umar ke hisaab se aam blood test",
+            "head": ["Umar", "Aam jaanch", "Khaas dhyaan"],
+            "rows": [
+              ["20 – 30", "CBC, TSH, fasting sugar, urine routine", "Khoon ki kami, periods ki gadbad, PCOD"],
+              ["30 – 40", "Upar wale + lipid profile, Vitamin D, B12", "Thyroid, pregnancy ke baad ki kamzori"],
+              ["40 – 50", "Upar wale + HbA1c, LFT, KFT", "Sugar, cholesterol, menopause ki shuruaat"],
+              ["50 ke baad", "Poori jaanch saal me ek baar — Advanced ya Senior pack", "Haddiyan, dil, sugar, kidney"]
+            ]
+          }
+        },
+        [
+          "30 ke baad saal ki jaanch ke liye aksar ek package sasta padta hai — kaun sa package kiske liye, wo ",
+          { "text": "full body checkup guide", "href": "/blogs/full-body-checkup/deoria#kis-ke-liye-kaun-sa-package-deoria" },
+          " me hai. 55 ke baad ki jaanch ",
+          { "text": "bujurgon ke health checkup", "href": "/blogs/senior-citizen-checkup/deoria" },
+          " me alag se likhi hai."
+        ]
+      ]
+    },
+    {
+      "id": "mahilaon-me-khoon-ki-kami-deoria",
+      "heading": "Mahilaon Me Khoon Ki Kami Ki Jaanch — Haemoglobin, Ferritin Aur B12",
+      "lead": "Haemoglobin kam hai, ye pehla sawaal hai. Kyun kam hai, ye doosra — aur ilaaj usi par tikta hai.",
+      "blocks": [
+        "Mahilaon me khoon ki kami ke aam kaaran hain periods me zyada khoon jaana, pregnancy aur doodh pilaana, khaane me iron kam hona, pet ke keede, aur shaakahaari khaane me B12 ki kami. Lakshan dheere aate hain: thakan, saans phoolna, chakkar, baal jhadna, naakhun kamzor, chehra peela, aur mitti ya chaawal khaane ka man (pica).",
+        {
+          "table": {
+            "caption": "Khoon ki kami — kaun sa test kya batata hai",
+            "head": ["Test", "Kya batata hai"],
+            "rows": [
+              ["CBC (Haemoglobin, MCV)", "Khoon kitna kam hai, aur kami iron ki taraf hai ya B12 ki"],
+              ["Ferritin", "Sharir me jama iron — sabse pehle yahi khatam hota hai"],
+              ["Vitamin B12", "Shaakahaari khaane me aam kami, jhunjhuni ke saath"],
+              ["TSH", "Sust thyroid bhi thakan aur zyada periods deta hai"]
+            ]
+          }
+        },
+        "Mahilaon me haemoglobin aam taur par 12 g/dL ya usse upar hona chahiye; pregnancy me 11 ya upar. Iron ki goli shuru karne ke baad kuch hafte me haemoglobin badhne lagta hai, lekin jama iron (ferritin) bharne me mahine lagte hain — isliye goli jaldi band mat kijiye.",
+        [
+          "Haemoglobin kam aur MCV ka matlab ",
+          { "text": "CBC guide", "href": "/blogs/cbc-test/deoria#haemoglobin-kam-mcv-deoria" },
+          " me, aur ferritin ki baat ",
+          { "text": "haemoglobin aur ferritin", "href": "/blogs/vitamin-b12-d-test/deoria#haemoglobin-ferritin-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "mahilaon-me-thyroid-deoria",
+      "heading": "Thyroid Test For Women — Kab Aur Kyun",
+      "lead": "Mahilaon me thyroid ki bimari purushon se kai guna zyada aam hai.",
+      "blocks": [
+        "Sust thyroid (hypothyroidism) mahilaon me wazan badhna, thakan, baal jhadna, periods zyada ya aniyamit, pregnancy na theharna aur udaasi deta hai — aur ye sab lakshan itne aam hain ki aksar kisi aur cheez ka maan liye jaate hain. TSH ek saada, bina fasting ka test hai.",
+        {
+          "list": [
+            "30 ke baad saal me ek baar, ya lakshan hon to kabhi bhi.",
+            "Pregnancy plan ho, ya pregnancy ki pehli jaanch ho.",
+            "Delivery ke 6 mahine ke andar thakan, udaasi ya dhadkan tez ho.",
+            "Ghar me maa ya behen ko thyroid ho."
+          ]
+        },
+        [
+          "TSH ki normal range aur report padhne ka tareeka ",
+          { "text": "thyroid test guide", "href": "/blogs/thyroid-test/deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "periods-pcod-pregnancy-test-deoria",
+      "heading": "Periods, PCOD Aur Pregnancy — Hormone Test Kab Aur Kaun Sa",
+      "lead": "Hormone test din dekh kar hote hain. Galat din ka sample galat kahani batata hai.",
+      "blocks": [
+        "Periods aniyamit hon, chehre par baal ya muhaase badhein, wazan badhe ya pregnancy na theharne ki pareshani ho, to doctor aksar hormone test likhte hain — LH, FSH, prolactin, TSH, aur kabhi AMH ya testosterone. LH aur FSH aam taur par period ke doosre se paanchve din ke beech ka sample maangte hain, isliye booking periods ke hisaab se kijiye.",
+        [
+          "PCOD me kaun se test aur kis din, wo ",
+          { "text": "PCOD test guide", "href": "/blogs/pcod-hormone-test/deoria#lh-fsh-test-kab-deoria" },
+          " me hai. Pregnancy ke har mahine ke blood test ",
+          { "text": "pregnancy blood test guide", "href": "/blogs/pregnancy-blood-test/deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "menopause-ke-baad-test-deoria",
+      "heading": "Menopause Ke Baad Kaun Se Test — Sugar, Cholesterol, Vitamin D Aur Haddiyan",
+      "lead": "Periods band hone ke baad sharir ki suraksha ki ek parat hat jaati hai.",
+      "blocks": [
+        "Menopause (aam taur par 45 se 55 saal ke beech) ke baad estrogen hormone ghat jaata hai. Iska asar teen jagah dikhta hai: LDL cholesterol badhta hai aur dil ka jokhim purushon ke barabar aane lagta hai, pet ke aas-paas wazan aur sugar badhte hain, aur haddiyan tezi se kamzor hoti hain.",
+        {
+          "table": {
+            "caption": "Menopause ke aas-paas aur baad — aam jaanch",
+            "head": ["Test", "Kyun"],
+            "rows": [
+              ["Lipid Profile", "LDL aur triglycerides badhte hain"],
+              ["Fasting sugar + HbA1c", "Sugar ka khatra badhta hai"],
+              ["Vitamin D, calcium", "Haddiyon ki kamzori (osteoporosis) ka jokhim"],
+              ["TSH", "Is umar me thyroid bhi aam hai, aur lakshan menopause jaise lagte hain"],
+              ["CBC", "Menopause se pehle ke saalon me periods bahut zyada hon to khoon ki kami"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Menopause ke baad khoon aana — turant doctor",
+            "text": "Periods band hone ke ek saal baad kabhi bhi yoni se khoon aaye, chahe thoda sa ho, to gynaecologist ko jaldi dikhaiye. Ye blood test ka nahi, jaanch ka maamla hai.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Cholesterol report ki normal range ",
+          { "text": "lipid profile guide", "href": "/blogs/lipid-profile-test/deoria" },
+          " me, aur Vitamin D ki ",
+          { "text": "Vitamin D test guide", "href": "/blogs/vitamin-b12-d-test/deoria#vitamin-d-test-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "mahila-test-taiyari-deoria",
+      "heading": "Mahilaon Ke Test Se Pehle Ki Taiyaari — Periods, Dawa Aur Fasting",
+      "lead": "Chhoti baatein jo report ko sahi rakhti hain.",
+      "blocks": [
+        {
+          "list": [
+            "Periods ke dauraan blood test ho sakta hai. Lekin urine test periods khatam hone ke 2-3 din baad kijiye — khoon milne se report galat aati hai.",
+            "Iron ki goli chal rahi ho aur ferritin ya iron test ho, to goli sample ke baad lijiye.",
+            "Baal-naakhun ki biotin wali vitamin thyroid aur hormone test se 2-3 din pehle band kijiye.",
+            "Garbhnirodhak goli (OC pills) chal rahi ho to doctor ko bataiye — ye kuch hormone aur lipid ke number badalti hai.",
+            "Sugar aur lipid ho to 10-12 ghante fasting; baaki test par nahi."
+          ]
+        },
+        [
+          "Urine sample sahi tareeke se kaise dein, wo ",
+          { "text": "urine test guide", "href": "/blogs/urine-test/deoria#urine-sample-kaise-dein-deoria" },
+          " me hai, aur fasting ke niyam ",
+          { "text": "blood test se pehle fasting", "href": "/blogs/blood-test-fasting/deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "mahila-blood-test-ghar-par-deoria",
+      "heading": "Deoria Me Mahilaon Ka Blood Test Ghar Par",
+      "lead": "Ghar ka kaam chhod kar, bachche le kar, line me khade hone ki zaroorat nahi.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath aata hai.",
+            "Slot subah 6 baje se — ghar ka kaam shuru hone se pehle.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Maa, saas aur beti — sabka sample ek hi visit me."
+          ]
+        },
+        [
+          "Mahilaon ke liye ghar par sample se judi aur baatein ",
+          { "text": "ghar par blood test guide", "href": "/blogs/home-sample-collection/deoria#mahilaon-ke-liye-ghar-par-sample-deoria" },
+          " me hain. Test ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " par, aur booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Mahilaon ko kaun se blood test karane chahiye?",
+      "answer": "Aam taur par CBC (khoon ki kami), TSH (thyroid), fasting sugar, urine routine; 30 ke baad lipid profile, Vitamin D aur B12; aur 40 ke baad HbA1c, LFT aur KFT bhi. Lakshan aur pariwaar ki bimari ke hisaab se doctor isme badlav karte hain."
+    },
+    {
+      "question": "40 saal ke baad mahilaon ko kaun se test karane chahiye?",
+      "answer": "CBC, fasting sugar aur HbA1c, lipid profile, TSH, Vitamin D, LFT, KFT aur urine routine — saal me ek baar. Iske alawa pap smear aur breast ki jaanch gynaecologist se, jo blood test nahi hain."
+    },
+    {
+      "question": "Menopause ke baad kaun se test zaroori hain?",
+      "answer": "Lipid profile, fasting sugar aur HbA1c, Vitamin D, TSH aur CBC. Menopause ke baad cholesterol, sugar aur haddiyon ki kamzori ka jokhim badhta hai. Menopause ke baad yoni se khoon aaye to turant gynaecologist ko dikhaiye."
+    },
+    {
+      "question": "Mahilaon me haemoglobin kitna hona chahiye?",
+      "answer": "Vayask mahilaon me aam taur par 12 g/dL ya usse zyada, aur pregnancy me 11 g/dL ya usse zyada. Apni report par chhapi range hi aakhri maaniye. Kam ho to ferritin aur B12 se kaaran dekha jaata hai."
+    },
+    {
+      "question": "Kya periods ke dauraan blood test kara sakte hain?",
+      "answer": "Haan, zyadatar blood test periods me bhi ho sakte hain. Urine test periods khatam hone ke 2-3 din baad kijiye. Hormone test jaise LH aur FSH doctor period ke khaas din — aam taur par doosre se paanchve din — par karwate hain."
+    },
+    {
+      "question": "Deoria me mahilaon ka blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me mahilaon ki jaanch ka umar ke hisaab se kram hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain" },
+          { "href": "/blogs/thyroid-test/deoria", "label": "Thyroid test normal range — TSH, T3, T4" },
+          { "href": "/blogs/vitamin-b12-d-test/deoria", "label": "Vitamin D, B12 aur CBC test" }
+        ]
+      }
+    ]
+  }
+}

@@ -660,6 +660,9 @@
             "label": "Deoria me diagnostic centre aur blood test",
             "sub": "Mohalle, kasbe, pata likhne ka tareeka aur booking"
           },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup — senior citizen test" },
+          { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
           {
             "href": "/blogs/full-body-checkup/varanasi",
             "label": "Package me kya hona chahiye",

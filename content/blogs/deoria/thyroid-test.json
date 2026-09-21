@@ -299,7 +299,9 @@
         "links": [
           { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile report", "sub": "Sust thyroid bhi LDL badhata hai" },
           { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
-          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "Pregnancy me thyroid ki alag range" }
+          { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "Pregnancy me thyroid ki alag range" },
+          { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" },
+          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" }
         ]
       }
     ]

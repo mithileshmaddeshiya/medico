@@ -1,0 +1,293 @@
+{
+  "title": "Blood Test Se Pehle Fasting — Kitne Ghante, Deoria",
+  "description": "Blood test se pehle kitne ghante fasting, paani-chai-dawa ki chhoot, aur kaun se test khaali pet hote hain — Deoria me ghar par sample se pehle ki taiyaari.",
+  "keywords": [
+    "blood test se pehle fasting",
+    "fasting blood test kitne ghante",
+    "blood test se pehle kya khana chahiye",
+    "blood test se pehle paani pi sakte hain",
+    "fasting me chai pi sakte hain",
+    "kaun se test khali pet hote hain",
+    "fasting blood sugar test",
+    "lipid profile fasting",
+    "blood test preparation",
+    "blood test in Deoria",
+    "blood test at home Deoria",
+    "ब्लड टेस्ट से पहले खाली पेट"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 240,
+  "takeaways": [
+    "Har blood test khaali pet nahi hota. Fasting sirf Fasting Sugar, Lipid Profile aur zyadatar full body package ke liye chahiye — CBC, thyroid, HbA1c aur vitamin test khaana kha kar bhi ho jaate hain.",
+    "Fasting ka matlab 10 se 12 ghante kuch na khaana hai — saada paani is dauraan peete rahiye. 14 ghante se zyada bhookhe rehna report ko behtar nahi, kharab karta hai.",
+    "Fasting me chai, doodh, biscuit, gutkha, tambaaku aur chewing gum — kuch nahi. Ek cup chai bhi sugar aur triglycerides badal deti hai.",
+    "Sugar ki goli ya insulin sample se pehle mat lijiye jab tak doctor na kahe — sample ke baad naashte ke saath lijiye. BP ki goli paani ke saath samay par le sakte hain."
+  ],
+  "sections": [
+    {
+      "id": "blood-test-fasting-kyun-deoria",
+      "heading": "Blood Test Se Pehle Fasting Kyun — Khaana Khoon Me Kya Badal Deta Hai",
+      "lead": "Fasting ka niyam report ko \"aaj ke khaane\" se alag kar ke aapke sharir ka asli number dikhane ke liye hai.",
+      "blocks": [
+        "Khaana khaane ke baad kuch ghante tak khoon me sugar, charbi (triglycerides) aur kuch aur cheezein badhi rehti hain. Agar us waqt sample liya jaaye to report ye batayegi ki aapne abhi kya khaaya, ye nahi ki aapka sharir aam din me kaisa chal raha hai. Isliye kuch test ki normal range \"khaali pet\" ke hisaab se banayi gayi hai — aur un par sample bhi khaali pet hi dena hota hai.",
+        "Deoria me doctor ke parche par aksar \"FBS\", \"Fasting\", \"empty stomach\" ya \"subah khaali pet aayein\" likha hota hai. Lekin parche par saath me CBC, thyroid ya HbA1c bhi likha ho, to log sochte hain sab par fasting lagegi. Aisa nahi hai. Ek bhi fasting wala test ho, to sab ka sample ek saath subah khaali pet de dijiye — baaki test par isse koi nuksan nahi hota, aur ek hi baar sui lagti hai.",
+        {
+          "note": {
+            "title": "Sabse aam galti",
+            "text": "Fasting ka matlab paani band karna nahi hai. Paani ki kami se nas dhoondhna mushkil hota hai, aur haemoglobin, urea tatha creatinine jhoothe badhe hue aa sakte hain. Saada paani peete rahiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kaun-se-test-khali-pet-deoria",
+      "heading": "Kaun Se Test Khaali Pet Hote Hain — Fasting Wale Aur Bina Fasting Wale Test Ki Table",
+      "lead": "Neeche aam niyam hai. Doctor ne parche par kuch alag likha ho to wahi maaniye.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Kis test par fasting — aam taur par",
+            "head": ["Test", "Fasting chahiye?", "Kitne ghante"],
+            "rows": [
+              ["Fasting Blood Sugar (FBS)", "Haan", "8 – 12 ghante"],
+              ["PP Sugar (khaane ke 2 ghante baad)", "Nahi — khaana khaa kar hi", "Khaana shuru karne ke theek 2 ghante baad"],
+              ["Lipid Profile (cholesterol)", "Haan, jab tak doctor alag na kahein", "10 – 12 ghante"],
+              ["Full Body Checkup package", "Haan (sugar aur lipid shaamil hote hain)", "10 – 12 ghante"],
+              ["HbA1c", "Nahi", "—"],
+              ["CBC", "Nahi", "—"],
+              ["Thyroid (TSH, T3, T4)", "Nahi — subah ka sample behtar", "—"],
+              ["Liver (LFT) aur Kidney (KFT)", "Zaroori nahi — doctor kahein to khaali pet", "—"],
+              ["Vitamin D aur Vitamin B12", "Nahi", "—"],
+              ["Dengue, typhoid, malaria (bukhar)", "Nahi — bukhar me intezaar mat kijiye", "—"],
+              ["Urine routine", "Nahi — subah ka pehla peshab behtar", "—"]
+            ]
+          }
+        },
+        [
+          "Cholesterol ki jaanch ab kai jagah bina fasting bhi hoti hai, lekin triglycerides khaane se sabse zyada badalta hai — isliye jab tak doctor alag na likhein, fasting hi rakhiye. Iski poori baat ",
+          { "text": "lipid profile guide ke fasting wale hisse", "href": "/blogs/lipid-profile-test/deoria#cholesterol-test-fasting-deoria" },
+          " me hai. Thyroid test par fasting kyun nahi, aur thyroid ki goli kab lein — wo ",
+          { "text": "thyroid guide", "href": "/blogs/thyroid-test/deoria#thyroid-test-khali-pet-deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "fasting-kitne-ghante-deoria",
+      "heading": "Fasting Blood Test Kitne Ghante — Raat Ke Khaane Se Subah Ke Slot Tak Ka Hisaab",
+      "lead": "8 ghante se kam aur 14 ghante se zyada — dono report bigaadte hain.",
+      "blocks": [
+        "Fasting blood sugar ke liye kam se kam 8 ghante, aur lipid profile ya full body package ke liye 10 se 12 ghante kuch nahi khaana hota. Lambe samay tak bhookhe rehna \"zyada achchha\" nahi hai: 14 ghante ke baad sharir apni jama charbi aur sugar nikaalne lagta hai, aur report ulte disha me galat aa sakti hai. Bujurg aur sugar ke mareez ko chakkar bhi aa sakta hai.",
+        {
+          "table": {
+            "caption": "Aam din ka hisaab — fasting wala test",
+            "head": ["Raat ka khaana khatam", "Sample ka sahi samay", "Fasting kitni hui"],
+            "rows": [
+              ["Raat 8 baje", "Subah 6 – 8 baje", "10 – 12 ghante — theek"],
+              ["Raat 9 baje", "Subah 7 – 9 baje", "10 – 12 ghante — theek"],
+              ["Raat 11 baje", "Subah 7 baje", "8 ghante — sirf sugar ke liye kaafi, lipid ke liye kam"],
+              ["Raat 7 baje", "Dopahar 11 baje", "16 ghante — zyada; aisa mat kijiye"]
+            ]
+          }
+        },
+        "Deoria me gaon-kasbe me subah kaam jaldi shuru ho jaata hai — khet, dukaan, school. Isliye raat ka khaana 8-9 baje tak khatam kijiye aur subah ka pehla slot lijiye. Sample dete hi naashta kar lijiye; din bhar bhookha rehne ki zaroorat nahi.",
+        [
+          "Home collection ke slot subah 6 baje se shuru hote hain — isi liye taaki fasting wala sample kaam shuru hone se pehle ho jaaye. Slot kaise chunein, wo ",
+          { "text": "ghar par fasting slot wale hisse", "href": "/blogs/home-sample-collection/deoria#fasting-slot-ghar-par-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "fasting-me-paani-chai-deoria",
+      "heading": "Fasting Me Paani, Chai, Gutkha, Brush — Kya Chalega Aur Kya Nahi",
+      "lead": "Seedha niyam: saada paani haan, baaki sab na.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Fasting sample se pehle — kya kar sakte hain",
+            "head": ["Cheez", "Chalega?", "Kyun"],
+            "rows": [
+              ["Saada paani", "Haan — peete rahiye", "Nas aasaani se milti hai, report sahi aati hai"],
+              ["Chai, coffee (doodh ya bina doodh)", "Nahi", "Sugar aur triglycerides badal jaate hain"],
+              ["Doodh, juice, nimbu-paani, nariyal paani", "Nahi", "Inme sugar aur calories hain"],
+              ["Biscuit, toffee, elaichi, saunf", "Nahi", "Thoda sa bhi khaana fasting todta hai"],
+              ["Gutkha, khaini, paan, cigarette, bidi", "Nahi", "Tambaaku sugar aur dil ki dhadkan par asar daalta hai"],
+              ["Chewing gum, mint", "Nahi", "Sugar-free wali bhi pet me paachan shuru kar deti hai"],
+              ["Brush karna", "Haan — paani nigliye nahi", "Toothpaste nigalna nahi hai"],
+              ["Subah ki sair ya bhaari kasrat", "Halki sair theek, bhaari kasrat nahi", "Kasrat se sugar, CPK aur creatinine badal sakte hain"],
+              ["Pichhli raat sharaab", "Nahi — 24 ghante pehle se", "Triglycerides aur liver enzymes kaafi badh jaate hain"]
+            ]
+          }
+        },
+        "Kai log subah uthte hi aadat se chai pi lete hain aur phir yaad aata hai ki aaj test hai. Aisa ho jaaye to sample mat dijiye — phlebotomist ko bata dijiye aur slot badal lijiye. Galat fasting ka sample dene se achchha hai ek din ruk jaana, kyunki galat report ke aadhaar par dawa shuru ho sakti hai ya badal sakti hai."
+      ]
+    },
+    {
+      "id": "dawa-aur-fasting-deoria",
+      "heading": "Fasting Wale Din Dawa Kaise Lein — Sugar, BP, Thyroid Aur Khoon Patla Karne Wali Goli",
+      "lead": "Koi bhi dawa khud se band mat kijiye. Sirf samay badalna hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Fasting sample wale din dawa — aam niyam",
+            "head": ["Dawa", "Kya karein"],
+            "rows": [
+              ["Sugar ki goli (metformin, glimepiride aadi)", "Sample se pehle mat lijiye; sample ke baad naashte ke saath"],
+              ["Insulin", "Subah ka dose sample ke baad, khaane ke saath — pehle doctor se poochh lijiye"],
+              ["BP ki goli", "Apne samay par saade paani ke saath le lijiye"],
+              ["Thyroid ki goli", "Sample dene ke baad lijiye"],
+              ["Khoon patla karne wali (aspirin, clopidogrel, warfarin)", "Band mat kijiye; phlebotomist ko bataiye taaki sui ki jagah der tak dabayi jaaye"],
+              ["Biotin / baal-naakhun wali multivitamin", "Hormone ya thyroid test se 2-3 din pehle band"],
+              ["Iron ki goli", "Iron ya ferritin test ho to sample ke baad"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Sugar ke mareez: fasting me chakkar aaye to",
+            "text": "Paseena, kaanpna, dhadkan tez ya chakkar aaye to ye sugar girne ka lakshan ho sakta hai. Turant glucose, cheeni ya meetha kuch lijiye — test baad me ho jaayega. Is haalat me fasting jaari rakhna khatarnak hai.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Glucometer me reading kam dikhe aur lab ki report alag aaye — dono ka farak kyun hota hai, wo ",
+          { "text": "glucometer vs lab sugar test", "href": "/blogs/glucometer-sugar-test/deoria" },
+          " me samjhaaya gaya hai."
+        ]
+      ]
+    },
+    {
+      "id": "pp-sugar-sahi-samay-deoria",
+      "heading": "PP Sugar Test — Khaane Ke Kitni Der Baad Sample Dein",
+      "lead": "Ghadi khaana khatam hone se nahi, khaana shuru hone se chalti hai.",
+      "blocks": [
+        "PP (post-prandial) sugar ka matlab hai khaane ke theek 2 ghante baad ka sugar. Iske liye apna roz jaisa naashta ya khaana khaiye — na jaan-boojh kar kam, na zyada. Pehla kaur khaate hi samay note kar lijiye aur theek 2 ghante baad sample dijiye. In 2 ghante me na kuch aur khaaiye, na so jaaiye, na lambi sair kijiye.",
+        "Agar fasting aur PP dono likhe hain, to pehle khaali pet sample, phir naashta aur dawa, phir 2 ghante baad doosra sample. Home collection me dono sample ka samay booking ke waqt hi bata dijiye, taaki doosre sample ka samay pehle se tay rahe.",
+        [
+          "PP sugar ki normal range aur isse judi aam galtiyaan ",
+          { "text": "HbA1c aur sugar level chart guide", "href": "/blogs/hba1c-sugar-test/deoria#pp-sugar-sahi-tareeka-deoria" },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "vrat-chhath-fasting-test-deoria",
+      "heading": "Vrat, Chhath Ya Roza Ke Din Blood Test — Kab Karayein",
+      "lead": "Vrat aur test wali fasting ek cheez nahi hai.",
+      "blocks": [
+        "Deoria aur Bihar se lagte is ilaake me vrat bahut rakhe jaate hain — Ekadashi, Navratri, Teej, Jitiya aur sabse bada Chhath, jismein 36 ghante tak nirjala vrat hota hai. Test ke hisaab se vrat do tarah ka hai, aur dono me alag faisla hai.",
+        {
+          "list": [
+            "Phalahaar wala vrat (saboodana, aaloo, phal, doodh): ye fasting nahi hai. Isme sugar aur charbi dono aati hain. Test karana ho to test se pehle ki raat se aam fasting kijiye.",
+            "Nirjala vrat (Chhath, Jitiya, Teej): paani bhi nahi, isliye sharir me paani ki kami. Is din ya iske turant baad sample dene par creatinine, urea aur haemoglobin jhoothe badhe aa sakte hain. Parana ke baad 1-2 din aaram se khaa-pee kar tab test karaiye.",
+            "Roza: sehri ke 10-12 ghante baad ka sample fasting sugar ke liye theek hai, lekin din me paani na peene se nas mushkil ho sakti hai. Sehri me paani bharpoor lijiye aur subah ka slot chuniye.",
+            "Sugar ke mareez vrat se pehle doctor se dawa ka dose zaroor poochhein — vrat me sugar girne ka khatra badhta hai."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fasting-galti-dobara-test-deoria",
+      "heading": "Paanch Galtiyaan Jinse Fasting Test Dobara Karana Padta Hai",
+      "lead": "Ye sab Deoria me baar-baar dikhne wali galtiyaan hain.",
+      "blocks": [
+        {
+          "list": [
+            "Subah ki chai \"sirf aadha cup\" — fasting toot jaati hai, sugar aur triglycerides badh jaate hain.",
+            "Raat ko der se bhaari khaana, shaadi ya daawat ke baad — triglycerides agle din bhi upar rehte hain. Daawat ke 2-3 din baad test kijiye.",
+            "16-18 ghante ki fasting, \"zyada saaf report\" ke liye — ulta asar, aur bujurgon ko chakkar.",
+            "Paani band kar dena — nas nahi milti, aur kidney ke number jhoothe badhe aate hain.",
+            "Tez bukhar, dast ya ulti ke beech routine checkup — beemari ke dauraan sugar, liver aur kidney ke number badle rehte hain. Theek hone ke 1-2 hafte baad routine checkup kijiye (bukhar ki apni jaanch alag hai)."
+          ]
+        },
+        [
+          "Sample se pehle ki poori checklist Deoria service page par bhi hai — ",
+          { "text": "sample dene se pehle kya karein", "href": "/lab-test/deoria#prepare-for-test-deoria" },
+          ". Report aane ke baad numbers kaise padhein, uske liye ",
+          { "text": "blood test report kaise padhein", "href": "/blogs/blood-test-report/deoria" },
+          " dekhiye."
+        ]
+      ]
+    },
+    {
+      "id": "ghar-par-fasting-sample-deoria",
+      "heading": "Deoria Me Fasting Blood Test Ghar Par — Khaali Pet Safar Ki Zaroorat Nahi",
+      "lead": "Khaali pet bus me baith kar sample dene jaana sabse thakane wala hissa hota hai. Wahi hissa hat jaata hai.",
+      "blocks": [
+        "Fasting wale test ka sabse mushkil hissa test nahi, khaali pet lab tak pahunchna hai — khaas kar bujurg aur sugar ke mareez ke liye. Deoria Sadar ke saath Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home sample collection free hai, aur trained phlebotomist ID card ke saath aata hai.",
+            "Slot subah 6 baje se — sample de kar turant naashta aur dawa.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Ghar ke sabhi logon ka fasting sample ek hi visit me."
+          ]
+        },
+        [
+          "Test ka aaj ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " me hai, aur booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se. Kaun sa test karana chahiye, ye abhi tay nahi hua to pehle ",
+          { "text": "Deoria me kaun sa test kab", "href": "/blogs/lab-test/deoria" },
+          " padh lijiye."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Blood test se pehle kitne ghante fasting karni chahiye?",
+      "answer": "Fasting blood sugar ke liye kam se kam 8 ghante, aur lipid profile ya full body checkup ke liye 10 se 12 ghante. 14 ghante se zyada bhookhe mat rahiye — isse report galat aa sakti hai aur chakkar aa sakta hai."
+    },
+    {
+      "question": "Blood test se pehle paani pi sakte hain?",
+      "answer": "Haan, saada paani peena chahiye. Isse nas aasaani se milti hai aur report sahi aati hai. Sirf saada paani — chai, doodh, juice ya nimbu-paani nahi."
+    },
+    {
+      "question": "Fasting blood test se pehle chai pi sakte hain?",
+      "answer": "Nahi. Bina cheeni ki chai ya black coffee bhi fasting tod deti hai aur sugar tatha triglycerides ki report badal sakti hai. Galti se chai pi li ho to us din fasting wala sample mat dijiye, slot badal lijiye."
+    },
+    {
+      "question": "Kya har blood test khaali pet hota hai?",
+      "answer": "Nahi. Fasting sirf Fasting Sugar, Lipid Profile aur zyadatar full body package ke liye chahiye. CBC, HbA1c, thyroid, Vitamin D, Vitamin B12 aur bukhar ki jaanch khaana kha kar bhi ho sakti hai. Parche par ek bhi fasting wala test ho to sab ka sample subah khaali pet ek saath de dijiye."
+    },
+    {
+      "question": "Sugar ki dawa fasting test se pehle leni chahiye?",
+      "answer": "Aam taur par nahi. Sugar ki goli ya insulin sample dene ke baad naashte ke saath lijiye, taaki fasting me sugar na gire. BP ki goli apne samay par paani ke saath le sakte hain. Doctor ne kuch alag kaha ho to wahi maaniye."
+    },
+    {
+      "question": "Chhath ya nirjala vrat ke din blood test kara sakte hain?",
+      "answer": "Behtar hai nahi. Nirjala vrat me paani ki kami se creatinine, urea aur haemoglobin jhoothe badhe aa sakte hain. Parana ke 1-2 din baad aaram se khaa-pee kar test karaiye. Phalahaar wala vrat fasting nahi maana jaata."
+    },
+    {
+      "question": "Deoria me fasting blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me fasting sample ghar par liya jaata hai. Slot subah 6 baje se, home collection free, aur report 24 ghante ke andar WhatsApp tatha email par PDF me."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me sample se pehle ki taiyaari hai. Booking, rate aur poora test menu service page par hai.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Subah 6 baje se slot" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Har test aur package ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki checklist" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" },
+          { "href": "/blogs/hba1c-sugar-test/deoria", "label": "HbA1c normal range aur sugar level chart" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup", "sub": "Bujurgon ki fasting me kya dhyaan rakhein" }
+        ]
+      }
+    ]
+  }
+}

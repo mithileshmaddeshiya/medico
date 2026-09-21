@@ -272,7 +272,8 @@
         "links": [
           { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch", "sub": "HbA1c, TSH aur fasting ki table" },
           { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "Beta hCG, GTT aur thyroid" },
-          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" }
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" },
+          { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" }
         ]
       }
     ]

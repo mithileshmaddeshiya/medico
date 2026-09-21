@@ -558,7 +558,9 @@
             "href": "/blogs/home-sample-collection/deoria",
             "label": "Deoria me ghar par blood test kaise karayein",
             "sub": "Visit ke din ka poora tareeka, bujurg aur bachchon ka dhyaan"
-          }
+          },
+          { "href": "/blogs/high-bp-test/deoria", "label": "High BP me kaun se blood test karayein" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup — senior citizen test" }
         ]
       },
       {

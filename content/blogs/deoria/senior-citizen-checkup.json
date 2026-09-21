@@ -1,0 +1,287 @@
+{
+  "title": "Bujurgon Ka Health Checkup — Senior Citizen Test, Deoria",
+  "description": "60 saal ke baad kaun se blood test zaroori hain, saal me kitni baar, dawa ke saath kaun si jaanch, aur Deoria me maa-baap ka sample ghar par kaise dilayein.",
+  "keywords": [
+    "senior citizen health checkup Deoria",
+    "bujurgon ka blood test",
+    "60 saal ke baad kaun se test karaye",
+    "senior citizen blood test at home",
+    "maa baap ka health checkup",
+    "elderly health checkup",
+    "senior citizen pack",
+    "bujurgon me sodium kam",
+    "metformin aur vitamin B12",
+    "senior citizen checkup in Deoria",
+    "बुजुर्गों की खून की जांच"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 260,
+  "takeaways": [
+    "60 ke baad sugar, kidney, khoon ki kami, thyroid aur vitamin ki kami aksar bina lakshan ke badhti hain. Saal me ek baar poori jaanch inhe jaldi pakad leti hai.",
+    "Jo bujurg roz dawa lete hain, unki jaanch dawa ke hisaab se hoti hai — sugar ki dawa par B12, BP ki dawa par kidney aur potassium, dard ki goli par creatinine.",
+    "Garmi, dast ya BP ki peshab wali goli ke saath achanak uljhan ya chakkar aaye to sodium gira ho sakta hai — ye usi din aspataal ka maamla hai.",
+    "Bujurg ko khaali pet safar karana sabse zyada thakata hai. Deoria me sample ghar par, subah 6 baje se, aur report beta-beti ke phone par bhi aa sakti hai."
+  ],
+  "sections": [
+    {
+      "id": "bujurgon-checkup-kyun-deoria",
+      "heading": "60 Ke Baad Health Checkup Kyun — Jo Beemari Bina Awaaz Ke Aati Hai",
+      "lead": "Bujurgon me \"sab theek hai\" aur \"sab theek hai, bas thodi thakan hai\" ke beech ka farak aksar report me hi dikhta hai.",
+      "blocks": [
+        "Umar ke saath kai cheezein dheere badalti hain — kidney ki taaqat ghatti hai, sugar chupke se badhta hai, haemoglobin girta hai, thyroid sust ho jaata hai, aur haddiyon ke liye Vitamin D kam pad jaata hai. Inme se zyadatar ka koi saaf lakshan nahi hota, ya lakshan \"budhaape\" me gin liye jaate hain: thakan, bhookh kam, neend kam, ghutno me dard, bhoolna.",
+        "Deoria me ek aur haqeeqat hai. Bahut se gharon me bete-betiyaan Delhi, Mumbai, Surat, Punjab ya Khadi deshon me kaam karte hain, aur maa-baap gaon ya kasbe me akele rehte hain. Aise me checkup \"jab ghar aayenge tab karayenge\" par tal jaata hai — aur saal nikal jaata hai. Ghar par sample ka sabse bada faayda yahi hai ki jaanch kisi ke aane ka intezaar nahi karti.",
+        [
+          "Door rehkar maa-baap ki jaanch kaise karayein — booking, payment aur report door se kaise sambhaalein — uska poora kram ",
+          { "text": "bahar rehkar maa-baap ka blood test", "href": "/blogs/parents-blood-test/salempur" },
+          " me hai; wahi tareeka Deoria me bhi chalta hai."
+        ]
+      ]
+    },
+    {
+      "id": "bujurgon-ke-zaroori-test-deoria",
+      "heading": "60 Saal Ke Baad Kaun Se Blood Test Karayein — Zaroori Test Ki Table",
+      "lead": "Ye aam soochi hai. Doctor aapki beemari aur dawa ke hisaab se isme jodte-ghatate hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Bujurgon ke liye aam blood aur urine test",
+            "head": ["Test", "Kya pakadta hai", "Kitni baar (aam taur par)"],
+            "rows": [
+              ["CBC", "Khoon ki kami, infection, platelet", "Saal me ek baar"],
+              ["Fasting sugar + HbA1c", "Diabetes, ya sugar ka control", "Saal me ek baar; diabetes ho to har 3 mahine HbA1c"],
+              ["Kidney Function Test (creatinine, urea, uric acid)", "Kidney ki taaqat", "Saal me ek baar; sugar-BP ho to 6 mahine"],
+              ["Sodium, potassium (electrolytes)", "Namak-paani ka santulan", "BP ki dawa par, ya doctor ke kehne par"],
+              ["Lipid Profile", "Cholesterol — dil aur lakwa ka jokhim", "Saal me ek baar"],
+              ["Liver Function Test", "Liver, aur kuch dawaon ka asar", "Saal me ek baar"],
+              ["TSH (thyroid)", "Sust ya tez thyroid", "Saal me ek baar, khaas kar mahilaon me"],
+              ["Vitamin D", "Haddiyan, girne ka jokhim, kamzori", "Ek baar; kam ho to ilaaj ke baad"],
+              ["Vitamin B12", "Jhunjhuni, bhoolna, khoon ki kami", "Sugar ki dawa (metformin) par saal me ek baar"],
+              ["Urine routine", "Peshab ka infection, protein, sugar", "Saal me ek baar"]
+            ]
+          }
+        },
+        "Purushon me 50 ke baad kuch doctor PSA (prostate) test bhi likhte hain, khaas kar raat me baar-baar peshab ya dhaar kamzor ho. Ye screening hai ya nahi, iska faisla doctor ke saath kijiye — iske faayde aur nuksan dono hain. Parche par ho to booking ke waqt poochh lijiye.",
+        [
+          "Kidney aur liver ke number ka matlab ",
+          { "text": "LFT aur KFT guide", "href": "/blogs/liver-kidney-test/deoria" },
+          " me, aur Vitamin D-B12 ki baat ",
+          { "text": "Vitamin D aur B12 guide", "href": "/blogs/vitamin-b12-d-test/deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "senior-citizen-pack-ya-alag-test-deoria",
+      "heading": "Senior Citizen Pack Ya Alag-Alag Test — Kaun Sa Chunein",
+      "lead": "Pehli baar ya lambe samay baad jaanch ho to package; beemari chal rahi ho to parche ke hisaab se.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Kaun sa raasta kab",
+            "head": ["Haalat", "Behtar raasta"],
+            "rows": [
+              ["Kai saal se koi jaanch nahi hui", "Senior Citizen Pack — ek hi sample me poori tasveer"],
+              ["Saal ka routine checkup, koi badi beemari nahi", "Senior Citizen Pack ya Advanced Full Body"],
+              ["Sugar ya BP ki dawa chal rahi, 3 mahine pehle poori jaanch hui", "Sirf follow-up test — HbA1c, creatinine, jo doctor likhein"],
+              ["Doctor ne parche par khaas test likhe hain", "Wahi test; package tabhi jab usme sab aa jaaye"]
+            ]
+          }
+        },
+        [
+          "Package me kaun se test aate hain aur aaj ka daam kya hai, wo ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " par har package ke card par hai. Kis umar aur haalat ke liye kaun sa package theek rehta hai, uski tulna ",
+          { "text": "full body checkup guide", "href": "/blogs/full-body-checkup/deoria#kis-ke-liye-kaun-sa-package-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "dawa-wale-bujurg-test-deoria",
+      "heading": "Roz Dawa Lene Wale Bujurg — Kaun Si Dawa Par Kaun Si Jaanch",
+      "lead": "Kai dawaiyan saalon tak chalti hain, aur unka asar khoon me dikhta hai. Isliye jaanch bhi dawa ke hisaab se.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Aam dawa aur uske saath dekhi jaane wali jaanch",
+            "head": ["Dawa", "Kya dekhna chahiye", "Kyun"],
+            "rows": [
+              ["Metformin (sugar)", "Vitamin B12, creatinine", "Lambe samay me B12 ghatta hai; kidney kamzor ho to dose badalta hai"],
+              ["BP ki dawa (ACE/ARB — ramipril, telmisartan aadi)", "Creatinine, potassium", "Potassium badh sakta hai"],
+              ["Peshab badhane wali BP goli (diuretic)", "Sodium, potassium, uric acid, sugar", "Sodium-potassium gir sakte hain, uric acid badh sakta hai"],
+              ["Cholesterol ki dawa (statin)", "Lipid profile, LFT", "Dawa ka asar aur liver"],
+              ["Thyroid ki goli", "TSH", "Dose theek hai ya nahi"],
+              ["Dard ki goli lambe samay (ghutne ke dard me aam)", "Creatinine, haemoglobin", "Kidney aur pet se khoon jaane ka khatra"],
+              ["Khoon patla karne wali (warfarin)", "PT/INR — doctor ke niyam se", "Dose isi par tay hota hai"]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "Dawa khud band mat kijiye",
+            "text": "Report me kuch badla dikhe to bhi koi dawa band ya kam mat kijiye — doctor ko report dikhaiye. Aur jaanch ke waqt dawaon ki poori list (ya dabbe) saath rakhiye.",
+            "tone": "info"
+          }
+        },
+        [
+          "Sugar aur BP wale mareez me kidney ki jaanch kitni baar, uski baat ",
+          { "text": "sugar-BP mareez aur KFT", "href": "/blogs/liver-kidney-test/deoria#sugar-bp-wale-mareez-kft-deoria" },
+          " me hai. BP ke mareez ki poori jaanch soochi ",
+          { "text": "high BP me kaun se blood test", "href": "/blogs/high-bp-test/deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "bujurgon-me-sodium-kam-deoria",
+      "heading": "Bujurgon Me Sodium Kam — Garmi Me Uljhan Aur Chakkar Ka Chhupa Kaaran",
+      "lead": "Purvanchal ki garmi aur umas me ye sabse zyada chhoot jaane wali baat hai.",
+      "blocks": [
+        "May-June ki garmi aur barsaat ki umas me bujurg paseene me namak kho dete hain. Upar se agar BP ki peshab badhane wali goli chal rahi ho, ya dast-ulti ho jaaye, to khoon me sodium gir sakta hai. Iska lakshan aksar \"umar ka asar\" samajh liya jaata hai — uljhan, baat samajh na aana, bahut susti, chakkar, girna, aur gambhir haalat me daure.",
+        {
+          "note": {
+            "title": "Ye usi din ka maamla hai",
+            "text": "Kisi bujurg me achanak uljhan, behoshi jaisi susti, baar-baar girna ya daura dikhe to ghar par test book karne ka intezaar mat kijiye — seedha aspataal le jaaiye. Wahan sodium turant jaancha jaata hai.",
+            "tone": "warn"
+          }
+        },
+        "Routine me — jab tabiyat theek ho — BP ki dawa par chal rahe bujurgon me doctor saal me ek-do baar sodium-potassium dekh lete hain. Garmi shuru hone se pehle ek baar karana samajhdaari hai."
+      ]
+    },
+    {
+      "id": "bujurg-ka-sample-ghar-par-deoria",
+      "heading": "Bujurg Ka Blood Sample Ghar Par — Fasting, Patli Nas Aur Bistar Par Mareez",
+      "lead": "Umar ke saath nas patli aur chhupi hui ho jaati hai. Thodi taiyaari se sample ek baar me ho jaata hai.",
+      "blocks": [
+        {
+          "list": [
+            "Raat se saada paani peete rahiye — paani ki kami me nas sabse mushkil milti hai.",
+            "Subah ka pehla slot lijiye, taaki bhookh ka samay chhota rahe. Sugar ke mareez ko fasting me chakkar aaye to turant kuch meetha dijiye.",
+            "Sugar ki goli ya insulin sample ke baad; BP ki goli samay par.",
+            "Kamra garam rakhiye aur haath par garam kapda — thand me nas sikud jaati hai.",
+            "Khoon patla karne wali dawa chal rahi ho to phlebotomist ko bataiye — sui ki jagah der tak dabayi jaayegi.",
+            "Bistar par mareez ya chal nahi paate — booking ke waqt bata dijiye; sample bistar par hi liya jaata hai."
+          ]
+        },
+        [
+          "Bistar par mareez aur bujurgon ke sample ki aur baatein ",
+          { "text": "ghar par blood test guide", "href": "/blogs/home-sample-collection/deoria#bujurg-aur-bistar-par-mareez-deoria" },
+          " me hain. Fasting ke poore niyam ",
+          { "text": "blood test se pehle fasting", "href": "/blogs/blood-test-fasting/deoria" },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "lab-se-bahar-ki-jaanch-bujurg-deoria",
+      "heading": "Jo Jaanch Blood Test Nahi Hai — ECG, Aankh, Haddi Aur X-Ray",
+      "lead": "Poora senior checkup sirf khoon ka nahi hota.",
+      "blocks": [
+        "Bujurgon ke saal ke checkup me doctor aksar kuch aur jaanch bhi kehte hain — ECG (dil), aankh ki jaanch (motiyabind, glaucoma, sugar ka aankh par asar), BP naapna, haddi ki majbooti (BMD), aur kabhi X-ray ya ultrasound. Ye sab machine aur doctor par hoti hain.",
+        {
+          "note": {
+            "title": "Ye hamari service nahi hai",
+            "text": "MedicoBharat Deoria me sirf khoon aur peshab ke sample ghar par leta hai. ECG, X-ray, ultrasound, aankh ya haddi ki jaanch hum nahi karte. Sahi kram: blood test ghar par kara lijiye, aur report le kar doctor ke paas jaaiye — ek hi visit me doctor sab dekh lenge.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "saal-bhar-ka-plan-bujurg-deoria",
+      "heading": "Maa-Baap Ki Jaanch Ka Saal Bhar Ka Plan — Tyohaar Par Ghar Aane Ka Faayda",
+      "lead": "Jaanch ko ek tareekh se baandh dijiye, taaki wo tale nahi.",
+      "blocks": [
+        "Deoria me pravasi parivaar aam taur par Holi, Chhath ya Diwali par ghar aate hain. Us hafte ka ek din maa-baap ke checkup ke liye rakh lijiye — sample subah ghar par, report agle din phone par, aur chhutti khatam hone se pehle doctor ko dikha bhi dijiye. Isse report ke baad ka kaam bhi aapke saamne ho jaata hai.",
+        {
+          "table": {
+            "caption": "Ek aasaan saal bhar ka kram (sugar-BP wale bujurg)",
+            "head": ["Kab", "Kya"],
+            "rows": [
+              ["Saal me ek baar (tyohaar ki chhutti)", "Senior Citizen Pack ya poori jaanch + doctor visit"],
+              ["Har 3 mahine", "HbA1c (sugar ho to)"],
+              ["Har 6 mahine", "Creatinine, potassium (sugar ya BP ki dawa par)"],
+              ["Garmi se pehle", "Sodium-potassium (peshab wali BP goli par)"]
+            ]
+          }
+        },
+        "Phone ke calendar me reminder daal dijiye. Jo jaanch tareekh se bandhi ho, wo hoti hai; jo \"jab samay mile\" par ho, wo aksar nahi hoti."
+      ]
+    },
+    {
+      "id": "ghar-par-senior-checkup-deoria",
+      "heading": "Deoria Me Senior Citizen Blood Test At Home",
+      "lead": "Bujurg ko khaali pet bus ya auto me le jaane ki zaroorat nahi.",
+      "blocks": [
+        "Deoria Sadar ke saath Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home sample collection free hai; trained phlebotomist ID card ke saath aata hai.",
+            "Slot subah 6 baje se — fasting chhoti, aur naashta-dawa samay par.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — door rehne wale bete-beti ke number par bhi.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Maa aur papa dono ka sample ek hi visit me."
+          ]
+        },
+        [
+          "Booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se. Kasbe aur gaon ke hisaab se collection ka samay ",
+          { "text": "tehsil guide", "href": "/blogs/tehsil-home-collection/deoria" },
+          " me hai. Report aane par use kaise padhein, wo ",
+          { "text": "blood test report kaise padhein", "href": "/blogs/blood-test-report/deoria" },
+          " me."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "60 saal ke baad kaun se blood test karane chahiye?",
+      "answer": "Aam taur par CBC, fasting sugar aur HbA1c, kidney function test, lipid profile, liver function test, TSH, Vitamin D, Vitamin B12 aur urine routine. BP ki dawa ho to sodium-potassium bhi. Doctor aapki beemari aur dawa ke hisaab se isme badlav karte hain."
+    },
+    {
+      "question": "Bujurgon ko health checkup kitni baar karana chahiye?",
+      "answer": "Koi badi beemari na ho to saal me ek baar poori jaanch. Sugar ho to HbA1c har 3 mahine, aur sugar ya BP ki dawa par kidney aur potassium har 6 mahine — ya jaisa doctor kahein."
+    },
+    {
+      "question": "Senior Citizen Pack me kya aata hai aur kitne ka hai?",
+      "answer": "Senior Citizen Pack 55 saal se upar walon ke liye sugar, dil aur haddiyon ki jaanch par kendrit package hai. Isme kaun se test hain aur aaj ka daam kya hai, wo Deoria ki rate list par package ke card par dekhiye."
+    },
+    {
+      "question": "Sugar ki dawa metformin lene walon ko B12 test kyun karana chahiye?",
+      "answer": "Metformin lambe samay tak lene se kai logon me Vitamin B12 ghat jaata hai, jisse haath-pair me jhunjhuni, kamzori aur khoon ki kami ho sakti hai. Isliye metformin par saal me ek baar B12 dekhna samajhdaari hai."
+    },
+    {
+      "question": "Bujurgon me sodium kam hone ke lakshan kya hain?",
+      "answer": "Uljhan, baat samajh na aana, bahut susti, chakkar, girna aur gambhir haalat me daure. Garmi, dast-ulti aur BP ki peshab wali goli se khatra badhta hai. Aise lakshan achanak aayein to seedha aspataal jaaiye."
+    },
+    {
+      "question": "Deoria me bujurgon ka blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me bujurgon ki jaanch ka kram hai. Booking, rate aur package service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Senior Citizen Pack ka aaj ka daam" },
+          { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/high-bp-test/deoria", "label": "High BP me kaun se blood test karayein" },
+          { "href": "/blogs/full-body-checkup/deoria", "label": "Full body checkup in Deoria — package aur test list" },
+          { "href": "/blogs/hba1c-sugar-test/deoria", "label": "HbA1c normal range aur sugar level chart" },
+          { "href": "/blogs/joint-pain-test/deoria", "label": "Jodon ke dard ka test — RA factor, CRP, ESR" }
+        ]
+      }
+    ]
+  }
+}

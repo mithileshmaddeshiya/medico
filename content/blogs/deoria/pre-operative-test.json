@@ -1,0 +1,242 @@
+{
+  "title": "Operation Se Pehle Kaun Se Blood Test — Deoria Guide",
+  "description": "Operation se pehle kaun se blood test hote hain — CBC, sugar, KFT, HIV-HBsAg, blood group, PT-INR — report kitne din valid, aur Deoria me ghar par sample.",
+  "keywords": [
+    "operation se pehle kaun se test",
+    "pre operative blood test",
+    "surgery se pehle blood test",
+    "pre op test list",
+    "operation se pehle HIV test kyun",
+    "blood group test",
+    "PT INR test",
+    "motiyabind operation se pehle test",
+    "delivery se pehle blood test",
+    "pre operative test Deoria",
+    "ऑपरेशन से पहले कौन सी जांच"
+  ],
+  "publishedAt": "2026-09-21",
+  "order": 290,
+  "takeaways": [
+    "Operation se pehle ki jaanch ye dekhti hai ki sharir behoshi aur operation jhel sakta hai ya nahi — khoon kitna hai, sugar kaisa hai, kidney theek hai, khoon jamta hai ya nahi.",
+    "Aam soochi: CBC, sugar (aur HbA1c), KFT, blood group, PT-INR, HIV, HBsAg aur HCV, urine routine. Umar aur operation ke hisaab se ECG aur X-ray — jo blood test nahi hain.",
+    "Zyadatar aspataal 2-4 hafte purani report maan lete hain, lekin ye har aspataal ka apna niyam hai. Surgeon ke staff se pehle poochh lijiye.",
+    "Khoon patla karne wali dawa, sugar ki dawa ya insulin — koi bhi dawa operation se pehle khud band mat kijiye. Surgeon aur doctor tay karenge."
+  ],
+  "sections": [
+    {
+      "id": "pre-op-test-kyun-deoria",
+      "heading": "Operation Se Pehle Blood Test Kyun — Surgeon Aur Behoshi Ke Doctor Kya Dekhte Hain",
+      "lead": "Ye jaanch bimari dhoondhne ke liye kam, operation ko surakshit banaane ke liye zyada hai.",
+      "blocks": [
+        "Operation ki tareekh milte hi haath me ek parchi aati hai — \"ye test kara kar laaiye\". Iska maqsad ye hai ki operation aur behoshi (anaesthesia) se pehle doctor jaan lein: khoon kitna hai, sugar control me hai ya nahi, kidney dawa aur behoshi ki dawaon ko nikaal payegi ya nahi, khoon katne par jamega ya nahi, aur zaroorat pade to kis group ka khoon chahiye.",
+        "Deoria se bahut se operation Gorakhpur, Lucknow ya Varanasi me hote hain, aur kuch Deoria ke hi nursing home aur aspataal me. Dono haalat me ek baat aam hai: test operation se kuch din pehle ho jaayein to report ke hisaab se taiyaari ka samay milta hai — sugar badha ho to control karne ka, khoon kam ho to badhaane ka. Aakhri din test karaane par ye samay nahi bachta, aur operation aage badh jaata hai.",
+        [
+          "Gorakhpur me operation ho raha hai to wahan ke hisaab se likhi ",
+          { "text": "Gorakhpur pre-operative test guide", "href": "/blogs/pre-operative-test/gorakhpur" },
+          " bhi dekh lijiye."
+        ]
+      ]
+    },
+    {
+      "id": "pre-op-test-list-deoria",
+      "heading": "Pre Operative Blood Test List — Aam Taur Par Kya Hota Hai Aur Kyun",
+      "lead": "Har aspataal ki soochi thodi alag hoti hai. Aapke parche par jo likha hai, wahi aakhri hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Operation se pehle ke aam blood aur urine test",
+            "head": ["Test", "Kyun dekha jaata hai"],
+            "rows": [
+              ["CBC (haemoglobin, WBC, platelet)", "Khoon kitna hai; koi infection; platelet se khoon jamna"],
+              ["Blood sugar (random/fasting) + HbA1c", "Sugar control — ghaav bharna aur infection ka khatra isi par"],
+              ["KFT (creatinine, urea) + sodium, potassium", "Kidney aur namak — behoshi ki dawa aur paani ka hisaab"],
+              ["Blood group aur Rh", "Zaroorat pade to khoon chadhaane ke liye"],
+              ["PT-INR (aur kabhi aPTT, BT-CT)", "Khoon kitni der me jamta hai"],
+              ["HIV, HBsAg, Anti-HCV", "Staff aur doosre mareez ki suraksha, aur aapka ilaaj"],
+              ["Urine routine", "Peshab ka infection — khaas kar peshab ya bachchedani ke operation me"],
+              ["LFT", "Pet, pitt ki thaili ya liver ke operation me, aur sharaab ke itihaas me"],
+              ["TSH", "Thyroid ki bimari ho, ya gale ka operation ho"]
+            ]
+          }
+        },
+        [
+          "HIV, HBsAg aur HCV ki report reactive aaye to uska matlab kya hai aur operation par kya asar — ye ",
+          { "text": "HIV aur hepatitis test guide", "href": "/blogs/hiv-hepatitis-test/deoria#surgery-pregnancy-screening-deoria" },
+          " me hai. Ye test har operation se pehle hote hain, isliye inka hona kisi shak ki baat nahi."
+        ]
+      ]
+    },
+    {
+      "id": "operation-ke-hisaab-se-test-deoria",
+      "heading": "Operation Ke Hisaab Se Test — Motiyabind, Hernia-Pathri, Delivery Aur Bachchedani",
+      "lead": "Chhote operation me chhoti soochi, bade me badi.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Kuch aam operation aur unki aam jaanch",
+            "head": ["Operation", "Aam blood test", "Khaas dhyaan"],
+            "rows": [
+              ["Motiyabind (cataract)", "Sugar, kabhi CBC, HIV-HBsAg", "Sugar control sabse zaroori; bujurgon me BP bhi"],
+              ["Hernia, piles, pitt ki pathri (gallbladder)", "Poori soochi — CBC, sugar, KFT, blood group, PT-INR, HIV-HBsAg-HCV", "Pathri me LFT bhi"],
+              ["Caesarean delivery", "CBC, blood group-Rh, sugar, HIV-HBsAg, urine", "Haemoglobin aur Rh negative ho to khaas taiyaari"],
+              ["Bachchedani ka operation (hysterectomy)", "Poori soochi + TSH", "Periods me bahut khoon gaya ho to haemoglobin"],
+              ["Daant nikalna (khoon patla karne wali dawa par)", "PT-INR", "Dawa ka faisla dentist aur doctor saath me"]
+            ]
+          }
+        },
+        [
+          "Pregnancy me Rh negative blood group ka matlab aur delivery se pehle ki jaanch ",
+          { "text": "pregnancy blood test guide", "href": "/blogs/pregnancy-blood-test/deoria#rh-negative-blood-group-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "pre-op-report-kitne-din-valid-deoria",
+      "heading": "Pre-Op Report Kitne Din Valid Rehti Hai — Test Kab Karayein",
+      "lead": "Na itna pehle ki report purani ho jaaye, na itna der se ki kuch theek karne ka samay na bache.",
+      "blocks": [
+        "Koi ek niyam sab jagah nahi chalta. Aam taur par aspataal 2 se 4 hafte purani CBC, sugar aur KFT maan lete hain; blood group aam taur par badalta nahi, lekin khoon chadhaane se pehle aspataal apna cross-match khud karta hai. HIV-HBsAg ki report ki umar har aspataal alag rakhta hai. Isliye sabse seedha raasta hai surgeon ke staff se ek sawaal: \"kitne din purani report chalegi?\"",
+        {
+          "table": {
+            "caption": "Kab karayein — aam soch",
+            "head": ["Operation kitne din me", "Test kab"],
+            "rows": [
+              ["2-3 hafte me", "Abhi — taaki sugar ya khoon ki kami theek karne ka samay bache"],
+              ["1 hafte me", "Jitna jaldi ho sake"],
+              ["Kal ya parson", "Aspataal me hi karayein — unki report seedhe unke paas hogi"]
+            ]
+          }
+        },
+        "Deoria se Gorakhpur ya Lucknow operation ke liye jaa rahe hain to ek aur faayda hai: test ghar par ho jaayein to aap report le kar hi pahunchte hain, aur OPD me test ki line aur report ke intezaar ka ek din bach jaata hai. Bas pehle ye pakka kar lijiye ki aspataal bahar ki report maanta hai — kuch aspataal apne yahan ki hi jaanch maangte hain."
+      ]
+    },
+    {
+      "id": "sugar-hb-kam-pre-op-deoria",
+      "heading": "Sugar Zyada Ya Haemoglobin Kam Nikla — Operation Ka Kya Hoga",
+      "lead": "Operation aksar radd nahi, thoda aage hota hai — aur ye aapke hi bhale ke liye hai.",
+      "blocks": [
+        "Sugar bahut badha ho to ghaav der se bharta hai aur infection ka khatra badhta hai. Isliye planned operation se pehle doctor HbA1c dekhte hain aur zaroorat ho to kuch hafte sugar control karke operation karte hain. Haemoglobin bahut kam ho to operation me khoon chadhaane ki zaroorat badh jaati hai — iron ki goli, injection ya khoon chadha kar pehle use badhaaya jaata hai.",
+        {
+          "list": [
+            "Report aate hi surgeon ke staff ko WhatsApp par bhej dijiye — faisla operation ke din se pehle ho jaaye.",
+            "Sugar ki dawa aur insulin ka dose operation ke din kaise lena hai, ye surgeon ya physician se likhwa lijiye.",
+            "Emergency operation me ye intezaar nahi hota — wahan aspataal apni jaanch khud turant karta hai."
+          ]
+        },
+        [
+          "HbA1c ka lakshya aur sugar report ka matlab ",
+          { "text": "HbA1c guide", "href": "/blogs/hba1c-sugar-test/deoria" },
+          " me, aur haemoglobin kam hone ka matlab ",
+          { "text": "CBC guide", "href": "/blogs/cbc-test/deoria#haemoglobin-kam-mcv-deoria" },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "khoon-patla-dawa-pre-op-deoria",
+      "heading": "Khoon Patla Karne Wali Dawa — Operation Se Pehle Kya Karein",
+      "lead": "Sabse zaroori niyam: khud se band mat kijiye, aur surgeon ko zaroor bataiye.",
+      "blocks": [
+        "Dil ke stent, lakwa ya dhadkan ki bimari ke baad bahut se log aspirin, clopidogrel, warfarin ya naye khoon patla karne wali dawa lete hain. Operation me khoon zyada na bahe, iske liye kabhi-kabhi ye dawa kuch din pehle roki jaati hai — lekin kuch mareez me rokna stent band hone ya lakwa ka khatra badhaata hai. Ye faisla surgeon aur dil ke doctor saath milkar lete hain.",
+        {
+          "note": {
+            "title": "Dawa ki list saath rakhiye",
+            "text": "Surgeon ke paas jaate waqt saari dawaon ke dabbe ya list saath le jaaiye — Ayurvedic aur desi dawa bhi, kyunki kuch khoon ke jamne par asar daalti hain. Warfarin par hain to PT-INR operation se theek pehle zaroor hota hai.",
+            "tone": "warn"
+          }
+        },
+        "Ghar par sample dete waqt bhi phlebotomist ko bataiye ki aap khoon patla karne wali dawa le rahe hain — sui ki jagah der tak dabaa kar rakhi jaati hai taaki neela nishaan na pade."
+      ]
+    },
+    {
+      "id": "ecg-xray-pre-op-deoria",
+      "heading": "ECG Aur Chest X-Ray — Pre-Op Ka Wo Hissa Jo Blood Test Nahi Hai",
+      "lead": "Soochi me ye do aksar saath hote hain. Inke liye centre jaana padega.",
+      "blocks": [
+        "40-50 saal ke upar, ya dil, saans, sugar ya BP ki bimari me doctor operation se pehle ECG aur kabhi chest X-ray bhi likhte hain. Kuch mareez ko echo bhi. Ye machine ki jaanch hai.",
+        {
+          "note": {
+            "title": "Ye hamari service nahi hai",
+            "text": "MedicoBharat Deoria me sirf khoon aur peshab ke sample ghar par leta hai. ECG, X-ray, echo aur ultrasound hum nahi karte. Blood test ghar par kara lijiye, aur ECG-X-ray ek hi baar centre ya aspataal me — isse ek chakkar bach jaata hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pre-op-test-ghar-par-deoria",
+      "heading": "Deoria Me Pre-Operative Blood Test Ghar Par",
+      "lead": "Operation se pehle ke dino me sabse kam bhaag-daud ho, utna achchha.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — fasting sugar ho to khaali pet, baaki test usi sample me.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — seedhe surgeon ke staff ko forward kijiye.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Surgeon ki di hui parchi ki photo booking ke waqt bhej dijiye — blood group, PT-INR ya HCV jaise test ki uplabdhta usi waqt bata di jaati hai. Test ka daam ",
+          { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
+          " par, booking ",
+          { "text": "Deoria ke service page", "href": "/lab-test/deoria#how-to-book-deoria" },
+          " se. Sample se pehle fasting aur dawa ke niyam ",
+          { "text": "blood test se pehle fasting", "href": "/blogs/blood-test-fasting/deoria" },
+          " me hain."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Operation se pehle kaun se blood test hote hain?",
+      "answer": "Aam taur par CBC, blood sugar aur HbA1c, KFT (creatinine, urea) aur sodium-potassium, blood group, PT-INR, HIV, HBsAg aur Anti-HCV, aur urine routine. Operation ke hisaab se LFT ya TSH bhi. Umar aur bimari ke hisaab se ECG aur chest X-ray bhi hote hain, jo blood test nahi hain."
+    },
+    {
+      "question": "Operation se pehle HIV aur hepatitis test kyun karate hain?",
+      "answer": "Ye har operation se pehle ki aam screening hai — operation karne wale staff aur doosre mareez ki suraksha ke liye, aur aapke apne ilaaj ke liye. Iska hona kisi shak ki baat nahi hai. Reactive report aane par bhi operation hota hai, bas khaas savdhaani ke saath."
+    },
+    {
+      "question": "Pre-operative test ki report kitne din valid rehti hai?",
+      "answer": "Aam taur par aspataal 2 se 4 hafte purani CBC, sugar aur KFT maan lete hain, lekin har aspataal ka niyam alag hai. Surgeon ke staff se pehle poochh lijiye, aur ye bhi ki wo bahar ki report maante hain ya nahi."
+    },
+    {
+      "question": "Motiyabind operation se pehle kaun se test hote hain?",
+      "answer": "Aam taur par blood sugar (aur kabhi HbA1c), kabhi CBC, aur HIV-HBsAg. Bujurgon me BP bhi dekha jaata hai. Sugar control me hona sabse zaroori hai. Aankh ke doctor ki parchi par jo likha ho, wahi karaiye."
+    },
+    {
+      "question": "Sugar zyada aane par kya operation ruk jaata hai?",
+      "answer": "Planned operation me aksar kuch din ya hafte aage badhaaya jaata hai taaki sugar control ho sake, kyunki badhe sugar me ghaav der se bharta hai aur infection ka khatra badhta hai. Emergency operation nahi rukta; wahan aspataal sugar ko turant sambhaalta hai."
+    },
+    {
+      "question": "Deoria me operation se pehle ke test ghar par ho sakte hain?",
+      "answer": "Haan, blood aur urine ke test. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai, aur report 24 ghante ke andar WhatsApp par aati hai. ECG aur X-ray hamari service nahi hain."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me operation se pehle ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
+          { "href": "/lab-test/gorakhpur", "label": "Gorakhpur me lab test", "sub": "Operation Gorakhpur me ho to wahan bhi ghar par sample" }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          { "href": "/blogs/hiv-hepatitis-test/deoria", "label": "HIV aur Hepatitis B test — kab karayein" },
+          { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range" },
+          { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
+          { "href": "/blogs/senior-citizen-checkup/deoria", "label": "Bujurgon ka health checkup" }
+        ]
+      }
+    ]
+  }
+}
