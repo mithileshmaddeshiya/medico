@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blog:new": "node scripts/new-blog.mjs",
+    "db:init": "node --env-file=.env.local --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/db-init.mjs",
+    "db:seed": "node --env-file=.env.local --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/db-seed.mjs"
   },
   "dependencies": {
     "firebase": "^12.15.0",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
+    "mysql2": "^3.24.4",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",

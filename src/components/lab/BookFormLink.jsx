@@ -18,7 +18,14 @@ import { useCallback } from "react";
  * Offset for the sticky header comes from `scroll-mt-*` on the target itself,
  * so smooth scrolling here lands in the same place the browser would.
  */
-export default function BookFormLink({ className = "", children, ...rest }) {
+export default function BookFormLink({
+  className = "",
+  children,
+  // Overridable by the caller; the default says what the link does, which the
+  // button labels ("Book a Test", "Book Now") already imply but do not state.
+  title = "Jump to the booking form on this page",
+  ...rest
+}) {
   const scrollToForm = useCallback((e) => {
     // Modified clicks are the user asking for a new tab/window — leave them be.
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
@@ -31,7 +38,7 @@ export default function BookFormLink({ className = "", children, ...rest }) {
   }, []);
 
   return (
-    <a href="#book" onClick={scrollToForm} className={className} {...rest}>
+    <a href="#book" title={title} onClick={scrollToForm} className={className} {...rest}>
       {children}
     </a>
   );

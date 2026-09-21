@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { Phone } from "lucide-react"
 
 import { LAB_PHONE } from "@/data/lab/defaults"
+import NavCartButton from "@/components/lab/cart/NavCartButton"
 
 /**
  * The site's one header.
@@ -15,17 +16,30 @@ import { LAB_PHONE } from "@/data/lab/defaults"
  * crossing from the home page into a lab page watched the whole chrome change.
  * That second navbar is gone; this is now mounted by every layout.
  *
- * ── THE HEADER CARRIES NO LINKS ──────────────────────────────────────────
- * The bar used to carry a desktop row of links — Home, a Lab Tests menu with
- * every live city, a Health Guides menu, About, Contact. That row was replaced
- * by the ECG tagline, and the hamburger button that held the same links in a
- * slide-in sheet has since been removed too. What is left is a logo, a running
- * heartbeat and the phone number, at every width.
+ * ── THE HEADER CARRIES NO LINKS, AND THAT COSTS SOMETHING ────────────────
+ * It used to. Four flat hrefs — /lab-test, /blogs, /about, /contact — sat in
+ * the centre of the bar, and they were put there on purpose: Google discounts
+ * sitewide footer links relative to header and in-content ones, so with the
+ * centre given over to decoration the site's most commercially valuable hub
+ * pages are reachable only by the weakest form of internal linking available.
  *
- * So the only navigation out of any page is now in the body and in the footer.
- * LabFooter's "Cities We Serve" column is what links every city from every
- * page — if that ever goes, the city pages lose their sitewide link entirely.
+ * They have been replaced by the ECG line below, which is decoration. Nothing
+ * factual is lost — the promise it used to carry a tagline for is stated by
+ * the trust strip on every page and by the footer — but the link graph is
+ * genuinely weaker than it was, and that is the trade this header makes.
+ *
+ * Every one of those four destinations is still linked from the footer on
+ * every route, so nothing is orphaned. If header links are ever wanted back,
+ * they went exactly where the ECG sits now — and /blogs is the one with the
+ * best claim to a slot, since it is the single hub every article hangs off
+ * (see src/app/(main)/blogs/page.js).
+ *
+ * ── WHY THE CENTRE IS DESKTOP-ONLY EITHER WAY ────────────────────────────
+ * `hidden md:flex`. Below `md` the logo and the call block already fill the
+ * bar, and anything in the middle would shrink the phone number — the one
+ * thing on a phone header actually worth tapping.
  */
+
 export default function LabNavbar() {
     const [scrolled, setScrolled] = useState(false)
 
@@ -52,68 +66,107 @@ export default function LabNavbar() {
                 <div className="max-w-6xl mx-auto pl-3 pr-2 sm:px-5 md:px-8 flex items-center justify-between gap-2 sm:gap-3 h-16 sm:h-20">
 
                     {/* LOGO */}
-                    <Link href="/" className="flex items-center shrink-0" aria-label="MedicoBharat — Home">
+                    <Link href="/" className="flex items-center min-w-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with free sample collection">
+                        {/* 320×90 is the artwork's real 3.56:1 ratio, and the file
+                            is the trimmed WebP rather than the original PNG.
+
+                            The source was an 826 KB PNG, 1774×887, of which only
+                            1646×463 was actually logo — the rest was blank
+                            padding. It was declared here at 260×76 (3.42:1), a
+                            ratio that matched neither the file nor the artwork,
+                            so `object-contain` letterboxed it inside a box wider
+                            than it needed and the reserved layout space did not
+                            match the painted pixels.
+
+                            Trimmed and re-encoded it is 14 KB — a 98% cut on an
+                            image that is `priority`-preloaded on every route of
+                            the site. With the ratio now honest, `object-contain`
+                            is no longer doing any work, but it is kept as a cheap
+                            guard against a future re-export at a different crop.
+
+                            ── WHY IT IS THIS SMALL ─────────────────────────
+                            It used to be `h-14 sm:h-12 md:h-14 scale-110`, and
+                            the phone value being the LARGEST of the three was
+                            not a style choice — it overflowed the bar. At 3.56:1
+                            a 56px-tall logo is 199px wide; with the call block
+                            next to it that is ~367px of content inside a 320px
+                            screen, so the header scrolled sideways on a small
+                            phone. The heights below step UP with the viewport,
+                            which is the direction they should always have gone,
+                            and `scale-110` is gone with them — it drew 10%
+                            wider than the space the layout had reserved. */}
                         <Image
-                            src="/navbar/lablogo.png"
+                            src="/navbar/lablogo.webp"
                             alt="MedicoBharat — lab test at home"
-                            width={260}
-                            height={76}
-                            className="h-14 sm:h-12 md:h-14 w-auto object-contain scale-110 origin-left"
+                            width={320}
+                            height={90}
+                            className="h-9 sm:h-10 md:h-11 w-auto max-w-full object-contain object-left"
                             priority
                         />
                     </Link>
 
-                    {/* ── CENTRE: ECG TAGLINE ─────────────────────────────────
-                        What the desktop link row used to occupy. It is
-                        decoration, not navigation — `aria-hidden` on the line
-                        itself, and the words beside it are a plain statement of
-                        the two things this service actually promises.
+                    {/* ── CENTRE: THE ECG LINE ────────────────────────────
+                        Purely decorative, so `aria-hidden` — it carries no
+                        information, and a screen reader announcing a squiggle
+                        between the logo and the phone number is noise.
 
-                        `md` and up only: below that the logo and the call block
-                        already fill the bar, and squeezing this in between them
-                        would shrink the phone number, which is the one thing on
-                        a phone header worth tapping. */}
-                    <p className="hidden md:flex min-w-0 items-center gap-2.5 text-[12.5px] font-semibold text-slate-600">
+                        Deliberately light: no pill, no ring, no tagline beside
+                        it. The earlier version sat in a bordered emerald
+                        capsule with a line of copy, which read as a badge
+                        making a claim; this reads as what it is, a heartbeat
+                        ticking along behind the bar. Low opacity keeps it from
+                        competing with the cart and call buttons, the only things
+                        in this header anyone is meant to press.
+
+                        The trace itself is animated in CSS — `.ecg-line` in
+                        globals.css draws the stroke on a 2.4s loop, so the peak
+                        sweeps up and down the way a monitor does. It stops
+                        entirely under `prefers-reduced-motion`. */}
+                    <div
+                        aria-hidden
+                        className="hidden md:flex min-w-0 flex-1 items-center justify-center opacity-70"
+                    >
                         <svg
-                            viewBox="0 0 120 24"
-                            className="h-5 w-21 shrink-0 overflow-visible"
+                            viewBox="0 0 240 24"
+                            className="h-6 w-37.5 lg:w-55 overflow-visible"
                             fill="none"
-                            aria-hidden
                         >
-                            {/* `.ecg-line` draws the stroke on a 2.4s loop — see
-                                the keyframes in src/app/globals.css. */}
                             <path
                                 className="ecg-line"
-                                d="M0 12 H26 l4 -9 6 18 5 -14 4 10 H72 l4 -6 4 6 H120"
-                                stroke="url(#navEcg)"
-                                strokeWidth="2"
+                                d="M0 12 H52 l4 -9 6 18 5 -14 4 10 H144 l4 -6 4 6 H240"
+                                stroke="url(#ecgGrad)"
+                                strokeWidth="1.75"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                             />
                             <defs>
                                 <linearGradient
-                                    id="navEcg"
+                                    id="ecgGrad"
                                     x1="0"
                                     y1="0"
-                                    x2="120"
+                                    x2="240"
                                     y2="0"
                                     gradientUnits="userSpaceOnUse"
                                 >
-                                    <stop stopColor="#0d9488" />
-                                    <stop offset="1" stopColor="#059669" />
+                                    {/* Fades in and out at the ends so the line
+                                        does not stop dead against the logo or
+                                        the call button. */}
+                                    <stop stopColor="#0d9488" stopOpacity="0" />
+                                    <stop offset="0.18" stopColor="#0d9488" />
+                                    <stop offset="0.82" stopColor="#059669" />
+                                    <stop offset="1" stopColor="#059669" stopOpacity="0" />
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <span className="truncate">
-                            Home sample collection — reports in 24 hours
-                        </span>
-                    </p>
+                    </div>
 
-                    {/* RIGHT: the call block — the header's only action. */}
-                    <div className="flex items-center gap-1.5 shrink-0">
+                    {/* RIGHT: the cart, then the call block. */}
+                    <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+                        <NavCartButton />
                         <a
                             href={tel}
                             aria-label={`Call us at ${LAB_PHONE}`}
+                            title={`Call ${LAB_PHONE} to book a lab test`}
                             className="group flex items-center gap-1.5 sm:gap-2.5 rounded-full p-1 pr-3 sm:pr-5 ring-1 ring-emerald-200/70 hover:ring-emerald-300 shadow-sm hover:shadow-md active:scale-[0.98] bg-linear-to-r from-emerald-50 to-teal-50 transition-all duration-200"
                         >
                             {/* Icon badge with live pulse */}

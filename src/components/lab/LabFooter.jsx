@@ -35,15 +35,24 @@ const SOCIAL_ICONS = {
 /**
  * Footer navigation to the site's key pages. EVERY href here must be a route
  * that actually renders — a footer link that 404s bleeds crawl budget and
- * trust. These five are verified live (/, /about, /contact, /privacy, /terms);
- * do not add /blogs here, that hub route does not exist.
+ * trust. All six are verified live.
+ *
+ * /blogs was excluded for a long time on the correct grounds that the hub did
+ * not exist. It does now (src/app/(main)/blogs/page.js), and this is the link
+ * that makes it a hub rather than a page in the sitemap nobody points at: the
+ * footer is on every route, so from anywhere on the site every article is two
+ * clicks away — here, then the article. That is also the ONLY link the guides
+ * need from the sitewide chrome, which is why the individual posts were taken
+ * out of the footer and out of the home page's unbounded lists. One link that
+ * always works beats a column that grows by a row per article.
  */
 const QUICK_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact Us" },
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms & Conditions" },
+  { href: "/", label: "Home", title: "MedicoBharat home — lab test rate list and booking" },
+  { href: "/blogs", label: "Health Guides", title: "Health guides — which test to take, fasting rules and reading a report" },
+  { href: "/about", label: "About Us", title: "About MedicoBharat — who we are and where we collect samples" },
+  { href: "/contact", label: "Contact Us", title: "Contact MedicoBharat — phone number and booking help" },
+  { href: "/privacy", label: "Privacy Policy", title: "How MedicoBharat handles your personal and health data" },
+  { href: "/terms", label: "Terms & Conditions", title: "Terms of service for MedicoBharat lab test bookings" },
 ];
 
 /**
@@ -94,7 +103,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           SEO audit flags. Keyword-bearing, so it earns its place in the outline. */}
       <h2 className="sr-only">{heading}</h2>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-5 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-4 lg:grid-cols-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-5 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-2.5 sm:gap-y-4 lg:grid-cols-12">
 
         {/* BRAND — full width on phones (it is the tallest block; letting it
             span both columns keeps the short sections below it aligned instead
@@ -102,16 +111,19 @@ export default function LabFooter({ city = null, labCities = [] }) {
             it used to be: the guides column is gone, and its width is split
             between this block and the city list rather than left as a hole. */}
         <div className="col-span-2 lg:col-span-4">
-          <Link href="/" aria-label="MedicoBharat Lab Test — Home" className="inline-block">
+          <Link href="/" aria-label="MedicoBharat Lab Test — Home" title="MedicoBharat — lab test at home with free sample collection" className="inline-block">
+            {/* Same trimmed WebP and same true 3.56:1 ratio as the navbar — see
+                the note there. No `priority`: this sits at the bottom of the
+                page and must never compete with the hero for bandwidth. */}
             <Image
-              src="/navbar/lablogo.png"
+              src="/navbar/lablogo.webp"
               alt={
                 city
                   ? `MedicoBharat — Lab Test in ${city.name}`
                   : "MedicoBharat — Lab Test at Home"
               }
-              width={260}
-              height={76}
+              width={320}
+              height={90}
               className="h-8 sm:h-10 w-auto object-contain cursor-pointer mb-1 sm:mb-1.5"
             />
           </Link>
@@ -124,7 +136,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
               phone. Each is a 32px tap target that fills with the platform's
               colour on hover. */}
           {social.length > 0 && (
-            <ul className="mt-2 sm:mt-3 flex flex-wrap gap-2">
+            <ul className="mt-1.5 sm:mt-3 flex flex-wrap gap-2">
               {social.map((s) => {
                 const { Icon, brand } = SOCIAL_ICONS[s.type] ?? {
                   Icon: FaGlobe,
@@ -142,6 +154,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
                       aria-label={s.label ?? s.type ?? "Social profile"}
+                      title={`MedicoBharat on ${s.label ?? s.type ?? "the web"}`}
                       className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-emerald-700 ring-1 ring-emerald-200 shadow-[0_2px_6px_-3px_rgba(6,78,59,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:text-white hover:ring-transparent active:scale-95 ${brand}`}
                     >
                       <Icon className="h-4 w-4" aria-hidden />
@@ -158,11 +171,11 @@ export default function LabFooter({ city = null, labCities = [] }) {
             from every page. Only routes that actually exist are listed, so no
             link here can 404. */}
         <nav aria-label="Quick links" className="lg:col-span-2">
-          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Quick Links</h3>
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">Quick Links</h3>
           <ul className="space-y-1 text-[12.5px] text-slate-600">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-emerald-700 transition-colors">
+                <Link href={link.href} title={link.title} className="hover:text-emerald-700 transition-colors">
                   {link.label}
                 </Link>
               </li>
@@ -177,20 +190,62 @@ export default function LabFooter({ city = null, labCities = [] }) {
             other columns and leaving the rest of the footer as empty space. The
             localities now render as one full-width line under the grid — same
             text, same keywords, a fraction of the height. */}
-        <div className="lg:col-span-3">
+        {/* HIDDEN ON PHONES (below 640px), and this is the one block in the
+            footer that is. With thirteen cities it is by far the tallest column
+            here, and on a phone it renders as a single 13-line stack — the
+            footer's whole height, and the reason the blocks under it read as a
+            gap rather than a row.
+
+            `hidden sm:block`, NOT a conditional render. The links stay in the
+            HTML, so every city page is still reachable from every page for a
+            crawler and still passes link equity — a `display: none` list is
+            crawled, only a list that was never rendered is not. Do not "clean
+            this up" into `{isDesktop && ...}`: that would quietly cut thirteen
+            internal links out of the mobile-first index, which is the index
+            that counts.
+
+            Phone users are not stranded either — /lab-test lists every city,
+            the home page links them, and each city page cross-links the rest. */}
+        <div className="hidden sm:block lg:col-span-3">
           {otherCities.length > 0 && (
             <nav aria-label="Cities we serve">
-              <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">
+              <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">
                 {city ? "Other Cities" : "Cities We Serve"}
               </h3>
-              <ul className="space-y-1 text-[12.5px] text-slate-600">
+              {/* Two columns, and it is the city count that put them there. At
+                  six cities this was a tidy single column; at ten it ran far
+                  past the Quick Links and contact blocks beside it and left the
+                  rest of the footer as empty space — the same failure the
+                  locality paragraph caused before it was moved out.
+
+                  `columns-2` rather than a grid: the browser balances the two
+                  halves itself, so nothing here has to be recalculated the next
+                  time a city is added. `gap-x-4` keeps the two lists from
+                  reading as one wrapped column.
+
+                  It stays a single <ul>. Splitting the list in two to lay it
+                  out in two would tell a screen reader there are two lists of
+                  cities when there is one; `columns` is presentation only, and
+                  the reading order is unchanged.
+
+                  This used to be held back below 380px, because on a 320px
+                  phone each sub-column came out around 68px — narrower than the
+                  word "Kushinagar". The block no longer renders at any phone
+                  width, so the narrowest case it now has to survive is a 640px
+                  tablet, where two sub-columns are comfortable. */}
+              <ul className="columns-2 gap-x-4 space-y-1 text-[12.5px] text-slate-600">
                 {otherCities.map((c) => (
-                  <li key={c.slug}>
+                  // `break-inside-avoid` so a link is never split across the
+                  // column boundary — a city name broken in half mid-word is
+                  // the one way this layout can look broken rather than tight.
+                  <li key={c.slug} className="break-inside-avoid">
                     <Link
                       href={`/lab-test/${c.slug}`}
                       className="hover:text-emerald-700 transition-colors"
+                      aria-label={`Lab Test in ${c.name}`}
+                      title={`Lab test and blood test at home in ${c.name} — free sample collection`}
                     >
-                      Lab Test in {c.name}
+                      {c.name}
                     </Link>
                   </li>
                 ))}
@@ -215,14 +270,17 @@ export default function LabFooter({ city = null, labCities = [] }) {
             DiagnosticLab schema on the page (see the city page). Consistent NAP
             across page, schema and footer is what local ranking is built on. No
             street address is invented — only what we can stand behind. */}
-        {/* Full width on phones: with the guides column gone there are three
-            short blocks under the brand, and a 2-column phone grid would leave
-            this one alone on a half-width row with the email breaking mid-word.
-            Across both columns it reads as the closing block it is. */}
-        <div className="col-span-2 lg:col-span-3">
-          <h3 className="text-[13px] font-semibold text-emerald-900 mb-2">Contact</h3>
+        {/* Three widths, and each one is answering the block beside it.
+            From 380px to 640px it takes ONE column, because the city list is
+            hidden in that range and Quick Links would otherwise sit alone on a
+            half-width row — the gap this pass set out to close. Below 380px it
+            goes full width again: at that size half a row is about 140px and
+            the email breaks mid-word. From 640px the city list is back, so this
+            drops under it across both columns, as it always did. */}
+        <div className="col-span-2 min-[380px]:col-span-1 sm:col-span-2 lg:col-span-3">
+          <h3 className="text-[13px] font-semibold text-emerald-900 mb-1.5 sm:mb-2">Contact</h3>
 
-          <address className="not-italic space-y-1.5 text-[12.5px] text-slate-600">
+          <address className="not-italic space-y-1 sm:space-y-1.5 text-[12.5px] text-slate-600">
             <p className="font-semibold text-slate-700">
               {city
                 ? `MedicoBharat — Lab Test in ${city.name}`
@@ -230,13 +288,14 @@ export default function LabFooter({ city = null, labCities = [] }) {
             </p>
             <a
               href={`tel:${String(footer.phone ?? "").replace(/\s/g, "")}`}
+              title={`Call ${footer.phone} to book a lab test`}
               aria-label={`Call us at ${footer.phone}`}
               className="flex items-center gap-2 hover:text-emerald-700 transition-colors"
             >
               <Phone className="h-4 w-4 text-emerald-600 shrink-0" />
               <span className="tabular-nums">{footer.phone}</span>
             </a>
-            <a href={`mailto:${footer.email}`} className="flex items-center gap-2 hover:text-emerald-700 transition-colors">
+            <a href={`mailto:${footer.email}`} title={`Email MedicoBharat at ${footer.email}`} className="flex items-center gap-2 hover:text-emerald-700 transition-colors">
               <Mail className="h-4 w-4 text-emerald-600 shrink-0" />
               <span className="break-all">{footer.email}</span>
             </a>
@@ -262,7 +321,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
           two. Only on a city page; sitewide mode has no localities. */}
       {city && (
         <div className="border-t border-emerald-100/70">
-          <p className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 text-[12px] leading-5 text-slate-600">
+          <p className="max-w-6xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2.5 text-[12px] leading-5 text-slate-600">
             <span className="font-semibold text-emerald-900">
               Areas We Cover in {city.name}:
             </span>{" "}
@@ -282,17 +341,17 @@ export default function LabFooter({ city = null, labCities = [] }) {
           requires the privacy notice to be reachable from where that collection
           happens. Do not remove them without replacing them. */}
       <div className="border-t border-emerald-100 bg-emerald-50/60">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 flex flex-col items-center gap-0.5 sm:gap-1 text-[11px] sm:text-[12px] text-slate-500 sm:flex-row sm:justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2.5 flex flex-col items-center gap-0.5 sm:gap-1 text-[11px] sm:text-[12px] text-slate-500 sm:flex-row sm:justify-between">
           <p className="text-center">
             © {new Date().getFullYear()} MedicoBharat. All Rights Reserved.
           </p>
 
           <nav aria-label="Legal" className="flex items-center gap-2">
-            <Link href="/privacy" className="hover:text-emerald-700 transition-colors">
+            <Link href="/privacy" title="How MedicoBharat handles your personal and health data" className="hover:text-emerald-700 transition-colors">
               Privacy Policy
             </Link>
             <span aria-hidden className="h-1 w-1 rounded-full bg-emerald-300" />
-            <Link href="/terms" className="hover:text-emerald-700 transition-colors">
+            <Link href="/terms" title="Terms of service for MedicoBharat lab test bookings" className="hover:text-emerald-700 transition-colors">
               Terms &amp; Conditions
             </Link>
           </nav>

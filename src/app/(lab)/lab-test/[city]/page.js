@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import HomeBannerSlider from "@/components/home/HomeBannerSlider";
 import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
@@ -7,10 +8,15 @@ import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHero from "@/components/lab/LabHero";
 import LabHowTo from "@/components/lab/LabHowTo";
+import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
-import { LAB_PHONE, LAB_OG_IMAGE } from "@/data/lab/defaults";
+import OfferPopup from "@/components/lab/OfferPopup";
+import WelcomePopup from "@/components/lab/WelcomePopup";
+import { HOME_BANNERS } from "@/data/home";
+import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
+import { getCatalog } from "@/lib/testCatalog";
 import {
   BRAND_PROFILES,
   GBP_MAP_URL,
@@ -25,6 +31,11 @@ import { SITE } from "@/lib/site";
 // A slug that is not in the list is a city we do not serve → a real 404, which
 // the page already handles by calling notFound() on an unknown slug.
 export const dynamicParams = false;
+
+// The test cards and chips come from MySQL (src/lib/testCatalog.js). Pages stay
+// prerendered and rebuild in the background at most once a minute, so a price
+// changed in the database reaches every city page within ~60s.
+export const revalidate = 60;
 
 // Every city we serve is prerendered at build time from the local data.
 export async function generateStaticParams() {
@@ -148,8 +159,37 @@ const ids = (slug) => {
   };
 };
 
+/**
+ * The Maps URL this city's local node should publish.
+ *
+ * A service like this ends up with ONE Business Profile per town, not one for
+ * the brand — the Deoria profile is a different verified record from the
+ * Varanasi one, with its own reviews, its own photos and its own map pin. So
+ * the city's own `gbp` wins, and the brand-wide GBP_MAP_URL is only the
+ * fallback for a city that has no profile of its own yet.
+ *
+ * Empty string when neither exists, and every property built from it below is
+ * written to disappear in that case. That is deliberate: an unset link costs
+ * nothing, while a guessed one claims another lab is us.
+ */
+const mapUrlFor = (city) => city.gbp || GBP_MAP_URL || "";
+
+/**
+ * `sameAs` for the local node — the brand profiles plus THIS city's profile.
+ *
+ * BRAND_PROFILES already folds in GBP_MAP_URL when that is set, so appending
+ * would duplicate it on cities with no profile of their own. The membership
+ * check keeps the list a set: a repeated `sameAs` entry is not invalid, but it
+ * is the kind of noise that makes markup look generated rather than curated.
+ */
+const sameAsFor = (city) => {
+  const map = mapUrlFor(city);
+  return map && !BRAND_PROFILES.includes(map) ? [...BRAND_PROFILES, map] : BRAND_PROFILES;
+};
+
 const diagnosticLabNode = (city) => {
   const id = ids(city.slug);
+  const mapUrl = mapUrlFor(city);
 
   return {
     // Two types on purpose. DiagnosticLab is the accurate description of what
@@ -192,9 +232,20 @@ const diagnosticLabNode = (city) => {
         }
       : {}),
     // Every locality we serve, so the page can rank for "<test> in <locality>".
+    //
+    // Each area is qualified by `areaContext`, NOT by the city name. For most
+    // cities the two are the same string and this is "Barhaj, Deoria" — how
+    // that address is actually written. Where the city is a town and the areas
+    // are district towns, they differ: Khalilabad sets areaContext to "Sant
+    // Kabir Nagar", so this emits "Mehdawal, Sant Kabir Nagar" rather than
+    // "Mehdawal, Khalilabad", which would name a place that does not exist.
+    // See the field list at the top of src/data/lab/cities.js.
     areaServed: [
       { "@type": "City", name: city.name },
-      ...city.areas.map((area) => ({ "@type": "Place", name: `${area}, ${city.name}` })),
+      ...city.areas.map((area) => ({
+        "@type": "Place",
+        name: `${area}, ${city.areaContext ?? city.name}`,
+      })),
     ],
     // The collection window, written as a specification rather than the old
     // "Mo-Su 06:00-21:00" string: the string form is legacy and Google's local
@@ -224,8 +275,9 @@ const diagnosticLabNode = (city) => {
     // DiagnosticLab is a MedicalOrganization.
     knowsLanguage: ["hi-IN", "en-IN"],
     // A LocalBusiness IS a Place, so the Maps link belongs here (unlike on the
-    // Organization node). Omitted entirely until GBP_MAP_URL is filled in.
-    ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
+    // Organization node). This city's own profile first, the brand-wide one as
+    // fallback, and the property omitted entirely when neither is set.
+    ...(mapUrl ? { hasMap: mapUrl } : {}),
     // The real price list, straight off the cards — the same numbers a patient
     // sees, so the rich result can never disagree with the page.
     makesOffer: city.tests
@@ -252,8 +304,10 @@ const diagnosticLabNode = (city) => {
     parentOrganization: ORG_REF,
     // Off-domain profiles are the only part of this markup a search engine can
     // verify without taking our word for it, which is exactly why a brand with
-    // no recognised entity needs them on its local nodes too.
-    sameAs: BRAND_PROFILES,
+    // no recognised entity needs them on its local nodes too. The city's own
+    // Business Profile is the strongest of them: it is the one link that
+    // resolves to a Google-verified record of THIS town's operation.
+    sameAs: sameAsFor(city),
   };
 };
 
@@ -315,16 +369,26 @@ const breadcrumbNode = (city) => {
 export default async function LabCityPage({ params }) {
   const { city } = await params;
 
-  const cityData = await getLabCity(city);
+  const cityFile = await getLabCity(city);
   // A city we do not serve is a genuine 404 — redirecting it to Varanasi used
   // to hand Google a page whose content never matched the URL that was crawled.
-  if (!cityData) notFound();
+  if (!cityFile) notFound();
+
+  // Tests and chips from the database, the rest of the city from its file.
+  // Overlaid here so the grid AND the schema's makesOffer read the same list.
+  const { tests, filters } = await getCatalog();
+  const cityData = { ...cityFile, tests, filters };
 
   // The booking form's dropdown is scoped to THIS city — its name, its own
   // localities, then "Other". It used to list every live city, which put
   // Varanasi's localities at the top of Deoria's form. "Other" still covers the
   // visitor from a neighbouring town.
   const cityOptions = await getLabCityOptions(cityData.slug);
+
+  // The full published list, for the Quick Links index at the bottom of the
+  // page. Read here rather than threaded down from the layout: the layout feeds
+  // the footer, and a page that renders its own index should not depend on it.
+  const cities = await getLabCities();
 
   const cityName = cityData.name;
   const phone = cityData.footer.phone ?? LAB_PHONE;
@@ -348,6 +412,27 @@ export default async function LabCityPage({ params }) {
         }}
       />
 
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. Same form as the hero, same /api/lab-lead →
+          Firestore → WhatsApp path, and the same city dropdown this page's own
+          form uses, so a popup lead already carries the right locality. */}
+      <WelcomePopup
+        cityOptions={cityOptions}
+        title={`Book Lab Test in ${cityData.name}`}
+      />
+
+      {/* The offer popup, opening only once this city's FAQ block has been
+          scrolled past — see the header comment in OfferPopup. Same artwork and
+          same number on every city, because the offer is the company's, not the
+          town's; only the dialog's accessible name is localised. */}
+      <OfferPopup
+        offer={{
+          ...OFFER_POPUP,
+          title: `${OFFER_POPUP.title} — ${cityData.name}`,
+        }}
+        phone={LAB_PHONE}
+      />
+
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
 
       {/* Phone: tests first, promises after them. Desktop (lg+): promises sit
@@ -367,7 +452,14 @@ export default async function LabCityPage({ params }) {
           />
         </div>
       </div>
-      
+
+      {/* The same banner strip as the home page, in the same slot — under the
+          price cards, handing off to the call banner. Content is HOME_BANNERS
+          in src/data/home.js, shared across every city: the artwork is the
+          company's, not the town's, and every slide links to this page's own
+          #book form. */}
+      <HomeBannerSlider banners={HOME_BANNERS} />
+
       <LabCallBanner banner={cityData.callBanner} phone={phone} />
       <LabHowTo data={cityData.howTo} />
 
@@ -377,11 +469,35 @@ export default async function LabCityPage({ params }) {
           a different query. At 6, Deoria's pathology-lab and booking answers
           were written and then never rendered, and Varanasi silently dropped
           its "Kya aap Banaras me lab test karte hain?" answer — the one that
-          catches everyone who never types the official name. */}
+          catches everyone who never types the official name.
+
+          Raised again from 8 to 12, and for the same reason found twice more:
+          Ghazipur and Siwan each carry nine questions, so both had been
+          dropping their ninth — the booking-and-payment answer — since the day
+          they shipped, with nothing anywhere to say so. Gopalganj carries
+          eleven, including the two the page exists to answer honestly (RT-PCR,
+          and "which is the best lab"). Twelve leaves headroom above the
+          longest list without ever letting a city document run away.
+
+          If a city ever needs more than twelve, that is the signal to split
+          the document — not to raise this number a third time. */}
       <LabFaq
         city={cityName}
-        faqs={cityData.faqs?.slice(0, 8)}
+        faqs={cityData.faqs?.slice(0, 12)}
         pageUrl={`${SITE}/lab-test/${cityData.slug}`}
+        /* Names the town, because this <h2> used to be the string "Frequently
+           Asked Questions" on all six city pages — the one generic heading on
+           an otherwise entirely city-specific page. The sub-line below it drops
+           the city in return, so the pair states two things instead of one
+           thing twice. See the note in LabFaq.
+
+           English, like the questions underneath it: the FAQs on this section
+           were rewritten out of Hinglish, and a Hinglish heading over English
+           answers reads as a section nobody finished. It is still a heading and
+           not a keyword slot — "Frequently Asked Questions About Lab Tests in
+           <city>" is a sentence; a comma-list of search phrases is not. */
+        heading={`Frequently Asked Questions About Lab Tests in ${cityName}`}
+        subheading="Straight answers on home collection, fasting, reports and payment."
       />
 
       <LabCta cta={cityData.cta} phone={phone} />
@@ -396,6 +512,11 @@ export default async function LabCityPage({ params }) {
         sections={cityData.content}
         related={cityData.relatedLinks}
       />
+
+      {/* The collapsed index that closes the page: every city we serve, every
+          locality, and the site's own pages. Native <details>, so it costs no
+          client JS and needs no Google-Translate guard — see the component. */}
+      <LabQuickLinks cities={cities} currentSlug={cityData.slug} />
 
       {/* Floats over everything, bottom-right, dismissible. `phone` is this
           city's number, so it can never dial a different one than the page. */}

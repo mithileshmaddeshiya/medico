@@ -118,6 +118,14 @@ export const varanasiContent = [
       "Ek achhe lab ki pehchaan uske quality control se hoti hai: machines ki niyamit calibration, sahi tarike se store kiye gaye reagent, trained staff, aur consistent turnaround time. Aap sidha ye sab nahi dekh sakte, lekin do cheezein zaroor pooch sakte hain — lab kitne saal se chal raha hai, aur wo apni report par test ka method (jaise CLIA/ECLIA) likhta hai ya nahi. Yahi farq hota hai ek aisi machine me jo number deti hai aur ek aisi machine me jo sahi number deti hai.",
       "Collection ke waqt khud dhyan dijiye. Nayi sterile needle aapke saamne khule, har test ke liye sahi rang ki vacutainer ho, tube aapke darwaze par barcode ho — lab pahunch kar nahi, tube sahi level tak bhare, aur anticoagulant wali tube halke se ulti-seedhi ki jaaye. Clotted ya kam bhara sample hi wo sabse aam wajah hai jiske liye lab dobara sample maangti hai — aur galat tarike se liya gaya sample haemolysis kar deta hai, jisse potassium jhoothe taur par badh jaata hai aur bewajah panic ho jaata hai.",
       "Aakhir me, repeat test ke liye har baar usi lab me jaaiye. Alag alag analyser aur method ke reference range thode alag hote hain, isliye ek lab me TSH 4.5 aur doosri me 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya. Jo cheez aap mahino tak track kar rahe hain — HbA1c, TSH, creatinine, ferritin — usme lab ki consistency utni hi zaroori hai jitni khud ka number.",
+      [
+        "Poochhne layak sawaal, unke sahi jawab kaise dikhte hain, aur hum khud kya daawa nahi karte — us par alag guide hai: ",
+        {
+          text: "Varanasi me pathology lab kaise chunein",
+          href: "/blogs/pathology-lab/varanasi",
+        },
+        ".",
+      ],
     ],
   },
 

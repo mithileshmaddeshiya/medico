@@ -44,8 +44,14 @@
  * Paragraph parts of the form { text, href } render as real in-prose links (see
  * LabContent). Every href below must be a route that renders:
  *   /lab-test/{deoria,gorakhpur,varanasi}          (src/data/lab/cities.js)
- *   /blogs/{lab-test,full-body-checkup}/varanasi   (src/data/blogs/varanasi/)
+ *   /blogs/{lab-test,full-body-checkup}/salempur   (content/blogs/salempur/)
  *   /contact
+ *
+ * These used to point at the Varanasi guides, because when this page was
+ * written Varanasi was the only town with any. Salempur has its own set now,
+ * and sending a Salempur reader to a guide that names Varanasi in every
+ * heading helps nobody — while this town's own guides sit with almost nothing
+ * linking to them.
  */
 
 /* Link targets, kept as constants so a route rename is a one-line fix here
@@ -54,8 +60,11 @@
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_GORAKHPUR = "/lab-test/gorakhpur";
 const LAB_VARANASI = "/lab-test/varanasi";
-const GUIDE_LAB_TEST = "/blogs/lab-test/varanasi";
-const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
+const GUIDE_LAB_TEST = "/blogs/lab-test/salempur";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/salempur";
+const GUIDE_HOME_COLLECTION = "/blogs/home-sample-collection/salempur";
+const GUIDE_KASBA = "/blogs/kasba-home-collection/salempur";
+const GUIDE_PARENTS = "/blogs/parents-blood-test/salempur";
 
 export const salempurContent = [
   {
@@ -78,7 +87,11 @@ export const salempurContent = [
     p: [
       "Ek baat pehle saaf kar dena theek rahega: hamara koi walk-in counter Salempur me nahi hai, aur is page par kahin ye nahi likha jaayega ki hai. Ye home collection service hai — hum aapke ghar se sample lete hain, aur wahi sach hai jo yahan likha hai.",
       "Iska matlab kya nikalta hai, wo samajhne layak hai. Kasbe me jo chhote collection centre hain, wahan bhi sirf sample liya jaata hai; jaanch bade sheher ki lab me hi hoti hai aur report wahin se banti hai. Yaani sample ko safar to karna hi hai. Sawaal sirf itna hai ki us safar ki shuruaat aapke ghar se ho ya bazaar tak aapke chalne ke baad. Blood aur urine ke saare aam test sirf sample par hote hain, isliye ghar se shuruaat karna kisi tarah kam bharosemand nahi hai — bas ek trip kam ho jaati hai.",
-      "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Sample dene se pehle teen cheezein kar lijiye: uska ID card dekh lijiye, doctor ka parcha saamne rakh dijiye taaki wahi panel liya jaaye jo likha hai, aur jo test card par 'Call for price' likha hai uska daam pehle pooch lijiye. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Report 24 ghante ke andar aati hai — hum 24 ghante khula lab hone ka daawa nahi karte, 24 ghante me report milne ka karte hain.",
+      [
+        "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Sample dene se pehle teen cheezein kar lijiye: uska ID card dekh lijiye, doctor ka parcha saamne rakh dijiye taaki wahi panel liya jaaye jo likha hai, aur jo test card par 'Call for price' likha hai uska daam pehle pooch lijiye. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Report 24 ghante ke andar aati hai — hum 24 ghante khula lab hone ka daawa nahi karte, 24 ghante me report milne ka karte hain. Visit ke din kya-kya hota hai, kaun sa test ghar par ho jaata hai aur gaon ka pata kaise likhna chahiye — wo poora ",
+        { text: "ghar par sample wali guide", href: GUIDE_HOME_COLLECTION },
+        " me hai.",
+      ],
       "Ek aur baat jo kasbe me sabse zyada nuksan karti hai: jo test aap mahino tak dohrate hain — HbA1c, TSH, creatinine, haemoglobin — unhe har baar alag alag jagah se mat karaiye. Alag machine aur method ke reference range thode alag hote hain, isliye ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya. Doctor badlav dekhta hai, sirf aaj ka number nahi.",
     ],
   },
@@ -88,6 +101,11 @@ export const salempurContent = [
     h: "Salempur Ke Aas-paas Home Sample Collection — Bhatni, Lar, Bhatpar Rani, Bhagalpur Aur Majhauli Raj",
     p: [
       "Collection Salempur kasbe ke saath aas-paas ke ilaakon me bhi hoti hai — Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana aur Barhaj tak. In kasbon se lage gaon bhi aam taur par cover hote hain. Aapka gaon is list me naam se nahi hai to maan kar mat baithiye ki service nahi hai; booking se pehle ek call kar lijiye — cover hota hai to usi waqt slot book ho jaayega, aur nahi hota to hum saaf bata denge, taaki aap intezaar kar ke pareshan na hon.",
+      [
+        "Bhatni se train pakadni ho, Bhagalpur ki taraf barsaat me raasta kharab ho, ya Rampur Karkhana me kheti ka mahina chal raha ho — har kasbe ki apni baat ",
+        { text: "Bhatni, Lar aur Majhauli wali guide", href: GUIDE_KASBA },
+        " me alag se likhi hai.",
+      ],
       "Yahan ke pate sheher jaise nahi hote, aur late visit ki sabse badi wajah yahi hoti hai. Gaon ka naam kaafi nahi hai — tola ya purwa ka naam likhiye, saath me ek aisa landmark jo har koi jaanta ho: primary school, mandir ya masjid, block office, bank, petrol pump, chauraha, ya bijli ka transformer. Ek hi naam ke do gaon paas paas hone bhi aam baat hai, isliye post office ya thana ka naam likh dena aur bhi behtar rehta hai.",
       "Mobile number wahi dijiye jo us waqt aapke paas chalu rahega, aur ho sake to ek doosra number bhi likh dijiye. Kai gaon me network ek hi kone me aata hai — agar phlebotomist ka phone nahi laga to wahi ek call chhoot jaane se poori visit atak jaati hai.",
       "Fasting wale test ke liye subah 6 baje se slot shuru hote hain, aur is ilaake me iska faayda sheher se zyada hai. Khet ka kaam, doodh ka kaam ya dukaan — sab subah shuru ho jaate hain, aur 10–12 ghante khaali pet rehne ke baad koi din bhar bhookha nahi baith sakta. Jaldi wala slot lijiye, sample dijiye, aur turant naashta kar lijiye.",
@@ -109,7 +127,11 @@ export const salempurContent = [
     p: [
       "Is ilaake ke bahut se gharon me kamane wala bahar hai — Mumbai, Delhi, Surat, Punjab ya khadi desh — aur ghar par maa-baap. Bimari ki khabar phone par milti hai, aur wahin se sabse badi bebasi shuru hoti hai: parcha kaun le jaayega, sample kahan dega, report kaun laayega. Aksar test isliye nahi hota ki koi le jaane wala nahi hai, isliye nahi ki paise nahi hain.",
       "Booking ke liye ghar par hona zaroori nahi hai. Aap kahin se bhi form bhar sakte hain ya call kar sakte hain — bas ghar ka pata, landmark, aur wahan maujood kisi ka chalu mobile number dijiye. Confirm karne ke liye call aam taur par 30 minute ke andar aati hai; wo call kis number par aani chahiye, ye booking ke waqt bata dijiye — apne number par bhi karwa sakte hain.",
-      "Parcha ghar par hai to uska photo WhatsApp par mangwa lijiye aur wahi bhej dijiye, taaki jo panel doctor ne likha hai wahi liya jaaye. Test ke naam milte julte hote hain — Thyroid Profile Total aur Free, Widal aur Typhidot, Sugar Fasting aur PP — aur parche ka photo hone par ye galti hoti hi nahi.",
+      [
+        "Parcha ghar par hai to uska photo WhatsApp par mangwa lijiye aur wahi bhej dijiye, taaki jo panel doctor ne likha hai wahi liya jaaye. Test ke naam milte julte hote hain — Thyroid Profile Total aur Free, Widal aur Typhidot, Sugar Fasting aur PP — aur parche ka photo hone par ye galti hoti hi nahi. Booking se pehle maa-baap se kya poochhein, fasting me sugar ki dawa ka kya karein, aur door rehkar emergency ka plan kaise banayein — wo sab ",
+        { text: "bahar rehkar maa-baap ke blood test wali guide", href: GUIDE_PARENTS },
+        " me hai.",
+      ],
       "Payment sample lene ke waqt hota hai, cash ya UPI se. UPI chuniye to ye ghar walon par bojh nahi rehta — PhonePe, Google Pay ya Paytm se aap wahin se kar dete hain. Report bhi 24 ghante me WhatsApp aur email par PDF me aati hai, isliye wo aapke phone par bhi utni hi aasani se pahunch jaati hai jitni ghar par.",
       [
         "Chhutti me khud ghar aa rahe hain to apna ek baseline checkup bhi isi bahane karwa lijiye — bahar lambi shift, kam dhoop aur bahar ka khana jhelne walon me vitamin ki kami aur badha hua lipid bahut aam milta hai. Kis umar me kaun sa package theek rehta hai, wo ",
@@ -213,7 +235,7 @@ export const salempurContent = [
       "Number ko report par chhape reference range se hi milaiye, internet ke kisi chart se nahi. Range machine aur method ke hisaab se badalti hai, aur umar tatha ling ke hisaab se bhi. Thoda sa high ya low hona bahut aam hai aur aksar koi bimari nahi hoti — ye diagnosis nahi, doctor se poochne ka ishaara hai. WhatsApp par report kisi group me mat daaliye; ye aapki niji jaankari hai.",
       [
         "Kuch result me intezaar nahi karna chahiye, usi din doctor chahiye: dengue me tezi se girta platelet count, bahut zyada sugar ke saath ulti ya susti, bahut kam haemoglobin, ya bahut badha creatinine ke saath peshab kam hona. Tabiyat kharab lag rahi ho to kisi ke phone ka intezaar mat kijiye, seedha dikhaiye. Numbers ka matlab kya hota hai aur kis flag par ghabrana nahi chahiye, ye ",
-        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kaise-padhein` },
+        { text: "report kaise padhein wale hisse", href: `${GUIDE_LAB_TEST}#report-kya-dekhein-salempur` },
         " me detail me likha hai.",
       ],
     ],
@@ -280,40 +302,40 @@ export const salempurContent = [
  */
 export const salempurFaqs = [
   {
-    q: "Salempur me lab test ka kitna kharcha aata hai, aur kya home sample collection free hai?",
-    a: "Aap sirf test ka wahi price dete hain jo card par likha hai — Salempur me home sample collection bilkul free hai, na visiting charge na koi hidden fee. Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800 aur Basic Full Body Checkup ₹999 se shuru. Kasba hone ki wajah se koi alag daam nahi lagta. Payment sample lene ke waqt cash ya UPI se hota hai.",
+    q: "How much does a lab test cost in Salempur, and is home sample collection free?",
+    a: "You pay only the price printed on the test card — home sample collection in Salempur is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Being a small town makes no difference to the rate. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
-    q: "Kya lab test ke liye mujhe Salempur se Deoria ya Gorakhpur jaana padega?",
-    a: "Routine pathology ke liye bilkul nahi. Blood aur urine ke saare test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — sample par hote hain, aur sample aapke ghar Salempur me hi liya ja sakta hai. Deoria, Gorakhpur ya Varanasi jaana sirf tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho. Aisi trip se pehle blood test ghar par karwa lena behtar hai, taaki report pehle se haath me ho.",
+    q: "Do I have to travel from Salempur to Deoria or Gorakhpur for a lab test?",
+    a: "Not for routine pathology. Every blood and urine test — CBC, sugar, thyroid, liver, kidney, lipid, vitamin, dengue — is run on a sample, and that sample can be drawn at your home in Salempur. Deoria, Gorakhpur or Varanasi is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person. Before a trip like that, it is worth having the blood tests done at home so the report is already in hand.",
     links: [
-      { href: LAB_DEORIA, label: "Deoria me lab test" },
-      { href: LAB_GORAKHPUR, label: "Gorakhpur me lab test" },
+      { href: LAB_DEORIA, label: "Lab test in Deoria" },
+      { href: LAB_GORAKHPUR, label: "Lab test in Gorakhpur" },
     ],
   },
   {
-    q: "Salempur ke aas-paas aap kaun kaun se ilaake cover karte hain?",
-    a: "Hum Salempur kasbe ke saath Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana, Barhaj aur inse lage gaon me sample collect karte hain. Aapka gaon is list me naam se nahi hai to bhi ek baar call kar ke pooch lijiye — cover hone par usi waqt slot book ho jaayega. Pata likhte waqt tola ya purwa ka naam aur ek landmark (school, mandir, block office, chauraha) zaroor daaliye, kyunki yahan house number se zyada landmark kaam aata hai.",
+    q: "Which areas around Salempur do you cover?",
+    a: "We collect samples in Salempur town along with Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana, Barhaj and the villages adjoining them. If your village is not named in this list, please call anyway — if it is covered, the slot is booked on the same call. When writing the address, include the tola or purwa and a landmark (a school, temple, block office or crossing), because a landmark is far more useful here than a house number.",
   },
   {
-    q: "Main bahar kaam karta hoon — kya ghar par maa-baap ka test main yahin se book kar sakta hoon?",
-    a: "Haan. Booking ke liye ghar par hona zaroori nahi hai. Form bharte waqt ghar ka pata, landmark aur wahan maujood kisi ka chalu mobile number de dijiye, aur ye bata dijiye ki confirmation call kis number par aani chahiye — wo aapke number par bhi aa sakti hai. Doctor ke parche ka photo bhej dijiye taaki wahi panel liya jaaye jo likha hai. Payment sample lene ke waqt cash ya UPI se hota hai, aur report 24 ghante me WhatsApp tatha email par PDF me aa jaati hai, isliye wo aapke phone par bhi pahunch jaati hai.",
+    q: "I work away from home — can I book a test for my parents from here?",
+    a: "Yes. You do not need to be at the house to book. On the form, give the home address with a landmark and a working mobile number of someone who is there, and tell us which number the confirmation call should go to — it can be yours. Send a photo of the doctor's prescription so that exactly the panel written on it is run. Payment is taken at the time of collection, by cash or UPI, and the report arrives within 24 hours as a PDF on WhatsApp and email, so it reaches your phone as well.",
   },
   {
-    q: "Kya Salempur me aapka koi lab ya collection centre hai jahan ja kar sample de sakte hain?",
-    a: "Nahi — hamara koi walk-in counter Salempur me nahi hai, aur hum aisa daawa nahi karte. Ye home collection service hai: trained phlebotomist ID card ke saath aapke ghar aata hai aur sample wahin liya jaata hai. Home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Hum 24 ghante khula lab hone ka daawa bhi nahi karte; report 24 ghante ke andar milne ka karte hain.",
+    q: "Do you have a lab or collection centre in Salempur where I can walk in and give a sample?",
+    a: "No — we have no walk-in counter in Salempur, and we do not claim to. This is a home collection service: a trained phlebotomist comes to your home with an ID card and the sample is drawn there. Home visit slots start at 6 AM and run until evening. We also do not claim to be a lab that is open 24 hours; what we do commit to is a report within 24 hours.",
   },
   {
-    q: "Bujurg ya bistar par pade mareez ka sample ghar par liya ja sakta hai?",
-    a: "Haan, aur unhi ke liye ye sabse zyada kaam ka hai. Booking ke waqt mareez ki haalat zaroor bata dijiye — bujurg hain, bistar par hain, diabetic hain jinki nas patli ho gayi hai, ya pehle sample lene me dikkat aayi hai — taaki aane wala taiyaari ke saath aaye. Sample se pehle mareez ko thoda paani pila dijiye, jab tak fasting ke niyam mana na karein. Ghar ke kai log test kara rahe hain to sabki booking ek hi slot me kar dijiye; ek visit me sabka sample ho jaayega.",
+    q: "Can a sample be taken at home for an elderly or bedridden patient?",
+    a: "Yes, and this is exactly who it helps most. Please describe the patient's condition when booking — elderly, bedridden, diabetic with veins that have become difficult, or a history of trouble during earlier draws — so that whoever comes arrives prepared. Give the patient a little water beforehand, unless the fasting instructions say otherwise. If several people in the house are being tested, book them into a single slot; all the samples can be taken in one visit.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
-    a: "Nahi. Tez bukhar ke saath jhatke, behoshi, gardan akadna, lagatar ulti ya bahut susti ho to seedha najdeeki hospital le jaaiye — ye emergency hai aur ismein der khatarnak hai. Gorakhpur–Deoria–Kushinagar belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Home sample collection ka intezaar mat kijiye; blood test iska pehla jawab nahi hai.",
+    q: "My child has a high fever with seizures — should I book a lab test?",
+    a: "No. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness needs the nearest hospital immediately — this is an emergency, and any delay is dangerous. The Gorakhpur–Deoria–Kushinagar belt has seen cases of acute encephalitis syndrome (AES / Japanese Encephalitis) in children after the monsoon. Do not wait for a home collection; a blood test is not the first answer here.",
   },
   {
-    q: "Kaun se test me fasting zaroori hai, aur report kitni jaldi mil jaati hai?",
-    a: "Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota; saada paani pi sakte hain, lekin chai, doodh, biscuit ya toffee nahi — ek chai se hi report badal jaati hai. CBC, Thyroid Profile, HbA1c, Vitamin D aur B12 me koi fasting nahi chahiye. Zyadatar routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai; culture jaise test 48 se 72 ghante lete hain.",
-    links: [{ href: GUIDE_LAB_TEST, label: "Kaun sa test kab karayein — guide" }],
+    q: "Which tests require fasting, and how soon does the report arrive?",
+    a: "Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages need 10 to 12 hours without food; plain water is allowed, but tea, milk, a biscuit or a toffee are not — a single cup of tea is enough to change the result. CBC, Thyroid Profile, HbA1c, Vitamin D and B12 need no fasting. Most routine tests are reported within 24 hours as a PDF on WhatsApp and email; tests such as cultures take 48 to 72 hours.",
+    links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

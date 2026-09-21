@@ -51,6 +51,78 @@ const MEDICINE_BLOG_REDIRECTS = [
 
 const nextConfig = {
   /**
+   * Pin the workspace root.
+   *
+   * A stray package-lock.json in the user's home directory made Turbopack infer
+   * `C:\Users\Administration` as the root instead of this project, and say so on
+   * every build. That is not cosmetic: the inferred root decides how files
+   * outside the app are resolved and traced, so it can produce a build that
+   * works locally and ships with assets missing on the host.
+   *
+   * `import.meta.dirname` is this file's own directory, which is the project
+   * root by definition — so this cannot drift if the repo is cloned elsewhere.
+   */
+  turbopack: {
+    root: import.meta.dirname,
+  },
+
+  /**
+   * The MySQL driver (src/lib/db.js) is loaded with Node's own require at
+   * runtime instead of being bundled — it is not on Next's built-in list, and
+   * bundling it breaks its optional native/dynamic requires. See
+   * node_modules/next/dist/docs/01-app/03-api-reference/05-config/
+   * 01-next-config-js/serverExternalPackages.md.
+   */
+  serverExternalPackages: ["mysql2"],
+
+  /**
+   * Ship content/blogs/ with the routes that read it at request time.
+   *
+   * The articles are plain JSON on disk (see src/lib/blogs/index.js) rather
+   * than imported modules — that is the whole point, since it keeps article
+   * text out of every page's JavaScript. The cost is that Next.js cannot see
+   * them by following imports, so its file tracer would leave them out of the
+   * deployment bundle.
+   *
+   * For /blogs and /blogs/<category>/<city> that would not bite: both are fully
+   * prerendered at build, when the repo is still on disk. The two sitemaps are
+   * the ones that matter — they carry `revalidate = 86400`, so they re-run on
+   * the server a day after the build, by which time only traced files exist. A
+   * missing content/ there is an empty sitemap, silently, in production.
+   *
+   * Keys are route globs, values are globs from the project root. See
+   * node_modules/next/dist/docs/01-app/03-api-reference/05-config/
+   * 01-next-config-js/output.md.
+   */
+  outputFileTracingIncludes: {
+    "/sitemap.xml": ["./content/blogs/**/*.json"],
+    "/sitemap/blogs.xml": ["./content/blogs/**/*.json"],
+  },
+
+  images: {
+    /**
+     * The widths next/image is allowed to generate for a `sizes`-driven srcset.
+     *
+     * The default list ends 2048, 3840. Every source image on this site is at
+     * most 1700px wide, so those two entries could only ever produce an upscale
+     * — a bigger file that carries no more detail, generated and cached per
+     * variant. Capping at 1920 removes them.
+     *
+     * The small end is kept dense: this audience is on phones, and 640/750/828
+     * are the widths that actually get served.
+     */
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+
+    /**
+     * A year. These are content images with immutable paths — the hero, the
+     * logo, the share card — so a long cache is safe and it is what keeps a
+     * repeat visit from re-fetching the LCP image. Changing an image means
+     * changing its filename, which the WebP conversion already did.
+     */
+    minimumCacheTTL: 31536000,
+  },
+
+  /**
    * Origins allowed to request dev-only assets (/_next/*) in `next dev`.
    *
    * Next.js blocks cross-origin requests to the dev server by default. When you

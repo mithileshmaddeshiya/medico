@@ -69,9 +69,16 @@
  * Paragraph parts of the form { text, href } render as in-prose links (see
  * LabContent). Every href must be a route that exists:
  *   /lab-test/{deoria,varanasi}            (src/data/lab/cities.js)
- *   /blogs/lab-test/varanasi  + anchors    (src/data/blogs/varanasi/)
- *   /blogs/full-body-checkup/varanasi      (src/data/blogs/varanasi/)
+ *   /blogs/lab-test/gorakhpur + anchors    (content/blogs/gorakhpur/)
+ *   /blogs/full-body-checkup/gorakhpur     (content/blogs/gorakhpur/)
+ *   /blogs/home-sample-collection/gorakhpur + anchor
  *   /contact
+ *
+ * These used to point at the Varanasi guides, because when this page was
+ * written Varanasi was the only town with any. Gorakhpur has its own set now,
+ * and a Gorakhpur page linking a reader to a Varanasi guide sends them
+ * somewhere that names the wrong town in every heading — while leaving this
+ * town's own guides with almost nothing pointing at them.
  *
  * The /medicine-delivery/deoria link that used to sit in the reports section
  * is gone: that section is retired and the URL now 308s (see next.config.mjs).
@@ -83,12 +90,15 @@
    than as a silent 404 in production. */
 const LAB_DEORIA = "/lab-test/deoria";
 const LAB_VARANASI = "/lab-test/varanasi";
-const GUIDE_WHICH_TEST = "/blogs/lab-test/varanasi";
-const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
-const GUIDE_FEVER_DAYS = "/blogs/lab-test/varanasi#bukhar-me-test-ka-din";
-const GUIDE_FASTING = "/blogs/lab-test/varanasi#fasting-aur-taiyari";
-const GUIDE_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
-const GUIDE_AGE = "/blogs/lab-test/varanasi#umar-ke-hisaab-se-test";
+const GUIDE_WHICH_TEST = "/blogs/lab-test/gorakhpur";
+const GUIDE_FULL_BODY = "/blogs/full-body-checkup/gorakhpur";
+const GUIDE_FEVER_DAYS = "/blogs/lab-test/gorakhpur#bukhar-me-din-gorakhpur";
+const GUIDE_FASTING = "/blogs/home-sample-collection/gorakhpur#slot-aur-traffic-gorakhpur";
+const GUIDE_REPORT = "/blogs/lab-test/gorakhpur#report-kya-dekhein-gorakhpur";
+const GUIDE_AGE = "/blogs/lab-test/gorakhpur#umar-ke-hisaab-se-gorakhpur";
+const GUIDE_PRE_OP = "/blogs/pre-operative-test/gorakhpur";
+const GUIDE_KASBA = "/blogs/kasba-home-collection/gorakhpur";
+const GUIDE_DISCHARGE = "/blogs/discharge-follow-up-test/gorakhpur";
 const CONTACT = "/contact";
 
 export const gorakhpurContent = [
@@ -134,7 +144,11 @@ export const gorakhpurContent = [
     h: "Operation Ya Admission Se Pehle Ke Test — Gorakhpur Me Ye Aksar Poochhe Jaate Hain",
     p: [
       "Gorakhpur me operation ki date mil jaane ke baad ek list thama di jaati hai, aur us list ke bina admission aage nahi badhta. Aam taur par usme yahi cheezein hoti hain: CBC, Blood Group aur Rh typing, Blood Sugar, Kidney Function Test, Liver Function Test, aur infection screening — HBsAg, Anti-HCV tatha HIV. Kuch surgery me clotting dekhne ke liye PT/INR bhi maanga jaata hai.",
-      "Yahan ek zaroori baat: list hamesha aapke hospital ki maanie, kisi article ki nahi — hamari bhi nahi. Har department aur har surgery ki apni zaroorat hoti hai, aur ek test chhoot jaane par date aage badh jaati hai. Parche ko saamne rakh kar wahi naam booking me daaliye.",
+      [
+        "Yahan ek zaroori baat: list hamesha aapke hospital ki maanie, kisi article ki nahi — hamari bhi nahi. Har department aur har surgery ki apni zaroorat hoti hai, aur ek test chhoot jaane par date aage badh jaati hai. Parche ko saamne rakh kar wahi naam booking me daaliye. Har test kyun maanga jaata hai, aur motiyabind, contrast CT ya endoscopy se pehle list kaise badalti hai — wo ",
+        { text: "operation se pehle ke test wali guide", href: GUIDE_PRE_OP },
+        " me hai.",
+      ],
       "Timing ka faayda yahan bhi wahi hai. Ye saare test sample par hote hain, isliye admission se do-teen din pehle ghar par sample de dijiye — report haath me le kar jaayenge to counter par ek chakkar kam lagega. Aur agar aap kisi ke saath tehar kar aaye hain, to sample us kamre par bhi liya ja sakta hai jahan aap ruke hain.",
       "Operation se pehle ka CBC aksar wo pehla mauka hota hai jab khoon ki kami pakad me aati hai. Haemoglobin kam nikal aaye to sirf iron ki goli shuru kar dena adhoora hai — ferritin, Vitamin B12 aur folate se pata chalta hai ki wajah kya hai. Ye baat operation ke liye bhi maayne rakhti hai, isliye report doctor ko waqt rehte dikha dijiye.",
     ],
@@ -160,7 +174,11 @@ export const gorakhpurContent = [
     h: "Poore Gorakhpur Me Home Sample Collection — Sheher Ke Mohalle Aur Jile Ke Kasbe",
     p: [
       "Sheher me collection in ilaakon me hoti hai: Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Bashharatpur, Jatepur, Padri Bazar, Kunraghat, Rapti Nagar, Bargadwa, Nausarh, Khorabar, Ramgarh Tal ke aas-paas ki colony aur Transport Nagar tarf ke naye mohalle.",
-      "Jile ke kasbon me bhi sample liya jaata hai — Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj tak. Aapka mohalla ya gaon upar naam se na ho to maan kar mat baithiye ki service nahi hai; ek call kar lijiye. Cover hota hai to usi waqt slot ban jaayega, aur nahi hota to hum saaf mana kar denge — taaki aap subah se khaali pet intezaar na karein.",
+      [
+        "Jile ke kasbon me bhi sample liya jaata hai — Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj tak. Aapka mohalla ya gaon upar naam se na ho to maan kar mat baithiye ki service nahi hai; ek call kar lijiye. Cover hota hai to usi waqt slot ban jaayega, aur nahi hota to hum saaf mana kar denge — taaki aap subah se khaali pet intezaar na karein. GIDA ki shift, Pipraich ke kataai ke mahine aur Ghaghra ki taraf ke raaste — har kasbe ki apni baat ",
+        { text: "kasbon wali guide", href: GUIDE_KASBA },
+        " me hai.",
+      ],
       "Pata likhne ka tareeka yahan thoda alag chahiye. Gorakhpur ke naye mohalle tezi se base hain aur bahut si galiyan map par theek nahi aatin, isliye plot number se zyada kaam landmark karta hai — school, mandir, bank, petrol pump, hospital gate ya chauraha. Ek landmark aur ek chaalu mobile number, bas itna kaafi hai. Der ki zyadatar wajah adhoora pata hoti hai.",
       "Ghar ke kai log ek saath karaa rahe hain to sabki booking ek hi slot me kar dijiye — ek visit me sabka sample ho jaayega. Koi bujurg hai, bistar par hai, jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai, to booking me ye likh dijiye taaki experienced phlebotomist bheja ja sake.",
     ],
@@ -179,7 +197,11 @@ export const gorakhpurContent = [
         { text: "Varanasi me lab test", href: LAB_VARANASI },
         ".",
       ],
-      "Bihar ke seemavarti jilon aur Nepal border ke kasbon se aane walon ke liye ek practical faayda: report kagaz par nahi, PDF me aati hai. Wo kho nahi sakti, bheeg nahi sakti, aur kisi bhi doctor ko — yahan, Lucknow me ya seema paar — sirf forward karni hoti hai.",
+      [
+        "Bihar ke seemavarti jilon aur Nepal border ke kasbon se aane walon ke liye ek practical faayda: report kagaz par nahi, PDF me aati hai. Wo kho nahi sakti, bheeg nahi sakti, aur kisi bhi doctor ko — yahan, Lucknow me ya seema paar — sirf forward karni hoti hai. Yahan ilaaj ke baad chhutti mil gayi hai to follow-up jaanch apne jile me kaise karayein, wo ",
+        { text: "discharge ke baad wali guide", href: GUIDE_DISCHARGE },
+        " me hai.",
+      ],
     ],
   },
 
@@ -331,36 +353,36 @@ export const gorakhpurContent = [
  */
 export const gorakhpurFaqs = [
   {
-    q: "Kal doctor ko dikhana hai aur parche par test likhe hain — kya report kal tak mil jaayegi?",
-    a: "Haan. Zyadatar routine test ki report 24 ghante ke andar aa jaati hai, isliye appointment se ek din pehle subah ka slot le lijiye. Agle din aap OPD me report le kar jaayenge aur doctor usi visit me dawa likh dega — do trip ka kaam ek me. Booking ke waqt parche ka photo bhej dijiye taaki wahi panel liya jaaye jo likha hai; test ke naam aksar milte-julte hote hain.",
+    q: "I see the doctor tomorrow and have tests written on the prescription — will the report be ready by then?",
+    a: "Yes. Most routine tests are reported within 24 hours, so book a morning slot for the day before the appointment. You then walk into the OPD with the report in hand and the doctor can prescribe in that same visit — two trips become one. Send a photo of the prescription when you book, so that exactly the panel written on it is run; test names are often confusingly similar.",
   },
   {
-    q: "Gorakhpur me lab test ka kitna kharcha hai, aur kya home collection free hai?",
-    a: "Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai, koi visiting charge ya hidden fee nahi. Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, aur Basic Full Body Checkup ₹999 se. Fever Panel jaise kuch test par 'Call for price' likha rehta hai — sample lene se pehle price bata diya jaata hai. Payment cash ya UPI se, sample ke waqt.",
+    q: "How much does a lab test cost in Gorakhpur, and is home collection free?",
+    a: "Home sample collection is free — you pay only the price printed on the test card, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. A few tests, such as the Fever Panel, are marked 'Call for price' — the price is confirmed before the sample is taken. Payment is by cash or UPI, at the time of collection.",
   },
   {
-    q: "Operation se pehle wale test bhi ghar par ho jaayenge?",
-    a: "Blood aur urine wale saare test ghar par ho jaate hain — CBC, blood group aur Rh typing, sugar, KFT, LFT aur HBsAg, Anti-HCV tatha HIV screening. Kuch surgery me PT/INR bhi maanga jaata hai. Lekin list hamesha apne hospital ki maanie, kyunki har department ki zaroorat alag hoti hai aur ek test chhootne par date aage badh jaati hai. Admission se do-teen din pehle sample de dijiye taaki report waqt par haath me ho.",
+    q: "Can pre-operative tests be done at home as well?",
+    a: "All blood and urine tests can be done at home — CBC, blood group and Rh typing, sugar, KFT, LFT, and HBsAg, Anti-HCV and HIV screening. Some surgeries also ask for PT/INR. Always go by your own hospital's list, though, as every department asks for something slightly different, and one missing test pushes the date back. Give the sample two or three days before admission so the report is in hand on time.",
   },
   {
-    q: "Bachche ko tez bukhar ke saath jhatke aa rahe hain — kya lab test book karun?",
-    a: "Nahi. Tez bukhar ke saath jhatke, behoshi, gardan akadna, lagatar ulti ya bahut susti ho to seedha najdeeki hospital le jaaiye — ye emergency hai aur ismein der khatarnak hai. Gorakhpur–Kushinagar–Maharajganj belt me barsaat ke baad bachchon me dimaagi bukhar (AES / Japanese Encephalitis) ke maamle aate rahe hain. Home sample collection ka intezaar mat kijiye; blood test iska pehla jawab nahi hai.",
+    q: "My child has a high fever with seizures — should I book a lab test?",
+    a: "No. A high fever with seizures, unconsciousness, a stiff neck, repeated vomiting or extreme drowsiness needs the nearest hospital immediately — this is an emergency, and any delay is dangerous. The Gorakhpur–Kushinagar–Maharajganj belt has seen cases of acute encephalitis syndrome (AES / Japanese Encephalitis) in children after the monsoon. Do not wait for a home collection; a blood test is not the first answer here.",
   },
   {
-    q: "Gorakhpur me aap kaun kaun se mohalle aur kasbe cover karte hain?",
-    a: "Sheher me Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Kunraghat, Rapti Nagar, Khorabar aur aas-paas ke mohalle. Jile me Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni aur Barhalganj. Aapka mohalla is list me na ho to ek call kar lijiye — cover hone par usi waqt slot ban jaayega. Pata likhte waqt landmark zaroor daaliye, kyunki naye mohalle map par theek nahi aate.",
+    q: "Which neighbourhoods and towns do you cover in Gorakhpur?",
+    a: "In the city: Golghar, Civil Lines, Betiahata, Mohaddipur, Taramandal, Rustampur, Medical College Road, Asuran, Shahpur, Gorakhnath, Kunraghat, Rapti Nagar, Khorabar and the areas around them. In the district: Sahjanwa, Pipraich, Chauri Chaura, Bansgaon, Campierganj, Gola Bazar, Khajni and Barhalganj. If your locality is not on this list, please call — if it is covered, the slot is booked on the same call. Do include a landmark in the address, as newer colonies do not always map correctly.",
   },
   {
-    q: "Main Kushinagar ya Maharajganj se aa raha hoon — blood test Gorakhpur me karaun ya apne sheher me?",
-    a: "Apne sheher me. Blood aur urine ke saare routine test sample par hote hain, aur kis sheher me sample liya gaya isse result par koi farq nahi padta. Gorakhpur aana tab zaroori hai jab MRI, CT scan, endoscopy jaisi imaging ho ya kisi specialist ki OPD me dikhana ho — aur aisi trip se pehle blood test ghar par karwa lena hi sabse samajhdari ka kaam hai, taaki report saath me ho aur ek visit me baat ban jaaye.",
-    links: [{ href: LAB_DEORIA, label: "Deoria me lab test" }],
+    q: "I am coming from Kushinagar or Maharajganj — should I get the blood test done in Gorakhpur or in my own town?",
+    a: "In your own town. Every routine blood and urine test is run on a sample, and the city the sample was drawn in makes no difference to the result. Gorakhpur is necessary only for imaging such as MRI, CT or endoscopy, or to see a specialist in person — and before a trip like that, having the blood tests done at home is the sensible thing to do, so the report travels with you and the visit settles the matter.",
+    links: [{ href: LAB_DEORIA, label: "Lab test in Deoria" }],
   },
   {
-    q: "Kaun se test me khaali pet rehna zaroori hai, aur chai pi sakte hain?",
-    a: "Fasting Blood Sugar, Lipid Profile aur zyadatar Full Body Checkup package me 10 se 12 ghante kuch nahi khana hota. Chai bilkul nahi — ek chai se hi sugar aur lipid ki report badal jaati hai aur test dobara karana padta hai. Sirf saada paani, aur wo peete rehna zaroori hai. CBC, Thyroid Profile, HbA1c, Vitamin D aur B12 me koi fasting nahi chahiye. Thyroid ki goli sample dene ke baad leni chahiye, pehle nahi.",
+    q: "Which tests require fasting, and is tea allowed?",
+    a: "Fasting Blood Sugar, Lipid Profile and most Full Body Checkup packages need 10 to 12 hours without food. Tea is not allowed at all — one cup is enough to change a sugar and lipid report and force a repeat. Only plain water, and you should keep drinking it. CBC, Thyroid Profile, HbA1c, Vitamin D and B12 need no fasting. A thyroid tablet should be taken after the sample is drawn, not before.",
   },
   {
-    q: "Gorakhpur me lab chunte waqt kya dekhna chahiye?",
-    a: "Do cheezein report par dikhti hain aur bahut kuch bata deti hain: test ka method likha hai ya nahi (jaise CLIA ya ECLIA), aur reference range report par khud chhapi hai ya nahi. Teesri baat khud karni hoti hai — jo number aap mahino track kar rahe hain, jaise HbA1c, TSH ya creatinine, unke liye lab badalte mat rahiye. Alag analyser ki range thodi alag hoti hai, isliye ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab thyroid ka badalna nahi hota.",
+    q: "What should I look for when choosing a lab in Gorakhpur?",
+    a: "Two things are visible on the report itself and tell you a great deal: whether the test method is stated (CLIA or ECLIA, for instance), and whether the reference range is printed on the report. The third is up to you — for anything you are tracking over months, such as HbA1c, TSH or creatinine, stay with one lab. Reference ranges differ slightly between analysers, so a TSH of 4.5 at one lab and 4.1 at another does not mean your thyroid has changed.",
   },
 ];

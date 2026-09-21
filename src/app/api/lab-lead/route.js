@@ -1,4 +1,6 @@
+import { priceCart } from "@/lib/labCart";
 import { firebaseConfig } from "@/lib/firebaseConfig";
+import { getTests, recordCodOrder, recordLead } from "@/lib/labStore";
 import { notifyOwnerOnWhatsapp } from "@/lib/notifyWhatsapp";
 
 /**
@@ -14,6 +16,11 @@ import { notifyOwnerOnWhatsapp } from "@/lib/notifyWhatsapp";
  * The owner notification is best-effort and deliberately cannot fail the
  * request: if WhatsApp is misconfigured or Meta is down, the lead is already
  * saved and can be worked from the Firestore console.
+ *
+ * The lead is written to MySQL too (src/lib/labStore.js). A "pay at home
+ * collection" checkout from the cart also sends `cart: { id, items, city }`;
+ * that is priced HERE from the server's price list and saved as an order with
+ * its lines. The request only fails if neither store took the lead.
  */
 
 const FIRESTORE = `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents`;
@@ -83,6 +90,16 @@ async function saveLead(lead) {
   return response.json();
 }
 
+/** A cart checkout becomes a lead plus an order; any other form, a lead. */
+async function saveToMysql(lead, cart) {
+  const priceListCity = clean(cart?.city, MAX.city) || null;
+  const bill = cart ? priceCart(cart.items, await getTests({ fresh: true })) : null;
+
+  if (!bill?.lines.length) return recordLead(lead);
+
+  return recordCodOrder({ cartId: cart.id, lead, customer: lead, bill, priceListCity });
+}
+
 export async function POST(request) {
   let body;
   try {
@@ -94,10 +111,14 @@ export async function POST(request) {
   const { error, lead } = validate(body);
   if (error) return Response.json({ ok: false, error }, { status: 400 });
 
-  try {
-    await saveLead(lead);
-  } catch (err) {
-    console.error("[lab-lead] could not save the booking", err);
+  const [firestore, mysql] = await Promise.allSettled([saveLead(lead), saveToMysql(lead, body?.cart)]);
+  if (firestore.status === "rejected") {
+    console.error("[lab-lead] Firestore did not save the booking", firestore.reason);
+  }
+  if (mysql.status === "rejected") {
+    console.error("[lab-lead] MySQL did not save the booking", mysql.reason);
+  }
+  if (firestore.status === "rejected" && mysql.status === "rejected") {
     return Response.json(
       { ok: false, error: "Could not save your request. Please call us instead." },
       { status: 502 }

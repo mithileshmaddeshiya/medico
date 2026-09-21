@@ -43,9 +43,11 @@
  * sentence a crawler is already reading for topic. See LabContent.jsx.
  *
  * EVERY href BELOW MUST BE A ROUTE THAT RENDERS. The three city pages come
- * from src/data/lab/cities.js and the two guides from src/data/blogs/varanasi/.
+ * from src/data/lab/cities.js and the two guides from content/blogs/varanasi/.
  * If a city is ever unpublished, the links naming it here have to go with it.
  */
+
+import { SERVICE_CITIES, coverage } from "@/lib/coverage";
 import { LAB_PHONE } from "@/data/lab/defaults";
 
 /* ── Metadata ─────────────────────────────────────────────────────────────
@@ -55,7 +57,7 @@ import { LAB_PHONE } from "@/data/lab/defaults";
    title absolutely (see the home page's generateMetadata), so the root
    layout's " | MedicoBharat" suffix is NOT appended on top of it. */
 export const HOME_META = {
-  title: "Lab Test at Home — Free Sample Collection | MedicoBharat",
+  title: "Lab Test at Home in Varanasi, Gorakhpur & UP | MedicoBharat",
 
   // ~155 characters, so it survives on desktop and mobile alike. Hinglish on
   // purpose: the whole site is Hinglish, this audience searches in Hinglish,
@@ -63,7 +65,7 @@ export const HOME_META = {
   // terms that have to match a query ("lab test", "blood test", "full body
   // checkup", "home sample collection") are all still in it.
   description:
-    "Ghar baithe lab test aur full body checkup book karein — CBC, thyroid, sugar aur vitamin test. Free home sample collection, report 24 ghante me WhatsApp par.",
+    "Book Lab Test & Full Body Checkup at home in Varanasi, Gorakhpur, Deoria, Azamgarh & Salempur. Free sample collection & fast reports by MedicoBharat.",
 
   /* `keywords` is a weak-to-zero ranking signal on its own. The reason to keep
      it honest and specific is that it is the checklist the headings, FAQs and
@@ -84,11 +86,13 @@ export const HOME_META = {
     "blood test at home",
     "blood test near me",
     "home sample collection",
+    "free home sample collection",
     "online lab test booking",
     "pathology lab near me",
     "diagnostic centre near me",
     "full body checkup at home",
     "full body checkup near me",
+    "preventive health checkup",
 
     // Test-wise — the highest-intent queries this page answers
     "CBC test price",
@@ -109,10 +113,9 @@ export const HOME_META = {
     "lab test report kaise padhein",
     "umar ke hisaab se health checkup",
 
-    // Regional — the district names in the service area
-    "lab test in Varanasi",
-    "lab test in Gorakhpur",
-    "lab test in Deoria",
+    // Regional — every district in the service area, built from the live city
+    // list. It named three while six were live; see src/lib/coverage.js.
+    ...SERVICE_CITIES.map((city) => `lab test in ${city}`),
     "lab test in Purvanchal",
 
     // Devanagari — the script a large share of this audience types in
@@ -124,39 +127,131 @@ export const HOME_META = {
 };
 
 /* ── Hero ─────────────────────────────────────────────────────────────────
-   The hero is a banner image plus the booking form, the same as the city
-   pages, and the h1 is screen-reader only. */
+   A visible headline, a one-line promise, then the banner image and the
+   booking form side by side — the same shape as the city pages.
+
+   The h1 used to be `sr-only`, because the headline was printed into the
+   banner artwork. That made the most prominent element on the site's most
+   linked page unreadable to a crawler, and made a 1.5 MB image the LCP
+   candidate instead of a line of text. See HomeHero.jsx. */
 export const HOME_HERO = {
-  /* Two halves so that, if the visible headline ever comes back, the accent
-     colour falls on the phrase carrying the primary keyword rather than on a
-     random word in the middle of it. HomeHero joins them for the sr-only h1. */
+  /* Two halves so the accent colour falls on the phrase carrying the primary
+     keyword rather than on a random word in the middle of it. The visible
+     headline is back — HomeHero renders `h1Accent` in emerald. */
   h1Lead: "Lab Test Ghar Baithe —",
   h1Accent: "Free Home Sample Collection",
+
+  /* The one line under the h1. It names the region rather than listing six
+     towns: this sits above the fold on a phone, and the list would push the
+     booking form off the screen. The full list is in the guide further down
+     and in the footer. */
+  h1Sub:
+    "CBC, thyroid, sugar, vitamin aur full body checkup — trained phlebotomist ghar aakar sample lega, report 24 ghante me WhatsApp par.",
 
   formTitle: "Book Your Sample Collection",
 
   // The home page gets its own banner rather than reusing the city heroes'
   // asset — the two pages sit next to each other in search results, and an
   // identical image makes the home page look like just another city page.
-  // 1700x925, so the hero box is aspect-11/6. Replacing this file with a
+  // 2758x1504, so the hero box is aspect-11/6. Replacing this file with a
   // different shape means changing that class in HomeHero.jsx too.
-  image: "/navheroimage/herosecimg.png",
+  //
+  // WebP, not the original PNG: this is the LCP element on the site's most
+  // linked page, marked `priority`. 131 KB.
+  //
+  // ── THE HEADLINE IS PAINTED INTO THIS FILE ─────────────────────────────
+  // It carries its own headline, four icon labels and a contact bar. That is
+  // why HomeHero prints no visible heading of its own: two headlines, one in
+  // pixels and one in text, sat on top of each other however they were
+  // arranged. A text-free cut of the same photograph exists at
+  // /navheroimage/heroempty.webp — switching back to it is what makes a
+  // readable h1 possible again, and HomeHero has the note on how.
+  image: "/navheroimage/imageheorlab.webp",
 
   // The banner has its headline burned into the artwork, and a crawler cannot
   // read pixels — so the alt carries that wording rather than describing the
-  // photograph. The counts printed on the banner are deliberately NOT repeated
-  // here; see the rule at the top of this file.
+  // photograph. With the visible h1 gone this alt and the sr-only heading are
+  // between them the only machine-readable version of what the hero says.
+  // The counts printed on the banner are deliberately NOT repeated here; see
+  // the rule at the top of this file.
   imageAlt:
     "MedicoBharat Lab Test — accurate tests, better health. Reliable lab tests, advanced technology, safe aur hygienic collection, home sample collection ke saath.",
 };
+
+/* ── Banner slider ────────────────────────────────────────────────────────
+   The auto-playing strip under the price cards, rendered by
+   src/components/home/HomeBannerSlider.jsx — on the home page AND on every
+   /lab-test/[city] page.
+
+   ── THE SHAPE IS A CONTRACT ──────────────────────────────────────────────
+   Every banner must be authored at the SAME ratio, because the slider gives
+   each slide one box and a slide of a different shape gets cropped to fit.
+   Author them at 16:5, which is what the files in /public/swipper are
+   (2242x701): from 640px up that is exactly the box, and nothing is cropped.
+
+   ⚠ ON A PHONE THE BOX IS 16:6 AND THE ARTWORK IS STRETCHED ~20% TALLER to
+   fill it. Nothing is cropped anywhere — cropping for that height was tried
+   and it ate words (slider2 loses "Be" of "Better" at this ratio) — but it
+   does mean a phone shows this artwork 20% taller than it was drawn. Design
+   for that: a banner whose logo or type cannot carry a fifth more height
+   without looking squashed does not belong here as-is. The full trade, and
+   the two approaches rejected before it, are written out in the component.
+
+   Both of these are fixes for the real gap, which is that there is ONE cut of
+   each banner and it is a desktop shape. A phone-shaped cut (taller, type
+   scaled for a 390px screen) would need neither the stretch nor the crop.
+
+   ⚠ `src` MUST name a file that actually exists in /public. Next serves a
+   missing path as a 404 and the slide renders as a blank box, which on an
+   autoplaying strip reads as the site being broken. Same rule the articles
+   follow for their hero images.
+
+   ── WHAT A BANNER MAY NOT SAY ────────────────────────────────────────────
+   Whatever is painted into the artwork is a claim this business is making, and
+   a crawler cannot read it — so the `alt` has to carry the same words, which
+   means the rule at the top of this file applies to BOTH. No NABL, no
+   "certified", no accreditation, no test counts, no "100% accuracy", no
+   "India's best/largest", no other lab's name or logo. Only the five things we
+   actually do: free home collection, a trained phlebotomist with an ID card,
+   slots from 6 AM, reports in 24 hours, cash/UPI on collection.
+
+   This is not a style note. Where the alt and the picture disagree, THE
+   ARTWORK IS THE BUG. */
+export const HOME_BANNERS = [
+  /* Each alt is written as the sentence the artwork says, not as a
+     description of the photograph — the alt is the only machine-readable copy
+     of a banner. All three were checked against the rule above when they were
+     swapped to WebP (2026-09-21): no NABL, no accreditation, no counts. */
+  {
+    src: "/swipper/slider12.webp",
+    alt: "Trusted Lab MedicoBharat — Your Health Our Priority. Accurate tests, trusted results, better health; blood tests, health packages, home collection aur online reports.",
+    href: "#book",
+    title: "Book a lab test at home with free sample collection",
+  },
+
+  {
+    src: "/swipper/slider23.webp",
+    alt: "You need a health test! Because regular health checks help you test, not guess. Sugar, thyroid, kidney, heart, bone, liver, anemia aur overall wellness tests — home sample collection aur online reports.",
+    href: "#book",
+    title: "Book a lab test at home with free sample collection",
+  },
+
+  {
+    src: "/swipper/slider34.webp",
+    alt: "Track your health at the comfort of your home — convenient and hassle-free home sample collection with well trained medics. Care comes home.",
+    href: "#book",
+    title: "Book a lab test at home with free sample collection",
+  },
+];
 
 /* ── How it works ─────────────────────────────────────────────────────────
    Four steps, with the actual timings the site promises elsewhere. The point
    of this block on a home page is to remove the one doubt that stops a first
    booking: what actually happens after I submit the form.
 
-   THIS BLOCK IS IN ENGLISH, on purpose, and it is the only one on the page
-   that is — everything around it is Hinglish. The timings are unchanged: 30
+   THIS BLOCK IS IN ENGLISH, on purpose. Most of the page is Hinglish; the
+   English ones are this, the CTA band and the call strip. The timings are
+   unchanged: 30
    minutes to the call, 10 minutes for the visit, 24 hours to the report, and
    48–72 hours for the specialised tests. Those four numbers appear in the
    FAQs, the long-form copy and the city pages too; changing one here without
@@ -207,33 +302,53 @@ export const HOME_STEPS = {
    transport, pathologist verification or accreditation — see the warning above
    defaultHowTo in src/data/lab/defaults.js. */
 export const HOME_HOW_TO = {
-  heading: "How to book a lab test with MedicoBharat",
-  intro:
-    "Five steps from booking to report — and the same timings we state on every page, in every city we serve.",
+  /* ── SEO NOTE ON THE WORDING ────────────────────────────────────────────
+     The heading carries the page's primary phrase — "lab test at home" — and
+     the step titles carry the secondary ones a booking searcher actually
+     types: home sample collection, pathology lab, report on WhatsApp — plus
+     "full body checkup" in step one's body, next to the price list it is
+     picked from. Each appears ONCE, in the position where it is also
+     the plainest description of what the step is. That is the whole trick and
+     the limit: the moment a phrase is repeated in a step's body because it is
+     a keyword rather than because the sentence needs it, this block stops
+     being a procedure and starts being a keyword list, and Google reads the
+     difference. If you add a term here, take one out.
+
+     Do NOT hardcode a city list into `intro`. Seven cities are published today
+     (src/data/lab/cities.js) and the day an eighth ships this line goes stale
+     silently. The city keywords live where they can be built from the live
+     list — the footer column, HOME_CONTENT's "Hum Kin Sheher Me" section, and
+     the city pages' own titles. */
+  heading: "How to book a lab test at home with MedicoBharat",
+  // No `intro`. LabHowTo renders the line only when one is set, and the line
+  // this had listed free collection, the trained phlebotomist and the timings —
+  // all three of which the five steps below then state again, in order. The
+  // heading already says what the block is; a summary of a five-step list that
+  // sits directly above the five steps is a sentence the reader pays for twice.
   steps: [
     {
       icon: "clipboard-list",
-      title: "Booking Made Easy",
-      text: "Pick a test or package from the list above and fill the form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
+      title: "Book Your Lab Test",
+      text: "Pick a test or a full body checkup from the price list above and fill the booking form, or just call us. Have a doctor's prescription? Keep a photo handy so we run exactly that panel.",
     },
     {
       icon: "headset",
-      title: "Guidance",
+      title: "Confirmation Call",
       text: "We call you back in about 30 minutes to confirm the slot and address, and to tell you whether the test needs fasting.",
     },
     {
       icon: "test-tube",
-      title: "Sample Collection",
-      text: "A trained phlebotomist reaches your address with an ID card and draws the sample in front of you. About 10 minutes, and collection is free.",
+      title: "Home Sample Collection",
+      text: "A trained phlebotomist reaches your address with an ID card and draws the blood sample in front of you. About 10 minutes, and home collection is free.",
     },
     {
       icon: "microscope",
-      title: "Lab Processing",
-      text: "The sample goes to the lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
+      title: "Pathology Lab Testing",
+      text: "The sample goes to the pathology lab the same morning. Most routine tests are reported within 6 to 24 hours of reaching there; cultures take 48 to 72.",
     },
     {
       icon: "file-heart",
-      title: "Report and Support",
+      title: "Report on WhatsApp",
       text: "The PDF report comes on WhatsApp and email, so you can show your doctor right away. Anything unclear in it — call us and we will explain.",
     },
   ],
@@ -291,7 +406,7 @@ export const HOME_WHY = {
 
 /* ── Guides ───────────────────────────────────────────────────────────────
    The rail that links the articles. Same reasoning: the list is built from
-   src/data/blogs, never typed here. */
+   src/lib/blogs, never typed here. */
 export const HOME_GUIDES = {
   heading: "Test Chunne Aur Report Padhne Ki Guide",
   intro:
@@ -308,36 +423,36 @@ export const HOME_GUIDES = {
    background is a question a snippet cannot be lifted from. */
 export const HOME_FAQS = [
   {
-    q: "MedicoBharat kya hai?",
-    a: `MedicoBharat ek lab test service hai jo aapke ghar se blood aur urine sample collect karti hai — Varanasi, Gorakhpur aur Deoria jile me. Aap CBC, thyroid, sugar, vitamin, liver, kidney aur full body checkup jaise test book kar sakte hain. Home sample collection free hai, aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Booking ${LAB_PHONE} par call kar ke bhi ho jaati hai.`,
+    q: "What is MedicoBharat, and which districts of Purvanchal do you serve?",
+    a: `MedicoBharat is an online diagnostic booking service with free home sample collection. We serve ${coverage()}, offering blood tests and full body health checkups — CBC, Thyroid Profile, Diabetes (HbA1c), Lipid Profile, Vitamin D and B12, and Liver and Kidney function tests. The report arrives as a PDF within 24 hours on WhatsApp and email. To book directly, call ${LAB_PHONE}.`,
   },
   {
-    q: "Kya ghar par blood test karana sach me free hota hai?",
-    a: "Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai. Na visiting charge, na convenience fee, na koi hidden amount. Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se.",
+    q: "Is home blood sample collection really free?",
+    a: "Yes, home sample collection is completely free. You pay only the price of the test or health checkup package itself. There is no visiting charge, no hidden fee and no convenience charge. Payment is taken at the time of collection, in cash or by UPI (Google Pay, PhonePe, Paytm).",
   },
   {
-    q: "Lab test book karne ke liye doctor ka parcha zaroori hai kya?",
-    a: "Zyadatar routine test aur health package bina prescription ke book ho jaate hain — CBC, thyroid profile, sugar, lipid, vitamin D, vitamin B12 aur full body checkup. Kuch specialised test niyam ke hisaab se parcha maangte hain. Doctor ne kuch likha hai to uska photo booking ke waqt saath rakhiye, taaki bilkul wahi panel liya jaaye jo unhone likha tha.",
+    q: "Do I need a doctor's prescription to book a lab test online?",
+    a: "No. Routine lab tests and preventive health checkup packages — CBC, Thyroid Profile, Fasting Blood Sugar, Lipid Profile, vitamin tests and the Full Body Checkup — can be booked without a prescription. If your doctor has written a specific test, do send a photo of the prescription when you book, so that exactly that panel is run.",
   },
   {
-    q: "Kaun se test me fasting (khaali pet) zaroori hai?",
-    a: "Fasting Blood Sugar, Lipid Profile, insulin aur zyadatar Full Body Checkup package me 10 se 12 ghante ki fasting chahiye; saada paani peena allowed hai aur zaroori bhi. CBC, Thyroid Profile, HbA1c, Vitamin D, Vitamin B12 aur Dengue test me koi fasting nahi chahiye. Isi wajah se home visit slot subah 6 baje se shuru hote hain — sample dijiye aur turant naashta kar lijiye.",
+    q: "Which blood tests require fasting?",
+    a: "Fasting Blood Sugar, Lipid Profile (cholesterol), insulin and most Full Body Health Checkup packages need 10 to 12 hours of fasting. Plain water is allowed. CBC, Thyroid Profile, HbA1c, Vitamin D, B12 and dengue tests need no fasting. Home visit slots start at 6 AM, so a fasting sample can be given early and breakfast taken straight after.",
   },
   {
-    q: "Report kitni der me milti hai aur kahan aati hai?",
-    a: "Zyadatar report 24 ghante ke andar taiyaar ho jaati hai aur WhatsApp aur email dono par PDF ke roop me bhej di jaati hai — report lene dobara jaane ki zaroorat nahi. Culture jaise kuch test 48 se 72 ghante lete hain, kyunki unme pehle organism ko ugana padta hai. Sahi time hum booking ke waqt hi bata dete hain.",
+    q: "How soon does the report arrive, and where is it sent?",
+    a: "Most routine pathology reports are ready within 24 hours. The report is sent as a PDF directly to your WhatsApp number and email address. Specialised tests and blood cultures can take 48 to 72 hours, and we tell you that at the time of booking.",
   },
   {
-    q: "Ghar par sample lene kaun aata hai?",
-    a: "Ek trained phlebotomist aata hai jiske paas ID card hota hai — sample dene se pehle aap wo dekh sakte hain, aur dekhna chahiye. Sample aapke saamne liya jaata hai aur poori visit lagbhag 10 minute ki hoti hai. Ghar me bujurg hain, koi bistar par hai, diabetic hain jinki nas patli ho gayi hai, ya operation ke baad recovery chal rahi hai — ye booking ke waqt bata dijiye.",
+    q: "Who comes to the house to collect the blood sample?",
+    a: "A trained phlebotomist from MedicoBharat, carrying an official ID card that you are welcome to check before the collection begins. The whole visit takes about 10 minutes. Please mention when booking if the sample is for an elderly, bedridden or diabetic patient, so that whoever comes arrives prepared.",
   },
   {
-    q: "Ek hi visit me ghar ke kai logon ka test ho sakta hai?",
-    a: "Haan. Sabki booking ek hi slot me kar dijiye — phlebotomist ek hi visit me sabka sample le lega, aur har vyakti ki report alag aayegi. Ye sabse aasan tareeka hai jab poore parivaar ka saal-bhar ka checkup ek saath karana ho.",
+    q: "Can the whole family be tested in a single slot?",
+    a: "Yes. You can book lab tests or health checkups for everyone at home in one slot, and the phlebotomist collects all the samples in a single visit. Each person's report is sent separately on WhatsApp and email.",
   },
   {
-    q: "Kya main apne sheher se bahar ke liye bhi book kar sakta hoon?",
-    a: `Booking form me apna sheher chuniye; jo ilaake hum cover karte hain wo har sheher ke page par likhe hain. Aapka pata list me naam se nahi hai to ${LAB_PHONE} par ek call kar lijiye — cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge. Hum wahi jagah promise karte hain jahan sach me pahunch sakte hain.`,
+    q: "Can I book from any locality in the districts you serve?",
+    a: `Yes. Choose your city on the site and give your locality and a landmark when booking. If your area is not on the list, call ${LAB_PHONE} and we will confirm whether it is covered — if it is, the slot is scheduled on the same call.`,
   },
 ];
 
@@ -501,15 +616,30 @@ export const HOME_CONTENT = [
 
 /* ── CTA band + closing call strip ────────────────────────────────────────
    Same shapes the lab city pages use (defaultCta / defaultCallBanner), so the
-   existing LabCta and LabCallBanner components render them unchanged. */
+   existing LabCta and LabCallBanner components render them unchanged.
+
+   The heading is English, and it is worded to match defaultCta in
+   src/data/lab/defaults.js — "Book a lab test in <city> — sample collected at
+   home". Same band, same component, same sentence minus the city, so a
+   visitor moving from here to a city page reads one promise rather than two
+   phrasings of it. The proof line and both buttons were already English. */
 export const HOME_CTA = {
-  headingLead: "Lab test book kijiye —",
-  headingAccent: "sample ghar se liya jaayega",
+  headingLead: "Book a lab test —",
+  headingAccent: "sample collected at home",
   proof: ["Trained phlebotomist", "Free home collection", "Reports in 24 hrs"],
 };
 
+/* Same rule as the city pages — see defaultCallBanner in
+   src/data/lab/defaults.js — with the one difference that this page has no
+   city to name. So it takes the phrase all of them share ("lab test at home")
+   and the district list stands in for the city, which is also the only honest
+   way to say it here: the home page serves every town in
+   src/data/lab/cities.js, not one.
+
+   It was "Book Your Health Checkup From Home", which is a sentence nobody
+   types into a search box. */
 export const HOME_CALL_BANNER = {
-  heading: "Book Your Health Checkup From Home",
+  heading: "Lab Test at Home — Free Blood Sample Collection",
   buttonText: "Book Now — Call Us",
 };
 
@@ -532,11 +662,29 @@ export const homeRelatedLinks = (labCities = [], guides = []) => {
     sub: "Rate list, ilaake aur booking form",
   }));
 
-  const guideLinks = guides.map((post) => ({
+  /* The newest four, then the hub — NOT every guide.
+
+     This column used to list every article the site had, and the card rail
+     higher up the same page listed them all a second time. Two unbounded copies
+     of the same list on one page: the home page grew by two rows per article
+     published, and the extra rows bought nothing, because a page that links the
+     same set twice is not linking it twice as hard.
+
+     Four is a sample. The row after them goes to /blogs, which carries the
+     complete set and is the one link the whole site funnels through. */
+  const guideLinks = guides.slice(0, 4).map((post) => ({
     href: post.href,
     label: post.title,
     sub: `${post.cityName} · ${post.readingMinutes} min read`,
   }));
+
+  if (guideLinks.length) {
+    guideLinks.push({
+      href: "/blogs",
+      label: "Sabhi guides dekhiye",
+      sub: "Har sheher ke lab test guides, ek jagah",
+    });
+  }
 
   const groups = [
     cityLinks.length && {

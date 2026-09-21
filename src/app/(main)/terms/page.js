@@ -28,7 +28,7 @@ import { SITE, url } from "@/lib/site";
  * rule as everywhere else on this site — see src/data/home.js.
  */
 export const metadata = {
-  title: "Terms & Conditions — MedicoBharat Lab Test",
+  title: "Terms & Conditions — Lab Test Booking",
 
   description:
     "MedicoBharat ke lab test aur home sample collection service ki terms & conditions — booking, sample collection, report aur medical disclaimer.",
@@ -55,7 +55,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Terms & Conditions — MedicoBharat Lab Test",
+    title: "Terms & Conditions — Lab Test Booking",
     description:
       "Booking, home sample collection, reports aur medical disclaimer se judi MedicoBharat ki official terms & conditions.",
     url: url("/terms"),
@@ -215,6 +215,7 @@ export default function TermsPage() {
             <p>
               <a
                 href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="font-semibold underline underline-offset-2 decoration-emerald-200 hover:decoration-white"
               >
                 {LAB_PHONE}
@@ -223,6 +224,7 @@ export default function TermsPage() {
             <p>
               <a
                 href={`mailto:${email}`}
+                title={`Email MedicoBharat at ${email}`}
                 className="break-all font-semibold underline underline-offset-2 decoration-emerald-200 hover:decoration-white"
               >
                 {email}

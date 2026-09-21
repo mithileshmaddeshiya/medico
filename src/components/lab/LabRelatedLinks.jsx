@@ -1,5 +1,6 @@
 // SSR component — plain links, no state, nothing to hydrate.
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowUpRight } from "lucide-react";
 
 /**
@@ -21,8 +22,11 @@ import { ArrowUpRight } from "lucide-react";
  * and carries descriptive anchors ("Gorakhpur me lab test — OPD se pehle
  * report"), which is what actually passes a topical signal.
  *
- * It is also most of what links a city page into /blogs/* — those articles are
- * otherwise reachable from the header menu, the footer column and each other.
+ * It is also most of what links a city page into /blogs/* — a city page has no
+ * other in-body route into the guides. The sitewide paths are the footer's
+ * "Health Guides" link and the /blogs hub it points at, which carries every
+ * article; this block is what puts a few of them in context, on the page of the
+ * town they were written about.
  *
  * Shape:
  *   relatedLinks: {
@@ -95,6 +99,7 @@ export default function LabRelatedLinks({ related }) {
                   <li key={href}>
                     <Link
                       href={href}
+                      title={sub ?? linkTitle(href)}
                       className="group flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors duration-200 hover:bg-emerald-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >
                       <span className="min-w-0 flex-1">

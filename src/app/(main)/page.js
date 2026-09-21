@@ -1,3 +1,4 @@
+import HomeBannerSlider from "@/components/home/HomeBannerSlider";
 import HomeGuides from "@/components/home/HomeGuides";
 import HomeHero from "@/components/home/HomeHero";
 import HomeSteps from "@/components/home/HomeSteps";
@@ -8,10 +9,14 @@ import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
+import OfferPopup from "@/components/lab/OfferPopup";
+import LabQuickLinks from "@/components/lab/LabQuickLinks";
 import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
-import { getLatestBlogs } from "@/data/blogs";
+import WelcomePopup from "@/components/lab/WelcomePopup";
+import { getLatestBlogs } from "@/lib/blogs";
 import {
+  HOME_BANNERS,
   HOME_CALL_BANNER,
   HOME_CONTENT,
   HOME_CTA,
@@ -27,11 +32,11 @@ import {
 import {
   LAB_OG_IMAGE,
   LAB_PHONE,
-  defaultFilters,
-  defaultTests,
+  OFFER_POPUP,
   defaultTrustStrip,
 } from "@/data/lab/defaults";
 import { getLabCities } from "@/lib/labCities";
+import { getCatalog } from "@/lib/testCatalog";
 import {
   BRAND_PROFILES,
   GBP_MAP_URL,
@@ -188,7 +193,7 @@ const IDS = {
  * `areaServed` is built from the live city list rather than typed, so it can
  * never claim a town we have stopped serving.
  */
-const labNode = (cities) => ({
+const labNode = (cities, tests) => ({
   "@type": ["DiagnosticLab", "MedicalBusiness"],
   "@id": IDS.lab,
   name: "MedicoBharat",
@@ -246,7 +251,7 @@ const labNode = (cities) => ({
   ...(GBP_MAP_URL ? { hasMap: GBP_MAP_URL } : {}),
   // The real price list, straight off the same cards the page renders. The
   // markup can therefore never disagree with what a patient sees.
-  makesOffer: defaultTests()
+  makesOffer: tests
     .filter((test) => typeof test.price === "number")
     .map((test) => ({
       "@type": "Offer",
@@ -309,9 +314,43 @@ const cityListNode = (cities) => ({
   })),
 });
 
+/*
+ * The test cards and chips are read from MySQL (src/lib/testCatalog.js). The
+ * page stays prerendered and is rebuilt in the background at most once a
+ * minute, so a price changed in the database shows here within ~60s.
+ */
+export const revalidate = 60;
+
 export default async function HomePage() {
   const cities = await getLabCities();
-  const guides = getLatestBlogs(3);
+  const { tests, filters } = await getCatalog();
+  /* EVERY guide, newest first — not a top-three.
+
+     This used to be getLatestBlogs(3), and the "Padhne Ke Liye" group in the
+     footer link block showed exactly three of the five articles. The two it
+     dropped were the oldest, which are also the two with the most inbound
+     value to pass on — and a reader had no way to discover them from here.
+     The home page is the one page every other page links to, so what it links
+     back at is what gets crawled first; leaving articles out of that hand-off
+     is throwing away the whole point of the block.
+
+     Six, not all of them, and not three.
+
+     This used to be every guide the site had, on the reasoning that the home
+     page is the strongest internal link a new article can get so none should be
+     left out. The rail then grew a row per article on the page that has to sell
+     a booking above all else — and the same full list appeared a second time
+     further down, in "Aage Kahan Jaayein".
+
+     Capping it is only safe because /blogs now exists and is linked from the
+     rail, from that block and from the footer of every page. An article does
+     not need a row here to be reachable: it is one hop from a hub that
+     everything points at. That is also the shape that stops mattering how many
+     articles there are — see the note at the top of src/app/(main)/blogs/page.js.
+
+     Six fills two rows of three on a desktop and reads as a sample rather than
+     an index. Change the number here and nothing else needs touching. */
+  const guides = await getLatestBlogs(6);
 
   /* The booking form's dropdown: every city we serve, then "Other".
      Deliberately NOT every locality of every city — that is a 30-item select
@@ -330,26 +369,50 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: ldJson(
-            graph(webPageNode(), labNode(cities), cityListNode(cities))
+            graph(webPageNode(), labNode(cities, tests), cityListNode(cities))
           ),
         }}
       />
+
+      {/* Opens a beat after the page paints, once per visit — see the header
+          comment in WelcomePopup. It carries the same form as the hero and
+          posts through the same /api/lab-lead → Firestore → WhatsApp path, so
+          a popup lead lands exactly where a hero booking does. */}
+      <WelcomePopup cityOptions={cityOptions} />
+
+      {/* The offer popup. Not a second on-load interruption: it waits until the
+          reader has scrolled past the FAQ block, so it only ever reaches
+          somebody who read this far and stayed. Artwork and copy come from
+          OFFER_POPUP in src/data/lab/defaults.js; the number is LAB_PHONE, the
+          same one the footer and the schema print. It renders nothing when no
+          image is configured. */}
+      <OfferPopup offer={OFFER_POPUP} phone={LAB_PHONE} />
 
       <HomeHero hero={HOME_HERO} cityOptions={cityOptions} />
 
       <LabTrustStrip promises={defaultTrustStrip()} />
 
       {/* The price grid, same component and same data as every city page — so
-          a price change in src/data/lab/defaults.js lands here and on all
-          three city pages at once, and they can never disagree. No `city`
-          prop: this page serves all of them. */}
+          a price change in the lab_tests table lands here and on every city
+          page at once, and they can never disagree. No `city` prop: this page
+          serves all of them. */}
       <LabServices
         cityOptions={cityOptions}
-        tests={defaultTests()}
-        filters={defaultFilters()}
+        tests={tests}
+        filters={filters}
         phone={LAB_PHONE}
       />
 
+      {/* The banner strip, under the price cards. Below the fold on purpose: a
+          carousel near the top pushes the booking form down and takes the LCP
+          slot for an image the visitor did not ask for. Here it lands on a
+          reader who has just been through the rate list — the point at which a
+          promo has something to say — and hands off to the call banner below.
+
+          Content is HOME_BANNERS in src/data/home.js; the component renders
+          nothing when that array is empty, so pulling the banners is a data
+          edit, not a page edit. */}
+      <HomeBannerSlider banners={HOME_BANNERS} />
 
       {/* <HomeWhy data={HOME_WHY} /> */}
 
@@ -364,7 +427,18 @@ export default async function HomePage() {
           isPartOf → #webpage) instead of leaving it floating unattached. It is
           HOME_URL, with the trailing slash — see the note beside IDS above for
           why passing bare SITE here silently breaks that link. */}
-      <LabFaq city="Aapke sheher" faqs={HOME_FAQS} pageUrl={HOME_URL} />
+      {/* No `heading`: the default "Frequently Asked Questions" is right here,
+          because this page serves every city and can name none of them. `city`
+          only ever reaches the fallback sub-line, and it used to be the
+          Hinglish "Aapke sheher" under English questions. The sub-line is
+          passed explicitly now so the section does not depend on that fallback
+          at all. */}
+      <LabFaq
+        city="your city"
+        faqs={HOME_FAQS}
+        pageUrl={HOME_URL}
+        subheading="Straight answers on home collection, fasting, reports and payment."
+      />
 
       <LabCta cta={HOME_CTA} phone={LAB_PHONE} />
 
@@ -383,6 +457,11 @@ export default async function HomePage() {
         sections={HOME_CONTENT}
         related={homeRelatedLinks(cities, guides)}
       />
+
+      {/* The collapsed index that closes the page: every city we serve, every
+          locality, and the site's own pages. Native <details>, so it costs no
+          client JS and needs no Google-Translate guard — see the component. */}
+      <LabQuickLinks cities={cities} />
 
       {/* Floats over everything, bottom-right, dismissible — the shortcut for a
           reader who decides mid-scroll. Same number the strips above dial. */}

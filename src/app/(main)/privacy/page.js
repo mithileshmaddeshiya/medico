@@ -14,7 +14,7 @@ import { url } from "@/lib/site";
  * house and return a report to a phone.
  */
 export const metadata = {
-  title: "Privacy Policy — MedicoBharat Lab Test",
+  title: "Privacy Policy — Lab Test & Home Collection",
 
   description:
     "MedicoBharat lab test booking me aapki kaun si jaankari li jaati hai, kis liye use hoti hai aur kaise surakshit rakhi jaati hai — poori privacy policy.",
@@ -41,7 +41,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Privacy Policy — MedicoBharat Lab Test",
+    title: "Privacy Policy — Lab Test & Home Collection",
 
     description:
       "Lab test booking me li gayi jaankari — kya collect hota hai, kyun, aur use kaise surakshit rakha jaata hai.",

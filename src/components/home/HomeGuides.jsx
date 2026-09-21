@@ -1,12 +1,13 @@
 // SSR component — plain links, nothing to hydrate.
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import { ArrowUpRight, BookOpen, Clock3 } from "lucide-react";
 
 /**
  * The guide rail — the home page's link into /blogs/*.
  *
  * ── WHY IT READS THE REGISTRY ────────────────────────────────────────────
- * `posts` comes from getLatestBlogs() in src/data/blogs, never a hardcoded
+ * `posts` comes from getLatestBlogs() in src/lib/blogs, never a hardcoded
  * list. The version this replaces was three Deoria articles typed into the
  * component, so publishing a new guide meant editing the home page too — and
  * the home page is the strongest internal link a new article can get, which is
@@ -18,8 +19,21 @@ import { ArrowUpRight, BookOpen, Clock3 } from "lucide-react";
  * majority of readers cannot is a link doing half its job. The grid stacks to
  * one column instead.
  *
- * There is deliberately no "sabhi guides dekhein" button: /blogs has no hub
- * page, and a button to a 404 is worse than no button.
+ * ── WHY IT SHOWS A HANDFUL AND NOT EVERYTHING ────────────────────────────
+ * It used to render EVERY guide, on the reasoning that the home page is the
+ * strongest internal link an article can get so no article should be left out.
+ * That reasoning had a shelf life: at fifteen articles the rail was already
+ * five rows tall, and it grows by a row every time a guide is published, on
+ * the one page that has to sell a booking above all else. There was also a
+ * second full list of the same articles further down the page, in the "Aage
+ * Kahan Jaayein" block.
+ *
+ * The caller now passes the newest few and this ends with a button to /blogs,
+ * which carries the complete set (src/app/(main)/blogs/page.js). An article no
+ * longer needs its own row here to be reachable — it is one hop from a page
+ * the home page, the footer and every article all link to. That link used to
+ * be impossible: /blogs was a 404, and a button to a 404 is worse than no
+ * button. It is not a 404 any more.
  */
 export default function HomeGuides({ data, posts = [] }) {
   if (!posts.length) return null;
@@ -56,6 +70,7 @@ export default function HomeGuides({ data, posts = [] }) {
             <article key={post.href} className="h-full">
               <Link
                 href={post.href}
+                title={linkTitle(post.href)}
                 className="group flex h-full flex-col rounded-2xl bg-white p-5 ring-1 ring-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:ring-emerald-300 hover:shadow-[0_18px_40px_-24px_rgba(6,78,59,0.5)]"
               >
                 <div className="flex items-center justify-between gap-3">
@@ -88,6 +103,24 @@ export default function HomeGuides({ data, posts = [] }) {
               </Link>
             </article>
           ))}
+        </div>
+
+        {/* The hand-off to the hub. Descriptive anchor text on purpose — "Sabhi
+            guides dekhiye" says what is on the other side, which is what a
+            crawler reads the link by; "Read more" would say nothing. */}
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/blogs"
+            title={linkTitle("/blogs")}
+            className="group inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-[13.5px] font-bold text-white shadow-[0_10px_28px_-14px_rgba(6,78,59,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-700"
+          >
+            Sabhi health guides dekhiye
+            <ArrowUpRight
+              aria-hidden
+              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              strokeWidth={2.6}
+            />
+          </Link>
         </div>
       </div>
     </section>

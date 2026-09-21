@@ -1,0 +1,422 @@
+{
+  "title": "Operation Se Pehle Kaun Se Test — Gorakhpur Guide",
+  "description": "Gorakhpur me operation, motiyabind, CT scan ya endoscopy se pehle kaun se blood test maange jaate hain — PT/INR, HBsAg, HIV, creatinine, aur sample kab dein.",
+  "keywords": [
+    "Operation se pehle kaun se test hote hain",
+    "Pre operative blood test Gorakhpur",
+    "Surgery se pehle blood test",
+    "Motiyabind operation se pehle test",
+    "CT scan se pehle creatinine test",
+    "Endoscopy se pehle HBsAg, HIV aur HCV test",
+    "PT INR test",
+    "Blood group aur Rh typing"
+  ],
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "order": 50,
+  "takeaways": [
+    "Operation ki date milne ke baad jo test ki list milti hai, wahi aakhri list hai — kisi article ki, hamari bhi nahi. Ek test chhoota to date aage khisak sakti hai.",
+    "Operation, motiyabind, CT scan aur endoscopy — chaaron ki list alag hoti hai. Contrast wale CT se pehle kidney, endoscopy se pehle infection screening, aur motiyabind se pehle sugar sabse zyada dekha jaata hai.",
+    "Sample na bahut pehle dijiye, na aakhri din. Aam taur par admission ya procedure se do-teen din pehle ka sample sabse theek baithta hai — kitni purani report chalegi, ye hospital batata hai.",
+    "ECG, chest X-ray aur scan hamari service nahi hain. Blood aur urine ki jaanch ka sample ghar par — ya jahan aap Gorakhpur me ruke hain — liya ja sakta hai."
+  ],
+  "sections": [
+    {
+      "id": "operation-date-ke-baad-list-gorakhpur",
+      "heading": "Operation Ki Date Mil Gayi — Ab Haath Me Jo List Hai, Uska Matlab",
+      "lead": "Ye list kaagazi kaarwai nahi hai. Ye surgery ki pehli taiyaari hai.",
+      "blocks": [
+        "Gorakhpur poore ilaake ka referral centre hai. Kushinagar, Maharajganj, Deoria, Sant Kabir Nagar aur Bihar ke seemavarti jilon se log yahan operation ke liye aate hain, aur zyadatar ko OPD ke din ek parchi thama di jaati hai — \"ye test karwa kar aaiye, phir date pakki hogi\". Us parchi me paanch se das naam hote hain, aur aksar unme se aadhe samajh nahi aate.",
+        "Ye list isliye maangi jaati hai taaki anaesthesia aur surgery ke dauran koi chhupa khatra na rahe: khoon ki kami, khoon jamne me dikkat, bina pakdi sugar, kamzor kidney, ya koi aisa infection jiske liye operation theatre me alag savdhaani chahiye. Surgery se pehle blood test ki is list ke har naam ka seedha matlab is guide me hai — taaki aap samajh kar booking karein, aur koi naam chhoote nahi.",
+        {
+          "note": {
+            "title": "Hospital ki list hi aakhri hai",
+            "text": "Har hospital, har department aur har surgery ki apni list hoti hai. Neeche likha sab aam jaankari hai. Jo parche par likha hai, wahi karwaiye — na usse kam, na apne mann se zyada. Hum kisi ko operation ke liye fit ya unfit nahi batate; wo faisla surgeon aur anaesthesia doctor ka hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pre-operative-blood-test-list-gorakhpur",
+      "heading": "Pre Operative Blood Test Gorakhpur — List Me Aam Taur Par Kya Hota Hai Aur Kyun",
+      "lead": "Har naam ke peeche ek sawaal hai jo surgeon poochhna chahta hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Operation se pehle aam taur par maange jaane wale test",
+            "head": [
+              "Test",
+              "Surgeon kya jaanna chahta hai",
+              "Fasting"
+            ],
+            "rows": [
+              [
+                "CBC (haemoglobin, WBC, platelet)",
+                "Khoon ki kami to nahi, koi chhupa infection to nahi, platelet theek hain ya nahi",
+                "Nahi"
+              ],
+              [
+                "Blood group aur Rh typing",
+                "Zaroorat padne par khoon chadhana ho to kaunsa",
+                "Nahi"
+              ],
+              [
+                "PT/INR, kabhi aPTT",
+                "Khoon jamne me kitna samay lagta hai",
+                "Nahi"
+              ],
+              [
+                "Blood sugar (fasting ya random), sugar ke mareez me HbA1c",
+                "Sugar kaabu me hai ya nahi — ghaav bharne aur infection par seedha asar",
+                "Fasting sugar me haan"
+              ],
+              [
+                "KFT (creatinine, urea, sodium, potassium)",
+                "Kidney dawa aur anaesthesia jhel payegi ya nahi",
+                "Aam taur par nahi"
+              ],
+              [
+                "LFT",
+                "Liver dawa ko theek se tod payega ya nahi",
+                "Aam taur par nahi"
+              ],
+              [
+                "HBsAg, Anti-HCV, HIV",
+                "Theatre me alag savdhaani ki zaroorat to nahi",
+                "Nahi"
+              ],
+              [
+                "Urine routine",
+                "Peshab ka infection to nahi, jo surgery se pehle theek karna ho",
+                "Nahi"
+              ]
+            ]
+          }
+        },
+        "Is list me do cheezein aksar hoti hain jo lab ki nahi hain: ECG aur chest X-ray. Ye machine par hote hain aur hamari service nahi hain — inke liye hospital ya kisi imaging centre ki vyavastha karni hogi. Booking ke waqt ye maan kar mat chaliye ki poori parchi ek jagah ho jaayegi.",
+        [
+          "Operation se pehle ke test ka chhota saar ",
+          {
+            "text": "Gorakhpur ke service page",
+            "href": "/lab-test/gorakhpur#operation-se-pehle-test-gorakhpur"
+          },
+          " par bhi hai. Rate ",
+          {
+            "text": "rate list",
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur"
+          },
+          " me likhe hain; is guide me koi number nahi likha gaya."
+        ]
+      ]
+    },
+    {
+      "id": "motiyabind-operation-se-pehle-test",
+      "heading": "Motiyabind Operation Se Pehle Test — Bujurgon Ki Sabse Aam Surgery",
+      "lead": "Chhota operation, lekin sugar ki report date tal sakti hai.",
+      "blocks": [
+        "Gorakhpur ke aankhon ke aspataalon me motiyabind (cataract) ka operation bujurgon ki sabse aam surgery hai. Operation chhota hai aur aksar usi din chhutti ho jaati hai, isliye log iski jaanch ko halke me lete hain. Lekin sabse zyada date isi operation ki talti hai — aur wajah lagbhag hamesha ek hoti hai: sugar.",
+        {
+          "list": [
+            "Blood sugar — bahut badhi sugar me aankh ke ghaav bharne aur infection ka khatra badhta hai. Kai aspataal fasting ya random sugar maangte hain; sugar ke mareez me HbA1c bhi.",
+            "HBsAg, HIV aur Anti-HCV — kai aankh ke aspataal ye screening maangte hain.",
+            "CBC — kuch jagah list me hota hai, khaas kar bujurgon me.",
+            "Urine routine — kuch aspataal peshab ka infection pehle dekhna chahte hain.",
+            "BP — ye lab test nahi hai, lekin date isi par bhi tal jaati hai. BP ki dawa samay par lete rahiye."
+          ]
+        },
+        "Ek practical salah: sugar ka test operation se ek hafta pehle karwa lijiye. Sugar badhi nikli to doctor ke paas dawa theek karne ka samay rahega, aur operation ke din pata chalne par date aage khisakne ki naubat nahi aayegi. Operation se theek pehle ki jo jaanch aspataal maange, wo phir usi ke bataye din par.",
+        [
+          "Bujurg mareez ka sample ghar par kaise liya jaata hai aur booking me kya likhein, wo ",
+          {
+            "text": "home collection guide",
+            "href": "/blogs/home-sample-collection/gorakhpur#bujurg-ghar-par-akele-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "ct-scan-se-pehle-creatinine-test",
+      "heading": "CT Scan Se Pehle Creatinine Test — Contrast Wali Jaanch Me Kidney Kyun Dekhi Jaati Hai",
+      "lead": "Scan machine karti hai. Dawa ko bahar kidney nikaalti hai.",
+      "blocks": [
+        "Gorakhpur me bahut se CT scan \"contrast\" ke saath hote hain — nas me ek dawa daali jaati hai jisse andar ki tasveer saaf aati hai. Ye dawa baad me kidney ke raaste bahar nikalti hai. Isliye scan centre aksar contrast wale CT se pehle creatinine ki taaza report maangta hai, taaki pata rahe ki kidney ye bojh utha payegi ya nahi.",
+        {
+          "list": [
+            "Creatinine — aur uske saath eGFR, jo umar aur ling ke hisaab se kidney ki chhaanne ki kshamta ka andaza deta hai.",
+            "Kitni purani report chalegi, ye scan centre batata hai. Bahut purani report par aksar dobara test karwaya jaata hai.",
+            "Sugar ki kuch dawaiyaan, khaas kar metformin, contrast ke aas-paas rokne ya chalane ka niyam alag hota hai — ye sirf doctor ya scan centre batayega. Khud se band mat kijiye.",
+            "Kidney pehle se kamzor ho, sugar purani ho, ya umar zyada ho — to ye baat scan ki booking ke waqt zaroor bataiye.",
+            "Contrast wale MRI me bhi kai centre kidney ki report dekhte hain."
+          ]
+        },
+        "CT aur MRI hamari service nahi hain. Hum sirf creatinine jaisi khoon ki jaanch ka sample ghar par lete hain, jiski report 24 ghante ke andar WhatsApp aur email par PDF me aati hai — scan ke din aap wo PDF centre ko dikha sakte hain."
+      ]
+    },
+    {
+      "id": "endoscopy-se-pehle-hbsag-hiv-test",
+      "heading": "Endoscopy Se Pehle HBsAg, HIV Aur HCV Test — Ye Screening Kyun, Aur Positive Aaye To?",
+      "lead": "Screening mareez ko rokne ke liye nahi, sahi savdhaani ke liye hoti hai.",
+      "blocks": [
+        "Endoscopy, colonoscopy, dant ka operation, dialysis shuru karna, ya koi bhi aisi prakriya jisme khoon ya sharir ke tarl se sampark ho — in sabse pehle aksar HBsAg (Hepatitis B), Anti-HCV (Hepatitis C) aur HIV ki jaanch maangi jaati hai. Kai log is list ko dekh kar ghabra jaate hain ya bura maan jaate hain. Iski wajah seedhi hai: in bimariyon ka pata pehle ho, to theatre aur upkaran ki savdhaani usi hisaab se rakhi jaati hai — mareez ki bhi hifaazat, staff ki bhi.",
+        {
+          "list": [
+            "Positive aana aam taur par prakriya se inkaar ka matlab nahi hota. Aksar bas uska samay aur tareeka badalta hai.",
+            "Bahut se log apna Hepatitis B pehli baar isi screening me jaante hain. Ye pata chalna aage ke ilaaj ke liye faayde ki baat hai.",
+            "Biopsy bhi honi ho to PT/INR aur platelet aksar saath me dekhe jaate hain.",
+            "Report aapki niji jaankari hai. Ise sirf doctor aur hospital ko dikhaiye, kisi family group me nahi."
+          ]
+        },
+        [
+          "HBsAg positive aane ke baad liver ki jaanch kitne din par karni hoti hai, us par ",
+          {
+            "text": "LFT-KFT guide",
+            "href": "/blogs/liver-kidney-test/gorakhpur#hbsag-positive-lft-gorakhpur"
+          },
+          " me alag hissa hai."
+        ]
+      ]
+    },
+    {
+      "id": "khoon-patla-dawa-pt-inr-gorakhpur",
+      "heading": "Khoon Patla Karne Wali Dawa Chal Rahi Hai — PT INR Test Aur Doctor Ko Batana",
+      "lead": "Sabse zaroori jaankari jo sabse zyada chhootti hai.",
+      "blocks": [
+        "Dil ke mareez, stent lagwaye log, lakwa ke baad ke mareez, ya jinhe pairon ki nas me thakka jam chuka ho — inme se bahut log khoon patla karne wali dawa lete hain. Operation se pehle surgeon ke liye ye sabse zaroori baat hai, kyunki isse surgery ke dauran khoon rukne me dikkat ho sakti hai.",
+        {
+          "list": [
+            "Dawa ka naam aur dibbe ki photo surgeon ko dikhaiye — aspirin, clopidogrel, warfarin ya koi aur.",
+            "Kaunsi dawa kitne din pehle rokni hai ya nahi rokni, ye sirf wo doctor batayega jisne dawa likhi hai aur jo operation kar raha hai. Apne mann se band karna khatarnak ho sakta hai.",
+            "Warfarin jaisi dawa me PT/INR operation se pehle aur kai baar operation ke din bhi dekha jaata hai. Sample ka din doctor ke kahe anusar rakhiye.",
+            "Sample dene ke baad sui wali jagah par do-teen minute tak lagatar dabaav rakhiye — khoon patla karne wali dawa me thoda zyada samay lagta hai. Booking ke waqt ye dawa bata dijiye."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kitne-din-pehle-sample-gorakhpur",
+      "heading": "Admission Se Kitne Din Pehle Sample Dein — Na Bahut Pehle, Na Aakhri Din",
+      "lead": "Report 24 ghante me aati hai. Baaki ganit hospital ke niyam ka hai.",
+      "blocks": [
+        "Do galtiyan sabse aam hain. Pehli — mahina bhar pehle saare test karwa lena, jo admission ke din purane maan kar dobara karwaye jaate hain. Doosri — admission wali subah test karwana, aur report ke intezaar me poora din counter par bitaana. Beech ka raasta aam taur par sabse theek rehta hai.",
+        {
+          "table": {
+            "caption": "Sample ka aam samay — hospital ke niyam se milaiye",
+            "head": [
+              "Prakriya",
+              "Sample kab dein",
+              "Dhyaan dein"
+            ],
+            "rows": [
+              [
+                "Planned operation",
+                "Admission se 2-3 din pehle",
+                "Kitni purani report chalegi, ye OPD me hi pooch lijiye"
+              ],
+              [
+                "Motiyabind operation",
+                "Sugar ek hafta pehle; baaki jaanch aspataal ke bataye din",
+                "Sugar badhi nikli to dawa theek karne ka samay mile"
+              ],
+              [
+                "Contrast CT scan",
+                "Scan se 1-2 din pehle creatinine",
+                "Centre ki bataayi seema se purani report na ho"
+              ],
+              [
+                "Endoscopy ya colonoscopy",
+                "Procedure se 2-3 din pehle",
+                "Biopsy honi ho to PT/INR aur platelet bhi"
+              ],
+              [
+                "Khoon patla karne wali dawa",
+                "Doctor ke bataye din PT/INR",
+                "Dawa ka niyam sirf doctor se"
+              ]
+            ]
+          }
+        },
+        "Blood group apne aap nahi badalta, isliye purani report bhi jaankari ke taur par kaam aati hai — lekin khoon chadhana ho to hospital apni cross-matching khud karta hai. Isliye blood group ki purani report ho to bhi hospital ki list me likha ho to dobara karwaiye.",
+        [
+          "OPD ki taareekh se ulta gin kar sample ka din kaise chunein, wo ",
+          {
+            "text": "OPD wali table",
+            "href": "/blogs/lab-test/gorakhpur#opd-se-pehle-report-lab-test-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "report-me-kuch-bahar-gorakhpur",
+      "heading": "Haemoglobin Kam Ya Sugar Zyada Nikla — Surgeon Ko Kab Aur Kaise Batayein",
+      "lead": "Date talna nuksan nahi hai. Chhupi dikkat ke saath operation hai.",
+      "blocks": [
+        "Operation se pehle ki report kai baar wo pehla mauka hota hai jab koi purani dikkat saamne aati hai — khoon ki kami, bina pakdi sugar, ya creatinine thoda badha hua. Ghabraaiye nahi, lekin chhupaaiye bhi nahi.",
+        {
+          "list": [
+            "Report aate hi surgeon ya OPD ko dikhaiye — admission wale din ka intezaar mat kijiye. Jitna pehle pata chalega, utna samay ilaaj ke liye bachega.",
+            "Haemoglobin kam hai to doctor aksar wajah dhoondhne ke liye aur jaanch likhta hai, jaise ferritin ya vitamin B12. Sirf goli shuru karke operation ke din tak intezaar karna adhoora hai.",
+            "Sugar badhi hai to doctor dawa badal sakta hai aur kuch din baad dobara jaanch likh sakta hai.",
+            "Koi infection screening positive hai to ye prakriya rokne ka nahi, savdhaani ka mamla hai — doctor se seedhe baat kijiye."
+          ]
+        },
+        [
+          "Report ka header aur reference range kaise padhein, wo ",
+          {
+            "text": "report wale hisse",
+            "href": "/blogs/lab-test/gorakhpur#report-kya-dekhein-gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "bahar-se-operation-ke-liye-gorakhpur",
+      "heading": "Kushinagar, Maharajganj Ya Deoria Se Operation Ke Liye Aa Rahe Hain",
+      "lead": "Khoon ki jaanch ghar par. Gorakhpur sirf wahi kaam jiske liye aana zaroori hai.",
+      "blocks": [
+        "Operation Gorakhpur me hai, lekin uski blood wali list ke liye ek alag trip lagana zaroori nahi. Pichhli OPD ki parchi me list likhi ho to safar se ek-do din pehle apne jile me ghar par sample de dijiye. Report PDF me phone par aa jaayegi, aur admission ke din aap report ke saath pahunchenge.",
+        {
+          "list": [
+            "Parchi ki saaf photo booking me bhejiye — list wahi book hogi.",
+            "ECG aur X-ray ki vyavastha alag se sochiye; wo sample par nahi hote.",
+            "Gorakhpur me kisi rishtedaar ke yahan ya kisi kamre me ruke hain to sample wahan bhi liya ja sakta hai — wahi pata dijiye jahan aap us subah honge.",
+            "Hospital me bhartee mareez ka sample is service se nahi liya jaata; wo hospital ki apni vyavastha hai."
+          ]
+        },
+        [
+          "Apne jile se booking ke liye — ",
+          {
+            "text": "Kushinagar",
+            "href": "/lab-test/kushinagar"
+          },
+          ", ",
+          {
+            "text": "Maharajganj",
+            "href": "/lab-test/maharajganj"
+          },
+          ", ",
+          {
+            "text": "Deoria",
+            "href": "/lab-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "Khalilabad",
+            "href": "/lab-test/khalilabad"
+          },
+          " ke apne page hain. Gorakhpur jile ke kasbon — Sahjanwa, Pipraich, Chauri Chaura — ke liye ",
+          {
+            "text": "kasbon wali guide",
+            "href": "/blogs/kasba-home-collection/gorakhpur"
+          },
+          " hai."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-pre-op-gorakhpur",
+      "heading": "Aage Kya Karein",
+      "lead": "Teen kadam, date bachane ke liye.",
+      "blocks": [
+        {
+          "list": [
+            "Hospital ki parchi ki photo lijiye aur OPD me hi pooch lijiye ki report kitni purani chalegi.",
+            "Chalti hui har dawa — khaas kar sugar aur khoon patla karne wali — ki list surgeon ko dijiye.",
+            "Admission ya procedure se do-teen din pehle ka slot book kijiye; motiyabind me sugar ek hafta pehle."
+          ]
+        },
+        [
+          "Booking ke liye ",
+          {
+            "text": "Gorakhpur ka form",
+            "href": "/lab-test/gorakhpur#how-to-book-gorakhpur"
+          },
+          " bhariye ya ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          ". Operation ke baad ki follow-up jaanch apne jile me kaise karayein, wo ",
+          {
+            "text": "discharge ke baad wali guide",
+            "href": "/blogs/discharge-follow-up-test/gorakhpur"
+          },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Operation se pehle kaun se test hote hain?",
+      "answer": "Aam taur par CBC, blood group aur Rh, PT/INR, blood sugar, KFT, LFT, HBsAg, Anti-HCV, HIV aur urine routine maange jaate hain; saath me ECG aur chest X-ray bhi aksar hote hain. Lekin har hospital aur har surgery ki list alag hoti hai — jo parchi par likha hai, wahi karwaiye."
+    },
+    {
+      "question": "Operation se kitne din pehle blood test karwana chahiye?",
+      "answer": "Aam taur par admission se do-teen din pehle ka sample theek rehta hai, kyunki report 24 ghante me aa jaati hai aur bahut purani report hospital dobara karwa sakta hai. Kitni purani report chalegi, ye OPD me hi pooch lijiye. Motiyabind me sugar ek hafta pehle dekh lena behtar hai."
+    },
+    {
+      "question": "Kya ECG aur chest X-ray bhi ghar par ho jaate hain?",
+      "answer": "Nahi. ECG aur X-ray machine par hote hain aur hamari service nahi hain. Hum operation ki list ki blood aur urine wali jaanch ka sample ghar par, ya jahan aap Gorakhpur me ruke hain, wahan lete hain."
+    },
+    {
+      "question": "CT scan se pehle creatinine test kyun maanga jaata hai?",
+      "answer": "Contrast wale CT me nas me daali gayi dawa kidney ke raaste bahar nikalti hai. Isliye scan centre pehle dekhna chahta hai ki kidney theek kaam kar rahi hai. Kitni purani creatinine report chalegi aur sugar ki dawa ka kya karna hai, ye scan centre ya doctor batata hai."
+    },
+    {
+      "question": "Endoscopy se pehle HIV aur HBsAg test karana zaroori hai?",
+      "answer": "Kai hospital endoscopy, colonoscopy aur dant ke operation se pehle ye screening maangte hain, taaki theatre aur upkaran ki savdhaani usi hisaab se ho. Positive aana aam taur par prakriya se inkaar nahi hota. Report niji hai — ise sirf doctor aur hospital ko dikhaiye."
+    },
+    {
+      "question": "Khoon patla karne ki dawa chal rahi hai — operation se pehle band kar dein?",
+      "answer": "Apne mann se nahi. Kaunsi dawa kitne din pehle rokni hai ya chalani hai, ye dawa likhne wala doctor aur surgeon hi batayenge. Warfarin jaisi dawa me PT/INR doctor ke bataye din karwaiye, aur sample ke baad sui wali jagah par thodi der zyada dabaav rakhiye."
+    },
+    {
+      "question": "Mareez Gorakhpur ke hospital me bhartee hai — kya aap wahan sample le sakte hain?",
+      "answer": "Nahi. Bhartee mareez ki jaanch hospital ki apni vyavastha se hoti hai. Agar aap tiimardar ke taur par kisi kamre ya rishtedaar ke yahan ruke hain, to apni jaanch ka sample wahan liya ja sakta hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Gorakhpur Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me operation aur procedure se pehle ki jaanch hai. Booking, rate aur baaki guide neeche hain.",
+    "groups": [
+      {
+        "title": "Gorakhpur Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/gorakhpur",
+            "label": "Gorakhpur me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/gorakhpur#operation-se-pehle-test-gorakhpur",
+            "label": "Operation ya admission se pehle ke test — service page"
+          },
+          {
+            "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur",
+            "label": "Gorakhpur me lab test ka rate"
+          }
+        ]
+      },
+      {
+        "title": "Gorakhpur Ke Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/discharge-follow-up-test/gorakhpur",
+            "label": "Discharge ke baad follow-up test ghar par"
+          },
+          {
+            "href": "/blogs/liver-kidney-test/gorakhpur",
+            "label": "LFT aur KFT test in Gorakhpur"
+          },
+          {
+            "href": "/blogs/lab-test/gorakhpur",
+            "label": "OPD se pehle report — kaun sa test kab"
+          }
+        ]
+      }
+    ]
+  }
+}

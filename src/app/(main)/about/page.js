@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { linkTitle } from "@/lib/linkTitle";
 import {
   BadgeCheck,
   Clock,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 import { LAB_PHONE } from "@/data/lab/defaults";
+import { coverageEn, coverageHi } from "@/lib/coverage";
 import { getLabCities } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, url } from "@/lib/site";
@@ -39,7 +41,12 @@ export const metadata = {
   title: "About MedicoBharat — Lab Test at Home",
 
   description:
-    "MedicoBharat books lab tests and full body checkups with free home sample collection across Varanasi, Gorakhpur and Deoria. What we promise, and what we deliberately do not claim.",
+    // `coverageEn()`, not `coverage()`. Naming all six towns costs ~55
+    // characters and pushed this to 207 — a third of the budget spent on a list
+    // the page body carries in full anyway. The English helper is used because
+    // THIS description is in English; the Hinglish one would mix registers.
+    // See src/lib/coverage.js.
+    `MedicoBharat books lab tests and full body checkups across ${coverageEn()}. What we promise, and what we deliberately do not claim.`,
 
   keywords: [
     "MedicoBharat",
@@ -166,8 +173,7 @@ export default async function AboutMedicoBharat() {
             <p className="mt-4 text-[14px] sm:text-[16.5px] leading-relaxed text-slate-600">
               MedicoBharat ek lab test service hai. Hum aapke ghar se blood aur
               urine ka sample lete hain, lab tak pahunchate hain, aur report
-              seedhe aapke phone par bhejte hain — Varanasi, Gorakhpur aur
-              Deoria jile me.
+              seedhe aapke phone par bhejte hain — {coverageHi()} jile me.
             </p>
           </div>
         </div>
@@ -221,6 +227,7 @@ export default async function AboutMedicoBharat() {
                     <li key={city.slug}>
                       <Link
                         href={`/lab-test/${city.slug}`}
+                        title={linkTitle(`/lab-test/${city.slug}`)}
                         className="group flex items-start gap-2.5 rounded-xl bg-white p-3.5 ring-1 ring-emerald-100 transition-all duration-200 hover:ring-emerald-300 hover:shadow-[0_10px_24px_-18px_rgba(6,78,59,0.6)]"
                       >
                         <MapPin
@@ -246,6 +253,7 @@ export default async function AboutMedicoBharat() {
                   Aapka pata in list me naam se nahi hai lekin aas-paas hi hai?{" "}
                   <a
                     href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                    title={`Call ${LAB_PHONE} to book a lab test`}
                     className="font-semibold text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
                   >
                     {LAB_PHONE}
@@ -358,6 +366,7 @@ export default async function AboutMedicoBharat() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/#book"
+                title="Go to the booking form on the home page"
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-[13.5px] font-bold text-emerald-700 transition hover:bg-emerald-50 active:scale-[0.98]"
               >
                 Test book karein
@@ -365,6 +374,7 @@ export default async function AboutMedicoBharat() {
 
               <a
                 href={`tel:${LAB_PHONE.replace(/\s/g, "")}`}
+                title={`Call ${LAB_PHONE} to book a lab test`}
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/70 px-6 text-[13.5px] font-bold text-white transition hover:bg-white/10 active:scale-[0.98]"
               >
                 <Phone className="h-4 w-4" strokeWidth={2.3} />

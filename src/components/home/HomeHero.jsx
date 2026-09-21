@@ -8,14 +8,16 @@ import LabLeadCard from "@/components/lab/LabLeadCard";
  * The home page hero — banner image plus the booking form, the same shape the
  * city heroes use (see src/components/lab/LabHero.jsx).
  *
- * ── WHY THE h1 IS sr-only ────────────────────────────────────────────────
- * This hero used to carry the h1, the lead and the four promises in large
- * type, because Google files this domain as an online pharmacy and saying
- * "lab test, at home, collection free" in readable text is what corrects that.
- * The visible copy is gone now, but the h1 is not — it stays in the DOM,
- * screen-reader only, so a crawler still reads the page's claim first. The
- * promises have not left the page either: the sections below the hero still
- * state every one of them.
+ * ── THE HERO SHOWS NO HEADING ────────────────────────────────────────────
+ * Banner and form, nothing else. The banner has its headline painted into the
+ * artwork, so a second heading in text had nowhere good to go: above the
+ * picture it repeated it, and over the picture it collided with it. The h1 is
+ * still in the DOM — `sr-only`, see the note beside it — because every section
+ * below starts at h2 and the page needs one.
+ *
+ * The cost is real and it is written out where the element is. Short version:
+ * the largest thing above the fold is now raster text a crawler cannot read.
+ * The fix is an image with room in it, not a cleverer arrangement of type.
  *
  * ── AND WHY THE FORM IS STILL IN THE HERO ────────────────────────────────
  * `#book` is the anchor every CTA on the site scrolls to (see BookFormLink).
@@ -37,35 +39,51 @@ export default function HomeHero({ hero, cityOptions }) {
         className="pointer-events-none absolute -right-16 top-32 h-64 w-64 rounded-full bg-teal-200/30 blur-3xl"
       />
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-28  sm:pb-6">
-        {/* The page's only h1. Every section below it starts at h2. */}
-        <h1 className="sr-only">
-          {hero.h1Lead} {hero.h1Accent}
-        </h1>
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-28 pb-6 sm:pb-8">
+        {/* `items-center` — the banner keeps its own ratio rather than being
+            stretched to the form's height, so the two columns are different
+            heights and the shorter one centres against the taller. */}
+        <div className="grid items-center gap-5 lg:grid-cols-12 lg:gap-8">
 
-        {/* No `items-center` — the two columns must stretch to the same height,
-            which is what lets the image match the form. */}
-        <div className="grid gap-5 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-8">
 
-          {/* ── IMAGE ─────────────────────────────────────────────────────────
-              Two different sizing rules, one per layout:
+            {/* ── THE PAGE'S ONLY H1, AND IT IS INVISIBLE ─────────────────
+                Every section below it starts at h2, so this element is what
+                stops the page having no h1 at all.
 
-              • Stacked (below lg) the box carries the banner's own ratio —
-                1699x926, near enough to 11/6 — so none of the artwork is
-                cropped and the space is reserved before the file lands.
+                It is `sr-only` because the hero shows no heading: the banner
+                carries its own headline in the artwork, and a second one in
+                text sat awkwardly against it however it was placed — above the
+                picture it repeated the picture, and over the picture it landed
+                on the picture's own type.
 
-              • Side by side (lg and up) the image has to be exactly as tall as
-                the form, and the form's height is whatever its fields add up
-                to. So the box goes `absolute inset-0` inside a relative column:
-                it then contributes no height of its own, the row is sized by
-                the form alone, and the image fills that height edge to edge.
-                `object-cover` trims the banner's sides to fit — see
-                `object-center` below if the crop lands wrong.
+                ── THE COST, STATED PLAINLY ────────────────────────────────
+                A crawler cannot read pixels. With this hidden, the largest
+                thing above the fold is raster text, and the only
+                machine-readable version of the page's claim is this element
+                plus the image alt. It still ranks the page — a screen reader
+                and a crawler both get it in full — but a visible h1 in real
+                text is worth more, and it is what corrects a domain Google
+                currently files as an online pharmacy.
 
-              `priority` because this is the first thing in the hero, which
-              makes it the LCP candidate on phone and desktop alike. */}
-          <div className="lg:relative lg:col-span-8">
-            <div className="relative w-full aspect-11/6 overflow-hidden rounded-md ring-1 ring-emerald-100 shadow-[0_20px_50px_-30px_rgba(6,78,59,0.55)] lg:absolute lg:inset-0 lg:aspect-auto">
+                If that trade ever needs reversing, it is one swap: point
+                HOME_HERO.image at /navheroimage/heroempty.webp (the same
+                photograph with its left half left clear) and this heading can
+                come back visible, overlaid on that empty half. */}
+            <h1 className="sr-only">
+              {hero.h1Lead} {hero.h1Accent}
+              {hero.h1Sub ? `. ${hero.h1Sub}` : ""}
+            </h1>
+
+            {/* ── IMAGE ───────────────────────────────────────────────────
+                The box carries the banner's own ratio — 1699x926, near enough
+                to 11/6 — at EVERY width, so nothing is cropped and the contact
+                bar along the bottom stays whole. Replace the banner with a
+                differently-shaped one and this class changes with it.
+
+                `priority` because this is the first image in the hero, which
+                makes it the LCP candidate on phone and desktop alike. */}
+            <div className="relative w-full aspect-11/6 overflow-hidden rounded-xl ring-1 ring-emerald-100 shadow-[0_20px_50px_-30px_rgba(6,78,59,0.55)]">
               <Image
                 src={hero.image}
                 alt={hero.imageAlt}
@@ -85,7 +103,7 @@ export default function HomeHero({ hero, cityOptions }) {
             <LabLeadCard
               title={hero.formTitle}
               cityOptions={cityOptions}
-              className="max-w-85 mx-auto lg:mr-0"
+              className="max-w-xl mx-auto lg:max-w-85 lg:mr-0"
             />
           </div>
         </div>
