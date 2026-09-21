@@ -179,8 +179,9 @@ export const HOME_HERO = {
 };
 
 /* ── Banner slider ────────────────────────────────────────────────────────
-   The auto-playing strip under the trust row, rendered by
-   src/components/home/HomeBannerSlider.jsx.
+   The auto-playing strip under the price cards, rendered by
+   src/components/home/HomeBannerSlider.jsx — on the home page AND on every
+   /lab-test/[city] page.
 
    ── THE SHAPE IS A CONTRACT ──────────────────────────────────────────────
    Every banner must be authored at the SAME ratio, because the slider gives
@@ -214,92 +215,32 @@ export const HOME_HERO = {
    actually do: free home collection, a trained phlebotomist with an ID card,
    slots from 6 AM, reports in 24 hours, cash/UPI on collection.
 
-   This is not a style note. It is the reason slider2 is commented out below,
-   and the reason an `alt` here may read as slightly thinner than the picture
-   it describes. Where the two disagree, THE ARTWORK IS THE BUG. */
+   This is not a style note. Where the alt and the picture disagree, THE
+   ARTWORK IS THE BUG. */
 export const HOME_BANNERS = [
+  /* Each alt is written as the sentence the artwork says, not as a
+     description of the photograph — the alt is the only machine-readable copy
+     of a banner. All three were checked against the rule above when they were
+     swapped to WebP (2026-09-21): no NABL, no accreditation, no counts. */
   {
     src: "/swipper/slider12.webp",
-    /* Written as the sentence the artwork says, not as a description of the
-       photograph — the alt is the only machine-readable copy of a banner.
-
-       ⚠ ONE LINE IS DELIBERATELY NOT CARRIED ACROSS. The third feature card in
-       this artwork reads "Fast reports with 100% accuracy". No laboratory can
-       stand behind 100% accuracy, so it is not repeated here and it should come
-       off the artwork — "Fast reports" alone is true and is already one of the
-       five confirmed claims. The small strip under the logo also has a garbled,
-       overlapping label between "ACCURATE TESTS" and "TRUSTED RESULTS"; it
-       looks like a rendering glitch in the source file and is worth a re-export
-       either way. */
-    alt: "MedicoBharat Lab Test — Accurate Diagnostics, Better Healthcare. Advanced technology, expert care aur reliable results; trained phlebotomist sample leta hua.",
+    alt: "Trusted Lab MedicoBharat — Your Health Our Priority. Accurate tests, trusted results, better health; blood tests, health packages, home collection aur online reports.",
     href: "#book",
     title: "Book a lab test at home with free sample collection",
   },
 
   {
     src: "/swipper/slider23.webp",
-
-    /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
-       /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
-       into its bottom bar. We are not NABL accredited, and the rule at the top
-       of this file says we must never imply it — this is the same claim the
-       project has already stripped out of the FAQs and the city pages once.
-
-       This slide was held back for that reason and then switched on at the
-       owner's explicit direction, after the problem was put to them. It is
-       recorded here so the next person does not find it and assume nobody
-       noticed. It is a live claim on the site's most-linked page until the file
-       is replaced.
-
-       THE FIX IS ONE RE-EXPORT, not a code change: swap that badge for
-       something we can stand behind — "Free Home Collection", "Reports in 24
-       Hours" and "Trained Phlebotomist" all fit the same slot and are all
-       already claimed elsewhere on the site. Keep it 2242x701 so it still
-       matches slide one, and nothing here needs touching.
-
-       Everything else on the banner is fine: "Precise Testing. Better Health.",
-       "Timely Reports" and "Home Sample Collection" are all true.
-
-       The alt below deliberately does NOT carry the NABL line. An alt is the
-       machine-readable copy of a banner, and writing that claim into the DOM
-       would hand a crawler a false accreditation in text — the one form of it
-       that outlives a swapped image file. */
-    alt: "MedicoBharat Lab Test — Precise Testing, Better Health. Accurate reports you can trust, timely reports aur home sample collection.",
+    alt: "You need a health test! Because regular health checks help you test, not guess. Sugar, thyroid, kidney, heart, bone, liver, anemia aur overall wellness tests — home sample collection aur online reports.",
     href: "#book",
     title: "Book a lab test at home with free sample collection",
   },
 
   {
     src: "/swipper/slider34.webp",
-
-    /* ⚠ OPEN ISSUE IN THIS ARTWORK — NOT IN THIS CODE. READ BEFORE SHIPPING.
-       /public/swipper/slider2.png has "NABL Accredited Laboratories" printed
-       into its bottom bar. We are not NABL accredited, and the rule at the top
-       of this file says we must never imply it — this is the same claim the
-       project has already stripped out of the FAQs and the city pages once.
-
-       This slide was held back for that reason and then switched on at the
-       owner's explicit direction, after the problem was put to them. It is
-       recorded here so the next person does not find it and assume nobody
-       noticed. It is a live claim on the site's most-linked page until the file
-       is replaced.
-
-       THE FIX IS ONE RE-EXPORT, not a code change: swap that badge for
-       something we can stand behind — "Free Home Collection", "Reports in 24
-       Hours" and "Trained Phlebotomist" all fit the same slot and are all
-       already claimed elsewhere on the site. Keep it 2242x701 so it still
-       matches slide one, and nothing here needs touching.
-
-       Everything else on the banner is fine: "Precise Testing. Better Health.",
-       "Timely Reports" and "Home Sample Collection" are all true.
-
-       The alt below deliberately does NOT carry the NABL line. An alt is the
-       machine-readable copy of a banner, and writing that claim into the DOM
-       would hand a crawler a false accreditation in text — the one form of it
-       that outlives a swapped image file. */
-    alt: "track your health",
+    alt: "Track your health at the comfort of your home — convenient and hassle-free home sample collection with well trained medics. Care comes home.",
     href: "#book",
-    title: "Book a lab test at home collection",
+    title: "Book a lab test at home with free sample collection",
   },
 ];
 

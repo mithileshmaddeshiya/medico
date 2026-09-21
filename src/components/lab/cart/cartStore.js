@@ -89,9 +89,6 @@ const PAGE_KEY = "mb-lab-cart-page";
  */
 const openers = [];
 
-/* Same idea for the phone's "Added to cart" sheet (AddedToCartSheet). */
-const announcers = [];
-
 export const cart = {
   setQty(id, qty) {
     const q = Math.min(MAX_QTY, Math.max(0, Math.floor(qty)));
@@ -131,23 +128,6 @@ export const cart = {
     const fn = openers.at(-1);
     if (!fn) return false;
     fn();
-    return true;
-  },
-
-  /** A test section offers its "Added to cart" sheet. Returns the unregister function. */
-  registerAnnouncer(fn) {
-    announcers.push(fn);
-    return () => {
-      const i = announcers.lastIndexOf(fn);
-      if (i !== -1) announcers.splice(i, 1);
-    };
-  },
-
-  /** Show the "Added to cart" sheet. False when this page has none. */
-  announce(test) {
-    const fn = announcers.at(-1);
-    if (!fn) return false;
-    fn(test);
     return true;
   },
 
