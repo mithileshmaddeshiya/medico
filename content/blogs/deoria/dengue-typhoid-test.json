@@ -419,6 +419,7 @@
             "label": "Deoria me lab test — booking aur free home collection",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           {
             "href": "/lab-test/deoria#fever-season-deoria",
             "label": "Bukhar ke seezan me kya karayein — service page par"
@@ -456,7 +457,8 @@
             "href": "/blogs/dengue-typhoid-test/varanasi",
             "label": "Varanasi me dengue aur typhoid test",
             "sub": "Wahi guide, Varanasi ke liye"
-          }
+          },
+          { "href": "/blogs/jaundice-test/deoria", "label": "Peeliya (jaundice) ka test — bilirubin aur LFT" }
         ]
       }
     ]

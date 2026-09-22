@@ -1,0 +1,398 @@
+{
+  "title": "Fatty Liver Me Kaun Se Blood Test Karayein — Deoria",
+  "description": "Fatty liver me kaun se blood test hote hain — SGPT, SGOT, lipid, sugar aur FIB-4 score, grade 1-2-3 ka matlab, aur Deoria me LFT ka sample ghar par kaise dein.",
+  "keywords": [
+    "fatty liver test",
+    "fatty liver me kaun sa test",
+    "fatty liver blood test",
+    "SGPT badha hua fatty liver",
+    "fatty liver grade 1",
+    "FIB-4 score",
+    "fatty liver kaise theek hota hai",
+    "liver me charbi",
+    "fatty liver test in Deoria",
+    "LFT test at home Deoria",
+    "फैटी लिवर की जांच"
+  ],
+  "publishedAt": "2026-09-22",
+  "order": 320,
+  "takeaways": [
+    "Fatty liver aam taur par ultrasound me pakda jaata hai, blood test se nahi. Blood test ye batata hai ki liver par kitna asar hai aur saath me sugar-cholesterol kaisa hai.",
+    "Fatty liver me SGPT normal bhi aa sakta hai. Isliye 'LFT normal hai to liver theek hai' maan lena galat hai.",
+    "FIB-4 score — umar, SGOT, SGPT aur platelet se banta hai — batata hai ki liver me sakhti (fibrosis) ka khatra kam hai ya aage jaanch chahiye.",
+    "Fatty liver ka sabse pakka ilaaj wazan ka 7-10% kam hona, sharaab band karna aur sugar control hai. 6 mahine baad LFT dohraiye."
+  ],
+  "sections": [
+    {
+      "id": "fatty-liver-kya-hai-deoria",
+      "heading": "Fatty Liver Kya Hai — Aur Ye Itna Aam Kyun Ho Gaya",
+      "lead": "Pehle sharaab peene walon ki bimari maani jaati thi. Aaj zyadatar mareez sharaab nahi peete.",
+      "blocks": [
+        "Liver me thodi charbi hona aam hai. Jab charbi liver ke vazan ke kareeb 5% se zyada ho jaaye, to use fatty liver kehte hain. Iski do badi wajah hain — sharaab, aur bina sharaab wali charbi jo motape, pet ki charbi, sugar aur badhe triglycerides se hota hai. Doosre ko ab MASLD (pehle NAFLD) kaha jaata hai, aur Bharat me vayaskon ka ek bada hissa isse prabhavit hai.",
+        "Deoria me bahut se logon ko iska pata tab chalta hai jab pet dard ya kisi aur kaaran se ultrasound hota hai, aur report me \"fatty liver grade 1\" likha aata hai. Zyadatar ko koi lakshan nahi hota. Yahi iski sabse badi dikkat hai — ye saalon tak chupke se badhta hai, aur kuch logon me liver me sakhti (fibrosis) aur aage chal kar cirrhosis tak pahunch sakta hai.",
+        {
+          "note": {
+            "title": "Ultrasound hamari service nahi hai",
+            "text": "Liver ki charbi ki pehli pehchaan aam taur par ultrasound se hoti hai, aur sakhti naapne ke liye FibroScan jaisi machine se. MedicoBharat Deoria me sirf khoon aur peshab ke sample leta hai — ultrasound aur FibroScan hum nahi karte. Blood test ghar par kara lijiye aur report le kar ultrasound ke liye jaaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fatty-liver-grade-matlab-deoria",
+      "heading": "Fatty Liver Grade 1, 2, 3 Ka Matlab",
+      "lead": "Grade charbi ki maatra batata hai, liver ka nuksan nahi.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Ultrasound report me fatty liver grade — aam matlab",
+            "head": [
+              "Grade",
+              "Matlab",
+              "Aam taur par kya karein"
+            ],
+            "rows": [
+              [
+                "Grade 1",
+                "Halki charbi",
+                "Wazan, khaana, sharaab par kaam; blood test se asar dekhein"
+              ],
+              [
+                "Grade 2",
+                "Madhyam charbi",
+                "Upar wala + doctor se follow-up; sugar-lipid control"
+              ],
+              [
+                "Grade 3",
+                "Zyada charbi",
+                "Doctor ko jaldi dikhaiye; sakhti ki jaanch ki zaroorat"
+              ]
+            ]
+          }
+        },
+        "Ek zaroori baat: grade 1 ka matlab \"koi baat nahi\" nahi hai, aur grade 3 ka matlab \"liver kharab\" bhi nahi. Asli sawaal ye hai ki liver me sakhti (fibrosis) aa rahi hai ya nahi — aur ye ultrasound ka grade nahi batata. Iske liye blood test se FIB-4 score, aur zaroorat par FibroScan."
+      ]
+    },
+    {
+      "id": "fatty-liver-blood-test-list-deoria",
+      "heading": "Fatty Liver Blood Test — Kaun Se Test Aur Kyun",
+      "lead": "Liver ka haal, aur wo cheezein jo liver ki charbi badhaati hain — dono.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Fatty liver me aam blood test",
+            "head": [
+              "Test",
+              "Kya batata hai"
+            ],
+            "rows": [
+              [
+                "LFT — SGPT (ALT), SGOT (AST)",
+                "Liver ke cells par dabaav"
+              ],
+              [
+                "LFT — GGT, bilirubin, albumin",
+                "Sharaab ka asar, liver ka kaam"
+              ],
+              [
+                "CBC (platelet)",
+                "Platelet ghatna liver me sakhti ka ishaara; FIB-4 ke liye zaroori"
+              ],
+              [
+                "Fasting sugar + HbA1c",
+                "Sugar — liver ki charbi ka sabse bada saathi"
+              ],
+              [
+                "Lipid Profile",
+                "Triglycerides aur HDL"
+              ],
+              [
+                "HBsAg, Anti-HCV",
+                "Hepatitis B/C — liver ke doosre kaaran hatane ke liye"
+              ],
+              [
+                "TSH",
+                "Sust thyroid bhi liver ki charbi badhata hai"
+              ]
+            ]
+          }
+        },
+        [
+          "SGPT, SGOT aur bilirubin ki normal range ",
+          {
+            "text": "LFT aur KFT normal range",
+            "href": "/blogs/liver-kidney-test/deoria#lft-kft-normal-range-deoria"
+          },
+          " me hai. Hepatitis B aur C ki jaanch ",
+          {
+            "text": "HBsAg aur hepatitis test guide",
+            "href": "/blogs/hiv-hepatitis-test/deoria#hbsag-hepatitis-b-test-deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "sgpt-normal-fatty-liver-deoria",
+      "heading": "SGPT Normal Hai Phir Bhi Fatty Liver? Haan, Ho Sakta Hai",
+      "lead": "LFT normal aana liver ke theek hone ki guarantee nahi.",
+      "blocks": [
+        "Is bimari ke kaafi mareez ka SGPT range ke andar hi rehta hai. Aur kai labs ki upari seema itni upar hai ki halka badha SGPT bhi \"normal\" dikh jaata hai. Isliye ultrasound me liver me charbi aayi hai to sirf LFT normal dekh kar nishchint mat hoiye — sugar, lipid aur FIB-4 bhi dekhiye.",
+        "Ulta bhi sach hai: SGPT badha hai to har baar liver ki charbi nahi. Haal ka bukhar, kuch dawaiyan, sharaab, hepatitis, bhaari kasrat ya haal me hua peeliya bhi SGPT badhaate hain. Isliye ek report se nahi, kaaran dhoondh kar faisla hota hai.",
+        [
+          "Peeliya aur hepatitis me LFT kaise badalta hai, wo ",
+          {
+            "text": "peeliya (jaundice) ka test",
+            "href": "/blogs/jaundice-test/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "fib-4-score-deoria",
+      "heading": "FIB-4 Score — Blood Test Se Liver Ki Sakhti Ka Andaaza",
+      "lead": "Chaar number, ek formula — aur pata chalta hai ki aage machine wali jaanch chahiye ya nahi.",
+      "blocks": [
+        "FIB-4 ek saada hisaab hai jo aapki LFT aur CBC report se hi ban jaata hai. Formula: (umar × SGOT) ÷ (platelet × √SGPT), jahan platelet hazaar me likha jaata hai (jaise 2.0 lakh = 200). Misaal: umar 50, SGOT 40, SGPT 50, platelet 2 lakh — (50 × 40) ÷ (200 × 7.07) = lagbhag 1.4.",
+        {
+          "table": {
+            "caption": "FIB-4 score — aam taur par matlab",
+            "head": [
+              "FIB-4",
+              "Aam matlab",
+              "Aage"
+            ],
+            "rows": [
+              [
+                "1.3 se kam",
+                "Liver me gambhir sakhti ka khatra kam",
+                "Jeevan-shaili sudhaar; 1-2 saal me dohraiye"
+              ],
+              [
+                "1.3 – 2.67",
+                "Beech ka — pakka nahi",
+                "Doctor aksar FibroScan kehte hain"
+              ],
+              [
+                "2.67 se zyada",
+                "Sakhti ka khatra zyada",
+                "Liver ke doctor (gastroenterologist) ko jaldi dikhaiye"
+              ]
+            ]
+          }
+        },
+        "65 saal se upar ya 35 se kam umar me FIB-4 ki seema alag padhi jaati hai, isliye ye score doctor ke saath hi padhiye. Ye ek andaaza hai, diagnosis nahi."
+      ]
+    },
+    {
+      "id": "fatty-liver-kaise-theek-hota-hai-deoria",
+      "heading": "Fatty Liver Kaise Theek Hota Hai — Aur Blood Test Se Sudhaar Kaise Dekhein",
+      "lead": "Fatty liver un bimariyon me hai jo sach me palat sakti hai.",
+      "blocks": [
+        {
+          "list": [
+            "Wazan 7-10% kam — jaise 80 kilo se 72-74 kilo. Isse liver ki charbi aur SGPT dono ghatte hain.",
+            "Sharaab poori tarah band — thodi bhi \"kabhi-kabhi\" wali nahi.",
+            "Meetha, cold drink, maida, tala hua aur raat ka der se bhaari khaana kam.",
+            "Roz kam se kam 30-40 minute tez chalna ya koi kasrat.",
+            "Sugar aur cholesterol ki dawa doctor ke hisaab se — inka control liver ko bhi bachaata hai.",
+            "Bina doctor ke liver ki 'detox' ya desi dawa se bachiye — kai jadi-booti khud liver ko nuksan pahunchaati hain."
+          ]
+        },
+        {
+          "table": {
+            "caption": "Follow-up — kab kya dohrayein",
+            "head": [
+              "Kab",
+              "Kya"
+            ],
+            "rows": [
+              [
+                "3-6 mahine baad",
+                "LFT, fasting sugar/HbA1c, lipid — sudhaar dekhne ke liye"
+              ],
+              [
+                "Saal me ek baar",
+                "LFT + CBC (FIB-4 ke liye), HbA1c, lipid"
+              ],
+              [
+                "Doctor ke kehne par",
+                "Ultrasound ya FibroScan"
+              ]
+            ]
+          }
+        },
+        [
+          "Wazan kam karne se pehle ki jaanch aur BMI ka hisaab ",
+          {
+            "text": "wazan badhne ka test",
+            "href": "/blogs/weight-gain-test/deoria"
+          },
+          " me hai. Sharaab aur dawa ka liver par asar ",
+          {
+            "text": "LFT guide ke dawa-sharaab wale hisse",
+            "href": "/blogs/liver-kidney-test/deoria#dawa-sharab-nuskha-deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "fatty-liver-turant-doctor-deoria",
+      "heading": "Fatty Liver Ke Saath Ye Lakshan Hon To Turant Doctor",
+      "lead": "Zyadatar liver ki charbi chup rehti hai. Ye lakshan chup nahi hain.",
+      "blocks": [
+        {
+          "note": {
+            "title": "In par der mat kijiye",
+            "text": "Aankhein ya peshab peela hona, pet me paani bharna ya pair sujna, khoon ki ulti ya kaale dast, bahut susti ya uljhan, aur bina koshish wazan girna — ye liver ki gambhir bimari ke lakshan ho sakte hain. Report ka intezaar kiye bina doctor ya aspataal jaaiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deoria-khaana-aur-liver-deoria",
+      "heading": "Purvanchal Ki Thaali, Chai Aur Liver — Rozmarra Me Kya Badlein",
+      "lead": "Liver ki charbi sirf tele khaane se nahi, meethe aur maide se bhi badhti hai.",
+      "blocks": [
+        "Log sochte hain ki liver me charbi sirf ghee-tel se jamti hai. Asal me meetha — chai me cheeni, mithai, cold drink, packet ka juice — aur maida bhi utna hi zimmedaar hai, kyunki liver zyada cheeni ko charbi me badal kar jama karta hai. Din me 4-5 cup meethi chai aur shaam ka samosa-jalebi, saath me baithe rehne wala kaam, yahi aam kahani hai.",
+        {
+          "table": {
+            "caption": "Chhote badlav jo liver ki charbi ghataate hain",
+            "head": [
+              "Aadat",
+              "Badlav"
+            ],
+            "rows": [
+              [
+                "Din me 4-5 meethi chai",
+                "Cheeni aadhi, phir aur kam; cup ginti ghataiye"
+              ],
+              [
+                "Cold drink, packet juice",
+                "Saada paani, chhaachh, nimbu-paani bina cheeni"
+              ],
+              [
+                "Maida — samosa, pakode, biscuit",
+                "Hafte me ek-do baar tak; bhuna chana, phal"
+              ],
+              [
+                "Raat ka der se bhaari khaana",
+                "Sone se 2-3 ghante pehle, halka"
+              ],
+              [
+                "Din bhar baithe rehna",
+                "Har ghante 5 minute chalna; roz 30-40 minute tez chaal"
+              ]
+            ]
+          }
+        },
+        "Patle log bhi isse bache nahi hain — pet ke aas-paas charbi ho, sugar ho ya pariwaar me diabetes ho, to kam wazan me bhi liver me charbi mil sakti hai. Isliye kamar ka naap wazan se zyada kaam ka hai."
+      ]
+    },
+    {
+      "id": "fatty-liver-test-ghar-par-deoria",
+      "heading": "Fatty Liver Test In Deoria — LFT Aur Saath Ke Test Ghar Par",
+      "lead": "Ek fasting sample me LFT, CBC, sugar aur lipid.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — sugar aur lipid ke liye 10-12 ghante fasting.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se.",
+            "Test se 24 ghante pehle sharaab bilkul nahi — warna SGPT aur triglycerides badhe aayenge."
+          ]
+        },
+        [
+          "LFT aur baaki test ka daam ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par, booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Fatty liver me kaun se blood test karane chahiye?",
+      "answer": "Aam taur par LFT (SGPT, SGOT, GGT, bilirubin, albumin), CBC (platelet), fasting sugar aur HbA1c, lipid profile, HBsAg aur Anti-HCV, aur TSH. Fatty liver ki pehchaan ultrasound se hoti hai; blood test liver par asar aur saath ki bimariyaan batata hai."
+    },
+    {
+      "question": "Kya SGPT normal hone par bhi fatty liver ho sakta hai?",
+      "answer": "Haan. Fatty liver ke kaafi mareez ka SGPT range ke andar rehta hai. Isliye ultrasound me fatty liver aaya ho to sugar, lipid aur FIB-4 score bhi dekhiye."
+    },
+    {
+      "question": "Fatty liver grade 1 kitna khatarnak hai?",
+      "answer": "Grade 1 halki charbi hai aur aksar jeevan-shaili sudhaar se theek ho jaata hai. Lekin grade liver ki sakhti nahi batata. FIB-4 score aur sugar-cholesterol ki jaanch se tay hota hai ki aage kya chahiye."
+    },
+    {
+      "question": "FIB-4 score kya hai?",
+      "answer": "FIB-4 umar, SGOT, SGPT aur platelet se bana ek hisaab hai jo liver me sakhti (fibrosis) ka andaaza deta hai. 1.3 se kam aam taur par kam khatra, 1.3-2.67 beech ka, aur 2.67 se zyada zyada khatra maana jaata hai. Ise doctor ke saath padhiye."
+    },
+    {
+      "question": "Fatty liver kaise theek hota hai?",
+      "answer": "Wazan ka 7-10% kam hona, sharaab poori tarah band, meetha aur tala khaana kam, roz kasrat, aur sugar-cholesterol control. 3-6 mahine baad LFT dohra kar sudhaar dekhiye."
+    },
+    {
+      "question": "Deoria me fatty liver ka blood test ghar par ho sakta hai?",
+      "answer": "Haan, LFT, CBC, sugar aur lipid ka sample ghar par. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me. Ultrasound aur FibroScan hamari service nahi hain."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me fatty liver ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/blood-test/deoria",
+            "label": "Blood test in Deoria — kahan aur kaise karayein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list",
+            "sub": "LFT, lipid aur HbA1c ka aaj ka daam"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/liver-kidney-test/deoria",
+            "label": "LFT aur KFT test — normal range"
+          },
+          {
+            "href": "/blogs/jaundice-test/deoria",
+            "label": "Peeliya (jaundice) ka test"
+          },
+          {
+            "href": "/blogs/weight-gain-test/deoria",
+            "label": "Wazan badhne me kaun se blood test"
+          },
+          {
+            "href": "/blogs/hba1c-sugar-test/deoria",
+            "label": "HbA1c normal range aur sugar level chart"
+          }
+        ]
+      }
+    ]
+  }
+}

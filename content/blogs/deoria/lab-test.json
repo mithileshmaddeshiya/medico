@@ -575,6 +575,7 @@
             "label": "Deoria me lab test — booking aur free home collection",
             "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
           },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",
             "label": "Deoria me lab test ka price",
@@ -674,7 +675,12 @@
           {
             "href": "/contact",
             "label": "Contact — booking aur test chunne me madad"
-          }
+          },
+          { "href": "/blogs/hair-fall-test/deoria", "label": "Baal jhadne ka blood test — kaun sa karayein" },
+          { "href": "/blogs/weight-gain-test/deoria", "label": "Wazan badhne ka test — motape me kaun se blood test" },
+          { "href": "/blogs/fatty-liver-test/deoria", "label": "Fatty liver me kaun se blood test karayein" },
+          { "href": "/blogs/jaundice-test/deoria", "label": "Peeliya (jaundice) ka test — bilirubin aur LFT" },
+          { "href": "/blogs/pre-marriage-test/deoria", "label": "Shaadi se pehle blood test — thalassemia aur blood group" }
         ]
       }
     ]

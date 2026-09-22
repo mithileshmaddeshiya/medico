@@ -269,6 +269,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Senior Citizen Pack ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
         ]

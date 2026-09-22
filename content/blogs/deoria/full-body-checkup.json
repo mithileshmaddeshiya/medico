@@ -678,6 +678,7 @@
             "label": "Deoria me lab test — booking aur free home collection",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           {
             "href": "/lab-test/deoria#full-body-checkup-deoria",
             "label": "Full body checkup ka menu — service page par",
@@ -710,7 +711,8 @@
             "href": "/lab-test/kushinagar",
             "label": "Kushinagar me lab test",
             "sub": "Padrauna, Hata aur Tamkuhi Raj ka padosi jila"
-          }
+          },
+          { "href": "/blogs/weight-gain-test/deoria", "label": "Wazan badhne ka test — motape me kaun se blood test" }
         ]
       }
     ]

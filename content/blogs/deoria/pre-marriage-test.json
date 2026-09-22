@@ -1,0 +1,354 @@
+{
+  "title": "Shaadi Se Pehle Blood Test — Thalassemia Test, Deoria",
+  "description": "Shaadi se pehle kaun se blood test karayein — thalassemia, blood group, HIV, hepatitis B, sugar aur thyroid, kyun zaroori, aur Deoria me sample ghar par.",
+  "keywords": [
+    "shaadi se pehle blood test",
+    "pre marriage blood test",
+    "pre marital test",
+    "thalassemia test before marriage",
+    "thalassemia carrier test",
+    "shaadi se pehle kaun se test",
+    "blood group match shaadi",
+    "Rh negative shaadi",
+    "HIV test before marriage",
+    "pre marriage test in Deoria",
+    "शादी से पहले खून की जांच"
+  ],
+  "publishedAt": "2026-09-22",
+  "order": 340,
+  "takeaways": [
+    "Shaadi se pehle ki sabse kaam ki jaanch thalassemia carrier ki hai. Dono carrier hon to har pregnancy me bachche ko thalassemia major hone ki 1 me 4 sambhavna hoti hai — aur ye pehle se pata chal sakta hai.",
+    "Blood group ka 'match' shaadi rokne ki cheez nahi. Bas mahila Rh negative ho aur pati Rh positive, to pregnancy me ek injection (anti-D) ki taiyaari rakhni hoti hai.",
+    "HIV, HBsAg (hepatitis B), Anti-HCV aur VDRL — ye jaanch dono ke aur aane wale bachche ke liye suraksha hain. Hepatitis B ka teeka bhi hota hai.",
+    "Jaanch dono ki marzi se ho, aur report sirf dono ke beech. Iska maqsad shaadi rokna nahi, taiyaar rehna hai."
+  ],
+  "sections": [
+    {
+      "id": "shaadi-se-pehle-test-kyun-deoria",
+      "heading": "Shaadi Se Pehle Blood Test Kyun — Kundli Ke Saath Ek Health Report",
+      "lead": "Deoria me shaadi se pehle kundli milaana aam hai. Sehat ki jaanch utni hi aasaan hai, aur kahin zyada kaam ki.",
+      "blocks": [
+        "Shaadi se pehle ki jaanch ka maqsad kisi ko \"fit\" ya \"unfit\" batana nahi hai. Iska kaam teen hai: aisi bimari pakadna jo aane wale bachche me ja sakti hai (jaise thalassemia), aisi bimari pakadna jo pati-patni me ek se doosre tak ja sakti hai (jaise hepatitis B ya HIV), aur aisi cheezein jaanna jinki pregnancy me pehle se taiyaari chahiye (jaise Rh negative blood group, sugar ya thyroid).",
+        "Deoria aur Purvanchal ke kai parivaaron me ye baat ab khul kar hone lagi hai, khaas kar un parivaaron me jahan kisi rishtedaar ke bachche ko har mahine khoon chadhana padta hai. Ek baar ki jaanch saalon ki pareshani se bacha sakti hai.",
+        {
+          "note": {
+            "title": "Marzi aur gopniyata",
+            "text": "Jaanch dono vyaktiyon ki apni marzi se honi chahiye, aur report unki apni hai — kisi rishtedaar ya bichauliye ki nahi. Koi report positive aaye to bhi zyadatar haalat me shaadi aur swasth bachche sambhav hain; doctor sahi raasta batate hain.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pre-marriage-test-list-deoria",
+      "heading": "Pre Marriage Blood Test — Shaadi Se Pehle Kaun Se Test Karayein",
+      "lead": "Ye aam soochi hai. Pariwaar me koi khaas bimari ho to doctor jodte hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Shaadi se pehle aam blood test — dono ke liye",
+            "head": [
+              "Test",
+              "Kyun"
+            ],
+            "rows": [
+              [
+                "CBC (MCV, MCH ke saath)",
+                "Khoon ki kami; MCV bahut kam ho to thalassemia carrier ka shak"
+              ],
+              [
+                "Hb electrophoresis / HPLC (HbA2)",
+                "Thalassemia carrier pakka karne ki jaanch"
+              ],
+              [
+                "Blood group aur Rh",
+                "Rh negative ho to pregnancy ki taiyaari"
+              ],
+              [
+                "HIV 1 & 2",
+                "Dono ki aur bachche ki suraksha"
+              ],
+              [
+                "HBsAg",
+                "Hepatitis B — teeka aur ilaaj sambhav"
+              ],
+              [
+                "Anti-HCV",
+                "Hepatitis C — ab ilaaj se theek hota hai"
+              ],
+              [
+                "VDRL",
+                "Syphilis — ilaaj aasaan, par pregnancy me bachche tak ja sakta hai"
+              ],
+              [
+                "Fasting sugar / HbA1c",
+                "Chupa hua diabetes"
+              ],
+              [
+                "TSH (khaas kar mahila)",
+                "Thyroid — pregnancy aur periods par asar"
+              ]
+            ]
+          }
+        },
+        [
+          "Ye soochi pregnancy ki pehli jaanch (ANC profile) se kaafi milti hai — shaadi se pehle kara li jaaye to baad me kai cheezein pehle se pata hoti hain. Pregnancy ke test ",
+          {
+            "text": "pregnancy ke pehle teen mahine ki jaanch",
+            "href": "/blogs/pregnancy-blood-test/deoria#pehle-teen-mahine-anc-profile-deoria"
+          },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "thalassemia-carrier-test-deoria",
+      "heading": "Thalassemia Carrier Test — Shaadi Se Pehle Sabse Zaroori Jaanch",
+      "lead": "Carrier khud bilkul swasth hota hai. Isliye bina jaanch ke pata hi nahi chalta.",
+      "blocks": [
+        "Thalassemia khoon ki ek pariwaarik bimari hai. Jiske paas ek kharaab gene hota hai, use carrier (thalassemia minor ya trait) kehte hain — wo poori tarah swasth rehta hai, bas haemoglobin thoda kam ho sakta hai. Bharat me har 100 me se kuch log carrier hain, aur zyadatar ko ye pata hi nahi hota.",
+        {
+          "table": {
+            "caption": "Maa-baap carrier hon to har pregnancy me bachche par asar (aam niyam)",
+            "head": [
+              "Pati",
+              "Patni",
+              "Bachche ke liye"
+            ],
+            "rows": [
+              [
+                "Carrier nahi",
+                "Carrier nahi",
+                "Thalassemia ka khatra nahi"
+              ],
+              [
+                "Carrier",
+                "Carrier nahi (ya ulta)",
+                "Bachcha carrier ho sakta hai, par thalassemia major nahi"
+              ],
+              [
+                "Carrier",
+                "Carrier",
+                "Har pregnancy me 1 me 4 (25%) sambhavna thalassemia major ki"
+              ]
+            ]
+          }
+        },
+        "Thalassemia major wale bachche ko zindagi bhar har 2-4 hafte khoon chadhana padta hai. Dono carrier hon to bhi shaadi ho sakti hai — pregnancy ke shuru me hi garbh ki jaanch se pata chal jaata hai ki bachche ko thalassemia major hai ya nahi, aur parivaar faisla le sakta hai. Isliye jaanch shaadi rokne ke liye nahi, taiyaari ke liye hai.",
+        {
+          "note": {
+            "title": "Khoon ki kami ko iron ki kami mat maaniye",
+            "text": "Carrier ka haemoglobin thoda kam aur MCV kam aata hai — bilkul iron ki kami jaisa. Kai log saalon iron ki goli khaate rehte hain. CBC me MCV bahut kam ho aur iron ki goli se sudhaar na ho, to HPLC test karaiye.",
+            "tone": "warn"
+          }
+        },
+        [
+          "CBC me MCV ka matlab ",
+          {
+            "text": "CBC guide ke haemoglobin-MCV wale hisse",
+            "href": "/blogs/cbc-test/deoria#haemoglobin-kam-mcv-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "blood-group-rh-shaadi-deoria",
+      "heading": "Blood Group Match Aur Rh Negative — Kya Shaadi Me Farak Padta Hai?",
+      "lead": "Seedha jawab: A, B, O, AB ka milna ya na milna shaadi ke liye koi mudda nahi.",
+      "blocks": [
+        "Log aksar poochhte hain ki pati-patni ka blood group ek hona chahiye ya alag. Iska koi niyam nahi hai. Sirf ek baat dekhni hoti hai — Rh factor, yaani blood group ke saath likha positive ya negative.",
+        {
+          "list": [
+            "Mahila Rh positive — koi khaas baat nahi.",
+            "Mahila Rh negative aur pati Rh negative — koi khaas baat nahi.",
+            "Mahila Rh negative aur pati Rh positive — pregnancy me doctor ko shuru me hi bataiye. Zaroorat par 28 hafte ke aas-paas aur delivery ke baad anti-D injection diya jaata hai, jo agli pregnancy ke bachche ko bachaata hai."
+          ]
+        },
+        [
+          "Rh negative pregnancy ki poori baat ",
+          {
+            "text": "Rh negative blood group wale hisse",
+            "href": "/blogs/pregnancy-blood-test/deoria#rh-negative-blood-group-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "hiv-hepatitis-shaadi-deoria",
+      "heading": "HIV, Hepatitis B Aur C — Shaadi Se Pehle Kyun",
+      "lead": "Ye jaanch shak ki nahi, suraksha ki hai.",
+      "blocks": [
+        "Hepatitis B aur C aksar saalon tak bina lakshan ke rehte hain, aur bahut se logon ko pata tab chalta hai jab kisi operation ya pregnancy ki jaanch hoti hai. Hepatitis B ek se doosre tak ja sakta hai, lekin iska teeka hai — agar ek ko hai to doosre ko shaadi se pehle teeka lag sakta hai. Hepatitis C ab dawa se theek ho jaata hai. HIV ka ilaaj bhi aaj itna achchha hai ki sahi dawa par log saamaanya jeevan jeete hain aur swasth bachche paida hote hain.",
+        {
+          "list": [
+            "Report reactive aaye to ghabraiye nahi — pehle doosre test se pushti hoti hai.",
+            "Hepatitis B negative ho aur teeka nahi laga ho, to teeke ke baare me doctor se poochhiye.",
+            "Haal me kisi jokhim ke baad test kara rahe hain to window period ka dhyaan rakhiye — bahut jaldi ka test negative aa sakta hai."
+          ]
+        },
+        [
+          "Window period, reactive report ka matlab aur pushti ki jaanch ",
+          {
+            "text": "HIV aur hepatitis test guide",
+            "href": "/blogs/hiv-hepatitis-test/deoria#window-period-kitne-din-baad-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "sugar-thyroid-shaadi-se-pehle-deoria",
+      "heading": "Sugar, Thyroid Aur Khoon Ki Kami — Pregnancy Se Pehle Theek Karne Ka Mauka",
+      "lead": "Jo cheezein pregnancy me mushkil banti hain, unhe pehle hi pakad lijiye.",
+      "blocks": [
+        "Bina pata chale sugar, sust thyroid aur khoon ki kami — teeno pregnancy me dikkat badhaate hain aur pregnancy theharne me bhi. Shaadi se pehle ya pregnancy plan karne se pehle inki jaanch ho jaaye to dawa aur khaane se pehle hi theek kiya ja sakta hai.",
+        {
+          "list": [
+            "Mahila me TSH — thyroid mahilaon me bahut aam hai aur periods tatha pregnancy par asar daalta hai.",
+            "Dono me fasting sugar ya HbA1c — pariwaar me sugar ho to khaas kar.",
+            "Mahila me haemoglobin aur ferritin — Uttar Pradesh me kareeb aadhi mahilaon me khoon ki kami milti hai."
+          ]
+        },
+        [
+          "Mahilaon ki umar ke hisaab se jaanch ",
+          {
+            "text": "mahilaon ke health checkup",
+            "href": "/blogs/women-health-checkup/deoria"
+          },
+          " me hai, aur periods ki gadbad me hormone test ",
+          {
+            "text": "PCOD test guide",
+            "href": "/blogs/pcod-hormone-test/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "shaadi-test-kab-karayein-deoria",
+      "heading": "Shaadi Se Kitne Din Pehle Test Karayein",
+      "lead": "Itna pehle ki kuch pata chale to sochne aur samajhne ka samay ho.",
+      "blocks": [
+        "Rishta tay hone ke baad, shaadi se kam se kam 1-3 mahine pehle jaanch karana theek rehta hai. Isse thalassemia jaisi report aaye to doctor se baat karne ka, hepatitis B ka teeka shuru karne ka, aur sugar-thyroid theek karne ka samay mil jaata hai. shaadi ke hafte me, jab ghar me bheed aur bhaag-daud ho, jaanch aksar tal jaati hai.",
+        "Ladka bahar kaam karta ho — Delhi, Mumbai ya Khadi desh me — to wo jahan hai wahan jaanch kara sakta hai aur ladki ki jaanch Deoria me ghar par. Dono report PDF me aayengi, jinhe ek hi doctor ko dikhaya ja sakta hai."
+      ]
+    },
+    {
+      "id": "report-aane-ke-baad-shaadi-deoria",
+      "heading": "Report Aane Ke Baad — Kisse Aur Kaise Baat Karein",
+      "lead": "Report ek jaankari hai, faisla nahi.",
+      "blocks": [
+        "Zyadatar jodon ki report me koi badi baat nahi nikalti — aur ye apne aap me sukoon ki baat hai. Kuch aaye, jaise dono thalassemia carrier, hepatitis B positive ya sugar, to pehle ek doctor se baat kijiye jo report samjha sake — physician, gynaecologist ya khoon ke doctor (haematologist). Pariwaar se baat usi ke baad, poori jaankari ke saath.",
+        {
+          "list": [
+            "Dono carrier: pregnancy plan karne se pehle gynaecologist ko bataiye; pregnancy ke shuru me garbh ki jaanch ka samay tay kijiye.",
+            "Hepatitis B positive: doosre ka teeka, aur positive vyakti ki liver jaanch doctor ke hisaab se.",
+            "Sugar ya thyroid: shaadi se pehle hi ilaaj shuru — pregnancy se pehle control sabse zaroori.",
+            "Report ki PDF sambhaal kar rakhiye — pregnancy ki pehli jaanch me gynaecologist ise dekhna chahenge."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pre-marriage-test-ghar-par-deoria",
+      "heading": "Pre Marriage Test In Deoria — Sample Ghar Par, Report Sirf Aapke Phone Par",
+      "lead": "Lab ki line me rishtedaaron ke saamne nahi — ghar par, apne samay par.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — fasting sugar ho to khaali pet, baaki test usi sample me.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — jis number par aap kahein.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "HPLC (thalassemia), blood group ya VDRL jaise test ki uplabdhta booking ke waqt poochh lijiye — parche ya soochi ki photo bhej dijiye. Baaki test ka daam ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par, booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Shaadi se pehle kaun se blood test karane chahiye?",
+      "answer": "Aam taur par CBC, thalassemia ki jaanch (HPLC/Hb electrophoresis), blood group aur Rh, HIV, HBsAg, Anti-HCV, VDRL, fasting sugar ya HbA1c, aur mahila me TSH. Pariwaar me koi khaas bimari ho to doctor aur test jod sakte hain."
+    },
+    {
+      "question": "Thalassemia carrier test kyun zaroori hai?",
+      "answer": "Carrier khud swasth hota hai aur use pata nahi hota. Agar pati aur patni dono carrier hon, to har pregnancy me bachche ko thalassemia major hone ki 1 me 4 sambhavna hoti hai. Pehle se pata ho to pregnancy me jaanch se sahi faisla liya ja sakta hai."
+    },
+    {
+      "question": "Kya pati-patni ka blood group same hona chahiye?",
+      "answer": "Nahi, A, B, O ya AB ka milna zaroori nahi. Sirf ye dekhna hota hai ki mahila Rh negative aur pati Rh positive to nahi — aisa ho to pregnancy me doctor anti-D injection ki taiyaari rakhte hain."
+    },
+    {
+      "question": "Agar hepatitis B positive aaye to kya shaadi ho sakti hai?",
+      "answer": "Haan. Doosre vyakti ko hepatitis B ka teeka lag sakta hai, aur positive vyakti ka doctor ilaaj aur jaanch karte hain. Pregnancy me bachche ko janm ke turant baad teeka aur injection de kar bachaaya jaata hai."
+    },
+    {
+      "question": "Shaadi se kitne din pehle test karana chahiye?",
+      "answer": "Shaadi se kam se kam 1 se 3 mahine pehle, taaki koi report aaye to doctor se baat, teeka ya ilaaj ka samay mil sake."
+    },
+    {
+      "question": "Deoria me pre marriage test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai, aur report 24 ghante ke andar aapke number par WhatsApp aur email se aati hai. Thalassemia (HPLC) jaise test ki uplabdhta booking ke waqt poochh lijiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me shaadi se pehle ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/blood-test/deoria",
+            "label": "Blood test in Deoria — kahan aur kaise karayein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/pregnancy-blood-test/deoria",
+            "label": "Pregnancy me kaun se blood test hote hain"
+          },
+          {
+            "href": "/blogs/hiv-hepatitis-test/deoria",
+            "label": "HIV aur Hepatitis B test — kab karayein"
+          },
+          {
+            "href": "/blogs/women-health-checkup/deoria",
+            "label": "Mahilaon ka health checkup"
+          },
+          {
+            "href": "/blogs/cbc-test/deoria",
+            "label": "CBC test normal range"
+          }
+        ]
+      }
+    ]
+  }
+}

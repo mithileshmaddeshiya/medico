@@ -252,6 +252,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
           { "href": "/lab-test/deoria#how-to-book-deoria", "label": "Booking kaise hoti hai" }
         ]
@@ -262,7 +263,9 @@
           { "href": "/blogs/liver-kidney-test/deoria", "label": "LFT aur KFT test — liver ki jaanch", "sub": "Hepatitis B me liver kaise dekha jaata hai" },
           { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain", "sub": "HBsAg, HIV aur VDRL ki screening" },
           { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" },
-          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" }
+          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" },
+          { "href": "/blogs/jaundice-test/deoria", "label": "Peeliya (jaundice) ka test — bilirubin aur LFT" },
+          { "href": "/blogs/pre-marriage-test/deoria", "label": "Shaadi se pehle blood test — thalassemia aur blood group" }
         ]
       }
     ]
