@@ -40,7 +40,7 @@ export async function GET() {
     <url>
       <loc>${SITE}/lab-test/${city.slug}</loc>${lastmodOf(city)}
       <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
+      <priority>${city.sitemapPriority ?? 0.9}</priority>
     </url>`
     )
     .join("");

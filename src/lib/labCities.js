@@ -9,25 +9,95 @@
  * The functions stay async so their many callers (pages, layouts, sitemap)
  * keep working unchanged; there is just nothing to await any more. 
  */
-import { LAB_CITIES, slugify } from "@/data/lab/cities";
+import { LAB_CITIES, byOrderThenName, slugify } from "@/data/lab/cities";
+import { cityOverrides, customCities } from "@/lib/admin/cityStore";
 
 export { slugify };
 
+/*
+ * ── EDITS FROM THE ADMIN PANEL ───────────────────────────────────────────
+ * src/data/lab/cities.js stays the source of every fact about a city. The
+ * panel may override only the editorial fields — title, description,
+ * keywords, the hero's H1, image and alt text — and may hide a city, which is
+ * the documented way to take a page down: the city leaves this list, so it
+ * leaves the routes, the sitemap and the footer together. (A separate noindex
+ * switch is deliberately not offered; see the robots note in
+ * src/app/(lab)/lab-test/[city]/page.js for why these pages must never be
+ * indexed-off while still linked and submitted.)
+ *
+ * Merged here because every consumer — metadata, hero, schema, sitemap,
+ * footer — already reads through these getters. cityOverrides() never throws:
+ * an unreachable database leaves the site on the file's values, which is what
+ * it served before the panel existed. A one-minute memo keeps this to one
+ * query per minute, since a single page render calls these several times.
+ */
+const MEMO_MS = 60_000;
+let memo = null; // { at, cities }
+
+async function citiesWithOverrides() {
+  if (memo && Date.now() - memo.at < MEMO_MS) return memo.cities;
+
+  const [overrides, custom] = await Promise.all([cityOverrides(), customCities()]);
+  const cities = [];
+
+  // The file's cities plus the published ones added in the panel (table
+  // lab_cities). A panel city can never shadow a file city with the same slug.
+  const fileSlugs = new Set(LAB_CITIES.map((city) => city.slug));
+  const all = [
+    ...LAB_CITIES,
+    ...custom.filter((city) => city.published && !fileSlugs.has(city.slug)),
+  ].sort(byOrderThenName);
+
+  for (const city of all) {
+    const o = overrides.get(city.slug);
+    if (!o) {
+      cities.push(city);
+      continue;
+    }
+    if (o.hidden) continue;
+
+    const hero = { ...city.hero };
+    if (o.h1) hero.h1 = o.h1;
+    if (o.heroAlt) hero.imageAlt = o.heroAlt;
+    // A panel image is WebP — right for the hero, and never used as the share
+    // card, which stays the JPG in LAB_OG_IMAGE because WhatsApp will not
+    // render a WebP og:image.
+    if (o.heroMediaId) hero.image = `/media/${o.heroMediaId}/lab-test-in-${city.slug}.webp`;
+
+    cities.push({
+      ...city,
+      title: o.title || city.title,
+      description: o.description || city.description,
+      keywords: o.keywords?.length ? o.keywords : city.keywords,
+      hero,
+      sitemapPriority: Number.isFinite(o.priority) ? o.priority : undefined,
+    });
+  }
+
+  memo = { at: Date.now(), cities };
+  return cities;
+}
+
+/** Drop the memo now — called by the panel the moment a city page is saved. */
+export function invalidateLabCities() {
+  memo = null;
+}
+
 /** Every published city, fully populated and sorted by `order` then name. */
 export async function getLabCities() {
-  return LAB_CITIES;
+  return citiesWithOverrides();
 }
 
 /** One city by slug, or null when we do not serve it (→ a real 404). */
 export async function getLabCity(slug) {
   const wanted = slugify(decodeURIComponent(String(slug ?? "")));
   if (!wanted) return null;
-  return LAB_CITIES.find((city) => city.slug === wanted) ?? null;
+  return (await citiesWithOverrides()).find((city) => city.slug === wanted) ?? null;
 }
 
 /** Slugs for generateStaticParams and the sitemap. */
 export async function getLabCitySlugs() {
-  return LAB_CITIES.map((city) => city.slug);
+  return (await citiesWithOverrides()).map((city) => city.slug);
 }
 
 /**
@@ -35,7 +105,7 @@ export async function getLabCitySlugs() {
  * Used for the footer on a 404 and for copy that renders before a city is known.
  */
 export async function getDefaultLabCity() {
-  return LAB_CITIES[0] ?? null;
+  return (await citiesWithOverrides())[0] ?? null;
 }
 
 /**

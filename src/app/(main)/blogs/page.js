@@ -6,6 +6,7 @@ import { getBlogs } from "@/lib/blogs";
 import { getLabCities } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, url } from "@/lib/site";
+import { withRouteSeo } from "@/lib/routeSeo";
 
 /**
  * /blogs — THE hub. Every article on the site hangs off this one page.
@@ -51,7 +52,7 @@ import { SITE, url } from "@/lib/site";
  * about lab tests in Varanasi sits under Varanasi's service page, not under a
  * generic blog index. This page is a discovery surface, not a parent.
  */
-export const metadata = {
+const baseMetadata = {
   title: "Lab Test Guides — Kaun Sa Test Kab",
 
   description:
@@ -112,6 +113,11 @@ const readableDate = (iso) => {
 };
 
 export default async function BlogsIndexPage() {
+  // The metadata actually served — the panel's overrides included — so the
+  // structured data below can never describe the page differently from its
+  // own <title> and meta description.
+  const metadata = await generateMetadata();
+
   /* Metadata only — titles, descriptions, dates. The hub carries every article
      the site has, and still costs the same per post whether that is fifteen or
      fifteen hundred, because no article body is ever loaded here. */
@@ -357,3 +363,11 @@ export default async function BlogsIndexPage() {
     </>
   );
 }
+
+/*
+ * The metadata above is the default. The admin panel (SEO → Fixed pages) may
+ * override the title, description, keywords, canonical or robots for this
+ * route without a deploy; withRouteSeo merges only what was set there, and
+ * falls back to exactly this if the database cannot be reached.
+ */
+export const generateMetadata = () => withRouteSeo("/blogs", baseMetadata);

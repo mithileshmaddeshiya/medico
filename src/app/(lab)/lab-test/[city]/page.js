@@ -13,6 +13,7 @@ import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import OfferPopup from "@/components/lab/OfferPopup";
 import WelcomePopup from "@/components/lab/WelcomePopup";
+import { popupSettings } from "@/lib/admin/settings";
 import { HOME_BANNERS } from "@/data/home";
 import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
@@ -27,10 +28,11 @@ import {
 } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
-// Cities are local data now, so every page we serve is known at build time.
-// A slug that is not in the list is a city we do not serve → a real 404, which
-// the page already handles by calling notFound() on an unknown slug.
-export const dynamicParams = false;
+// The file's cities are prerendered at build (generateStaticParams below). A
+// city added later in the admin panel is not known at build time, so other
+// slugs are rendered on first request instead of being refused. A slug that
+// is in neither list is still a real 404: the page calls notFound() on it.
+export const dynamicParams = true;
 
 // The test cards and chips come from MySQL (src/lib/testCatalog.js). Pages stay
 // prerendered and rebuild in the background at most once a minute, so a price
@@ -288,7 +290,8 @@ const diagnosticLabNode = (city) => {
         description: test.sub,
         price: test.price,
         priceCurrency: "INR",
-        availability: "https://schema.org/InStock",
+        availability:
+          test.inStock === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
         // Where the offer is actually bookable. An Offer with no url is a price
         // with nowhere to go; #tests is the anchor on the price grid.
         url: `${id.url}#tests`,
@@ -367,6 +370,10 @@ const breadcrumbNode = (city) => {
 };
 
 export default async function LabCityPage({ params }) {
+  // Each popup can be switched off from the admin panel (Settings). Defaults
+  // to on, and to on if the database cannot be reached.
+  const popups = await popupSettings();
+
   const { city } = await params;
 
   const cityFile = await getLabCity(city);
@@ -416,22 +423,26 @@ export default async function LabCityPage({ params }) {
           comment in WelcomePopup. Same form as the hero, same /api/lab-lead →
           Firestore → WhatsApp path, and the same city dropdown this page's own
           form uses, so a popup lead already carries the right locality. */}
-      <WelcomePopup
-        cityOptions={cityOptions}
-        title={`Book Lab Test in ${cityData.name}`}
-      />
+      {popups.welcome && (
+        <WelcomePopup
+          cityOptions={cityOptions}
+          title={`Book Lab Test in ${cityData.name}`}
+        />
+      )}
 
       {/* The offer popup, opening only once this city's FAQ block has been
           scrolled past — see the header comment in OfferPopup. Same artwork and
           same number on every city, because the offer is the company's, not the
           town's; only the dialog's accessible name is localised. */}
-      <OfferPopup
-        offer={{
-          ...OFFER_POPUP,
-          title: `${OFFER_POPUP.title} — ${cityData.name}`,
-        }}
-        phone={LAB_PHONE}
-      />
+      {popups.offer && (
+        <OfferPopup
+          offer={{
+            ...OFFER_POPUP,
+            title: `${OFFER_POPUP.title} — ${cityData.name}`,
+          }}
+          phone={LAB_PHONE}
+        />
+      )}
 
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
 

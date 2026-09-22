@@ -7,6 +7,7 @@ import { LAB_PHONE, LAB_WHATSAPP, defaultFooter } from "@/data/lab/defaults";
 import { getLabCities } from "@/lib/labCities";
 import { ORG_REF, WEBSITE_ID, graph, ldJson } from "@/lib/schema";
 import { SITE, url } from "@/lib/site";
+import { withRouteSeo } from "@/lib/routeSeo";
 
 /**
  * /contact
@@ -32,7 +33,7 @@ import { SITE, url } from "@/lib/site";
  * The copy is lab-test copy now. It used to offer "medicine ordering
  * assistance" and "prescription support" for a section that no longer exists.
  */
-export const metadata = {
+const baseMetadata = {
   title: "Contact MedicoBharat — Lab Test Booking Help",
 
   description:
@@ -71,6 +72,11 @@ export const metadata = {
 };
 
 export default async function ContactPage() {
+  // The metadata actually served — the panel's overrides included — so the
+  // structured data below can never describe the page differently from its
+  // own <title> and meta description.
+  const metadata = await generateMetadata();
+
   const cities = await getLabCities();
   const { email, hours } = defaultFooter("");
 
@@ -336,3 +342,11 @@ export default async function ContactPage() {
     </>
   );
 }
+
+/*
+ * The metadata above is the default. The admin panel (SEO → Fixed pages) may
+ * override the title, description, keywords, canonical or robots for this
+ * route without a deploy; withRouteSeo merges only what was set there, and
+ * falls back to exactly this if the database cannot be reached.
+ */
+export const generateMetadata = () => withRouteSeo("/contact", baseMetadata);

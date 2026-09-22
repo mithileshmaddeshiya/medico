@@ -19,7 +19,8 @@ const clampQty = (q) => Math.min(MAX_QTY, Math.max(0, Math.floor(Number(q) || 0)
  * `items` — `{ [testId]: qty }`. `tests` — the price list.
  *
  * Tests without a price ("Call for price") cannot be bought online and are
- * dropped, as is any id the list does not know.
+ * dropped, as is any id the list does not know — and so is a test marked out
+ * of stock (`inStock: false`), so checkout can never charge for one.
  */
 export function priceCart(items, tests) {
   const byId = new Map((tests ?? []).map((t) => [t.id, t]));
@@ -29,7 +30,7 @@ export function priceCart(items, tests) {
     .map(([id, qty]) => {
       const test = byId.get(id);
       const q = clampQty(qty);
-      if (!test || !test.price || q === 0) return null;
+      if (!test || !test.price || test.inStock === false || q === 0) return null;
       const mrp = test.mrp && test.mrp > test.price ? test.mrp : test.price;
       return {
         id,

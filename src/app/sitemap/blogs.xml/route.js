@@ -22,15 +22,33 @@ const lastmodOf = (blog) =>
       <lastmod>${blog.updatedAt}</lastmod>`
     : "";
 
+/*
+ * A post may also be held back from the sitemap without being noindexed.
+ *
+ * Those are different things and the panel offers both. `noindex` says "this
+ * must never appear in search"; leaving a page out of the sitemap says "do not
+ * submit this, but it may be found and indexed normally" — which is the right
+ * setting for a thin page that exists for a reason, or one being held back
+ * until its city page ships.
+ *
+ * A file-backed post has no such field and `undefined` means included, which is
+ * exactly what those posts got when every URL here was unconditional.
+ */
+const submitted = (blog) =>
+  Boolean(blog?.category) &&
+  Boolean(blog?.city) &&
+  blog?.robots?.index !== false &&
+  blog?.inSitemap !== false;
+
 export async function GET() {
   const urls = (await getBlogs())
-    .filter((blog) => blog?.category && blog?.city && blog?.robots?.index !== false)
+    .filter(submitted)
     .map(
       (blog) => `
     <url>
       <loc>${SITE}/blogs/${blog.category}/${blog.city}</loc>${lastmodOf(blog)}
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
+      <changefreq>${blog.changefreq ?? "weekly"}</changefreq>
+      <priority>${blog.priority ?? 0.9}</priority>
     </url>`
     )
     .join("");

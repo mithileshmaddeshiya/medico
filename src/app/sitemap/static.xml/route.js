@@ -1,3 +1,4 @@
+import { routeOverrides } from "@/lib/admin/seoStore";
 import { SITE } from "@/lib/site";
 
 export const revalidate = 86400; // regenerate once per day instead of every request
@@ -39,12 +40,33 @@ const pages = [
 ];
 
 export async function GET() {
+  /*
+   * The admin panel may override any of these per route — including the
+   * `reviewed` date, which is the whole point of the warning above.
+   *
+   * The panel honours that warning literally: saving a page's title or
+   * description does NOT move its reviewed date. Only the explicit "mark
+   * reviewed" button does, and that button exists so a person can say "I read
+   * this page today and it is still accurate" — which is the only thing a
+   * lastmod is supposed to mean.
+   *
+   * routeOverrides() never throws. If the database is unreachable this file
+   * publishes exactly what it published before the panel existed, which is a
+   * correct sitemap rather than an empty one.
+   */
+  const overrides = await routeOverrides();
+
   const urls = pages
+    .map((item) => ({ ...item, ...(overrides.get(item.route) ?? {}) }))
+    // A route the panel has taken out of the sitemap is dropped. It is still a
+    // live page — this is "do not submit it", which is a different statement
+    // from noindex and is offered separately.
+    .filter((item) => item.inSitemap !== false)
     .map(
       (item) => `
     <url>
       <loc>${SITE}${item.route}</loc>
-      <lastmod>${item.reviewed}</lastmod>
+      <lastmod>${item.reviewedOn ?? item.reviewed}</lastmod>
       <changefreq>${item.changefreq}</changefreq>
       <priority>${item.priority}</priority>
     </url>`

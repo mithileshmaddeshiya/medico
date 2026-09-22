@@ -24,15 +24,18 @@ const num = (v) => (v === null || v === undefined ? null : Number(v));
 async function loadFromDb() {
   const [[tests], [links], [cats]] = await Promise.all([
     query(
-      `SELECT id, name, includes, params, price, mrp, fasting, icon, tint
+      `SELECT id, name, includes, params, price, mrp, fasting, in_stock, icon, tint
        FROM lab_tests WHERE active = 1 ORDER BY sort_order, name`
     ),
+    // Only chips that are live. A chip removed in the panel is soft-deleted
+    // (status 'deleted'), not dropped, so without this it stayed on the site.
     query(
       `SELECT l.test_id, l.category_key
        FROM lab_test_categories l JOIN test_categories c ON c.\`key\` = l.category_key
+       WHERE c.status = 'active'
        ORDER BY c.sort_order`
     ),
-    query("SELECT `key`, label, heading FROM test_categories ORDER BY sort_order"),
+    query("SELECT `key`, label, heading FROM test_categories WHERE status = 'active' ORDER BY sort_order"),
   ]);
 
   if (!tests.length || !cats.length) throw new Error("the test catalogue tables are empty — run `npm run db:seed`");
@@ -54,6 +57,8 @@ async function loadFromDb() {
         tags: tagsOf.get(t.id) ?? [],
         fasting: Boolean(t.fasting),
         price: num(t.price),
+        // false = the card shows "Out of stock" and priceCart refuses it.
+        inStock: t.in_stock !== 0,
       };
       if (t.mrp !== null) test.mrp = num(t.mrp);
       if (t.params !== null) test.params = t.params;

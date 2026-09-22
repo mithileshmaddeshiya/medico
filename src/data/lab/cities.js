@@ -3658,7 +3658,15 @@ function normalise(fields, id) {
   return { ...base, ...buildContent(fields, base) };
 }
 
-const byOrderThenName = (a, b) =>
+/**
+ * normalise(), for cities that come from somewhere other than LAB_CITY_SEED —
+ * the ones added in the admin panel (table lab_cities, read by
+ * src/lib/admin/cityStore.js). Going through the same function is what makes
+ * a panel city's page indistinguishable from a file city's.
+ */
+export const buildCity = (fields) => normalise(fields, fields.slug);
+
+export const byOrderThenName = (a, b) =>
   a.order - b.order || a.name.localeCompare(b.name, "en");
 
 /**

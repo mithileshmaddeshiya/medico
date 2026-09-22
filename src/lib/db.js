@@ -15,6 +15,8 @@
  */
 import mysql from "mysql2/promise";
 
+import { ADMIN_SCHEMA, MIGRATIONS } from "./admin/schema";
+import { runMigrations } from "./admin/migrate";
 import { SCHEMA } from "./dbSchema";
 
 export const dbConfigured = () =>
@@ -34,9 +36,19 @@ function pool() {
   return globalThis.__mbDbPool;
 }
 
+/**
+ * The public site's tables (SCHEMA) and the back office's (ADMIN_SCHEMA), then
+ * the ALTERs that a database created before those columns existed still needs.
+ *
+ * Order matters: the CREATEs run first so a fresh database has every table
+ * before runMigrations looks at one, and the migration runner skips any table
+ * that is still absent rather than failing the boot.
+ */
 function ensureSchema() {
   globalThis.__mbDbSchema ??= (async () => {
-    for (const sql of SCHEMA) await pool().query(sql);
+    for (const sql of [...SCHEMA, ...ADMIN_SCHEMA]) await pool().query(sql);
+    const applied = await runMigrations(pool(), MIGRATIONS);
+    if (applied.length) console.info("[db] migrations applied:", applied.join(", "));
   })().catch((err) => {
     globalThis.__mbDbSchema = undefined; // retry on the next request
     throw err;
