@@ -356,6 +356,12 @@ export const MIGRATIONS = [
   { table: "lab_tests", column: "meta_title", sql: "ALTER TABLE lab_tests ADD COLUMN meta_title VARCHAR(255) NULL" },
   { table: "lab_tests", column: "meta_description", sql: "ALTER TABLE lab_tests ADD COLUMN meta_description VARCHAR(500) NULL" },
 
+  // A city page's long-form guide (the "On this page" article), edited in
+  // /admin/cities/<slug>. NULL = the guide from src/data/lab/content/<city>.js
+  // (or the generated one), exactly as before. Same shape as that file:
+  // [{ id, h, p: [string | [string | { text, href }]] }].
+  { table: "city_overrides", column: "content_json", sql: "ALTER TABLE city_overrides ADD COLUMN content_json JSON NULL" },
+
   // Stock is separate from `active`. An out-of-stock test stays on the site —
   // its card says "Out of stock" and it cannot be added to the cart or paid
   // for — so a patient can still see the price and call about it. Hiding the

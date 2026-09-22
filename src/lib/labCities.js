@@ -70,6 +70,10 @@ async function citiesWithOverrides() {
       description: o.description || city.description,
       keywords: o.keywords?.length ? o.keywords : city.keywords,
       hero,
+      // The guide and FAQs edited in the panel, whole-list replacements like
+      // the file's own `content` / `faqs` fields. Empty = the built-in ones.
+      content: o.content?.length ? o.content : city.content,
+      faqs: o.faqs?.length ? o.faqs : city.faqs,
       sitemapPriority: Number.isFinite(o.priority) ? o.priority : undefined,
     });
   }

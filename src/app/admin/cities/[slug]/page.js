@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import ActionForm, { SubmitButton } from "@/components/admin/ActionForm";
 import CityFactsFields from "@/components/admin/CityFactsFields";
+import { CityContentEditor, CityFaqEditor } from "@/components/admin/CityGuideEditor";
 import ImageField from "@/components/admin/ImageField";
 import {
   ButtonLink,
@@ -10,6 +11,7 @@ import {
   Input,
   Note,
   PageHeader,
+  Pill,
   Select,
   Textarea,
 } from "@/components/admin/ui";
@@ -17,7 +19,7 @@ import { getCity } from "@/lib/admin/cityStore";
 import { getMedia } from "@/lib/admin/media";
 import { requireRole } from "@/lib/admin/guard";
 
-import { saveCityAction, saveCityFactsAction } from "../actions";
+import { saveCityAction, saveCityContentAction, saveCityFactsAction, saveCityFaqsAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 
@@ -171,6 +173,59 @@ export default async function CityPage({ params, searchParams }) {
           </Card>
         </div>
       </ActionForm>
+
+      {/* The long-form guide ("On this page") and the FAQs. Each is its own
+          form with its own save, so saving one never touches the other or the
+          title/meta above. `key` remounts an editor after "Restore the
+          original", so it shows the built-in text again rather than the
+          edited text still held in its state. */}
+      <section id="guide" className="space-y-3">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <div>
+            <h2 className="text-[15px] font-bold text-slate-900">
+              Guide on the page{" "}
+              {city.contentEdited ? (
+                <Pill tone="sky">edited here</Pill>
+              ) : (
+                <Pill tone="slate">built-in text</Pill>
+              )}
+            </h2>
+            <p className="mt-1 max-w-3xl text-[12.5px] leading-relaxed text-slate-600">
+              The long article under the tests, with the “On this page” list beside it —{" "}
+              {city.content.length} sections. The first section is the guide&apos;s title and
+              intro; every other heading becomes an entry in that list. Saving here replaces the
+              built-in text for {city.name} only.
+            </p>
+          </div>
+        </div>
+        <CityContentEditor
+          key={`content-${city.contentEdited ? "edited" : "original"}`}
+          slug={city.slug}
+          sections={city.content}
+          edited={city.contentEdited}
+          action={saveCityContentAction}
+        />
+      </section>
+
+      <section id="faqs" className="space-y-3">
+        <div>
+          <h2 className="text-[15px] font-bold text-slate-900">
+            FAQs{" "}
+            {city.faqsEdited ? <Pill tone="sky">edited here</Pill> : <Pill tone="slate">built-in text</Pill>}
+          </h2>
+          <p className="mt-1 max-w-3xl text-[12.5px] leading-relaxed text-slate-600">
+            The questions and answers on the page, also published as FAQ structured data. The page
+            shows the first 12.
+          </p>
+        </div>
+        <CityFaqEditor
+          key={`faqs-${city.faqsEdited ? "edited" : "original"}`}
+          slug={city.slug}
+          faqs={city.faqs}
+          edited={city.faqsEdited}
+          action={saveCityFaqsAction}
+        />
+      </section>
 
       {/* A separate form: nested <form>s are invalid HTML. Only for cities
           added in the panel — a file city's facts stay in the file. */}
