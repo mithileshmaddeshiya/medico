@@ -1,0 +1,417 @@
+{
+  "title": "Peeliya (Jaundice) Ka Test — Bilirubin Aur LFT, Deoria",
+  "description": "Peeliya me kaun se test karayein — bilirubin, LFT, hepatitis A, B, C, E, bilirubin ki normal range, kab turant aspataal, aur Deoria me jaundice test ghar par.",
+  "keywords": [
+    "peeliya ka test",
+    "jaundice test",
+    "jaundice test in Deoria",
+    "bilirubin test",
+    "bilirubin normal range",
+    "peeliya me kaun sa test",
+    "hepatitis A test",
+    "hepatitis E test",
+    "direct indirect bilirubin",
+    "peeliya kitne din me theek hota hai",
+    "पीलिया की जांच"
+  ],
+  "publishedAt": "2026-09-22",
+  "order": 330,
+  "takeaways": [
+    "Peeliya khud bimari nahi, lakshan hai — khoon me bilirubin badhne se aankh aur chamdi peeli hoti hai. Test ka kaam ye dhoondhna hai ki bilirubin kyun badha.",
+    "Pehli jaanch: LFT (total, direct aur indirect bilirubin, SGPT, SGOT), CBC aur urine. Phir kaaran ke liye hepatitis A, E, B aur C.",
+    "Barsaat aur baadh ke baad Deoria me peeliya ka sabse aam kaaran gande paani se hepatitis A aur E hai — ye aksar 4-8 hafte me theek ho jaata hai.",
+    "Pregnancy me peeliya, bahut susti ya uljhan, khoon ki ulti, ya naye janme bachche me pehle 24 ghante me peelapan — turant aspataal."
+  ],
+  "sections": [
+    {
+      "id": "peeliya-kya-hai-deoria",
+      "heading": "Peeliya Kya Hai — Aankh Aur Peshab Peela Kyun Hota Hai",
+      "lead": "Jaanch se pehle ye samajhna zaroori hai ki peeliya ek lakshan hai.",
+      "blocks": [
+        "Khoon ke purane laal cells tootte hain to bilirubin naam ka peela padaarth banta hai. Liver ise saaf karta hai aur pitt (bile) ke raaste pet me bhej deta hai. Is raaste me kahin bhi rukawat ho — laal cells zyada tootein, liver kamzor ho, ya pitt ki nali band ho — to bilirubin khoon me jama hone lagta hai. Sabse pehle aankhon ka safed hissa peela hota hai, phir chamdi, aur peshab gehra peela ya chai ke rang ka.",
+        "Deoria aur Purvanchal me peeliya ko aam bol-chaal me ek hi bimari maana jaata hai, aur kai log jhaad-phoonk ya desi nuskhe se ilaaj karte hain. Lekin peeliya ke peeche kai alag kaaran ho sakte hain — kuch apne aap theek hone wale, kuch gambhir. Blood test hi batata hai ki kaun sa hai.",
+        {
+          "note": {
+            "title": "Desi dawa se pehle jaanch",
+            "text": "Kai jadi-booti aur 'peeliya utaarne' wali dawaiyan khud liver ko nuksan pahunchaati hain. Koi bhi ilaaj shuru karne se pehle LFT aur doctor ki salah lijiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "peeliya-me-kaun-sa-test-deoria",
+      "heading": "Peeliya Me Kaun Sa Test Karayein — Pehli Jaanch Aur Kaaran Ki Jaanch",
+      "lead": "Pehle ye ki bilirubin kitna aur kis tarah ka badha hai. Phir ye ki kyun.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Peeliya me aam test",
+            "head": [
+              "Test",
+              "Kya batata hai",
+              "Kab"
+            ],
+            "rows": [
+              [
+                "LFT — total, direct, indirect bilirubin",
+                "Peeliya kitna, aur kis hisse me gadbad",
+                "Pehli jaanch"
+              ],
+              [
+                "LFT — SGPT, SGOT, ALP, GGT",
+                "Liver ke cells par chot ya pitt ki nali me rukawat",
+                "Pehli jaanch"
+              ],
+              [
+                "CBC",
+                "Khoon ki kami, laal cells ka tootna, infection",
+                "Pehli jaanch"
+              ],
+              [
+                "Urine routine (bilirubin, urobilinogen)",
+                "Peeliya ka prakaar",
+                "Pehli jaanch"
+              ],
+              [
+                "Anti-HAV IgM",
+                "Hepatitis A — gande paani se",
+                "Kaaran dhoondhne ke liye"
+              ],
+              [
+                "Anti-HEV IgM",
+                "Hepatitis E — gande paani se; pregnancy me khatarnak",
+                "Kaaran dhoondhne ke liye"
+              ],
+              [
+                "HBsAg, Anti-HCV",
+                "Hepatitis B aur C",
+                "Kaaran dhoondhne ke liye"
+              ],
+              [
+                "PT-INR, albumin",
+                "Liver kitna kaam kar raha hai — gambhirta",
+                "Doctor ke kehne par"
+              ]
+            ]
+          }
+        },
+        "Bukhar ke saath peeliya ho to doctor malaria aur typhoid bhi dekhte hain, kyunki malaria me laal cells tootne se bhi peelapan aata hai. Pet ke daahine upar hisse me tez dard ke saath peeliya ho to pitt ki pathri ya nali me rukawat ka shak hota hai — iske liye ultrasound chahiye, jo hamari service nahi hai.",
+        [
+          "Bukhar me malaria aur typhoid ki jaanch ",
+          {
+            "text": "dengue, typhoid aur malaria guide",
+            "href": "/blogs/dengue-typhoid-test/deoria#malaria-aur-doosri-wajah-deoria"
+          },
+          " me hai. Hepatitis B aur C ki jaanch aur report ka matlab ",
+          {
+            "text": "HIV aur hepatitis test guide",
+            "href": "/blogs/hiv-hepatitis-test/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "bilirubin-normal-range-deoria",
+      "heading": "Bilirubin Normal Range — Total, Direct Aur Indirect Ka Matlab",
+      "lead": "Direct aur indirect ka farak batata hai ki gadbad liver se pehle hai, liver me hai, ya liver ke baad.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Bilirubin — vayaskon me aam range (lab ke hisaab se thoda alag)",
+            "head": [
+              "Test",
+              "Aam normal range"
+            ],
+            "rows": [
+              [
+                "Total bilirubin",
+                "0.3 – 1.2 mg/dL"
+              ],
+              [
+                "Direct (conjugated) bilirubin",
+                "0 – 0.3 mg/dL"
+              ],
+              [
+                "Indirect (unconjugated) bilirubin",
+                "0.2 – 0.8 mg/dL (total me se direct ghata kar)"
+              ]
+            ]
+          }
+        },
+        "Aankh me peelapan aam taur par tab dikhta hai jab total bilirubin 2.5-3 mg/dL se upar jaata hai. Isliye report me 1.5 ya 1.8 aaye to aankh peeli nahi dikhti, lekin number range ke bahar hota hai.",
+        {
+          "table": {
+            "caption": "Kaun sa bilirubin badha — aam taur par kis taraf ishaara",
+            "head": [
+              "Pattern",
+              "Aam ishaara"
+            ],
+            "rows": [
+              [
+                "Zyadatar indirect badha, SGPT normal",
+                "Laal cells ka zyada tootna (jaise malaria), ya Gilbert syndrome — ek maamuli, pariwaarik haalat"
+              ],
+              [
+                "Direct aur indirect dono badhe, SGPT bahut zyada",
+                "Liver ke cells par chot — hepatitis, sharaab, dawa"
+              ],
+              [
+                "Zyadatar direct badha, ALP aur GGT zyada",
+                "Pitt ki nali me rukawat — pathri ya kuch aur; ultrasound chahiye"
+              ]
+            ]
+          }
+        },
+        [
+          "Baaki LFT number — SGPT, SGOT, albumin — ki range ",
+          {
+            "text": "LFT aur KFT normal range",
+            "href": "/blogs/liver-kidney-test/deoria#lft-kft-normal-range-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "barsaat-hepatitis-a-e-deoria",
+      "heading": "Barsaat Aur Baadh Ke Baad Peeliya — Hepatitis A Aur E",
+      "lead": "Deoria me peeliya ke zyadatar maamle paani se aate hain.",
+      "blocks": [
+        "Ghaghra aur Chhoti Gandak ke kinaare ke ilaakon me barsaat aur baadh ke baad handpump aur kuon ka paani aksar gandaa ho jaata hai. Hepatitis A aur E isi paani aur khule khaane se failte hain. Shuruaat bukhar, bhookh na lagna, ulti aur thakan se hoti hai, aur kuch din baad aankh-peshab peele hote hain.",
+        {
+          "list": [
+            "Hepatitis A bachchon me zyada aur aksar halka hota hai; vayaskon me thoda lamba chalta hai.",
+            "Hepatitis E zyadatar 4-8 hafte me khud theek ho jaata hai — lekin pregnant mahilaon me ye gambhir ho sakta hai.",
+            "Dono me aaraam, paani aur halka khaana hi mukhya ilaaj hai; koi khaas dawa nahi hoti.",
+            "Ghar me ek ko hua ho to baaki log ubla ya saaf paani piyein aur haath dhone par dhyaan dein."
+          ]
+        },
+        {
+          "note": {
+            "title": "Pregnancy me peeliya — usi din aspataal",
+            "text": "Pregnancy me hepatitis E khatarnak ho sakta hai. Garbhvati mahila me aankh ya peshab peela ho to ghar par intezaar mat kijiye — usi din aspataal ya gynaecologist ke paas jaaiye.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Baadh ke baad ke bukhar aur paani se hone wali bimariyon ki jaanch ",
+          {
+            "text": "Deoria ke service page ke is hisse",
+            "href": "/lab-test/deoria#flood-water-diseases-deoria"
+          },
+          " me bhi hai."
+        ]
+      ]
+    },
+    {
+      "id": "peeliya-turant-aspataal-deoria",
+      "heading": "Peeliya Me Kab Turant Aspataal Jaayein",
+      "lead": "Zyadatar peeliya ghar par aaraam se theek hota hai. Ye lakshan us zyadatar me nahi aate.",
+      "blocks": [
+        {
+          "note": {
+            "title": "Khatre ke lakshan",
+            "text": "Bahut susti, neend jaisi behoshi, uljhan ya ulti-seedhi baatein; khoon ki ulti ya kaale dast; masoodon ya naak se khoon; peshab bahut kam; lagatar ulti aur kuch na pacha paana; pregnancy me peeliya; ya naye janme bachche me pehle 24 ghante me peelapan — in me se kuch bhi ho to turant aspataal.",
+            "tone": "warn"
+          }
+        },
+        [
+          "Naye janme aur chhote bachchon me peeliya kaise alag hai, wo ",
+          {
+            "text": "bachchon ke blood test wale hisse",
+            "href": "/blogs/child-blood-test/deoria#pet-ke-keede-peeliya-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "peeliya-kitne-din-follow-up-deoria",
+      "heading": "Peeliya Kitne Din Me Theek Hota Hai — Test Kab Dohrayein",
+      "lead": "Aankh ka peelapan sabse aakhir me jaata hai. Report pehle sudharti hai.",
+      "blocks": [
+        "Hepatitis A aur E me bilirubin aam taur par 2 se 6 hafte me dheere-dheere neeche aata hai, aur SGPT usse pehle girne lagta hai. Aankh ka peelapan kuch din aur reh sakta hai. Isliye roz-roz test karaane ka faayda nahi — doctor aam taur par hafte-das din me ek baar LFT dekhte hain.",
+        {
+          "table": {
+            "caption": "Follow-up — aam soch",
+            "head": [
+              "Kab",
+              "Kya"
+            ],
+            "rows": [
+              [
+                "Pehli jaanch",
+                "LFT, CBC, urine, aur kaaran ke test"
+              ],
+              [
+                "7-10 din baad",
+                "LFT — bilirubin aur SGPT gir rahe hain ya nahi"
+              ],
+              [
+                "Theek hone ke baad",
+                "Ek LFT — sab normal hone ki pushti"
+              ],
+              [
+                "HBsAg positive aaya ho",
+                "Doctor ke hisaab se lambi jaanch — ye alag rasta hai"
+              ]
+            ]
+          }
+        },
+        {
+          "list": [
+            "Peeliya me sharaab poori tarah band — theek hone ke kuch mahine baad tak.",
+            "Paracetamol ya koi bhi dawa doctor se poochh kar; kai dawaiyan liver par bojh daalti hain.",
+            "Khaane me parhez ke naam par sab band mat kijiye — halka, saaf, ghar ka khaana aur bharpoor paani chahiye."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "peeliya-galatfahmiyan-deoria",
+      "heading": "Peeliya Ke Baare Me Paanch Aam Galatfahmiyan",
+      "lead": "Gaon-kasbe me sunne ko milne wali baatein — aur unka sach.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Peeliya — galatfahmi aur sach",
+            "head": [
+              "Galatfahmi",
+              "Sach"
+            ],
+            "rows": [
+              [
+                "Peeliya me haldi aur peeli cheezein band",
+                "Haldi ka peeliya se koi lena-dena nahi; halka, saaf, ghar ka khaana theek hai"
+              ],
+              [
+                "Jhaad-phoonk ya maala se peeliya utarta hai",
+                "Hepatitis A-E aksar apne aap theek hote hain, isliye aisa lagta hai; gambhir kaaran chhoot sakte hain"
+              ],
+              [
+                "Peeliya me sirf ganne ka ras aur glucose",
+                "Kharab paani ka ras khud bimari faila sakta hai; santulit halka khaana chahiye"
+              ],
+              [
+                "Aankh peeli nahi to liver theek",
+                "Bilirubin thoda badhe to aankh peeli nahi dikhti; LFT hi batata hai"
+              ],
+              [
+                "Ek baar peeliya hua to baar-baar hoga",
+                "Hepatitis A aur E ek baar hone ke baad aam taur par dobara nahi hote"
+              ]
+            ]
+          }
+        },
+        "Sabse zaroori baat: peeliya me bhookh na lagna aam hai, lekin paani aur khaane ki kami se kamzori badhti hai. Thoda-thoda, baar-baar khaaiye, aur ulti ki wajah se kuch bhi na pache to aspataal jaaiye."
+      ]
+    },
+    {
+      "id": "jaundice-test-ghar-par-deoria",
+      "heading": "Jaundice Test In Deoria — LFT Aur Hepatitis Ka Sample Ghar Par",
+      "lead": "Peeliya me kamzor mareez ko bus-auto me le jaane ki zaroorat nahi.",
+      "blocks": [
+        "LFT, CBC aur urine ka sample ghar par liya jaata hai — Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me. Iske liye fasting zaroori nahi. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me — follow-up LFT ki tulna aasaan.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Hepatitis A ya E ka test parche par ho to booking ke waqt parche ki photo bhej kar poochh lijiye. LFT ka daam ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par, booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se. Ultrasound me fatty liver aaya ho to ",
+          {
+            "text": "fatty liver me kaun se test",
+            "href": "/blogs/fatty-liver-test/deoria"
+          },
+          " dekhiye."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Peeliya me kaun sa test karana chahiye?",
+      "answer": "Pehle LFT (total, direct aur indirect bilirubin, SGPT, SGOT, ALP), CBC aur urine routine. Phir kaaran ke liye hepatitis A (Anti-HAV IgM), hepatitis E (Anti-HEV IgM), HBsAg aur Anti-HCV. Bukhar ho to malaria aur typhoid bhi."
+    },
+    {
+      "question": "Bilirubin ki normal range kya hai?",
+      "answer": "Vayaskon me total bilirubin aam taur par 0.3 se 1.2 mg/dL aur direct bilirubin 0.3 mg/dL tak hota hai. Aankh me peelapan aam taur par total bilirubin 2.5-3 se upar hone par dikhta hai. Apni report ki range hi maaniye."
+    },
+    {
+      "question": "Direct aur indirect bilirubin me kya farak hai?",
+      "answer": "Indirect bilirubin wo hai jo liver ne abhi saaf nahi kiya; direct wo jo liver ne saaf kar diya. Indirect zyada badha ho to laal cells ka tootna ya Gilbert syndrome; direct zyada badha ho to liver ya pitt ki nali ki dikkat ka ishaara hota hai."
+    },
+    {
+      "question": "Peeliya kitne din me theek hota hai?",
+      "answer": "Hepatitis A aur E wala peeliya aam taur par 2 se 8 hafte me theek ho jaata hai. SGPT pehle girta hai, bilirubin dheere, aur aankh ka peelapan sabse aakhir me jaata hai. Doctor aam taur par hafte-das din me LFT dohraate hain."
+    },
+    {
+      "question": "Pregnancy me peeliya ho to kya karein?",
+      "answer": "Usi din aspataal ya gynaecologist ke paas jaaiye. Pregnancy me hepatitis E gambhir ho sakta hai, isliye ghar par intezaar mat kijiye."
+    },
+    {
+      "question": "Deoria me peeliya ka test ghar par ho sakta hai?",
+      "answer": "Haan. LFT, CBC aur urine ka sample Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liya jaata hai. Fasting nahi chahiye, report 24 ghante ke andar WhatsApp par."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me peeliya ki jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/blood-test/deoria",
+            "label": "Blood test in Deoria — kahan aur kaise karayein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list",
+            "sub": "LFT ka aaj ka daam"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/liver-kidney-test/deoria",
+            "label": "LFT aur KFT test — normal range"
+          },
+          {
+            "href": "/blogs/fatty-liver-test/deoria",
+            "label": "Fatty liver me kaun se blood test"
+          },
+          {
+            "href": "/blogs/hiv-hepatitis-test/deoria",
+            "label": "HIV aur Hepatitis B test"
+          },
+          {
+            "href": "/blogs/dengue-typhoid-test/deoria",
+            "label": "Dengue aur typhoid test"
+          }
+        ]
+      }
+    ]
+  }
+}

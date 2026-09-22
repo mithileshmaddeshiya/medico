@@ -224,6 +224,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
           { "href": "/lab-test/gorakhpur", "label": "Gorakhpur me lab test", "sub": "Operation Gorakhpur me ho to wahan bhi ghar par sample" }
         ]

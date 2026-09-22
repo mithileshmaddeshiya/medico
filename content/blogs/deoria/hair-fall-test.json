@@ -1,0 +1,352 @@
+{
+  "title": "Baal Jhadne Ka Blood Test — Kaun Sa Karayein, Deoria",
+  "description": "Baal jhadne me kaun se blood test karayein — ferritin, thyroid, Vitamin D, B12 aur hormone, bukhar ke baad baal kyun jhadte hain, aur Deoria me ghar par sample.",
+  "keywords": [
+    "baal jhadne ka blood test",
+    "hair fall blood test",
+    "hair fall test in Deoria",
+    "baal jhadne ka karan",
+    "hair fall ke liye kaun sa test",
+    "ferritin test hair fall",
+    "thyroid aur baal jhadna",
+    "Vitamin D hair fall",
+    "dengue ke baad baal jhadna",
+    "mahilaon me baal jhadna test",
+    "बाल झड़ने की जांच"
+  ],
+  "publishedAt": "2026-09-22",
+  "order": 300,
+  "takeaways": [
+    "Roz 50 se 100 baal girna aam hai. Mutthi bhar baal, maang chaudi hona ya chakatte me baal udna — tab jaanch ka samay hai.",
+    "Baal jhadne me sabse kaam ke blood test hain: CBC aur ferritin (jama iron), TSH (thyroid), Vitamin D aur Vitamin B12. Mahilaon me periods gadbad hon to PCOD ke hormone bhi.",
+    "Dengue, typhoid, tez bukhar, delivery ya achanak dieting ke 2-3 mahine baad baal tezi se jhadte hain — ye aksar 6 mahine me khud ruk jaata hai.",
+    "Blood test kaaran dhoondhta hai, ilaaj nahi. Report le kar skin (dermatologist) doctor ko dikhaiye; bina jaanch iron ya biotin ki goli mat shuru kijiye."
+  ],
+  "sections": [
+    {
+      "id": "baal-jhadna-kab-chinta-deoria",
+      "heading": "Baal Jhadna Kab Aam Hai Aur Kab Jaanch Chahiye",
+      "lead": "Har giraa hua baal bimari nahi. Pehle ye tay kijiye ki jhadna aam se zyada hai ya nahi.",
+      "blocks": [
+        "Sir par lagbhag ek lakh baal hote hain, aur har baal apna samay poora kar ke girta hai, phir naya ugta hai. Isliye roz 50 se 100 baal kanghi, takiye ya nahaate waqt girna bilkul aam hai. Baal dhone wale din ye ginti zyada dikhti hai, kyunki do-teen din ke baal ek saath nikalte hain.",
+        "Deoria me dermatologist ke paas aane wali zyadatar shikayatein teen tarah ki hoti hain — achanak mutthi bhar baal girna, dheere-dheere baal patle hona, aur sir par gol chakatte me baal ud jaana. Teeno ke kaaran alag hain, aur blood test pehle do me zyada kaam aata hai.",
+        {
+          "table": {
+            "caption": "Baal jhadne ke aam pattern — kab kya sochein",
+            "head": [
+              "Kya dikh raha hai",
+              "Aam kaaran",
+              "Blood test ka role"
+            ],
+            "rows": [
+              [
+                "Achanak poore sir se zyada baal girna",
+                "Bukhar, delivery, tanaav, dieting ke 2-3 mahine baad (telogen effluvium)",
+                "Haan — iron, thyroid, vitamin dekhna chahiye"
+              ],
+              [
+                "Mahilaon me maang chaudi hona, baal patle",
+                "Hormone, PCOD, iron ki kami, umar",
+                "Haan — ferritin, TSH, aur zaroorat par hormone"
+              ],
+              [
+                "Purushon me aage se ya beech se baal kam",
+                "Pariwaarik (androgenetic) ganjapan",
+                "Aam taur par zaroori nahi — doctor ki salah se"
+              ],
+              [
+                "Gol chakatte me baal udna",
+                "Alopecia areata (sharir ki apni immunity)",
+                "Kabhi-kabhi thyroid; ilaaj skin doctor ka"
+              ],
+              [
+                "Rukhi, papdi wali chamdi ke saath",
+                "Fungal infection, dandruff",
+                "Nahi — skin doctor dekh kar batate hain"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "hair-fall-blood-test-list-deoria",
+      "heading": "Hair Fall Blood Test — Baal Jhadne Me Kaun Se Test Karayein",
+      "lead": "Paanch test jo baal jhadne ke sabse aam, aur ilaaj-yogya, kaaran pakadte hain.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Baal jhadne me aam blood test",
+            "head": [
+              "Test",
+              "Kya pakadta hai",
+              "Kiske liye khaas"
+            ],
+            "rows": [
+              [
+                "CBC (haemoglobin)",
+                "Khoon ki kami",
+                "Sabke liye pehla test"
+              ],
+              [
+                "Ferritin",
+                "Sharir me jama iron — haemoglobin normal hote hue bhi kam ho sakta hai",
+                "Mahilayein, shaakahaari, zyada periods"
+              ],
+              [
+                "TSH (thyroid)",
+                "Sust ya tez thyroid — dono baal girate hain",
+                "Thakan, wazan badalna, periods ki gadbad ke saath"
+              ],
+              [
+                "Vitamin D",
+                "Kami baal aur haddi dono par asar",
+                "Dhoop kam lene wale, ghar ke andar kaam"
+              ],
+              [
+                "Vitamin B12",
+                "Kami se baal, jhunjhuni, kamzori",
+                "Shaakahaari, sugar ki dawa metformin par"
+              ]
+            ]
+          }
+        },
+        "Mahilaon me agar baal jhadne ke saath periods aniyamit hon, chehre par baal ya muhaase badhein, ya wazan badhe, to doctor PCOD ki jaanch bhi likhte hain — testosterone, LH, FSH aur prolactin. Ye test period ke khaas din par hote hain.",
+        [
+          "Ferritin aur haemoglobin ka farak ",
+          {
+            "text": "haemoglobin aur ferritin wale hisse",
+            "href": "/blogs/vitamin-b12-d-test/deoria#haemoglobin-ferritin-deoria"
+          },
+          " me samjhaaya gaya hai. PCOD ke hormone test kab aur kaun se, wo ",
+          {
+            "text": "PCOD test guide",
+            "href": "/blogs/pcod-hormone-test/deoria#pcod-me-kaun-sa-test-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "ferritin-aur-baal-deoria",
+      "heading": "Ferritin Aur Baal — Haemoglobin Normal Ho Tab Bhi Iron Kam Kyun",
+      "lead": "Baal jhadne me sabse zyada chhoot jaane wala test yahi hai.",
+      "blocks": [
+        "Sharir iron ko do jagah rakhta hai — khoon me (haemoglobin) aur jama bhandar me (ferritin). Jab iron kam padta hai, to sharir pehle bhandar khaali karta hai aur khoon ko aakhir tak bachaata hai. Isliye kai mahilaon ka haemoglobin 12 ke aas-paas normal aata hai, lekin ferritin bahut kam hota hai — aur baal usi waqt jhadne lagte hain.",
+        "Kai skin doctor baal jhadne me ferritin ko report ki range se zyada upar dekhna pasand karte hain. Ferritin kitna hona chahiye aur iron kitne din dena hai, ye doctor tay karte hain — lekin ye test karaana hi kaaran pakadne ka pehla kadam hai.",
+        {
+          "note": {
+            "title": "Bina test iron ki goli mat lijiye",
+            "text": "Iron ki kami na ho to iron ki goli se faayda nahi, ulta kabz aur pet kharab. Aur kuch logon me iron pehle se zyada jama hota hai. Pehle ferritin, phir goli — wo bhi doctor ki salah se.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bukhar-dengue-ke-baad-baal-deoria",
+      "heading": "Dengue, Typhoid Ya Bukhar Ke Baad Baal Jhadna — 2-3 Mahine Baad Kyun",
+      "lead": "Barsaat ke baad Deoria me ye shikayat sabse zyada aati hai — aur ghabraane ki zaroorat aksar nahi hoti.",
+      "blocks": [
+        "Tez bukhar, dengue, typhoid, bada operation, delivery, gehra sadma ya achanak bahut kam khaana — ye sab sharir ke liye jhatka hain. Is jhatke me bahut se baal ek saath \"aaraam\" ki awastha me chale jaate hain, aur 2-3 mahine baad ek saath girte hain. Isliye log aksar kaaran ko pehchaan nahi paate — bukhar to kab ka theek ho chuka hota hai.",
+        {
+          "list": [
+            "Aam taur par 3 se 6 mahine me baal girna ruk jaata hai aur naye baal ugne lagte hain.",
+            "Bukhar ke baad khoon ki kami ya iron kam ho gaya ho to jhadna lamba chalta hai — isliye CBC aur ferritin ek baar zaroor.",
+            "6 mahine se zyada chale, ya chakatte bane, to skin doctor ko dikhaiye.",
+            "Delivery ke baad baal jhadna bhi isi tarah ka hai; saath me thakan ho to TSH bhi — delivery ke baad thyroid badalna aam hai."
+          ]
+        },
+        [
+          "Deoria me barsaat ke baad ke bukhar ki jaanch ",
+          {
+            "text": "dengue aur typhoid test guide",
+            "href": "/blogs/dengue-typhoid-test/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "thyroid-aur-baal-jhadna-deoria",
+      "heading": "Thyroid Aur Baal Jhadna — TSH Kab Karayein",
+      "lead": "Baal patle, rukhe aur tootne wale hon, saath me thakan aur wazan badhe — to thyroid ka shak.",
+      "blocks": [
+        "Sust thyroid (hypothyroid) me baal rukhe aur patle ho jaate hain, aur kabhi bhauhon ke bahari hisse ke baal bhi kam ho jaate hain. Tez thyroid (hyperthyroid) me baal mulayam par tezi se jhadte hain. Dono ek saada TSH test se pakde jaate hain, jiske liye fasting nahi chahiye.",
+        "Thyroid ki dawa shuru hone ke baad bhi baal theek hone me kuch mahine lagte hain — isliye dawa ke pehle do-teen mahine me baal na sudhrein to dawa band mat kijiye.",
+        [
+          "TSH high ya low ka matlab ",
+          {
+            "text": "thyroid test guide",
+            "href": "/blogs/thyroid-test/deoria#tsh-high-low-matlab-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "baal-jhadna-galat-aadatein-deoria",
+      "heading": "Baal Jhadne Ke Woh Kaaran Jo Blood Test Me Nahi Dikhte",
+      "lead": "Report normal aaye to bhi kaaran ho sakta hai — kuch baatein khud dekhiye.",
+      "blocks": [
+        {
+          "list": [
+            "Bahut kas kar choti ya jooda, roz garam iron ya straightener — baal jadon se tootte hain.",
+            "Achanak crash dieting ya bahut kam protein — dal, doodh, anda, paneer kam ho to baal sabse pehle girte hain.",
+            "Kuch dawaiyan — BP, depression, mirgi, khoon patla karne wali, aur kuch garbhnirodhak goliyaan. Dawa khud band mat kijiye, doctor ko bataiye.",
+            "Dandruff ya fungal infection — khujli aur papdi ke saath; ye skin doctor dekh kar batate hain.",
+            "Lambe samay tak tanaav aur neend ki kami."
+          ]
+        },
+        {
+          "note": {
+            "title": "Biotin ki goli aur thyroid test",
+            "text": "Baal ke liye bikne wali bahut si goliyon me biotin hota hai. Biotin thyroid aur kuch hormone test ki report galat kar sakta hai. Test se 2-3 din pehle biotin wali goli band kijiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "purushon-me-baal-jhadna-deoria",
+      "heading": "Purushon Me Baal Jhadna — Kab Blood Test, Kab Nahi",
+      "lead": "Aage se ya taalu par baal kam hona aksar pariwaarik hai — lekin achanak jhadna nahi.",
+      "blocks": [
+        "Purushon me sabse aam pattern androgenetic hai — kanpatti ke upar se baal peechhe hatna aur taalu par baal patle hona, jo pita ya nana ki taraf se aata hai. Iske liye aam taur par koi blood test zaroori nahi, aur ilaaj skin doctor batate hain. Lekin agar poore sir se achanak baal girne lagein, dadhi ya bhauhon me chakatte banein, ya saath me thakan aur wazan badle — to CBC, ferritin, TSH aur Vitamin D ek baar kara lijiye.",
+        {
+          "list": [
+            "Gym ke liye protein powder ya supplement le rahe hain to label dekhiye — kuch me hormone jaisi cheezein hoti hain jo baal girati hain.",
+            "Tambaaku aur cigarette baalon ki jadon tak khoon kam pahunchaate hain.",
+            "Tel ya shampoo badalne se baal girna nahi rukta agar kaaran andar se ho — pehle jaanch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hair-fall-test-ghar-par-deoria",
+      "heading": "Hair Fall Test In Deoria — Sample Ghar Par",
+      "lead": "Paanchon test ek hi sample me, bina fasting ke.",
+      "blocks": [
+        "CBC, ferritin, TSH, Vitamin D aur B12 — in sab ke liye fasting zaroori nahi, aur sab ek hi sample me ho jaate hain. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Test ka daam ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par, aur booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se. Ferritin ya hormone test parche par ho to booking ke waqt photo bhej kar poochh lijiye. Mahilaon ki umar ke hisaab se poori jaanch ",
+          {
+            "text": "mahilaon ke health checkup",
+            "href": "/blogs/women-health-checkup/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-hair-fall-deoria",
+      "heading": "Report Aa Gayi — Aage Kya Karein",
+      "lead": "Report skin doctor ke paas le jaaiye, ye sawaal saath.",
+      "blocks": [
+        {
+          "list": [
+            "Mera ferritin, Vitamin D ya B12 kam hai — kitne din aur kitni dawa?",
+            "Thyroid ya hormone ki jaanch aage chahiye?",
+            "Baal ka ye pattern kaun sa hai, aur kya ye khud ruk jaayega?"
+          ]
+        },
+        [
+          "Report ke H aur L flag kaise padhein, wo ",
+          {
+            "text": "blood test report kaise padhein",
+            "href": "/blogs/blood-test-report/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Baal jhadne ke liye kaun sa blood test karana chahiye?",
+      "answer": "Aam taur par CBC, ferritin, TSH (thyroid), Vitamin D aur Vitamin B12. Mahilaon me periods aniyamit hon ya chehre par baal badhein to PCOD ke hormone bhi. In sab ke liye fasting zaroori nahi."
+    },
+    {
+      "question": "Roz kitne baal girna normal hai?",
+      "answer": "Roz 50 se 100 baal girna aam hai. Baal dhone wale din zyada dikhte hain. Mutthi bhar baal girna, maang chaudi hona ya chakatte bane to jaanch karaiye."
+    },
+    {
+      "question": "Dengue ya bukhar ke baad baal kyun jhadte hain?",
+      "answer": "Tez bukhar sharir ke liye jhatka hai, jisse bahut se baal ek saath aaraam ki awastha me chale jaate hain aur 2-3 mahine baad girte hain. Ye aam taur par 3 se 6 mahine me ruk jaata hai. Khoon ki kami ho to jhadna lamba chal sakta hai, isliye CBC aur ferritin ek baar karaiye."
+    },
+    {
+      "question": "Haemoglobin normal hai phir bhi iron kam ho sakta hai?",
+      "answer": "Haan. Sharir pehle jama iron (ferritin) khatam karta hai aur haemoglobin ko aakhir tak bachaata hai. Isliye haemoglobin normal hote hue bhi ferritin kam ho sakta hai, aur baal usi se jhadte hain."
+    },
+    {
+      "question": "Kya thyroid se baal jhadte hain?",
+      "answer": "Haan, sust aur tez dono thyroid baal girate hain. Ek saada TSH test, bina fasting, isse pakad leta hai. Dawa shuru hone ke baad baal theek hone me kuch mahine lagte hain."
+    },
+    {
+      "question": "Deoria me hair fall blood test ghar par ho sakta hai?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, report 24 ghante ke andar WhatsApp par."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me baal jhadne ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/blood-test/deoria",
+            "label": "Blood test in Deoria — kahan aur kaise karayein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/vitamin-b12-d-test/deoria",
+            "label": "Vitamin D, B12 aur CBC test"
+          },
+          {
+            "href": "/blogs/thyroid-test/deoria",
+            "label": "Thyroid test normal range — TSH, T3, T4"
+          },
+          {
+            "href": "/blogs/pcod-hormone-test/deoria",
+            "label": "PCOD test — kaun se hormone test"
+          },
+          {
+            "href": "/blogs/weight-gain-test/deoria",
+            "label": "Wazan badhne me kaun se blood test"
+          }
+        ]
+      }
+    ]
+  }
+}

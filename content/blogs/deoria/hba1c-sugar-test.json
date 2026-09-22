@@ -272,6 +272,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Blood Sugar, HbA1c aur har test ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Fasting aur sample se pehle ki taiyaari" }
         ]
@@ -283,7 +284,9 @@
           { "href": "/blogs/lipid-profile-test/deoria", "label": "Cholesterol normal range — lipid profile report" },
           { "href": "/blogs/diabetes-thyroid-test/deoria", "label": "Sugar, thyroid aur lipid ki jaanch — kitni baar" },
           { "href": "/blogs/blood-test-fasting/deoria", "label": "Blood test se pehle fasting — kitne ghante" },
-          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" }
+          { "href": "/blogs/blood-test-report/deoria", "label": "Blood test report kaise padhein — H, L aur range" },
+          { "href": "/blogs/weight-gain-test/deoria", "label": "Wazan badhne ka test — motape me kaun se blood test" },
+          { "href": "/blogs/fatty-liver-test/deoria", "label": "Fatty liver me kaun se blood test karayein" }
         ]
       }
     ]

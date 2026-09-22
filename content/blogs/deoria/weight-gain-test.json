@@ -1,0 +1,372 @@
+{
+  "title": "Wazan Badhne Ka Test — Kaun Se Blood Test, Deoria",
+  "description": "Wazan badhne ya motape me kaun se blood test karayein — thyroid, sugar, cholesterol, liver aur PCOD, BMI aur kamar ka naap, aur Deoria me ghar par sample.",
+  "keywords": [
+    "wazan badhne ka test",
+    "motape me kaun sa test",
+    "weight gain blood test",
+    "obesity blood test",
+    "wazan badhne ka karan",
+    "thyroid se wazan badhna",
+    "BMI kitna hona chahiye",
+    "pet ki charbi aur sugar",
+    "weight gain test in Deoria",
+    "wazan kam karne se pehle test",
+    "वजन बढ़ने की जांच"
+  ],
+  "publishedAt": "2026-09-22",
+  "order": 310,
+  "takeaways": [
+    "Bharatiya logon me BMI 23 se upar zyada wazan aur 25 se upar motapa maana jaata hai — videshi chart se kam. Kamar ka naap purushon me 90 cm aur mahilaon me 80 cm se zyada ho to jokhim badhta hai.",
+    "Wazan badhne me sabse kaam ke test: TSH, fasting sugar + HbA1c, lipid profile aur LFT. Mahilaon me periods gadbad hon to PCOD ke hormone.",
+    "Zyadatar wazan khaane, kam chalne-phirne aur neend se badhta hai — lekin thyroid aur PCOD jaise kaaran pakadne se ilaaj aasaan ho jaata hai.",
+    "Motape ka asli nuksan chupke se hota hai — sugar, fatty liver aur cholesterol. Isliye wazan ki jaanch sirf 'kaaran' ke liye nahi, 'asar' dekhne ke liye bhi hai."
+  ],
+  "sections": [
+    {
+      "id": "wazan-kab-zyada-bmi-deoria",
+      "heading": "Wazan Kab Zyada Hai — BMI Aur Kamar Ka Naap Bharatiya Hisaab Se",
+      "lead": "Taraazu ka number akela kaafi nahi. Lambai aur kamar ke saath dekhiye.",
+      "blocks": [
+        "BMI (Body Mass Index) wazan ko lambai ke hisaab se dekhta hai: wazan (kilo) ko lambai (metre) ke varg se bhaag dijiye. Jaise 70 kilo aur 1.65 metre lambai: 70 ÷ (1.65 × 1.65) = lagbhag 25.7. Bharatiya aur doosre dakshin asiayi logon me sugar aur dil ki bimari kam wazan par hi shuru ho jaati hai, isliye yahan ki seema videshi chart se neeche rakhi jaati hai.",
+        {
+          "table": {
+            "caption": "Vayaskon ke liye BMI — Bharatiya seema (aam taur par)",
+            "head": [
+              "BMI",
+              "Matlab"
+            ],
+            "rows": [
+              [
+                "18.5 se kam",
+                "Kam wazan"
+              ],
+              [
+                "18.5 – 22.9",
+                "Theek"
+              ],
+              [
+                "23 – 24.9",
+                "Zyada wazan (overweight)"
+              ],
+              [
+                "25 ya zyada",
+                "Motapa (obesity)"
+              ]
+            ]
+          }
+        },
+        "Kamar ka naap BMI se bhi zyada kaam ki cheez hai, kyunki pet ke andar ki charbi hi sugar, fatty liver aur dil ki bimari se sabse zyada judi hai. Naabhi ke upar, saans chhodte hue fita lagaiye. Purushon me 90 cm (lagbhag 35.5 inch) aur mahilaon me 80 cm (lagbhag 31.5 inch) se zyada ho to jaanch kara lijiye — bhale BMI theek ho. Deoria me isse aksar \"pet nikalna\" kehte hain, aur isi ko sabse kam gambhirta se liya jaata hai."
+      ]
+    },
+    {
+      "id": "weight-gain-blood-test-list-deoria",
+      "heading": "Weight Gain Blood Test — Wazan Badhne Me Kaun Se Test Karayein",
+      "lead": "Kuch test kaaran dhoondhte hain, kuch nuksan. Dono zaroori.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Wazan badhne ya motape me aam blood test",
+            "head": [
+              "Test",
+              "Kya dekhta hai",
+              "Kaaran ya asar"
+            ],
+            "rows": [
+              [
+                "TSH (thyroid)",
+                "Sust thyroid",
+                "Kaaran"
+              ],
+              [
+                "Fasting sugar + HbA1c",
+                "Diabetes ya prediabetes",
+                "Asar (aur kaaran bhi — insulin ki gadbad)"
+              ],
+              [
+                "Lipid Profile",
+                "Cholesterol, triglycerides",
+                "Asar"
+              ],
+              [
+                "LFT (SGPT, SGOT)",
+                "Fatty liver ka ishaara",
+                "Asar"
+              ],
+              [
+                "CBC",
+                "Khoon ki kami — thakan aur kam chalna-phirna",
+                "Kaaran me madad"
+              ],
+              [
+                "Vitamin D",
+                "Motape me aksar kam",
+                "Asar"
+              ],
+              [
+                "Uric acid",
+                "Motape aur gout ka jod",
+                "Asar"
+              ],
+              [
+                "PCOD hormone (mahilaon me)",
+                "Testosterone, LH, FSH, prolactin",
+                "Kaaran"
+              ]
+            ]
+          }
+        },
+        "Fasting sugar aur lipid profile ke liye 10-12 ghante khaali pet sample dena hota hai, isliye ye saare test ek hi subah ek sample me kara lijiye. Motapa bahut tezi se badh raha ho, chehra gol aur laal ho, pet par baingni dhaariyaan hon aur BP badha ho — to doctor cortisol jaisi khaas jaanch bhi likh sakte hain. Ye kam hota hai, aur iska faisla doctor ka hai.",
+        [
+          "Kai test ek saath karaane ho to package aksar sasta padta hai — ",
+          {
+            "text": "full body checkup guide",
+            "href": "/blogs/full-body-checkup/deoria#kis-ke-liye-kaun-sa-package-deoria"
+          },
+          " me dekhiye kaun sa package kiske liye."
+        ]
+      ]
+    },
+    {
+      "id": "thyroid-se-wazan-badhna-deoria",
+      "heading": "Thyroid Se Wazan Badhna — Kitna Sach, Kitna Mithak",
+      "lead": "Thyroid wazan badhata hai, lekin utna nahi jitna maana jaata hai.",
+      "blocks": [
+        "Sust thyroid (hypothyroid) sharir ki raftaar dheemi karta hai — thakan, thand lagna, kabz, sujan aur kuch kilo wazan badhna. Isme badha wazan aksar paani aur sujan ka hota hai, aur dawa se thyroid theek hone par kuch kilo kam bhi hota hai. Lekin 15-20 kilo ka motapa akele thyroid se kam hi hota hai.",
+        "Isliye TSH normal aaye to wazan ka kaaran khaane, chalne-phirne aur neend me dhoondhiye. Aur TSH badha aaye to dawa ke saath bhi khaana-kasrat utni hi zaroori hai.",
+        [
+          "TSH ki normal range ",
+          {
+            "text": "thyroid test guide",
+            "href": "/blogs/thyroid-test/deoria#tsh-normal-range-table-deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "pcod-aur-wazan-mahila-deoria",
+      "heading": "Mahilaon Me Wazan, Periods Aur PCOD",
+      "lead": "Wazan badhe, periods aage-peechhe hon, chehre par baal ya muhaase — teeno saath ho to PCOD dekhiye.",
+      "blocks": [
+        "PCOD me sharir insulin par theek se asar nahi karta, isliye wazan khaas kar pet par badhta hai, aur wazan badhne se PCOD aur bigadta hai. Achchhi baat ye hai ki 5-10% wazan kam hone par kai mahilaon me periods khud niyamit hone lagte hain.",
+        {
+          "list": [
+            "Hormone test (LH, FSH) aam taur par period ke doosre se paanchve din.",
+            "PCOD me fasting sugar aur HbA1c zaroor — PCOD wali mahilaon me sugar jaldi aata hai.",
+            "Lipid profile bhi — triglycerides aksar badhe milte hain."
+          ]
+        },
+        [
+          "PCOD ke saare test aur din ",
+          {
+            "text": "PCOD test guide",
+            "href": "/blogs/pcod-hormone-test/deoria"
+          },
+          " me hain."
+        ]
+      ]
+    },
+    {
+      "id": "motape-ka-chupa-nuksan-deoria",
+      "heading": "Motape Ka Chupa Nuksan — Sugar, Fatty Liver Aur Cholesterol",
+      "lead": "Pet ki charbi chupke se teen jagah kaam karti hai.",
+      "blocks": [
+        "Pet ke andar ki charbi sirf dikhne ki baat nahi — ye liver me jam kar fatty liver banati hai, insulin ka asar ghata kar sugar badhati hai, aur triglycerides badha kar HDL (achchha cholesterol) ghatati hai. Ye teeno bina lakshan ke saalon chalte hain.",
+        {
+          "table": {
+            "caption": "Report me kya dikhe to motape ka asar samjhein",
+            "head": [
+              "Report",
+              "Kya dikhta hai"
+            ],
+            "rows": [
+              [
+                "HbA1c",
+                "5.7 – 6.4% = prediabetes; 6.5% ya zyada = diabetes"
+              ],
+              [
+                "Triglycerides",
+                "150 mg/dL se zyada"
+              ],
+              [
+                "HDL",
+                "Purush 40 se kam, mahila 50 se kam"
+              ],
+              [
+                "SGPT",
+                "Range se upar — fatty liver ka ishaara (jaanch se pakka hota hai)"
+              ],
+              [
+                "Uric acid",
+                "Range se upar"
+              ]
+            ]
+          }
+        },
+        [
+          "Prediabetes aaya to kya karein, wo ",
+          {
+            "text": "HbA1c guide ke prediabetes wale hisse",
+            "href": "/blogs/hba1c-sugar-test/deoria#prediabetes-aaya-deoria"
+          },
+          " me hai. SGPT badha ho to ",
+          {
+            "text": "fatty liver me kaun se test",
+            "href": "/blogs/fatty-liver-test/deoria"
+          },
+          " dekhiye, aur triglycerides ke liye ",
+          {
+            "text": "lipid profile guide",
+            "href": "/blogs/lipid-profile-test/deoria#triglycerides-high-deoria"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "wazan-kam-karne-se-pehle-test-deoria",
+      "heading": "Wazan Kam Karne Se Pehle Test Kyun — Diet Ya Dawa Shuru Karne Se Pehle",
+      "lead": "Shuruaati report hi baad me dikhati hai ki mehnat ka faayda hua ya nahi.",
+      "blocks": [
+        "Diet, gym, yoga ya wazan ki dawa — kuch bhi shuru karne se pehle ek baar ki jaanch do kaam karti hai. Pehla, koi chhupa kaaran (thyroid, PCOD) ho to pehle wahi theek ho. Doosra, 3-6 mahine baad dobara jaanch karane par sirf wazan nahi, HbA1c, triglycerides aur SGPT ka sudhaar bhi dikhta hai — aur yahi asli faayda hai.",
+        {
+          "list": [
+            "Sugar ki dawa chal rahi ho aur diet bahut kam kar rahe hain — doctor se dose poochhiye, warna sugar gir sakta hai.",
+            "Bahut tez crash diet se baal jhadte hain aur pathri ka khatra badhta hai — mahine me 2-4 kilo se zyada ghatana theek nahi.",
+            "Wazan ghatane ki dawa ya injection sirf doctor ki salah aur jaanch ke baad."
+          ]
+        },
+        [
+          "Crash diet ke baad baal jhadne ki baat ",
+          {
+            "text": "baal jhadne ka blood test",
+            "href": "/blogs/hair-fall-test/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "dawa-se-wazan-badhna-deoria",
+      "heading": "Dawaiyan Jo Wazan Badhaati Hain — Aur Bina Koshish Wazan Girna",
+      "lead": "Wazan ka badalna kabhi dawa ka asar hota hai, aur kabhi ulta — wazan girna — bimari ka ishaara.",
+      "blocks": [
+        "Kuch dawaiyan chupke se wazan badhaati hain: steroid (dama, jodon ke dard ya chamdi ki bimari me lambe samay tak), kuch depression aur neend ki dawaiyan, mirgi ki kuch dawaiyan, insulin aur sugar ki kuch goliyaan, aur kuch garbhnirodhak goliyaan. Dawa shuru hone ke baad wazan tezi se badha ho to doctor ko bataiye — aksar doosri dawa ka vikalp hota hai. Dawa khud band mat kijiye.",
+        {
+          "list": [
+            "Bina koshish ke 6 mahine me 5% se zyada wazan girna (jaise 60 kilo se 57 se neeche) — ye bhi jaanch maangta hai.",
+            "Wazan girne ke saath bahut pyaas aur baar-baar peshab — sugar ka shak; fasting sugar aur HbA1c.",
+            "Wazan girne ke saath dhadkan tez, garmi lagna, haath kaanpna — tez thyroid; TSH.",
+            "Wazan girne ke saath lamba bukhar, khaansi ya raat me paseena — doctor ko jaldi dikhaiye; ye blood test se aage ki jaanch maangta hai."
+          ]
+        },
+        "Deoria me bahut se log wazan girne ko \"kamzori\" ya \"kaam ki thakan\" samajh lete hain. Ek saadi jaanch — CBC, sugar, TSH aur LFT — kaaran ki disha bata deti hai."
+      ]
+    },
+    {
+      "id": "weight-gain-test-ghar-par-deoria",
+      "heading": "Weight Gain Test In Deoria — Sample Ghar Par",
+      "lead": "Ek fasting sample me saare test.",
+      "blocks": [
+        "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        {
+          "list": [
+            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Slot subah 6 baje se — 10-12 ghante fasting ke baad sample, phir naashta.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
+            "Payment sample ke waqt, cash ya UPI se."
+          ]
+        },
+        [
+          "Test ka daam ",
+          {
+            "text": "Deoria ki rate list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " par, booking ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " se. Fasting ke niyam ",
+          {
+            "text": "blood test se pehle fasting",
+            "href": "/blogs/blood-test-fasting/deoria"
+          },
+          " me."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Wazan badhne par kaun sa blood test karana chahiye?",
+      "answer": "Aam taur par TSH (thyroid), fasting sugar aur HbA1c, lipid profile, LFT, CBC aur Vitamin D. Mahilaon me periods aniyamit hon to PCOD ke hormone bhi. Sugar aur lipid ke liye 10-12 ghante fasting chahiye."
+    },
+    {
+      "question": "Bharatiya logon ke liye BMI kitna hona chahiye?",
+      "answer": "Bharatiya vayaskon me BMI 18.5 se 22.9 theek maana jaata hai, 23 se 24.9 zyada wazan aur 25 ya zyada motapa. Kamar ka naap purushon me 90 cm aur mahilaon me 80 cm se kam rehna chahiye."
+    },
+    {
+      "question": "Kya thyroid se wazan badhta hai?",
+      "answer": "Haan, sust thyroid se kuch kilo wazan badhta hai, aksar paani aur sujan ki wajah se. Lekin bahut zyada motapa akele thyroid se kam hota hai. TSH normal ho to wazan ka kaaran khaana, kasrat aur neend me dekhiye."
+    },
+    {
+      "question": "PCOD me wazan kyun badhta hai?",
+      "answer": "PCOD me sharir insulin par theek se asar nahi karta, isliye wazan khaas kar pet par badhta hai. 5-10% wazan kam hone par kai mahilaon me periods niyamit hone lagte hain. PCOD me sugar aur lipid ki jaanch bhi zaroori hai."
+    },
+    {
+      "question": "Wazan kam karne se pehle test karana zaroori hai?",
+      "answer": "Behtar hai. Isse thyroid ya PCOD jaisa kaaran pehle pakda jaata hai, aur 3-6 mahine baad dobara jaanch se HbA1c, triglycerides aur liver ka sudhaar dikhta hai. Sugar ki dawa chal rahi ho to diet badalne se pehle doctor se zaroor poochhiye."
+    },
+    {
+      "question": "Deoria me wazan ki jaanch ke test ghar par ho sakte hain?",
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, report 24 ghante ke andar WhatsApp par."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Is guide me wazan aur motape ki blood jaanch hai. Booking aur rate service page par hain.",
+    "groups": [
+      {
+        "title": "Deoria Lab Test",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/blood-test/deoria",
+            "label": "Blood test in Deoria — kahan aur kaise karayein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria ki rate list"
+          }
+        ]
+      },
+      {
+        "title": "Isse Jude Guide",
+        "links": [
+          {
+            "href": "/blogs/fatty-liver-test/deoria",
+            "label": "Fatty liver me kaun se blood test"
+          },
+          {
+            "href": "/blogs/hba1c-sugar-test/deoria",
+            "label": "HbA1c normal range aur sugar level chart"
+          },
+          {
+            "href": "/blogs/lipid-profile-test/deoria",
+            "label": "Cholesterol normal range — lipid profile"
+          },
+          {
+            "href": "/blogs/pcod-hormone-test/deoria",
+            "label": "PCOD test — kaun se hormone test"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -294,6 +294,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, Vitamin D aur har test ka daam" },
           { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }
         ]
@@ -303,7 +304,8 @@
         "links": [
           { "href": "/blogs/cbc-test/deoria", "label": "CBC test normal range — report kaise padhein" },
           { "href": "/blogs/dengue-typhoid-test/deoria", "label": "Dengue aur typhoid test — bukhar ke kis din kaun sa" },
-          { "href": "/blogs/home-sample-collection/deoria", "label": "Deoria me ghar par blood test kaise hota hai", "sub": "Bachche ka sample ghar par" }
+          { "href": "/blogs/home-sample-collection/deoria", "label": "Deoria me ghar par blood test kaise hota hai", "sub": "Bachche ka sample ghar par" },
+          { "href": "/blogs/jaundice-test/deoria", "label": "Peeliya (jaundice) ka test — bilirubin aur LFT" }
         ]
       }
     ]

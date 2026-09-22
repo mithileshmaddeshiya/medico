@@ -303,6 +303,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, thyroid, sugar aur har test ka daam" },
           { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }
         ]
@@ -315,7 +316,8 @@
           { "href": "/blogs/hiv-hepatitis-test/deoria", "label": "HIV aur Hepatitis B test — kab aur kaise", "sub": "Pregnancy ki screening aur report ka matlab" },
           { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
           { "href": "/blogs/women-health-checkup/deoria", "label": "Mahilaon ka health checkup — umar ke hisaab se" },
-          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" }
+          { "href": "/blogs/pre-operative-test/deoria", "label": "Operation se pehle kaun se blood test" },
+          { "href": "/blogs/pre-marriage-test/deoria", "label": "Shaadi se pehle blood test — thalassemia aur blood group" }
         ]
       }
     ]

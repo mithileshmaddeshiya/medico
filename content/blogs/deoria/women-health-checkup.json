@@ -248,6 +248,7 @@
         "title": "Deoria Lab Test",
         "links": [
           { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }
         ]
@@ -258,7 +259,9 @@
           { "href": "/blogs/pcod-hormone-test/deoria", "label": "PCOD test — kaun se hormone test karayein" },
           { "href": "/blogs/pregnancy-blood-test/deoria", "label": "Pregnancy me kaun se blood test hote hain" },
           { "href": "/blogs/thyroid-test/deoria", "label": "Thyroid test normal range — TSH, T3, T4" },
-          { "href": "/blogs/vitamin-b12-d-test/deoria", "label": "Vitamin D, B12 aur CBC test" }
+          { "href": "/blogs/vitamin-b12-d-test/deoria", "label": "Vitamin D, B12 aur CBC test" },
+          { "href": "/blogs/hair-fall-test/deoria", "label": "Baal jhadne ka blood test — kaun sa karayein" },
+          { "href": "/blogs/pre-marriage-test/deoria", "label": "Shaadi se pehle blood test — thalassemia aur blood group" }
         ]
       }
     ]

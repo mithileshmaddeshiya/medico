@@ -72,6 +72,7 @@ const GUIDE_FULL_BODY = "/blogs/full-body-checkup/deoria";
 const GUIDE_LIVER_KIDNEY = "/blogs/liver-kidney-test/deoria";
 const GUIDE_FASTING = "/blogs/blood-test-fasting/deoria";
 const GUIDE_REPORT = "/blogs/blood-test-report/deoria";
+const GUIDE_BLOOD_TEST = "/blogs/blood-test/deoria";
 // Added once Gorakhpur went live. This page names the city a dozen times as
 // the place people travel to — leaving it as plain text while we serve it was
 // the site's single most obvious missing link.
@@ -96,7 +97,9 @@ export const deoriaContent = [
           text: "Deoria me kaun sa test kab karayein",
           href: "/blogs/lab-test/deoria",
         },
-        ". Is page par booking, price aur test menu hai; wahan test chunna aur report samajhna.",
+        ". Is page par booking, price aur test menu hai; wahan test chunna aur report samajhna. Deoria me blood test kahan hota hai, online booking kaise hoti hai aur sheher ke kin ilaakon me sample ghar par liya jaata hai — wo ",
+        { text: "blood test in Deoria guide", href: GUIDE_BLOOD_TEST },
+        " me ek jagah likha hai.",
       ],
     ],
   },

@@ -532,6 +532,7 @@
             "href": "/lab-test/deoria",
             "label": "Deoria me lab test — booking aur free home collection"
           },
+          { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",
             "label": "Deoria me lab test ka price"
@@ -539,7 +540,9 @@
           {
             "href": "/contact",
             "label": "Contact — test chunne me madad"
-          }
+          },
+          { "href": "/blogs/jaundice-test/deoria", "label": "Peeliya (jaundice) ka test — bilirubin aur LFT" },
+          { "href": "/blogs/hair-fall-test/deoria", "label": "Baal jhadne ka blood test — kaun sa karayein" }
         ]
       }
     ]
