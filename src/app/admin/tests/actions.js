@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 
-import { removeCategory, saveCategory, saveTest, setTestActive } from "@/lib/admin/catalogStore";
+import { removeCategory, saveCategory, saveTest, setTestActive, setTestStock } from "@/lib/admin/catalogStore";
 import { actionUser, NotAllowed } from "@/lib/admin/guard";
 
 /**
@@ -66,6 +66,7 @@ export async function saveTestAction(a, b) {
         price: formData.get("price"),
         mrp: formData.get("mrp"),
         fasting: formData.get("fasting") === "on",
+        inStock: formData.get("inStock") === "on",
         icon: formData.get("icon"),
         tint: formData.get("tint"),
         sortOrder: formData.get("sortOrder"),
@@ -100,6 +101,22 @@ export async function toggleTestAction(a, b) {
     refreshPublicPages();
 
     return { ok: true, message: active ? "Back on the site." : "Hidden from the site." };
+  });
+}
+
+export async function toggleStockAction(a, b) {
+  const formData = form(a, b);
+
+  return wrap(async () => {
+    const user = await actionUser("editor");
+    const inStock = formData.get("inStock") === "1";
+
+    await setTestStock(formData.get("id"), inStock, { user });
+
+    revalidatePath("/admin/tests");
+    refreshPublicPages();
+
+    return { ok: true, message: inStock ? "Marked in stock." : "Marked out of stock." };
   });
 }
 

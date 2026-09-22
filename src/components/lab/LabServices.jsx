@@ -289,7 +289,7 @@ export default function LabServices({
                 <SwiperSlide key={t.id} className="h-auto">
                   <TestCard
                     test={t}
-                    qty={t.price ? (cartItems[t.id] ?? 0) : 0}
+                    qty={t.price && t.inStock !== false ? (cartItems[t.id] ?? 0) : 0}
                     onEnquire={() => setBooking(t.name)}
                   />
                 </SwiperSlide>
@@ -448,7 +448,16 @@ function TestCard({ test: t, qty, onEnquire }) {
           )}
         </div>
 
-        {t.price ? (
+        {t.price && t.inStock === false ? (
+          // Marked out of stock in the admin panel. The price stays visible;
+          // the cart does not take it (priceCart refuses it on the server too).
+          <span
+            aria-disabled="true"
+            className="inline-flex h-9 w-[128px] shrink-0 cursor-not-allowed items-center justify-center rounded-full bg-slate-100 text-[12.5px] font-bold text-slate-500 ring-1 ring-slate-200"
+          >
+            Out of stock
+          </span>
+        ) : t.price ? (
           <div className="w-[128px] shrink-0">
             <AddToCartControl test={t} qty={qty} block />
           </div>

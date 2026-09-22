@@ -28,10 +28,11 @@ import {
 } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
-// Cities are local data now, so every page we serve is known at build time.
-// A slug that is not in the list is a city we do not serve → a real 404, which
-// the page already handles by calling notFound() on an unknown slug.
-export const dynamicParams = false;
+// The file's cities are prerendered at build (generateStaticParams below). A
+// city added later in the admin panel is not known at build time, so other
+// slugs are rendered on first request instead of being refused. A slug that
+// is in neither list is still a real 404: the page calls notFound() on it.
+export const dynamicParams = true;
 
 // The test cards and chips come from MySQL (src/lib/testCatalog.js). Pages stay
 // prerendered and rebuild in the background at most once a minute, so a price
@@ -289,7 +290,8 @@ const diagnosticLabNode = (city) => {
         description: test.sub,
         price: test.price,
         priceCurrency: "INR",
-        availability: "https://schema.org/InStock",
+        availability:
+          test.inStock === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
         // Where the offer is actually bookable. An Offer with no url is a price
         // with nowhere to go; #tests is the anchor on the price grid.
         url: `${id.url}#tests`,

@@ -51,7 +51,11 @@ export const slugifyId = (value) =>
 
 /* ── Reading ──────────────────────────────────────────────────────────────── */
 
-export async function listTests({ search = "", category = null, includeDeleted = false, status = null } = {}) {
+/**
+ * `stock` is "in" or "out" (anything else = both). `status` narrows to one
+ * status value — active, hidden, archived, deleted.
+ */
+export async function listTests({ search = "", category = null, includeDeleted = false, status = null, stock = null } = {}) {
   const where = [status ? "t.status = ?" : visible("t", includeDeleted)];
   const params = [];
   if (status) params.push(status);
@@ -64,6 +68,10 @@ export async function listTests({ search = "", category = null, includeDeleted =
   if (category) {
     where.push("EXISTS (SELECT 1 FROM lab_test_categories c WHERE c.test_id = t.id AND c.category_key = ?)");
     params.push(category);
+  }
+  if (stock === "in" || stock === "out") {
+    where.push("t.in_stock = ?");
+    params.push(stock === "in" ? 1 : 0);
   }
 
   const [rows] = await query(
@@ -161,6 +169,7 @@ export function validateTest(input) {
       mrp,
       discount,
       fasting: input.fasting ? 1 : 0,
+      inStock: input.inStock === false ? 0 : 1,
       icon: String(input.icon ?? "").trim().slice(0, 40) || null,
       tint: String(input.tint ?? "").trim().slice(0, 40) || null,
       sortOrder: Number(input.sortOrder ?? 0) || 0,
@@ -193,17 +202,18 @@ export async function saveTest(input, { user } = {}) {
     await query(
       `UPDATE lab_tests SET
          name = ?, includes = ?, is_package = ?, params = ?, price = ?, mrp = ?,
-         discount_pct = ?, fasting = ?, icon = ?, tint = ?, sort_order = ?,
+         discount_pct = ?, fasting = ?, in_stock = ?, icon = ?, tint = ?, sort_order = ?,
          description = ?, meta_title = ?, meta_description = ?, image_media_id = ?
        WHERE id = ?`,
       [
         value.name, value.includes, value.isPackage, value.params, value.price, value.mrp,
-        value.discount, value.fasting, value.icon, value.tint, value.sortOrder,
+        value.discount, value.fasting, value.inStock, value.icon, value.tint, value.sortOrder,
         value.description, value.metaTitle, value.metaDescription, value.imageMediaId, value.id,
       ]
     );
 
     const priceMoved = Number(existing.price) !== Number(value.price);
+    const stockMoved = Boolean(existing.in_stock) !== Boolean(value.inStock);
     await audit({
       user,
       action: "update",
@@ -213,20 +223,22 @@ export async function saveTest(input, { user } = {}) {
       // edit in this panel that takes money differently on the next checkout.
       summary: priceMoved
         ? `${value.name}: price ₹${existing.price ?? "—"} → ₹${value.price ?? "—"}`
-        : `${value.name} updated`,
+        : stockMoved
+          ? `${value.name}: ${value.inStock ? "back in stock" : "marked out of stock"}`
+          : `${value.name} updated`,
       before: existing,
       after: value,
     });
   } else {
     await query(
       `INSERT INTO lab_tests
-         (id, name, includes, is_package, params, price, mrp, discount_pct, fasting,
+         (id, name, includes, is_package, params, price, mrp, discount_pct, fasting, in_stock,
           icon, tint, sort_order, active, status, description, meta_title,
           meta_description, image_media_id)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 'active', ?, ?, ?, ?)`,
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 'active', ?, ?, ?, ?)`,
       [
         value.id, value.name, value.includes, value.isPackage, value.params, value.price,
-        value.mrp, value.discount, value.fasting, value.icon, value.tint, value.sortOrder,
+        value.mrp, value.discount, value.fasting, value.inStock, value.icon, value.tint, value.sortOrder,
         value.description, value.metaTitle, value.metaDescription, value.imageMediaId,
       ]
     );
@@ -280,6 +292,23 @@ export async function setTestActive(id, active, { user } = {}) {
     entity: "lab_tests",
     entityId: id,
     summary: active ? "shown on the site" : "hidden from the site",
+  });
+  return { ok: true };
+}
+
+/**
+ * In stock / out of stock, without touching anything else. Out of stock keeps
+ * the card on the site but takes it out of the cart and checkout — see
+ * priceCart in src/lib/labCart.js.
+ */
+export async function setTestStock(id, inStock, { user } = {}) {
+  await query("UPDATE lab_tests SET in_stock = ? WHERE id = ?", [inStock ? 1 : 0, String(id)]);
+  await audit({
+    user,
+    action: "update",
+    entity: "lab_tests",
+    entityId: id,
+    summary: inStock ? "back in stock" : "marked out of stock",
   });
   return { ok: true };
 }

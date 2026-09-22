@@ -125,6 +125,13 @@ export default function TestForm({ test, categories, action }) {
         <Card title="Price">
           <div className="space-y-4">
             <Checkbox
+              name="inStock"
+              defaultChecked={test ? test.in_stock !== 0 : true}
+              label="In stock"
+              hint="Untick when this test cannot be booked right now. The card stays on the site and says “Out of stock”, but it cannot be added to the cart or paid for. To take the card off the site entirely, use Hide on the list instead."
+            />
+
+            <Checkbox
               checked={callForPrice}
               onChange={(event) => setCallForPrice(event.target.checked)}
               name="callForPrice"

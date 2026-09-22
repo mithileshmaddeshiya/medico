@@ -9,8 +9,8 @@
  * The functions stay async so their many callers (pages, layouts, sitemap)
  * keep working unchanged; there is just nothing to await any more. 
  */
-import { LAB_CITIES, slugify } from "@/data/lab/cities";
-import { cityOverrides } from "@/lib/admin/cityStore";
+import { LAB_CITIES, byOrderThenName, slugify } from "@/data/lab/cities";
+import { cityOverrides, customCities } from "@/lib/admin/cityStore";
 
 export { slugify };
 
@@ -37,10 +37,18 @@ let memo = null; // { at, cities }
 async function citiesWithOverrides() {
   if (memo && Date.now() - memo.at < MEMO_MS) return memo.cities;
 
-  const overrides = await cityOverrides();
+  const [overrides, custom] = await Promise.all([cityOverrides(), customCities()]);
   const cities = [];
 
-  for (const city of LAB_CITIES) {
+  // The file's cities plus the published ones added in the panel (table
+  // lab_cities). A panel city can never shadow a file city with the same slug.
+  const fileSlugs = new Set(LAB_CITIES.map((city) => city.slug));
+  const all = [
+    ...LAB_CITIES,
+    ...custom.filter((city) => city.published && !fileSlugs.has(city.slug)),
+  ].sort(byOrderThenName);
+
+  for (const city of all) {
     const o = overrides.get(city.slug);
     if (!o) {
       cities.push(city);

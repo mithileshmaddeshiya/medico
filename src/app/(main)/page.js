@@ -261,7 +261,8 @@ const labNode = (cities, tests) => ({
       description: test.sub,
       price: test.price,
       priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
+      availability:
+        test.inStock === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       // Where the offer is bookable. An Offer with no url is a price with
       // nowhere to go; #tests is the anchor on the price grid below.
       url: `${HOME_URL}#tests`,

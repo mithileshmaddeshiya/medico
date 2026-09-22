@@ -2,11 +2,13 @@ import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 import {
   BarChart3,
+  ExternalLink,
   FileText,
   Flag,
   History,
   ImageIcon,
   Link2,
+  LogOut,
   MapPin,
   Receipt,
   Search,
@@ -15,6 +17,8 @@ import {
   TestTube2,
   Users,
 } from "lucide-react";
+
+import AdminShell from "@/components/admin/AdminShell";
 
 import { signOutAction } from "./actions";
 import { can } from "@/lib/admin/auth";
@@ -89,107 +93,96 @@ export default async function AdminLayout({ children }) {
   // draws its own full-screen chrome, so the shell simply gets out of the way.
   if (!user) return <>{children}</>;
 
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto flex max-w-[1600px]">
-        <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-r border-slate-200 bg-white lg:flex">
-          <div className="border-b border-slate-100 px-5 py-4">
-            <Link href="/admin" className="block">
-              <span className="text-[15px] font-extrabold tracking-tight text-slate-900">
-                Medico<span className="text-emerald-600">Bharat</span>
-              </span>
-              <span className="mt-0.5 block text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-                Admin
-              </span>
-            </Link>
-          </div>
+  // The sidebar's contents, rendered here on the server (role-filtered links,
+  // the signed-in user, the sign-out Server Action). AdminShell owns only
+  // whether it is open — see src/components/admin/AdminShell.jsx.
+  const initial = (user.name || user.email || "?").trim().charAt(0).toUpperCase();
 
-          <nav className="min-h-0 flex-1 overflow-y-auto px-3 py-4">
-            {SECTIONS.map((section) => {
-              const items = section.items.filter((item) => !item.role || can(user, item.role));
-              if (!items.length) return null;
+  // The sidebar's contents, rendered here on the server (role-filtered links,
+  // the signed-in user, the sign-out Server Action). AdminShell owns only
+  // whether it is expanded — see src/components/admin/AdminShell.jsx. The
+  // sb-* classes are what the collapsed icon rail hides or re-centres; the
+  // rules are in the "Admin sidebar" block of src/app/globals.css.
+  const sidebar = (
+    <>
+      <nav className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden px-3 py-4">
+        {SECTIONS.map((section) => {
+          const items = section.items.filter((item) => !item.role || can(user, item.role));
+          if (!items.length) return null;
 
-              return (
-                <div key={section.title} className="mb-5">
-                  <p className="px-2 pb-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400">
-                    {section.title}
-                  </p>
-                  <ul className="space-y-0.5">
-                    {items.map(({ href, label, Icon }) => (
-                      <li key={href}>
-                        <Link
-                          href={href}
-                          className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
-                        >
-                          <Icon className="h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.2} />
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </nav>
-
-          <div className="border-t border-slate-100 px-4 py-3">
-            <p className="truncate text-[12.5px] font-semibold text-slate-800">
-              {user.name || user.email}
-            </p>
-            <p className="text-[11.5px] capitalize text-slate-500">{user.role}</p>
-
-            <div className="mt-2.5 flex items-center gap-2">
-              <Link
-                href="/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[12px] font-semibold text-emerald-700 hover:text-emerald-800"
-              >
-                View site
-              </Link>
-              <span className="text-slate-300" aria-hidden>
-                ·
-              </span>
-              <form action={signOutAction}>
-                <button
-                  type="submit"
-                  className="text-[12px] font-semibold text-slate-500 hover:text-slate-800"
-                >
-                  Sign out
-                </button>
-              </form>
+          return (
+            <div key={section.title} className="sb-section mb-5">
+              <p className="sb-label px-2 pb-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400">
+                {section.title}
+              </p>
+              <ul className="space-y-0.5">
+                {items.map(({ href, label, Icon, exact }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      title={label}
+                      data-exact={exact ? "" : undefined}
+                      className="sb-link flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                    >
+                      <Icon className="sb-icon h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.2} />
+                      <span className="sb-label truncate">{label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        </aside>
+          );
+        })}
+      </nav>
 
-        {/* The same navigation on a phone. A back office that only works on a
-            desktop is one that does not get used when a lead comes in at 9pm,
-            which is when most of them do. */}
-        <div className="min-w-0 flex-1">
-          <header className="sticky top-0 z-30 flex items-center gap-3 overflow-x-auto border-b border-slate-200 bg-white/95 px-4 py-2.5 backdrop-blur lg:hidden">
-            {SECTIONS.flatMap((section) =>
-              section.items.filter((item) => !item.role || can(user, item.role))
-            ).map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-slate-600 hover:bg-slate-100"
-              >
-                {label}
-              </Link>
-            ))}
-            <form action={signOutAction} className="ml-auto">
-              <button type="submit" className="whitespace-nowrap px-2 text-[12.5px] font-semibold text-slate-500">
-                Sign out
-              </button>
-            </form>
-          </header>
+      <div className="sb-footer border-t border-slate-100 px-3 py-3">
+        <div className="sb-user flex items-center gap-2.5 px-1" title={`${user.name || user.email} · ${user.role}`}>
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-[13px] font-bold text-emerald-800">
+            {initial}
+          </span>
+          <span className="sb-label min-w-0">
+            <span className="block truncate text-[12.5px] font-semibold text-slate-800">
+              {user.name || user.email}
+            </span>
+            <span className="block text-[11.5px] capitalize text-slate-500">{user.role}</span>
+          </span>
+        </div>
 
-          <main className="px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-            <div className="mx-auto max-w-6xl space-y-6">{children}</div>
-          </main>
+        <div className="sb-actions mt-2.5 flex items-center gap-1">
+          <Link
+            href="/"
+            target="_blank"
+            rel="noreferrer"
+            title="View site"
+            className="sb-link flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold text-emerald-700 hover:bg-emerald-50 hover:text-emerald-800"
+          >
+            <ExternalLink className="h-3.5 w-3.5 shrink-0" strokeWidth={2.4} />
+            <span className="sb-label">View site</span>
+          </Link>
+          <form action={signOutAction}>
+            <button
+              type="submit"
+              title="Sign out"
+              className="sb-link flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-800"
+            >
+              <LogOut className="h-3.5 w-3.5 shrink-0" strokeWidth={2.4} />
+              <span className="sb-label">Sign out</span>
+            </button>
+          </form>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      {/* One sidebar for every screen size: on a desktop it collapses to an
+          icon rail and expands again; on a phone it is a slide-in drawer. */}
+      <AdminShell sidebar={sidebar}>
+        <main className="px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+          <div className="mx-auto max-w-6xl space-y-6">{children}</div>
+        </main>
+      </AdminShell>
 
       {/* The panel's own toast host. The public site mounts one in the root
           layout, but /admin renders inside that layout too — so this would be

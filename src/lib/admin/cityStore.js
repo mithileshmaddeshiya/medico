@@ -22,10 +22,19 @@
  *
  * A NULL column means "use the file's value", so an empty row changes nothing
  * and deleting an override restores the built-in copy exactly.
+ *
+ * ── CITIES ADDED FROM THE PANEL ──────────────────────────────────────────
+ * /admin/cities/new creates a row in `lab_cities` with the same facts a file
+ * entry has — name, state, localities, district context, PIN, coordinates,
+ * GBP link. They are validated here as strictly as the file's own normalise()
+ * would treat them (a half-filled coordinate pair or a non-Maps GBP link is
+ * refused with a message, not silently dropped), then built with that same
+ * function, so the page they get is the shared template like every other
+ * city. The file's cities stay file-only: their slugs cannot be created here.
  */
 import { revalidatePath } from "next/cache";
 
-import { LAB_CITIES } from "@/data/lab/cities";
+import { LAB_CITIES, buildCity, slugify } from "@/data/lab/cities";
 import { dbConfigured, query } from "@/lib/db";
 
 import { audit } from "./audit";
@@ -52,6 +61,228 @@ const dateOnly = (value) => (value ? String(value).slice(0, 10) : null);
  * make this screen a list of what somebody has edited rather than a list of
  * the site's city pages.
  */
+/* ── Cities added in the panel ──────────────────────────────────────────── */
+
+const FILE_SLUGS = new Set(LAB_CITIES.map((city) => city.slug));
+
+/** A lab_cities row as the fields a src/data/lab/cities.js entry would have. */
+function rowToFields(row) {
+  const lat = row.lat === null ? null : Number(row.lat);
+  const lng = row.lng === null ? null : Number(row.lng);
+  return {
+    slug: row.slug,
+    name: row.name,
+    state: row.state,
+    areas: parse(row.areas_json, []),
+    areaContext: row.area_context || undefined,
+    aliases: parse(row.aliases_json, undefined),
+    postalCode: row.postal_code || undefined,
+    geo: Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : undefined,
+    gbp: row.gbp || undefined,
+    order: Number(row.sort_order),
+    published: row.status === "published",
+  };
+}
+
+/**
+ * Every panel-added city (not deleted), built exactly like a file city, with
+ * `custom: true` and the raw facts for the edit form. Never throws — an
+ * unreachable database leaves the site on the file's cities alone.
+ */
+export async function customCities() {
+  if (!dbConfigured()) return [];
+  try {
+    const [rows] = await query("SELECT * FROM lab_cities WHERE status <> 'deleted' ORDER BY sort_order, name");
+    return rows
+      .map((row) => {
+        const fields = rowToFields(row);
+        const city = buildCity(fields);
+        return city && { ...city, custom: true, customStatus: row.status, facts: fields };
+      })
+      .filter(Boolean);
+  } catch (err) {
+    console.error("[cities] could not read panel cities", err);
+    return [];
+  }
+}
+
+const GBP = /^https:\/\/(?:www\.)?google\.[a-z.]+\/maps\/|^https:\/\/maps\.app\.goo\.gl\/|^https:\/\/goo\.gl\/maps\//;
+
+/** "Rudrapur, Barhaj\nLar" → ["Rudrapur", "Barhaj", "Lar"], de-duplicated. */
+const list = (value) => [
+  ...new Set(
+    String(value ?? "")
+      .split(/[\n,]/)
+      .map((item) => item.trim().replace(/\s+/g, " ").slice(0, 80))
+      .filter(Boolean)
+  ),
+];
+
+/**
+ * Validate a city's facts. `{ error }` or `{ value }` — never half of each.
+ * Every rule is one the file's normalise() applies silently; here a wrong
+ * value is sent back with a sentence instead of quietly dropped.
+ */
+export function validateCityFacts(input) {
+  const name = String(input.name ?? "").trim().replace(/\s+/g, " ").slice(0, 80);
+  if (name.length < 2) return { error: "The city needs a name." };
+
+  const slug = slugify(input.slug || name).slice(0, 120);
+  if (!slug) return { error: "That name does not make a usable URL. Type the URL part yourself." };
+  // /admin/cities/new is the create screen, so a city called "new" could never be edited.
+  if (slug === "new") return { error: "“new” is reserved. Pick another URL." };
+
+  const state = String(input.state ?? "").trim().slice(0, 80) || "Uttar Pradesh";
+
+  const areas = list(input.areas);
+  if (!areas.length) {
+    return {
+      error:
+        "Add at least one locality you actually collect from. They become the page's areaServed and fill the booking form's dropdown.",
+    };
+  }
+  if (areas.length > 40) return { error: "That is more than 40 localities — list only the ones you really cover." };
+
+  const postalCode = String(input.postalCode ?? "").trim();
+  if (postalCode && !/^\d{6}$/.test(postalCode)) return { error: "A PIN code is six digits." };
+
+  const latRaw = String(input.lat ?? "").trim();
+  const lngRaw = String(input.lng ?? "").trim();
+  let lat = null;
+  let lng = null;
+  if (latRaw || lngRaw) {
+    lat = Number(latRaw);
+    lng = Number(lngRaw);
+    if (!latRaw || !lngRaw || !Number.isFinite(lat) || !Number.isFinite(lng)) {
+      return { error: "Enter both latitude and longitude, or leave both empty." };
+    }
+    if (lat < 6 || lat > 38 || lng < 68 || lng > 98) {
+      return { error: "Those coordinates are not in India. Latitude comes first, e.g. 26.50, 83.78." };
+    }
+  }
+
+  const gbp = String(input.gbp ?? "").trim();
+  if (gbp && !GBP.test(gbp)) {
+    return {
+      error:
+        "That is not a Google Maps link. Use the page's public Maps URL (google.com/maps/place/… or maps.app.goo.gl/…), not the Business Profile dashboard.",
+    };
+  }
+
+  const order = Number(input.order);
+
+  return {
+    value: {
+      slug,
+      name,
+      state,
+      areas,
+      areaContext: String(input.areaContext ?? "").trim().slice(0, 80) || null,
+      aliases: list(input.aliases).slice(0, 10),
+      postalCode: postalCode || null,
+      lat,
+      lng,
+      gbp: gbp || null,
+      order: Number.isFinite(order) && String(input.order ?? "").trim() !== "" ? Math.round(order) : 1000,
+      status: input.status === "hidden" ? "hidden" : "published",
+    },
+  };
+}
+
+/** Clear every cache that lists cities, then the pages that show them. */
+async function refreshCity(slug) {
+  // Imported lazily: src/lib/labCities.js imports this module to read the
+  // overrides, so a static import back would be a cycle.
+  (await import("@/lib/labCities")).invalidateLabCities();
+
+  try {
+    revalidatePath(`/lab-test/${slug}`);
+    revalidatePath("/sitemap/lab-test.xml");
+    revalidatePath("/sitemap.xml");
+    // Every footer lists the cities, so adding or hiding one touches every page.
+    revalidatePath("/", "layout");
+  } catch {
+    /* outside a request scope */
+  }
+}
+
+const factParams = (value) => [
+  value.name, value.state, JSON.stringify(value.areas), value.areaContext,
+  value.aliases.length ? JSON.stringify(value.aliases) : null, value.postalCode,
+  value.lat, value.lng, value.gbp, value.order, value.status,
+];
+
+/** Create a city page. Refuses a slug the file or the table already has. */
+export async function createCity(input, { user } = {}) {
+  const { error, value } = validateCityFacts(input);
+  if (error) return { ok: false, error };
+
+  if (FILE_SLUGS.has(value.slug)) {
+    return { ok: false, error: `/lab-test/${value.slug} already exists. Edit that city instead.` };
+  }
+  const [existing] = await query("SELECT status FROM lab_cities WHERE slug = ?", [value.slug]);
+  if (existing[0]) {
+    return {
+      ok: false,
+      error:
+        existing[0].status === "deleted"
+          ? `/lab-test/${value.slug} was created before and removed. Pick another URL.`
+          : `/lab-test/${value.slug} already exists. Edit that city instead.`,
+    };
+  }
+
+  await query(
+    `INSERT INTO lab_cities
+       (name, state, areas_json, area_context, aliases_json, postal_code, lat, lng, gbp, sort_order, status, slug)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [...factParams(value), value.slug]
+  );
+
+  await audit({
+    user,
+    action: "create",
+    entity: "lab_cities",
+    entityId: value.slug,
+    summary: `added city page /lab-test/${value.slug}`,
+    after: value,
+  });
+
+  await refreshCity(value.slug);
+  return { ok: true, slug: value.slug };
+}
+
+/** Change the facts of a panel-added city. Its slug (the URL) is fixed. */
+export async function updateCityFacts(input, { user } = {}) {
+  const slug = String(input.slug ?? "");
+  const [rows] = await query("SELECT * FROM lab_cities WHERE slug = ? AND status <> 'deleted'", [slug]);
+  const before = rows[0];
+  if (!before) return { ok: false, error: "Only cities added in the panel can have their details edited here." };
+
+  // The URL is linked, shared and indexed once it exists — it does not move.
+  const { error, value } = validateCityFacts({ ...input, slug });
+  if (error) return { ok: false, error };
+
+  await query(
+    `UPDATE lab_cities SET name = ?, state = ?, areas_json = ?, area_context = ?, aliases_json = ?,
+       postal_code = ?, lat = ?, lng = ?, gbp = ?, sort_order = ?, status = ?
+     WHERE slug = ?`,
+    [...factParams(value), slug]
+  );
+
+  await audit({
+    user,
+    action: "update",
+    entity: "lab_cities",
+    entityId: slug,
+    summary: `city details for /lab-test/${slug}`,
+    before,
+    after: value,
+  });
+
+  await refreshCity(slug);
+  return { ok: true, slug };
+}
+
 export async function listCities() {
   let overrides = new Map();
 
@@ -64,9 +295,13 @@ export async function listCities() {
     }
   }
 
-  return LAB_CITIES.map((city) => {
+  const custom = await customCities();
+
+  return [...LAB_CITIES, ...custom.filter((city) => !FILE_SLUGS.has(city.slug))].map((city) => {
     const row = overrides.get(city.slug);
     return {
+      custom: Boolean(city.custom),
+      facts: city.facts ?? null,
       slug: city.slug,
       name: city.name,
       state: city.state,
@@ -80,7 +315,12 @@ export async function listCities() {
       noindex: Boolean(row?.noindex),
       inSitemap: row ? row.in_sitemap !== 0 : true,
       priority: Number(row?.priority ?? 0.9),
-      status: row?.status ?? (city.published === false ? "hidden" : "published"),
+      // A panel city hidden in its own details form is hidden whatever an
+      // override says; otherwise the override decides, else it is live.
+      status:
+        city.customStatus === "hidden"
+          ? "hidden"
+          : row?.status ?? (city.published === false ? "hidden" : "published"),
       seoScore: row?.seo_score ?? 0,
       reviewedOn: dateOnly(row?.reviewed_on),
       hasOverride: Boolean(row),
@@ -109,13 +349,13 @@ export async function getCity(slug) {
 
 export async function saveCity(input, { user } = {}) {
   const slug = String(input.slug ?? "").trim();
-  if (!LAB_CITIES.some((city) => city.slug === slug)) {
+  if (!FILE_SLUGS.has(slug) && !(await customCities()).some((city) => city.slug === slug)) {
     return {
       ok: false,
       // A city is added in src/data/lab/cities.js, where its localities, its
       // district context and its Maps link live. Inventing one here would
       // create a page with no facts behind it.
-      error: "That city is not in the site's city list. Add it in src/data/lab/cities.js first.",
+      error: "That city is not in the site's city list. Add it with “Add a city” first.",
     };
   }
 
@@ -164,19 +404,7 @@ export async function saveCity(input, { user } = {}) {
     after: input,
   });
 
-  // Imported lazily: src/lib/labCities.js imports this module to read the
-  // overrides, so a static import back would be a cycle.
-  (await import("@/lib/labCities")).invalidateLabCities();
-
-  try {
-    revalidatePath(`/lab-test/${slug}`);
-    revalidatePath("/sitemap/lab-test.xml");
-    // Every footer lists the cities, so hiding one touches every page.
-    revalidatePath("/", "layout");
-  } catch {
-    /* outside a request scope */
-  }
-
+  await refreshCity(slug);
   return { ok: true };
 }
 

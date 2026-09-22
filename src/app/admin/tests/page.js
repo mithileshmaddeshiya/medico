@@ -22,9 +22,14 @@ import { requireUser } from "@/lib/admin/guard";
 import { getCatalog } from "@/lib/testCatalog";
 
 import { deleteRecord, restoreRecord } from "../actions";
-import { toggleTestAction } from "./actions";
+import { toggleStockAction, toggleTestAction } from "./actions";
 
 export const metadata = { title: "Tests & prices" };
+
+const STATUSES = ["active", "hidden", "archived", "deleted"];
+
+// Only an explicit 0 is out of stock — a row read before the column existed is in stock.
+const inStock = (test) => test.in_stock !== 0;
 export const dynamic = "force-dynamic";
 
 /**
@@ -48,16 +53,21 @@ export default async function TestsPage({ searchParams }) {
 
   const params = await searchParams;
   const search = typeof params.q === "string" ? params.q : "";
-  const category = typeof params.category === "string" ? params.category : null;
+  const category = typeof params.category === "string" && params.category ? params.category : null;
+  const stock = params.stock === "in" || params.stock === "out" ? params.stock : null;
+  const status = STATUSES.includes(params.status) ? params.status : null;
   const showDeleted = params.deleted === "1";
+  const filtering = Boolean(search || category || stock || status);
 
   const [tests, categories, catalog] = await Promise.all([
-    listTests({ search, category, includeDeleted: showDeleted }),
+    listTests({ search, category, stock, status, includeDeleted: showDeleted }),
     listCategories(),
     getCatalog({ fresh: true }),
   ]);
 
-  const visible = showDeleted ? tests : tests.filter((test) => test.status !== "deleted");
+  // A status picked in the filter is shown as asked, even "deleted".
+  const visible =
+    showDeleted || status ? tests : tests.filter((test) => test.status !== "deleted");
 
   return (
     <>
@@ -90,8 +100,14 @@ export default async function TestsPage({ searchParams }) {
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <form className="flex flex-wrap items-center gap-2" action="/admin/tests">
-          <Input name="q" defaultValue={search} placeholder="Name or id" className="w-48" aria-label="Search tests" />
-          <Select name="category" defaultValue={category ?? ""} className="w-44" aria-label="Chip">
+          {/* Each control sits in a fixed-width box: inputClass carries w-full,
+              which beat a width class on the control itself and stacked every
+              filter full-width. */}
+          <div className="w-48">
+            <Input name="q" defaultValue={search} placeholder="Name or id" aria-label="Search tests" />
+          </div>
+          <div className="w-44">
+          <Select name="category" defaultValue={category ?? ""} aria-label="Chip">
             <option value="">Every chip</option>
             {categories.map((chip) => (
               <option key={chip.key} value={chip.key}>
@@ -99,12 +115,35 @@ export default async function TestsPage({ searchParams }) {
               </option>
             ))}
           </Select>
+          </div>
+          <div className="w-36">
+          <Select name="stock" defaultValue={stock ?? ""} aria-label="Stock">
+            <option value="">Any stock</option>
+            <option value="in">In stock</option>
+            <option value="out">Out of stock</option>
+          </Select>
+          </div>
+          <div className="w-36">
+          <Select name="status" defaultValue={status ?? ""} aria-label="Status">
+            <option value="">Any status</option>
+            {STATUSES.map((value) => (
+              <option key={value} value={value}>
+                {value[0].toUpperCase() + value.slice(1)}
+              </option>
+            ))}
+          </Select>
+          </div>
           <button
             type="submit"
             className="rounded-lg bg-slate-900 px-3 py-2 text-[13px] font-semibold text-white hover:bg-slate-800"
           >
             Filter
           </button>
+          {filtering && (
+            <Link href="/admin/tests" className="px-1 text-[12.5px] font-semibold text-slate-500 hover:text-slate-800">
+              Clear
+            </Link>
+          )}
         </form>
 
         <ButtonLink href={showDeleted ? "/admin/tests" : "/admin/tests?deleted=1"}>
@@ -113,7 +152,7 @@ export default async function TestsPage({ searchParams }) {
       </div>
 
       {visible.length ? (
-        <Table head={["Test", "Chips", "Price", "MRP", "Off", "Ordered", "Status", ""]}>
+        <Table head={["Test", "Chips", "Price", "MRP", "Off", "Stock", "Ordered", "Status", ""]}>
           {visible.map((test) => (
             <Row key={test.id} muted={test.status === "deleted" || test.status === "archived"}>
               <Td className="max-w-[20rem]">
@@ -158,6 +197,25 @@ export default async function TestsPage({ searchParams }) {
                 {test.discount_pct ? <Pill tone="emerald">{test.discount_pct}%</Pill> : "—"}
               </Td>
 
+              <Td>
+                {/* One click flips it; the pill says what it is now. */}
+                <ActionForm action={toggleStockAction}>
+                  <input type="hidden" name="id" value={test.id} />
+                  <input type="hidden" name="inStock" value={inStock(test) ? "0" : "1"} />
+                  <button
+                    type="submit"
+                    title={inStock(test) ? "Click to mark out of stock" : "Click to mark in stock"}
+                    className={`cursor-pointer whitespace-nowrap rounded-full px-2 py-0.5 text-[11.5px] font-semibold ring-1 transition ${
+                      inStock(test)
+                        ? "bg-emerald-50 text-emerald-700 ring-emerald-200 hover:bg-emerald-100"
+                        : "bg-rose-50 text-rose-700 ring-rose-200 hover:bg-rose-100"
+                    }`}
+                  >
+                    {inStock(test) ? "In stock" : "Out of stock"}
+                  </button>
+                </ActionForm>
+              </Td>
+
               <Td className="text-slate-500">{Number(test.ordered) || 0}</Td>
 
               <Td>
@@ -176,6 +234,13 @@ export default async function TestsPage({ searchParams }) {
                     </ActionForm>
                   ) : (
                     <>
+                      <ButtonLink
+                        href={`/admin/tests/${encodeURIComponent(test.id)}`}
+                        className="px-2 py-1 text-[12px]"
+                      >
+                        Edit
+                      </ButtonLink>
+
                       <ActionForm action={toggleTestAction}>
                         <input type="hidden" name="id" value={test.id} />
                         <input type="hidden" name="active" value={test.active ? "0" : "1"} />
@@ -201,10 +266,10 @@ export default async function TestsPage({ searchParams }) {
         </Table>
       ) : (
         <Empty
-          title={search || category ? "Nothing matches" : "The catalogue is empty"}
+          title={filtering ? "Nothing matches" : "The catalogue is empty"}
           hint={
-            search || category
-              ? "Try a different chip or clear the search."
+            filtering
+              ? "Try a different filter or clear them."
               : "Run `npm run db:seed` to copy the built-in list in, or add a test by hand."
           }
           action={<ButtonLink href="/admin/tests/new" variant="primary">Add a test</ButtonLink>}

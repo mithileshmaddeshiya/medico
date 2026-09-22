@@ -4,8 +4,8 @@
  * The API routes stay about HTTP — parsing, validating, answering — and call
  * these for the database side. Tables are described in src/lib/dbSchema.js.
  */
-import { LAB_CITIES } from "@/data/lab/cities";
 import { MAX_QTY } from "@/lib/labCart";
+import { getLabCity } from "@/lib/labCities";
 
 import { transaction } from "./db";
 import { getCatalog } from "./testCatalog";
@@ -17,10 +17,10 @@ import { getCatalog } from "./testCatalog";
  */
 export const getTests = async ({ fresh = false } = {}) => (await getCatalog({ fresh })).tests;
 
-/** The city whose price list a page shows: /lab-test/<slug>, else none. */
-export const cityForPath = (path) => {
+/** The city a page is for: /lab-test/<slug> (file or panel city), else none. */
+export const cityForPath = async (path) => {
   const slug = /^\/lab-test\/([^/?#]+)/.exec(String(path ?? ""))?.[1];
-  return slug ? LAB_CITIES.find((c) => c.slug === slug)?.name ?? null : null;
+  return slug ? (await getLabCity(slug))?.name ?? null : null;
 };
 
 export const CART_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
@@ -43,7 +43,7 @@ async function upsertCart(conn, { cartId, city, path }) {
  * action is named here from those two, not taken from the request.
  */
 export async function recordCartChange({ cartId, testId, from, qty, seq, path }) {
-  const city = cityForPath(path);
+  const city = await cityForPath(path);
   const test = (await getTests()).find((t) => t.id === testId);
   if (!test) return { ok: false, error: "Unknown test." };
 
@@ -81,7 +81,7 @@ export async function recordCartChange({ cartId, testId, from, qty, seq, path })
 /** The visitor emptied the cart. */
 export async function recordCartClear({ cartId, seq, path }) {
   await transaction(async (conn) => {
-    await upsertCart(conn, { cartId, city: cityForPath(path), path });
+    await upsertCart(conn, { cartId, city: await cityForPath(path), path });
     await conn.execute(
       "UPDATE cart_items SET qty = 0, seq = ? WHERE cart_id = ? AND seq < ?",
       [seq, cartId, seq]

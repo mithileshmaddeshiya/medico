@@ -172,6 +172,31 @@ export const ADMIN_SCHEMA = [
     KEY idx_blog_city (city)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4`,
 
+  /* ── Cities added from the panel ─────────────────────────────────────────
+     A city created in /admin/cities/new. Same facts a src/data/lab/cities.js
+     entry carries, and it is run through the SAME normalise() (exported from
+     that file as buildCity), so its page is generated from the shared template
+     exactly like a file city. The file's cities are never written here; a slug
+     that exists in the file cannot be created. Editorial overrides for these
+     cities go in city_overrides like any other. */
+  `CREATE TABLE IF NOT EXISTS lab_cities (
+    slug           VARCHAR(120)    NOT NULL PRIMARY KEY,
+    name           VARCHAR(80)     NOT NULL,
+    state          VARCHAR(80)     NOT NULL,
+    areas_json     JSON            NOT NULL,
+    area_context   VARCHAR(80)     NULL,
+    aliases_json   JSON            NULL,
+    postal_code    VARCHAR(10)     NULL,
+    lat            DECIMAL(9,6)    NULL,
+    lng            DECIMAL(9,6)    NULL,
+    gbp            VARCHAR(500)    NULL,
+    sort_order     INT             NOT NULL DEFAULT 1000,
+    status         ENUM('published','hidden','deleted') NOT NULL DEFAULT 'published',
+    deleted_at     DATETIME        NULL,
+    created_at     DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at     DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4`,
+
   /* ── City page overrides ─────────────────────────────────────────────────
      src/data/lab/cities.js stays the source for a city's facts (areas, geo,
      GBP link). This table holds only what the panel is allowed to change
@@ -330,6 +355,12 @@ export const MIGRATIONS = [
   { table: "lab_tests", column: "slug", sql: "ALTER TABLE lab_tests ADD COLUMN slug VARCHAR(120) NULL" },
   { table: "lab_tests", column: "meta_title", sql: "ALTER TABLE lab_tests ADD COLUMN meta_title VARCHAR(255) NULL" },
   { table: "lab_tests", column: "meta_description", sql: "ALTER TABLE lab_tests ADD COLUMN meta_description VARCHAR(500) NULL" },
+
+  // Stock is separate from `active`. An out-of-stock test stays on the site —
+  // its card says "Out of stock" and it cannot be added to the cart or paid
+  // for — so a patient can still see the price and call about it. Hiding the
+  // card is what `active` is for. Every existing test starts in stock.
+  { table: "lab_tests", column: "in_stock", sql: "ALTER TABLE lab_tests ADD COLUMN in_stock TINYINT(1) NOT NULL DEFAULT 1" },
 
   {
     table: "test_categories",

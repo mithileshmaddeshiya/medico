@@ -33,17 +33,25 @@ export default async function CitiesPage() {
       <PageHeader
         title="City pages"
         subtitle={`${cities.length} towns. Everything on a city page is generated from one short entry plus the shared template.`}
-      />
+      >
+        <ButtonLink href="/admin/cities/new" variant="primary">
+          Add a city
+        </ButtonLink>
+      </PageHeader>
 
       <Note title="What you can change here, and what you cannot">
         Editable: the page title, the meta description, the H1, the hero image and its alt text, and
         whether the page is published.
         <br />
         <br />
-        Not editable: the localities, the district each area is qualified by, the coordinates and
-        the Google Business Profile link. Those go into the page’s local-business markup, and a
-        wrong one names a place that does not exist or points the markup at somebody else’s lab.
-        They live in <code>src/data/lab/cities.js</code>, where the comments explain each field.
+        For the built-in cities, the localities, the district each area is qualified by, the
+        coordinates and the Google Business Profile link are not editable here. Those go into the
+        page’s local-business markup, and a wrong one names a place that does not exist or points
+        the markup at somebody else’s lab. They live in <code>src/data/lab/cities.js</code>.
+        <br />
+        <br />
+        A city added with <strong>Add a city</strong> keeps those details in the database instead,
+        and they can be edited on its own page.
       </Note>
 
       <Table head={["City", "URL", "Title in search", "Status", ""]}>
@@ -52,6 +60,11 @@ export default async function CitiesPage() {
             <Td>
               <span className="font-semibold text-slate-900">{city.name}</span>
               <span className="ml-2 text-[11.5px] text-slate-400">{city.state}</span>
+              {city.custom && (
+                <span className="ml-2">
+                  <Pill tone="emerald">added here</Pill>
+                </span>
+              )}
               <span className="mt-0.5 block text-[11.5px] text-slate-500">
                 {city.areas.length} localit{city.areas.length === 1 ? "y" : "ies"}
               </span>

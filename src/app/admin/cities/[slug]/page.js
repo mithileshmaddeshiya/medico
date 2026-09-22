@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import ActionForm, { SubmitButton } from "@/components/admin/ActionForm";
+import CityFactsFields from "@/components/admin/CityFactsFields";
 import ImageField from "@/components/admin/ImageField";
 import {
   ButtonLink,
@@ -16,7 +17,7 @@ import { getCity } from "@/lib/admin/cityStore";
 import { getMedia } from "@/lib/admin/media";
 import { requireRole } from "@/lib/admin/guard";
 
-import { saveCityAction } from "../actions";
+import { saveCityAction, saveCityFactsAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 
@@ -26,10 +27,11 @@ export async function generateMetadata({ params }) {
   return { title: city ? `${city.name} · city page` : "City page" };
 }
 
-export default async function CityPage({ params }) {
+export default async function CityPage({ params, searchParams }) {
   await requireRole("editor", "/admin/cities");
 
   const { slug } = await params;
+  const { created } = await searchParams;
   const city = await getCity(slug);
   if (!city) notFound();
 
@@ -43,6 +45,19 @@ export default async function CityPage({ params }) {
         </ButtonLink>
         <ButtonLink href="/admin/cities">Back</ButtonLink>
       </PageHeader>
+
+      {created && (
+        <Note title="City page created">
+          {city.status === "published" ? (
+            <>
+              It is live at <code>{city.href}</code> now, built from the shared template. Everything
+              below is optional.
+            </>
+          ) : (
+            <>It is saved as hidden. Set its status to Published below when it is ready.</>
+          )}
+        </Note>
+      )}
 
       <Note title="An empty field uses the generated copy">
         Every city page is built from the shared template in{" "}
@@ -95,6 +110,13 @@ export default async function CityPage({ params }) {
             </div>
           </Card>
 
+          {city.custom ? (
+            <Card title="Localities" subtitle="Edited in “City details” further down this page.">
+              <p className="text-[12.5px] leading-relaxed text-slate-600">
+                {city.areas.length ? city.areas.join(" · ") : "None listed."}
+              </p>
+            </Card>
+          ) : (
           <Card title="Localities" subtitle="Read-only here — these feed the page's local-business markup.">
             <p className="text-[12.5px] leading-relaxed text-slate-600">
               {city.areas.length ? city.areas.join(" · ") : "None listed."}
@@ -107,6 +129,7 @@ export default async function CityPage({ params }) {
               <code>src/data/lab/cities.js</code>.
             </p>
           </Card>
+          )}
         </div>
 
         <div className="space-y-6">
@@ -148,6 +171,32 @@ export default async function CityPage({ params }) {
           </Card>
         </div>
       </ActionForm>
+
+      {/* A separate form: nested <form>s are invalid HTML. Only for cities
+          added in the panel — a file city's facts stay in the file. */}
+      {city.custom && (
+        <section className="space-y-3">
+          <div>
+            <h2 className="text-[15px] font-bold text-slate-900">City details</h2>
+            <p className="mt-1 max-w-3xl text-[12.5px] leading-relaxed text-slate-600">
+              This city was added in the panel, so its facts live in the database and can be
+              changed here. They feed the page&apos;s local-business markup and the booking form.
+            </p>
+          </div>
+
+          <ActionForm action={saveCityFactsAction} className="grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-start">
+            <input type="hidden" name="slug" value={city.slug} />
+            <div className="min-w-0 space-y-6">
+              <CityFactsFields facts={city.facts} />
+            </div>
+            <div className="space-y-6">
+              <Card title="">
+                <SubmitButton className="w-full">Save city details</SubmitButton>
+              </Card>
+            </div>
+          </ActionForm>
+        </section>
+      )}
     </>
   );
 }

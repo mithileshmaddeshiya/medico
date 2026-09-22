@@ -221,8 +221,11 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
         <input type="hidden" name="faqs" value={JSON.stringify(faqs)} />
         <input type="hidden" name="heroMediaId" value={hero?.id ?? ""} />
 
+        {/* min-w-0 on the main column: a grid item will not shrink below its
+            widest content by default, so a wide table in the body pushed the
+            sidebar off the right edge and scrolled the whole page sideways. */}
         <div className="grid gap-6 lg:grid-cols-[1fr_21rem] lg:items-start">
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-6">
             <Card title="The article">
               <div className="space-y-4">
                 <Field
@@ -295,8 +298,10 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
             </Card>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6 lg:sticky lg:top-6">
+          {/* Sidebar. Not sticky: it is taller than a laptop screen, and a
+              sticky column that tall hides its own lower cards until the
+              editor column has been scrolled to its very end. */}
+          <div className="space-y-6">
             <Card title="Publishing">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -320,6 +325,21 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
                 )}
               </div>
             </Card>
+            {/* The live SEO panel, rendered once, on the right of the editor.
+                It used to sit below the whole form as a full-width
+                `xl:sticky xl:bottom-6` block, which pinned it over the title,
+                the editor and the settings on any screen 1280px or wider.
+                Display only — no inputs — so being inside the form is safe. */}
+            <SeoPanel
+              title={title}
+              description={description}
+              slug={category}
+              path={path}
+              focusKeyword={focusKeyword}
+              bodyHtml={bodyHtml}
+              heroAlt={heroAlt}
+              noindex={noindex}
+            />
 
             <Card title="URL">
               {published ? (
@@ -501,7 +521,7 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
           one is silently dropped, so these each stand alone. */}
       {!isNew && (
         <div className="grid gap-6 lg:grid-cols-[1fr_21rem] lg:items-start">
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-6">
             <Card title="Live SEO check" subtitle="Runs as you type, above.">
               <p className="text-[12.5px] leading-relaxed text-slate-600">
                 The panel on the right of the editor shows every check and the score that is stored
@@ -605,26 +625,6 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
           </div>
         </div>
       )}
-
-      {/* The live SEO panel.
-          Rendered once, outside the form, for two reasons: it re-renders on
-          every keystroke and would otherwise drag the editor's uncontrolled
-          inputs with it, and parsing the body twice per keystroke for a second
-          copy of the same panel is pure waste. It sticks to the viewport on a
-          wide screen so the checks stay in view while you write, and falls
-          into the normal flow below the editor on a narrow one. */}
-      <div className="xl:sticky xl:bottom-6">
-        <SeoPanel
-          title={title}
-          description={description}
-          slug={category}
-          path={path}
-          focusKeyword={focusKeyword}
-          bodyHtml={bodyHtml}
-          heroAlt={heroAlt}
-          noindex={noindex}
-        />
-      </div>
 
       {picking && (
         <MediaPicker
