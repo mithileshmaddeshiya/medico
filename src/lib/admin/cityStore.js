@@ -35,6 +35,7 @@
 import { revalidatePath } from "next/cache";
 
 import { LAB_CITIES, buildCity, slugify } from "@/data/lab/cities";
+import { fromText, splitParagraphs } from "@/lib/contentText";
 import { dbConfigured, query } from "@/lib/db";
 
 import { audit } from "./audit";
@@ -325,7 +326,12 @@ export async function listCities() {
       reviewedOn: dateOnly(row?.reviewed_on),
       hasOverride: Boolean(row),
       heroMediaId: row?.hero_media_id ?? null,
-      faqs: parse(row?.faqs_json, null),
+      // What the page shows now: the panel's version if there is one, else
+      // the file's (or the generated one).
+      faqs: parse(row?.faqs_json, null) ?? city.faqs ?? [],
+      faqsEdited: Boolean(row?.faqs_json),
+      content: parse(row?.content_json, null) ?? city.content ?? [],
+      contentEdited: Boolean(row?.content_json),
       introHtml: row?.intro_html ?? null,
       keywords: parse(row?.keywords_json, null),
       heroAlt: row?.hero_alt ?? null,
@@ -374,7 +380,9 @@ export async function saveCity(input, { user } = {}) {
        title = VALUES(title), description = VALUES(description),
        keywords_json = VALUES(keywords_json), h1 = VALUES(h1),
        hero_media_id = VALUES(hero_media_id), hero_alt = VALUES(hero_alt),
-       intro_html = VALUES(intro_html), faqs_json = VALUES(faqs_json),
+       -- intro_html, faqs_json and content_json are NOT updated here: this is
+       -- the title/meta/hero form, and it used to blank faqs_json on every
+       -- save. The guide and the FAQs have their own saves below.
        noindex = VALUES(noindex), in_sitemap = VALUES(in_sitemap),
        priority = VALUES(priority), status = VALUES(status), deleted_at = NULL`,
     [
@@ -408,6 +416,129 @@ export async function saveCity(input, { user } = {}) {
   return { ok: true };
 }
 
+/* ── The guide and the FAQs ─────────────────────────────────────────────── */
+
+const MAX_SECTIONS = 40;
+const MAX_FAQS = 30;
+
+/**
+ * Validate a guide from the editor: [{ id, h, text }] where `text` is the
+ * paragraphs, blank-line separated, links as [text](/path). Returns
+ * `{ error }` or `{ value }` in the stored shape.
+ */
+export function validateCityContent(sections) {
+  if (!Array.isArray(sections) || !sections.length) {
+    return { error: "The guide needs at least one section. Use “Restore the original” to go back to the built-in text." };
+  }
+  if (sections.length > MAX_SECTIONS) return { error: `A guide can have at most ${MAX_SECTIONS} sections.` };
+
+  const seen = new Set();
+  const value = [];
+
+  for (const [i, section] of sections.entries()) {
+    const h = String(section?.h ?? "").trim().replace(/\s+/g, " ").slice(0, 200);
+    if (!h) return { error: `Section ${i + 1} has no heading.` };
+
+    // The id is the #anchor. Keep it once it exists — links to it are out
+    // there — and make one from the heading for a new section.
+    let id = slugify(section?.id || h).slice(0, 80) || `section-${i + 1}`;
+    while (seen.has(id)) id = `${id}-${i + 1}`;
+    seen.add(id);
+
+    const p = splitParagraphs(section?.text).map((para) => fromText(para.slice(0, 5000)));
+    if (!p.length) return { error: `“${h}” has no text. Write at least one paragraph, or remove the section.` };
+
+    value.push({ id, h, p });
+  }
+
+  return { value };
+}
+
+/** Validate FAQs from the editor: [{ q, a, links: "label | /path" lines }]. */
+export function validateCityFaqs(faqs) {
+  if (!Array.isArray(faqs) || !faqs.length) {
+    return { error: "Add at least one question, or use “Restore the original” to go back to the built-in FAQs." };
+  }
+  if (faqs.length > MAX_FAQS) return { error: `At most ${MAX_FAQS} questions.` };
+
+  const value = [];
+  for (const [i, faq] of faqs.entries()) {
+    const q = String(faq?.q ?? "").trim().replace(/\s+/g, " ").slice(0, 300);
+    const a = String(faq?.a ?? "").trim().slice(0, 3000);
+    if (!q) return { error: `Question ${i + 1} is empty.` };
+    if (!a) return { error: `“${q}” has no answer.` };
+
+    const links = [];
+    for (const line of String(faq?.links ?? "").split("\n")) {
+      if (!line.trim()) continue;
+      const [label, href] = line.split("|").map((part) => part.trim());
+      if (!label || !href || !href.startsWith("/")) {
+        return { error: `A link under “${q}” should read “Label | /path” — an internal link starting with /.` };
+      }
+      links.push({ href: href.slice(0, 300), label: label.slice(0, 120) });
+    }
+
+    value.push(links.length ? { q, a, links } : { q, a });
+  }
+  return { value };
+}
+
+/** Write one JSON column of a city's override row, creating the row if needed. */
+async function saveOverrideColumn(slug, column, json, { user, summary }) {
+  if (!FILE_SLUGS.has(slug) && !(await customCities()).some((city) => city.slug === slug)) {
+    return { ok: false, error: "That city is not in the site's city list." };
+  }
+
+  const before = await getCity(slug);
+
+  // Only this column is written — a guide save must not touch the title, and a
+  // title save must not touch the guide.
+  await query(
+    `INSERT INTO city_overrides (slug, ${column}) VALUES (?, ?)
+     ON DUPLICATE KEY UPDATE ${column} = VALUES(${column}), deleted_at = NULL`,
+    [slug, json]
+  );
+
+  await audit({
+    user,
+    action: "update",
+    entity: "city_overrides",
+    entityId: slug,
+    summary,
+    before: column === "content_json" ? before?.content : before?.faqs,
+    after: json ? JSON.parse(json) : null,
+  });
+
+  await refreshCity(slug);
+  return { ok: true };
+}
+
+/** Save a city's guide, or `reset` it to the built-in one. */
+export async function saveCityContent({ slug, sections, reset = false }, { user } = {}) {
+  if (reset) {
+    return saveOverrideColumn(String(slug), "content_json", null, { user, summary: `guide for ${slug} restored to the original` });
+  }
+  const { error, value } = validateCityContent(sections);
+  if (error) return { ok: false, error };
+  return saveOverrideColumn(String(slug), "content_json", JSON.stringify(value), {
+    user,
+    summary: `guide for ${slug} edited (${value.length} sections)`,
+  });
+}
+
+/** Save a city's FAQs, or `reset` them to the built-in ones. */
+export async function saveCityFaqs({ slug, faqs, reset = false }, { user } = {}) {
+  if (reset) {
+    return saveOverrideColumn(String(slug), "faqs_json", null, { user, summary: `FAQs for ${slug} restored to the original` });
+  }
+  const { error, value } = validateCityFaqs(faqs);
+  if (error) return { ok: false, error };
+  return saveOverrideColumn(String(slug), "faqs_json", JSON.stringify(value), {
+    user,
+    summary: `FAQs for ${slug} edited (${value.length} questions)`,
+  });
+}
+
 /**
  * The overrides the public city page reads.
  *
@@ -433,6 +564,7 @@ export async function cityOverrides() {
           heroAlt: row.hero_alt,
           introHtml: row.intro_html,
           faqs: parse(row.faqs_json, null),
+          content: parse(row.content_json, null),
           priority: Number(row.priority),
           hidden: row.status === "hidden",
         },

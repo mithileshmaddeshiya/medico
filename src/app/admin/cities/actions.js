@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-import { createCity, saveCity, updateCityFacts } from "@/lib/admin/cityStore";
+import { createCity, saveCity, saveCityContent, saveCityFaqs, updateCityFacts } from "@/lib/admin/cityStore";
 import { actionUser, NotAllowed } from "@/lib/admin/guard";
 
 async function wrap(fn) {
@@ -89,5 +89,49 @@ export async function saveCityFactsAction(a, b) {
     revalidatePath("/admin/cities");
     revalidatePath(`/admin/cities/${result.slug}`);
     return { ok: true, message: "City details saved." };
+  });
+}
+
+const parseJson = (value) => {
+  try {
+    return JSON.parse(String(value ?? ""));
+  } catch {
+    return null;
+  }
+};
+
+/** The city page's long-form guide. `reset` = back to the built-in text. */
+export async function saveCityContentAction(a, b) {
+  const formData = b instanceof FormData ? b : a;
+
+  return wrap(async () => {
+    const user = await actionUser("editor");
+    const reset = formData.get("reset") === "1";
+    const result = await saveCityContent(
+      { slug: formData.get("slug"), sections: parseJson(formData.get("sections")), reset },
+      { user }
+    );
+    if (!result.ok) return result;
+
+    revalidatePath(`/admin/cities/${formData.get("slug")}`);
+    return { ok: true, message: reset ? "Guide restored to the original." : "Guide saved. The city page is showing it now." };
+  });
+}
+
+/** The city page's FAQs. `reset` = back to the built-in questions. */
+export async function saveCityFaqsAction(a, b) {
+  const formData = b instanceof FormData ? b : a;
+
+  return wrap(async () => {
+    const user = await actionUser("editor");
+    const reset = formData.get("reset") === "1";
+    const result = await saveCityFaqs(
+      { slug: formData.get("slug"), faqs: parseJson(formData.get("faqs")), reset },
+      { user }
+    );
+    if (!result.ok) return result;
+
+    revalidatePath(`/admin/cities/${formData.get("slug")}`);
+    return { ok: true, message: reset ? "FAQs restored to the original." : "FAQs saved. The city page is showing them now." };
   });
 }
