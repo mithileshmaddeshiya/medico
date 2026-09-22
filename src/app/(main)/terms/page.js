@@ -1,5 +1,6 @@
 import { LAB_PHONE, defaultFooter } from "@/data/lab/defaults";
 import { SITE, url } from "@/lib/site";
+import { withRouteSeo } from "@/lib/routeSeo";
 
 /**
  * /terms
@@ -27,7 +28,7 @@ import { SITE, url } from "@/lib/site";
  * NOTHING HERE MAY CLAIM AN ACCREDITATION THE BUSINESS DOES NOT HOLD. Same
  * rule as everywhere else on this site — see src/data/home.js.
  */
-export const metadata = {
+const baseMetadata = {
   title: "Terms & Conditions — Lab Test Booking",
 
   description:
@@ -237,3 +238,11 @@ export default function TermsPage() {
     </section>
   );
 }
+
+/*
+ * The metadata above is the default. The admin panel (SEO → Fixed pages) may
+ * override the title, description, keywords, canonical or robots for this
+ * route without a deploy; withRouteSeo merges only what was set there, and
+ * falls back to exactly this if the database cannot be reached.
+ */
+export const generateMetadata = () => withRouteSeo("/terms", baseMetadata);

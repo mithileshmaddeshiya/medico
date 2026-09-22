@@ -46,6 +46,8 @@ import {
   ldJson,
 } from "@/lib/schema";
 import { SITE } from "@/lib/site";
+import { popupSettings } from "@/lib/admin/settings";
+import { withRouteSeo } from "@/lib/routeSeo";
 
 /**
  * THE HOME PAGE.
@@ -92,7 +94,7 @@ import { SITE } from "@/lib/site";
    the root layout sets a `%s | MedicoBharat` template, and HOME_META.title
    already ends in "| MedicoBharat" — without `absolute` the rendered title
    would carry the brand twice. */
-export const metadata = {
+const baseMetadata = {
   title: { absolute: HOME_META.title },
   description: HOME_META.description,
   keywords: HOME_META.keywords,
@@ -322,6 +324,10 @@ const cityListNode = (cities) => ({
 export const revalidate = 60;
 
 export default async function HomePage() {
+  // Each popup can be switched off from the admin panel (Settings). Defaults
+  // to on, and to on if the database cannot be reached.
+  const popups = await popupSettings();
+
   const cities = await getLabCities();
   const { tests, filters } = await getCatalog();
   /* EVERY guide, newest first — not a top-three.
@@ -378,7 +384,7 @@ export default async function HomePage() {
           comment in WelcomePopup. It carries the same form as the hero and
           posts through the same /api/lab-lead → Firestore → WhatsApp path, so
           a popup lead lands exactly where a hero booking does. */}
-      <WelcomePopup cityOptions={cityOptions} />
+      {popups.welcome && <WelcomePopup cityOptions={cityOptions} />}
 
       {/* The offer popup. Not a second on-load interruption: it waits until the
           reader has scrolled past the FAQ block, so it only ever reaches
@@ -386,7 +392,7 @@ export default async function HomePage() {
           OFFER_POPUP in src/data/lab/defaults.js; the number is LAB_PHONE, the
           same one the footer and the schema print. It renders nothing when no
           image is configured. */}
-      <OfferPopup offer={OFFER_POPUP} phone={LAB_PHONE} />
+      {popups.offer && <OfferPopup offer={OFFER_POPUP} phone={LAB_PHONE} />}
 
       <HomeHero hero={HOME_HERO} cityOptions={cityOptions} />
 
@@ -475,3 +481,11 @@ export default async function HomePage() {
     </>
   );
 }
+
+/*
+ * The metadata above is the default. The admin panel (SEO → Fixed pages) may
+ * override the title, description, keywords, canonical or robots for this
+ * route without a deploy; withRouteSeo merges only what was set there, and
+ * falls back to exactly this if the database cannot be reached.
+ */
+export const generateMetadata = () => withRouteSeo("/", baseMetadata);

@@ -1,4 +1,5 @@
 import { url } from "@/lib/site";
+import { withRouteSeo } from "@/lib/routeSeo";
 
 /**
  * /privacy
@@ -13,7 +14,7 @@ import { url } from "@/lib/site";
  * is actually collected now: the details needed to send a phlebotomist to a
  * house and return a report to a phone.
  */
-export const metadata = {
+const baseMetadata = {
   title: "Privacy Policy — Lab Test & Home Collection",
 
   description:
@@ -336,3 +337,11 @@ export default function Page() {
     </section>
   );
 }
+
+/*
+ * The metadata above is the default. The admin panel (SEO → Fixed pages) may
+ * override the title, description, keywords, canonical or robots for this
+ * route without a deploy; withRouteSeo merges only what was set there, and
+ * falls back to exactly this if the database cannot be reached.
+ */
+export const generateMetadata = () => withRouteSeo("/privacy", baseMetadata);

@@ -278,6 +278,15 @@ export function normalisePost(raw, { category, city }) {
  */
 export const metaOf = (post) =>
   post && {
+    /* Sitemap controls. A file-backed post has none of these and every reader
+       treats `undefined` as the default (in the sitemap, priority 0.9, weekly)
+       — which is exactly what those posts got when the values were hardcoded
+       in sitemap/blogs.xml. A panel-managed post can override them per URL. */
+    inSitemap: post.inSitemap,
+    priority: post.priority,
+    changefreq: post.changefreq,
+    source: post.source ?? "file",
+
     category: post.category,
     city: post.city,
     cityName: post.cityName,

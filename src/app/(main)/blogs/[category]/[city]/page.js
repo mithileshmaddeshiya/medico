@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { CalendarDays, Check, Clock, Phone, RefreshCw } from "lucide-react";
 
 import BlogCityLinks from "@/components/blog/BlogCityLinks";
+import BlogHtml from "@/components/blog/BlogHtml";
 import BlogProse from "@/components/blog/BlogProse";
 import BlogShare from "@/components/blog/BlogShare";
 // Same shape, same job: a hand-picked in-body link block. It takes a plain
@@ -52,14 +53,37 @@ const readableDate = (iso) => {
 };
 
 /**
- * One entry per file in content/blogs/, so every article is prerendered.
+ * One entry per known article, so every existing one is prerendered at build.
  *
- * With `dynamicParams = false` this list is also the whole of what the route
- * serves: a URL with no file behind it 404s at the edge rather than reaching
- * the page. That is what the `notFound()` below used to do at request time,
- * and doing it here means a mistyped category never boots a render.
+ * ── WHY dynamicParams IS NOW TRUE ────────────────────────────────────────
+ * It was `false`, and that was the right call when every article was a file:
+ * the list of files IS the list of routes, so a URL not in it could only ever
+ * be a typo, and refusing it at the edge meant a mistyped category never even
+ * booted a render.
+ *
+ * Articles can now also be published from the admin panel into MySQL, and a
+ * post published at 10am does not exist in a build that ran last week. With
+ * `false`, its URL would 404 until the next deploy — which is not a publishing
+ * system, it is a deploy queue with an editor attached.
+ *
+ * `true` means an unknown route renders once, on demand, and is then cached
+ * like any other. A genuine typo still 404s: `getBlog` returns null for it and
+ * the `notFound()` below runs, exactly as it did before this list existed.
+ * The cost is one render for a URL that does not exist, which is the correct
+ * price for being able to publish.
  */
-export const dynamicParams = false;
+export const dynamicParams = true;
+
+/**
+ * Re-check a rendered article once an hour.
+ *
+ * A post edited in the panel would otherwise keep serving whatever HTML was
+ * cached when it was first rendered. The panel also revalidates this exact
+ * path on save (see revalidatePath in src/lib/admin/blogStore.js), so an edit
+ * is live in seconds; this is the backstop for the case where that call is not
+ * reached — a save that succeeds from a different process, say.
+ */
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return getBlogParams();
@@ -483,7 +507,15 @@ export default async function BlogPage({ params }) {
               </section>
             )}
 
-            <BlogProse sections={blog.sections} />
+            {/* Two body shapes, one page. A post written in the admin panel
+                carries `bodyHtml`; the files in content/blogs/ carry structured
+                `sections`. bodyHtml wins when a post somehow has both, because
+                it is the one a person edited last. See BlogHtml.jsx. */}
+            {blog.bodyHtml ? (
+              <BlogHtml html={blog.bodyHtml} />
+            ) : (
+              <BlogProse sections={blog.sections} />
+            )}
 
             {/* CTA — rendered only when this town has a service page. The href
                 is checked against the live city list above, so it cannot 404. */}

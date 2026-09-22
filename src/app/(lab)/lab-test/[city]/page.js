@@ -13,6 +13,7 @@ import LabServices from "@/components/lab/LabServices";
 import LabTrustStrip from "@/components/lab/LabTrustStrip";
 import OfferPopup from "@/components/lab/OfferPopup";
 import WelcomePopup from "@/components/lab/WelcomePopup";
+import { popupSettings } from "@/lib/admin/settings";
 import { HOME_BANNERS } from "@/data/home";
 import { LAB_PHONE, LAB_OG_IMAGE, OFFER_POPUP } from "@/data/lab/defaults";
 import { getLabCities, getLabCity, getLabCityOptions } from "@/lib/labCities";
@@ -367,6 +368,10 @@ const breadcrumbNode = (city) => {
 };
 
 export default async function LabCityPage({ params }) {
+  // Each popup can be switched off from the admin panel (Settings). Defaults
+  // to on, and to on if the database cannot be reached.
+  const popups = await popupSettings();
+
   const { city } = await params;
 
   const cityFile = await getLabCity(city);
@@ -416,22 +421,26 @@ export default async function LabCityPage({ params }) {
           comment in WelcomePopup. Same form as the hero, same /api/lab-lead →
           Firestore → WhatsApp path, and the same city dropdown this page's own
           form uses, so a popup lead already carries the right locality. */}
-      <WelcomePopup
-        cityOptions={cityOptions}
-        title={`Book Lab Test in ${cityData.name}`}
-      />
+      {popups.welcome && (
+        <WelcomePopup
+          cityOptions={cityOptions}
+          title={`Book Lab Test in ${cityData.name}`}
+        />
+      )}
 
       {/* The offer popup, opening only once this city's FAQ block has been
           scrolled past — see the header comment in OfferPopup. Same artwork and
           same number on every city, because the offer is the company's, not the
           town's; only the dialog's accessible name is localised. */}
-      <OfferPopup
-        offer={{
-          ...OFFER_POPUP,
-          title: `${OFFER_POPUP.title} — ${cityData.name}`,
-        }}
-        phone={LAB_PHONE}
-      />
+      {popups.offer && (
+        <OfferPopup
+          offer={{
+            ...OFFER_POPUP,
+            title: `${OFFER_POPUP.title} — ${cityData.name}`,
+          }}
+          phone={LAB_PHONE}
+        />
+      )}
 
       <LabHero hero={cityData.hero} cityOptions={cityOptions} />
 

@@ -52,6 +52,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
+import { dbBlog, dbBlogMeta } from "./fromDb";
 import { metaOf, normalisePost, slugify } from "./normalise";
 
 /**
@@ -181,6 +182,28 @@ async function buildIndex() {
     seen.add(post.href);
   }
 
+  /*
+   * Then the posts the admin panel published.
+   *
+   * A route that exists in BOTH places is the database's — that is what makes
+   * "edit this imported post in the panel" mean anything. The file is left on
+   * disk untouched, so reverting is `DELETE`-free in both directions: set the
+   * row back to draft and the file takes over again.
+   *
+   * Duplicate routes are a hard error among FILES (two files cannot own one
+   * URL) but an expected, meaningful state across the two sources, so the
+   * check above stays where it is and this runs after it.
+   *
+   * dbBlogMeta() never throws — a database that is down yields an empty list
+   * and the site serves the files alone.
+   */
+  for (const post of await dbBlogMeta()) {
+    const at = list.findIndex((item) => item.href === post.href);
+    const meta = metaOf(post);
+    if (at === -1) list.push(meta);
+    else list[at] = meta;
+  }
+
   /* Each city's newest publish date, so a city can be ranked as a whole. */
   const newestIn = new Map();
   for (const post of list) {
@@ -210,11 +233,42 @@ async function buildIndex() {
  * shows up on refresh instead of after a restart.
  */
 let indexPromise = null;
+let indexAt = 0;
+
+/**
+ * How long a built index is reused in production.
+ *
+ * It used to be forever, and that was right when every article was a file: the
+ * files cannot change under a running server, so re-reading them would be
+ * pure waste.
+ *
+ * Posts now also come from MySQL, which CAN change under a running server —
+ * that is the entire point of the admin panel. An unbounded memo would mean a
+ * post published at 10am does not appear until the next deploy. A minute is
+ * the same window src/lib/testCatalog.js gives a price change, and it keeps
+ * the "publish and look at it" loop honest without putting the article
+ * directory in the path of every request.
+ *
+ * Still not memoised in development, so a file you just added shows on refresh.
+ */
+const INDEX_TTL_MS = 60_000;
 
 function loadIndex() {
   if (process.env.NODE_ENV !== "production") return buildIndex();
-  indexPromise ??= buildIndex();
+  if (!indexPromise || Date.now() - indexAt > INDEX_TTL_MS) {
+    indexAt = Date.now();
+    indexPromise = buildIndex().catch((err) => {
+      indexPromise = null; // a failed build must not be cached for a minute
+      throw err;
+    });
+  }
   return indexPromise;
+}
+
+/** Drop the memo now — called by the panel the moment a post is published. */
+export function invalidateBlogIndex() {
+  indexPromise = null;
+  indexAt = 0;
 }
 
 /* ── The public API ───────────────────────────────────────────────────────
@@ -235,7 +289,12 @@ export async function getBlog(category, city) {
   const wantedCategory = slugify(decodeURIComponent(String(category ?? "")));
   const wantedCity = slugify(decodeURIComponent(String(city ?? "")));
   if (!wantedCategory || !wantedCity) return null;
-  return readPost(wantedCity, wantedCategory);
+
+  // The database first, for the same reason the index layers it on top: a
+  // post that has been edited in the panel is the current one. A miss here is
+  // the ordinary case for the fifty-odd posts still on disk, and costs one
+  // indexed lookup.
+  return (await dbBlog(wantedCategory, wantedCity)) ?? readPost(wantedCity, wantedCategory);
 }
 
 /** Params for generateStaticParams — one entry per published article. */
