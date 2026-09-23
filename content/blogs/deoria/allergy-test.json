@@ -1,0 +1,362 @@
+{
+  "title": "Allergy Test In Deoria — IgE Aur Kab Karayein",
+  "description": "Chheenk, khujli, daane ya saans phoolna — allergy me kaun sa blood test hota hai, IgE ka matlab kya hai, aur Deoria me sample ghar se kaise dein.",
+  "keywords": [
+    "Allergy Test In Deoria",
+    "IgE Test Kya Hota Hai",
+    "Allergy Blood Test Hindi",
+    "Dhool Se Allergy Test",
+    "Skin Allergy Ka Test",
+    "Absolute Eosinophil Count Matlab",
+    "Khujli Aur Daane Ka Test",
+    "Allergy Test Ghar Par Deoria",
+    "Blood Test Home Collection In Deoria",
+    "Lab Test Booking Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 305,
+  "takeaways": [
+    "Allergy ka koi ek test nahi hota. Sabse pehla kaam blood test nahi, ye dekhna hota hai ki shikayat kab, kahan aur kis cheez ke baad hoti hai.",
+    "Total IgE sirf itna batata hai ki sharir me allergy wali pratikriya chal rahi hai — ye nahi batata ki kis cheez se.",
+    "Report me \"positive\" aana aur us cheez se sach me takleef hona do alag baatein hain. Faisla report aur aapke lakshan, dono ko saath rakh kar hota hai.",
+    "Saans ukhadna, hont ya jeebh ka sujna, ya nigalne me dikkat — ye test ka waqt nahi hai, seedha aspataal ka hai."
+  ],
+  "sections": [
+    {
+      "id": "allergy-me-test-kab",
+      "heading": "Allergy Me Test Ki Zaroorat Kab Padti Hai",
+      "lead": "Har chheenk ke liye nahi — lekin jo baar-baar lautti hai, uske liye haan.",
+      "blocks": [
+        "Mausam badalte hi chheenk aana, dhool me khaansi, kisi khaane ke baad daane nikal aana, ya saal bhar naak band rehna — ye shikayatein is ilaake me bahut aam hain. Zyadatar log inhe \"mausami\" maan kar chalte rehte hain, aur zyadatar baar ye theek bhi ho jaati hain.",
+        "Test ki baat tab aati hai jab shikayat ek pattern bana le. Doctor aam taur par tab jaanch ki soch te hain jab takleef baar-baar lautti ho, saal ke ek hi mausam me pakka aati ho, dawa band karte hi wapas aa jaati ho, ya bachche ki padhai aur neend dono kharaab kar rahi ho.",
+        {
+          "list": [
+            "Baar-baar chheenk, naak behna ya naak band rehna — khaas kar subah ya dhool wali jagah par.",
+            "Khaansi jo raat me ya mehnat ke baad badh jaati hai, aur saans lete waqt seeti jaisi awaaz.",
+            "Baar-baar daane, chakatte, ya khujli jo hafton chalti rahe.",
+            "Kisi ek khaane ke baad har baar wahi takleef hona.",
+            "Aankh me lagataar khujli, laali aur paani aana."
+          ]
+        },
+        {
+          "note": {
+            "title": "Ye lakshan test ka intezaar nahi karte",
+            "text": "Saans ukhadna ya bolne me dikkat, hont, jeebh ya chehre ka achanak sujna, poore sharir par tezi se failte chakatte ke saath chakkar ya behoshi jaisa lagna — in me se kuch bhi ho to sample dene ki booking mat kijiye, seedhe nazdeeki aspataal jaiye. Ye emergency hai aur uska ilaaj wahin hota hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "allergy-ke-blood-test",
+      "heading": "Allergy Me Kaun Se Blood Test Hote Hain",
+      "lead": "Do tarah ke — ek ye batata hai ki allergy hai, doosra ishara deta hai ki kis se.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Allergy me aam taur par likhe jaane wale test",
+            "head": ["Test", "Ye kya batata hai", "Fasting"],
+            "rows": [
+              [
+                "Total IgE",
+                "Sharir me allergy wali pratikriya chal rahi hai ya nahi — kis cheez se, ye nahi",
+                "Nahi"
+              ],
+              [
+                "AEC (Absolute Eosinophil Count)",
+                "Khoon ki ek khaas kosika ki ginti, jo allergy aur kuch parjeevi me badhti hai",
+                "Nahi"
+              ],
+              [
+                "CBC",
+                "Khoon ki poori ginti — AEC aksar isi ke saath aa jaata hai",
+                "Nahi"
+              ],
+              [
+                "Allergen panel (specific IgE)",
+                "Alag-alag cheezon ke liye alag number — dhool, poran, kuch khaane waghairah",
+                "Nahi"
+              ],
+              [
+                "Stool routine",
+                "Pet ke keede, jo AEC badhne ki ek aam aur alag wajah hain",
+                "Nahi"
+              ]
+            ]
+          }
+        },
+        "In sab me ek hi baat samajh lena kaafi hai. Total IgE aur AEC ye batate hain ki sharir me kuch chal raha hai. Panel wale test is se aage ja kar ishara dete hain ki kis cheez ki taraf dekhna chahiye. Lekin koi bhi test akela ye nahi keh sakta ki \"aapko is cheez se allergy hai\" — wo faisla aapke lakshan ke saath mila kar doctor karta hai.",
+        [
+          "AEC aksar CBC ke andar hi aa jaata hai, aur CBC me kya-kya hota hai wo ",
+          {
+            "text": "CBC wali guide",
+            "href": "/blogs/cbc-test/deoria"
+          },
+          " me line-by-line likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "ige-report-ka-matlab",
+      "heading": "IgE Ka Number Zyada Aaya — Iska Matlab Kya Hai",
+      "lead": "Bada number bade rog ka matlab nahi hota.",
+      "blocks": [
+        "IgE ka number badhne ka sabse aam matlab yahi hai ki sharir kisi cheez par pratikriya kar raha hai. Wo cheez dhool ho sakti hai, mausam ho sakta hai, ya koi khaana. Lekin ek baat bahut saaf rakhiye: IgE ka number kitna bada hai, isse ye tay nahi hota ki takleef kitni badi hogi. Kam number wale ko zyada takleef ho sakti hai aur bade number wale ko kam.",
+        "Is ilaake me ek aur wajah bahut aam hai jo aksar chhoot jaati hai — pet ke keede. Ye bhi IgE aur AEC dono ko badha dete hain, aur inka ilaaj allergy ke ilaaj se bilkul alag hota hai. Isiliye doctor kai baar allergy ke saath stool ki jaanch bhi likhte hain. Number dekh kar seedhe allergy maan lena yahan sabse aam galti hai.",
+        {
+          "note": {
+            "title": "Positive report = pakka allergy, aisa nahi hai",
+            "text": "Panel me kisi cheez par \"positive\" aa jaana sirf itna batata hai ki sharir ne us cheez ko pehchana hai. Bahut se log aisi cheezon par positive aate hain jinse unhe kabhi koi takleef nahi hoti. Isliye report dekh kar khud koi khaana band mat kar dijiye — khaas kar bachchon ka doodh, anda ya gehu. Bina zaroorat khaana band karna apne aap me nuksan hai, aur ye faisla sirf doctor ka hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deoria-me-allergy-ki-wajah",
+      "heading": "Is Ilaake Me Allergy Ki Aam Wajah Kya Hoti Hai",
+      "lead": "Mausam aur kaam, dono ka hissa hota hai.",
+      "blocks": [
+        "Deoria aur aas-paas ka ilaaka kheti wala hai, aur yahan saal ke kuch hisse dhool ke hote hain — fasal katne ka samay, bhusa, aur sookhe mahine. Dhaan aur gehu ki mandai ke dinon me naak aur seene ki shikayat badhna yahan aam baat hai. Sardi ki shuruaat aur mausam badalne ke hafte doosra aam daur hota hai.",
+        "Ghar ke andar ki wajah bhi utni hi aam hai — purane bistar aur gaddon ki dhool, seelan wali deewar, aur chulhe ya kande ka dhuan. Ye cheezein test me naam le kar nahi aatin, lekin lakshan ka pattern inhi ki taraf ishara karta hai. Isiliye doctor pehle sawaal poochhte hain aur test baad me likhte hain.",
+        "Isi wajah se ek chhoti si diary sabse zyada kaam aati hai. Do hafte tak likh lijiye: takleef kis din hui, us din aap kahan the, kya khaaya tha, aur mausam kaisa tha. Ye kaagaz kisi bhi report se zyada kaam ka sabit hota hai, kyunki test bata sakta hai ki pratikriya ho rahi hai, par kab ho rahi hai ye sirf aap bata sakte hain.",
+        [
+          "Mausam ke hisaab se is jile me aur kaun si jaanch zyada hoti hai, wo ",
+          {
+            "text": "Deoria ki lab test guide",
+            "href": "/lab-test/deoria#fever-season-deoria"
+          },
+          " me likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "allergy-aur-doosri-wajah",
+      "heading": "Har Chheenk Allergy Nahi Hoti — Ye Cheezein Bhi Dekhi Jaati Hain",
+      "lead": "Ek jaisa dikhne wala lakshan, alag wajah.",
+      "blocks": [
+        "Allergy ka test karwane aane walon me se kaafi logon ki shikayat ki wajah allergy hoti hi nahi. Isliye doctor aksar kuch aur jaanch bhi saath me dekhte hain, taaki ek jaisi dikhne wali doosri wajah chhoot na jaaye.",
+        {
+          "list": [
+            "Khoon ki kami — thakan aur saans phoolna dono me aam, aur ise allergy samajh liya jaata hai.",
+            "Thyroid — thakan, sujan aur khaal ki shikayat me ye dekha jaata hai.",
+            "Pet ke keede — AEC badhne ki is ilaake me sabse aam wajah me se ek.",
+            "Sugar — baar-baar hone wale skin infection aur khujli ke peeche kai baar yahi hota hai.",
+            "Vitamin B12 aur vitamin D ki kami — lambi thakan aur kamzori me."
+          ]
+        },
+        [
+          "Inme se har ek ki apni guide hai — ",
+          {
+            "text": "thyroid",
+            "href": "/blogs/thyroid-test/deoria"
+          },
+          ", ",
+          {
+            "text": "vitamin B12 aur D",
+            "href": "/blogs/vitamin-b12-d-test/deoria"
+          },
+          ", ",
+          {
+            "text": "sugar aur HbA1c",
+            "href": "/blogs/hba1c-sugar-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "stool test",
+            "href": "/blogs/stool-test/deoria"
+          },
+          ". Lakshan ke hisaab se test chunna ho to ",
+          {
+            "text": "lakshan wali guide",
+            "href": "/blogs/symptom-test/deoria"
+          },
+          " se shuru kijiye."
+        ]
+      ]
+    },
+    {
+      "id": "allergy-test-se-pehle-dawa",
+      "heading": "Test Se Pehle Allergy Ki Dawa Band Karni Hai?",
+      "lead": "Blood test ke liye aam taur par nahi — par poochh lena zaroori hai.",
+      "blocks": [
+        "Ye sawaal isliye aata hai kyunki skin par hone wale allergy test se pehle kuch dawaiyan rokni padti hain. Blood se hone wale IgE aur AEC me aam taur par wo zaroorat nahi hoti. Lekin ek dawa aisi hai jo dhyaan maangti hai — steroid, kisi bhi roop me — kyunki wo khoon ki ginti par asar daal sakti hai.",
+        "Isliye niyam wahi hai jo har test par laagu hota hai: apne aap koi dawa band mat kijiye. Jo dawa chal rahi hai uska naam booking ke waqt aur doctor ko bata dijiye, aur rokne ka faisla doctor par chhod dijiye.",
+        [
+          "Kaun si dawa aur supplement kis report par asar daalte hain, iska poora hisaab ",
+          {
+            "text": "dawa aur test wali guide",
+            "href": "/blogs/medicine-before-test/deoria"
+          },
+          " me hai. In test me fasting nahi lagti, lekin ek saath sugar ya lipid bhi karana ho to lagti hai — wo ",
+          {
+            "text": "fasting wali guide",
+            "href": "/blogs/blood-test-fasting/deoria"
+          },
+          " me dekh lijiye."
+        ]
+      ]
+    },
+    {
+      "id": "deoria-me-allergy-sample",
+      "heading": "Deoria Me Allergy Ki Jaanch Ghar Se Kaise Karayein",
+      "lead": "Ye saare test khoon ke sample par hote hain.",
+      "blocks": [
+        "Total IgE, AEC aur CBC — teeno khoon ke ek hi sample se ho jaate hain, aur inme fasting nahi lagti. Stool bhi saath likha ho to uska sample alag se dena hota hai, aur uska container aur tareeka booking ke waqt bata diya jaata hai.",
+        {
+          "list": [
+            "Booking form me apni shikayat likh dijiye — sirf test ka naam kaafi nahi hota, aur call par sahi salah usi se banti hai.",
+            "Doctor ka parcha hai to uski photo taiyaar rakhiye. Panel wale test parche ke hisaab se hi book hote hain.",
+            "Trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne liya jaata hai. Home collection ka koi alag visiting charge nahi.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Kuch panel me thoda zyada waqt lagta hai, aur wo booking ke waqt bata diya jaata hai.",
+            "Bachche ka test hai to ye pehle bata dijiye — taiyaari thodi alag hoti hai."
+          ]
+        },
+        {
+          "note": {
+            "title": "Skin wala allergy test hum nahi karte",
+            "text": "Allergy ki ek jaanch chamdi par ki jaati hai, jismein doctor khaal par thodi-thodi cheezein laga kar pratikriya dekhte hain. Wo aapke saamne, doctor ke paas hoti hai — ghar par ya sample par nahi hoti, aur hamari service me shaamil nahi hai. Hum sirf khoon aur peshab wali jaanch karte hain.",
+            "tone": "info"
+          }
+        },
+        [
+          "Rate ",
+          {
+            "text": "Deoria ki price list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " me hai, aur bachchon ke sample ki poori taiyaari ",
+          {
+            "text": "bachchon wali guide",
+            "href": "/blogs/child-blood-test/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-allergy",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Parcha haath me hai to booking seedhi hai — ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye aur form bhar dijiye. Parche par likhe short form samajh na aa rahe hon to ",
+          {
+            "text": "parche wali guide",
+            "href": "/blogs/prescription-test-list/deoria"
+          },
+          " dekh lijiye."
+        ],
+        [
+          "Parcha nahi hai to pehle do hafte ki wo chhoti diary bana lijiye — kab, kahan, kya khaaya. Uske baad doctor ko dikhaiye; test wahi tay karenge. Report ka matlab hum nahi batate aur na koi dawa batate hain. Koi chhota sawaal ho to ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Allergy test se pata chal jaata hai ki mujhe kis cheez se allergy hai?",
+      "answer": "Poori tarah nahi. Total IgE sirf ye batata hai ki sharir me allergy wali pratikriya chal rahi hai — kis cheez se, ye nahi. Panel wale test alag-alag cheezon ke liye alag number dete hain, jo ishara karte hain ki kis taraf dekhna chahiye. Lekin kisi cheez par \"positive\" aana aur us cheez se sach me takleef hona do alag baatein hain. Aakhri faisla aapke lakshan aur report dono ko saath rakh kar doctor karta hai."
+    },
+    {
+      "question": "Allergy test ke liye khaali pet rehna padta hai?",
+      "answer": "Nahi. IgE, AEC aur CBC — in me se kisi me fasting nahi lagti, isliye sample din me kabhi bhi diya ja sakta hai. Deoria me home visit ke slot subah 6 baje se shuru hote hain. Haan, agar isi visit me sugar ya lipid profile bhi karana hai to unme fasting lagti hai, aur confirmation call par ye aapko bata diya jaayega."
+    },
+    {
+      "question": "Test se pehle allergy ki goli band kar dun?",
+      "answer": "Apne aap bilkul nahi. Khoon se hone wale IgE aur AEC ke liye aam taur par allergy ki goli rokne ki zaroorat nahi hoti. Steroid chal raha ho to wo zaroor bata dijiye, kyunki wo khoon ki ginti par asar daal sakta hai. Rokne ka faisla sirf aapka doctor le sakta hai — booking ke waqt aur doctor ko apni saari dawaiyon ke naam bata dijiye."
+    },
+    {
+      "question": "Report me eosinophil (AEC) zyada aaya hai — kya ye allergy hi hai?",
+      "answer": "Zaroori nahi. AEC allergy me badhta hai, lekin is ilaake me uski ek aur bahut aam wajah pet ke keede hain — aur unka ilaaj allergy ke ilaaj se bilkul alag hota hai. Isiliye doctor kai baar AEC ke saath stool ki jaanch bhi likhte hain. Number dekh kar khud allergy maan lena aur dawa shuru kar dena yahan sabse aam galti hai. Report doctor ko dikhaiye."
+    },
+    {
+      "question": "Bachche ko baar-baar daane nikalte hain — kya uska allergy test karwa dun?",
+      "answer": "Pehle bachche ko doctor ko dikhaiye. Bachchon me daane ki kai wajah hoti hain aur sabme test ki zaroorat nahi padti. Doctor jo test likhein wo ghar se ho jaate hain — sample bachche ka bhi ghar par hi liya jaata hai, aur booking ke waqt bata dijiye ki bachche ka test hai taaki taiyaari us hisaab se ho. Ek baat zaroor: report dekh kar bachche ka doodh, anda ya gehu khud band mat kijiye — wo faisla sirf doctor ka hai."
+    },
+    {
+      "question": "Kya aap chamdi wala allergy test (skin prick) karte hain?",
+      "answer": "Nahi. Wo jaanch doctor ke paas, aapke saamne hoti hai — khaal par thodi-thodi cheezein laga kar pratikriya dekhi jaati hai. Wo sample par nahi hoti, isliye ghar par ho hi nahi sakti, aur hamari service me shaamil nahi hai. Hum khoon aur peshab wali jaanch karte hain — IgE, AEC, CBC aur panel wale test ghar se ho jaate hain."
+    },
+    {
+      "question": "Ek baar allergy test karwa liya to dobara karana padega?",
+      "answer": "Ye aapki halat par hai, aur wo faisla doctor ka hota hai. Allergy ke number samay ke saath badal sakte hain, khaas kar bachchon me. Aam taur par dobara test tab hota hai jab ilaaj ke baad takleef ka pattern badal jaaye, ya koi nayi shikayat shuru ho. Ek baat dhyaan me rakhiye: dobara jaanch usi lab se karaiye jahan pehli hui thi, kyunki har lab ka method aur range apni hoti hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Allergy ke lakshan kai doosri cheezon se milte hain — inki apni guide alag hai.",
+    "groups": [
+      {
+        "title": "Milte-Julte Lakshan",
+        "links": [
+          {
+            "href": "/blogs/symptom-test/deoria",
+            "label": "Lakshan ke hisaab se kaun sa test",
+            "sub": "Shikayat se shuru kijiye, package se nahi"
+          },
+          {
+            "href": "/blogs/cbc-test/deoria",
+            "label": "CBC test — AEC isi ke andar aata hai"
+          },
+          {
+            "href": "/blogs/stool-test/deoria",
+            "label": "Stool test — pet ke keede aur pachan"
+          },
+          {
+            "href": "/blogs/vitamin-b12-d-test/deoria",
+            "label": "Thakan, khoon ki kami aur vitamin"
+          }
+        ]
+      },
+      {
+        "title": "Taiyaari",
+        "links": [
+          {
+            "href": "/blogs/medicine-before-test/deoria",
+            "label": "Dawa aur supplement — test se pehle kya karein"
+          },
+          {
+            "href": "/blogs/prescription-test-list/deoria",
+            "label": "Parche par likhe test ka matlab"
+          },
+          {
+            "href": "/blogs/child-blood-test/deoria",
+            "label": "Bachchon ka blood test — taiyaari"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria me lab test ka price"
+          },
+          {
+            "href": "/blogs/blood-test-report/deoria",
+            "label": "Report kaise padhein — H, L aur range"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — test chunne me madad"
+          }
+        ]
+      }
+    ]
+  }
+}
