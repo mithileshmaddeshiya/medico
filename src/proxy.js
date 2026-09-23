@@ -52,7 +52,9 @@ export async function proxy(request) {
   const { pathname, search } = request.nextUrl;
 
   /* ── 1. Admin ──────────────────────────────────────────────────────────── */
-  if (pathname.startsWith("/admin")) {
+  // /lab-report is a staff tool that lives outside /admin (see
+  // src/app/lab-report/page.js) and is gated exactly like the panel.
+  if (pathname.startsWith("/admin") || pathname === "/lab-report") {
     // The sign-in page itself must stay reachable, or this is a loop.
     if (pathname === "/admin/login") return NextResponse.next();
 

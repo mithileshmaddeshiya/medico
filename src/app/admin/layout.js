@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import {
   BarChart3,
   ExternalLink,
+  FileHeart,
   FileText,
   Flag,
   History,
@@ -58,6 +59,7 @@ const SECTIONS = [
       { href: "/admin/leads", label: "Leads", Icon: Flag },
       { href: "/admin/orders", label: "Orders", Icon: Receipt },
       { href: "/admin/carts", label: "Carts", Icon: ShoppingCart },
+      { href: "/lab-report", label: "Lab report", Icon: FileHeart, role: "editor" },
     ],
   },
   {

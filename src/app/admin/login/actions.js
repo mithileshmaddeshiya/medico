@@ -20,6 +20,7 @@ import { redirect } from "next/navigation";
 
 import { audit } from "@/lib/admin/audit";
 import { signIn } from "@/lib/admin/auth";
+import { safeNext } from "@/lib/admin/guard";
 import { query } from "@/lib/db";
 
 const WINDOW_MINUTES = 15;
@@ -88,9 +89,7 @@ export async function loginAction(previous, formData) {
     };
   }
 
-  // Only ever to a path inside the panel. An unvalidated `next` on a login
-  // page is a textbook open redirect: a link to
-  // /admin/login?next=https://evil.example would send a freshly signed-in
-  // admin straight there, with the referrer to prove they came from us.
-  redirect(next.startsWith("/admin") && !next.startsWith("/admin/login") ? next : "/admin");
+  // Only ever to a path inside the panel or the lab report tool — see
+  // safeNext() for why an unvalidated `next` here is an open redirect.
+  redirect(safeNext(next));
 }

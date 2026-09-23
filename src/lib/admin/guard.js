@@ -15,6 +15,20 @@ import { redirect } from "next/navigation";
 
 import { can, currentUser } from "./auth";
 
+/**
+ * Where a sign-in may send someone afterwards: a screen inside the panel, or
+ * the lab report tool (which lives at /lab-report, outside /admin). Anything
+ * else falls back to the dashboard — an unvalidated `next` on a login page is
+ * a textbook open redirect: /admin/login?next=https://evil.example would send
+ * a freshly signed-in admin straight there.
+ */
+export function safeNext(next) {
+  if (typeof next !== "string") return "/admin";
+  if (next.startsWith("/admin") && !next.startsWith("/admin/login")) return next;
+  if (next === "/lab-report") return next;
+  return "/admin";
+}
+
 /** The signed-in user, looked up at most once per request. */
 export const getUser = cache(currentUser);
 

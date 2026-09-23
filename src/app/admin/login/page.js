@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
-import { getUser } from "@/lib/admin/guard";
+import { getUser, safeNext } from "@/lib/admin/guard";
 
 import LoginForm from "./LoginForm";
 
@@ -15,7 +15,7 @@ export default async function LoginPage({ searchParams }) {
 
   // Already signed in: go where they were headed rather than showing a form
   // they do not need.
-  if (await getUser()) redirect(typeof next === "string" && next.startsWith("/admin") ? next : "/admin");
+  if (await getUser()) redirect(safeNext(next));
 
   return (
     /*
