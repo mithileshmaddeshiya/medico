@@ -1,0 +1,354 @@
+{
+  "title": "Stool Test In Deoria — Pet Ke Keede Aur Report",
+  "description": "Stool routine, culture aur occult blood me kya farak hai, sample dene ka sahi tareeka, aur Deoria me ghar se jaanch kaise karayein.",
+  "keywords": [
+    "Stool Test In Deoria",
+    "Pet Ke Keede Ka Test",
+    "Stool Routine Test Kya Hota Hai",
+    "Stool Culture Kab Karayein",
+    "Stool Occult Blood Test",
+    "Dast Me Kaun Sa Test",
+    "Bachche Ka Stool Test Deoria",
+    "Stool Sample Kaise Dein",
+    "Free Home Sample Collection Deoria",
+    "Lab Test Booking Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 125,
+  "takeaways": [
+    "Stool routine aur stool culture do alag jaanch hain. Routine ki report jaldi aa jaati hai; culture me 48–72 ghante lagte hain, kyunki usme keede ko badhne ka waqt diya jaata hai.",
+    "Culture ka sample antibiotic shuru karne se PEHLE dena chahiye — ek khuraak ke baad bhi report adhoori aa sakti hai.",
+    "Sample me paani ya peshab mil jaana sabse aam galti hai, aur isse aadhi report bekaar ho jaati hai.",
+    "Paakhane me khoon, kaala paakhana, ya bina wajah wazan girna — ye test ke intezaar wali baatein nahi hain. Inme usi din doctor ko dikhaiye."
+  ],
+  "sections": [
+    {
+      "id": "stool-test-kyun-deoria",
+      "heading": "Stool Test Kyun Kiya Jaata Hai — Aur Is Ilaake Me Kyun Itna Aam Hai",
+      "lead": "Paani aur khaan-paan, dono ka hissa hai.",
+      "blocks": [
+        "Pet ki shikayat par doctor jo jaanch sabse pehle likhte hain unme stool routine aksar hota hai. Wajah seedhi hai: pet dard, dast, gas, bhookh na lagna aur kamzori — in sab ke peeche jo cheezein aam taur par hoti hain, unme se kai sirf paakhane ki jaanch se hi pakad me aati hain.",
+        "Deoria jaise jile me iski zaroorat aur badh jaati hai. Yahan barsaat ke baad paani ka jama hona, handpump aur kuen ka paani, aur khet-khaliyan ka kaam — teeno milkar pet ke keede aur paani se failne wali beemariyon ko aam bana dete hain. Bachchon me ye sabse zyada hota hai, aur wahin sabse zyada anadekha bhi rehta hai.",
+        "Pet ke keede ka asar sirf pet tak nahi rehta. Lambe samay tak keede rehne se khoon ki kami ho jaati hai, bachche ka wazan aur lambaai rukti hai, aur bada aadmi bhi bina wajah thaka rehta hai. Isiliye kai baar khoon ki kami ki jaanch ke saath stool bhi likha jaata hai — dono ek hi kahani ke do hisse hote hain.",
+        [
+          "Khoon ki kami me haemoglobin ke aage kya dekha jaata hai, wo ",
+          {
+            "text": "vitamin aur khoon ki kami wali guide",
+            "href": "/blogs/vitamin-b12-d-test/deoria"
+          },
+          " me hai. Barsaat aur baadh ke baad is jile me kaun si beemariyan badhti hain, wo ",
+          {
+            "text": "yahan",
+            "href": "/lab-test/deoria#flood-water-diseases-deoria"
+          },
+          " likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "routine-culture-occult-farak",
+      "heading": "Stool Routine, Culture Aur Occult Blood — Teen Alag Jaanch",
+      "lead": "Parche par ek jaise dikhte hain, kaam teeno ka alag hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Stool ki teen jaanch aur unka kaam",
+            "head": ["Parche par", "Ye kya dekhti hai", "Report kab tak"],
+            "rows": [
+              [
+                "Stool Routine / R-M",
+                "Keede aur unke ande, pachan ki halat, sujan ki nishaani, mucus",
+                "Aam taur par usi din ke hisaab se"
+              ],
+              [
+                "Stool Culture / C-S",
+                "Infection kis keede se hai, aur us par kaun si dawa chalegi",
+                "48–72 ghante"
+              ],
+              [
+                "Stool Occult Blood / FOB",
+                "Aisa khoon jo aankh se nahi dikhta",
+                "Aam taur par usi din ke hisaab se"
+              ]
+            ]
+          }
+        },
+        "Teeno me sabse zyada uljhan routine aur culture me hoti hai. Routine me sample ko dekha jaata hai — ande, keede, cells. Culture me sample ke andar ke keede ko badhne diya jaata hai, taaki pata chale wo kaun sa hai aur kaun si dawa us par asar karegi. Isi \"badhne dene\" me waqt lagta hai, aur yahi 48–72 ghante ki wajah hai. Ye der lab ki nahi, test ki apni hai.",
+        "Occult blood alag hi sawaal ka jawab deta hai. Wo tab likha jaata hai jab shak ho ki pet ya aanton me kahin se thoda-thoda khoon ja raha hai, jo paakhane me dikhta nahi. Ye khaas kar bina wajah khoon ki kami hone par, aur umar badhne ke baad ki jaanch me aata hai.",
+        {
+          "note": {
+            "title": "Culture ka ek hi niyam — antibiotic se pehle",
+            "text": "Agar parche par stool culture likha hai to sample antibiotic ki pehli khuraak se PEHLE dena chahiye. Dawa shuru hone ke baad keeda daba hua hota hai aur report me aksar kuch nikalta hi nahi, jabki infection maujood hota hai. Antibiotic pehle se chal raha ho to ye doctor ko bata dijiye — ho sakta hai wo sample ka din badal dein.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stool-sample-kaise-dein",
+      "heading": "Sample Dene Ka Sahi Tareeka — Yahin Sabse Zyada Report Kharab Hoti Hai",
+      "lead": "Paanch minute ka dhyaan, aur dobara test se bach jaate hain.",
+      "blocks": [
+        "Stool test me lab ka kaam tabhi shuru hota hai jab sample theek ho. Aur ismein galti karna bahut aasan hai — kyunki sample aap khud lete hain, ghar par. Neeche wali paanch baatein hi wo hain jinki wajah se zyadatar report dobara karani padti hai.",
+        {
+          "list": [
+            "Saaf, sookha aur dhakkan wala container hi istemaal kijiye. Booking ke waqt container ke baare me bata diya jaata hai — apne aap kisi purani shishi ya polythene me mat lijiye.",
+            "Sample me peshab bilkul nahi milna chahiye. Isliye pehle peshab kar lijiye, phir paakhana — dono ek saath nahi.",
+            "Paani nahi milna chahiye. Seedha toilet ke paani me gira hua sample kaam ka nahi rehta; use lene se pehle koi saaf, sookhi cheez rakh lijiye.",
+            "Matra thodi hi chahiye — ek chhote chamach jitni kaafi hai. Agar usme khoon, aam (mucus) ya koi alag dikhne wala hissa hai to us hisse me se lijiye, wahi sabse kaam ka hota hai.",
+            "Sample taaza hona chahiye. Lene ke baad use rakha nahi jaata — collection ka waqt usi hisaab se tay kijiye, aur booking ke waqt poochh lijiye ki kitni der me pahunchana hai."
+          ]
+        },
+        "Ek baat aur, khaas kar bachchon ke liye: diaper ya nappy me se soakha hua sample kaam nahi karta, kyunki uska paani wahin ja chuka hota hai. Bachche ka sample lene ka tareeka booking ke waqt poochh lijiye — ye ek hi sawaal poore din ka chakkar bacha deta hai.",
+        [
+          "Peshab ka sample dene ka tareeka isse alag hai aur utna hi maayne rakhta hai — wo ",
+          {
+            "text": "urine test wali guide",
+            "href": "/blogs/urine-test/deoria"
+          },
+          " me poora likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "stool-report-kya-dikhta-hai",
+      "heading": "Report Me Kya-Kya Likha Hota Hai",
+      "lead": "Kuch shabd har report me aate hain — unka matlab jaan lena kaafi hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Stool routine report ke aam shabd",
+            "head": ["Report me", "Iska matlab"],
+            "rows": [
+              ["Ova / Cyst", "Keedon ke ande ya unka aaram wala roop — inka dikhna hi keedon ki nishaani hai"],
+              ["Pus cells", "Sujan ya infection ki taraf ishara"],
+              ["RBC", "Paakhane me khoon ki kosikaayein"],
+              ["Mucus", "Aam (lasdar padarth) — aanton me jalan par badhta hai"],
+              ["Occult blood", "Wo khoon jo aankh se nahi dikhta"],
+              ["Consistency", "Paakhana kaisa tha — thos, narm ya paani jaisa"],
+              ["Reducing substance", "Bachchon me doodh ki shakkar theek se pach rahi hai ya nahi"]
+            ]
+          }
+        },
+        "In me se kisi ek cheez ka dikhna apne aap me poora jawab nahi hota. Doctor report ko aapke lakshan ke saath mila kar padhte hain — kitne din se dikkat hai, bukhar hai ya nahi, bachche ka wazan kya chal raha hai. Isiliye report aane ke baad use dikhana zaroori hai; hum report ka matlab nahi batate aur na hi koi dawa batate hain.",
+        {
+          "note": {
+            "title": "Ye chaar baatein intezaar nahi karti",
+            "text": "Paakhane me saaf dikhne wala khoon, kaala aur leesdaar paakhana, dast ke saath lagataar ulti aur mooh sookhna ya peshab bahut kam ho jaana, aur bina koshish ke wazan girna — in me se kuch bhi ho to report ka intezaar mat kijiye, usi din doctor ko dikhaiye. Chhote bachche aur bujurg me paani ki kami bahut jaldi badhti hai.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bachchon-me-stool-test",
+      "heading": "Bachchon Me Stool Test — Sabse Zyada Zaroori, Sabse Zyada Taala Jaane Wala",
+      "lead": "Pet ka sawaal aksar wazan aur padhai ka sawaal ban jaata hai.",
+      "blocks": [
+        "Bachche me baar-baar pet dard, bhookh na lagna, raat me daant kitkitana, gudda me khujli, ya wazan aur lambaai ka na badhna — in par ghar me aksar \"ho jaayega\" keh kar chhod diya jaata hai. In me se kai ka jawab ek saada stool test de deta hai, aur uske baad ka ilaaj bhi aam taur par seedha hota hai.",
+        "Yahan ek baat khaas dhyaan dene layak hai. Bazaar se keede ki dawa kharid kar khud de dena is ilaake me bahut aam hai. Dikkat ye hai ki keede ek tarah ke nahi hote, aur har dawa har keede par nahi chalti — na hi har pet dard keedon ka hota hai. Isliye sahi tareeka ulta hai: pehle jaanch, phir doctor ki batayi dawa.",
+        [
+          "Bachche ka sample ghar par hi liya ja sakta hai, aur khoon ka sample bhi. Bachchon ke liye taiyaari thodi alag hoti hai — wo ",
+          {
+            "text": "bachchon wali guide",
+            "href": "/blogs/child-blood-test/deoria"
+          },
+          " me likhi hai. Bachche me khoon ki kami kitni honi chahiye, wo bhi wahin hai."
+        ]
+      ]
+    },
+    {
+      "id": "stool-ke-saath-kaun-se-test",
+      "heading": "Stool Ke Saath Aksar Kaun Se Test Likhe Jaate Hain",
+      "lead": "Pet ki shikayat akeli kam hi aati hai.",
+      "blocks": [
+        {
+          "list": [
+            "CBC — khoon ki kami aur eosinophil ki ginti, jo keedon me badhti hai.",
+            "LFT — peeliya ya aankh-peshab peela hone ki shikayat saath ho to.",
+            "Widal ya typhoid ki jaanch — lambe bukhar ke saath pet ki shikayat par.",
+            "Urine routine — peshab me jalan bhi ho to.",
+            "Blood sugar — lambe samay se pet ki gadbadi aur wazan girne par."
+          ]
+        },
+        [
+          "In sab ki apni guide hai — ",
+          {
+            "text": "CBC",
+            "href": "/blogs/cbc-test/deoria"
+          },
+          ", ",
+          {
+            "text": "LFT aur KFT",
+            "href": "/blogs/liver-kidney-test/deoria"
+          },
+          ", ",
+          {
+            "text": "dengue aur typhoid",
+            "href": "/blogs/dengue-typhoid-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "peeliya",
+            "href": "/blogs/jaundice-test/deoria"
+          },
+          ". Ek hi visit me ye sab ho jaate hain — khoon ka sample ek baar, aur stool ka apna alag."
+        ]
+      ]
+    },
+    {
+      "id": "deoria-me-stool-sample",
+      "heading": "Deoria Me Stool Test Ghar Se Kaise Hota Hai",
+      "lead": "Sample aap dete hain, uthane hum aate hain.",
+      "blocks": [
+        "Stool khoon ke test se ek maayne me alag hai: sample phlebotomist nahi leta, aap khud dete hain. Isliye is test me sabse zyada farak taiyaari se padta hai — container aur waqt do cheezein pehle se tay ho jaayein to baaki sab seedha hai.",
+        {
+          "list": [
+            "Booking form me apni shikayat likhiye, sirf test ka naam nahi. Culture chahiye ya sirf routine — ye aksar shikayat se hi tay hota hai.",
+            "Confirmation call par container aur samay dono bata diye jaate hain. Yahi call hai jismein aapko poochh lena chahiye ki sample kitni der me pahunchana hai.",
+            "Home visit ke slot subah 6 baje se shuru hote hain, jo is test ke liye sabse suvidhajanak hai.",
+            "Home collection ka koi alag visiting charge nahi hai; payment sample lene ke waqt cash ya UPI se.",
+            "Routine ki report 24 ghante ke andar PDF me aa jaati hai. Culture me 48–72 ghante lagte hain, aur ye booking ke waqt hi bata diya jaata hai."
+          ]
+        },
+        [
+          "Rate ",
+          {
+            "text": "Deoria ki price list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " me hai. Aapka mohalla ya gaon cover hota hai ya nahi, ye ",
+          {
+            "text": "mohalle wali guide",
+            "href": "/blogs/blood-test-near-me/deoria"
+          },
+          " me dekh lijiye, aur jile ke kasbon ke liye ",
+          {
+            "text": "tehsil wali guide",
+            "href": "/blogs/tehsil-home-collection/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-stool",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Parche par stool likha hai to booking karte waqt ye zaroor bata dijiye ki routine hai ya culture — dono ka samay alag hai. ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye aur form bhar dijiye."
+        ],
+        [
+          "Antibiotic abhi shuru nahi hua hai aur culture likha hai to booking aaj hi kar lijiye — wo sample dawa se pehle hi matlab rakhta hai. Koi chhota sawaal ho, jaise container ya samay ka, to ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Stool routine aur stool culture me kya farak hai?",
+      "answer": "Routine me sample ko dekha jaata hai — keedon ke ande, pus cells, mucus, khoon waghairah — aur uski report 24 ghante ke andar aa jaati hai. Culture me sample ke andar ke keede ko badhne diya jaata hai, taaki pata chale ki infection kis cheez se hai aur us par kaun si dawa chalegi; isi wajah se usme 48–72 ghante lagte hain. Ye der lab ki nahi, test ki apni hai, aur booking ke waqt hi bata di jaati hai."
+    },
+    {
+      "question": "Stool test ke liye khaali pet rehna padta hai?",
+      "answer": "Nahi. Stool ke liye fasting nahi lagti. Haan, agar isi visit me khoon ke kuch test bhi karane hain — jaise sugar ya lipid profile — to unme fasting lagti hai, aur wo confirmation call par bata diya jaayega. Occult blood ka test likha ho to doctor kabhi-kabhi kuch khaane ya dawa ko le kar salah dete hain; wo unhi se poochh lijiye."
+    },
+    {
+      "question": "Sample kitna dena hota hai aur kis cheez me?",
+      "answer": "Ek chhote chamach jitna sample kaafi hota hai. Wo saaf, sookhe aur dhakkan wale container me hona chahiye — booking ke waqt container ke baare me bata diya jaata hai, apne aap kisi purani shishi ya polythene ka istemaal mat kijiye. Sample me peshab ya paani bilkul nahi milna chahiye; isliye pehle peshab kar lijiye, phir paakhana lijiye. Agar usme khoon ya aam dikh raha hai to usi hisse me se lijiye."
+    },
+    {
+      "question": "Sample raat ka rakha hua de sakte hain?",
+      "answer": "Ye theek nahi hota. Stool ka sample taaza hona chahiye, warna report bharose layak nahi rehti — khaas kar culture me. Isliye collection ka waqt pehle se tay kar lijiye aur confirmation call par poochh lijiye ki sample lene ke kitni der me pahunchana hai. Deoria me home visit ke slot subah 6 baje se shuru hote hain, jo is test ke liye sabse aasan waqt hai."
+    },
+    {
+      "question": "Antibiotic chal raha hai — ab stool culture karwa sakte hain?",
+      "answer": "Karwa to sakte hain, par report adhoori aa sakti hai. Culture me keede ko badhne diya jaata hai, aur antibiotic shuru hone ke baad wo daba hua hota hai — isliye kai baar kuch nikalta hi nahi jabki infection maujood hota hai. Sahi waqt dawa ki pehli khuraak se pehle hai. Dawa pehle se chal rahi ho to ye doctor ko bata dijiye; ho sakta hai wo sample ka din badal dein. Apne aap dawa band mat kijiye."
+    },
+    {
+      "question": "Bachche ka stool sample diaper me se de sakte hain?",
+      "answer": "Nahi, diaper ya nappy me soakha hua sample kaam nahi karta, kyunki uska paani wahin ja chuka hota hai. Bachche ke liye tareeka thoda alag hota hai — booking ke waqt bata dijiye ki bachche ka sample hai, aur aapko sahi tareeka bata diya jaayega. Ye ek sawaal poore din ka chakkar bacha deta hai."
+    },
+    {
+      "question": "Keede ki dawa bazaar se le lein, ya pehle test karayein?",
+      "answer": "Pehle jaanch, phir doctor ki batayi dawa — yahi sahi tareeka hai. Keede ek tarah ke nahi hote aur har dawa har keede par nahi chalti; iske alawa har pet dard keedon ka hota bhi nahi. Bina jaanch ke dawa dene se aksar hota ye hai ki asli wajah chhoot jaati hai aur shikayat kuch hafton baad lautti hai. Hum report ka matlab nahi batate aur na koi dawa batate hain — report doctor ko dikhaiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Pet ki shikayat akeli kam hi aati hai — saath wale test ki apni guide alag hai.",
+    "groups": [
+      {
+        "title": "Saath Wale Test",
+        "links": [
+          {
+            "href": "/blogs/urine-test/deoria",
+            "label": "Urine test — routine ya culture?",
+            "sub": "Sample dene ka sahi tareeka"
+          },
+          {
+            "href": "/blogs/cbc-test/deoria",
+            "label": "CBC test — khoon ki kami aur eosinophil"
+          },
+          {
+            "href": "/blogs/jaundice-test/deoria",
+            "label": "Peeliya — bilirubin aur LFT"
+          },
+          {
+            "href": "/blogs/dengue-typhoid-test/deoria",
+            "label": "Bukhar — dengue aur typhoid kis din"
+          }
+        ]
+      },
+      {
+        "title": "Kis Ke Liye",
+        "links": [
+          {
+            "href": "/blogs/child-blood-test/deoria",
+            "label": "Bachchon ka test — kab aur kaun sa"
+          },
+          {
+            "href": "/blogs/allergy-test/deoria",
+            "label": "Allergy test — AEC badhne ki doosri wajah"
+          },
+          {
+            "href": "/blogs/symptom-test/deoria",
+            "label": "Lakshan ke hisaab se kaun sa test"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria me lab test ka price"
+          },
+          {
+            "href": "/blogs/blood-test-report/deoria",
+            "label": "Report kaise padhein — H, L aur range"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — container aur samay poochh lijiye"
+          }
+        ]
+      }
+    ]
+  }
+}

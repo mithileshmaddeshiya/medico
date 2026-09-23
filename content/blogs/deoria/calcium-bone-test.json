@@ -1,0 +1,378 @@
+{
+  "title": "Calcium Test In Deoria — Haddi Kamzor Lage To",
+  "description": "Calcium normal aane par bhi haddi kamzor ho sakti hai. Kaun se test sach me kaam ke hain, kise karana chahiye, aur Deoria me sample ghar se kaise dein.",
+  "keywords": [
+    "Calcium Test In Deoria",
+    "Haddi Kamzor Hone Ka Test",
+    "Serum Calcium Normal Range",
+    "Vitamin D Aur Calcium Test",
+    "Kamar Aur Ghutne Ke Dard Ka Test",
+    "Alkaline Phosphatase Test Matlab",
+    "Mahilaon Me Haddi Kamzori Jaanch",
+    "Calcium Test Ghar Par Deoria",
+    "Free Home Sample Collection Deoria",
+    "Lab Test Booking Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 265,
+  "takeaways": [
+    "Khoon me calcium normal aana iska sabot nahi hai ki haddi mazboot hai. Sharir khoon ka calcium poora rakhta hai — zaroorat padne par haddi se nikaal kar.",
+    "Isi wajah se akela calcium test aksar adhoora hota hai. Uske saath vitamin D dekhna hi asli tasveer deta hai.",
+    "Haddi ki mazbooti naapne wali jaanch machine par hoti hai — wo sample par nahi hoti aur hamari service me nahi hai.",
+    "Report dekhe bina calcium ki goli shuru mat kijiye. Zaroorat se zyada calcium ka apna nuksan hai, aur wo faisla doctor ka hai."
+  ],
+  "sections": [
+    {
+      "id": "calcium-normal-phir-bhi-kamzori",
+      "heading": "Calcium Normal Hai, Phir Bhi Haddi Kamzor — Ye Kaise?",
+      "lead": "Is ek baat ko samajh lena poore page ka sabse kaam ka hissa hai.",
+      "blocks": [
+        "Log calcium ka test isliye karwate hain ki pata chale haddi kamzor hai ya nahi. Aur yahin sabse badi galatfahmi hai. Khoon me calcium ka level sharir bahut sakhti se ek daayre me rakhta hai, kyunki dil ki dhadkan aur mansapeshiyon ka kaam usi par tika hota hai. Agar khaane se calcium kam mil raha ho, to sharir use haddi se nikaal kar khoon me daal deta hai.",
+        "Nateeja ye hota hai ki khoon ki report normal aati rehti hai, jabki haddi se calcium nikalta rehta hai. Yaani \"serum calcium normal\" ka matlab sirf itna hai ki us din khoon me calcium theek tha — ye nahi ki aapki haddi mazboot hai.",
+        "Isiliye doctor calcium akela kam hi likhte hain. Asli tasveer tab banti hai jab uske saath vitamin D dekha jaaye, kyunki calcium sharir me tabhi lagta hai jab vitamin D kaafi ho. Vitamin D kam ho to aap chahe jitna calcium khaayein, wo theek se istemaal nahi hota.",
+        {
+          "note": {
+            "title": "Haddi ki mazbooti naapne wali jaanch alag hai",
+            "text": "Haddi kitni mazboot hai, ye ek machine par naapa jaata hai. Wo jaanch sample par nahi hoti, ghar par ho hi nahi sakti, aur hamari service me shaamil nahi hai — uske liye us machine wale centre par jaana hoga. Hum khoon aur peshab wali jaanch karte hain, jo ye batati hai ki haddi ke liye zaroori cheezein sharir me kaafi hain ya nahi.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "haddi-ke-liye-kaun-se-test",
+      "heading": "Haddi Ki Shikayat Me Aam Taur Par Kaun Se Test Hote Hain",
+      "lead": "Paanch naam, aur har ek alag sawaal ka jawab.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Haddi aur calcium se jude test",
+            "head": ["Test", "Ye kya batata hai", "Fasting"],
+            "rows": [
+              [
+                "Serum Calcium",
+                "Us waqt khoon me calcium kitna hai — haddi ki halat nahi",
+                "Aam taur par nahi"
+              ],
+              [
+                "Vitamin D (25-OH)",
+                "Calcium lagne ke liye zaroori vitamin kaafi hai ya nahi",
+                "Nahi"
+              ],
+              [
+                "Phosphorus",
+                "Calcium ke saath ka doosra khanij — dono saath padhe jaate hain",
+                "Aam taur par nahi"
+              ],
+              [
+                "Alkaline Phosphatase (ALP)",
+                "Haddi me kaam-kaaj tez chal raha hai iska ishara",
+                "Doctor ke kehne par"
+              ],
+              [
+                "PTH",
+                "Calcium ka hisaab rakhne wala hormone — calcium gadbad hone par",
+                "Nahi"
+              ],
+              [
+                "KFT",
+                "Kidney calcium ke hisaab me shaamil hai, isliye saath dekha jaata hai",
+                "Doctor ke kehne par"
+              ],
+              [
+                "Thyroid (TSH)",
+                "Thyroid haddi aur dard dono par asar daalta hai",
+                "Nahi"
+              ]
+            ]
+          }
+        },
+        "In sab ko alag-alag karwane ki zaroorat nahi hoti. Doctor aam taur par aapki shikayat ke hisaab se do ya teen chunte hain — sabse aam jodi calcium aur vitamin D ki hoti hai. Ye saare khoon ke ek hi sample se ho jaate hain, isliye sui ek hi baar lagti hai.",
+        [
+          "Vitamin D kam kyun nikalta hai, kitna hona chahiye aur dobara jaanch kab — uspar poori alag guide hai: ",
+          {
+            "text": "vitamin D aur B12 wali guide",
+            "href": "/blogs/vitamin-b12-d-test/deoria"
+          },
+          ". Kidney ke number ka matlab ",
+          {
+            "text": "LFT aur KFT wali guide",
+            "href": "/blogs/liver-kidney-test/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "kise-karana-chahiye-calcium",
+      "heading": "Ye Jaanch Kise Karani Chahiye",
+      "lead": "Har ghutne ke dard ke liye nahi — in haalaton me haan.",
+      "blocks": [
+        {
+          "list": [
+            "Mahilaayein, khaas kar periods band hone ke baad — is umar me haddi se calcium nikalne ki raftaar badh jaati hai.",
+            "Bujurg, khaas kar wo jinhe chalte waqt santulan ki dikkat ho ya pehle kabhi gir chuke hon.",
+            "Jinki haddi chhoti si chot me toot chuki ho — ye sabse saaf ishara hai.",
+            "Lagataar kamar, kamar ke neeche ya pindliyon me dard aur raat me pair pakadna.",
+            "Bachche jinke pair tede dikhein, chalne me der ho, ya lambaai theek se na badhe.",
+            "Jinka kaam ghar ya chhat ke andar ka ho aur dhoop lagbhag na lagti ho.",
+            "Thyroid ya kidney ki lambi shikayat wale, aur wo jo lambe samay se steroid le rahe hain."
+          ]
+        },
+        "Is ilaake me ek baat khaas dhyaan dene layak hai. Dhoop yahan kami me nahi hai, phir bhi vitamin D kam nikalna aam hai — kyunki dhoop me nikalne ka waqt kam hai, kapdon se dhaka rehna zyada hai, aur garmi me log jaan-boojh kar chhaya me rehte hain. Isliye \"hamare yahan to dhoop bahut hai\" maan kar jaanch talna theek nahi hai.",
+        [
+          "Umar ke hisaab se mahilaon ko kaun se test karane chahiye, wo ",
+          {
+            "text": "mahilaon wali guide",
+            "href": "/blogs/women-health-checkup/deoria"
+          },
+          " me hai, aur 60 ke baad ka poora plan ",
+          {
+            "text": "bujurgon wali guide",
+            "href": "/blogs/senior-citizen-checkup/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "dard-ki-doosri-wajah",
+      "heading": "Har Haddi Ka Dard Calcium Ki Kami Nahi Hota",
+      "lead": "Ye wo galti hai jiski wajah se saalon dawa chalti rehti hai.",
+      "blocks": [
+        "Kamar ya ghutne me dard hote hi ghar me sabse pehli baat yahi hoti hai ki \"calcium ki kami hai\". Kai baar ye sach hota hai. Lekin utni hi baar wajah kuch aur hoti hai, aur calcium ki goli mahino chalti rehti hai bina kisi farak ke.",
+        {
+          "list": [
+            "Uric acid — khaas kar tab jab dard achanak, ek jod me aur bahut tez ho.",
+            "Vitamin D ki kami — isme dard phaila hua hota hai aur thakan saath chalti hai.",
+            "Vitamin B12 ki kami — jhunjhuni aur sunnapan ke saath.",
+            "Thyroid — jodon ka dard, thakan aur wazan badalna saath me.",
+            "Khoon ki kami — kamzori aur jaldi saans phoolna.",
+            "Ghutne ki apni ghisaawat, jo umar ke saath hoti hai aur jiska jawab kisi blood test me nahi milta."
+          ]
+        },
+        [
+          "Jodon ke dard me RA Factor, CRP aur ESR kab dekhe jaate hain — uspar alag guide hai: ",
+          {
+            "text": "jodon ke dard wali guide",
+            "href": "/blogs/joint-pain-test/deoria"
+          },
+          ". Uric acid ka poora hisaab ",
+          {
+            "text": "uric acid wali guide",
+            "href": "/blogs/uric-acid-test/deoria"
+          },
+          " me hai."
+        ],
+        "Yahi wajah hai ki doctor dard sun kar ek hi test nahi likhte. Wo pehle ye samajhte hain ki dard kaisa hai — ek jagah ya phaila hua, subah zyada ya shaam, aaraam se kam hota hai ya nahi. Usi se tay hota hai ki calcium dekhna hai, uric acid, ya kuch aur."
+      ]
+    },
+    {
+      "id": "calcium-ki-goli-se-pehle",
+      "heading": "Calcium Ki Goli Shuru Karne Se Pehle",
+      "lead": "Zyada calcium ka bhi apna nuksan hai.",
+      "blocks": [
+        "Calcium aur vitamin D ki goli bina parche ke aasani se mil jaati hai, aur ghar me ek insaan ki goli doosre ko de dena bahut aam hai. Dikkat ye hai ki calcium koi \"jitna zyada utna achha\" wali cheez nahi hai. Zaroorat se zyada calcium lambe samay tak lete rehna kidney me pathri jaisi dikkat de sakta hai, aur kuch logon me uska apna alag khatra hota hai.",
+        "Vitamin D ke saath aur dhyaan chahiye. Wo lambe samay tak sharir me jama rehta hai, isliye bahut zyada khuraak apne aap lete rehna theek nahi hota. Kitni khuraak, kitne din — ye doctor report dekh kar tay karte hain, aur aksar kuch hafton baad dobara jaanch bhi likhte hain.",
+        {
+          "note": {
+            "title": "Hum dawa nahi batate",
+            "text": "Hum jaanch karte hain aur report dete hain. Kaun si goli, kitni aur kab tak — ye sirf aapka doctor bata sakta hai, kyunki uska faisla aapki report, umar aur baaki dawaon par tika hota hai. Report aane par use doctor ko dikhaiye; internet par number milaana sabse aam aur sabse mehenga shortcut hai.",
+            "tone": "info"
+          }
+        },
+        [
+          "Kaun si dawa aur supplement kis report par asar daalte hain — jaise multivitamin aur vitamin D ki goli — wo ",
+          {
+            "text": "dawa aur test wali guide",
+            "href": "/blogs/medicine-before-test/deoria"
+          },
+          " me likha hai. Supplement chal raha ho to booking ke waqt zaroor bata dijiye."
+        ]
+      ]
+    },
+    {
+      "id": "khaane-se-kitna-milta-hai",
+      "heading": "Goli Se Pehle — Rozmarra Me Kya Badla Ja Sakta Hai",
+      "lead": "Ye jaanch ki jagah nahi leta, uske saath chalta hai.",
+      "blocks": [
+        "Report ka intezaar karte waqt ya ilaaj ke saath, kuch cheezein rozmarra me hi theek ho sakti hain. Ye koi ilaaj nahi hai aur kisi dawa ki jagah nahi leta — lekin ye wo hissa hai jo aapke haath me hai aur jiska kharcha lagbhag kuch nahi.",
+        {
+          "list": [
+            "Dhoop — subah ya shaam ki halki dhoop me kuch der, haath-pair khule rakh kar. Dopahar ki tez dhoop me jhulasne ki zaroorat nahi hai.",
+            "Doodh, dahi aur chhachh — jo ghar me pehle se milta hai, wahi sabse aasan zariya hai.",
+            "Til, ragi, chana, hari patte wali sabziyan — ye is ilaake ki thaali me pehle se ho sakte hain.",
+            "Chalna — haddi mehnat se mazboot hoti hai. Roz thodi der chalna, khaas kar bujurgon ke liye, sabse kam kharch wali cheez hai.",
+            "Tambaaku aur sharaab dono haddi par ulta asar daalte hain."
+          ]
+        },
+        "Bujurgon ke liye ek baat aur — ghar me girne se bachna utna hi zaroori hai jitna calcium. Bathroom me phisalne wali jagah, raat me kam roshni, aur seedhi par pakadne ko kuch na hona — in teeno ki wajah se hone wali chot aksar calcium ki kami se zyada nuksan kar jaati hai."
+      ]
+    },
+    {
+      "id": "deoria-me-calcium-sample",
+      "heading": "Deoria Me Ye Jaanch Ghar Se Kaise Karayein",
+      "lead": "Ek sample, aur poore ghar ka ek hi visit.",
+      "blocks": [
+        "Calcium, vitamin D, phosphorus, ALP aur thyroid — ye sab khoon ke ek hi sample se ho jaate hain. Vitamin D aur thyroid me fasting nahi lagti; agar isi visit me sugar ya lipid bhi karana hai to unme lagti hai, aur confirmation call par aapko bata diya jaata hai.",
+        {
+          "list": [
+            "Booking form me shikayat likhiye — kahan dard hai, kitne din se. Sirf test ka naam likhne se sahi salah nahi ban paati.",
+            "Multivitamin, calcium ya vitamin D ki goli pehle se chal rahi hai to wo zaroor bataiye; report padhte waqt ye maayne rakhta hai.",
+            "Home visit ke slot subah 6 baje se shuru hote hain, jo bujurgon ke liye sabse aasan waqt hota hai.",
+            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai. Home collection ka koi alag visiting charge nahi.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai."
+          ]
+        },
+        "Ghar me maa-baap dono ki jaanch karani ho to dono ki booking ek hi slot me kar dijiye — ek hi visit me dono ka sample ho jaata hai. Tyohaar par ghar aane wale log yahi ek kaam kar ke jaate hain, aur wo saal bhar chalta hai.",
+        [
+          "Bistar par pade ya patli nas wale mareez ka sample kaise liya jaata hai, wo ",
+          {
+            "text": "home collection wali guide",
+            "href": "/blogs/home-sample-collection/deoria"
+          },
+          " me hai. Rate ",
+          {
+            "text": "Deoria ki price list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " me hai, aur aapka ilaaka cover hota hai ya nahi wo ",
+          {
+            "text": "mohalle wali guide",
+            "href": "/blogs/blood-test-near-me/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-calcium",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Parcha haath me hai to booking seedhi hai — ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye aur form bhar dijiye. Parche par likhe short form samajh na aayein to ",
+          {
+            "text": "parche wali guide",
+            "href": "/blogs/prescription-test-list/deoria"
+          },
+          " dekh lijiye."
+        ],
+        [
+          "Parcha nahi hai aur ghar me kisi bujurg ki haddi ki shikayat hai, to saal ke checkup ke saath ye jaanch jod lena sabse aasan raasta hai — ",
+          {
+            "text": "bujurgon wali guide",
+            "href": "/blogs/senior-citizen-checkup/deoria"
+          },
+          " se shuru kijiye. Koi chhota sawaal ho to ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Calcium test normal aaya hai — kya iska matlab meri haddi theek hai?",
+      "answer": "Nahi, ye dono ek baat nahi hain. Sharir khoon me calcium ka level bahut sakhti se ek daayre me rakhta hai — zaroorat padne par haddi se calcium nikaal kar khoon me daal deta hai. Isliye report normal aati rehti hai jabki haddi se calcium nikalta rehta hai. Asli tasveer calcium ke saath vitamin D dekhne par banti hai, aur haddi ki mazbooti to ek machine par naapi jaati hai — wo jaanch sample par nahi hoti."
+    },
+    {
+      "question": "Calcium test ke liye khaali pet rehna padta hai?",
+      "answer": "Aam taur par nahi. Calcium aur vitamin D dono me fasting ki zaroorat nahi hoti, isliye sample din me kabhi bhi diya ja sakta hai. Haan, agar isi visit me sugar ya lipid profile bhi karana hai to unme 10–12 ghante fasting lagti hai — us haalat me subah ka slot lena theek rehta hai. Confirmation call par aapko saaf bata diya jaata hai ki khaali pet rehna hai ya nahi."
+    },
+    {
+      "question": "Kya aap haddi ki mazbooti wali jaanch (bone density) karte hain?",
+      "answer": "Nahi. Haddi kitni mazboot hai ye ek machine par naapa jaata hai, aur wo jaanch sample par nahi hoti — ghar par ho hi nahi sakti, aur hamari service me shaamil nahi hai. Uske liye aapko us machine wale centre par jaana hoga. Hum khoon aur peshab wali jaanch karte hain — calcium, vitamin D, phosphorus, ALP, PTH, thyroid aur KFT jaisi, jo batati hain ki haddi ke liye zaroori cheezein sharir me kaafi hain ya nahi."
+    },
+    {
+      "question": "Report aane se pehle calcium ki goli shuru kar dun?",
+      "answer": "Nahi. Calcium koi \"jitna zyada utna achha\" wali cheez nahi hai — zaroorat se zyada calcium lambe samay tak lete rehna kidney me pathri jaisi dikkat de sakta hai. Vitamin D ke saath aur dhyaan chahiye, kyunki wo sharir me lambe samay tak jama rehta hai. Kitni khuraak aur kitne din, ye doctor report dekh kar tay karte hain. Hum jaanch karte hain aur report dete hain — dawa nahi batate."
+    },
+    {
+      "question": "Ghutne aur kamar me dard hai — sirf calcium ka test kaafi hai?",
+      "answer": "Aksar nahi. Dard ki wajah calcium ki kami ke alawa uric acid, vitamin D ya B12 ki kami, thyroid, khoon ki kami, ya ghutne ki apni ghisaawat bhi ho sakti hai — aur ghisaawat ka jawab kisi blood test me milta hi nahi. Isiliye doctor pehle ye samajhte hain ki dard kaisa hai, phir test likhte hain. Booking form me apni shikayat zaroor likhiye, sirf test ka naam nahi."
+    },
+    {
+      "question": "Hamare yahan dhoop bahut hai — phir vitamin D kam kaise ho sakta hai?",
+      "answer": "Ye sawaal bilkul waajib hai, aur jawab ye hai ki dhoop hone aur dhoop lagne me farak hai. Zyadatar logon ka din ghar ya chhat ke andar nikalta hai, kapdon se sharir dhaka rehta hai, aur garmi me log jaan-boojh kar chhaya me rehte hain. Isi wajah se dhoop wale ilaakon me bhi vitamin D kam nikalna aam hai. \"Yahan to dhoop bahut hai\" maan kar jaanch talna theek nahi hai."
+    },
+    {
+      "question": "Ghar me maa aur pita dono ki jaanch karani hai — saath ho jaayegi?",
+      "answer": "Haan, aur yahi sabse aasan tareeka hai. Dono ki booking ek hi slot me kar dijiye; ek baar phlebotomist aane par dono ka sample ho jaata hai. Booking ke waqt har ek ka naam, umar aur unke test alag-alag likhwa dijiye taaki report me uljhan na ho — report dono ki apni alag PDF me aati hai. Bujurgon ke liye subah ka jaldi wala slot sabse suvidhajanak rehta hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Haddi ki shikayat me calcium akela kam hi kaafi hota hai — saath wale test ki guide yahan hai.",
+    "groups": [
+      {
+        "title": "Saath Wale Test",
+        "links": [
+          {
+            "href": "/blogs/vitamin-b12-d-test/deoria",
+            "label": "Vitamin D aur B12 — kitna hona chahiye",
+            "sub": "Calcium ke saath sabse zyada kaam ka"
+          },
+          {
+            "href": "/blogs/joint-pain-test/deoria",
+            "label": "Jodon ka dard — RA Factor, CRP, ESR"
+          },
+          {
+            "href": "/blogs/uric-acid-test/deoria",
+            "label": "Uric acid — kab karayein"
+          },
+          {
+            "href": "/blogs/thyroid-test/deoria",
+            "label": "Thyroid — TSH, T3, T4"
+          }
+        ]
+      },
+      {
+        "title": "Kis Ke Liye",
+        "links": [
+          {
+            "href": "/blogs/senior-citizen-checkup/deoria",
+            "label": "Bujurgon ka checkup — 60 ke baad"
+          },
+          {
+            "href": "/blogs/women-health-checkup/deoria",
+            "label": "Mahilaon ka checkup — umar ke hisaab se"
+          },
+          {
+            "href": "/blogs/child-blood-test/deoria",
+            "label": "Bachchon ka test — kab aur kaun sa"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/medicine-before-test/deoria",
+            "label": "Dawa aur supplement — test se pehle kya karein"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria me lab test ka price"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — test chunne me madad"
+          }
+        ]
+      }
+    ]
+  }
+}

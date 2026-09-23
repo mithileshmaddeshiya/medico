@@ -1,0 +1,324 @@
+{
+  "title": "Blood Group Test In Deoria — ABO, Rh Aur Chart",
+  "description": "Blood group test kaise hota hai, Rh positive aur negative ka matlab, kaun sa group kisko khoon de sakta hai, aur Deoria me ghar se sample kaise dein.",
+  "keywords": [
+    "Blood Group Test In Deoria",
+    "Blood Group Kaise Pata Karein",
+    "Blood Group Chart Hindi",
+    "Rh Negative Ka Matlab",
+    "ABO Blood Group Test",
+    "Universal Donor Kaun Hota Hai",
+    "Blood Group Test Ghar Par Deoria",
+    "Pregnancy Me Blood Group Test",
+    "Free Home Sample Collection Deoria",
+    "Lab Test Booking Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 155,
+  "takeaways": [
+    "Blood group zindagi bhar nahi badalta. Ek baar sahi tareeke se karwa lijiye, report sambhaal kar rakhiye — dobara karane ki zaroorat nahi padti.",
+    "Rh negative hona koi beemari nahi hai. Lekin pregnancy me ye baat samay par bata dena zaroori hai, kyunki uska ek tay ilaaj hai.",
+    "\"O negative sabko de sakta hai\" sach hai, phir bhi khoon chadhane se pehle har baar cross-match hota hai — chart kabhi bhi cross-match ki jagah nahi leta.",
+    "Blood group ke hisaab se diet ya swabhaav wali baatein science nahi hain. Test isliye karaiye ki zaroorat ke waqt aapko apna group pata ho."
+  ],
+  "sections": [
+    {
+      "id": "blood-group-test-kya-hai-deoria",
+      "heading": "Blood Group Test Kya Hai — Aur Ek Baar Hi Kyun Hota Hai",
+      "lead": "Do cheezein tay hoti hain: ABO aur Rh.",
+      "blocks": [
+        "Blood group test me do baatein dekhi jaati hain. Pehli — ABO, yaani aapka khoon A hai, B hai, AB hai ya O. Doosri — Rh, yaani us group ke saath \"positive\" lagega ya \"negative\". Dono milkar aath me se ek group banate hain: A+, A−, B+, B−, AB+, AB−, O+, O−.",
+        "Ye dono cheezein aapko janm se milti hain aur zindagi bhar nahi badaltin. Isliye blood group ek aisa test hai jo sahi tareeke se ek baar ho jaaye to dobara karane ki zaroorat nahi padti. Beemari se, dawa se, umar se ya khaan-paan se group nahi badalta.",
+        "Phir bhi ek baat dhyaan rakhne layak hai. Log aksar group \"yaad\" rakhte hain — kisi ne bataya tha, school me likha tha, ya ghar walon ka jo group hai wahi maan liya. Zaroorat ke waqt yahi yaadasht sabse zyada dhokha deti hai. Report ka kaagaz ya PDF paas hona, yaad hone se hamesha behtar hai.",
+        [
+          "Deoria me ye test khoon ke ek hi sample par ho jaata hai, isme fasting nahi lagti, aur sample ghar se liya ja sakta hai. Booking ka poora tareeka ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#how-to-book-deoria"
+          },
+          " par hai."
+        ]
+      ]
+    },
+    {
+      "id": "rh-positive-negative-matlab",
+      "heading": "Positive Aur Negative Ka Matlab Kya Hai",
+      "lead": "Ye \"achha khoon\" aur \"kharab khoon\" ka farak nahi hai.",
+      "blocks": [
+        "Sabse zyada galatfahmi yahin hai. Log \"negative\" sunte hi maan lete hain ki koi kami hai ya kamzori hai. Aisa bilkul nahi hai. Positive ka matlab sirf itna hai ki khoon ki kosikaon par ek khaas cheez maujood hai, aur negative ka matlab ki wo maujood nahi hai. Dono poori tarah normal hain.",
+        "Hamare yahan zyadatar log Rh positive hote hain aur negative kaafi kam. Isi wajah se negative group ka khoon zaroorat ke waqt jaldi nahi milta — aur yahi ek asli kaaran hai ki apna group pehle se pata hona chahiye, khaas kar tab jab ghar me kisi ka operation ya delivery hone wali ho.",
+        {
+          "note": {
+            "title": "Rh negative aur pregnancy",
+            "text": "Agar maa Rh negative hain aur bachche ka Rh positive ho, to kuch haalat me dikkat ho sakti hai — lekin iska ek tay aur aam ilaaj maujood hai, jo samay par diya jaata hai. Isliye ye ghabraane ki nahi, samay par bataane ki baat hai. Pregnancy me blood group sabse pehle karaye jaane wale test me hota hai, aur report doctor ko pehli hi visit me dikha dijiye.",
+            "tone": "info"
+          }
+        },
+        [
+          "Pregnancy me mahine ke hisaab se kaun se test hote hain aur Rh negative nikalne par aage kya hota hai — wo ",
+          {
+            "text": "pregnancy wali guide",
+            "href": "/blogs/pregnancy-blood-test/deoria"
+          },
+          " me poora likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "blood-group-chart-deoria",
+      "heading": "Blood Group Chart — Kaun Kisse Le Sakta Hai Aur Kisko De Sakta Hai",
+      "lead": "Padhne ke liye, faisla lene ke liye nahi — faisla hamesha aspataal karta hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Blood group ke hisaab se lena aur dena",
+            "head": ["Aapka group", "Khoon le sakte hain", "Khoon de sakte hain"],
+            "rows": [
+              ["O−", "Sirf O−", "Sabhi aath group ko"],
+              ["O+", "O+, O−", "O+, A+, B+, AB+"],
+              ["A−", "A−, O−", "A−, A+, AB−, AB+"],
+              ["A+", "A+, A−, O+, O−", "A+, AB+"],
+              ["B−", "B−, O−", "B−, B+, AB−, AB+"],
+              ["B+", "B+, B−, O+, O−", "B+, AB+"],
+              ["AB−", "AB−, A−, B−, O−", "AB−, AB+"],
+              ["AB+", "Sabhi aath group se", "Sirf AB+"]
+            ]
+          }
+        },
+        "Isi table se do naam aate hain. O negative ko \"universal donor\" kaha jaata hai kyunki uska khoon sabhi group ko diya ja sakta hai, aur AB positive ko \"universal recipient\" kyunki wo sabhi group se le sakta hai.",
+        {
+          "note": {
+            "title": "Chart cross-match ki jagah nahi leta",
+            "text": "Khoon chadhane se pehle aspataal har baar donor aur mareez ke sample ko aapas me milaa kar dekhta hai — ise cross-match kehte hain. Ye chart sirf samajhne ke liye hai. Kisi report ya chart ke bharose khoon chadhane ka faisla kabhi nahi hota, aur hona bhi nahi chahiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blood-group-kab-zaroori-deoria",
+      "heading": "Blood Group Kab Kaam Aata Hai — Chaar Maukey",
+      "lead": "Chaaron me se teen aise hain jo achanak aate hain.",
+      "blocks": [
+        {
+          "list": [
+            "Emergency — durghatna, achanak khoon bahna, ya koi aur haalat jahan khoon chadhana pad sakta hai. Yahan waqt sabse keemti hota hai, aur report paas hona minute bachata hai.",
+            "Operation se pehle — chhota ho ya bada, blood group pre-operative list me lagbhag hamesha hota hai.",
+            "Pregnancy — pehli hi jaanch me, khaas kar Rh ke liye.",
+            "Khoon dene ke liye — apna group pata ho to zaroorat ke waqt aap kisi ke kaam aa sakte hain.",
+            "Shaadi se pehle ki jaanch me bhi ye shaamil hota hai, taaki aage pregnancy ke waqt baat pehle se saaf ho."
+          ]
+        },
+        [
+          "Operation se pehle ki poori list aur wo kitne din valid rehti hai, ye ",
+          {
+            "text": "pre-operative guide",
+            "href": "/blogs/pre-operative-test/deoria"
+          },
+          " me hai. Shaadi se pehle kaun se test hote hain wo ",
+          {
+            "text": "pre-marriage guide",
+            "href": "/blogs/pre-marriage-test/deoria"
+          },
+          " me."
+        ],
+        {
+          "note": {
+            "title": "Hum blood bank nahi hain",
+            "text": "Hum blood group ki jaanch karte hain — khoon dete ya mangwate nahi hain, aur na hi donor ka intezaam karte hain. Khoon ki zaroorat ho to wo aspataal aur blood bank ka kaam hai, aur us haalat me seedhe wahin jaana chahiye, booking nahi karni chahiye.",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blood-group-galatfahmi",
+      "heading": "Blood Group Ke Baare Me Teen Aam Galatfahmiyan",
+      "lead": "Teenon bahut suni jaati hain, aur teenon galat hain.",
+      "blocks": [
+        "Pehli — \"blood group ke hisaab se khaana khaana chahiye\". Group ke hisaab se diet wali baat ka koi bharosemand vaigyanik aadhaar nahi hai. Achhi diet sabke liye lagbhag ek jaisi hi hai, aur usme group ka koi role nahi. Kisi bhi diet ya dawa ka faisla doctor se poochh kar kijiye, group dekh kar nahi.",
+        "Doosri — \"group se swabhaav pata chalta hai\". Ye sirf ek lokpriya kahani hai. Blood group khoon ke chadhne-lene ke liye maayne rakhta hai, vyaktitva ke liye nahi.",
+        "Teesri — \"maa-baap ka group pata hai to bachche ka bhi pata hai\". Maa-baap ke group se bachche ke kuch sambhaavit group hi tay hote hain, ek nahi. Andaaza lagana aur test karana do alag baatein hain, aur emergency me andaaze ka koi istemaal nahi hota.",
+        "Ek chauthi baat jo galatfahmi nahi, dhyaan dene wali hai: kuch bahut kam milne wale group aur upgroup bhi hote hain, jo aam report me alag se nahi likhe jaate. Aspataal ko jab zaroorat hoti hai wo khud aur jaanch karta hai. Isi wajah se cross-match hamesha hota hai."
+      ]
+    },
+    {
+      "id": "report-sambhaalna-deoria",
+      "heading": "Report Aa Gayi — Ab Ise Sambhaaliye",
+      "lead": "Ye wo ek report hai jo zindagi bhar kaam aati hai.",
+      "blocks": [
+        "Blood group ki report baaki reports se alag hai. Sugar ya thyroid ki report kuch mahino me purani ho jaati hai; blood group ki report kabhi purani nahi hoti. Isliye ise sambhaalna utna hi zaroori hai jitna karwana.",
+        {
+          "list": [
+            "PDF ko phone me ek alag folder me rakhiye, aur apne hi WhatsApp par bhej kar save kar lijiye — phone badalne par bhi mil jaayegi.",
+            "Ek print nikaal kar ghar ke zaroori kaagazon ke saath rakhiye, jahan aadhaar aur bank ke kaagaz rehte hain.",
+            "Ghar ke har sadasya ka group ek jagah likh kar rakhiye — emergency me ye ek kaagaz sabse zyada kaam aata hai.",
+            "Report par apna naam aur umar ek baar milaa lijiye. Ghar me kai logon ka test ek saath hua ho to yahi sabse aam galti hoti hai."
+          ]
+        },
+        [
+          "Report me upar ka hissa kaise padha jaata hai aur kis cheez par dhyaan dena chahiye, wo ",
+          {
+            "text": "report padhne wali guide",
+            "href": "/blogs/blood-test-report/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "deoria-me-blood-group-sample",
+      "heading": "Deoria Me Blood Group Test Ghar Se Kaise Karayein",
+      "lead": "Ek sample, fasting nahi, aur poora ghar ek hi visit me.",
+      "blocks": [
+        "Blood group khoon ke ek hi sample par ho jaata hai. Isme khaali pet rehne ki zaroorat nahi hoti, isliye slot din me kabhi bhi liya ja sakta hai — subah 6 baje se home visit shuru ho jaate hain.",
+        "Is test ka sabse samajhdaar tareeka ye hai ki ise akele na karayein. Ghar ke saare logon ka group ek hi visit me karwa lijiye — ek baar phlebotomist aane par sabka sample ho jaata hai, aur aapke paas poore ghar ka record ek saath ban jaata hai. Emergency kisi ek ki nahi hoti; wo kisi ki bhi ho sakti hai.",
+        {
+          "list": [
+            "Booking form me har sadasya ka naam aur umar alag-alag likhwa dijiye, taaki report me koi uljhan na ho.",
+            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai.",
+            "Home collection ka koi alag visiting charge nahi hai; payment sample lene ke waqt cash ya UPI se hota hai.",
+            "Report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — har sadasya ki apni alag."
+          ]
+        },
+        [
+          "Rate ",
+          {
+            "text": "Deoria ki price list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " me hai; kisi guide me daam nahi likha jaata taaki har jagah ek hi number rahe. Aapka mohalla ya gaon cover hota hai ya nahi, ye ",
+          {
+            "text": "mohalle wali guide",
+            "href": "/blogs/blood-test-near-me/deoria"
+          },
+          " me dekh lijiye."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-blood-group",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Ghar me kisi ka group pata nahi hai to ye aaj hi karwa lene layak test hai — ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye aur sabke naam ek saath form me daal dijiye."
+        ],
+        [
+          "Saal ka poora checkup soch rahe hain to blood group usi ke saath ho jaayega — ",
+          {
+            "text": "full body checkup wali guide",
+            "href": "/blogs/full-body-checkup/deoria"
+          },
+          " dekh lijiye. Koi chhota sawaal ho to ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          "."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Blood group test ke liye khaali pet rehna padta hai?",
+      "answer": "Nahi. Blood group ke liye fasting ki koi zaroorat nahi hoti — sample din me kabhi bhi diya ja sakta hai, khaane se koi farak nahi padta. Deoria me home visit ke slot subah 6 baje se shuru hote hain aur shaam tak chalte hain, isliye apni suvidha ka waqt chun lijiye. Agar isi sample me sugar ya lipid jaise test bhi karane hain to unme fasting lagti hai, aur wo booking ke waqt bata diya jaayega."
+    },
+    {
+      "question": "Kya blood group kabhi badal sakta hai?",
+      "answer": "Aam taur par nahi. Blood group janm se tay hota hai aur zindagi bhar wahi rehta hai — beemari, dawa, umar ya khaan-paan se nahi badalta. Agar do reports me alag group aaya hai to wo group badalne ki nishaani nahi hai, balki kisi ek report me gadbad ki — aksar naam ya sample badal jaane ki. Aisa ho to dobara test karaiye aur dono purani reports doctor ko dikhaiye."
+    },
+    {
+      "question": "Rh negative hona kya koi beemari hai?",
+      "answer": "Bilkul nahi. Negative ka matlab sirf itna hai ki khoon ki kosikaon par ek khaas cheez maujood nahi hai — ye poori tarah normal hai aur isse sehat par koi asar nahi padta. Do jagah ye baat maayne rakhti hai: pregnancy me, jahan iska ek tay aur aam ilaaj maujood hai aur ise samay par doctor ko bata dena chahiye; aur zaroorat ke waqt khoon milne me, kyunki negative group hamare yahan kam log rakhte hain."
+    },
+    {
+      "question": "Mere maa-baap ka group O+ hai — kya mera bhi O+ hoga?",
+      "answer": "Zaroori nahi. Maa-baap ke group se bachche ke kuch sambhaavit group tay hote hain, ek nahi. Isliye ghar ke group dekh kar apna group maan lena galat hai, aur emergency me is andaaze ka koi istemaal nahi hota. Sahi tareeka ye hai ki ghar ke sabhi logon ka test ek hi visit me karwa lijiye — ek baar ka kaam hai aur record poori zindagi chalta hai."
+    },
+    {
+      "question": "Report me O negative aaya hai — kya main kisi ko bhi khoon de sakta hoon?",
+      "answer": "Group ke hisaab se O negative ka khoon sabhi group ko diya ja sakta hai, isiliye use universal donor kehte hain. Lekin sirf group kaafi nahi hota: khoon dene se pehle donor ki apni sehat, haemoglobin aur kuch zaroori jaanch dekhi jaati hai, aur chadhane se pehle har baar cross-match hota hai. Ye poora kaam blood bank aur aspataal karte hain — hum khoon nahi dete, na donor ka intezaam karte hain."
+    },
+    {
+      "question": "Kya blood group ke hisaab se diet leni chahiye?",
+      "answer": "Iska koi bharosemand vaigyanik aadhaar nahi hai. Blood group khoon chadhane-lene ke liye maayne rakhta hai, diet tay karne ke liye nahi. Wazan, sugar, cholesterol ya kisi aur wajah se khaan-paan badalna ho to wo faisla aapki report aur doctor ki salah par hona chahiye, group par nahi."
+    },
+    {
+      "question": "Ghar me chaar log hain — sabka blood group ek saath karwa sakte hain?",
+      "answer": "Haan, aur yahi sabse samajhdaari wala tareeka hai. Sabki booking ek hi slot me kar dijiye; ek baar phlebotomist aane par sabka sample ho jaata hai. Booking ke waqt har ek ka naam aur umar alag-alag likhwa dijiye taaki report me uljhan na ho — report sabki apni alag PDF me aati hai. Poore ghar ka group ek kaagaz par likh kar rakhna emergency me sabse zyada kaam aata hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Deoria Ke Liye Aage Kya Dekhein",
+    "intro": "Blood group aksar kisi badi jaanch ke saath hota hai — operation, pregnancy ya shaadi se pehle.",
+    "groups": [
+      {
+        "title": "Jahan Blood Group Lagta Hai",
+        "links": [
+          {
+            "href": "/blogs/pregnancy-blood-test/deoria",
+            "label": "Pregnancy me kaun se blood test",
+            "sub": "Rh negative nikle to aage kya"
+          },
+          {
+            "href": "/blogs/pre-operative-test/deoria",
+            "label": "Operation se pehle kaun se test"
+          },
+          {
+            "href": "/blogs/pre-marriage-test/deoria",
+            "label": "Shaadi se pehle blood test"
+          },
+          {
+            "href": "/blogs/job-medical-test/deoria",
+            "label": "Naukri ke medical se pehle blood test"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria me lab test ka price"
+          },
+          {
+            "href": "/blogs/blood-test-report/deoria",
+            "label": "Report kaise padhein — H, L aur range"
+          }
+        ]
+      },
+      {
+        "title": "Doosre Guide",
+        "links": [
+          {
+            "href": "/blogs/blood-test-near-me/deoria",
+            "label": "Mohalle ke hisaab se sample collection"
+          },
+          {
+            "href": "/blogs/full-body-checkup/deoria",
+            "label": "Full body checkup — package me kya hona chahiye"
+          },
+          {
+            "href": "/blogs/common-questions/deoria",
+            "label": "Aam sawaalon ke seedhe jawab"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — test chunne me madad"
+          }
+        ]
+      }
+    ]
+  }
+}
