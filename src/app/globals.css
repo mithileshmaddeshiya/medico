@@ -305,27 +305,151 @@
 /* ── Admin sidebar ─────────────────────────────────────────────────────────
    src/components/admin/AdminShell.jsx + src/app/admin/layout.js.
 
-   The sidebar's links are rendered on the server, so the collapsed "icon rail"
-   is drawn here with plain selectors rather than per-element utility classes:
-   AdminShell only flips `data-collapsed` on the <aside>. Desktop only — on a
-   phone the sidebar is a full-width drawer and is never collapsed. */
+   The sidebar's links are rendered on the server, so its colours and the
+   collapsed "icon rail" are drawn here with plain selectors rather than
+   per-element utility classes: AdminShell only flips `data-collapsed` on the
+   <aside>. Desktop only — on a phone the sidebar is a full-width drawer and is
+   never collapsed.
+
+   ── WHY THE NAVIGATION IS DARK AND THE WORKSPACE IS NOT ──────────────────
+   The screens themselves stay light, like the site they manage. The sidebar is
+   not part of that workspace — it is the frame around it — so it is held dark
+   to keep the eye on the records rather than on the menu, which is the whole
+   job of a back office used all day. The accent stays emerald and the logo is
+   the site's own, so the panel still reads as the same product.
+
+   ── IT HAS TO STAY FAST ──────────────────────────────────────────────────
+   Everything below is a flat colour, a radius or a transform. No blur, no
+   filter, no shadow that has to be recomputed on scroll, and nothing animated
+   except opacity and position on an element the user just clicked. This panel
+   runs on whatever machine is on the desk, and a menu that costs frames is one
+   people feel on every single page. */
+
+.admin-sb {
+  background: #0f1a2e;
+  border-right-color: rgba(148, 163, 184, 0.16);
+}
+
+/* The brand block at the top, and the white plate the logo sits on. The logo
+   is navy and black artwork on white — it is never recoloured to suit a dark
+   background, it is given its own surface to sit on. */
+.admin-sb .sb-brand {
+  border-bottom-color: rgba(148, 163, 184, 0.16);
+}
+.admin-sb .sb-plate {
+  background: #ffffff;
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 2px rgba(2, 6, 23, 0.4);
+}
+.admin-sb .sb-wordmark {
+  color: #f8fafc;
+}
+.admin-sb .sb-kicker {
+  color: #64748b;
+}
+
+/* Group headings. */
+.admin-sb .sb-heading {
+  color: #55637a;
+}
+
+/* Links sit quiet until pointed at. */
+.admin-sb .sb-link {
+  position: relative;
+  color: #94a3b8;
+}
+.admin-sb .sb-link:hover {
+  background: rgba(148, 163, 184, 0.12);
+  color: #f1f5f9;
+}
+.admin-sb .sb-icon {
+  color: #64748b;
+}
+.admin-sb .sb-link:hover .sb-icon {
+  color: #cbd5e1;
+}
 
 /* The page you are on. AdminShell sets aria-current on the matching link. */
 .admin-sb .sb-link[aria-current="page"] {
-  background: #ecfdf5;
-  color: #065f46;
+  background: rgba(16, 185, 129, 0.15);
+  color: #d1fae5;
   font-weight: 600;
 }
 .admin-sb .sb-link[aria-current="page"] .sb-icon {
-  color: #059669;
+  color: #34d399;
+}
+
+/* The accent bar, drawn as ::before rather than a border so that becoming the
+   current page never shifts the link by a pixel. */
+.admin-sb .sb-link[aria-current="page"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 1.25rem;
+  transform: translateY(-50%);
+  border-radius: 0 3px 3px 0;
+  background: #34d399;
+}
+
+/* Keyboard focus has to be visible against the dark, which the site's default
+   slate focus ring is not. */
+.admin-sb .sb-link:focus-visible,
+.admin-sb button:focus-visible {
+  outline: 2px solid #34d399;
+  outline-offset: -2px;
+  border-radius: 0.5rem;
+}
+
+/* The chrome buttons — collapse, expand. */
+.admin-sb .sb-ctl {
+  color: #64748b;
+}
+.admin-sb .sb-ctl:hover {
+  background: rgba(148, 163, 184, 0.14);
+  color: #e2e8f0;
+}
+
+/* Who is signed in. */
+.admin-sb .sb-footer {
+  border-top-color: rgba(148, 163, 184, 0.16);
+}
+.admin-sb .sb-avatar {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+.admin-sb .sb-name {
+  color: #e2e8f0;
+}
+.admin-sb .sb-role {
+  color: #64748b;
+}
+.admin-sb .sb-site {
+  color: #34d399;
+}
+.admin-sb .sb-site:hover {
+  background: rgba(16, 185, 129, 0.14);
+  color: #6ee7b7;
 }
 
 @media (min-width: 1024px) {
+  /* The workspace is capped at 1600px and centred, so on a wider screen the
+     sidebar would sit with a pale gutter to its left and read as a floating
+     panel rather than the edge of the window. One shadow fills that gutter:
+     no extra element, nothing to lay out, and a shadow takes no part in
+     scrollable overflow so it cannot produce a sideways scrollbar. Desktop
+     only — on a phone this element is a fixed drawer, and the same shadow
+     would black out the page behind it. */
+  .admin-sb {
+    box-shadow: -100vw 0 0 0 #0f1a2e;
+  }
+
   .admin-sb[data-collapsed] .sb-label {
     display: none;
   }
 
-  /* Icons centred in the 4rem rail. */
+  /* Icons centred in the rail. */
   .admin-sb[data-collapsed] .sb-link {
     justify-content: center;
     padding-left: 0;
@@ -340,11 +464,16 @@
     height: 1.125rem;
   }
 
+  /* The bar would crowd a centred icon in a 4rem rail. */
+  .admin-sb[data-collapsed] .sb-link[aria-current="page"]::before {
+    display: none;
+  }
+
   /* Section titles are gone, so a thin rule keeps the groups apart. */
   .admin-sb[data-collapsed] .sb-section {
     margin-bottom: 0.75rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
   }
   .admin-sb[data-collapsed] .sb-section:last-child {
     border-bottom: 0;

@@ -112,19 +112,22 @@ export default async function AdminLayout({ children }) {
 
           return (
             <div key={section.title} className="sb-section mb-5">
-              <p className="sb-label px-2 pb-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400">
+              <p className="sb-label sb-heading px-2.5 pb-1.5 text-[10px] font-bold uppercase tracking-[0.14em]">
                 {section.title}
               </p>
               <ul className="space-y-0.5">
                 {items.map(({ href, label, Icon, exact }) => (
                   <li key={href}>
+                    {/* Colour, hover and the current-page accent all live in the
+                        "Admin sidebar" block of globals.css — these links are
+                        server-rendered, so the rail restyles them by selector. */}
                     <Link
                       href={href}
                       title={label}
                       data-exact={exact ? "" : undefined}
-                      className="sb-link flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                      className="sb-link flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors"
                     >
-                      <Icon className="sb-icon h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.2} />
+                      <Icon className="sb-icon h-4 w-4 shrink-0 transition-colors" strokeWidth={2.2} />
                       <span className="sb-label truncate">{label}</span>
                     </Link>
                   </li>
@@ -135,16 +138,16 @@ export default async function AdminLayout({ children }) {
         })}
       </nav>
 
-      <div className="sb-footer border-t border-slate-100 px-3 py-3">
+      <div className="sb-footer border-t px-3 py-3">
         <div className="sb-user flex items-center gap-2.5 px-1" title={`${user.name || user.email} · ${user.role}`}>
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-[13px] font-bold text-emerald-800">
+          <span className="sb-avatar flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] font-bold">
             {initial}
           </span>
           <span className="sb-label min-w-0">
-            <span className="block truncate text-[12.5px] font-semibold text-slate-800">
+            <span className="sb-name block truncate text-[12.5px] font-semibold">
               {user.name || user.email}
             </span>
-            <span className="block text-[11.5px] capitalize text-slate-500">{user.role}</span>
+            <span className="sb-role block text-[11.5px] capitalize">{user.role}</span>
           </span>
         </div>
 
@@ -154,7 +157,7 @@ export default async function AdminLayout({ children }) {
             target="_blank"
             rel="noreferrer"
             title="View site"
-            className="sb-link flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold text-emerald-700 hover:bg-emerald-50 hover:text-emerald-800"
+            className="sb-link sb-site flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold transition-colors"
           >
             <ExternalLink className="h-3.5 w-3.5 shrink-0" strokeWidth={2.4} />
             <span className="sb-label">View site</span>
@@ -163,7 +166,7 @@ export default async function AdminLayout({ children }) {
             <button
               type="submit"
               title="Sign out"
-              className="sb-link flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-800"
+              className="sb-link flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold transition-colors"
             >
               <LogOut className="h-3.5 w-3.5 shrink-0" strokeWidth={2.4} />
               <span className="sb-label">Sign out</span>
