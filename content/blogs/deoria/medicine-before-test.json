@@ -1,0 +1,393 @@
+{
+  "title": "Test Se Pehle Dawa Lein Ya Nahi — Deoria Guide",
+  "description": "Sugar, BP, thyroid ki goli, biotin aur iron — blood test se pehle kaun si dawa rokni hai aur kaun si nahi, aur booking me kya bata dena chahiye.",
+  "keywords": [
+    "Blood Test Se Pehle Dawa Leni Chahiye Ya Nahi",
+    "Thyroid Ki Goli Test Se Pehle",
+    "Biotin Aur Thyroid Test",
+    "Sugar Ki Dawa Aur Fasting Test",
+    "Antibiotic Ke Baad Urine Culture",
+    "Test Se Pehle Kya Nahi Karna Chahiye",
+    "Deoria Me Blood Test Ki Taiyaari",
+    "Iron Goli Aur Ferritin Test",
+    "Lab Test At Home In Deoria",
+    "Blood Test Home Collection In Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 245,
+  "takeaways": [
+    "Apne aap koi dawa band mat kijiye. Rokne ka faisla hamesha doctor ka hai — bina poochhe goli chhodna report sudhaarne se kahin zyada khatarnak ho sakta hai.",
+    "Zyadatar maamlon me dawa rokni nahi hoti, sirf uska waqt badalna hota hai — jaise thyroid ki goli sample dene ke BAAD lena.",
+    "Biotin wale baal-nakhun ke supplement thyroid aur hormone ki report ko sach me hila dete hain. Ye supplement booking ke waqt bata dijiye.",
+    "Urine ya blood culture ka sample antibiotic shuru karne se PEHLE dena chahiye — ek khuraak ke baad bhi report adhoori aa sakti hai."
+  ],
+  "sections": [
+    {
+      "id": "apne-aap-dawa-band-nahi",
+      "heading": "Pehla Niyam — Apne Aap Koi Dawa Band Mat Kijiye",
+      "lead": "Report sudhaarne ke chakkar me tabiyat bigaadna sabse aam galti hai.",
+      "blocks": [
+        "Test se pehle sabse zyada poochha jaane wala sawaal yahi hai: \"dawa lun ya na lun?\" Aur sabse zyada nuksan yahi baat karti hai ki log andaaze se subah ki goli chhod dete hain — sugar ki, BP ki, ya dil ki.",
+        "Soch ye hoti hai ki dawa chhodne se report \"asli\" aayegi. Aisa hota nahi. Doctor ko zyadatar maamlon me yahi dekhna hota hai ki aapki chalti hui dawa ke saath number kahan hai — kyunki ilaaj usi hisaab se aage badhta hai. Ek din ki goli chhodne se report behtar nahi hoti, bas us din ka BP ya sugar bekaar me upar-neeche ho jaata hai.",
+        {
+          "note": {
+            "title": "Faisla doctor ka hai, lab ka nahi",
+            "text": "Kaun si dawa test se pehle rokni hai aur kitne din pehle — ye sirf aapka doctor bata sakta hai, kyunki uska faisla aapki beemari aur baaki dawaon par tika hota hai. Hum ye nahi batate ki kaun si dawa band karni hai. Is guide me sirf ye likha hai ki kaun si cheez kis report par asar daalti hai, taaki aap sahi sawaal poochh sakein.",
+            "tone": "warn"
+          }
+        },
+        "Isliye tareeka ulta rakhiye. Parcha milte waqt ek line poochh lijiye — \"is test se pehle meri koi dawa rokni hai kya?\" Jawab zyadatar \"nahi\" hota hai, aur jab \"haan\" hota hai to doctor din bhi bata dega."
+      ]
+    },
+    {
+      "id": "rokna-nahi-waqt-badalna",
+      "heading": "Zyadatar Maamlon Me Dawa Rokni Nahi Hoti — Sirf Waqt Badalta Hai",
+      "lead": "Sample pehle, goli baad me. Itni si baat kai report seedhi kar deti hai.",
+      "blocks": [
+        "Sabse saaf misaal thyroid ki hai. Thyroid ki goli subah khaali pet li jaati hai, aur TSH ka sample bhi aam taur par subah hi liya jaata hai — dono ek hi waqt par aa jaate hain. Yahan dawa rokni nahi hoti; bas sample pehle dena hota hai aur goli uske turant baad le leni hoti hai. Goli pehle le kar sample dena report ko us subah ke liye badal deta hai.",
+        "Yahi soch kai dawaon par laagu hoti hai. Home visit ka slot subah 6 baje se shuru hota hai, isliye zyadatar log sample de kar apni rozmarra ki goli samay par le lete hain — routine tootti bhi nahi aur report bhi saaf rehti hai.",
+        {
+          "list": [
+            "Subah ka pehla slot lijiye — fasting bhi chhoti padti hai aur dawa ka waqt bhi zyada nahi khisakta.",
+            "Goli, paani ki botal aur naashta pehle se paas rakhiye, taaki sample ke turant baad dono ho jaayein.",
+            "Roz ki saari dawaon ka ek chhota parcha ya photo booking ke waqt taiyaar rakhiye.",
+            "Insulin lene wale hain to slot ka waqt doctor ke bataye hisaab se hi tay kijiye — insulin ka hisaab khaane se juda hota hai."
+          ]
+        },
+        [
+          "Fasting wale din dawa ka poora hisaab — raat ka khaana kab tak, paani chalega ya nahi, aur kis test me fasting lagti hi nahi — ",
+          {
+            "text": "fasting wali guide",
+            "href": "/blogs/blood-test-fasting/deoria"
+          },
+          " me alag se likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "kaun-si-dawa-kaun-si-report",
+      "heading": "Kaun Si Dawa Ya Supplement Kis Report Par Asar Daalti Hai",
+      "lead": "Ye table band karne ke liye nahi, bataane ke liye hai.",
+      "blocks": [
+        "Neeche wo cheezein hain jo aam taur par report ke number ko hila sakti hain. Iska matlab ye nahi ki inhe band karna hai — matlab sirf itna hai ki ye booking ke waqt aur doctor ko bata deni chahiye, taaki report padhte waqt wo dhyaan me rahe.",
+        {
+          "table": {
+            "caption": "Dawa, supplement aur unse jude test",
+            "head": [
+              "Kya le rahe hain",
+              "Kis report par asar",
+              "Kya karna chahiye"
+            ],
+            "rows": [
+              [
+                "Thyroid ki goli",
+                "TSH, T3, T4",
+                "Dawa band nahi — goli sample dene ke BAAD lijiye"
+              ],
+              [
+                "Biotin wala baal-nakhun ka supplement",
+                "Thyroid aur kai hormone test",
+                "Booking ke waqt zaroor bataiye; rokne ka din doctor se poochh lijiye"
+              ],
+              [
+                "Multivitamin ya vitamin D ki goli",
+                "Vitamin D aur B12 ka level",
+                "Bataiye — chalte supplement ke saath level padhne ka tareeka alag hota hai"
+              ],
+              [
+                "Iron ki goli ya syrup",
+                "Ferritin, iron ka level",
+                "Bataiye, aur pichhli report saath rakhiye"
+              ],
+              [
+                "B12 ka injection ya goli",
+                "Vitamin B12 ka level",
+                "Kab lagwaya tha ye zaroor bataiye"
+              ],
+              [
+                "Sugar ki goli ya insulin",
+                "Fasting sugar, PP sugar",
+                "Apne aap mat rokiye — slot aur khuraak ka hisaab doctor se poochhiye"
+              ],
+              [
+                "BP ki goli",
+                "Creatinine, sodium, potassium",
+                "Chalti rakhiye; naam booking aur doctor dono ko bataiye"
+              ],
+              [
+                "Steroid (koi bhi roop me)",
+                "Sugar, WBC count",
+                "Zaroor bataiye — ye report ko sach me badal sakta hai"
+              ],
+              [
+                "Antibiotic",
+                "Urine ya blood culture",
+                "Culture ka sample antibiotic shuru karne se PEHLE"
+              ],
+              [
+                "Khoon patla karne wali dawa",
+                "PT/INR aur sui ki jagah se khoon",
+                "Band mat kijiye — phlebotomist ko pehle hi bata dijiye"
+              ],
+              [
+                "Dard ki goli lambe samay se",
+                "KFT, liver ke number",
+                "Kitne din se le rahe hain, ye doctor ko bataiye"
+              ],
+              [
+                "Ayurvedic, desi ya bina parche ki dawa",
+                "LFT, KFT",
+                "Ise bhi dawa maaniye aur bataiye — chhupana report ko uljhata hai"
+              ],
+              [
+                "Gym ka protein supplement",
+                "Creatinine",
+                "Bataiye; khaas kar jab kidney ka test ho raha ho"
+              ],
+              [
+                "Sharaab",
+                "LFT, triglycerides",
+                "Test se kam se kam 24 ghante pehle se bachiye"
+              ]
+            ]
+          }
+        },
+        [
+          "In me se kis panel me kya-kya aata hai, ye uski apni guide me hai — ",
+          {
+            "text": "LFT aur KFT",
+            "href": "/blogs/liver-kidney-test/deoria"
+          },
+          ", ",
+          {
+            "text": "thyroid",
+            "href": "/blogs/thyroid-test/deoria"
+          },
+          ", ",
+          {
+            "text": "vitamin D aur B12",
+            "href": "/blogs/vitamin-b12-d-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "lipid profile",
+            "href": "/blogs/lipid-profile-test/deoria"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "culture-antibiotic-se-pehle",
+      "heading": "Culture Test Ka Ek Hi Niyam — Antibiotic Se Pehle Sample",
+      "lead": "Ye wo galti hai jo poora test bekaar kar deti hai.",
+      "blocks": [
+        "Urine culture aur blood culture baaki test se alag tarah kaam karte hain. In me sample ke andar ke keede ko badhne diya jaata hai, taaki pata chale ki infection kis cheez se hai aur kaun si dawa us par chalegi. Antibiotic shuru ho chuka ho to wo keeda daba hua hota hai — report me aksar kuch nikalta hi nahi, jabki infection maujood hota hai.",
+        "Isliye agar parche par Urine C/S ya Blood Culture likha hai, to sample dene ka sahi waqt antibiotic ki pehli khuraak se PEHLE hai. Ek khuraak ke baad bhi report adhoori aa sakti hai.",
+        {
+          "list": [
+            "Parche par culture likha ho to booking usi din kar lijiye, dawa shuru karne se pehle.",
+            "Antibiotic pehle se chal raha hai to ye booking ke waqt aur doctor ko zaroor bataiye — ho sakta hai wo sample ka din badal dein.",
+            "Culture me 48–72 ghante lagte hain. Ye der lab ki nahi, test ki apni hai, aur booking ke waqt hi bata di jaati hai.",
+            "Urine culture ka sample lene ka tareeka bhi maayne rakhta hai — galat tareeke se liya sample report ko bekaar kar deta hai."
+          ]
+        },
+        [
+          "Urine ka sample sahi tareeke se kaise dena hai, aur routine aur culture me kya farak hai — wo ",
+          {
+            "text": "urine test wali guide",
+            "href": "/blogs/urine-test/deoria"
+          },
+          " me poora likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "khoon-patla-karne-wali-dawa",
+      "heading": "Khoon Patla Karne Wali Dawa — Ise Chhupaiye Mat",
+      "lead": "Ye baat report se zyada sample lene ke waqt kaam aati hai.",
+      "blocks": [
+        "Dil ya stroke ke baad kai logon ki khoon patla karne wali dawa chalti hai. Iske do alag matlab hote hain. Pehla — iska apna ek test hota hai jiska poora hisaab doctor rakhta hai. Doosra, aur ghar par sample lete waqt zyada kaam ka — sui ki jagah se khoon rukne me thoda zyada waqt lag sakta hai aur neel pad sakta hai.",
+        "Isliye ye dawa band karne ki nahi, bataane ki cheez hai. Phlebotomist ko pehle hi bata dena chahiye — wo sui ki jagah par zyada der dabaav rakhta hai aur uske baad theek se dekh kar jaata hai. Dawa apne aap rokna khatarnak ho sakta hai, aur wo faisla sirf doctor ka hai.",
+        {
+          "note": {
+            "title": "Sample ke baad ka ek chhota niyam",
+            "text": "Sui ki jagah par rui rakh kar seedhe daba kar rakhiye, kam se kam paanch minute, aur usi haath se bhaari saamaan mat uthaiye. Khoon patla karne wali dawa chal rahi ho to dabaav thoda aur der tak rakhiye. Neel pad jaaye to ghabraaiye nahi — wo kuch dinon me apne aap chala jaata hai.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "booking-me-kya-bataayein-dawa",
+      "heading": "Booking Ke Waqt Kya-Kya Bata Dena Chahiye",
+      "lead": "Ek minute ki baat, jo report aur visit dono seedhi kar deti hai.",
+      "blocks": [
+        {
+          "list": [
+            "Roz chalne wali saari dawaon ke naam — sugar, BP, thyroid, dil, dard, ya koi bhi. Parche ki photo sabse aasan tareeka hai.",
+            "Koi supplement le rahe hain — biotin, multivitamin, iron, protein powder — to uska naam bhi. Log ise dawa nahi maante, isliye ye sabse zyada chhoot jaata hai.",
+            "Pichhle kuch dinon me antibiotic shuru hua hai ya nahi, khaas kar jab culture test karana ho.",
+            "Khoon patla karne wali dawa chal rahi hai ya nahi.",
+            "Haal hi me koi injection ya khoon chadha ho to wo bhi bata dijiye.",
+            "Aap ya ghar me koi bujurg hain, bistar par hain, ya pehle sample dete waqt chakkar aaya tha — ye pehle se bata dena visit ko aasan bana deta hai."
+          ]
+        },
+        [
+          "Sample dene se pehle ki poori taiyaari ",
+          {
+            "text": "Deoria ke service page",
+            "href": "/lab-test/deoria#prepare-for-test-deoria"
+          },
+          " par ek jagah likhi hai, aur ghar par visit ke din pandrah minute me kya hota hai wo ",
+          {
+            "text": "home collection wali guide",
+            "href": "/blogs/home-sample-collection/deoria"
+          },
+          " me."
+        ]
+      ]
+    },
+    {
+      "id": "report-me-farak-aaye-to",
+      "heading": "Report Pichhli Baar Se Alag Aayi — Pehle Ye Dekhiye",
+      "lead": "Har badla hua number beemari ka nahi hota.",
+      "blocks": [
+        "Follow-up report jab pichhli baar se alag aati hai to sabse pehla shak beemari par jaata hai. Us se pehle teen cheezein dekh leni chahiye, kyunki teeno aam hain aur teeno report hila sakti hain: beech me koi nayi dawa ya supplement shuru hua, sample ka waqt badal gaya, ya test doosri jagah se hua.",
+        "Teesri wajah sabse kam samjhi jaati hai. Har lab ka analyser aur method apna hota hai aur reference range bhi usi hisaab se hoti hai. Isliye jo number aap mahino tak track karte hain — HbA1c, TSH, creatinine, haemoglobin — unhe hamesha ek hi jagah se karaiye. Ek jagah TSH 4.5 aur doosri jagah 4.1 aane ka matlab ye nahi ki aapka thyroid badal gaya.",
+        [
+          "Report ke H, L aur range ka matlab, aur kaun sa number intezaar nahi karta — ye ",
+          {
+            "text": "report padhne wali guide",
+            "href": "/blogs/blood-test-report/deoria"
+          },
+          " me hai. Report doctor ko dikhate waqt purani report bhi saath le jaaiye — doctor ek number nahi, silsila dekhte hain."
+        ]
+      ]
+    },
+    {
+      "id": "aage-kya-karein-dawa-deoria",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Taiyaari saaf ho gayi to booking seedhi hai — ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye, form bhariye, aur confirmation call par apni dawaiyan bata dijiye. Fasting chahiye ya nahi, wo usi call me bata diya jaayega."
+        ],
+        [
+          "Parche par likhe test samajh nahi aa rahe to pehle ",
+          {
+            "text": "parche wali guide",
+            "href": "/blogs/prescription-test-list/deoria"
+          },
+          " dekh lijiye, aur koi chhota sawaal ho to ",
+          {
+            "text": "call kar lijiye",
+            "href": "/contact"
+          },
+          ". Dawa rokne ka sawaal ho to wo apne doctor se poochhiye — wo jawab sirf wahi de sakte hain."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Blood test se pehle sugar ya BP ki goli leni chahiye ya nahi?",
+      "answer": "Apne aap mat rokiye. Zyadatar maamlon me doctor ko yahi dekhna hota hai ki chalti hui dawa ke saath aapka number kahan hai, isliye goli chhodne se report behtar nahi hoti — us din ka sugar ya BP bekaar me upar-neeche ho jaata hai. Sugar ke fasting test me khuraak aur slot ka hisaab thoda badal sakta hai, khaas kar insulin lene walon ka, aur wo faisla sirf aapka doctor le sakta hai. Parcha lete waqt ek line poochh lijiye — \"is test se pehle koi dawa rokni hai kya?\""
+    },
+    {
+      "question": "Thyroid ki goli test wale din kab leni chahiye?",
+      "answer": "Sample dene ke BAAD. Thyroid ki goli aur TSH ka sample dono subah khaali pet wale waqt par aate hain, isliye uljhan hoti hai. Dawa rokni nahi hai — bas pehle sample dijiye aur goli uske turant baad le lijiye. Goli pehle le kar sample dena us subah ki report ko badal deta hai. Thyroid ke test me fasting ki zaroorat waise bhi nahi hoti."
+    },
+    {
+      "question": "Biotin ya baal ke supplement se thyroid report par asar padta hai?",
+      "answer": "Haan, biotin wale supplement thyroid aur kai hormone test ki report par asar daal sakte hain, aur log ise dawa na samajh kar bataate hi nahi. Isliye booking ke waqt aur doctor ko ye zaroor bataiye — chahe wo baal, nakhun ya skin ka supplement ho. Rokna hai ya nahi aur kitne din pehle, ye doctor batayega; hum aapko dawa ya supplement rokne ki salah nahi dete."
+    },
+    {
+      "question": "Antibiotic shuru ho chuka hai — ab urine culture karwa sakte hain?",
+      "answer": "Karwa to sakte hain, par report adhoori aa sakti hai. Culture me sample ke keede ko badhne diya jaata hai, aur antibiotic shuru hone ke baad wo daba hua hota hai — isliye kai baar kuch nikalta hi nahi jabki infection maujood hota hai. Sahi waqt antibiotic ki pehli khuraak se pehle hai. Dawa pehle se chal rahi ho to ye doctor ko bata dijiye; ho sakta hai wo sample ka din badal dein."
+    },
+    {
+      "question": "Khoon patla karne wali dawa chal rahi hai — sample dene se pehle band karni hai?",
+      "answer": "Nahi, apne aap bilkul mat rokiye — ye khatarnak ho sakta hai aur wo faisla sirf doctor ka hai. Sample lene ke liye ise rokna zaroori nahi hota. Bas phlebotomist ko pehle hi bata dijiye, kyunki sui ki jagah se khoon rukne me thoda zyada waqt lag sakta hai. Rui se kam se kam paanch minute seedha dabaav rakhiye aur usi haath se bhaari saamaan mat uthaiye."
+    },
+    {
+      "question": "Test se ek raat pehle sharaab pi li — report par farak padega?",
+      "answer": "Ho sakta hai, khaas kar liver ke test aur triglycerides par. Isliye test se kam se kam 24 ghante pehle se bachna behtar hai. Agar pi li hai to sabse theek yahi hai ki report padhte waqt doctor ko bata dijiye — chhupane se report ka matlab galat nikal sakta hai aur bekaar me dobara test ki naubat aa sakti hai."
+    },
+    {
+      "question": "Ayurvedic ya bina parche wali dawa bhi bataani hoti hai?",
+      "answer": "Haan. Doctor ke liye har wo cheez dawa hai jo aap sharir ke andar le rahe hain — ayurvedic, desi, dukaan se li gayi goli, ya koi supplement. Kuch cheezein liver aur kidney ke number par asar daal sakti hain. Ise chhupane se sirf itna hota hai ki report uljhi hui padhi jaati hai aur dobara test karna padta hai."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Test Se Pehle Aur Baad Ki Guide",
+    "intro": "Taiyaari ka ek hissa dawa hai, doosra fasting, aur teesra sample ka waqt. Teeno alag likhe hain.",
+    "groups": [
+      {
+        "title": "Taiyaari",
+        "links": [
+          {
+            "href": "/blogs/blood-test-fasting/deoria",
+            "label": "Fasting kitne ghante — aur kis test me",
+            "sub": "Paani, chai, vrat aur dawa ka hisaab"
+          },
+          {
+            "href": "/blogs/prescription-test-list/deoria",
+            "label": "Parche par likhe test ka matlab"
+          },
+          {
+            "href": "/lab-test/deoria#prepare-for-test-deoria",
+            "label": "Sample dene se pehle ki poori taiyaari"
+          }
+        ]
+      },
+      {
+        "title": "Jis Test Par Asar Padta Hai",
+        "links": [
+          {
+            "href": "/blogs/thyroid-test/deoria",
+            "label": "Thyroid test — TSH, T3, T4"
+          },
+          {
+            "href": "/blogs/liver-kidney-test/deoria",
+            "label": "LFT aur KFT — normal range aur fasting"
+          },
+          {
+            "href": "/blogs/urine-test/deoria",
+            "label": "Urine test — routine ya culture?"
+          },
+          {
+            "href": "/blogs/hba1c-sugar-test/deoria",
+            "label": "HbA1c aur sugar ka follow-up"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/blogs/home-sample-collection/deoria",
+            "label": "Ghar par blood test — visit me kya hota hai"
+          },
+          {
+            "href": "/blogs/blood-test-report/deoria",
+            "label": "Report kaise padhein — H, L aur range"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — taiyaari ke baare me poochh lijiye"
+          }
+        ]
+      }
+    ]
+  }
+}

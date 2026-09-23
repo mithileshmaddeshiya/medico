@@ -1,0 +1,552 @@
+{
+  "title": "Parche Par Likhe Test Ka Matlab — Deoria Guide",
+  "description": "Doctor ne CBC, LFT, KFT ya RBS likha hai aur samajh nahi aa raha? Har short form ka poora naam, kaun sa test ghar se ho jaata hai, aur booking kaise karein.",
+  "keywords": [
+    "Parche Par Likhe Test Ka Matlab",
+    "CBC LFT KFT Ka Matlab",
+    "Doctor Ke Parche Ka Test Kaise Padhein",
+    "Lab Test Booking Deoria",
+    "Blood Test Short Form Meaning Hindi",
+    "TFT Test Kya Hota Hai",
+    "RBS FBS PPBS Ka Matlab",
+    "Urine RM Aur CS Me Farak",
+    "Deoria Me Prescription Ke Test",
+    "Online Blood Test Booking Deoria"
+  ],
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "order": 45,
+  "takeaways": [
+    "Parche par likha zyadatar short form ek panel ka naam hota hai, ek test ka nahi — CBC me lagbhag bees number aate hain aur LFT me das ke aas-paas.",
+    "Sugar ke chaar naam chaar alag test hain: FBS khaali pet, PPBS khaane ke 2 ghante baad, RBS kabhi bhi, aur HbA1c teen mahine ka ausat. Ek ko doosre ki jagah karana report bekaar kar deta hai.",
+    "Parche par USG, X-ray, ECG ya Echo likha ho to wo sample par nahi hoti — uske liye centre jaana hi padega, aur wo hamari service me nahi hai.",
+    "Likhaai samajh na aaye to andaaza mat lagaiye. Parche ki photo booking ke waqt taiyaar rakhiye — galat test karana do baar sui ka matlab hota hai."
+  ],
+  "sections": [
+    {
+      "id": "parcha-padhna-kyun-deoria",
+      "heading": "Parcha Padhna Kyun Zaroori Hai — Sabse Mehenga Test Wahi Hota Hai Jo Dobara Karana Pade",
+      "lead": "Galti daam me nahi, doosri baar sui lagne me hoti hai.",
+      "blocks": [
+        "Deoria me aksar aisa hota hai: doctor ne parche par teen chaar short form likh diye, ghar aakar wo padhe nahi ja rahe, aur booking me jo naam yaad aaya wo likhwa diya gaya. Nateeja ye nikalta hai ki test ho gaya lekin wo nahi hua jo doctor ne maanga tha — aur poora kaam dobara karna padta hai.",
+        "Ismein sabse bada nuksan paisa nahi hai. Nuksan ye hai ki doosri baar sample dena padta hai, ek din aur nikal jaata hai, aur beemar aadmi ka ilaaj utni der ruka rehta hai. Isliye booking se pehle paanch minute parche par kharch kar dena sabse achha nivesh hai.",
+        "Neeche wo saare short form hain jo is ilaake ke parchon par sabse zyada dikhte hain, unka poora naam, aur ye ki wo sample par hote hain ya nahi. Yahan ye nahi bataya gaya ki kis number ka kya matlab hai — wo aapke doctor ka kaam hai, aur report aane ke baad ka."
+      ]
+    },
+    {
+      "id": "khoon-ke-aam-short-form",
+      "heading": "Khoon Ke Test — Parche Par Sabse Zyada Dikhne Wale Short Form",
+      "lead": "Zyadatar short form ek panel hote hain, ek test nahi.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Blood test ke aam short form aur unka matlab",
+            "head": [
+              "Parche par",
+              "Poora naam",
+              "Ye kya hai"
+            ],
+            "rows": [
+              [
+                "CBC, CP, Hemogram",
+                "Complete Blood Count",
+                "Khoon ki poori ginti — haemoglobin, WBC, platelet aur baaki, ek hi sample me"
+              ],
+              [
+                "Hb",
+                "Haemoglobin",
+                "Sirf khoon ki kami dekhne wala number; aksar CBC ke andar hi aa jaata hai"
+              ],
+              [
+                "TLC, DLC",
+                "Total / Differential Leucocyte Count",
+                "WBC ki ginti aur unka bantwara — CBC ka hissa"
+              ],
+              [
+                "ESR",
+                "Erythrocyte Sedimentation Rate",
+                "Sharir me sujan ka ek aam ishara"
+              ],
+              [
+                "CRP",
+                "C-Reactive Protein",
+                "Sujan ka doosra, zyada tez badalne wala ishara"
+              ],
+              [
+                "LFT",
+                "Liver Function Test",
+                "Liver ka panel — SGPT, SGOT, bilirubin, protein waghairah"
+              ],
+              [
+                "SGPT / ALT, SGOT / AST",
+                "Liver ke enzyme",
+                "LFT ke andar ke do sabse zyada dekhe jaane wale number"
+              ],
+              [
+                "S. Bil, T. Bil",
+                "Serum / Total Bilirubin",
+                "Peeliya ki jaanch me sabse pehla number; LFT ka hissa"
+              ],
+              [
+                "KFT, RFT",
+                "Kidney / Renal Function Test",
+                "Kidney ka panel — urea, creatinine, uric acid, electrolytes"
+              ],
+              [
+                "S. Creat, B. Urea",
+                "Serum Creatinine, Blood Urea",
+                "KFT ke andar ke mukhya number"
+              ],
+              [
+                "UA, S. Uric Acid",
+                "Uric Acid",
+                "Jodon ke dard aur gathiya me aam"
+              ],
+              [
+                "TFT, T3 T4 TSH",
+                "Thyroid Function Test",
+                "Thyroid ka panel — teeno number ek saath"
+              ],
+              [
+                "LP, Lipid Profile",
+                "Lipid Profile",
+                "Cholesterol ka panel — LDL, HDL, triglycerides"
+              ],
+              [
+                "S. Electrolytes, Na K",
+                "Sodium, Potassium",
+                "Namak aur potassium ka santulan; aksar KFT ke saath"
+              ],
+              [
+                "Vit D, 25-OH Vit D",
+                "Vitamin D",
+                "Alag test hai, kisi panel ka hissa nahi"
+              ],
+              [
+                "Vit B12",
+                "Vitamin B12",
+                "Alag test; thakan aur jhunjhuni me aam"
+              ],
+              [
+                "S. Ferritin",
+                "Ferritin",
+                "Sharir me iron ka jama hua bhandar"
+              ],
+              [
+                "BG, Blood Group",
+                "Blood Group aur Rh",
+                "Ek baar ka test — zindagi bhar nahi badalta"
+              ]
+            ]
+          }
+        },
+        [
+          "In me se kisi ek panel me sach me kya-kya aata hai, ye uski apni guide me khola gaya hai — ",
+          {
+            "text": "CBC",
+            "href": "/blogs/cbc-test/deoria"
+          },
+          ", ",
+          {
+            "text": "LFT aur KFT",
+            "href": "/blogs/liver-kidney-test/deoria"
+          },
+          ", ",
+          {
+            "text": "thyroid",
+            "href": "/blogs/thyroid-test/deoria"
+          },
+          ", ",
+          {
+            "text": "lipid profile",
+            "href": "/blogs/lipid-profile-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "vitamin D aur B12",
+            "href": "/blogs/vitamin-b12-d-test/deoria"
+          },
+          "."
+        ]
+      ]
+    },
+    {
+      "id": "sugar-ke-chaar-naam",
+      "heading": "Sugar Ke Chaar Naam — Aur Chaaron Alag Test Hain",
+      "lead": "Yahan sabse zyada galti hoti hai, aur sabse aasaani se bachti bhi hai.",
+      "blocks": [
+        "Parche par sugar ke liye chaar tarah ke naam dikhte hain, aur log inhe ek hi cheez samajh lete hain. Ye ek cheez nahi hain — inme farak sample dene ke waqt ka hai, aur waqt galat ho jaaye to report ka koi matlab nahi bachta.",
+        {
+          "table": {
+            "caption": "Sugar ke test aur sample ka waqt",
+            "head": [
+              "Parche par",
+              "Poora naam",
+              "Sample kab dena hai"
+            ],
+            "rows": [
+              [
+                "FBS, F. Sugar",
+                "Fasting Blood Sugar",
+                "Khaali pet — raat ke khaane ke lagbhag 8–10 ghante baad, subah"
+              ],
+              [
+                "PPBS, PP Sugar",
+                "Post Prandial Blood Sugar",
+                "Naashte ke theek 2 ghante baad — ye doosra sample hai"
+              ],
+              [
+                "RBS",
+                "Random Blood Sugar",
+                "Din me kabhi bhi, khaane se koi matlab nahi"
+              ],
+              [
+                "HbA1c, GHb",
+                "Glycated Haemoglobin",
+                "Kabhi bhi — fasting nahi lagti; ye pichhle lagbhag teen mahine ka ausat hai"
+              ]
+            ]
+          }
+        },
+        {
+          "note": {
+            "title": "F aur PP dono likha hai to do sample honge",
+            "text": "Parche par \"FBS/PPBS\" ya \"F & PP\" likha ho to iska matlab hai do alag sample — ek khaali pet, aur doosra naashte ke 2 ghante baad. Ek hi baar me dono nahi ho sakte. Booking ke waqt ye bata dijiye taaki dono ka time ek saath tay ho jaaye aur subah ka jaldi wala slot mil jaaye.",
+            "tone": "warn"
+          }
+        },
+        [
+          "HbA1c kya batata hai aur kitni baar karana chahiye, aur ghar ki machine ka number lab se alag kyun aata hai — ye ",
+          {
+            "text": "HbA1c wali guide",
+            "href": "/blogs/hba1c-sugar-test/deoria"
+          },
+          " aur ",
+          {
+            "text": "glucometer wali guide",
+            "href": "/blogs/glucometer-sugar-test/deoria"
+          },
+          " me hai."
+        ]
+      ]
+    },
+    {
+      "id": "peshab-aur-bukhar-ke-test",
+      "heading": "Peshab Aur Bukhar Ke Test — Ye Naam Aksar Gadbadaate Hain",
+      "lead": "Urine R/M aur Urine C/S ek jaise dikhte hain, kaam dono ka alag hai.",
+      "blocks": [
+        {
+          "table": {
+            "caption": "Urine aur bukhar ke aam short form",
+            "head": [
+              "Parche par",
+              "Poora naam",
+              "Ye kya hai"
+            ],
+            "rows": [
+              [
+                "Urine R/M, Urine R/E",
+                "Urine Routine / Microscopy",
+                "Peshab ki aam jaanch — report usi din ke hisaab se aati hai"
+              ],
+              [
+                "Urine C/S",
+                "Urine Culture & Sensitivity",
+                "Infection ka keeda pehchanne wala test; ismein 48–72 ghante lagte hain"
+              ],
+              [
+                "MP, MPQBC",
+                "Malaria Parasite",
+                "Malaria ki jaanch"
+              ],
+              [
+                "NS1, Dengue NS1",
+                "Dengue NS1 Antigen",
+                "Dengue ki shuruaati jaanch — bukhar ke pehle kuch din me"
+              ],
+              [
+                "Dengue IgM / IgG",
+                "Dengue Antibody",
+                "Baad ke dinon ki jaanch — NS1 se alag cheez"
+              ],
+              [
+                "Widal",
+                "Widal Test",
+                "Typhoid ki purani aur seemit jaanch"
+              ],
+              [
+                "Typhi Dot",
+                "Typhidot IgM / IgG",
+                "Typhoid ki doosri jaanch"
+              ],
+              [
+                "HBsAg",
+                "Hepatitis B Surface Antigen",
+                "Hepatitis B ki jaanch"
+              ],
+              [
+                "Anti-HCV",
+                "Hepatitis C Antibody",
+                "Hepatitis C ki jaanch"
+              ],
+              [
+                "Stool R/M",
+                "Stool Routine",
+                "Pet ke keede aur pachan ki jaanch"
+              ]
+            ]
+          }
+        },
+        "Do jagah sabse zyada uljhan hoti hai. Pehli — Urine R/M aur Urine C/S. R/M aam jaanch hai; C/S me sample ko badhne diya jaata hai isliye usme 48–72 ghante lagte hain, aur wo der lab ki nahi, test ki apni hai. Doosri — dengue me NS1 aur IgM/IgG. Ye alag test hain aur bukhar ke alag dinon ke liye hain, isliye \"dengue test\" kehna kaafi nahi hota.",
+        [
+          "Bukhar me kis din kaun sa test sach me kaam ka hota hai — iska poora hisaab ",
+          {
+            "text": "dengue aur typhoid wali guide",
+            "href": "/blogs/dengue-typhoid-test/deoria"
+          },
+          " me hai, aur peshab ki jaanch ka poora tareeka ",
+          {
+            "text": "urine test wali guide",
+            "href": "/blogs/urine-test/deoria"
+          },
+          " me. Antibiotic shuru karne se pehle culture ka sample dena kyun zaroori hai, wo bhi wahin likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "parche-ke-nishaan",
+      "heading": "Parche Par Test Ke Saath Likhe Chhote Nishaan",
+      "lead": "\"F\", \"stat\", \"R/O\" — inka matlab test se utna hi zaroori hai.",
+      "blocks": [
+        {
+          "list": [
+            "\"F\" ya \"Fasting\" — sample khaali pet dena hai. Ye aam taur par sugar, lipid profile aur package ke saath likha hota hai.",
+            "\"PP\" — khaane ke 2 ghante baad wala sample. Iske saath aksar \"F\" bhi likha hota hai, yaani do sample.",
+            "\"Stat\" ya \"urgent\" — report jaldi chahiye. Booking ke waqt ye bata dijiye taaki samay ke baare me saaf baat ho sake.",
+            "\"R/O\" (rule out) — doctor kisi cheez ko hataana chahte hain. Ye aapke liye nahi, lab ke liye ishara hai; ise le kar ghabraane ki zaroorat nahi.",
+            "Test ke saamne likhi tareekh — us din test karana hai. Aksar dawa shuru karne ke kuch hafte baad ka follow-up aise hi likha jaata hai."
+          ]
+        },
+        "Ek cheez jo parche par nahi likhi hoti par utni hi maayne rakhti hai: aap jo dawa pehle se le rahe hain. Kuch dawaiyan aur supplement report ke number ko sach me hila dete hain, aur uska hal aksar sirf itna hota hai ki sample dene ke baad goli li jaaye.",
+        [
+          "Kaun si dawa kaun se test par asar daalti hai aur kab rukna chahiye — iska poora hisaab ",
+          {
+            "text": "dawa aur test wali guide",
+            "href": "/blogs/medicine-before-test/deoria"
+          },
+          " me hai. Sample dene se pehle band karne ka faisla doctor ka hota hai, apne aap dawa mat rokiye."
+        ]
+      ]
+    },
+    {
+      "id": "jo-sample-par-nahi-hota",
+      "heading": "Parche Ka Wo Hissa Jo Sample Par Hota Hi Nahi",
+      "lead": "Isse pehle pehchan lijiye, warna intezaar bekaar jaata hai.",
+      "blocks": [
+        "Har parche ka poora hissa lab test nahi hota. Kuch jaanch machine par, aapke saamne hoti hai — wo ghar par ho hi nahi sakti, kisi bhi lab se nahi, aur wo hamari service me shaamil nahi hai.",
+        {
+          "table": {
+            "caption": "Parche par likhi machine wali jaanch",
+            "head": [
+              "Parche par",
+              "Poora naam",
+              "Kahan hoti hai"
+            ],
+            "rows": [
+              [
+                "USG, Sono",
+                "Ultrasound / Sonography",
+                "Imaging centre par — sample par nahi hoti"
+              ],
+              [
+                "X-ray, CXR",
+                "X-ray / Chest X-ray",
+                "Imaging centre par"
+              ],
+              [
+                "ECG, EKG",
+                "Electrocardiogram",
+                "Machine par, aapke saamne"
+              ],
+              [
+                "Echo",
+                "Echocardiography",
+                "Dil ka ultrasound — centre par"
+              ],
+              [
+                "CT, MRI",
+                "CT Scan / MRI",
+                "Bade centre par — Deoria me na mile to Gorakhpur"
+              ],
+              [
+                "PFT",
+                "Pulmonary Function Test",
+                "Machine par"
+              ]
+            ]
+          }
+        },
+        "Isliye parcha haath me aate hi use do hisson me baant lijiye — sample wala hissa aur machine wala hissa. Sample wala hissa ghar se ho jaata hai aur uski report 24 ghante me aa jaati hai; machine wale hisse ke liye din aur jagah alag se tay karni hoti hai.",
+        [
+          "Operation se pehle jo list milti hai usme dono tarah ki jaanch hoti hai, aur usme kaun sa hissa ghar se ho jaata hai wo ",
+          {
+            "text": "pre-operative guide",
+            "href": "/blogs/pre-operative-test/deoria"
+          },
+          " me alag kar ke likha hai."
+        ]
+      ]
+    },
+    {
+      "id": "likhaai-samajh-na-aaye",
+      "heading": "Likhaai Hi Samajh Na Aa Rahi Ho To",
+      "lead": "Andaaza lagana sabse mehenga vikalp hai.",
+      "blocks": [
+        "Haath ki likhi parchi padhna aasan nahi hota, aur ye koi sharm ki baat nahi hai. Bas ek kaam mat kijiye — andaaze se test likhwa dena. Ek jaise dikhne wale do naam bilkul alag test hote hain, aur galat test ka matlab hai doosri baar sui, doosra din, aur ilaaj me deri.",
+        {
+          "list": [
+            "Parche ki saaf photo khinch lijiye — dhoop ya achhi roshni me, poora kaagaz frame me, chhaya na pade.",
+            "Booking ke waqt wo photo taiyaar rakhiye. Jo test padhe ja rahe hain wo aapko padh kar suna diye jaayenge.",
+            "Jo bilkul na khule, uske liye usi clinic par ek call kar lijiye jahan se parcha mila hai — do minute ka kaam hai.",
+            "Purani report saath rakhiye. Doctor ne follow-up likha hai to pichhli report se milaana aasan ho jaata hai.",
+            "Do doctoron ke do parche hain to dono dikhaiye — aksar dono me kuch test ek hi hote hain, aur wo dobara karane ki zaroorat nahi hoti."
+          ]
+        },
+        {
+          "note": {
+            "title": "Hum report ka matlab nahi batate",
+            "text": "Ye guide sirf naam kholti hai — kaun sa short form kis test ka hai. Kaun sa test aapke liye zaroori hai, report ka matlab kya hai, aur aage kya karna hai — ye teeno aapke doctor ka kaam hai. Booking par hum itna zaroor bata dete hain ki parche ka kaun sa hissa sample par ho jaata hai aur kaun sa nahi.",
+            "tone": "info"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aage-kya-karein-parcha-deoria",
+      "heading": "Aage Kya Karein",
+      "blocks": [
+        [
+          "Parcha padh liya aur test saaf ho gaye to booking seedhi hai — ",
+          {
+            "text": "Deoria ka service page",
+            "href": "/lab-test/deoria"
+          },
+          " kholiye aur form bhar dijiye. Fasting chahiye ya nahi, ye confirmation call par bata diya jaayega. Rate ",
+          {
+            "text": "price list",
+            "href": "/lab-test/deoria#lab-test-price-deoria"
+          },
+          " me hai."
+        ],
+        [
+          "Parcha hai hi nahi aur shikayat ke hisaab se test chunna hai to ",
+          {
+            "text": "lakshan wali guide",
+            "href": "/blogs/symptom-test/deoria"
+          },
+          " se shuru kijiye. Report aa jaaye to use padhne ka tareeka ",
+          {
+            "text": "report wali guide",
+            "href": "/blogs/blood-test-report/deoria"
+          },
+          " me hai — lekin faisla hamesha doctor ka."
+        ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Parche par CBC likha hai — ismein kitne test hote hain?",
+      "answer": "CBC ek test ka naam nahi, ek panel ka naam hai. Complete Blood Count me lagbhag bees number aate hain — haemoglobin, RBC, WBC ki kul ginti aur unka bantwara, platelet count, aur kai indices. Ye sab ek hi sample se nikalte hain, isliye ek hi baar sui lagti hai. Iske liye fasting ki zaroorat nahi hoti, so sample din me kabhi bhi diya ja sakta hai."
+    },
+    {
+      "question": "LFT aur KFT me kya farak hai? Dono likhe hain to do sample lagenge?",
+      "answer": "LFT liver ka panel hai aur KFT kidney ka — do alag panel, do alag cheezein dekhne ke liye. Lekin dono ek hi khoon ke sample se ho jaate hain, isliye dono likhe hone par bhi ek hi baar sui lagti hai. Aksar doctor inhe saath me likhte hain kyunki dawa ya lambi beemari dono par asar daal sakti hai. Dono me kya-kya aata hai wo LFT aur KFT wali guide me poora likha hai."
+    },
+    {
+      "question": "Parche par FBS aur PPBS dono likha hai — ek hi baar me ho jaayega?",
+      "answer": "Nahi, ye do alag sample hain. FBS khaali pet liya jaata hai aur PPBS naashte ke theek 2 ghante baad — ek hi baar me dono nahi ho sakte. Sahi tareeka ye hai ki subah ka jaldi wala slot lijiye, khaali pet pehla sample dijiye, turant naashta kar lijiye, aur theek do ghante baad doosra sample. Booking ke waqt bata dijiye ki dono chahiye, taaki dono ka time ek saath tay ho jaaye."
+    },
+    {
+      "question": "Parche par USG ya X-ray likha hai — kya ye bhi ghar par ho jaayega?",
+      "answer": "Nahi. Ultrasound, X-ray, ECG, Echo, CT aur MRI machine par hoti hain aur aapko us centre par jaana hi padega — ye ghar par kisi bhi lab se nahi hoti, aur hamari service me bhi shaamil nahi hain. Parche ka blood aur urine wala hissa ghar se ho jaata hai. Booking ke waqt parche ki photo dikha dijiye, aapko saaf bata diya jaayega ki kaun sa hissa sample par hoga aur kaun sa nahi."
+    },
+    {
+      "question": "Doctor ki likhaai samajh nahi aa rahi — kya karein?",
+      "answer": "Andaaze se test mat likhwaiye; ek jaise dikhne wale do naam bilkul alag test hote hain. Parche ki saaf photo khinch lijiye aur booking ke waqt taiyaar rakhiye — jo test padhe ja rahe hain wo aapko padh kar suna diye jaayenge. Jo phir bhi na khule uske liye usi clinic par ek call sabse seedha raasta hai."
+    },
+    {
+      "question": "TFT aur T3 T4 TSH — ye alag test hain?",
+      "answer": "Nahi, ek hi baat hai. TFT ka matlab Thyroid Function Test hai, aur usme aam taur par T3, T4 aur TSH teeno aate hain. Kuch parchon par sirf \"TSH\" likha hota hai — us haalat me sirf ek number chahiye hota hai, teeno nahi. Thyroid me fasting nahi lagti, aur ek baat dhyaan rakhiye: thyroid ki goli sample dene ke BAAD lijiye, pehle nahi."
+    },
+    {
+      "question": "Purane parche par likhe test ab bhi karwa sakte hain?",
+      "answer": "Test to ho jaayega, lekin ye poochhne layak baat hai ki wo ab bhi zaroori hai ya nahi. Parcha purana ho aur beech me dawa ya haalat badal gayi ho, to doctor aaj shaayad kuch aur maangein. Operation se pehle wali report ka to samay se matlab hota hi hai — uspar alag se pre-operative guide me likha hai. Sabse seedha tareeka: purana parcha aur purani report dono doctor ko ek baar dikha lijiye."
+    }
+  ],
+  "relatedLinks": {
+    "heading": "Parche Ke Har Test Ki Apni Guide",
+    "intro": "Yahan sirf naam khole gaye hain. Kisi ek panel me kya-kya aata hai aur uski taiyaari kya hai, wo uski apni guide me hai.",
+    "groups": [
+      {
+        "title": "Panel Ki Guide",
+        "links": [
+          {
+            "href": "/blogs/cbc-test/deoria",
+            "label": "CBC test — ismein kya-kya aata hai"
+          },
+          {
+            "href": "/blogs/liver-kidney-test/deoria",
+            "label": "LFT aur KFT — poori list aur fasting"
+          },
+          {
+            "href": "/blogs/thyroid-test/deoria",
+            "label": "Thyroid — TSH, T3, T4"
+          },
+          {
+            "href": "/blogs/lipid-profile-test/deoria",
+            "label": "Lipid profile — cholesterol ka panel"
+          }
+        ]
+      },
+      {
+        "title": "Taiyaari",
+        "links": [
+          {
+            "href": "/blogs/blood-test-fasting/deoria",
+            "label": "Fasting kitne ghante — aur kis test me"
+          },
+          {
+            "href": "/blogs/medicine-before-test/deoria",
+            "label": "Dawa aur supplement — test se pehle kya karein"
+          },
+          {
+            "href": "/lab-test/deoria#prepare-for-test-deoria",
+            "label": "Sample dene se pehle ki poori taiyaari"
+          }
+        ]
+      },
+      {
+        "title": "Booking Aur Report",
+        "links": [
+          {
+            "href": "/lab-test/deoria",
+            "label": "Deoria me lab test — booking aur free home collection"
+          },
+          {
+            "href": "/lab-test/deoria#lab-test-price-deoria",
+            "label": "Deoria me lab test ka price"
+          },
+          {
+            "href": "/blogs/blood-test-report/deoria",
+            "label": "Report kaise padhein — H, L aur range"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact — parcha dikha kar poochh lijiye"
+          }
+        ]
+      }
+    ]
+  }
+}
