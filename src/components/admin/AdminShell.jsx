@@ -28,25 +28,26 @@ import Link from "next/link";
 import { Menu, PanelLeftOpen, X } from "lucide-react";
 
 /**
- * The brand mark: the microscope out of the site's own logo, cropped square so
- * it survives being shown at 36px and inside the 4rem rail, where the full
- * wordmark would be unreadable. It is navy artwork on white, so it is given a
- * white plate to sit on rather than being recoloured for the dark sidebar.
+ * The site's own logo, exactly as the site uses it.
  *
- * `priority` because it is the topmost thing on every admin screen, and it is
- * under 5 KB — the request is paid for once and never blocks anything after.
+ * It is navy and black artwork on a white background, so on the dark sidebar
+ * it is given a white plate to sit on. It is never recoloured or cropped to
+ * suit the background — a logo redrawn to fit a panel is no longer the logo.
+ *
+ * `priority` because it is the topmost thing on every admin screen; at 14 KB
+ * the request is paid for once and blocks nothing after it. The intrinsic size
+ * is passed so the box is reserved before the image arrives and the header
+ * never jumps.
  */
-const Mark = ({ className = "" }) => (
-  <span className={`sb-plate flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden ${className}`}>
-    <Image
-      src="/brand/admin-mark.webp"
-      alt=""
-      width={36}
-      height={36}
-      priority
-      className="h-9 w-9 object-contain p-1"
-    />
-  </span>
+const Logo = ({ className = "" }) => (
+  <Image
+    src="/navbar/lablogo.webp"
+    alt="MedicoBharat"
+    width={640}
+    height={180}
+    priority
+    className={`h-auto ${className}`}
+  />
 );
 
 const KEY = "mb-admin-sidebar-collapsed";
@@ -149,20 +150,14 @@ export default function AdminShell({ sidebar, children }) {
             collapsed ? "lg:justify-center lg:px-0" : ""
           }`}
         >
-          {/* Expanded: mark + wordmark. The rail shows the mark on its own,
-              which is why it is a square crop and not the full logo. */}
+          {/* The logo, on its white plate. Sized so that it and the collapse
+              button both fit the 15rem sidebar without either being cramped. */}
           <Link
             href="/admin"
-            className={`flex min-w-0 items-center gap-2.5 ${collapsed ? "lg:hidden" : ""}`}
+            className={`flex min-w-0 items-center ${collapsed ? "lg:hidden" : ""}`}
           >
-            <Mark />
-            <span className="min-w-0">
-              <span className="sb-wordmark block truncate text-[14.5px] font-extrabold tracking-tight">
-                MedicoBharat
-              </span>
-              <span className="sb-kicker mt-0.5 block text-[10.5px] font-bold uppercase tracking-[0.12em]">
-                Admin panel
-              </span>
+            <span className="sb-plate flex items-center px-2 py-1.5">
+              <Logo className="w-[140px]" />
             </span>
           </Link>
 
@@ -180,9 +175,10 @@ export default function AdminShell({ sidebar, children }) {
             <X className="h-4.5 w-4.5" strokeWidth={2.2} />
           </button>
 
-          {/* Desktop rail only. The mark IS the control here: at 4rem there is
-              room for one thing, and pointing at it swaps in the expand icon.
-              Nothing is lost — "Dashboard" is the first link in the nav below. */}
+          {/* Desktop rail only: expand back to the full sidebar. No logo here —
+              it is a wide wordmark and a 4rem rail would render it unreadable,
+              which is worse for the brand than leaving it out until the
+              sidebar is opened again. */}
           <button
             type="button"
             onClick={() => writeCollapsed(false)}
@@ -190,18 +186,11 @@ export default function AdminShell({ sidebar, children }) {
             title="Expand menu"
             aria-controls="admin-sidebar"
             aria-expanded={!collapsed}
-            className={`group relative hidden h-9 w-9 cursor-pointer items-center justify-center rounded-lg ${
+            className={`sb-ctl hidden h-9 w-9 cursor-pointer items-center justify-center rounded-lg transition ${
               collapsed ? "lg:flex" : ""
             }`}
           >
-            <span className="transition-opacity duration-150 group-hover:opacity-0">
-              <Mark />
-            </span>
-            <PanelLeftOpen
-              aria-hidden
-              className="absolute h-5 w-5 text-slate-300 opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-              strokeWidth={2.2}
-            />
+            <PanelLeftOpen className="h-5 w-5" strokeWidth={2.2} />
           </button>
         </div>
 
@@ -225,21 +214,9 @@ export default function AdminShell({ sidebar, children }) {
             <Menu className="h-5 w-5" strokeWidth={2.2} />
           </button>
 
-          <Link href="/admin" className="flex min-w-0 items-center gap-2">
-            <Image
-              src="/brand/admin-mark.webp"
-              alt=""
-              width={28}
-              height={28}
-              priority
-              className="h-7 w-7 shrink-0 object-contain"
-            />
-            <span className="truncate text-[14.5px] font-extrabold tracking-tight text-slate-900">
-              MedicoBharat
-              <span className="ml-1.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-slate-400">
-                Admin
-              </span>
-            </span>
+          {/* This bar is already white, so the logo needs no plate here. */}
+          <Link href="/admin" className="flex min-w-0 items-center">
+            <Logo className="w-[132px]" />
           </Link>
         </header>
 

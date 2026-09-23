@@ -341,11 +341,28 @@
   border-radius: 0.625rem;
   box-shadow: 0 1px 2px rgba(2, 6, 23, 0.4);
 }
-.admin-sb .sb-wordmark {
-  color: #f8fafc;
+/* The nav scrolls when there are more links than height, and the platform's
+   default scrollbar draws that as a wide white trough straight down a dark
+   panel — the single ugliest thing on the screen, and the reason this block
+   exists. Thin, no track, and the thumb only just visible against the navy.
+   `scrollbar-width`/`scrollbar-color` cover Firefox and current Chrome; the
+   ::-webkit rules cover the Chromium versions that predate them. */
+.admin-sb nav {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
 }
-.admin-sb .sb-kicker {
-  color: #64748b;
+.admin-sb nav::-webkit-scrollbar {
+  width: 6px;
+}
+.admin-sb nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+.admin-sb nav::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+}
+.admin-sb nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
 }
 
 /* Group headings. */
