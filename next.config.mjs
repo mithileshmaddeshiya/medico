@@ -97,6 +97,8 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/sitemap.xml": ["./content/blogs/**/*.json"],
     "/sitemap/blogs.xml": ["./content/blogs/**/*.json"],
+    // The lab report cover design, read from disk by its route at request time.
+    "/api/lab-report/template": ["./assets/lab-report/**/*"],
   },
 
   images: {
