@@ -169,7 +169,10 @@ export default function LabServices({
             Hidden while a search is running: the box and the chips do the same
             job, and showing both at once is what made this area busy. */}
         {!searching && (
-          <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
+          // overflow-x-auto clips vertically too, which cut the active chip's
+          // ring and shadow. The padding gives them room; the margins take the
+          // same amount back so the row sits exactly where it did.
+          <div className="-mx-4 mt-1.5 -mb-2 flex gap-2 overflow-x-auto px-4 pt-1.5 pb-3 [scrollbar-width:none] sm:mx-0 sm:mt-3 sm:mb-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pt-0 sm:pb-1 [&::-webkit-scrollbar]:hidden">
             {filters.map((f) => {
               const active = filter === f.key;
               // Packages are a different kind of thing from a test category and
@@ -286,7 +289,11 @@ export default function LabServices({
               }}
             >
               {visible.map((t) => (
-                <SwiperSlide key={t.id} className="h-auto">
+                /* h-auto! — swiper/css sets `.swiper-slide { height: 100% }`
+                   unlayered, which beat the plain h-auto (same trap as the
+                   padding above). Without it a slide never stretched, so a card
+                   with no badge or discount came out shorter than its row. */
+                <SwiperSlide key={t.id} className="h-auto!">
                   <TestCard
                     test={t}
                     qty={t.price && t.inStock !== false ? (cartItems[t.id] ?? 0) : 0}

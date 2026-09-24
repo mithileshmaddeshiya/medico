@@ -20,7 +20,7 @@ export default function LabCallBanner({ banner, phone }) {
       aria-label="Call to book a health checkup"
       className="border-t border-emerald-100 bg-linear-to-b from-emerald-50/70 to-white"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-11 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-11 text-center">
 
         {/* The icon dials too. It looks like the most tappable thing on the
             strip, so a tap that did nothing read as a broken page — and on a
@@ -61,7 +61,7 @@ export default function LabCallBanner({ banner, phone }) {
           {phone}
         </a>
 
-        <div className="mt-5">
+        <div className="mt-4 sm:mt-5">
           <a
             href={tel}
             title={`Call ${phone} to book a lab test`}

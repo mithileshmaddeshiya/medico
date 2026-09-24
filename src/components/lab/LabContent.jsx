@@ -267,7 +267,7 @@ export default function LabContent({ city, sections = [], related = null }) {
       aria-label={`About lab tests in ${city}`}
       className="scroll-mt-20 border-t border-slate-200/80 bg-linear-to-b from-white to-slate-50"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-7 sm:py-14">
 
         {/* Block header — the prose used to start cold with an h2, so on a
             phone it read as leftover text rather than a guide worth opening.
@@ -293,7 +293,7 @@ export default function LabContent({ city, sections = [], related = null }) {
           </p>
         </header>
 
-        <div className="mt-5 grid gap-6 sm:mt-6 lg:mt-8 lg:grid-cols-[minmax(0,250px)_1fr] lg:gap-12">
+        <div className="mt-4 grid gap-5 sm:mt-6 sm:gap-6 lg:mt-8 lg:grid-cols-[minmax(0,250px)_1fr] lg:gap-12">
 
           {/* RAIL — jump links, desktop only. Doubles as a visible outline of the
               page for crawlers and as navigation for a long read. The lead is
@@ -433,7 +433,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       key={s.id}
                       id={s.id}
                       data-section
-                      className="mt-7 scroll-mt-24 border-t border-slate-200/70 pt-7 sm:mt-10 sm:pt-10"
+                      className="mt-5 scroll-mt-24 border-t border-slate-200/70 pt-5 sm:mt-10 sm:pt-10"
                     >
                       <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
                         <span
@@ -477,7 +477,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       index" reading, and the headings reuse the accent-bar
                       pairing the prose uses above. */}
                   {relatedGroups.length > 0 && (
-                    <div className="mt-7 border-t border-slate-200/70 pt-7 sm:mt-10 sm:pt-10">
+                    <div className="mt-5 border-t border-slate-200/70 pt-5 sm:mt-10 sm:pt-10">
                       <h3 className="relative pl-4 text-[17px] sm:text-[20px] md:text-[22px] font-extrabold leading-snug tracking-tight text-balance text-slate-900">
                         <span
                           aria-hidden
@@ -495,7 +495,7 @@ export default function LabContent({ city, sections = [], related = null }) {
                       {/* Two columns, not the band's three: this column is
                           narrower than the full page was, and a third would
                           leave every link wrapping onto three lines. */}
-                      <div className="mt-6 grid gap-x-8 gap-y-7 pl-4 sm:grid-cols-2">
+                      <div className="mt-5 grid gap-x-8 gap-y-5 pl-4 sm:mt-6 sm:gap-y-7 sm:grid-cols-2">
                         {relatedGroups.map((group) => (
                           <nav key={group.title} aria-label={group.title}>
                             <h4 className="flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.13em] text-emerald-700">
