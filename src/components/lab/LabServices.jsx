@@ -111,7 +111,7 @@ export default function LabServices({
   // theirs may leak into the page's horizontal scroll on small screens.
   return (
     <section id="tests" className="bg-slate-50 border-t border-slate-100 overflow-x-clip">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-2 sm:py-8">
 
         {/* HEADING — follows the active chip. The city is appended only when
             there is one: this section also runs on the home page, which serves
