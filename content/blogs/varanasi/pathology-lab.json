@@ -36,7 +36,7 @@
         [
           "Book karna hai to seedhe ",
           {
-            "text": "Varanasi me lab test aur free home sample collection",
+            "text": "Varanasi me lab test aur home sample collection",
             "href": "/lab-test/varanasi"
           },
           " kholiye. Is article me ek bhi rate nahi likha hai, jaan-boojh kar — rate ek hi jagah rahega to purana kabhi nahi hoga."
@@ -59,8 +59,8 @@
             ],
             "rows": [
               [
-                "Free home sample collection",
-                "Sample ghar par, koi visiting charge nahi",
+                "Home sample collection ₹100",
+                "Sample ghar par, ₹100 per booking — iske alawa koi visiting charge nahi",
                 "Booking ke waqt total poochhiye — jo card par likha hai bas wahi aana chahiye"
               ],
               [
@@ -268,7 +268,7 @@
               ],
               [
                 "Home collection ka alag charge?",
-                "Nahi, ya rate me pehle se juda hua",
+                "Booking se pehle bataya hua (humare yahan ₹100)",
                 "Visiting charge jo baad me judta hai"
               ],
               [
@@ -379,7 +379,7 @@
     },
     {
       "question": "Home sample collection ka koi extra charge lagta hai?",
-      "answer": "Nahi. Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai. Na visiting charge, na convenience fee, na koi baad me judne wala amount. Payment sample lene ke waqt hota hai, cash ya UPI se. Booking ke waqt total poochh lena aapka haq hai, aur jo total us waqt bataya jaaye wahi aana chahiye."
+      "answer": "Haan, home sample collection ₹100 per booking hai — ek visit me booking ke saare test aur ghar ke sabhi log jinka test usi booking me hai, cover ho jaate hain. Iske alawa aap test ka wahi price dete hain jo card par likha hai. Na visiting charge, na convenience fee, na koi baad me judne wala amount. Payment sample lene ke waqt hota hai, cash ya UPI se. Booking ke waqt total poochh lena aapka haq hai, aur jo total us waqt bataya jaaye wahi aana chahiye."
     },
     {
       "question": "Report kis format me milti hai — doctor use maan lenge?",
@@ -403,7 +403,7 @@
         "links": [
           {
             "href": "/lab-test/varanasi",
-            "label": "Varanasi me lab test — booking aur free home collection",
+            "label": "Varanasi me lab test — booking aur home collection",
             "sub": "Sarnath, Lanka, Bhelupur, Sigra, Cantt aur Ramnagar"
           },
           {

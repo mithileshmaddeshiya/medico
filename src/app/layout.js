@@ -29,7 +29,7 @@ export const metadata = {
   metadataBase: new URL(SITE),
 
   title: {
-    default: "MedicoBharat | Lab Test at Home with Free Sample Collection",
+    default: "MedicoBharat | Lab Test at Home — Sample Collection at ₹100",
     template: "%s | MedicoBharat",
   },
 
@@ -37,7 +37,7 @@ export const metadata = {
   // its length is not the constraint the page-level ones are under. The city
   // list is BUILT — it read "Varanasi, Gorakhpur and Deoria" for as long as
   // Salempur, Azamgarh and Ballia had been live. See src/lib/coverage.js.
-  description: `MedicoBharat books lab tests and full body health checkups with free home sample collection — CBC, thyroid, sugar, vitamin and organ function tests. Trained phlebotomists, reports in 24 hours, across ${coverage()}.`,
+  description: `MedicoBharat books lab tests and full body health checkups with home sample collection at ₹100 — CBC, thyroid, sugar, vitamin and organ function tests. Trained phlebotomists, reports in 24 hours, across ${coverage()}.`,
 
   keywords: [
     // BRAND — the reason this list exists at all. Google was spell-correcting
@@ -124,17 +124,17 @@ export const metadata = {
 
     locale: "en_IN",
 
-    title: "MedicoBharat | Lab Test at Home with Free Sample Collection",
+    title: "MedicoBharat | Lab Test at Home — Sample Collection at ₹100",
 
     description:
-      "Book a lab test or full body checkup with free home sample collection. Trained phlebotomists, slots from 6 AM and reports in 24 hours on WhatsApp.",
+      "Book a lab test or full body checkup with home sample collection at ₹100. Trained phlebotomists, slots from 6 AM and reports in 24 hours on WhatsApp.",
 
     images: [
       {
         url: `${SITE}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "MedicoBharat — lab test at home with free sample collection",
+        alt: "MedicoBharat — lab test at home with sample collection at your door",
       },
     ],
   },
@@ -145,7 +145,7 @@ export const metadata = {
     title: "MedicoBharat | Lab Test at Home",
 
     description:
-      "Lab tests and full body checkups with free home sample collection and reports in 24 hours.",
+      "Lab tests and full body checkups with home sample collection at ₹100 and reports in 24 hours.",
 
     images: [
       `${SITE}/opengraph-image`,

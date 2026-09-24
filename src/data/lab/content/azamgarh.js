@@ -32,7 +32,7 @@
  *
  * ── Claims and their sourcing ────────────────────────────────────────────
  * Only the confirmed set (see the warning above defaultFaqs in
- * src/data/lab/defaults.js): free home collection, a trained phlebotomist
+ * src/data/lab/defaults.js): home collection at ₹100 per booking, a trained phlebotomist
  * carrying an ID card, slots from 6 AM, reports in 24 hours, cash/UPI at
  * collection, a callback in about 30 minutes, a visit of about 10 minutes.
  * NOT claimed here, however well it would rank: NABL accreditation, cold-chain
@@ -79,7 +79,7 @@ const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 export const azamgarhContent = [
   {
     id: "lab-test-in-azamgarh",
-    h: "Azamgarh Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Azamgarh Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Azamgarh me jaanch karana mushkil isliye nahi hai ki lab nahi hain — mushkil isliye hai ki wo sab sheher me hain aur jila bahut bada hai. Sidhari, Civil Lines aur Kachehri ke aas-paas ke counter par subah bheed lagti hai, aur us bheed me khade aadhe log wahi hain jo Mehnagar, Atraulia, Phulpur ya Lalganj se ek ghanta safar kar ke pahunche hain. Ek CBC ya TSH ke liye poora din chala jaata hai, aur report lene ka doosra chakkar alag.",
       "Home sample collection isi chakkar ko khatam karta hai. Aap apna pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — na kiraya, na khaali pet ka safar, na line, na report lene ka doosra din.",
@@ -209,8 +209,8 @@ export const azamgarhContent = [
     id: "lab-test-price-azamgarh",
     h: "Azamgarh Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Is page par har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na visiting charge, na travel charge, na koi hidden fee. Jile ke kisi bhi kasbe me daam wahi rehta hai jo sheher me hai; door hone par kuch extra nahi lagta.",
-      "Rate list is tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200. Ye wahi rate hain jo hamare doosre sheheron me hain.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai. Uske upar home sample collection ka sirf ₹100 lagta hai — poori booking par ek hi baar, chahe kitne bhi test hon. Iske alawa na travel charge, na koi hidden fee. Jile ke kisi bhi kasbe me daam wahi rehta hai jo sheher me hai; door hone par kuch extra nahi lagta.",
+      "Rate list is tarah hai: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000. Ye wahi rate hain jo hamare doosre sheheron me hain.",
       "Package me bachat sabse zyada hoti hai. Basic Full Body ₹999 me 45 parameter deta hai — wahi test alag alag karane par kharcha kai guna ho jaata hai. Advanced ₹1,999 me 72 parameter aur Senior Citizen Pack ₹2,999 me 88 parameter deta hai.",
       "Kuch test, jaise Fever Panel (malaria, typhoid aur dengue ek saath), price par nahi balki us waqt ki zaroorat par tay hote hain — unke card par 'Call for price' likha rehta hai. Aise me phone par pooch lijiye; sample dene se pehle price bata diya jaata hai. Payment sample lene ke waqt hi hota hai — cash ya UPI se, PhonePe, Google Pay ya Paytm.",
     ],
@@ -269,8 +269,8 @@ export const azamgarhContent = [
     h: "आज़मगढ़ में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "आज़मगढ़ में खून की जांच के लिए अब शहर तक जाकर लाइन लगाने की ज़रूरत नहीं है। सीबीसी, थायरॉइड, शुगर, एचबीए1सी, लिपिड प्रोफाइल, लिवर और किडनी फंक्शन टेस्ट, विटामिन डी, विटामिन बी12, डेंगू, यूरिन रूटीन और फुल बॉडी चेकअप — ये सारी जांच सैंपल पर होती हैं, और सैंपल आपके घर से लिया जा सकता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है। आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है — कोई विज़िटिंग चार्ज या छिपा हुआ शुल्क नहीं, और ज़िले के दूर वाले कस्बों में भी वही रेट लगता है। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
-      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — पूरी बुकिंग पर एक ही बार, चाहे जितने टेस्ट हों। आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर बस यही ₹100 — कोई और छिपा हुआ शुल्क नहीं, और ज़िले के दूर वाले कस्बों में भी वही रेट लगता है। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
+      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000 और डेंगू ₹1,000। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
       "सैंपल शहर में सिधारी, सिविल लाइंस, कचहरी, चौक और भंवरनाथ के आस-पास लिया जाता है, और ज़िले में मुबारकपुर, निज़ामाबाद, बिलरियागंज, सराय मीर, लालगंज, फूलपुर, महराजगंज, अतरौलिया, मेहनगर, जीयनपुर, सगड़ी, मार्टीनगंज और बूढ़नपुर तक। आपका गाँव इस सूची में न हो तो एक बार फ़ोन कर लीजिए — कवर होने पर उसी समय स्लॉट बुक हो जाएगा। पता लिखते समय टोला या पुरवा का नाम और एक लैंडमार्क ज़रूर डालिए।",
       "जिनकी शुगर, बीपी या थायरॉइड की दवा चल रही है, उनके लिए घर पर जांच का सबसे बड़ा फ़ायदा यही है कि फॉलो-अप छूटता नहीं — हर तीन महीने में एचबीए1सी, साल में एक बार लिपिड और किडनी फंक्शन, और दवा की डोज़ बदलने के 6 से 8 हफ़्ते बाद टीएसएच। पेमेंट सैंपल लेते समय नकद या यूपीआई से होता है।",
       [
@@ -306,13 +306,13 @@ export const azamgarhContent = [
  * schema text: the JSON-LD has to mirror the readable answer exactly, so the
  * links live outside `a`. See LabFaq.
  *
- * Claims are limited to the confirmed set: free home collection, trained
+ * Claims are limited to the confirmed set: home collection at ₹100 per booking, trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI.
  */
 export const azamgarhFaqs = [
   {
-    q: "How much does a lab test cost in Azamgarh, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Azamgarh is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate is the same in the far towns of the district as it is in the city. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Azamgarh, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Azamgarh — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, HbA1c ₹500, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The rate is the same in the far towns of the district as it is in the city. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do you have a lab or collection centre in Azamgarh — in Sidhari or Civil Lines?",

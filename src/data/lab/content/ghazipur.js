@@ -52,7 +52,7 @@
  *      makes a same-day trip possible at all.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the five this business confirms: free home collection, a trained
+ * Only the five this business confirms: home collection at ₹100 per booking, a trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI
  * on collection. NOT claimed anywhere: NABL accreditation, pathologist
  * verification, cold-chain transport, barcode tracking, sealed single-use
@@ -104,11 +104,11 @@ const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 export const ghazipurContent = [
   {
     id: "lab-test-in-ghazipur",
-    h: "Ghazipur Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Ghazipur Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Ghazipur ki dikkat wo nahi hai jo Deoria ya Siwan ki hai. Yahan se Varanasi kareeb 80 kilometre hai — seedhi sadak, seedhi train, aur subah nikal kar shaam tak laut aane wali doori. Aur yahi aadat ban gayi hai: CBC jaisi choti jaanch ke liye bhi ghar me tay ho jaata hai ki \"Banaras chalte hain\", bina ye dekhe ki wo jaanch ghar par ho sakti thi ya nahi.",
       "Ek CBC ke liye Varanasi jaane ka matlab hai — subah ki gaadi, khaali pet ka safar, wahan ki line, aur report ke liye ya to shaam tak rukna ya doosre din dobara jaana. Do sau rupaye ka test aur poora din. Ye page us aadat ko todne ke liye hai, Varanasi jaane se rokne ke liye nahi.",
-      "Home sample collection me aap Ghazipur me apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Home collection ka koi alag charge nahi.",
+      "Home sample collection me aap Ghazipur me apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai. Home collection ₹100 hai, poori booking par ek baar.",
       "Yahan routine pathology ke saare test aur checkup package book hote hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, Liver Function Test, Kidney Function Test, Vitamin D, Vitamin B12, Dengue aur Full Body Checkup. Doctor ne parcha likh diya hai to usi panel ke hisaab se booking ho jaati hai; koi test is page par na dikhe to prescription ke saath ek call kar lijiye.",
       [
         "Kaun sa test kab karana chahiye, bukhar me kis din test matlab rakhta hai, aur report ke numbers me kya dekhna chahiye — us par alag se guide hai: ",
@@ -258,10 +258,10 @@ export const ghazipurContent = [
     id: "lab-test-price-ghazipur",
     h: "Ghazipur Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka koi alag charge nahi — na visiting fee, na koi hidden cost. Aap sirf test ka price dete hain.",
-      "Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi hidden cost. Aap test ka price aur ye ₹100 dete hain.",
+      "Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package: Basic Full Body Checkup ₹999, Advanced Full Body ₹1,999 aur Senior Citizen Pack ₹2,999. Fever Panel par daam nahi likha hai kyunki usmein kya kya jodna hai wo lakshan aur bukhar ke din par tay hota hai — call par bata diya jaata hai.",
-      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection tab bhi free. Varanasi jaakar test karane se jo kiraya aur din bachta hai, wo iske upar hai.",
+      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection charge tab bhi ek hi baar ₹100. Varanasi jaakar test karane se jo kiraya aur din bachta hai, wo iske upar hai.",
     ],
   },
 
@@ -321,7 +321,7 @@ export const ghazipurContent = [
     id: "ghazipur-lab-test-hindi",
     h: "ग़ाज़ीपुर में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
-      "ग़ाज़ीपुर ज़िले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन पूरी तरह मुफ़्त है; आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
+      "ग़ाज़ीपुर ज़िले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन का चार्ज ₹100 है, पूरी बुकिंग पर एक ही बार; इसके अलावा आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
       "वाराणसी यहाँ से लगभग 80 किलोमीटर है, और यही आदत बन गई है कि छोटी सी जाँच के लिए भी लोग गाड़ी पकड़ लेते हैं। CBC, शुगर, थायरॉइड, लिवर, किडनी, लिपिड, विटामिन और डेंगू — ये सब सैंपल पर होते हैं और घर पर हो सकते हैं। वाराणसी जाना तब ज़रूरी है जब MRI, CT स्कैन या किसी विशेषज्ञ को दिखाना हो — और उस दिन रिपोर्ट पहले से हाथ में ले जाइए, वरना डॉक्टर जाँच लिखकर अगली तारीख़ दे देता है।",
       "शहर में लंका, महुआबाग, विश्वेश्वरगंज और रौज़ा की तरफ़, तथा ज़िले में ज़मानिया, सैदपुर, मोहम्मदाबाद (यूसुफ़पुर), क़ासिमाबाद, जखनियाँ, सेवराई, दिलदारनगर, गहमर, रेवतीपुर और भाँवरकोल के आसपास सैंपल लिया जाता है। अपने गाँव का नाम सूची में न दिखे तो एक बार फ़ोन कर लीजिए, और पता लिखते समय कोई एक निशानी ज़रूर डालिए।",
       "कौन सी जाँच कब — यह सबसे ज़रूरी बात है। बुख़ार के पहले 1 से 5 दिन में डेंगू NS1, पाँचवें दिन के बाद डेंगू IgM, और टाइफ़ाइड की विडाल जाँच के लिए कम से कम 5 से 7 दिन का बुख़ार चाहिए। हर बुख़ार में CBC साथ में ज़रूर कराएँ। शुगर, लिपिड और सभी फुल बॉडी पैकेज में 10 से 12 घंटे खाली पेट रहना पड़ता है; उस दौरान सादा पानी पीते रहिए।",
@@ -346,8 +346,8 @@ export const ghazipurContent = [
  */
 export const ghazipurFaqs = [
   {
-    q: "How much does a lab test cost in Ghazipur, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Ghazipur is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Ghazipur, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Ghazipur — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do I have to travel from Ghazipur to Varanasi for a lab test?",

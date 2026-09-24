@@ -207,7 +207,7 @@
         "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
         {
           "list": [
-            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Home sample collection ₹100; trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se — fasting sample de kar BP aur sugar ki goli samay par.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se."
@@ -248,7 +248,7 @@
     },
     {
       "question": "Deoria me BP ke mareez ka blood test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me. ECG hamari service nahi hai."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection ₹100, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me. ECG hamari service nahi hai."
     }
   ],
   "relatedLinks": {
@@ -258,7 +258,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "KFT, lipid, HbA1c ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }

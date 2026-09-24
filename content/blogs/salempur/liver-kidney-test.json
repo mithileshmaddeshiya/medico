@@ -225,7 +225,7 @@
             "Booking ke waqt dawa ki list aur parche ki photo dijiye."
           ]
         },
-        "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne leta hai. Slot subah 6 baje se shuru hote hain, home collection ka koi alag charge nahi hai, payment sample ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
+        "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne leta hai. Slot subah 6 baje se shuru hote hain, home collection ₹100 per booking hai, payment sample ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
         [
           "Salempur kasbe ke saath Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj, Rampur Karkhana aur Barhaj me bhi sample liya jaata hai — kis kasbe se booking me kya dhyaan rakhein, wo ",
           {
@@ -344,7 +344,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection"
+            "label": "Salempur me lab test — booking aur home collection"
           },
           {
             "href": "/lab-test/salempur#lab-test-price-salempur",

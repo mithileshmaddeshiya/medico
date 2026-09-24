@@ -219,7 +219,7 @@
           "list": [
             "Do package ka daam milaate waqt sirf number mat dekhiye — dono ki list saamne rakhiye aur upar wali saat cheezein tick kijiye. Jo package inke bina sasta pad raha hai, wo isliye sasta hai ki usme kam hai — kam daam me zyada nahi mil raha, kam mil raha hai.",
             "Package me bachat sabse zyada hoti hai. Wahi test alag-alag karane par kharcha kai guna ho jaata hai — yahi package ka poora point hai.",
-            "Ghar se sample lene ka koi alag charge is daam ke upar nahi jodha jaata. Package ka jo daam likha hai wahi dena hota hai — na visiting charge, na travel charge.",
+            "Ghar se sample lene ka ₹100 per booking is daam ke upar lagta hai — ek hi visit, chahe kitne bhi test hon. Uske alawa na visiting charge, na travel charge.",
             "Payment sample lene ke waqt hota hai, cash ya UPI se. Pehle se paisa dene ki zaroorat nahi.",
             "Report par reference range aur method chhapega ya nahi — ye poochhiye. Sabse sasti report agar padhi hi na ja sake to wo sasti nahi, bekaar hai."
           ]
@@ -465,7 +465,7 @@
             "text": "Gorakhpur ka service page",
             "href": "/lab-test/gorakhpur"
           },
-          " kholiye, package chuniye aur subah 6 se 8 ka slot lijiye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai. Har package me kya-kya aata hai wo ",
+          " kholiye, package chuniye aur subah 6 se 8 ka slot lijiye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection ₹100 hai, aur payment sample lene ke waqt cash ya UPI se hota hai. Har package me kya-kya aata hai wo ",
           {
             "text": "yahan likha hai",
             "href": "/lab-test/gorakhpur#full-body-checkup-gorakhpur"
@@ -499,7 +499,7 @@
   "faqs": [
     {
       "question": "Gorakhpur me full body checkup kitne ka hota hai?",
-      "answer": "Daam is baat par tay hota hai ki package me kaunse test hain — kitne “parameter” likhe hain us par nahi. Jis package me HbA1c, thyroid, Vitamin D aur B12 shaamil hain wo upar padega, aur us badhe hue daam ke badle asli jaankari milti hai; jo package inke bina sasta hai wo isliye sasta hai ki usme kam hai. Ghar se sample lene ka koi alag charge daam ke upar nahi jodha jaata. Aaj ka rate har package ke saamne Gorakhpur ki rate list par likha rehta hai, aur booking confirm karne wali call par poora amount sample lene se pehle bata diya jaata hai."
+      "answer": "Daam is baat par tay hota hai ki package me kaunse test hain — kitne “parameter” likhe hain us par nahi. Jis package me HbA1c, thyroid, Vitamin D aur B12 shaamil hain wo upar padega, aur us badhe hue daam ke badle asli jaankari milti hai; jo package inke bina sasta hai wo isliye sasta hai ki usme kam hai. Ghar se sample lene ka ₹100 per booking daam ke upar lagta hai. Aaj ka rate har package ke saamne Gorakhpur ki rate list par likha rehta hai, aur booking confirm karne wali call par poora amount sample lene se pehle bata diya jaata hai."
     },
     {
       "question": "Full body checkup ke liye khaali pet rehna zaroori hai?",
@@ -547,7 +547,7 @@
     },
     {
       "question": "Gorakhpur me full body checkup ghar se sample de kar ho sakta hai?",
-      "answer": "Haan — package ka har test sample par hota hai, isliye poora package ghar par ho jaata hai. Home collection free hai aur phlebotomist ID card ke saath aata hai. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Payment sample lene ke waqt cash ya UPI se hota hai. Ek baat dhyaan me rakhiye: X-ray, ECG aur ultrasound is package me nahi aate — wo machine par hote hain, sample par nahi. Parche par unme se kuch likha ho to uske liye imaging centre alag se jaana hoga, aur wo trip package se bachti nahi."
+      "answer": "Haan — package ka har test sample par hota hai, isliye poora package ghar par ho jaata hai. Home collection ₹100 hai aur phlebotomist ID card ke saath aata hai. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Payment sample lene ke waqt cash ya UPI se hota hai. Ek baat dhyaan me rakhiye: X-ray, ECG aur ultrasound is package me nahi aate — wo machine par hote hain, sample par nahi. Parche par unme se kuch likha ho to uske liye imaging centre alag se jaana hoga, aur wo trip package se bachti nahi."
     }
   ],
   "relatedLinks": {
@@ -573,7 +573,7 @@
           },
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "label": "Gorakhpur me lab test — booking aur home collection",
             "sub": "Sheher ke mohalle aur jile ke kasbe"
           }
         ]

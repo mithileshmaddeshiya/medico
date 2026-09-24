@@ -266,7 +266,7 @@
             "Dawa ki list aur parche ki photo booking me dijiye. Microalbumin likha ho to peshab ka container visit me milega."
           ]
         },
-        "Trained phlebotomist ID card ke saath aata hai, slot subah 6 baje se shuru hote hain, home collection ka koi alag charge nahi hai, payment sample ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
+        "Trained phlebotomist ID card ke saath aata hai, slot subah 6 baje se shuru hote hain, home collection ₹100 per booking hai, payment sample ke waqt cash ya UPI se hota hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
         [
           "Flat ya colony ka pata kaise likhein aur traffic ke hisaab se slot kaise chunein, wo ",
           {
@@ -354,7 +354,7 @@
         "links": [
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection"
+            "label": "Gorakhpur me lab test — booking aur home collection"
           },
           {
             "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur",

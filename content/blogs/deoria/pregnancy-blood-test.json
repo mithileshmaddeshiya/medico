@@ -233,7 +233,7 @@
             "Report kis number par chahiye, wahi number dijiye. Report WhatsApp aur email par PDF me aati hai."
           ]
         },
-        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Deoria me hamara koi walk-in counter nahi hai — ye ghar se sample lene ki service hai.",
+        "Trained phlebotomist ID card ke saath aata hai, home collection ₹100 hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Deoria me hamara koi walk-in counter nahi hai — ye ghar se sample lene ki service hai.",
         [
           "Rate ke liye ",
           { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
@@ -288,7 +288,7 @@
     },
     {
       "question": "Kya pregnancy ke blood test ghar par ho sakte hain?",
-      "answer": "Haan, blood aur urine ke sample Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liye jaate hain. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par. Ultrasound hamari service nahi hai — uske liye imaging centre jaana padega."
+      "answer": "Haan, blood aur urine ke sample Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me ghar par liye jaate hain. Home collection ₹100 hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par. Ultrasound hamari service nahi hai — uske liye imaging centre jaana padega."
     },
     {
       "question": "Pregnancy me thyroid report normal hai, phir bhi doctor chinta kyun kar rahe hain?",
@@ -302,7 +302,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, thyroid, sugar aur har test ka daam" },
           { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }

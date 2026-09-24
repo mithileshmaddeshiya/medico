@@ -193,7 +193,7 @@
             "Report kis number par chahiye, wahi number dijiye."
           ]
         },
-        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Kuch hormone test me 24 ghante se zyada lag sakta hai — booking par samay bata diya jaata hai. Deoria me hamara walk-in counter nahi hai.",
+        "Trained phlebotomist ID card ke saath aata hai, home collection ₹100 hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Kuch hormone test me 24 ghante se zyada lag sakta hai — booking par samay bata diya jaata hai. Deoria me hamara walk-in counter nahi hai.",
         [
           "Daam ke liye ",
           { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
@@ -262,7 +262,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Thyroid, sugar, HbA1c aur lipid ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }

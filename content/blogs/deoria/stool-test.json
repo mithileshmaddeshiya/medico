@@ -10,7 +10,7 @@
     "Dast Me Kaun Sa Test",
     "Bachche Ka Stool Test Deoria",
     "Stool Sample Kaise Dein",
-    "Free Home Sample Collection Deoria",
+    "Home Sample Collection Deoria",
     "Lab Test Booking Deoria"
   ],
   "publishedAt": "2026-09-23",
@@ -208,7 +208,7 @@
             "Booking form me apni shikayat likhiye, sirf test ka naam nahi. Culture chahiye ya sirf routine — ye aksar shikayat se hi tay hota hai.",
             "Confirmation call par container aur samay dono bata diye jaate hain. Yahi call hai jismein aapko poochh lena chahiye ki sample kitni der me pahunchana hai.",
             "Home visit ke slot subah 6 baje se shuru hote hain, jo is test ke liye sabse suvidhajanak hai.",
-            "Home collection ka koi alag visiting charge nahi hai; payment sample lene ke waqt cash ya UPI se.",
+            "Home collection ₹100 hai (poori booking ke liye ek baar); payment sample lene ke waqt cash ya UPI se.",
             "Routine ki report 24 ghante ke andar PDF me aa jaati hai. Culture me 48–72 ghante lagte hain, aur ye booking ke waqt hi bata diya jaata hai."
           ]
         },
@@ -333,7 +333,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",

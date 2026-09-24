@@ -11,7 +11,7 @@
     "Pre Employment Blood Test India",
     "Lab Test Booking Deoria",
     "Full Body Checkup In Deoria",
-    "Free Home Sample Collection Deoria"
+    "Home Sample Collection Deoria"
   ],
   "publishedAt": "2026-09-23",
   "updatedAt": "2026-09-23",
@@ -293,7 +293,7 @@
             "Booking form me naam, mobile number, mohalla ya gaon aur ek landmark bhariye. Lagbhag 30 minute me confirmation call aa jaati hai.",
             "Fasting chahiye ya nahi, ye usi call par bata diya jaata hai. Sugar aur lipid wale test khaali pet hote hain, CBC aur thyroid nahi.",
             "Sample dene se pehle raat ko bhaari mehnat ya gym se bachiye, aur paani peete rahiye — poora khaali pet rehna sirf fasting wale test me chahiye, paani se parhez kabhi nahi.",
-            "Trained phlebotomist ID card ke saath aata hai aur sample aapke saamne liya jaata hai. Payment usi waqt, cash ya UPI se — home collection ka koi alag charge nahi.",
+            "Trained phlebotomist ID card ke saath aata hai aur sample aapke saamne liya jaata hai. Payment usi waqt, cash ya UPI se — home collection ₹100 hai (poori booking ke liye ek baar).",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Use sambhaal kar rakhiye — aage dobara jaanch me yahi kaam aayegi."
           ]
         },
@@ -419,7 +419,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",

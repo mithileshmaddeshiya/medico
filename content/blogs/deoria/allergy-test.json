@@ -208,7 +208,7 @@
           "list": [
             "Booking form me apni shikayat likh dijiye — sirf test ka naam kaafi nahi hota, aur call par sahi salah usi se banti hai.",
             "Doctor ka parcha hai to uski photo taiyaar rakhiye. Panel wale test parche ke hisaab se hi book hote hain.",
-            "Trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne liya jaata hai. Home collection ka koi alag visiting charge nahi.",
+            "Trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne liya jaata hai. Home collection ₹100 hai (poori booking ke liye ek baar).",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Kuch panel me thoda zyada waqt lagta hai, aur wo booking ke waqt bata diya jaata hai.",
             "Bachche ka test hai to ye pehle bata dijiye — taiyaari thodi alag hoti hai."
           ]
@@ -341,7 +341,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",

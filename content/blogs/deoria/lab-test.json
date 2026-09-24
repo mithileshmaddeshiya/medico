@@ -40,7 +40,7 @@
         [
           "Booking, poori price list, test menu aur aapke ilaake me collection ka time — wo sab service page par hai: ",
           {
-            "text": "Deoria me lab test aur free home sample collection",
+            "text": "Deoria me lab test aur home sample collection (₹100)",
             "href": "/lab-test/deoria"
           },
           ". Is guide me ek bhi rate nahi likha hai, jaan-boojh kar — rate ek hi jagah rahega to purana kabhi nahi hoga."
@@ -394,7 +394,7 @@
             "Report lene ke liye dobara jaana — report WhatsApp aur email par PDF me 24 ghante ke andar aa jaati hai, isliye dobara jaana hi nahi padta."
           ]
         },
-        "Kaam ka tarika seedha hai: test chuniye, hum lagbhag 30 minute me call kar ke slot aur pata confirm karte hain, trained phlebotomist ID card ke saath ghar aata hai, aur sample aapke saamne liya jaata hai. Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai. Payment sample lene ke waqt, cash ya UPI se.",
+        "Kaam ka tarika seedha hai: test chuniye, hum lagbhag 30 minute me call kar ke slot aur pata confirm karte hain, trained phlebotomist ID card ke saath ghar aata hai, aur sample aapke saamne liya jaata hai. Home sample collection ₹100 hai (poori booking ke liye ek baar) — iske alawa aap sirf test ka wahi price dete hain jo card par likha hai. Payment sample lene ke waqt, cash ya UPI se.",
         [
           "Kaunse kasbe cover hote hain, slot kis waqt se milte hain aur booking me kya-kya poocha jaata hai — wo ",
           {
@@ -572,7 +572,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

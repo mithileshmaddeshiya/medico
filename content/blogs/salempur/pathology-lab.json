@@ -11,7 +11,7 @@
     "Lab test in Salempur",
     "Blood test collection centre Salempur",
     "Salempur Bhatni Lar Bhatpar Rani sample collection",
-    "Best lab test at home free sample collection in Salempur",
+    "Best lab test at home sample collection in Salempur",
     "Salempur me lab kaise chunein",
     "Blood test at home in Salempur"
   ],
@@ -59,7 +59,7 @@
           "list": [
             "Sample lene kaun aayega, aur uske paas ID card hoga? ID card maangna aapka haq hai aur dikhana uska kaam. Sankoch ki koi baat nahi hai.",
             "Jo panel doctor ne likha hai, wahi book hua hai? Booking ke waqt parche ka photo bhej dena sabse aasan tareeka hai — naam milte-julte hone se hi zyadatar galat test hote hain.",
-            "Rate wahi rahega jo pehle bataya gaya tha? Home collection ka koi alag visiting ya travel charge nahi hona chahiye. Jo test 'Call for price' par hai, uska daam sample dene se pehle poochh lijiye.",
+            "Rate wahi rahega jo pehle bataya gaya tha? Home collection ka charge (humare yahan ₹100 per booking) pehle bataya jaana chahiye — baad me koi visiting ya travel charge nahi judna chahiye. Jo test 'Call for price' par hai, uska daam sample dene se pehle poochh lijiye.",
             "Report kab tak, aur kis roop me milegi? PDF milni chahiye — WhatsApp ya email par. Sirf kaagaz par milne wali report kasbe me aksar lene jaana padne ka matlab rakhti hai.",
             "Report par reference range likhi hogi? Har number ke bagal me us lab ki apni range honi chahiye. Bina range wali report padhi hi nahi ja sakti — na aapse, na doctor se."
           ]
@@ -225,7 +225,7 @@
         [
           "Test tay hai to ",
           { "text": "Salempur ka service page", "href": "/lab-test/salempur" },
-          " kholiye aur form bhar dijiye — lagbhag 30 minute me confirmation call aa jaayegi. Home collection free hai, slot subah 6 baje se milte hain, aur payment sample lene ke waqt cash ya UPI se hota hai. ",
+          " kholiye aur form bhar dijiye — lagbhag 30 minute me confirmation call aa jaayegi. Home collection ₹100 hai, slot subah 6 baje se milte hain, aur payment sample lene ke waqt cash ya UPI se hota hai. ",
           { "text": "Saare test aur rate ek jagah", "href": "/" },
           " dekhne hon to home page par poori list hai."
         ],
@@ -283,7 +283,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection",
+            "label": "Salempur me lab test — booking aur home collection",
             "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj aur Barhaj"
           },
           {

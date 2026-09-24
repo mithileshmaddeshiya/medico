@@ -1,10 +1,10 @@
 {
-  "title": "Blood Test At Home In Salempur — Free Sample Collection",
-  "description": "Salempur me ghar par blood test — free home sample collection, visit me kitna time, fasting ka slot, gaon ka pata kaise likhein aur report kab aati hai.",
+  "title": "Blood Test At Home In Salempur — Sample Collection",
+  "description": "Salempur me ghar par blood test — home sample collection, visit me kitna time, fasting ka slot, gaon ka pata kaise likhein aur report kab aati hai.",
   "keywords": [
     "blood test at home in Salempur",
     "home sample collection Salempur",
-    "free home sample collection Salempur",
+    "home sample collection charge Salempur",
     "ghar par blood test Salempur",
     "blood sample collection at home Salempur",
     "pathology lab home visit Salempur",
@@ -24,7 +24,7 @@
   "readingMinutes": 12,
   "takeaways": [
     "Khoon aur peshab ke sample par hone wale saare test ghar par ho jaate hain — X-ray, ECG aur ultrasound nahi, wo machine par hote hain.",
-    "Home collection free hai. Sample lene ki visit me 10 se 15 minute lagte hain aur confirmation call lagbhag 30 minute me aa jaati hai.",
+    "Home collection ₹100 hai. Sample lene ki visit me 10 se 15 minute lagte hain aur confirmation call lagbhag 30 minute me aa jaati hai.",
     "Fasting sirf fasting sugar, lipid aur package me lagti hai — 10 se 12 ghante. Subah 6 baje ka pehla slot sabse aasan padta hai.",
     "Gaon ke pate me landmark aur do phone number — visit late hone ki sabse badi wajah yahi do cheezein chhoot jaana hai.",
     "Ek hi visit me ghar ke chaar-paanch logon ka sample ho jaata hai. Sabki booking ek hi slot par kar dijiye."
@@ -38,7 +38,7 @@
         "Ghar se sample lene ka matlab itna hi hai ki jo khoon ya peshab ka sample kisi counter par diya jaata, wo aapke ghar par le liya jaata hai. Sample kahan liya gaya isse report nahi badalti — machine, method aur reference range wahi rehte hain. Isliye ghar par karwane me kuch \"kam\" nahi hota.",
         "Lekin Salempur jaise tehsil me iska asli mol un logon ke liye hai jinke liye kahin pahunchna hi sabse badi rukavat hai. Bujurg jinke ghutne jawab de chuke hain aur bachche bahar kaam karte hain. Bistar par pade mareez. Bukhar me tapta hua aadmi jise bike par bithana hi galat hai. Chhote bachche. Aur wo mahilaein jo bahar jaakar line me lagne ke bajaye test hi taal deti hain. Yahan par ye suvidha nahi hai — kai gharon me ye ekmatra raasta hai.",
         [
-          "Home collection ka koi alag charge nahi hai. Jo rate ",
+          "Home collection ₹100 per booking hai. Uske alawa jo rate ",
           {
             "text": "service page ki rate list",
             "href": "/lab-test/salempur#lab-test-price-salempur"
@@ -392,7 +392,7 @@
             "text": "Salempur ka service page",
             "href": "/lab-test/salempur"
           },
-          " kholiye aur form bhar dijiye — pata, landmark aur do number likhna mat bhooliye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+          " kholiye aur form bhar dijiye — pata, landmark aur do number likhna mat bhooliye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection ₹100 hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
         ],
         [
           "Test tay nahi hai to pehle ",
@@ -426,7 +426,7 @@
   "faqs": [
     {
       "question": "Salempur me home sample collection ka koi extra charge lagta hai?",
-      "answer": "Nahi. Home collection free hai — na visiting charge, na travel charge. Jo rate service page par test ke card par likha hai, wahi dena hota hai, aur wo rate confirmation call par bhi bata diya jaata hai. Payment sample lene ke waqt hota hai, cash ya UPI se. Sample dene se pehle aapko rate pata hona chahiye; na pata ho to poochh lijiye."
+      "answer": "Haan, home collection ₹100 per booking hai — ek visit me booking ke saare test aur ghar ke sabhi log jinka test usi booking me hai, cover ho jaate hain. Iske alawa jo rate service page par test ke card par likha hai, wahi dena hota hai, aur wo rate confirmation call par bhi bata diya jaata hai. Payment sample lene ke waqt hota hai, cash ya UPI se. Sample dene se pehle aapko rate pata hona chahiye; na pata ho to poochh lijiye."
     },
     {
       "question": "Ghar par sample lene wala kaun aata hai, aur use kaise pehchanein?",
@@ -470,7 +470,7 @@
     },
     {
       "question": "Bhatni, Lar ya Bhatpar Rani se bhi ghar par sample liya jaata hai?",
-      "answer": "Haan, Salempur ke aas-paas ke kasbon aur gaon se sample liya jaata hai, aur home collection ka koi alag charge nahi judta — door hone ki wajah se bhi nahi. Booking me pata landmark ke saath likhiye: gaon ka naam, sabse paas ka school, mandir, bank ya chauraha, aur do phone number. Gaon ke pate me landmark hi sabse tez tarika hota hai, aur visit late hone ki sabse aam wajah yahi cheez chhoot jaana hai."
+      "answer": "Haan, Salempur ke aas-paas ke kasbon aur gaon se sample liya jaata hai, aur home collection ₹100 per booking hai — door hone ki wajah se ye nahi badalta. Booking me pata landmark ke saath likhiye: gaon ka naam, sabse paas ka school, mandir, bank ya chauraha, aur do phone number. Gaon ke pate me landmark hi sabse tez tarika hota hai, aur visit late hone ki sabse aam wajah yahi cheez chhoot jaana hai."
     },
     {
       "question": "Kya poora full body checkup bhi ghar par ho sakta hai?",
@@ -486,7 +486,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection",
+            "label": "Salempur me lab test — booking aur home collection",
             "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj aur Barhaj"
           },
           {

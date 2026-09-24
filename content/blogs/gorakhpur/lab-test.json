@@ -36,7 +36,7 @@
         "Iska seedha natija ye hai ki bachat lab dhoondhne me nahi hoti. Bachat timing me hoti hai — test ko apni OPD ki taareekh ya admission ki date ke hisaab se pehle karwa lena. Yahi ek cheez hai jo is sheher me sabse zyada din bachati hai, aur yahi sabse kam ki jaati hai.",
         [
           { "text": "MedicoBharat Gorakhpur me ghar se sample leta hai", "href": "/lab-test/gorakhpur" },
-          " — free home collection, subah 6 baje se slot, trained phlebotomist ID card ke saath, aur 24 ghante ke andar WhatsApp aur email par PDF report. Sheher ke mohalle ho ya jile ke kasbe, sample aapke ghar par liya jaata hai. Is guide me ye hai ki us sample ko dena kab hai."
+          " — home collection sirf ₹100 me, subah 6 baje se slot, trained phlebotomist ID card ke saath, aur 24 ghante ke andar WhatsApp aur email par PDF report. Sheher ke mohalle ho ya jile ke kasbe, sample aapke ghar par liya jaata hai. Is guide me ye hai ki us sample ko dena kab hai."
         ],
         {
           "note": {
@@ -100,7 +100,7 @@
         [
           "Daam ki baat par ek seedhi salaah: CBC ka rate is guide me nahi likha jaata, ",
           { "text": "service page ki rate list", "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur" },
-          " par likha hai — taaki wo ek hi jagah rahe aur kabhi purana na pada rahe. Home collection uske upar free hai: na visiting charge, na travel charge. Sheher me rate poochte waqt asli sawaal ye nahi hai ki kitna kam hai, balki ye ki report par reference range chhapegi ya nahi — bina range wali sasti report padhi hi nahi ja sakti."
+          " par likha hai — taaki wo ek hi jagah rahe aur kabhi purana na pada rahe. Home collection uske upar ₹100 per booking hai: ek visit, chahe kitne bhi test hon. Sheher me rate poochte waqt asli sawaal ye nahi hai ki kitna kam hai, balki ye ki report par reference range chhapegi ya nahi — bina range wali sasti report padhi hi nahi ja sakti."
         ],
         "Aur CBC ke saath ek baat yaad rakhiye: ye akela ilaaj tay nahi karta. Bukhar hai to iske saath din ke hisaab se panel jodna padta hai; kamzori hai to iske saath vitamin aur ferritin dekhe jaate hain. Dono neeche alag hisson me hain."
       ]
@@ -267,7 +267,7 @@
         [
           "Test tay hai to ",
           { "text": "Gorakhpur ka service page", "href": "/lab-test/gorakhpur" },
-          " kholiye aur form bhar dijiye — lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+          " kholiye aur form bhar dijiye — lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection ₹100 hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
         ],
         [
           "OPD ya operation ki taareekh saamne hai to sample ka din ",
@@ -297,7 +297,7 @@
     },
     {
       "question": "CBC test ka price Gorakhpur me kya hai?",
-      "answer": "Har test ka daam service page ki rate list par ek hi jagah likha hai, taaki wo kabhi purana na pada rahe aur alag-alag page par alag na dikhe. Home collection uske upar free hai — na visiting charge, na travel charge. Rate confirmation call par bhi confirm kar diya jaata hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+      "answer": "Har test ka daam service page ki rate list par ek hi jagah likha hai, taaki wo kabhi purana na pada rahe aur alag-alag page par alag na dikhe. Home collection uske upar ₹100 per booking hai — ek visit me booking ke saare test. Rate confirmation call par bhi confirm kar diya jaata hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
     },
     {
       "question": "Thyroid test ke liye khaali pet rehna padta hai?",
@@ -325,7 +325,7 @@
         "links": [
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "label": "Gorakhpur me lab test — booking aur home collection",
             "sub": "Sheher ke mohalle aur jile ke kasbe"
           },
           {

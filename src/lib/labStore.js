@@ -133,7 +133,10 @@ async function insertOrder(conn, { cartId, leadId, customer, bill, priceListCity
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       cartIdOrNull(cartId), leadId ?? null, method, status, customer.name, customer.phone,
-      customer.city, customer.address ?? "", priceListCity ?? null, bill.total, bill.mrpTotal,
+      customer.city, customer.address ?? "", priceListCity ?? null, bill.total,
+      // The collection fee goes into both columns, so mrp_total − amount is
+      // still exactly the discount on the tests.
+      bill.mrpTotal + (bill.collectionFee ?? 0),
       razorpayOrderId ?? null,
     ]
   );

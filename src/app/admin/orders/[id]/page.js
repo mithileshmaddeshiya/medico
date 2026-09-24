@@ -44,6 +44,10 @@ export default async function OrderPage({ params }) {
 
   const history = await recentAudit({ entity: "orders", entityId: id, limit: 20 });
   const saved = Number(order.mrp_total) - Number(order.amount);
+  // Whatever was charged beyond the tests is the home collection fee (₹0 on
+  // orders placed before the fee existed).
+  const collectionFee =
+    Number(order.amount) - order.items.reduce((sum, item) => sum + Number(item.line_total), 0);
 
   return (
     <>
@@ -87,6 +91,12 @@ export default async function OrderPage({ params }) {
                 <div className="flex justify-between">
                   <dt className="text-slate-600">Discount</dt>
                   <dd className="font-semibold text-emerald-700">−{rupees(saved)}</dd>
+                </div>
+              )}
+              {collectionFee > 0 && (
+                <div className="flex justify-between">
+                  <dt className="text-slate-600">Home collection</dt>
+                  <dd className="text-slate-700">{rupees(collectionFee)}</dd>
                 </div>
               )}
               <div className="flex justify-between border-t border-slate-100 pt-2 text-[15px]">

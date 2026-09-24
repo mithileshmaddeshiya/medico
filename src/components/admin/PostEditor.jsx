@@ -256,7 +256,7 @@ export default function PostEditor({ post, action, statusAction, deleteAction, r
                     rows={2}
                     value={description}
                     onChange={(event) => touch(setDescription)(event.target.value)}
-                    placeholder="Thyroid profile ghar baithe — free home collection, 24 ghante me report…"
+                    placeholder="Thyroid profile ghar baithe — home collection ₹100, 24 ghante me report…"
                   />
                 </Field>
 

@@ -13,6 +13,13 @@ export const MAX_QTY = 5;
 /** Distinct tests in one booking. */
 export const MAX_LINES = 20;
 
+/**
+ * Home sample collection, once per booking — one visit, however many tests or
+ * people are in the cart. Part of `total`, so checkout charges it; kept out of
+ * `mrpTotal` and `savings`, which describe the tests alone.
+ */
+export const HOME_COLLECTION_FEE = 100;
+
 const clampQty = (q) => Math.min(MAX_QTY, Math.max(0, Math.floor(Number(q) || 0)));
 
 /**
@@ -45,15 +52,18 @@ export function priceCart(items, tests) {
     })
     .filter(Boolean);
 
-  const total = lines.reduce((sum, l) => sum + l.lineTotal, 0);
+  const testsTotal = lines.reduce((sum, l) => sum + l.lineTotal, 0);
   const mrpTotal = lines.reduce((sum, l) => sum + l.lineMrp, 0);
+  const collectionFee = lines.length ? HOME_COLLECTION_FEE : 0;
 
   return {
     lines,
     count: lines.reduce((sum, l) => sum + l.qty, 0),
-    total,
+    testsTotal,
+    collectionFee,
+    total: testsTotal + collectionFee,
     mrpTotal,
-    savings: mrpTotal - total,
+    savings: mrpTotal - testsTotal,
     needsFasting: lines.some((l) => l.fasting),
   };
 }

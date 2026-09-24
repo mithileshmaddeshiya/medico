@@ -6,7 +6,7 @@
     "blood test at home in gorakhpur",
     "home sample collection gorakhpur",
     "gorakhpur me home sample collection wali lab",
-    "free home sample collection gorakhpur",
+    "home sample collection charge gorakhpur",
     "pathology lab home visit gorakhpur",
     "bujurgon ka blood test ghar par gorakhpur",
     "thyroid test at home gorakhpur",
@@ -42,7 +42,7 @@
           ]
         },
         [
-          "Home collection free hai — na visiting charge, na travel charge. Jo rate ",
+          "Home collection ₹100 per booking hai — ek visit me booking ke saare test ho jaate hain. Uske alawa test ka jo rate ",
           { "text": "service page ki rate list", "href": "/lab-test/gorakhpur#lab-test-price-gorakhpur" },
           " par likha hai, wahi dena hota hai. Aur ",
           { "text": "aapke mohalle me collection aati hai ya nahi", "href": "/blogs/pathology-lab/gorakhpur" },
@@ -70,7 +70,7 @@
             "rows": [
               ["ID card maang kar dekhiye", "Maangna aapka haq hai aur dikhana uska kaam. Ye sabse pehla kadam hai, aur sabse kam kiya jaane wala."],
               ["Parcha saamne rakh kar panel milaiye", "Naam milte-julte hote hain — Thyroid Total aur Free, Sugar Fasting aur PP, Widal aur Typhidot. Galti yahin ruk jaati hai."],
-              ["Rate confirm kar lijiye", "Wahi rate hona chahiye jo call par bataya gaya tha. Home collection ka koi alag charge nahi hai."],
+              ["Rate confirm kar lijiye", "Wahi rate hona chahiye jo call par bataya gaya tha. Home collection ke ₹100 per booking alag se lagte hain."],
               ["Tube par apne saamne naam likhwaiye", "Poore kaam ka sabse zaroori kadam yahi hai. Galat label ka matlab galat report hai."]
             ]
           }
@@ -227,7 +227,7 @@
         [
           "Test tay hai to ",
           { "text": "Gorakhpur ka service page", "href": "/lab-test/gorakhpur" },
-          " kholiye aur form bhar dijiye — pata, landmark aur do number likhna mat bhooliye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+          " kholiye aur form bhar dijiye — pata, landmark aur do number likhna mat bhooliye. Confirmation call lagbhag 30 minute me aa jaayegi, home collection ₹100 hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
         ],
         [
           "Test tay nahi hai to pehle ",
@@ -249,7 +249,7 @@
   "faqs": [
     {
       "question": "Gorakhpur me home sample collection ka koi extra charge lagta hai?",
-      "answer": "Nahi. Home collection free hai — na visiting charge, na travel charge. Jo rate service page par test ke card par likha hai wahi dena hota hai, aur wo rate confirmation call par bhi confirm kar diya jaata hai. Payment sample lene ke waqt hota hai, cash ya UPI se. Sample dene se pehle aapko rate pata hona chahiye; na pata ho to poochh lijiye."
+      "answer": "Haan, home collection ₹100 per booking hai — ek visit me booking ke saare test aur ghar ke sabhi log jinka test usi booking me hai, cover ho jaate hain. Iske alawa jo rate service page par test ke card par likha hai wahi dena hota hai, aur wo rate confirmation call par bhi confirm kar diya jaata hai. Payment sample lene ke waqt hota hai, cash ya UPI se. Sample dene se pehle aapko rate pata hona chahiye; na pata ho to poochh lijiye."
     },
     {
       "question": "Ghar par sample lene wala kaun aata hai, aur use kaise pehchanein?",
@@ -289,7 +289,7 @@
         "links": [
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "label": "Gorakhpur me lab test — booking aur home collection",
             "sub": "Sheher ke mohalle aur jile ke kasbe"
           },
           {

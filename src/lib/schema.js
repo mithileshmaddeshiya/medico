@@ -166,7 +166,7 @@ export const organizationNode = () => ({
   // The city list is BUILT, not typed. It read "Varanasi, Gorakhpur aur Deoria"
   // long after Salempur, Azamgarh and Ballia shipped, so the entity every node
   // on the site resolves to excluded half the service area. See src/lib/coverage.js.
-  description: `MedicoBharat ghar par lab test aur full body checkup ke liye free home sample collection karta hai — ${coverageHi()} jile me. Report 24 ghante me.`,
+  description: `MedicoBharat ghar par lab test aur full body checkup ke liye home sample collection karta hai — ${coverageHi()} jile me. Report 24 ghante me.`,
   email: BRAND_EMAIL,
   telephone: BRAND_PHONE,
   address: {
@@ -209,7 +209,7 @@ export const websiteNode = () => ({
   name: "MedicoBharat",
   alternateName: BRAND_ALTERNATE_NAMES,
   description:
-    "Lab test aur full body checkup, ghar se free sample collection ke saath — MedicoBharat.",
+    "Lab test aur full body checkup, ghar se sample collection ke saath — MedicoBharat.",
   publisher: ORG_REF,
   inLanguage: ["hi-IN", "en-IN"],
 });

@@ -19,7 +19,7 @@
 export const varanasiContent = [
   {
     id: "lab-test-in-varanasi",
-    h: "Varanasi Me Lab Test — Online Blood Test Booking, Free Home Sample Collection",
+    h: "Varanasi Me Lab Test — Online Blood Test Booking, Home Sample Collection Sirf ₹100 Me",
     p: [
       "Varanasi poore Purvanchal ka healthcare centre hai. Chandauli, Jaunpur, Ghazipur, Mirzapur, Bhadohi, Ballia, Azamgarh aur Bihar ke border districts se roz patients yahan aate hain — kyunki specialist doctors, tertiary hospitals aur bade diagnostic labs asal me yahi par hain. Iska matlab ye bhi hai ki Lanka, Sunderpur, Bhelupur aur Cantt ki labs me subah 7 baje se 10 baje tak lambi line lagti hai, kyunki har fasting sample isi window me dena hota hai.",
       "Lab test online book karne se ye poori line hat jaati hai. Aap apna test ya health package choose kijiye, morning slot select kijiye, aur trained phlebotomist aapke ghar Varanasi me aa kar aapke saamne fresh sterile needle se sample leta hai. Report seedhe aapke phone par PDF me aa jaati hai. Na traffic me travel, na khaali pet plastic chair par intezaar, aur na hi counter par bill dekh kar surprise.",
@@ -29,7 +29,7 @@ export const varanasiContent = [
 
   {
     id: "home-sample-collection-varanasi",
-    h: "Poore Varanasi Me Free Home Sample Collection",
+    h: "Poore Varanasi Me Home Sample Collection — Sirf ₹100",
     p: [
       "Certified phlebotomist aapke address par sealed collection kit, single-use vacutainer, nayi disposable needle aur barcode printer le kar aata hai. Tube aapke saamne label aur barcode hoti hai, isliye do patients ke sample aapas me badalne ka koi chance nahi rehta. Uske baad sample temperature-controlled box me lab tak jaata hai — kyunki Varanasi ki dopahar ki garmi me garam hua blood sample potassium, LDH aur glucose ki galat value de deta hai.",
       "Subah 6:30 se 10:30 baje ke slot fasting tests ke liye rakhe jaate hain, jaise fasting blood sugar, lipid profile aur insulin. Non-fasting tests jaise CBC, thyroid profile, dengue NS1, vitamin D ya HbA1c din bhar kabhi bhi ho sakte hain. Ghar me koi bujurg hai, bed-rest par hai, diabetic hai jinki vein patli ho gayi hai, ya operation ke baad recovery kar raha hai — to booking ke waqt bata dijiye, taki experienced phlebotomist bheja jaaye.",

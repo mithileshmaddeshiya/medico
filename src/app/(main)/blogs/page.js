@@ -341,7 +341,7 @@ export default async function BlogsIndexPage() {
           </h2>
 
           <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-slate-600">
-            Free home sample collection, slot subah 6 baje se, report 24 ghante
+            Home sample collection sirf ₹100 me, slot subah 6 baje se, report 24 ghante
             me. Apna sheher chuniye:
           </p>
 

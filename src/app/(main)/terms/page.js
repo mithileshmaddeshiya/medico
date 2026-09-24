@@ -95,7 +95,7 @@ const CLAUSES = [
   },
   {
     title: "Price aur payment",
-    body: `Har test ka price is website par likha hai aur home sample collection uske upar free hai — koi visiting charge ya chhupa shulk nahi. Payment sample collection ke waqt hota hai, cash ya UPI se. Jin test par "Call for price" likha hai unka price sample lene se pehle bata diya jaata hai. Price kabhi-kabhi badal sakte hain; jo price booking confirm karte waqt bataya gaya, wahi laagu hoga.`,
+    body: `Har test ka price is website par likha hai aur home sample collection ka charge uske upar ₹100 per booking hai — ek visit me jitne bhi test ya log hon, collection charge ek hi baar lagta hai, aur koi chhupa shulk nahi. Payment sample collection ke waqt hota hai, cash ya UPI se. Jin test par "Call for price" likha hai unka price sample lene se pehle bata diya jaata hai. Price kabhi-kabhi badal sakte hain; jo price booking confirm karte waqt bataya gaya, wahi laagu hoga.`,
   },
   {
     title: "Report aur turnaround time",

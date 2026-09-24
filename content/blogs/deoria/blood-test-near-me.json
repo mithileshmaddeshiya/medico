@@ -122,7 +122,7 @@
             ]
           }
         },
-        "Ek baat saaf rakhiye: in me se kisi ilaake ka alag visiting charge nahi hai. Home collection ka koi alag charge hota hi nahi — aap sirf test ka wahi rate dete hain jo booking ke waqt bataya gaya tha. Ilaake ka farak sirf pata dhoondhne me padta hai, paise me nahi.",
+        "Ek baat saaf rakhiye: in me se kisi ilaake ka alag visiting charge nahi hai. Home collection har jagah ₹100 hai, poori booking ke liye ek baar — aap test ka wahi rate aur ₹100 collection dete hain jo booking ke waqt bataya gaya tha. Ilaake ka farak sirf pata dhoondhne me padta hai, paise me nahi.",
         [
           "Rate kis test ka kya hai, ye ek hi jagah likha hai — ",
           {
@@ -250,7 +250,7 @@
             "Booking ke baad lagbhag 30 minute me confirmation call aati hai, jismein slot aur pata confirm hota hai aur fasting chahiye ya nahi ye bata diya jaata hai.",
             "Home visit ke slot subah 6 baje se shuru hote hain, isliye fasting wale test subah nikal jaate hain aur baaki test din me kabhi bhi ho jaate hain.",
             "Tay time par trained phlebotomist ID card ke saath aata hai — maangne me sankoch mat kijiye, dikhana uska kaam hai. Sample aapke saamne liya jaata hai.",
-            "Payment sample lene ke waqt hota hai, cash ya UPI se. Rate wahi hona chahiye jo booking ke waqt bataya gaya tha; home collection ka koi alag visiting charge nahi hai.",
+            "Payment sample lene ke waqt hota hai, cash ya UPI se. Rate wahi hona chahiye jo booking ke waqt bataya gaya tha; home collection ₹100 hai (poori booking ke liye ek baar), alag se koi visiting charge nahi.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Culture jaise test me 48–72 ghante lagte hain, aur wo booking ke waqt hi bata diya jaata hai."
           ]
         },
@@ -317,7 +317,7 @@
     },
     {
       "question": "Deoria ke kisi mohalle me aane ka alag charge lagta hai?",
-      "answer": "Nahi. Home collection ka koi alag visiting charge hota hi nahi, na sheher ke kisi ilaake ka aur na kisi kasbe ka. Aap sirf test ka wahi rate dete hain jo booking ke waqt call par bataya gaya tha, aur wo sample lene ke waqt cash ya UPI se diya jaata hai. Rate poori list ke saath Deoria ke service page par hai — kisi guide me daam nahi likha jaata, taaki har jagah ek hi number rahe."
+      "answer": "Nahi. Home collection har jagah ₹100 hi hai, poori booking ke liye ek baar — sheher ke kisi ilaake ya kisi kasbe ka alag charge nahi. Aap test ka wahi rate aur ₹100 collection dete hain jo booking ke waqt call par bataya gaya tha, aur wo sample lene ke waqt cash ya UPI se diya jaata hai. Rate poori list ke saath Deoria ke service page par hai — kisi guide me daam nahi likha jaata, taaki har jagah ek hi number rahe."
     },
     {
       "question": "Deoria me aapka koi lab ya collection centre hai jahan main khud ja sakoon?",
@@ -337,7 +337,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           {

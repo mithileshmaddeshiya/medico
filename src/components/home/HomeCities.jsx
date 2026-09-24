@@ -105,7 +105,7 @@ export default function HomeCities({ data, cities = [] }) {
 
                   <p className="relative mt-3.5 flex flex-wrap gap-x-2 gap-y-1 text-[11.5px] font-semibold text-emerald-700">
                     <span className="rounded-full bg-emerald-50 px-2.5 py-1 ring-1 ring-emerald-100">
-                      Free home collection
+                      Home collection ₹100
                     </span>
                     <span className="rounded-full bg-emerald-50 px-2.5 py-1 ring-1 ring-emerald-100">
                       Report 24 hrs

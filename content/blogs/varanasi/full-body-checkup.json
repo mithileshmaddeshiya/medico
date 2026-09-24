@@ -38,7 +38,7 @@
         [
           "Is guide me wahi likha hai: package me kya-kya hona chahiye, sasta package me kya chhoot jaata hai, kis umar me kaun sa level lena chahiye, aur report aane ke baad usme sabse pehle kya dekhna hai. Booking, poora test menu aur rate — wo sab service page par hai: ",
           {
-            "text": "Varanasi me lab test aur free home sample collection",
+            "text": "Varanasi me lab test aur home sample collection",
             "href": "/lab-test/varanasi"
           },
           "."
@@ -396,7 +396,7 @@
           ]
         },
         [
-          "Poore Varanasi me collection free hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW, Ramnagar se le kar Ring Road ki nayi colonies tak. Kaun se ilaake cover hain aur tangg galiyon me collection kaise hoti hai, wo ",
+          "Poore Varanasi me collection ₹100 per booking hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW, Ramnagar se le kar Ring Road ki nayi colonies tak. Kaun se ilaake cover hain aur tangg galiyon me collection kaise hoti hai, wo ",
           {
             "text": "home sample collection wale section",
             "href": "/lab-test/varanasi#home-sample-collection-varanasi"
@@ -558,7 +558,7 @@
             "Paanch system check kijiye: khoon, sugar, heart, liver, kidney. Thyroid aur vitamin bhi ho to aur behtar.",
             "HbA1c, Vitamin B12 aur Urine Routine — teenon package me hain ya nahi, ye alag se poochhiye. Yahi sabse zyada gayab rehte hain.",
             "45 ke baad Urine Microalbumin hai ya nahi, ye confirm kijiye.",
-            "Home collection ka charge sach me nahi hai, ya bill ke aakhir me jud jaayega.",
+            "Home collection ka charge kitna hai, aur wo pehle bataya gaya hai ya bill ke aakhir me jud jaayega.",
             "Report par test ka method (jaise CLIA ya ECLIA) chhapta hai ya nahi — method chhapna is baat ka sabse saaf sanket hai ki lab ko apne number par bharosa hai.",
             "Follow-up ke liye agle saal usi lab me jaana hai — alag analyser ki reference range alag hoti hai."
           ]
@@ -593,7 +593,7 @@
     },
     {
       "question": "Full body checkup ghar se sample de kar ho sakta hai?",
-      "answer": "Haan. Poore Varanasi me free home sample collection hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW, Ramnagar se le kar Ring Road ki nayi colonies tak. Trained phlebotomist ID card ke saath aata hai, poori visit lagbhag 10 minute ki hoti hai aur report 24 ghante me PDF me aa jaati hai. Purane sheher ki tangg galiyon me collection two-wheeler se hoti hai, isliye booking me landmark zaroor likhiye."
+      "answer": "Haan. Poore Varanasi me home sample collection sirf ₹100 me hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW, Ramnagar se le kar Ring Road ki nayi colonies tak. Trained phlebotomist ID card ke saath aata hai, poori visit lagbhag 10 minute ki hoti hai aur report 24 ghante me PDF me aa jaati hai. Purane sheher ki tangg galiyon me collection two-wheeler se hoti hai, isliye booking me landmark zaroor likhiye."
     },
     {
       "question": "Ghar ke chaar log ek saath full body checkup kara sakte hain?",
@@ -625,7 +625,7 @@
     },
     {
       "question": "Varanasi me full body checkup ghar par ho jaata hai?",
-      "answer": "Haan, poora package ghar par ho jaata hai. Poore Varanasi me home collection free hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW aur Ramnagar se le kar Ring Road ki nayi colony tak. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan hai. Phlebotomist ID card ke saath aata hai, aur payment sample lene ke waqt cash ya UPI se hota hai. X-ray, ECG aur ultrasound is menu me nahi hain — wo machine par hote hain, sample par nahi."
+      "answer": "Haan, poora package ghar par ho jaata hai. Poore Varanasi me home collection ₹100 hai — Lanka, Sunderpur, Bhelupur, Sigra, Cantt, Sarnath, DLW aur Ramnagar se le kar Ring Road ki nayi colony tak. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan hai. Phlebotomist ID card ke saath aata hai, aur payment sample lene ke waqt cash ya UPI se hota hai. X-ray, ECG aur ultrasound is menu me nahi hain — wo machine par hote hain, sample par nahi."
     }
   ],
   "relatedLinks": {
@@ -637,7 +637,7 @@
         "links": [
           {
             "href": "/lab-test/varanasi",
-            "label": "Varanasi me lab test — booking aur free home collection",
+            "label": "Varanasi me lab test — booking aur home collection",
             "sub": "Slot subah 6 baje se, report 24 ghante me"
           },
           {

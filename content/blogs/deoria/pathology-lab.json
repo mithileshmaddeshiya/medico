@@ -8,7 +8,7 @@
     "Diagnostic Centre Near Me Deoria",
     "Pathology Lab in Deoria",
     "Pathology Lab in Deoria Uttar Pradesh",
-    "Free Home Sample Collection Lab Deoria",
+    "Home Sample Collection Lab Deoria",
     "Diagnostic Home Collection Deoria",
     "Pathology Lab Home Visit Deoria",
     "Book Blood Test Online Deoria",
@@ -45,7 +45,7 @@
           }
         },
         [
-          "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Home visit ke slot subah 6 baje se shuru hote hain, home collection ka koi alag visiting charge nahi hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Yahi baatein ",
+          "Sample lene ka kaam trained phlebotomist karta hai, ID card ke saath, aapke saamne. Home visit ke slot subah 6 baje se shuru hote hain, home collection ₹100 hai (poori booking ke liye ek baar), aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Yahi baatein ",
           {
             "text": "Deoria ke pathology lab aur diagnostic centre wale section",
             "href": "/lab-test/deoria#pathology-lab-diagnostic-centre-deoria"
@@ -270,7 +270,7 @@
             "Test ya package chuniye. Tay nahi kar paa rahe to bhi form bhar dijiye — call par bata denge.",
             "Form me naam, mobile number, mohalla ya gaon aur landmark bhariye. Doctor ka parcha hai to uski photo taiyaar rakhiye.",
             "Lagbhag 30 minute me confirmation call aati hai, jismein slot aur pata confirm hota hai, aur fasting chahiye ya nahi ye bata diya jaata hai.",
-            "Tay time par trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai. Home collection ka koi alag visiting charge nahi — aap sirf test ka wahi rate dete hain jo pehle bataya gaya tha, cash ya UPI me, sample lene ke waqt.",
+            "Tay time par trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai. Home collection ₹100 hai (poori booking ke liye ek baar) — iske alawa aap sirf test ka wahi rate dete hain jo pehle bataya gaya tha, cash ya UPI me, sample lene ke waqt.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Culture jaise test me 48–72 ghante lagte hain, aur wo booking ke waqt hi bata diya jaata hai."
           ]
         },
@@ -422,7 +422,7 @@
     },
     {
       "question": "Ghar par sample lene wala kaun aata hai, aur use kaise pehchanein?",
-      "answer": "Trained phlebotomist aata hai aur uske paas ID card hota hai — maangne me sankoch mat kijiye, dikhana uska kaam hai. Sample aapke saamne liya jaata hai. Booking ke waqt jo test tay hue the wahi liye jaane chahiye, aur rate wahi hona chahiye jo pehle bataya gaya tha; home collection ka koi alag visiting charge nahi hai. Payment sample lene ke waqt hota hai, cash ya UPI se."
+      "answer": "Trained phlebotomist aata hai aur uske paas ID card hota hai — maangne me sankoch mat kijiye, dikhana uska kaam hai. Sample aapke saamne liya jaata hai. Booking ke waqt jo test tay hue the wahi liye jaane chahiye, aur rate wahi hona chahiye jo pehle bataya gaya tha; home collection ₹100 hai (poori booking ke liye ek baar). Payment sample lene ke waqt hota hai, cash ya UPI se."
     },
     {
       "question": "Main sheher se bahar rehta hoon — Deoria me ghar walon ka test book kar sakta hoon?",
@@ -442,7 +442,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

@@ -15,7 +15,7 @@
  *
  * ── Claims and their sourcing ────────────────────────────────────────────
  * Service claims are kept to the four the operation actually confirms (see the
- * warning above defaultFaqs in src/data/lab/defaults.js): free home collection,
+ * warning above defaultFaqs in src/data/lab/defaults.js): home collection at ₹100 per booking,
  * a trained phlebotomist carrying an ID card, slots from 6 AM, reports in 24
  * hours, cash/UPI on collection. Cold-chain transport, barcode tracking and
  * sealed single-use needles are NOT claimed here — they are unverified, and the
@@ -86,7 +86,7 @@ const LAB_SALEMPUR = "/lab-test/salempur";
 export const deoriaContent = [
   {
     id: "lab-test-in-deoria",
-    h: "Deoria Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Deoria Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Deoria ki sabse badi dikkat test karana nahi, test ke liye safar karna hai. Zila mukhyalaya par district hospital aur kai private clinic hain, lekin bade multi-speciality diagnostic setup zyadatar Gorakhpur me hain, jo yahan se kareeb 55–60 kilometre door hai. Nateeja ye hota hai ki ek CBC ya thyroid ke liye bhi log subah bus ya train pakadte hain, khaali pet do-teen ghante safar karte hain, sample dete hain, aur report lene phir ek din jaate hain. Ek test, do trip, poora din.",
       "Home sample collection is poore chakkar ko khatam kar deta hai. Aap Deoria me apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai — na bus ka kiraya, na khaali pet ka safar, na report lene ke liye doosra din.",
@@ -233,8 +233,8 @@ export const deoriaContent = [
     id: "lab-test-price-deoria",
     h: "Deoria Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Is page par har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na koi visiting charge, na travel charge, na koi hidden fee. Yahi wajah hai ki bahar se dekhne me price alag alag lagne par bhi asli kharcha ghar par karane me kam padta hai: bus ya auto ka kiraya dono taraf ka, aur report lene ka doosra chakkar, sab bach jaata hai.",
-      "Deoria ki rate list ise tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai. Uske upar home sample collection ka sirf ₹100 lagta hai — poori booking par ek hi baar, chahe kitne bhi test hon. Iske alawa na travel charge, na koi hidden fee. Yahi wajah hai ki bahar se dekhne me price alag alag lagne par bhi asli kharcha ghar par karane me kam padta hai: bus ya auto ka kiraya dono taraf ka, aur report lene ka doosra chakkar, sab bach jaata hai.",
+      "Deoria ki rate list ise tarah hai: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package me bachat sabse zyada hoti hai. Basic Full Body ₹999 me 45 parameter deta hai — wahi test alag alag karane par kharcha kai guna ho jaata hai. Advanced ₹1,999 me 72 parameter aur Senior Citizen Pack ₹2,999 me 88 parameter deta hai.",
       "Kuch test, jaise Fever Panel (malaria, typhoid, dengue ek saath), price par nahi balki us waqt ki zaroorat par tay hote hain — unke card par 'Call for price' likha rehta hai. Aise me phone par pooch lijiye, sample dene se pehle price bata diya jaata hai. Payment sample lene ke waqt hi hota hai — cash ya UPI se, PhonePe, Google Pay ya Paytm.",
     ],
@@ -299,8 +299,8 @@ export const deoriaContent = [
     h: "देवरिया में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "देवरिया में खून की जांच के लिए अब गोरखपुर जाने की ज़रूरत नहीं है। सीबीसी, थायरॉइड, शुगर, एचबीए1सी, लिपिड प्रोफाइल, लिवर और किडनी फंक्शन टेस्ट, विटामिन डी, विटामिन बी12, डेंगू और फुल बॉडी चेकअप — ये सारी जांच सैंपल पर होती हैं, और सैंपल आपके घर से लिया जा सकता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है। आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है — कोई विज़िटिंग चार्ज या छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
-      "देवरिया की रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — पूरी बुकिंग पर एक ही बार, चाहे जितने टेस्ट हों। आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर बस यही ₹100 — कोई और छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
+      "देवरिया की रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000 और डेंगू ₹1,000। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
       "सैंपल देवरिया सदर के साथ रुद्रपुर, बरहज, सलेमपुर, भटपार रानी, गौरी बाज़ार, बैतालपुर, लार और भटनी में भी लिया जाता है। आपका गाँव इस सूची में न हो तो एक बार फ़ोन कर लीजिए — कवर होने पर उसी समय स्लॉट बुक हो जाएगा।",
       [
         "बच्चे को तेज़ बुखार के साथ झटके, बेहोशी या लगातार उल्टी हो, तो जांच बुक करने के बजाय सीधे नज़दीकी अस्पताल ले जाइए — यह आपात स्थिति है। कौन सी जांच कब करानी चाहिए, इसकी पूरी जानकारी ",
@@ -328,13 +328,13 @@ export const deoriaContent = [
  * schema text: the JSON-LD has to mirror the readable answer exactly, so the
  * links live outside `a`. See LabFaq.
  *
- * Claims are limited to the confirmed set: free home collection, trained
+ * Claims are limited to the confirmed set: home collection at ₹100 per booking, trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI.
  */
 export const deoriaFaqs = [
   {
-    q: "How much does a lab test cost in Deoria, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Deoria is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Deoria, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Deoria — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do I have to travel from Deoria to Gorakhpur for a lab test?",

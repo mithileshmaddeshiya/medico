@@ -30,7 +30,7 @@
         {
           "note": {
             "title": "Har kasbe me wahi paanch baatein",
-            "text": "Home collection free hai; trained phlebotomist ID card ke saath aata hai; slot subah 6 baje se shuru hote hain; report 24 ghante ke andar WhatsApp aur email par PDF me aati hai; aur payment sample ke waqt cash ya UPI se hota hai. Rate kasbe ke hisaab se nahi badalta.",
+            "text": "Home collection ₹100 hai; trained phlebotomist ID card ke saath aata hai; slot subah 6 baje se shuru hote hain; report 24 ghante ke andar WhatsApp aur email par PDF me aati hai; aur payment sample ke waqt cash ya UPI se hota hai. Rate kasbe ke hisaab se nahi badalta.",
             "tone": "info"
           }
         },
@@ -292,7 +292,7 @@
     },
     {
       "question": "Majhauli Raj ya Rampur Karkhana me ghar par blood test ka alag charge lagta hai?",
-      "answer": "Nahi. Home collection free hai aur rate kasbe ke hisaab se nahi badalta. Aap sirf test ka likha hua rate dete hain, sample lene ke waqt cash ya UPI se."
+      "answer": "Home collection ₹100 per booking hai aur rate kasbe ke hisaab se nahi badalta. Aap test ka likha hua rate aur ₹100 collection charge dete hain, sample lene ke waqt cash ya UPI se."
     },
     {
       "question": "Bhatni se subah Gorakhpur ki train pakadni hai — pehle sample de sakte hain?",
@@ -324,7 +324,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection",
+            "label": "Salempur me lab test — booking aur home collection",
             "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj aur Barhaj"
           },
           {

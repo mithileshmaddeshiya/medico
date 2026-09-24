@@ -111,7 +111,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
             it used to be: the guides column is gone, and its width is split
             between this block and the city list rather than left as a hole. */}
         <div className="col-span-2 lg:col-span-4">
-          <Link href="/" aria-label="MedicoBharat Lab Test — Home" title="MedicoBharat — lab test at home with free sample collection" className="inline-block">
+          <Link href="/" aria-label="MedicoBharat Lab Test — Home" title="MedicoBharat — lab test at home with sample collection at your door" className="inline-block">
             {/* Same trimmed WebP and same true 3.56:1 ratio as the navbar — see
                 the note there. No `priority`: this sits at the bottom of the
                 page and must never compete with the hero for bandwidth. */}
@@ -243,7 +243,7 @@ export default function LabFooter({ city = null, labCities = [] }) {
                       href={`/lab-test/${c.slug}`}
                       className="hover:text-emerald-700 transition-colors"
                       aria-label={`Lab Test in ${c.name}`}
-                      title={`Lab test and blood test at home in ${c.name} — free sample collection`}
+                      title={`Lab test and blood test at home in ${c.name} — sample collection at ₹100`}
                     >
                       {c.name}
                     </Link>

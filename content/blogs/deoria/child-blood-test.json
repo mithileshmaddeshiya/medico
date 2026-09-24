@@ -239,7 +239,7 @@
         "Beemar bachche ko dhoop ya baarish me Deoria Sadar le jaana, line me baithna aur doosre beemar logon ke beech intezaar — yahi sabse badi pareshani hai. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
         {
           "list": [
-            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Home collection ₹100, trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se — bachche ki neend aur school ke hisaab se chuniye.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me — bachchon ke doctor ko seedha bhej sakte hain.",
             "Payment sample ke waqt, cash ya UPI se.",
@@ -283,7 +283,7 @@
     },
     {
       "question": "Deoria me bachchon ka blood test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bachchon ka sample ghar par liya jaata hai. Booking ke waqt bachche ki umar zaroor bataiye. Bahut chhote shishu ke liye pehle call kijiye. Home collection free hai aur report 24 ghante ke andar aati hai."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bachchon ka sample ghar par liya jaata hai. Booking ke waqt bachche ki umar zaroor bataiye. Bahut chhote shishu ke liye pehle call kijiye. Home collection ₹100 hai aur report 24 ghante ke andar aati hai."
     }
   ],
   "relatedLinks": {
@@ -293,7 +293,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, Vitamin D aur har test ka daam" },
           { "href": "/lab-test/deoria#anaemia-women-children-deoria", "label": "Mahilaon aur bachchon me khoon ki kami" }

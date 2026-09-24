@@ -79,7 +79,7 @@ export default function BlogCityLinks({
   const groups = [
     {
       title: "Lab test — sheher ke hisaab se",
-      note: "Har sheher ka apna page: test list, price aur free home sample collection.",
+      note: "Har sheher ka apna page: test list, price aur home sample collection (₹100).",
       links: labCities.map((city) => ({
         href: `/lab-test/${city.slug}`,
         label: `${city.name} me lab test`,

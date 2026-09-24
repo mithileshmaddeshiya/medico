@@ -202,7 +202,7 @@
         "Ghutne ya kamar ke dard wale bujurg ko tempo me bitha kar Deoria Sadar le jaana, line me khada karna — yahi sabse bada kasht hai. Sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi. Deoria me hamara walk-in counter nahi hai.",
         {
           "list": [
-            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Home collection ₹100, trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se; zyadatar jod dard ke test me fasting nahi lagti.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se.",
@@ -258,7 +258,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }

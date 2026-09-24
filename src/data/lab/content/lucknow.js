@@ -64,7 +64,7 @@
  *      another state. Nobody else's page has this reader.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the five this business confirms: free home collection, a trained
+ * Only the five this business confirms: home collection at ₹100 per booking, a trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI
  * on collection. NOT claimed anywhere: NABL accreditation, pathologist
  * verification, cold-chain transport, barcode tracking, sealed single-use
@@ -75,7 +75,7 @@
  * big accredited chains actually operate, so the temptation to match their
  * claims is strongest here — and matching them would be the one lie that a
  * reader in this city is best placed to catch. The page competes on what is
- * true instead: the collection is free, the rate is on the card, the slot
+ * true instead: the collection charge is a flat ₹100, the rate is on the card, the slot
  * starts at 6 AM, and there is no counter to travel to.
  *
  * There is NO walk-in counter in Lucknow and nothing here says there is.
@@ -149,11 +149,11 @@ const GUIDE_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
 export const lucknowContent = [
   {
     id: "lab-test-in-lucknow",
-    h: "Lucknow Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Lucknow Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Lucknow me lab ki kami nahi hai. Har badi sadak par ek diagnostic centre hai, har mohalle ke paas ek collection point hai, aur naam bhi sab jaante hain. Phir bhi jo test doctor ne teen hafte pehle likha tha, wo aaj tak nahi hua — aur wajah lab nahi, raasta hai.",
       "Is sheher me doori bahar nahi, andar hai. Gomti Nagar se Alambagh, Jankipuram se Telibagh, Chinhat se Rajajipuram — har ek kareeb 20 se 25 kilometre sheher ke traffic ka. Khaali pet nikal kar us paar jaana, wahan line me lagna, aur report ke liye dobara wahi safar karna — ye aadhe din ka kaam hai, das minute ka nahi. Isi liye test taalta rehta hai.",
-      "MedicoBharat lab test Lucknow me home sample collection par chalta hai. Aap apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample aapke saamne liya jaata hai aur report 24 ghante ke andar WhatsApp aur email dono par PDF me aa jaati hai. Home collection ka koi alag charge nahi — na visiting fee, na koi chhupa hua kharch.",
+      "MedicoBharat lab test Lucknow me home sample collection par chalta hai. Aap apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample aapke saamne liya jaata hai aur report 24 ghante ke andar WhatsApp aur email dono par PDF me aa jaati hai. Home collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi chhupa hua kharch.",
       "Yahan routine pathology ke saare test aur checkup package book hote hain — CBC, Thyroid Profile (T3, T4, TSH), Blood Sugar, HbA1c, Lipid Profile, Liver Function Test, Kidney Function Test, Vitamin D, Vitamin B12, Dengue aur Full Body Checkup. Doctor ne parcha likh diya hai to usi panel ke hisaab se booking ho jaati hai; koi test is page ke card par na dikhe to prescription ke saath ek call kar lijiye.",
       [
         "Kaun sa test kab karana chahiye, bukhar me kis din test matlab rakhta hai, aur report ke numbers me kya dekhna chahiye — us par alag se guide hai: ",
@@ -204,7 +204,7 @@ export const lucknowContent = [
       "Hisaab seedha hai. Fasting test subah ka hota hai, aur subah ka waqt hi sabse mehnga hai. Bachche school ja rahe hain, ghar ka ek aadmi office nikal raha hai, aur usi beech khaali pet 20 kilometre paar karke lab pahunchna hai. Wahan line, phir wapsi ka traffic, aur do din baad report lene ka doosra chakkar. Ek CBC ke liye do trip aur aadha din — aur isi hisaab me test agle mahine par tal jaata hai.",
       "Ghar par sample dene se ye poora hisaab hat jaata hai. Subah 6 baje se slot shuru hote hain, sample dene me das minute lagte hain, aur report phone par aati hai — lene jaana hi nahi padta. Jo aadha din bachta hai, wahi is service ka asli faayda hai; test ka daam to card par wahi likha hai.",
       "Ab wo baat jo hum saaf keh dena chahte hain: hum Lucknow ke traffic se tez nahi hain. Isi liye slot ek waqt nahi, ek window hota hai, aur confirmation call par wahi window bataya jaata hai. Barsaat ke din, jaam ya kisi rasta band hone par thoda aage-peeche ho sakta hai — aisi soorat me phone karke bata diya jaata hai, chup-chaap intezaar nahi karwaaya jaata. Jo lab kisi bhi pate par 30 minute ka vaada karti hai, us vaade ko subah 9 baje Alambagh ya Hazratganj me ek baar jaanch lijiye.",
-      "Ek visit me ghar ke kai logon ka sample liya ja sakta hai, aur collection tab bhi free rehta hai. Is sheher me yahi sabse zyada kaam ka intezaam hai — jab ek trip me hi ghar ke teen log nipat jaayein, to jo bacha wo teen trip ka waqt hai.",
+      "Ek visit me ghar ke kai logon ka sample liya ja sakta hai, aur collection charge tab bhi ek hi baar ₹100 rehta hai. Is sheher me yahi sabse zyada kaam ka intezaam hai — jab ek trip me hi ghar ke teen log nipat jaayein, to jo bacha wo teen trip ka waqt hai.",
     ],
   },
 
@@ -246,7 +246,7 @@ export const lucknowContent = [
       "Ye sarkari daftar aur office ka sheher hai. Sachivalaya, vibhaagon ke daftar, bank, school, aur Gomti Nagar tatha Vibhuti Khand ki taraf ke private office — in sab me kaam karne walon ka ek jaisa haal hai: saal bhar ka checkup sirf isliye nahi hota kyunki uske liye ek poora din chahiye, aur wo din kabhi khaali nahi hota.",
       "Subah 6 se 7 ka slot isi ke liye hai. Fasting sample ghar par dijiye, naashta kijiye aur waqt par office nikal jaaiye — chhutti lene ki zaroorat nahi padti. Ghar ke doosre logon ka sample bhi usi visit me ho jaata hai.",
       "Nayi naukri ke pre-employment checkup me aam taur par CBC, Blood Sugar, Liver Function Test, Kidney Function Test aur Lipid Profile aate hain, kabhi thyroid bhi. Company ya sansthan apni list deti hai — wahi list chalti hai, isliye uski photo booking ke waqt bhej deejiye aur usi panel ke hisaab se sample liya jaayega.",
-      "Ek cheez is tarah ki zindagi me bahut aam hai aur bahut der se pakadi jaati hai — Vitamin D aur Vitamin B12 ki kami. Din bhar andar baithe rehna, dhoop kam lagna aur bahar ka khaana — inse thakan, kamar aur ghutne ka dard, haath-pair me jhunjhuni aur dhyan na lagna shuru hota hai, jise log \"kaam ki thakan\" keh kar chhod dete hain. Vitamin D ₹1,000 aur Vitamin B12 ₹1,200 me ho jaata hai aur dono me fasting nahi chahiye.",
+      "Ek cheez is tarah ki zindagi me bahut aam hai aur bahut der se pakadi jaati hai — Vitamin D aur Vitamin B12 ki kami. Din bhar andar baithe rehna, dhoop kam lagna aur bahar ka khaana — inse thakan, kamar aur ghutne ka dard, haath-pair me jhunjhuni aur dhyan na lagna shuru hota hai, jise log \"kaam ki thakan\" keh kar chhod dete hain. Vitamin D ₹1,000 aur Vitamin B12 ₹1,000 me ho jaata hai aur dono me fasting nahi chahiye.",
       "Number kam nikle to dawa apne aap se shuru mat kijiye — kitni, kab tak aur kis roop me, ye doctor tay karta hai, aur Vitamin D me apne mann se zyada le lena nuksaan karta hai. Test ka kaam sirf itna hai ki tasveer saaf kar de.",
     ],
   },
@@ -268,7 +268,7 @@ export const lucknowContent = [
     h: "Lucknow Me Diabetes Checkup, Sugar Test, HbA1c Aur Thyroid Test Price (TSH)",
     p: [
       "Sugar aur thyroid dono chupke se badhte hain. Jab tak lakshan dikhte hain — bahut pyaas, baar baar peshaab, wazan ka girna ya badhna, thakan, baal jhadna — tab tak kaafi waqt nikal chuka hota hai. Isi liye inhe lakshan par nahi, umar aur ghar ke itihaas par jaancha jaata hai.",
-      "Aam salah ye hai: 30 ke baad saal me ek baar Fasting Blood Sugar (₹100). Ghar me kisi ko diabetes hai, wazan zyada hai, baithe rehne wali naukri hai, ya pehle sugar border par nikla tha — to sugar ke saath HbA1c (₹600) bhi, jo teen mahine ka ausat batata hai aur ek din ke khaane-peene se nahi badalta. Mahilaon me thyroid zyada aam hai, isliye 30 ke baad Thyroid Profile (T3, T4, TSH — ₹550) ek baar zaroor.",
+      "Aam salah ye hai: 30 ke baad saal me ek baar Fasting Blood Sugar (₹100). Ghar me kisi ko diabetes hai, wazan zyada hai, baithe rehne wali naukri hai, ya pehle sugar border par nikla tha — to sugar ke saath HbA1c (₹500) bhi, jo teen mahine ka ausat batata hai aur ek din ke khaane-peene se nahi badalta. Mahilaon me thyroid zyada aam hai, isliye 30 ke baad Thyroid Profile (T3, T4, TSH — ₹400) ek baar zaroor.",
       "Jo pehle se dawa par hain unke liye asli baat follow-up hai, aur is sheher me wo isliye chhootta hai ki dawa likhne wala doctor sheher ke doosre chhor par baithta hai. HbA1c har teen mahine aur TSH doctor ke kahe anusar — dono ghar par ho jaate hain, dono me fasting nahi chahiye, aur dono din me kabhi bhi ho sakte hain.",
       "Diabetes ke saath saal me ek baar Kidney Function Test aur Lipid Profile bhi karwa lijiye. Sugar ka asar sabse pehle chup-chaap gurde aur charbi par dikhta hai, aur wo dono is page par alag se book ho jaate hain — inke baare me agla section hai.",
       "Fasting wale test ke liye subah 6 baje se slot rakhe gaye hain, taaki sample dekar aap turant naashta kar sakein aur din shuru kar sakein.",
@@ -292,8 +292,8 @@ export const lucknowContent = [
     h: "Lucknow Me Kidney Function Test Package Aur Lipid Profile Test Price — Do Chup-Chaap Chalne Wale Test",
     p: [
       "Kidney Function Test aur Lipid Profile ek hi wajah se saath likhe jaate hain: dono aisi cheezein pakadte hain jo mehsoos nahi hoti. Gurda kaafi kharab hone tak koi lakshan nahi deta, aur cholesterol to kabhi nahi deta — pata tab chalta hai jab kuch ho chuka hota hai.",
-      "Kidney Function Test ₹700 me hota hai aur ismein urea, creatinine aur uric acid aate hain. Ye kis ke liye hai: jinhe sugar hai, jinka blood pressure badha rehta hai, jo dard ki goli aksar khaate hain, jinke pair ya chehre par subah soojan rehti hai, aur jinke ghar me kisi ko gurde ki bimari rahi ho. Sugar ya BP ki dawa par hain to saal me ek baar ye jaanch chhodni nahi chahiye.",
-      "Lipid Profile ₹800 me hota hai aur ismein total cholesterol, LDL, HDL aur triglycerides aate hain. Isme fasting chahiye — 10 se 12 ghante, sirf saada paani. Baithe rehne wali naukri, bahar ka aur tala hua khaana, aur wazan ka badhna — is sheher me ye teenon aam hain, aur teenon ka asar sabse pehle isi report me dikhta hai.",
+      "Kidney Function Test ₹800 me hota hai aur ismein urea, creatinine aur uric acid aate hain. Ye kis ke liye hai: jinhe sugar hai, jinka blood pressure badha rehta hai, jo dard ki goli aksar khaate hain, jinke pair ya chehre par subah soojan rehti hai, aur jinke ghar me kisi ko gurde ki bimari rahi ho. Sugar ya BP ki dawa par hain to saal me ek baar ye jaanch chhodni nahi chahiye.",
+      "Lipid Profile ₹500 me hota hai aur ismein total cholesterol, LDL, HDL aur triglycerides aate hain. Isme fasting chahiye — 10 se 12 ghante, sirf saada paani. Baithe rehne wali naukri, bahar ka aur tala hua khaana, aur wazan ka badhna — is sheher me ye teenon aam hain, aur teenon ka asar sabse pehle isi report me dikhta hai.",
       "Dono ek hi sample me ho jaate hain, aur Basic Full Body Checkup ₹999 me dono pehle se shaamil hain — CBC, sugar aur LFT ke saath. Alag-alag karwaane se package aksar sasta padta hai, isliye doctor ne sirf ek likha ho tab bhi ek baar dekh lijiye ki package me kya-kya aa raha hai.",
       "Report me ek-do number range se thoda idhar-udhar hona apne aap me kuch nahi kehta. Matlab tabhi banta hai jab use lakshan, umar, dawa aur baaki numbers ke saath padha jaaye — aur ye kaam doctor ka hai, internet ka nahi.",
     ],
@@ -305,7 +305,7 @@ export const lucknowContent = [
     p: [
       "Barsaat ke baad is sheher me dengue har saal ka maamla hai, aur sabse aam galti ye hoti hai ki test galat din par kara liya jaata hai. Report \"negative\" aa jaati hai, ghar wale nishchint ho jaate hain, aur bimari chalti rehti hai.",
       "Seedha niyam ye hai. Dengue NS1 bukhar ke pehle 1 se 5 din me sahi jawab deta hai; paanchve din ke baad NS1 ki jagah IgM matlab rakhta hai. Typhoid ke Widal test ke liye kam se kam 5 se 7 din ka bukhar chahiye — teesre din ka Widal aksar bekaar jaata hai aur galat tasalli de deta hai. Malaria ki jaanch bukhar chadhte waqt sabse achhi hoti hai.",
-      "Har bukhar me CBC (₹400) saath me karwa lijiye. Platelet ka girna, white cell ka pattern aur haemoglobin — teenon milkar doctor ko wo tasveer dete hain jo akela ek test nahi de paata. Dengue me platelet ka rojana dekha jaana zaroori ho jaata hai, aur yahi wo jagah hai jahan ghar par sample lena sabse zyada kaam aata hai: bimar aadmi ko roz lab tak le jaane ki zaroorat nahi padti.",
+      "Har bukhar me CBC (₹300) saath me karwa lijiye. Platelet ka girna, white cell ka pattern aur haemoglobin — teenon milkar doctor ko wo tasveer dete hain jo akela ek test nahi de paata. Dengue me platelet ka rojana dekha jaana zaroori ho jaata hai, aur yahi wo jagah hai jahan ghar par sample lena sabse zyada kaam aata hai: bimar aadmi ko roz lab tak le jaane ki zaroorat nahi padti.",
       "Fever Panel me malaria, typhoid aur dengue ek saath aa jaate hain; uska daam is page ke rate card par \"call for price\" isliye hai kyunki panel me kya jodna hai wo lakshan aur bukhar ke din par tay hota hai.",
       "Aur ek chetavni jo har mausam par lagu hai: dengue me platelet bahut gir jaaye, naak ya mashude se khoon aaye, lagatar ulti ho, pet me tez dard ho, ya mareez sust pada rahe — to ghar par sample ka intezaar bilkul mat kijiye, seedha aspatal le jaaiye. Bachche ko tez bukhar ke saath jhatke aayein ya gardan akad jaaye, tab bhi yahi baat hai. Aise me ek ek ghanta maayne rakhta hai.",
       [
@@ -323,7 +323,7 @@ export const lucknowContent = [
       "Full body checkup ka matlab har test karana nahi hota. Matlab ye hota hai ki wo test ek saath ho jaayein jo milkar tasveer banate hain — khoon, sugar, charbi, liver aur kidney. Usse aage ka faisla report dekh kar hota hai, pehle se nahi.",
       "Teen package hain. Basic Full Body Checkup ₹999 me 45 parameter — CBC, sugar, lipid, LFT aur KFT. Advanced Full Body ₹1,999 me 72 parameter — isi me thyroid, HbA1c aur vitamin jud jaate hain. Senior Citizen Pack ₹2,999 me 88 parameter, jo 55 saal se upar walon ke liye dil, haddi aur sugar par zyada dhyan deta hai.",
       "Kis ke liye kaun sa: pehli baar checkup kara rahe hain aur koi shikayat nahi hai to Basic kaafi hai. Baithe rehne wali naukri, badhta wazan, ya sugar, thyroid tatha vitamin ki shikayat pehle rahi ho — to Advanced zyada kaam ka hai, kyunki usmein wahi teen cheezein judti hain. Ghar ke bujurgon ke liye Senior Pack.",
-      "Poore parivaar ka checkup ek hi subah me ho sakta hai — ek phlebotomist, ek visit, sab ka sample, aur collection phir bhi free. Is sheher me yahi package ka sabse bada faayda hai: teen logon ke liye teen alag din nahi nikaalne padte.",
+      "Poore parivaar ka checkup ek hi subah me ho sakta hai — ek phlebotomist, ek visit, sab ka sample, aur collection charge phir bhi ek hi baar ₹100. Is sheher me yahi package ka sabse bada faayda hai: teen logon ke liye teen alag din nahi nikaalne padte.",
       [
         "Package me kya hona chahiye aur \"80+ parameters\" jaise vaade me kitna dum hota hai — ",
         { text: "ye guide wahi samjhaati hai", href: GUIDE_FULL_BODY },
@@ -337,11 +337,11 @@ export const lucknowContent = [
     id: "lab-test-price-lucknow",
     h: "Lucknow Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka koi alag charge nahi — na visiting fee, na koi hidden cost. Aap sirf test ka price dete hain, aur wahi price collection ke waqt liya jaata hai.",
-      "Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi hidden cost. Aap test ka price aur ye ₹100 dete hain, aur wahi total collection ke waqt liya jaata hai.",
+      "Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package: Basic Full Body Checkup ₹999, Advanced Full Body ₹1,999 aur Senior Citizen Pack ₹2,999. Fever Panel par daam nahi likha hai kyunki usmein kya kya jodna hai wo lakshan aur bukhar ke din par tay hota hai — call par bata diya jaata hai.",
-      "Hum ye nahi kehte ki hamara daam sheher me sabse kam hai; aisa daawa koi bhi kar sakta hai aur koi bhi jaanch nahi sakta. Jo hum kehte hain wo jaancha ja sakta hai — rate upar card par likha hai, home collection uske upar kuch nahi jodta, aur confirmation call par total bata diya jaata hai. Kisi bhi lab se tulna karni ho to teen cheezein poochhiye: test ka rate, collection ka charge, aur report ka waqt.",
-      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection tab bhi free. Sheher paar karke lab jaane me jo petrol, auto ka kiraya aur aadha din jaata hai, wo iske upar bachta hai.",
+      "Hum ye nahi kehte ki hamara daam sheher me sabse kam hai; aisa daawa koi bhi kar sakta hai aur koi bhi jaanch nahi sakta. Jo hum kehte hain wo jaancha ja sakta hai — rate upar card par likha hai, home collection uske upar sirf ₹100 jodta hai, poori booking par ek baar, aur confirmation call par total bata diya jaata hai. Kisi bhi lab se tulna karni ho to teen cheezein poochhiye: test ka rate, collection ka charge, aur report ka waqt.",
+      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection charge tab bhi ek hi baar ₹100. Sheher paar karke lab jaane me jo petrol, auto ka kiraya aur aadha din jaata hai, wo iske upar bachta hai.",
     ],
   },
 
@@ -403,12 +403,12 @@ export const lucknowContent = [
     h: "लखनऊ में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "लखनऊ में लैब की कमी नहीं है — कमी सुबह के वक़्त की है। गोमती नगर से आलमबाग, जानकीपुरम से तेलीबाग, चिनहट से राजाजीपुरम — हर एक लगभग 20 से 25 किलोमीटर शहर के ट्रैफ़िक का। ख़ाली पेट उस पार जाना, वहाँ लाइन, और रिपोर्ट के लिए दोबारा वही सफ़र — इसी हिसाब में जाँच टलती रहती है।",
-      "घर से सैंपल कलेक्शन में यह पूरा हिसाब हट जाता है। प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप तथा ईमेल पर पीडीएफ़ में आ जाती है — लेने जाना ही नहीं पड़ता। होम कलेक्शन पूरी तरह मुफ़्त है; आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
+      "घर से सैंपल कलेक्शन में यह पूरा हिसाब हट जाता है। प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप तथा ईमेल पर पीडीएफ़ में आ जाती है — लेने जाना ही नहीं पड़ता। होम कलेक्शन का चार्ज ₹100 है, पूरी बुकिंग पर एक ही बार; इसके अलावा आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
       "पूरे शहर में सुविधा है — हज़रतगंज, क़ैसरबाग़, अमीनाबाद, चौक, नाका, ऐशबाग़, गोमती नगर, विभूति खंड, इंदिरा नगर, निशातगंज, महानगर, चिनहट, अलीगंज, निराला नगर, जानकीपुरम, विकास नगर, त्रिवेणी नगर, राजाजीपुरम, ठाकुरगंज, आलमबाग, चारबाग, कृष्णा नगर, आशियाना, बंगला बाज़ार, एलडीए कॉलोनी, सरोजिनी नगर, तेलीबाग, वृंदावन योजना और रायबरेली रोड तथा फ़ैज़ाबाद रोड की नई कॉलोनियाँ। इन मोहल्लों में हमारी कोई ब्रांच नहीं है — कलेक्शन आपके घर आती है।",
       "एक बात साफ़ कह दें: हम लखनऊ के ट्रैफ़िक से तेज़ नहीं हैं। इसीलिए स्लॉट एक समय नहीं, एक विंडो होता है, और वही कन्फ़र्मेशन कॉल पर बता दिया जाता है। जो लैब किसी भी पते पर 30 मिनट का वादा करे, उसे सुबह 9 बजे आलमबाग में एक बार जाँच लीजिए।",
       "बड़े संस्थान शहर के अलग-अलग छोर पर हैं — एसजीपीजीआई, केजीएमयू, आरएमएलआईएमएस, बलरामपुर और सिविल। ओपीडी की तारीख़ मिलते ही पर्ची पर लिखी रूटीन जाँच पहले करा लीजिए, वरना डॉक्टर जाँच लिखकर अगली तारीख़ दे देता है और वही सफ़र दोबारा करना पड़ता है। हम किसी अस्पताल से जुड़े नहीं हैं; अस्पताल अपनी सूची दे तो वही चलेगी।",
       "कौन सी जाँच कब — बुख़ार के पहले 1 से 5 दिन में डेंगू NS1, पाँचवें दिन के बाद डेंगू IgM, और टाइफ़ाइड की विडाल जाँच के लिए कम से कम 5 से 7 दिन का बुख़ार चाहिए। हर बुख़ार में CBC साथ में ज़रूर कराएँ। शुगर, लिपिड और सभी फुल बॉडी पैकेज में 10 से 12 घंटे खाली पेट रहना पड़ता है; उस दौरान सादा पानी पीते रहिए।",
-      "दाम: ब्लड शुगर ₹100, CBC ₹400, थायरॉइड प्रोफ़ाइल ₹550, HbA1c ₹600, लिवर फ़ंक्शन टेस्ट ₹600, किडनी फ़ंक्शन टेस्ट ₹700, लिपिड प्रोफ़ाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200, डेंगू ₹1,200। पैकेज ₹999, ₹1,999 और ₹2,999 से।",
+      "दाम: ब्लड शुगर ₹100, CBC ₹300, थायरॉइड प्रोफ़ाइल ₹400, HbA1c ₹500, लिवर फ़ंक्शन टेस्ट ₹500, किडनी फ़ंक्शन टेस्ट ₹800, लिपिड प्रोफ़ाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000, डेंगू ₹1,000। पैकेज ₹999, ₹1,999 और ₹2,999 से।",
       "एक बात साफ़ है: RT-PCR टेस्ट हम नहीं करते। वह मॉलिक्युलर लैब में होता है और इस पेज पर उपलब्ध जाँचों में नहीं है — लखनऊ में वह करने वाले सरकारी अस्पताल और लैब दोनों हैं।",
       "एक चेतावनी: डेंगू में प्लेटलेट बहुत गिर जाए, नाक या मसूड़े से खून आए, लगातार उल्टी हो, या मरीज़ सुस्त पड़ा रहे — तो जाँच बुक मत कीजिए, सीधे अस्पताल ले जाइए। बच्चे को तेज़ बुख़ार के साथ झटके आएँ, तब भी यही बात है।",
       "बुकिंग के लिए ऊपर दिया फ़ॉर्म भर दीजिए या फ़ोन कर दीजिए। लगभग 30 मिनट में कॉल आकर समय, पता, खाली पेट रहना है या नहीं, और कुल दाम — चारों तय हो जाते हैं। सोसाइटी में रहते हैं तो टावर, फ़्लैट नंबर और गेट पर किस नाम से एंट्री मिलेगी, यह ज़रूर बता दीजिए।",
@@ -443,14 +443,14 @@ export const lucknowContent = [
  */
 export const lucknowFaqs = [
   {
-    q: "How much does a lab test cost in Lucknow, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection anywhere in Lucknow is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before the visit, and payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Lucknow, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection anywhere in Lucknow — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before the visit, and payment is taken at the time of collection, by cash or UPI.",
   },
   {
     // "affordable lab tests in lucknow" — the intent, answered without a
     // comparative claim. See the warning above this array.
     q: "Are lab tests in Lucknow affordable, and how do I know I am not being overcharged?",
-    a: "We will not tell you our rates are the lowest in the city, because any lab can say that and no one can check it. What you can check is this: every rate is printed on the card on this page, home sample collection adds nothing to it, and the full amount is told to you on the confirmation call before anyone comes to your door. If you are comparing labs, ask all of them the same three questions — what does the test itself cost, what does collection cost, and when does the report come. A lab that answers all three plainly is the one to book.",
+    a: "We will not tell you our rates are the lowest in the city, because any lab can say that and no one can check it. What you can check is this: every rate is printed on the card on this page, home sample collection adds a flat ₹100 per booking, and the full amount is told to you on the confirmation call before anyone comes to your door. If you are comparing labs, ask all of them the same three questions — what does the test itself cost, what does collection cost, and when does the report come. A lab that answers all three plainly is the one to book.",
   },
   {
     // "best diagnostic center in lucknow" — same treatment.
@@ -493,7 +493,7 @@ export const lucknowFaqs = [
   },
   {
     q: "How do I book a blood test online in Lucknow, and what are the payment options?",
-    a: "Choose your test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. A confirmation call comes within about 30 minutes and settles four things — the slot window, the full address, whether fasting is needed, and the total amount. If you live in an apartment or a gated society, give the tower and flat number and the name entry will be allowed under, because that is what holds visits up here more than anything else. Payment is taken at collection, by cash or UPI (PhonePe, Google Pay, Paytm), and several people in the same household can be tested in a single visit at no extra collection charge.",
+    a: "Choose your test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. A confirmation call comes within about 30 minutes and settles four things — the slot window, the full address, whether fasting is needed, and the total amount. If you live in an apartment or a gated society, give the tower and flat number and the name entry will be allowed under, because that is what holds visits up here more than anything else. Payment is taken at collection, by cash or UPI (PhonePe, Google Pay, Paytm), and several people in the same household can be tested in a single visit for one ₹100 collection charge.",
     links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

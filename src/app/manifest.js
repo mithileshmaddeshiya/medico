@@ -31,7 +31,7 @@ export default function manifest() {
     // 12 characters or fewer, or Android truncates it under the icon.
     short_name: "MedicoBharat",
 
-    description: `Lab test aur full body checkup ghar baithe book kijiye — free home sample collection ${coverageHi()} me, report 24 ghante me.`,
+    description: `Lab test aur full body checkup ghar baithe book kijiye — home sample collection ₹100 me, ${coverageHi()} me, report 24 ghante me.`,
 
     // The booking page, not "/". An installed icon is tapped by someone who
     // has already decided; the home page is where the form is.

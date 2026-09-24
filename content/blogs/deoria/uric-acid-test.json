@@ -286,7 +286,7 @@
       "lead": "Jis din jod me dard ho, usi din bazaar tak chalna sabse mushkil kaam hai.",
       "blocks": [
         "Gout ke daure me pair zameen par rakhna tak bhaari lagta hai, aur ghutne ke purane dard wale bujurgon ke liye Deoria Sadar tak aana-jaana apne aap me ek din ka kaam hai. Isliye is jaanch ke liye ghar par sample sabse sahi baithta hai. Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni — Deoria sheher ke chaaron taraf ke in kasbon me bhi sample ghar par hi hota hai.",
-        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Payment sample ke waqt cash ya UPI se hota hai. Uric acid ke saath KFT, sugar ya Vitamin D bhi likha ho to sab ek hi sample me ho jaata hai.",
+        "Trained phlebotomist ID card ke saath aata hai, home collection ₹100 hai, slot subah 6 baje se shuru hote hain, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Payment sample ke waqt cash ya UPI se hota hai. Uric acid ke saath KFT, sugar ya Vitamin D bhi likha ho to sab ek hi sample me ho jaata hai.",
         [
           "Deoria me hamara aisa koi counter nahi jahan chal kar jaaya jaaye — sample ghar se hi liya jaata hai. Rate dekhne ke liye ",
           {
@@ -352,7 +352,7 @@
     },
     {
       "question": "Deoria me uric acid test ghar par ho sakta hai?",
-      "answer": "Haan. Ghar par sample sirf Deoria Sadar me nahi, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak liya jaata hai. Sample lene wala trained phlebotomist ID card ke saath aata hai; ghar se sample ka koi charge nahi lagta, subah 6 baje se slot milte hain, aur report ek din ke andar WhatsApp tatha email par PDF me pahunch jaati hai. Walk-in counter hamara Deoria me nahi hai; ye ghar se sample lene ki service hai."
+      "answer": "Haan. Ghar par sample sirf Deoria Sadar me nahi, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak liya jaata hai. Sample lene wala trained phlebotomist ID card ke saath aata hai; ghar se sample ka charge ₹100 hai (poori booking ke liye ek baar), subah 6 baje se slot milte hain, aur report ek din ke andar WhatsApp tatha email par PDF me pahunch jaati hai. Walk-in counter hamara Deoria me nahi hai; ye ghar se sample lene ki service hai."
     }
   ],
   "relatedLinks": {
@@ -364,7 +364,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

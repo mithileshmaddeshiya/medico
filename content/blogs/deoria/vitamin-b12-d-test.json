@@ -68,7 +68,7 @@
             "PCV, RDW jaise numbers — inhe doctor baaki ke saath milakar padhta hai."
           ]
         },
-        "Iska daam is baat par tay hota hai ki aap sirf CBC karwa rahe hain, ya uske saath ferritin, vitamin B12 aur vitamin D bhi. CBC apne aap me un test me hai jinka rate sabse kam padta hai; jo cheez daam badhati hai wo vitamin wale test hain, kyunki unke liye alag reagent aur alag machine lagti hai. Home sample collection Deoria me free hai, isliye usse daam par koi farak nahi padta.",
+        "Iska daam is baat par tay hota hai ki aap sirf CBC karwa rahe hain, ya uske saath ferritin, vitamin B12 aur vitamin D bhi. CBC apne aap me un test me hai jinka rate sabse kam padta hai; jo cheez daam badhati hai wo vitamin wale test hain, kyunki unke liye alag reagent aur alag machine lagti hai. Home sample collection Deoria me ₹100 hai (poori booking ke liye ek baar), chahe CBC akela ho ya vitamin test saath me.",
         [
           "Har test ka rate ",
           {
@@ -303,7 +303,7 @@
           "list": [
             "Slot subah 6 baje se shuru hote hain, lekin in test ke liye subah zaroori nahi — apni suvidha ka waqt lijiye.",
             "Jo supplement pehle se chal raha ho — iron, B12, vitamin D, ya koi tonic — uska naam booking ke waqt bata dijiye.",
-            "Ghar ke kai logon ka sample ek hi visit me ho jaata hai, aur collection tab bhi free hai.",
+            "Ghar ke kai logon ka sample ek hi visit me ho jaata hai, aur collection tab bhi ₹100 hi hai.",
             "Payment sample lene ke waqt, cash ya UPI se, wahi rate jo pehle bataya gaya tha.",
             "Doctor ne inke saath sugar ya lipid bhi likha ho, tab fasting lagegi — us haalat me subah ka pehla slot lijiye."
           ]
@@ -398,7 +398,7 @@
   "faqs": [
     {
       "question": "CBC test in Deoria — ismein kya-kya aata hai aur daam kis baat par tay hota hai?",
-      "answer": "CBC yaani Complete Blood Count khoon ki ginti ka panel hai, ek akela number nahi. Ismein haemoglobin, RBC aur uske saath MCV jaise numbers, WBC ki ginti, aur platelet count aate hain — isi liye ek CBC hi bees se zyada parameters gin leta hai. Daam is baat par tay hota hai ki aap sirf CBC karwa rahe hain ya uske saath ferritin, vitamin B12 aur vitamin D bhi, kyunki vitamin wale test ke liye alag reagent aur machine lagti hai. CBC apne aap me kam rate wale test me aata hai, aur home collection Deoria me free hai. Rate Deoria ke service page par ek hi jagah likha hai."
+      "answer": "CBC yaani Complete Blood Count khoon ki ginti ka panel hai, ek akela number nahi. Ismein haemoglobin, RBC aur uske saath MCV jaise numbers, WBC ki ginti, aur platelet count aate hain — isi liye ek CBC hi bees se zyada parameters gin leta hai. Daam is baat par tay hota hai ki aap sirf CBC karwa rahe hain ya uske saath ferritin, vitamin B12 aur vitamin D bhi, kyunki vitamin wale test ke liye alag reagent aur machine lagti hai. CBC apne aap me kam rate wale test me aata hai, aur home collection Deoria me ₹100 hai (poori booking ke liye ek baar). Rate Deoria ke service page par ek hi jagah likha hai."
     },
     {
       "question": "Vitamin D aur B12 test me khaali pet rehna padta hai kya?",
@@ -459,7 +459,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

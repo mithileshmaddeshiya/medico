@@ -182,7 +182,7 @@
       "heading": "Deoria Me Lab Sugar Test Aur HbA1c Ghar Par Kaise Karayein",
       "lead": "Machine ki tulna aur lab ki report — dono ek hi subah.",
       "blocks": [
-        "Fasting sugar test, HbA1c aur sugar ke saath doctor ki likhi doosri jaanch — sab ghar par ho jaati hain. Sample Deoria sheher ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak liya jaata hai. Trained phlebotomist ID card ke saath aata hai, home collection free hai, aur slot subah 6 baje se shuru hote hain — jo fasting sugar ke liye sabse aasan samay hai.",
+        "Fasting sugar test, HbA1c aur sugar ke saath doctor ki likhi doosri jaanch — sab ghar par ho jaati hain. Sample Deoria sheher ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak liya jaata hai. Trained phlebotomist ID card ke saath aata hai, home collection ₹100 hai, aur slot subah 6 baje se shuru hote hain — jo fasting sugar ke liye sabse aasan samay hai.",
         "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. Machine ki tulna karni ho, to booking ke waqt bata dijiye; phlebotomist ke sample lete waqt aap apni reading le sakte hain.",
         [
           "Deoria me hamara walk-in centre nahi hai, isliye ye jaanch ghar par hi hoti hai. Sugar aur HbA1c ka aaj ka daam ",
@@ -255,7 +255,7 @@
     },
     {
       "question": "Deoria me sugar test aur HbA1c ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni — in sab jagah sugar ka sample ghar par ho jaata hai. ID card wala trained phlebotomist ghar aata hai, collection ka alag paisa nahi lagta, pehla slot subah 6 baje ka hota hai, aur report 24 ghante ke andar WhatsApp aur email par aa jaati hai. Dhyaan rahe, Deoria me chal kar jaane wala hamara koi counter nahi hai."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni — in sab jagah sugar ka sample ghar par ho jaata hai. ID card wala trained phlebotomist ghar aata hai, collection ₹100 hai (poori booking ke liye ek baar), pehla slot subah 6 baje ka hota hai, aur report 24 ghante ke andar WhatsApp aur email par aa jaati hai. Dhyaan rahe, Deoria me chal kar jaane wala hamara koi counter nahi hai."
     }
   ],
   "relatedLinks": {
@@ -267,7 +267,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

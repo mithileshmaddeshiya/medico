@@ -335,7 +335,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                   </span>
                   <p className="mt-5 text-[16px] font-bold text-slate-900">Your cart is empty</p>
                   <p className="mt-1 max-w-xs text-[13px] leading-relaxed text-slate-500">
-                    Add tests or a checkup package — the sample is collected from your home for free.
+                    Add tests or a checkup package — the sample is collected from your home for ₹100 per booking.
                   </p>
                   <button
                     type="button"
@@ -474,7 +474,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                       )}
                       <div className="flex justify-between text-slate-700">
                         <dt>Home collection charges</dt>
-                        <dd className="font-semibold text-emerald-600">FREE</dd>
+                        <dd className="tabular-nums">{inr(bill.collectionFee)}</dd>
                       </div>
                       <div className="flex justify-between border-t border-slate-200 pt-3 text-[15px] font-bold text-slate-900">
                         <dt>Total amount</dt>
@@ -511,7 +511,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     <div className="flex items-baseline gap-1.5">
                       <p className="text-[19px] font-bold leading-none tabular-nums text-slate-900">{inr(bill.total)}</p>
                       {bill.savings > 0 && (
-                        <p className="text-[11.5px] tabular-nums text-slate-400 line-through">{inr(bill.mrpTotal)}</p>
+                        <p className="text-[11.5px] tabular-nums text-slate-400 line-through">{inr(bill.mrpTotal + bill.collectionFee)}</p>
                       )}
                     </div>
                     <button
@@ -814,7 +814,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
 
               <ul className="mx-auto mt-6 max-w-sm space-y-2.5 text-left text-[12.5px] text-slate-600">
                 {[
-                  "A trained phlebotomist with an ID card visits your home — collection is free.",
+                  "A trained phlebotomist with an ID card visits your home — collection is ₹100 per booking.",
                   "Slots start from 6 AM, so fasting tests can be done before breakfast.",
                   "Report arrives on WhatsApp and email within 24 hours.",
                 ].map((text) => (

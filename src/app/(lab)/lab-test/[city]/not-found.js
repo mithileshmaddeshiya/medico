@@ -39,7 +39,7 @@ export default async function LabCityNotFound() {
           </h1>
           <p className="mx-auto mt-2 max-w-xl text-balance text-[13px] sm:text-[14.5px] leading-relaxed text-slate-500">
             Home sample collection is not live at this address yet. You can still
-            book a lab test with free home collection in the cities we serve
+            book a lab test with home collection (₹100) in the cities we serve
             today — pick one below.
           </p>
         </div>

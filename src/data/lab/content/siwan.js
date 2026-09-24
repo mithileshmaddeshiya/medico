@@ -52,7 +52,7 @@
  *      and a train at 5 AM is the reason a 6 AM collection slot matters.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the five this business confirms: free home collection, a trained
+ * Only the five this business confirms: home collection at ₹100 per booking, a trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI
  * on collection. NOT claimed anywhere: NABL accreditation, pathologist
  * verification, cold-chain transport, barcode tracking, sealed single-use
@@ -98,7 +98,7 @@ const GUIDE_FULL_BODY = "/blogs/full-body-checkup/varanasi";
 export const siwanContent = [
   {
     id: "lab-test-in-siwan",
-    h: "Siwan Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Siwan Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Siwan me test karana mushkil nahi hai; mushkil ye hai ki har chhoti jaanch ke liye din nikal jaata hai. Zila mukhyalaya par Sadar Hospital aur bahut se private clinic hain, lekin bade diagnostic setup zyadatar Chhapra aur Patna me hain — Chhapra kareeb 60 kilometre, Patna kareeb 135 kilometre. Bahut se parivaar Gorakhpur bhi jaate hain, jo kareeb 110 kilometre par apne hi rajya ki rajdhani se nazdeek padta hai. Ek CBC ya thyroid ke liye bhi subah train pakadna, khaali pet safar karna, sample dena, aur report ke liye phir ek din nikalna — ek test, do trip, poora din.",
       "Home sample collection is poore chakkar ko khatam kar deta hai. Aap Siwan me apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante me WhatsApp aur email par PDF me aa jaati hai — na train ka kiraya, na khaali pet ka safar, na report lene ke liye doosra din.",
@@ -117,7 +117,7 @@ export const siwanContent = [
     p: [
       "Log aam taur par \"Siwan me pathology lab\", \"diagnostic centre near me\" ya \"blood test near me\" isliye search karte hain kyunki unhe lagta hai kahin jaana hi padega. Routine pathology me ab ye zaroori nahi raha. Khoon aur peshaab ke jitne bhi aam test hain, wo sample par hote hain — aur sample aapke ghar par liya ja sakta hai.",
       "Iska matlab ye nahi ki har cheez ghar par ho jaayegi. X-ray, ultrasound, ECG, CT scan aur MRI machine par hote hain, aur unke liye centre par hi jaana padega. Ye page unke liye nahi hai; ye un test ke liye hai jinke liye aaj bhi log line me lagte hain jabki lagne ki zaroorat nahi.",
-      "Hum Siwan me koi walk-in counter hone ka daawa nahi karte. Jo hai wo ye hai: aapke ghar par sample lene wali service, poore jile me, subah 6 baje se shaam tak ke slot me — aur home collection ka koi alag charge nahi.",
+      "Hum Siwan me koi walk-in counter hone ka daawa nahi karte. Jo hai wo ye hai: aapke ghar par sample lene wali service, poore jile me, subah 6 baje se shaam tak ke slot me — aur home collection sirf ₹100 me, poori booking par ek baar.",
     ],
   },
 
@@ -260,10 +260,10 @@ export const siwanContent = [
     id: "lab-test-price-siwan",
     h: "Siwan Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka koi alag charge nahi — na visiting fee, na koi hidden cost. Aap sirf test ka price dete hain.",
-      "Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi hidden cost. Aap test ka price aur ye ₹100 dete hain.",
+      "Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package: Basic Full Body Checkup ₹999, Advanced Full Body ₹1,999 aur Senior Citizen Pack ₹2,999. Fever Panel par daam nahi likha hai kyunki usmein kya kya jodna hai wo lakshan aur bukhar ke din par tay hota hai — call par bata diya jaata hai.",
-      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection tab bhi free.",
+      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection charge tab bhi ek hi baar ₹100.",
     ],
   },
 
@@ -321,7 +321,7 @@ export const siwanContent = [
     id: "siwan-lab-test-hindi",
     h: "सीवान में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
-      "सीवान ज़िले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन पूरी तरह मुफ़्त है; आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
+      "सीवान ज़िले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन का चार्ज ₹100 है, पूरी बुकिंग पर एक ही बार; इसके अलावा आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
       "ज़िला मुख्यालय सीवान के अलावा महाराजगंज, मैरवा, बड़हरिया, आंदर, बसंतपुर, दरौली, गुठनी, रघुनाथपुर, पचरुखी, हसनपुरा, गोरेयाकोठी और जीरादेई के आसपास के इलाक़ों में भी सैंपल लिया जाता है। अपने गाँव का नाम सूची में न दिखे तो एक बार फ़ोन कर लीजिए, और पता लिखते समय कोई एक निशानी ज़रूर डालिए।",
       "कौन सी जाँच कब — यह सबसे ज़रूरी बात है। बुख़ार के पहले 1 से 5 दिन में डेंगू NS1, पाँचवें दिन के बाद डेंगू IgM, और टाइफ़ाइड की विडाल जाँच के लिए कम से कम 5 से 7 दिन का बुख़ार चाहिए। हर बुख़ार में CBC साथ में ज़रूर कराएँ। शुगर, लिपिड और सभी फुल बॉडी पैकेज में 10 से 12 घंटे खाली पेट रहना पड़ता है; उस दौरान सादा पानी पीते रहिए।",
       "एक चेतावनी जो इस ज़िले के लिए सबसे ज़रूरी है। बुख़ार दो हफ़्ते से ज़्यादा चले, पेट फूला लगे, वज़न गिरता जाए और कमज़ोरी बढ़ती जाए — तो जाँच बुक करने के बजाय सीधे सरकारी अस्पताल जाइए। ये कालाजार के लक्षण हो सकते हैं, और राष्ट्रीय कार्यक्रम के तहत उसकी जाँच और इलाज सरकारी केंद्रों पर मुफ़्त है। इसी तरह बच्चे को तेज़ बुख़ार के साथ झटके आएँ या वह सुस्त पड़ा रहे, तो तुरंत अस्पताल — घर पर सैंपल का इंतज़ार मत कीजिए।",
@@ -346,8 +346,8 @@ export const siwanContent = [
  */
 export const siwanFaqs = [
   {
-    q: "How much does a lab test cost in Siwan, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Siwan is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Siwan, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Siwan — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Can the Gulf pre-departure medical (GAMCA / Wafid) be done here?",

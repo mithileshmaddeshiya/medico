@@ -1,12 +1,12 @@
 {
   "title": "Blood Test In Deoria — Kahan Karayein, Kaise Book Karein",
-  "description": "Deoria me blood test kahan aur kaise karayein — free home sample collection, online booking, CBC se full body checkup tak test list, report 24 ghante me.",
+  "description": "Deoria me blood test kahan aur kaise karayein — home sample collection, online booking, CBC se full body checkup tak test list, report 24 ghante me.",
   "keywords": [
     "blood test in Deoria",
     "blood test Deoria",
     "blood sample collection at home in Deoria",
     "blood test home collection Deoria",
-    "free home sample collection blood test Deoria",
+    "home sample collection blood test Deoria",
     "online blood test booking Deoria",
     "book lab test online Deoria",
     "home visit blood test Deoria",
@@ -20,7 +20,7 @@
   "order": 15,
   "takeaways": [
     "Deoria me blood test ke liye kahin jaana zaroori nahi — sample ghar par liya jaata hai, Deoria Sadar ke har mohalle me aur Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me.",
-    "Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
+    "Home collection ₹100 hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp aur email par PDF me aati hai.",
     "Booking online form se ya ek call se hoti hai. Doctor ka parcha ho to uski photo bhej dijiye — wahi test book honge jo likhe hain.",
     "Deoria me hamara walk-in counter nahi hai. X-ray, ultrasound aur ECG hamari service nahi — sirf khoon aur peshab ki jaanch."
   ],
@@ -56,7 +56,7 @@
             "Booking ke baad slot aur pata confirm karne ke liye call aati hai, aur bata diya jaata hai ki fasting chahiye ya nahi.",
             "Tay samay par trained phlebotomist ID card ke saath ghar aata hai — sample dene se pehle ID dekh lijiye, ye aapka haq hai.",
             "Sample aapke saamne liya jaata hai; ghar ke kai logon ka test ho to sabka ek hi visit me.",
-            "Payment usi waqt, cash ya UPI se. Home collection ka koi alag charge nahi — free hai.",
+            "Payment usi waqt, cash ya UPI se. Home collection ₹100 hai, poori booking ke liye ek baar.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me."
           ]
         },
@@ -293,11 +293,11 @@
     },
     {
       "question": "Deoria me ghar par blood test ho sakta hai?",
-      "answer": "Haan. Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne leta hai. Home sample collection free hai, slot subah 6 baje se shuru hote hain, aur payment sample ke waqt cash ya UPI se hota hai."
+      "answer": "Haan. Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne leta hai. Home sample collection ₹100 hai, slot subah 6 baje se shuru hote hain, aur payment sample ke waqt cash ya UPI se hota hai."
     },
     {
       "question": "Home sample collection ka alag charge lagta hai?",
-      "answer": "Nahi, home collection free hai. Aap sirf test ka wahi daam dete hain jo rate list par hai. Har test ka aaj ka daam Deoria ki rate list par dekhiye."
+      "answer": "Haan, home collection ₹100 hai — poori booking ke liye ek baar, ek visit me ghar ke sabhi logon ke saare test. Iske alawa aap test ka wahi daam dete hain jo rate list par hai. Har test ka aaj ka daam Deoria ki rate list par dekhiye."
     },
     {
       "question": "Deoria me online blood test booking kaise karein?",
@@ -323,7 +323,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC, HbA1c, lipid aur har test ka aaj ka daam" },
           { "href": "/lab-test/deoria#how-to-book-deoria", "label": "Blood test book kaise karein" },
           { "href": "/lab-test/salempur", "label": "Salempur me lab test" }

@@ -219,7 +219,7 @@
         "Fasting wale test ka sabse mushkil hissa test nahi, khaali pet lab tak pahunchna hai — khaas kar bujurg aur sugar ke mareez ke liye. Deoria Sadar ke saath Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
         {
           "list": [
-            "Home sample collection free hai, aur trained phlebotomist ID card ke saath aata hai.",
+            "Home sample collection ₹100 hai, aur trained phlebotomist ID card ke saath aata hai.",
             "Slot subah 6 baje se — sample de kar turant naashta aur dawa.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se.",
@@ -265,7 +265,7 @@
     },
     {
       "question": "Deoria me fasting blood test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me fasting sample ghar par liya jaata hai. Slot subah 6 baje se, home collection free, aur report 24 ghante ke andar WhatsApp tatha email par PDF me."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me fasting sample ghar par liya jaata hai. Slot subah 6 baje se, home collection sirf ₹100 me, aur report 24 ghante ke andar WhatsApp tatha email par PDF me."
     }
   ],
   "relatedLinks": {
@@ -275,7 +275,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Subah 6 baje se slot" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Subah 6 baje se slot" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Har test aur package ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki checklist" }

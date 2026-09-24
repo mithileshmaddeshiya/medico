@@ -222,7 +222,7 @@
       "lead": "CBC ke liye fasting nahi chahiye, isliye slot jab suvidha ho tab.",
       "blocks": [
         "Bukhar me mareez ko bus ya tempo se Deoria Sadar le jaana, ya dengue ke dinon me roz platelet ke liye chakkar lagana — ye sabse thakane wala kaam hai. CBC ka sample ghar par liya jaata hai: Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi.",
-        "Trained phlebotomist ID card ke saath aata hai, home collection free hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. CBC ke saath sugar, thyroid ya KFT bhi likha ho to sab ek hi baar me ho jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
+        "Trained phlebotomist ID card ke saath aata hai, home collection ₹100 hai, slot subah 6 baje se shuru hote hain, report 24 ghante ke andar WhatsApp aur email par PDF me aati hai, aur payment sample ke waqt cash ya UPI se hota hai. CBC ke saath sugar, thyroid ya KFT bhi likha ho to sab ek hi baar me ho jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
         [
           "CBC ka aaj ka daam ",
           { "text": "Deoria ki rate list", "href": "/lab-test/deoria#lab-test-price-deoria" },
@@ -281,7 +281,7 @@
     },
     {
       "question": "Deoria me CBC test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me CBC ka sample ghar par liya jaata hai. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me CBC ka sample ghar par liya jaata hai. Home collection ₹100 hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
     }
   ],
   "relatedLinks": {
@@ -291,7 +291,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "CBC aur har test ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }

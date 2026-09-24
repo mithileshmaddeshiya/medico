@@ -176,7 +176,7 @@
           }
         },
         "Isliye daam poochhte waqt ek line aur jod deejiye: \"parche par TSH likha hai ya T3-T4-TSH?\" Isse aapko sahi rate bhi milega aur galat test bhi nahi hoga. Parcha na ho to uski photo dikha dijiye — booking ke waqt usi ke hisaab se panel lagta hai.",
-        "Daam ka doosra hissa wo hai jo aksar bill me baad me judta hai — sample lene ka charge. Yahan wo nahi judta: home collection free hai, aur jo rate card par likha hai wahi collection ke waqt liya jaata hai. Kisi bhi lab se tulna karte waqt teen cheezein poochh lijiye — test ka rate, collection ka charge, aur report kab tak.",
+        "Daam ka doosra hissa wo hai jo aksar bill me baad me judta hai — sample lene ka charge. Yahan wo pehle se tay hai: home collection ₹100 hai (poori booking ke liye ek baar), aur rate card ka rate plus ₹100 hi collection ke waqt liya jaata hai. Kisi bhi lab se tulna karte waqt teen cheezein poochh lijiye — test ka rate, collection ka charge, aur report kab tak.",
         [
           "Thyroid, sugar aur baaki har test ka rate ek hi jagah likha hai, taaki wo teen page par alag-alag na ho jaaye — ",
           {
@@ -358,7 +358,7 @@
         {
           "list": [
             "Slot subah 6 baje se shuru hote hain — fasting wale test isi window me rakhwaiye.",
-            "Ek visit me ghar ke kai logon ka sample ho jaata hai, aur collection tab bhi free hai.",
+            "Ek visit me ghar ke kai logon ka sample ho jaata hai, aur collection tab bhi ₹100 hi rehta hai.",
             "Dawa niyam se lete hain to band mat kijiye — booking ke waqt bata dijiye ki kya kya chal raha hai.",
             "Payment sample lene ke waqt, cash ya UPI se. Rate wahi jo pehle bataya gaya tha."
           ]
@@ -427,7 +427,7 @@
   "faqs": [
     {
       "question": "Deoria me thyroid test ka price kis baat par tay hota hai?",
-      "answer": "Is par ki aap akela TSH karwa rahe hain ya poora Thyroid Profile jismein T3, T4 aur TSH teenon aate hain — ye do alag test hain aur inka rate alag hai. Kaun sa chahiye ye doctor ke parche se tay hota hai, isliye booking ke waqt parche ki photo bhej deejiye. Home sample collection ka koi alag charge nahi hai, isliye jo rate card par likha hai wahi collection ke waqt liya jaata hai, aur total confirmation call par pehle hi bata diya jaata hai. Har test ka rate Deoria ke service page par ek hi jagah likha hai."
+      "answer": "Is par ki aap akela TSH karwa rahe hain ya poora Thyroid Profile jismein T3, T4 aur TSH teenon aate hain — ye do alag test hain aur inka rate alag hai. Kaun sa chahiye ye doctor ke parche se tay hota hai, isliye booking ke waqt parche ki photo bhej deejiye. Home sample collection ₹100 hai (poori booking ke liye ek baar), isliye rate card ka rate plus ₹100 hi collection ke waqt liya jaata hai, aur total confirmation call par pehle hi bata diya jaata hai. Har test ka rate Deoria ke service page par ek hi jagah likha hai."
     },
     {
       "question": "HbA1c aur fasting sugar me se kaun sa karwana chahiye?",
@@ -451,7 +451,7 @@
     },
     {
       "question": "Ghar ke chaar log sugar aur thyroid karwana chahte hain — alag-alag visit lagegi?",
-      "answer": "Nahi, ek hi visit me sabka sample liya ja sakta hai aur collection phir bhi free rehta hai. Booking ke waqt sirf bata dijiye ki kitne log hain aur kis-kis ka kaun sa test hai, taaki phlebotomist utni taiyaari ke saath aaye. Dhyan ek baat ka rakhiye — jinka fasting wala test hai (fasting sugar ya lipid) wo sab khaali pet rahein, aur jinka sirf HbA1c ya TSH hai unhe fasting ki zaroorat nahi hai. Ek subah me poora ghar nipat jaata hai."
+      "answer": "Nahi, ek hi visit me sabka sample liya ja sakta hai aur collection phir bhi ₹100 hi rehta hai (poori booking ke liye ek baar). Booking ke waqt sirf bata dijiye ki kitne log hain aur kis-kis ka kaun sa test hai, taaki phlebotomist utni taiyaari ke saath aaye. Dhyan ek baat ka rakhiye — jinka fasting wala test hai (fasting sugar ya lipid) wo sab khaali pet rahein, aur jinka sirf HbA1c ya TSH hai unhe fasting ki zaroorat nahi hai. Ek subah me poora ghar nipat jaata hai."
     }
   ],
   "relatedLinks": {
@@ -490,7 +490,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
