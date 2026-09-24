@@ -214,7 +214,7 @@
         "TSH aur Thyroid Profile dono khoon ke sample par hote hain, aur sample kahan liya gaya isse number nahi badalta. Isliye Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me bhi sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai — sample ghar se hi liya jaata hai.",
         {
           "list": [
-            "Home collection free hai, aur trained phlebotomist ID card ke saath aata hai.",
+            "Home collection ₹100 hai, aur trained phlebotomist ID card ke saath aata hai.",
             "Slot subah 6 baje se shuru — thyroid ki goli sample ke baad aaraam se le lijiye.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample lene ke waqt, cash ya UPI se.",
@@ -279,7 +279,7 @@
     },
     {
       "question": "Deoria me thyroid test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me TSH aur Thyroid Profile ka sample ghar par liya jaata hai. Home collection free hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me TSH aur Thyroid Profile ka sample ghar par liya jaata hai. Home collection ₹100 hai, slot subah 6 baje se, aur report 24 ghante ke andar WhatsApp tatha email par PDF me aati hai. Daam Deoria ki rate list par dekhiye."
     }
   ],
   "relatedLinks": {
@@ -289,7 +289,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Thyroid Profile aur har test ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Sample dene se pehle ki taiyaari" }

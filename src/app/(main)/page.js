@@ -134,7 +134,7 @@ const baseMetadata = {
         secureUrl: `${SITE}${LAB_OG_IMAGE}`,
         width: 1200,
         height: 630,
-        alt: "MedicoBharat — lab test at home with free sample collection",
+        alt: "MedicoBharat — lab test at home with sample collection at your door",
         type: "image/jpeg",
       },
     ],
@@ -147,7 +147,7 @@ const baseMetadata = {
     images: [
       {
         url: `${SITE}${LAB_OG_IMAGE}`,
-        alt: "MedicoBharat — lab test at home with free sample collection",
+        alt: "MedicoBharat — lab test at home with sample collection at your door",
       },
     ],
   },

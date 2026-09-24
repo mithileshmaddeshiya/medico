@@ -159,7 +159,7 @@ export default async function LabTestIndexPage() {
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-pretty text-[14px] sm:text-[15.5px] leading-relaxed text-slate-600">
-            {`Free home sample collection ${coverage()} me. Apna sheher chuniye — us jile ke area, test aur rate list uske page par hai. Slot subah 6 baje se, saaton din, aur report 24 ghante me.`}
+            {`Home sample collection sirf ₹100 me, ${coverage()} me. Apna sheher chuniye — us jile ke area, test aur rate list uske page par hai. Slot subah 6 baje se, saaton din, aur report 24 ghante me.`}
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">

@@ -81,7 +81,7 @@
             "Tay time par trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne leta hai. Payment usi waqt hota hai, cash ya UPI se."
           ]
         },
-        "Home visit ke slot subah 6 baje se shuru hote hain, isliye fasting wale test subah nikal jaate hain aur baaki test din me kabhi bhi ho jaate hain. Home collection ka koi alag visiting charge nahi hai — aap sirf test ka wahi rate dete hain jo call par bataya gaya tha.",
+        "Home visit ke slot subah 6 baje se shuru hote hain, isliye fasting wale test subah nikal jaate hain aur baaki test din me kabhi bhi ho jaate hain. Home collection ₹100 hai, poori booking ke liye ek baar — aap test ka wahi rate aur ₹100 collection dete hain jo call par bataya gaya tha.",
         "Ghar me ek se zyada log test kara rahe hain to sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaata hai, aur ye tab sabse kaam aata hai jab tyohaar par ghar ke log jama hon.",
         [
           "Visit ke din pandrah minute me kya-kya hota hai, bujurg ya bistar par pade mareez ke liye kya pehle bata dena chahiye, aur nas na milne par kya kiya jaata hai — ye sab ",
@@ -244,7 +244,7 @@
     },
     {
       "question": "Deoria me blood test ghar par kaise karwaye?",
-      "answer": "Deoria ke service page par form bhariye — naam, mobile number, mohalla ya gaon aur ek landmark. Lagbhag 30 minute me confirmation call aati hai jismein slot tay hota hai aur fasting chahiye ya nahi ye bata diya jaata hai. Tay time par trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne liya jaata hai, aur payment usi waqt cash ya UPI se hota hai. Home visit ke slot subah 6 baje se shuru hote hain aur home collection ka koi alag charge nahi hai."
+      "answer": "Deoria ke service page par form bhariye — naam, mobile number, mohalla ya gaon aur ek landmark. Lagbhag 30 minute me confirmation call aati hai jismein slot tay hota hai aur fasting chahiye ya nahi ye bata diya jaata hai. Tay time par trained phlebotomist ID card ke saath ghar aata hai, sample aapke saamne liya jaata hai, aur payment usi waqt cash ya UPI se hota hai. Home visit ke slot subah 6 baje se shuru hote hain aur home collection ₹100 hai (poori booking ke liye ek baar)."
     },
     {
       "question": "Full body checkup Deoria me kitne ka hota hai?",
@@ -276,7 +276,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/lab-test/deoria#lab-test-price-deoria",

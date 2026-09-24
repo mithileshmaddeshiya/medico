@@ -45,7 +45,7 @@ export default function WelcomePopup({
   // Artwork drawn for this popup: it carries the branding AND the heading, so
   // the card below prints neither. Shown whole — see PopupLeadForm.
   image = "/navheroimage/formpopimg.webp",
-  imageAlt = "MedicoBharat lab test at home — free home sample collection",
+  imageAlt = "MedicoBharat lab test at home — home sample collection at ₹100",
   // Not painted anywhere: this is the dialog's accessible name, which the
   // image cannot supply.
   title = "Book Lab Test at Home",

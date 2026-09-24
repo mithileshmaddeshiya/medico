@@ -67,7 +67,7 @@
  *      section states its own version in a paragraph and LINKS across.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the five this business confirms: free home collection, a trained
+ * Only the five this business confirms: home collection at ₹100 per booking, a trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI
  * on collection. NOT claimed anywhere: NABL accreditation, pathologist
  * verification, cold-chain transport, barcode tracking, sealed single-use
@@ -92,7 +92,7 @@
  *       claim is made in the copy. Two FAQs DO carry the words "affordable"
  *       and "best diagnostic centre", because that is what people type — but
  *       both answer with checkable facts (the rate is on the card, collection
- *       adds nothing, here is how to judge a lab) instead of with a boast.
+ *       adds a flat ₹100, here is how to judge a lab) instead of with a boast.
  *       That is the only place those words appear.
  *
  *   "Same day report" — the site's commitment is 24 hours. The report section
@@ -152,11 +152,11 @@ const GUIDE_REPORT = "/blogs/lab-test/varanasi#report-kaise-padhein";
 export const gopalganjContent = [
   {
     id: "lab-test-in-gopalganj",
-    h: "Gopalganj Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Gopalganj Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Gopalganj ki dikkat ek nahi, chaar hain. Siwan kareeb 30 kilometre hai lekin wo khud ek zila mukhyalaya hai, koi bada referral centre nahi. Uske aage Chhapra kareeb 85 kilometre, Muzaffarpur Gandak paar kareeb 100, Gorakhpur NH-27 par kareeb 120 aur Patna kareeb 150 kilometre. Yaani jaana kahin bhi ho, poora din jaata hai — aur saal me kuch hafte Gandak tay karti hai ki kaun si sadak chalu bhi hai.",
       "Isi wajah se yahan sabse zyada nuksaan un jaanchon ka hota hai jo asal me sabse aasan hain. Ek CBC ya ek sugar test ke liye subah ki gaadi pakadna, khaali pet safar karna, wahan line me lagna aur report ke liye dobara jaana — do sau rupaye ka test aur do din. Ye page usi aadat ko todne ke liye hai.",
-      "MedicoBharat ki lab test service Gopalganj me home sample collection par chalti hai. Aap apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample aapke saamne liya jaata hai aur report 24 ghante ke andar WhatsApp aur email dono par PDF me aa jaati hai. Home collection ka koi alag charge nahi — na visiting fee, na koi chhupa hua kharch.",
+      "MedicoBharat ki lab test service Gopalganj me home sample collection par chalti hai. Aap apne ghar ka pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample aapke saamne liya jaata hai aur report 24 ghante ke andar WhatsApp aur email dono par PDF me aa jaati hai. Home collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi chhupa hua kharch.",
       "Yahan routine pathology ke saare test aur checkup package book hote hain — CBC, Thyroid Profile (T3, T4, TSH), Blood Sugar, HbA1c, Lipid Profile, Liver Function Test, Kidney Function Test, Vitamin D, Vitamin B12, Dengue aur Full Body Checkup. Doctor ne parcha likh diya hai to usi panel ke hisaab se booking ho jaati hai; koi test is page ke card par na dikhe to prescription ke saath ek call kar lijiye — bata diya jaayega ki wo ho sakta hai ya nahi.",
       [
         "Kaun sa test kab karana chahiye, bukhar me kis din test matlab rakhta hai, aur report ke numbers me kya dekhna chahiye — us par alag se guide hai: ",
@@ -204,7 +204,7 @@ export const gopalganjContent = [
       "Booking ka tarika seedha hai. Is page par upar diye form me apna naam, mobile number, ilaaka aur test chuniye — ya seedha call kar dijiye. Doctor ka parcha hai to uski photo taiyaar rakhiye; usi panel ke hisaab se booking ho jaayegi aur koi test chhootega nahi.",
       "Lagbhag 30 minute me confirmation call aata hai. Usmein chaar cheezein tay hoti hain: slot ka waqt, poora pata landmark ke saath, ye ki test me fasting chahiye ya nahi, aur total daam. Isi call par saara hisaab saaf ho jaata hai — baad me koi naya charge nahi judta.",
       "Slot subah 6 baje se shuru hote hain aur shaam tak chalte hain. Fasting wale test hamesha subah rakhwaiye. Phlebotomist ID card ke saath aata hai aur sample aapke saamne leta hai — dene se pehle card dekh lena aapka hak hai, aur maangne me sankoch mat kijiye.",
-      "Ek visit me ghar ke kai logon ka sample liya ja sakta hai — ek hi trip, aur collection tab bhi free. Jin gharon me bujurg hain ya kaam par jaane wale log subah nikal jaate hain, unke liye yahi sabse aasan tarika hai: sab ka sample ek saath, ek hi subah.",
+      "Ek visit me ghar ke kai logon ka sample liya ja sakta hai — ek hi trip, aur collection charge tab bhi ek hi baar ₹100. Jin gharon me bujurg hain ya kaam par jaane wale log subah nikal jaate hain, unke liye yahi sabse aasan tarika hai: sab ka sample ek saath, ek hi subah.",
       "Online booking ka ek faayda aur hai jo aksar dhyan me nahi aata — jo test aapne book kiya wahi report me aata hai, aur uska record aapke phone par rehta hai. Zubaani order me test badal jaane ki jo shikayat hoti hai, wo yahan nahi hoti.",
     ],
   },
@@ -260,7 +260,7 @@ export const gopalganjContent = [
       "Jo jaanch aam taur par likhi jaati hai wo ye hain: Blood Group aur Rh factor, CBC (haemoglobin ke liye), Blood Sugar, thyroid ke liye TSH, aur Urine Routine. Inke saath doctor apne hisaab se aur test likh sakta hai. Saaf baat — panel doctor ke parche se tay hota hai, is page se nahi; hum wahi karte hain jo likha ho.",
       "Haemoglobin par khaas dhyan dijiye. Is ilaake me khoon ki kami itni aam hai ki use bimari maana hi nahi jaata — thakan, chakkar, saans phoolna aur chehre ka peelapan \"kamzori\" keh kar chhod diya jaata hai. Pregnancy me CBC har trimester me kam se kam ek baar dohraana chahiye, taaki number badalne par waqt rehte pata chal jaaye.",
       "Sirf haemoglobin dekh lena aadha jawab hai. CBC me red cell ka size aur count bhi aata hai, jisse doctor ko pata chalta hai ki kami ki wajah kya hai — aur ilaaj poore jawab par tay hota hai, aadhe par nahi. Iron ki dawa shuru karne se pehle aur kuch hafte baad, dono baar CBC karwa lena isliye theek hai ki tab pata rehta hai ki dawa kaam kar rahi hai ya nahi.",
-      "CBC, blood group aur TSH me fasting nahi chahiye — ye din me kabhi bhi ho sakte hain. Sugar ki jaanch me fasting ka niyam doctor bataata hai, isliye booking ke waqt parche ki photo bhej deejiye. Ek visit me ghar ke doosre logon ka sample bhi liya ja sakta hai, aur collection tab bhi free rehta hai.",
+      "CBC, blood group aur TSH me fasting nahi chahiye — ye din me kabhi bhi ho sakte hain. Sugar ki jaanch me fasting ka niyam doctor bataata hai, isliye booking ke waqt parche ki photo bhej deejiye. Ek visit me ghar ke doosre logon ka sample bhi liya ja sakta hai, aur collection charge tab bhi ek hi baar ₹100 rehta hai.",
       "Kisi bhi tarah ka khoon aana, tez pet dard, lagatar ulti, chakkar ke saath dhundhla dikhna ya bukhar — inme se kuch bhi ho to jaanch book karne se pehle doctor ko dikhaiye. Ye lab ka nahi, turant dekhne ka maamla hai.",
     ],
   },
@@ -283,7 +283,7 @@ export const gopalganjContent = [
     p: [
       "Liver Function Test (LFT) is jile me do wajahon se sabse zyada likha jaata hai: baadh ke baad ka peeliya, aur wo shikayat jo mahino chalti rehti hai — bhookh na lagna, pet ke upari daahine hisse me bhaaripan, jee michlana aur bina wajah ki thakan.",
       "LFT me kya aata hai: total aur direct bilirubin, SGOT (AST), SGPT (ALT), alkaline phosphatase, aur protein tatha albumin. Inhe milakar padha jaata hai — akela ek number kuch nahi kehta. Aankhon ya peshaab me peelapan dikhte hi LFT karwa lena isliye sahi hai ki number bata dete hain ki maamla halka hai ya doctor ke paas turant jaane wala, aur ye faisla jitni jaldi ho utna behtar.",
-      "Peeliye me sabse zyada nuksaan gharelu nuskhon me lage waqt se hota hai — jhaad-phoonk aur \"peela paani\" jaise ilaaj me hafte nikal jaate hain, aur usi beech maamla bigadta hai. Ek LFT ka daam ₹600 hai aur report 24 ghante me aa jaati hai; us ek report par jo faisla hota hai wo intezaar se kahin sasta padta hai.",
+      "Peeliye me sabse zyada nuksaan gharelu nuskhon me lage waqt se hota hai — jhaad-phoonk aur \"peela paani\" jaise ilaaj me hafte nikal jaate hain, aur usi beech maamla bigadta hai. Ek LFT ka daam ₹500 hai aur report 24 ghante me aa jaati hai; us ek report par jo faisla hota hai wo intezaar se kahin sasta padta hai.",
       "Doosri wajah aajkal tezi se badh rahi hai — fatty liver. Ye ab sirf sharaab peene walon ki bimari nahi rahi; badhta wazan, sugar aur badha hua lipid isi taraf le jaate hain, aur shuruaat me koi lakshan nahi hota. Isi liye jinka sugar ya lipid pehle se kharaab hai, unke saal-bhar ke panel me LFT ko jagah milni chahiye. Dawaiyon ka lamba istemaal — dard ki goli, TB ki dawa, ya koi bhi lambi chalne wali dawa — bhi liver par asar daalta hai, aur ye baat booking ke waqt bataani chahiye.",
       "LFT me fasting zaroori nahi hai, lekin doctor ne Lipid Profile ke saath likha hai to fasting Lipid ke liye chahiye hogi — us soorat me subah ka slot le lijiye. Pathology me LFT aksar Kidney Function Test aur CBC ke saath hi karaaya jaata hai, aur teenon Basic Full Body Checkup me pehle se shaamil hain.",
     ],
@@ -319,7 +319,7 @@ export const gopalganjContent = [
       "Full body checkup ka matlab har test karana nahi hota. Matlab ye hota hai ki wo test ek saath ho jaayein jo milkar tasveer banate hain — khoon, sugar, charbi, liver aur kidney. Usse aage ka faisla report dekh kar hota hai, pehle se nahi.",
       "Teen package hain. Basic Full Body Checkup ₹999 me 45 parameter — CBC, sugar, lipid, LFT aur KFT. Advanced Full Body ₹1,999 me 72 parameter — isi me thyroid, HbA1c aur vitamin jud jaate hain. Senior Citizen Pack ₹2,999 me 88 parameter, jo 55 saal se upar walon ke liye dil, haddi aur sugar par zyada dhyan deta hai.",
       "Kis ke liye kaun sa: pehli baar checkup kara rahe hain aur koi shikayat nahi hai to Basic kaafi hai. Sugar, thyroid ya vitamin ki shikayat pehle rahi ho, ya lambe samay baad ghar aaye hain, to Advanced zyada kaam ka hai. Ghar ke bujurgon ke liye Senior Pack — aur unka sample ghar par lena hi sabse aasan hai.",
-      "Poore parivaar ka checkup ek hi subah me ho sakta hai. Ek phlebotomist, ek visit, sab ka sample — aur collection phir bhi free. Chhutti par ghar aaye hain aur do hafte me sab kaam nipatana hai to yahi ek slot sabse zyada kaam ka rehta hai.",
+      "Poore parivaar ka checkup ek hi subah me ho sakta hai. Ek phlebotomist, ek visit, sab ka sample — aur collection charge phir bhi ek hi baar ₹100. Chhutti par ghar aaye hain aur do hafte me sab kaam nipatana hai to yahi ek slot sabse zyada kaam ka rehta hai.",
       [
         "Package me kya hona chahiye aur \"80+ parameters\" jaise vaade me kitna dum hota hai — ",
         { text: "ye guide wahi samjhaati hai", href: GUIDE_FULL_BODY },
@@ -333,11 +333,11 @@ export const gopalganjContent = [
     id: "lab-test-price-gopalganj",
     h: "Gopalganj Me Lab Test Price Aur Rate List — Thyroid Test Price Se Full Body Package Tak",
     p: [
-      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka koi alag charge nahi — na visiting fee, na koi hidden cost. Aap sirf test ka price dete hain, aur wahi price collection ke waqt liya jaata hai.",
-      "Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Daam wahi hai jo is page ke card par likha hai. Home sample collection ka charge sirf ₹100 hai, poori booking par ek baar — iske alawa na visiting fee, na koi hidden cost. Aap test ka price aur ye ₹100 dete hain, aur wahi total collection ke waqt liya jaata hai.",
+      "Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package: Basic Full Body Checkup ₹999, Advanced Full Body ₹1,999 aur Senior Citizen Pack ₹2,999. Fever Panel par daam nahi likha hai kyunki usmein kya kya jodna hai wo lakshan aur bukhar ke din par tay hota hai — call par bata diya jaata hai.",
-      "Hum ye nahi kehte ki hamara daam sabse kam hai; aisa daawa koi bhi kar sakta hai aur koi bhi jaanch nahi sakta. Jo hum kehte hain wo jaancha ja sakta hai — rate upar card par likha hai, home collection uske upar kuch nahi jodta, aur confirmation call par total bata diya jaata hai. Kisi bhi lab se tulna karni ho to teen cheezein poochhiye: test ka rate, collection ka charge, aur report ka waqt.",
-      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection tab bhi free. Chhapra ya Muzaffarpur jaakar test karane se jo kiraya aur din bachta hai, wo iske upar hai.",
+      "Hum ye nahi kehte ki hamara daam sabse kam hai; aisa daawa koi bhi kar sakta hai aur koi bhi jaanch nahi sakta. Jo hum kehte hain wo jaancha ja sakta hai — rate upar card par likha hai, home collection uske upar sirf ₹100 jodta hai, poori booking par ek baar, aur confirmation call par total bata diya jaata hai. Kisi bhi lab se tulna karni ho to teen cheezein poochhiye: test ka rate, collection ka charge, aur report ka waqt.",
+      "Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se. Ek se zyada logon ka test ek hi visit me ho sakta hai — ek hi phlebotomist, ek hi trip, aur collection charge tab bhi ek hi baar ₹100. Chhapra ya Muzaffarpur jaakar test karane se jo kiraya aur din bachta hai, wo iske upar hai.",
     ],
   },
 
@@ -398,7 +398,7 @@ export const gopalganjContent = [
     id: "gopalganj-lab-test-hindi",
     h: "गोपालगंज में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
-      "गोपालगंज ज़िले (बिहार) में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप तथा ईमेल पर पीडीएफ़ में आ जाती है। होम सैंपल कलेक्शन पूरी तरह मुफ़्त है; आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
+      "गोपालगंज ज़िले (बिहार) में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप तथा ईमेल पर पीडीएफ़ में आ जाती है। होम सैंपल कलेक्शन का चार्ज ₹100 है, पूरी बुकिंग पर एक ही बार; इसके अलावा आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
       "यहाँ से कोई बड़ा शहर पास नहीं है — सीवान लगभग 30 किलोमीटर, छपरा लगभग 85, मुज़फ़्फ़रपुर लगभग 100, गोरखपुर लगभग 120 और पटना लगभग 150 किलोमीटर। CBC, शुगर, थायरॉइड, लिवर, किडनी, लिपिड, विटामिन और डेंगू — ये सब सैंपल पर होते हैं और घर पर हो सकते हैं। बड़े शहर तब जाइए जब MRI, CT स्कैन या किसी विशेषज्ञ को दिखाना हो — और उस दिन रिपोर्ट पहले से हाथ में ले जाइए, वरना डॉक्टर जाँच लिखकर अगली तारीख़ दे देता है और वही सफ़र दोबारा करना पड़ता है।",
       "शहर में स्टेशन रोड, बस स्टैंड के आसपास, सदर अस्पताल की तरफ़ और मुख्य बाज़ार के मोहल्ले, तथा ज़िले में थावे, हथुआ, मीरगंज, कुचायकोट, बरौली, सिधवलिया, बैकुंठपुर, माँझा, उचकागाँव, भोरे, कटेया, विजयीपुर, फुलवरिया और पंचदेवरी के आसपास सैंपल लिया जाता है। अपने गाँव का नाम सूची में न दिखे तो एक बार फ़ोन कर लीजिए, और पता लिखते समय कोई एक निशानी तथा अपने प्रखंड का नाम ज़रूर डालिए।",
       "गंडक का पानी चढ़ने पर एक बात साफ़ रखिए: जब लिंक रोड कटी हो और पानी खड़ा हो, तब हमारी गाड़ी उस टोले तक नहीं पहुँच पाती — हम फ़ोन पर साफ़ बता देते हैं। इसलिए पानी चढ़ने से पहले के पंद्रह दिन और पानी उतरने के बाद का महीना सबसे काम का है। पानी उतरने के बाद आँख या पेशाब में पीलापन दिखे तो लिवर फ़ंक्शन टेस्ट, 5-7 दिन से ज़्यादा बुख़ार चले तो टाइफ़ाइड की जाँच, और उल्टी-दस्त के बाद कमज़ोरी रहे तो CBC के साथ किडनी फ़ंक्शन टेस्ट कराइए।",
@@ -431,14 +431,14 @@ export const gopalganjContent = [
  */
 export const gopalganjFaqs = [
   {
-    q: "How much does a lab test cost in Gopalganj, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Gopalganj is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before the visit, and payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Gopalganj, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Gopalganj — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before the visit, and payment is taken at the time of collection, by cash or UPI.",
   },
   {
     // "affordable lab tests in gopalganj" — the intent, answered without a
     // comparative claim. See the warning above this array.
     q: "Are lab tests in Gopalganj affordable, and how do I know I am not being overcharged?",
-    a: "We will not tell you our rates are the lowest, because any lab can say that and no one can check it. What you can check is this: every rate is printed on the card on this page, home sample collection adds nothing to it, and the full amount is told to you on the confirmation call before anyone comes to your door. If you are comparing labs, ask all of them the same three questions — what does the test itself cost, what does collection cost, and when does the report come. A lab that answers all three plainly is the one to book.",
+    a: "We will not tell you our rates are the lowest, because any lab can say that and no one can check it. What you can check is this: every rate is printed on the card on this page, home sample collection adds a flat ₹100 per booking, and the full amount is told to you on the confirmation call before anyone comes to your door. If you are comparing labs, ask all of them the same three questions — what does the test itself cost, what does collection cost, and when does the report come. A lab that answers all three plainly is the one to book.",
   },
   {
     // "best diagnostic center in gopalganj" — same treatment.
@@ -476,7 +476,7 @@ export const gopalganjFaqs = [
   },
   {
     q: "How do I book a blood test online in Gopalganj, and what are the payment options?",
-    a: "Choose your test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. A confirmation call comes within about 30 minutes and settles four things — the slot, the full address with a landmark, whether fasting is needed, and the total amount. The phlebotomist carries an ID card, and you are welcome to check it before giving the sample. Payment is taken at that time, by cash or UPI (PhonePe, Google Pay, Paytm). Several people in the same household can be tested in a single visit at no extra collection charge.",
+    a: "Choose your test on this page and fill in the form, or simply call us. If you have a doctor's prescription, keep a photo of it handy so that exactly the panel written on it is run. A confirmation call comes within about 30 minutes and settles four things — the slot, the full address with a landmark, whether fasting is needed, and the total amount. The phlebotomist carries an ID card, and you are welcome to check it before giving the sample. Payment is taken at that time, by cash or UPI (PhonePe, Google Pay, Paytm). Several people in the same household can be tested in a single visit for one ₹100 collection charge.",
     links: [{ href: GUIDE_LAB_TEST, label: "Which test, and when — a guide" }],
   },
 ];

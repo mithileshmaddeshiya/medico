@@ -166,8 +166,8 @@ export default async function NotFound() {
 
             <p className="mx-auto mt-4 max-w-xl text-pretty text-[14px] sm:text-[15.5px] leading-relaxed text-slate-600">
               Ho sakta hai link purana ho ya address me kuch chhoot gaya ho.
-              Neeche se apna sheher chuniye, ya seedhe call kar lijiye — free
-              home sample collection, report 24 ghante me.
+              Neeche se apna sheher chuniye, ya seedhe call kar lijiye — home
+              sample collection sirf ₹100 me, report 24 ghante me.
             </p>
 
             <NotFoundPath />

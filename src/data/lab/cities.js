@@ -142,7 +142,7 @@ const LAB_CITY_SEED = [
        the exact phrase first, then the promise that separates this service from
        a walk-in lab. See the block comment above defaultTitle in
        src/data/lab/defaults.js for the one-pairing-per-city rule. */
-    title: "Lab Test in Varanasi — Free Sample Collection",
+    title: "Lab Test in Varanasi — Sample Collection ₹100",
     // This copy used to be defaultContent() — the fallback every city inherited
     // — even though every fact in it is Varanasi's. It is unchanged, just moved
     // under the city it was actually written about. See labContent/varanasi.js.
@@ -338,7 +338,7 @@ const LAB_CITY_SEED = [
     // that must match ("lab test", "blood test", "full body checkup") are all
     // still in it.
     description:
-      "Deoria me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+      "Deoria me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
        It used to be `sr-only`, and every city's override was written on that
@@ -362,7 +362,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Deoria — Blood Test Ghar Baithe",
       h1Sub:
-        "Pathology lab ke saare test aur full body checkup — Deoria me free home sample collection, report 24 ghante me WhatsApp par.",
+        "Pathology lab ke saare test aur full body checkup — Deoria me home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -618,7 +618,7 @@ const LAB_CITY_SEED = [
       // 149 characters. It was 167 and the tail was being cut in the SERP; the
       // "report 24 ghante me" clause moved out because the OPD line is the one
       // thing here no other city page says, and it earns the space.
-      "Gorakhpur me lab test ghar baithe — OPD se pehle report taiyaar rakhiye. CBC, thyroid, sugar aur full body checkup, free home sample collection.",
+      "Gorakhpur me lab test ghar baithe — OPD se pehle report taiyaar rakhiye. CBC, thyroid, sugar aur full body checkup, home sample collection sirf ₹100 me.",
 
     /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
        It used to be `sr-only`, and every city's override was written on that
@@ -882,7 +882,7 @@ const LAB_CITY_SEED = [
     // than the district, which is what distinguishes the two results when both
     // show for one query.
     description:
-      "Salempur, Bhatni aur Lar me lab test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+      "Salempur, Bhatni aur Lar me lab test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
        It used to be `sr-only`, and every city's override was written on that
@@ -906,7 +906,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Salempur — Blood Test Ghar Baithe",
       h1Sub:
-        "Salempur aur aas-paas ke gaon me pathology lab ke test ghar baithe — free sample collection, report 24 ghante me phone par.",
+        "Salempur aur aas-paas ke gaon me pathology lab ke test ghar baithe — sample collection sirf ₹100 me, report 24 ghante me phone par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1096,14 +1096,14 @@ const LAB_CITY_SEED = [
     // Primary keyword first, then this page's own second query. The tail used
     // to be "Blood Test at Home", which ten other cities also carried — see the
     // block comment above defaultTitle in src/data/lab/defaults.js.
-    title: "Lab Test in Azamgarh — Free Home Collection",
+    title: "Lab Test in Azamgarh — Home Collection ₹100",
 
     // ~153 characters, so it renders whole on desktop and mobile. Written to
     // NOT read like the other cities' snippets: it names the span from the city
     // mohalla to the weaving towns, which is what distinguishes this result
     // when more than one of our pages shows for a district-level query.
     description:
-      "Azamgarh me lab test ghar baithe — Sidhari se Mubarakpur tak free home sample collection. CBC, thyroid, sugar aur full body checkup, report 24 ghante me.",
+      "Azamgarh me lab test ghar baithe — Sidhari se Mubarakpur tak home sample collection sirf ₹100 me. CBC, thyroid, sugar aur full body checkup, report 24 ghante me.",
 
     /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
        It used to be `sr-only`, and every city's override was written on that
@@ -1127,7 +1127,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Azamgarh — Blood Test Ghar Baithe",
       h1Sub:
-        "Blood test, thyroid, sugar aur full body checkup — Azamgarh me free home sample collection, report 24 ghante me WhatsApp par.",
+        "Blood test, thyroid, sugar aur full body checkup — Azamgarh me home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1324,7 +1324,7 @@ const LAB_CITY_SEED = [
     // to the tehsil towns that are furthest from it, which is what distinguishes
     // this result when more than one of our pages shows for a regional query.
     description:
-      "Ballia me lab test ghar baithe — Rasra, Bansdih, Bairia aur Belthara Road tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+      "Ballia me lab test ghar baithe — Rasra, Bansdih, Bairia aur Belthara Road tak home sample collection sirf ₹100 me. CBC, thyroid, sugar aur full body checkup.",
 
     /* ── THE H1 IS VISIBLE NOW — KEEP IT SHORT ────────────────────────────
        It used to be `sr-only`, and every city's override was written on that
@@ -1348,7 +1348,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Ballia — Blood Test Ghar Baithe",
       h1Sub:
-        "Pathology lab ke test aur full body checkup — Ballia me free home sample collection, report 24 ghante me seedhe phone par.",
+        "Pathology lab ke test aur full body checkup — Ballia me home sample collection sirf ₹100 me, report 24 ghante me seedhe phone par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1556,13 +1556,13 @@ const LAB_CITY_SEED = [
     // what distinguishes this result when more than one of our pages shows for
     // a regional query.
     description:
-      "Maunath Bhanjan (Mau) me lab test ghar baithe — Ghosi, Madhuban aur Doharighat tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+      "Maunath Bhanjan (Mau) me lab test ghar baithe — Ghosi, Madhuban aur Doharighat tak home sample collection sirf ₹100 me. CBC, thyroid, sugar aur full body checkup.",
 
     // The h1 is screen-reader only (the hero is image + form), so it costs a
     // reader nothing and carries the terms the URL cannot: the official name,
     // "blood test", "pathology lab" and "full body checkup".
     hero: {
-      h1: "Lab Test in Mau (Maunath Bhanjan) — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Mau (Maunath Bhanjan) — Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Home Sample Collection",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1766,7 +1766,7 @@ const LAB_CITY_SEED = [
     // towns furthest from the headquarters. That is what distinguishes the two
     // results when both show for one regional query.
     description:
-      "Kushinagar jile me lab test ghar baithe — Kasia, Hata, Ramkola, Khadda aur Tamkuhi Raj tak free home sample collection. CBC, thyroid, sugar aur full body checkup.",
+      "Kushinagar jile me lab test ghar baithe — Kasia, Hata, Ramkola, Khadda aur Tamkuhi Raj tak home sample collection sirf ₹100 me. CBC, thyroid, sugar aur full body checkup.",
 
     // The h1 is screen-reader only (the hero is image + form), so it costs a
     // reader nothing and carries the terms the URL cannot: the pilgrimage
@@ -1774,7 +1774,7 @@ const LAB_CITY_SEED = [
     // read "Kushinagar Aur Padrauna" until the town got its own page — see the
     // warning above `keywords`.
     hero: {
-      h1: "Lab Test in Kushinagar — Kasia Se Khadda Tak Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Free Home Sample Collection",
+      h1: "Lab Test in Kushinagar — Kasia Se Khadda Tak Blood Test, Pathology Lab Aur Full Body Checkup Ke Liye Home Sample Collection",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -1997,7 +1997,7 @@ const LAB_CITY_SEED = [
     // towns, this one names streets, which is what separates the two results
     // when both show for one regional query.
     description:
-      "Padrauna me blood test ghar baithe book karein — Durga Chowk, Bank Road, Station Road aur Ramkola Road tak free home sample collection, report 24 ghante me.",
+      "Padrauna me blood test ghar baithe book karein — Durga Chowk, Bank Road, Station Road aur Ramkola Road tak home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* The h1 renders as real text in the hero (see LabHero.jsx), so it opens
        with the phrase people type and stops; the secondary terms sit in
@@ -2007,7 +2007,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Padrauna — Blood Test Ghar Baithe",
       h1Sub:
-        "Padrauna ke har mohalle me pathology lab ke test ghar par — free home sample collection, report 24 ghante me WhatsApp par.",
+        "Padrauna ke har mohalle me pathology lab ke test ghar par — home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -2211,7 +2211,7 @@ const LAB_CITY_SEED = [
     // still in it. Bihar is named because this is the site's only Bihar page
     // and "Siwan" alone is ambiguous to anyone outside the belt.
     description:
-      "Siwan (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+      "Siwan (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
        stopped being sr-only. The h1 opens with the phrase people actually type
@@ -2220,7 +2220,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Siwan — Blood Test Ghar Baithe",
       h1Sub:
-        "Pathology lab ke saare test aur full body checkup — Siwan me free home sample collection, report 24 ghante me WhatsApp par.",
+        "Pathology lab ke saare test aur full body checkup — Siwan me home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -2434,7 +2434,7 @@ const LAB_CITY_SEED = [
     // that must match ("lab test", "blood test", "full body checkup") are all
     // still in it.
     description:
-      "Ghazipur me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Free home sample collection, report 24 ghante me.",
+      "Ghazipur me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar aur full body checkup. Home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
        stopped being sr-only. The h1 opens with the phrase people actually type
@@ -2443,7 +2443,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Ghazipur — Blood Test Ghar Baithe",
       h1Sub:
-        "Pathology lab ke saare test aur full body checkup — Ghazipur me free home sample collection, report 24 ghante me WhatsApp par.",
+        "Pathology lab ke saare test aur full body checkup — Ghazipur me home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -2650,7 +2650,7 @@ const LAB_CITY_SEED = [
     // deliberately: the page is Hinglish and so is the searcher here. Bihar is
     // named for the disambiguation reason noted above.
     description:
-      "Gopalganj (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar, full body checkup. Free home collection, report 24 ghante me.",
+      "Gopalganj (Bihar) me lab test aur blood test ghar baithe book karein — CBC, thyroid, sugar, full body checkup. Home collection ₹100, report 24 ghante me.",
 
     /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
        stopped being sr-only. The h1 opens with the phrase people actually type
@@ -2658,7 +2658,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Gopalganj — Blood Test Ghar Baithe",
       h1Sub:
-        "Pathology lab ke saare test aur full body checkup — Gopalganj (Bihar) me free home sample collection, report 24 ghante me WhatsApp par.",
+        "Pathology lab ke saare test aur full body checkup — Gopalganj (Bihar) me home sample collection sirf ₹100 me, report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -2900,7 +2900,7 @@ const LAB_CITY_SEED = [
     // argument is per-mohalla, and a searcher in Gomti Nagar who sees her own
     // locality in the snippet clicks a result she would otherwise scroll past.
     description:
-      "Lucknow me lab test aur blood test ghar baithe book karein — Gomti Nagar, Hazratganj, Indira Nagar, Alambagh. Free home collection, report 24 ghante me.",
+      "Lucknow me lab test aur blood test ghar baithe book karein — Gomti Nagar, Hazratganj, Indira Nagar, Alambagh. Home collection ₹100, report 24 ghante me.",
 
     /* h1 under ~60 characters, h1Sub under ~140 — the budget set when the h1
        stopped being sr-only. The h1 opens with the phrase people actually type
@@ -2908,7 +2908,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Lucknow — Blood Test Ghar Baithe",
       h1Sub:
-        "Gomti Nagar se Alambagh tak poore Lucknow me free home sample collection — saare pathology test aur full body checkup, report 24 ghante me.",
+        "Gomti Nagar se Alambagh tak poore Lucknow me home sample collection sirf ₹100 me — saare pathology test aur full body checkup, report 24 ghante me.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -3170,7 +3170,7 @@ const LAB_CITY_SEED = [
     // distinguishes this result from Gorakhpur's when both show for one
     // regional query.
     description:
-      "Khalilabad aur Sant Kabir Nagar me blood test ghar baithe — Magahar, Mehdawal, Dhanghata aur Bakhira tak free home sample collection, report 24 ghante me.",
+      "Khalilabad aur Sant Kabir Nagar me blood test ghar baithe — Magahar, Mehdawal, Dhanghata aur Bakhira tak home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* The h1 opens with the phrase people type and stops; the secondary terms
        sit in `h1Sub`, inside a real sentence. Budget: h1 under ~60 characters,
@@ -3180,7 +3180,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Khalilabad — Blood Test Ghar Baithe",
       h1Sub:
-        "Sant Kabir Nagar jile me pathology lab ke test ghar par — free home sample collection, routine report 24 ghante me WhatsApp par.",
+        "Sant Kabir Nagar jile me pathology lab ke test ghar par — home sample collection sirf ₹100 me, routine report 24 ghante me WhatsApp par.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────
@@ -3387,7 +3387,7 @@ const LAB_CITY_SEED = [
     // this result from Gorakhpur's when both show for one regional query — and
     // because those are the readers for whom the service changes the most.
     description:
-      "Maharajganj me lab test aur blood test ghar baithe — Nautanwa, Sonauli, Nichlaul aur Siswa Bazar tak free home sample collection, report 24 ghante me.",
+      "Maharajganj me lab test aur blood test ghar baithe — Nautanwa, Sonauli, Nichlaul aur Siswa Bazar tak home sample collection sirf ₹100 me, report 24 ghante me.",
 
     /* The h1 opens with the phrase people type and stops; the secondary terms
        sit in \`h1Sub\`, inside a real sentence. Budget: h1 under ~60 characters,
@@ -3395,7 +3395,7 @@ const LAB_CITY_SEED = [
     hero: {
       h1: "Lab Test in Maharajganj — Blood Test Ghar Baithe",
       h1Sub:
-        "Poore jile me pathology lab ke test ghar par — Sadar se Nautanwa aur Nichlaul tak free home sample collection, routine report 24 ghante me.",
+        "Poore jile me pathology lab ke test ghar par — Sadar se Nautanwa aur Nichlaul tak home sample collection sirf ₹100 me, routine report 24 ghante me.",
     },
 
     /* ── Keywords ──────────────────────────────────────────────────────────

@@ -222,7 +222,7 @@
         "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
         {
           "list": [
-            "Home sample collection free, trained phlebotomist ID card ke saath.",
+            "Home sample collection ₹100, trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se."
@@ -271,7 +271,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#reports-deoria", "label": "Report kab aur kaise milti hai" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list" }

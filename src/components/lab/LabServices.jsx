@@ -337,7 +337,7 @@ export default function LabServices({
  *
  * ── ONLY WHAT WE CAN STAND BEHIND ────────────────────────────────────────
  * The three facts along the bottom are the test's own `fasting` flag and two
- * of the five confirmed promises (free home collection, report in 24 hours).
+ * of the five confirmed promises (home collection at ₹100, report in 24 hours).
  * Nothing like "recommended for everyone", no invented test counts: a single
  * test with no `params` gets its icon in the corner, never a made-up number.
  */
@@ -414,7 +414,7 @@ function TestCard({ test: t, qty, onEnquire }) {
         </li>
         <li className="flex items-start gap-1.5">
           <House className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
-          Free home collection
+          Home collection ₹100
         </li>
         <li className="flex items-start gap-1.5">
           <Clock className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />

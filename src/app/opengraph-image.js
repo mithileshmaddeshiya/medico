@@ -69,7 +69,7 @@ export default function OpengraphImage() {
             color: "#d1fae5",
           }}
         >
-          Free home sample collection · Reports in 24 hours · Open all 7 days
+          Home sample collection ₹100 · Reports in 24 hours · Open all 7 days
         </div>
 
         {/* A single rule under the copy — enough structure to look designed,

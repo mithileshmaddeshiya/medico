@@ -32,9 +32,30 @@ function pool() {
     connectionLimit: 5,
     connectTimeout: 10000,
     timezone: "Z",
+    // A remote MySQL host drops sockets that sit idle, and the pool would hand
+    // the dead one to the next query (read ECONNRESET). Keepalive holds idle
+    // sockets open; idleTimeout retires them before the server does.
+    enableKeepAlive: true,
+    keepAliveInitialDelay: 10000,
+    maxIdle: 2,
+    idleTimeout: 30000,
   });
   return globalThis.__mbDbPool;
 }
+
+/** Socket-level failures where the connection died, not the statement. */
+const DEAD_CONNECTION = new Set([
+  "ECONNRESET",
+  "EPIPE",
+  "ETIMEDOUT",
+  "PROTOCOL_CONNECTION_LOST",
+]);
+
+/**
+ * Only reads are retried. A write that died mid-flight may already have been
+ * applied, and running it again could insert a row twice.
+ */
+const isRead = (sql) => /^\s*(select|show)\b/i.test(sql);
 
 /**
  * The public site's tables (SCHEMA) and the back office's (ADMIN_SCHEMA), then
@@ -60,7 +81,14 @@ function ensureSchema() {
 export async function query(sql, params = []) {
   if (!dbConfigured()) throw new Error("DB_HOST / DB_USER / DB_NAME are not set");
   await ensureSchema();
-  return pool().execute(sql, params);
+  try {
+    return await pool().execute(sql, params);
+  } catch (err) {
+    // The pool discards the broken connection itself, so a second attempt
+    // gets a fresh one.
+    if (!DEAD_CONNECTION.has(err?.code) || !isRead(sql)) throw err;
+    return pool().execute(sql, params);
+  }
 }
 
 /** Run `fn(conn)` inside a transaction; rolls back if it throws. */

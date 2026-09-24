@@ -10,7 +10,7 @@
     "Alkaline Phosphatase Test Matlab",
     "Mahilaon Me Haddi Kamzori Jaanch",
     "Calcium Test Ghar Par Deoria",
-    "Free Home Sample Collection Deoria",
+    "Home Sample Collection Deoria",
     "Lab Test Booking Deoria"
   ],
   "publishedAt": "2026-09-23",
@@ -221,7 +221,7 @@
             "Booking form me shikayat likhiye — kahan dard hai, kitne din se. Sirf test ka naam likhne se sahi salah nahi ban paati.",
             "Multivitamin, calcium ya vitamin D ki goli pehle se chal rahi hai to wo zaroor bataiye; report padhte waqt ye maayne rakhta hai.",
             "Home visit ke slot subah 6 baje se shuru hote hain, jo bujurgon ke liye sabse aasan waqt hota hai.",
-            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai. Home collection ka koi alag visiting charge nahi.",
+            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai. Home collection ₹100 hai (poori booking ke liye ek baar).",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai."
           ]
         },
@@ -357,7 +357,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/blogs/medicine-before-test/deoria",

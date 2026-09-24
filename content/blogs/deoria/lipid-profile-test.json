@@ -223,7 +223,7 @@
         {
           "list": [
             "Slot subah 6 baje se — sample dijiye aur turant naashta kar lijiye.",
-            "Home collection free, trained phlebotomist ID card ke saath.",
+            "Home collection ₹100, trained phlebotomist ID card ke saath.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se.",
             "Lipid ke saath sugar, HbA1c, LFT ya thyroid bhi likha ho to sab ek hi sample me."
@@ -268,7 +268,7 @@
     },
     {
       "question": "Deoria me lipid profile test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me lipid profile ka sample ghar par liya jaata hai. Slot subah 6 baje se, home collection free, aur report 24 ghante ke andar WhatsApp tatha email par PDF me. Daam Deoria ki rate list par dekhiye."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me lipid profile ka sample ghar par liya jaata hai. Slot subah 6 baje se, home collection ₹100, aur report 24 ghante ke andar WhatsApp tatha email par PDF me. Daam Deoria ki rate list par dekhiye."
     }
   ],
   "relatedLinks": {
@@ -278,7 +278,7 @@
       {
         "title": "Deoria Lab Test",
         "links": [
-          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur free home collection", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
+          { "href": "/lab-test/deoria", "label": "Deoria me lab test — booking aur home collection (₹100)", "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake" },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           { "href": "/lab-test/deoria#lab-test-price-deoria", "label": "Deoria ki rate list", "sub": "Lipid Profile aur har test ka aaj ka daam" },
           { "href": "/lab-test/deoria#prepare-for-test-deoria", "label": "Fasting aur sample se pehle ki taiyaari" }

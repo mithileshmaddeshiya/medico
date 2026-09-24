@@ -10,7 +10,7 @@
     "Do Hafte Se Khaansi",
     "TB Aur Sugar Ka Rishta",
     "Deoria Me Blood Test Ghar Par",
-    "Free Home Sample Collection Deoria",
+    "Home Sample Collection Deoria",
     "Lab Test Booking Deoria"
   ],
   "publishedAt": "2026-09-23",
@@ -201,7 +201,7 @@
             "Booking ke waqt bata dijiye ki TB ka ilaaj chal raha hai aur kaun si dawa chal rahi hai — report padhte waqt ye baat maayne rakhti hai.",
             "LFT me aam taur par fasting ke baare me doctor ki salah maaniye; confirmation call par bhi bata diya jaata hai.",
             "Home visit ke slot subah 6 baje se shuru hote hain, isliye kamzor mareez ko din bhar intezaar nahi karna padta.",
-            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai; home collection ka koi alag visiting charge nahi.",
+            "Trained phlebotomist ID card ke saath ghar aata hai aur sample aapke saamne liya jaata hai; home collection ₹100 hai (poori booking ke liye ek baar).",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai — use apne ilaaj wale kendra ya doctor ko dikhaiye."
           ]
         },
@@ -333,7 +333,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/blogs/home-sample-collection/deoria",

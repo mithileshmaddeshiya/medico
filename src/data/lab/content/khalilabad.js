@@ -34,7 +34,7 @@
  * coverage section, with the address advice this district actually needs.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the confirmed set: free home collection, a trained phlebotomist with an
+ * Only the confirmed set: home collection at ₹100 per booking, a trained phlebotomist with an
  * ID card, slots from 6 AM, reports within 24 hours for routine tests, cash/UPI
  * at collection, a confirmation call in about 30 minutes, a visit of about 10
  * minutes. NOT claimed anywhere, however well it would rank: NABL
@@ -90,7 +90,7 @@ const GUIDE_DENGUE = "/blogs/dengue-typhoid-test/deoria";
 export const khalilabadContent = [
   {
     id: "lab-test-in-khalilabad",
-    h: "Khalilabad Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Khalilabad Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Khalilabad ki jagah hi is sheher ki sabse badi soodhkarta aur sabse badi dikkat, dono hai. Gorakhpur kareeb 40 kilometre poorab, Basti kareeb 35 kilometre paschim, aur beech me ye kasba — main line ke station ke saath. Bade lab dono taraf hain, aur dono ek ghante ki doori par. Isliye yahan ka reader ye nahi kehta ki lab door hai. Wo ye kehta hai ki \"kara lenge, Gorakhpur jaate hi hain\" — aur wahi parcha teen hafte jeb me pada rehta hai.",
       "Home sample collection is aadat ko tod deta hai. Aap Khalilabad me apna pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai, poori visit lagbhag 10 minute ki hoti hai, aur routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Na kisi sheher ka faisla, na line, na report lene ka doosra chakkar.",
@@ -251,8 +251,8 @@ export const khalilabadContent = [
     id: "lab-test-price-khalilabad",
     h: "Khalilabad Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Is page par har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na visiting charge, na travel charge, na koi hidden fee. Poora amount confirmation call par bata diya jaata hai, sample lene se pehle.",
-      "Rate list ye rahi: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200. Rate poore jile me ek hi hai — Khalilabad me jo daam hai, wahi Mehdawal, Dhanghata, Bakhira aur Semariyawan me hai. Doori ke naam par kuch nahi badhta.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai. Uske upar home sample collection ka sirf ₹100 lagta hai — poori booking par ek hi baar, chahe kitne bhi test hon. Iske alawa na travel charge, na koi hidden fee. Poora amount confirmation call par bata diya jaata hai, sample lene se pehle.",
+      "Rate list ye rahi: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000. Rate poore jile me ek hi hai — Khalilabad me jo daam hai, wahi Mehdawal, Dhanghata, Bakhira aur Semariyawan me hai. Doori ke naam par kuch nahi badhta.",
       "Bachat package me sabse zyada hai: Basic Full Body ₹999 me 45 parameter, Advanced Full Body ₹1,999 me 72 parameter, aur Senior Citizen Pack ₹2,999 me 88 parameter. Wahi test alag alag karane par kharcha kai guna ho jaata hai.",
       "Kuch test, jaise Fever Panel (malaria, typhoid aur dengue ek saath), price par nahi balki us waqt ki zaroorat par tay hote hain — unke card par 'Call for price' likha rehta hai. Phone par pooch lijiye; sample dene se pehle daam bata diya jaata hai. Payment sample lene ke waqt hi hota hai — cash ya UPI se, PhonePe, Google Pay ya Paytm.",
     ],
@@ -311,8 +311,8 @@ export const khalilabadContent = [
     h: "खलीलाबाद में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "खलीलाबाद और संत कबीर नगर में खून की जांच के लिए अब गोरखपुर या बस्ती जाने की ज़रूरत नहीं है। सीबीसी, थायरॉइड (टीएसएच), शुगर, एचबीए1सी, लिपिड प्रोफाइल, लिवर और किडनी फंक्शन टेस्ट, विटामिन डी, विटामिन बी12, डेंगू और फुल बॉडी चेकअप — ये सारी जांच सैंपल पर होती हैं, और सैंपल आपके घर से लिया जा सकता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है। आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है — कोई विज़िटिंग चार्ज या छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और रोज़ आना-जाना करने वालों की गाड़ी या ट्रेन न छूटे। रूटीन जांच की रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है; कल्चर में 48 से 72 घंटे लगते हैं।",
-      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है। पूरे ज़िले में एक ही रेट है।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — पूरी बुकिंग पर एक ही बार, चाहे जितने टेस्ट हों। आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर बस यही ₹100 — कोई और छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और रोज़ आना-जाना करने वालों की गाड़ी या ट्रेन न छूटे। रूटीन जांच की रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है; कल्चर में 48 से 72 घंटे लगते हैं।",
+      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000 और डेंगू ₹1,000। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है। पूरे ज़िले में एक ही रेट है।",
       "सैंपल खलीलाबाद शहर के साथ मगहर, मेहदावल, धनघटा, बखिरा, हैंसर बाज़ार, संथा, बघौली, नाथनगर, सेमरियावां, पौली और बेलहर कला तक लिया जाता है। आपका गाँव इस सूची में न हो तो एक बार फ़ोन कर लीजिए। पता लिखते समय टोला या पुरवा, ब्लॉक और ग्राम पंचायत का नाम, और एक जाना-पहचाना लैंडमार्क ज़रूर डालिए — यहाँ मकान नंबर से ज़्यादा काम लैंडमार्क आता है।",
       "हमारा खलीलाबाद में कोई वॉक-इन काउंटर नहीं है, और हम यह दावा नहीं करते। यह घर से सैंपल लेने की सेवा है: प्रशिक्षित फ़्लेबोटोमिस्ट आईडी कार्ड के साथ आपके घर आता है, सैंपल आपके सामने लिया जाता है, और पेमेंट उसी समय नकद या यूपीआई से होता है।",
       [
@@ -350,8 +350,8 @@ export const khalilabadContent = [
  */
 export const khalilabadFaqs = [
   {
-    q: "How much does a lab test cost in Khalilabad, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Khalilabad is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate is the same across the district — Mehdawal, Dhanghata or Bakhira costs no more than the town. The total is confirmed on the call before the visit, and payment is taken at collection, by cash or UPI.",
+    q: "How much does a lab test cost in Khalilabad, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Khalilabad — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The rate is the same across the district — Mehdawal, Dhanghata or Bakhira costs no more than the town. The total is confirmed on the call before the visit, and payment is taken at collection, by cash or UPI.",
   },
   {
     q: "Do you have a pathology lab or collection centre in Khalilabad where I can walk in?",

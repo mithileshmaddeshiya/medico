@@ -104,7 +104,7 @@ Yeh niyam is business ke hain, code ke nahi. Code inhe nahi rok sakta.
   hain. Post me jahan number likhna ho, wahan `#lab-test-price-<sheher>` ka
   link dijiye. Isse rate ek jagah rehta hai aur paanch page par alag-alag
   nahi ho jata.
-- **Sirf paanch daawe** jo business sach me karta hai: free home collection,
+- **Sirf paanch daawe** jo business sach me karta hai: home collection (₹100 per booking),
   ID card wala trained phlebotomist, subah 6 baje se slot, 24 ghante me report,
   collection par cash/UPI.
 - **NABL nahi, "certified" nahi, "sabse sasta" nahi**, Deoria me walk-in counter

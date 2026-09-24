@@ -92,7 +92,7 @@
           }
         },
         [
-          "Deoria me home collection ka koi alag visiting charge nahi hai, isliye upar ki doosri, teesri aur chauthi line ka kharcha lagbhag khatam ho jaata hai. Har test ka rate ",
+          "Deoria me home collection ₹100 hai — poori booking ke liye ek baar, alag se koi visiting charge nahi — isliye upar ki doosri, teesri aur chauthi line ka kharcha lagbhag khatam ho jaata hai. Har test ka rate ",
           {
             "text": "Deoria ki price list",
             "href": "/lab-test/deoria#lab-test-price-deoria"
@@ -198,7 +198,7 @@
       "heading": "Poore Ghar Ka Saal Bhar Ka Jaanch Plan — Ek Visit, Kai Log",
       "lead": "Alag-alag din ki jaanch alag-alag din ka jhanjhat hai.",
       "blocks": [
-        "Deoria ke zyadatar gharon me jaanch tab hoti hai jab koi beemar padta hai, aur har baar ek hi vyakti ki. Thodi si planning se ye ulat sakta hai: saal me ek-do tay din, poore ghar ki routine jaanch ek hi visit me, aur beech me sirf wo follow-up jo doctor ne likha hai. Ek visit me sabka sample ho jaata hai, har vyakti ka apna test aur apna rate rehta hai, aur collection free hai.",
+        "Deoria ke zyadatar gharon me jaanch tab hoti hai jab koi beemar padta hai, aur har baar ek hi vyakti ki. Thodi si planning se ye ulat sakta hai: saal me ek-do tay din, poore ghar ki routine jaanch ek hi visit me, aur beech me sirf wo follow-up jo doctor ne likha hai. Ek visit me sabka sample ho jaata hai, har vyakti ka apna test aur apna rate rehta hai, aur collection poori booking ke liye ek hi baar ₹100 hai.",
         {
           "table": {
             "caption": "Ek ghar ka aam saal bhar ka plan — doctor ki salah ke saath milaiye",
@@ -391,7 +391,7 @@
     },
     {
       "question": "Ghar par sample lene ka alag charge lagta hai kya?",
-      "answer": "Deoria me home collection free hai — koi visiting ya travel charge nahi judta. Aap sirf test ka wahi rate dete hain jo pehle bataya gaya, sample lene ke waqt cash ya UPI se."
+      "answer": "Haan, Deoria me home collection ₹100 hai — poori booking ke liye ek baar, chahe ek visit me ghar ke kitne bhi logon ke kitne bhi test hon. Iske alawa koi visiting ya travel charge nahi judta. Aap test ka wahi rate aur ₹100 collection dete hain jo pehle bataya gaya, sample lene ke waqt cash ya UPI se."
     },
     {
       "question": "Ghar ke paanch log test karana chahte hain — kya alag visit lagegi?",

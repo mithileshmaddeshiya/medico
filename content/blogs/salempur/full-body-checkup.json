@@ -293,7 +293,7 @@
         {
           "list": [
             "Wahi test ek-ek karke karane par kharcha kaafi upar chala jaata hai. Package ka poora matlab yahi hai — ek sample, ek visit, ek report.",
-            "Home collection ka koi alag charge nahi hai. Package ka jo daam likha hai, wahi dena hota hai — na visiting charge, na travel charge.",
+            "Home collection ₹100 per booking hai. Package ka jo daam likha hai, uske upar bas yahi — na visiting charge, na travel charge.",
             "Kasba hone ki wajah se yahan koi alag daam nahi lagta. Rate wahi hain jo baaki sheheron me hain.",
             "Payment sample lene ke waqt hota hai — cash ya UPI se. Pehle se paisa dene ki zaroorat nahi.",
             "Kiraya bhi kharche me giniye. Deoria ya Gorakhpur aane-jaane ka dono taraf ka kiraya aur report lene ka doosra chakkar — kasbe me ye asli bachat hai."
@@ -431,7 +431,7 @@
             "text": "Salempur ka service page",
             "href": "/lab-test/salempur"
           },
-          " kholiye, apna package chun kar subah 6 se 8 ke beech ka slot maang lijiye. Lagbhag 30 minute me confirmation call aa jaati hai. Ghar se sample lene ka koi alag charge nahi hai, aur paisa sample lene ke waqt hi cash ya UPI se liya jaata hai. Kis package me kaun se test hain, wo ",
+          " kholiye, apna package chun kar subah 6 se 8 ke beech ka slot maang lijiye. Lagbhag 30 minute me confirmation call aa jaati hai. Ghar se sample lene ka ₹100 per booking lagta hai, aur paisa sample lene ke waqt hi cash ya UPI se liya jaata hai. Kis package me kaun se test hain, wo ",
           {
             "text": "yahan likha hai",
             "href": "/lab-test/salempur#full-body-checkup-salempur"
@@ -465,7 +465,7 @@
   "faqs": [
     {
       "question": "Salempur me full body checkup ka daam kitna hota hai?",
-      "answer": "Daam package ki soochi se tay hota hai, uske parameter number se nahi. Thyroid, HbA1c, Vitamin D aur B12 alag reagent aur alag machine maangte hain, isliye jis plan me ye shaamil hain wo upar padta hai — aur us badhe hue daam ke badle sach me zyada jaankari milti hai. Jo plan inke bina sasta lagta hai, wo isliye sasta hai ki usme kam hai; kam daam me zyada nahi mil raha hota. Ghar se sample lene par koi visiting ya travel charge upar se nahi jodha jaata. Aaj ka rate Salempur ki rate list par har plan ke saamne likha rehta hai, aur booking wali call par poora amount sui lagne se pehle bata diya jaata hai."
+      "answer": "Daam package ki soochi se tay hota hai, uske parameter number se nahi. Thyroid, HbA1c, Vitamin D aur B12 alag reagent aur alag machine maangte hain, isliye jis plan me ye shaamil hain wo upar padta hai — aur us badhe hue daam ke badle sach me zyada jaankari milti hai. Jo plan inke bina sasta lagta hai, wo isliye sasta hai ki usme kam hai; kam daam me zyada nahi mil raha hota. Ghar se sample lene par ₹100 per booking lagta hai, iske alawa koi visiting ya travel charge upar se nahi jodha jaata. Aaj ka rate Salempur ki rate list par har plan ke saamne likha rehta hai, aur booking wali call par poora amount sui lagne se pehle bata diya jaata hai."
     },
     {
       "question": "Full body checkup ke liye khaali pet rehna zaroori hai?",
@@ -509,7 +509,7 @@
     },
     {
       "question": "Salempur me ghar par hi sample de kar package karaya ja sakta hai?",
-      "answer": "Haan, poora package ghar par ho jaata hai aur home collection ka koi alag charge nahi judta — kasba ya gaon hone ki wajah se bhi nahi. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse theek rehta hai. Phlebotomist ID card ke saath aata hai. Payment sample lene ke waqt cash ya UPI se hota hai, pehle se kuch nahi dena hota."
+      "answer": "Haan, poora package ghar par ho jaata hai aur home collection ₹100 per booking hai — kasba ya gaon hone ki wajah se ye nahi badalta. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse theek rehta hai. Phlebotomist ID card ke saath aata hai. Payment sample lene ke waqt cash ya UPI se hota hai, pehle se kuch nahi dena hota."
     }
   ],
   "relatedLinks": {
@@ -535,7 +535,7 @@
           },
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection",
+            "label": "Salempur me lab test — booking aur home collection",
             "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur aur Barhaj"
           }
         ]

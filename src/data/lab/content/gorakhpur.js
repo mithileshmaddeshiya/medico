@@ -43,7 +43,7 @@
  *
  * ── Claims ───────────────────────────────────────────────────────────────
  * Only the confirmed set (see the warning above defaultFaqs in
- * src/data/lab/defaults.js): free home collection, a trained phlebotomist
+ * src/data/lab/defaults.js): home collection at ₹100 per booking, a trained phlebotomist
  * carrying an ID card, slots from 6 AM, reports in 24 hours on WhatsApp and
  * email, cash/UPI on collection. Cold-chain transport, barcode tracking and
  * sealed single-use needles are NOT claimed — they are unverified.
@@ -104,11 +104,11 @@ const CONTACT = "/contact";
 export const gorakhpurContent = [
   {
     id: "lab-test-in-gorakhpur",
-    h: "Gorakhpur Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Gorakhpur Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Gorakhpur me lab dhoondhna kabhi samasya nahi rahi. AIIMS, BRD Medical College aur district hospital — teenon isi sheher me hain, aur inke chaaron taraf collection counters ki koi kami nahi. Samasya ulti hai: kyunki poora ilaaka yahin refer hota hai, isliye har counter par utni hi bheed hai. Kushinagar, Maharajganj, Deoria, Sant Kabir Nagar, Basti aur Siddharthnagar ke saath Bihar ke seemavarti jile aur Nepal border ke kasbe — sab ka rasta yahin aa kar milta hai.",
       "Bheed ka waqt bhi tay hai. Subah 7 se 10 baje ke beech har fasting sample dena hota hai, isliye Medical College Road, Golghar, Betiahata aur Mohaddipur ke counters par usi window me line lagti hai. Sheher lamba-chauda hai aur in raston par traffic bhi bhaari rehta hai — khaali pet aadha ghanta jam me nikalna kisi ke bhi test se pehle ka sahi tareeka nahi hai.",
-      "Ghar par sample dene se ye poora hissa hat jaata hai. Test ya package chuniye, Gorakhpur ka pata landmark ke saath likhiye, subah ka slot lijiye — trained phlebotomist ID card ke saath aata hai, sample aapke saamne leta hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me pahunch jaati hai. Home collection par koi alag charge nahi lagta.",
+      "Ghar par sample dene se ye poora hissa hat jaata hai. Test ya package chuniye, Gorakhpur ka pata landmark ke saath likhiye, subah ka slot lijiye — trained phlebotomist ID card ke saath aata hai, sample aapke saamne leta hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me pahunch jaati hai. Home collection ka sirf ₹100 lagta hai, poori booking par ek baar.",
       [
         "Routine pathology ke saare test yahan book hote hain — CBC, Thyroid Profile, Blood Sugar, HbA1c, Lipid Profile, LFT, KFT, Vitamin D, Vitamin B12, Dengue aur Full Body Checkup. Doctor ka parcha hai to usi panel ke hisaab se booking ho jaati hai. Kis shikayat par kaun sa test hota hai, ye ",
         { text: "alag guide me", href: GUIDE_WHICH_TEST },
@@ -257,8 +257,8 @@ export const gorakhpurContent = [
     id: "lab-test-price-gorakhpur",
     h: "Gorakhpur Me Lab Test Price Aur Rate List",
     p: [
-      "Is page par har card par jo price likha hai, wahi dena hai — home sample collection uske upar free hai. Na visiting charge, na travel charge, na bill ke aakhir me judne wali koi fee. Sheher me auto ka dono taraf ka kiraya aur report lene ka doosra chakkar bach jaata hai, isliye ghar par karane me asli kharcha kam padta hai, zyada nahi.",
-      "Rate list: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai — home sample collection ka uske upar sirf ₹100 lagta hai, poori booking par ek hi baar. Iske alawa na travel charge, na bill ke aakhir me judne wali koi fee. Sheher me auto ka dono taraf ka kiraya aur report lene ka doosra chakkar bach jaata hai, isliye ghar par karane me asli kharcha kam padta hai, zyada nahi.",
+      "Rate list: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Package me bachat sabse zyada hai: Basic Full Body ₹999 (45 parameter), Advanced ₹1,999 (72 parameter) aur Senior Citizen Pack ₹2,999 (88 parameter). Yahi test ek-ek kar ke karane par bill kai guna upar chala jaata hai.",
       "Fever Panel (malaria, typhoid aur dengue ek saath) jaise kuch test us waqt ki zaroorat par tay hote hain, isliye unke card par 'Call for price' likha rehta hai — phone par pooch lijiye, sample lene se pehle price bata diya jaata hai. Payment sample ke waqt hi hota hai, cash ya UPI se (PhonePe, Google Pay, Paytm).",
     ],
@@ -326,8 +326,8 @@ export const gorakhpurContent = [
     p: [
       "गोरखपुर में जांच कराने की सबसे बड़ी दिक्कत लैब ढूँढना नहीं, भीड़ है। एम्स, बीआरडी और ज़िला अस्पताल — तीनों यहीं हैं, इसलिए आसपास के पूरे इलाके के मरीज़ इसी शहर में आते हैं, और सुबह 7 से 10 बजे के बीच हर काउंटर पर लाइन लगती है।",
       "सबसे ज़्यादा फ़ायदा तब होता है जब डॉक्टर से दिखाना हो। पर्चे पर जांच लिखी है तो अपॉइंटमेंट से एक दिन पहले घर पर सैंपल दे दीजिए — रिपोर्ट 24 घंटे में आ जाएगी और आप ओपीडी में रिपोर्ट लेकर जाएँगे। दो चक्कर का काम एक में। ऑपरेशन या भर्ती से पहले वाली जांच में भी यही तरीका काम करता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है — आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी निपटे और आप तुरंत नाश्ता कर सकें। रिपोर्ट व्हाट्सएप और ईमेल पर पीडीएफ में आती है।",
-      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200, डेंगू ₹1,200। फुल बॉडी चेकअप ₹999 (45 पैरामीटर), एडवांस ₹1,999 (72) और सीनियर सिटिज़न पैक ₹2,999 (88)।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर पूरी बुकिंग पर एक ही बार ₹100। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी निपटे और आप तुरंत नाश्ता कर सकें। रिपोर्ट व्हाट्सएप और ईमेल पर पीडीएफ में आती है।",
+      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000, डेंगू ₹1,000। फुल बॉडी चेकअप ₹999 (45 पैरामीटर), एडवांस ₹1,999 (72) और सीनियर सिटिज़न पैक ₹2,999 (88)।",
       "सैंपल गोलघर, सिविल लाइंस, बेतियाहाता, मोहद्दीपुर, तारामंडल, रुस्तमपुर, मेडिकल कॉलेज रोड, गोरखनाथ और कुँवराघाट के साथ-साथ सहजनवा, पिपराइच, चौरी चौरा, बांसगांव, कैम्पियरगंज और खजनी जैसे कस्बों में भी लिया जाता है। पता लिखते समय कोई लैंडमार्क ज़रूर डालिए।",
       "⚠ बच्चे को तेज़ बुखार के साथ झटके, बेहोशी, गर्दन में अकड़न या लगातार उल्टी हो — तो जांच बुक मत कीजिए, सीधे नज़दीकी अस्पताल ले जाइए। यह आपात स्थिति है और इसमें देर ख़तरनाक है।",
     ],
@@ -357,8 +357,8 @@ export const gorakhpurFaqs = [
     a: "Yes. Most routine tests are reported within 24 hours, so book a morning slot for the day before the appointment. You then walk into the OPD with the report in hand and the doctor can prescribe in that same visit — two trips become one. Send a photo of the prescription when you book, so that exactly the panel written on it is run; test names are often confusingly similar.",
   },
   {
-    q: "How much does a lab test cost in Gorakhpur, and is home collection free?",
-    a: "Home sample collection is free — you pay only the price printed on the test card, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. A few tests, such as the Fever Panel, are marked 'Call for price' — the price is confirmed before the sample is taken. Payment is by cash or UPI, at the time of collection.",
+    q: "How much does a lab test cost in Gorakhpur, and what does home collection cost?",
+    a: "Home sample collection costs ₹100 per booking — you pay the price printed on the test card plus that ₹100, however many tests or family members the booking covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, HbA1c ₹500, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. A few tests, such as the Fever Panel, are marked 'Call for price' — the price is confirmed before the sample is taken. Payment is by cash or UPI, at the time of collection.",
   },
   {
     q: "Can pre-operative tests be done at home as well?",

@@ -20,7 +20,7 @@
  *
  * ── Claims and their sourcing ────────────────────────────────────────────
  * Only the confirmed set (see the warning above defaultFaqs in
- * src/data/lab/defaults.js): free home collection, a trained phlebotomist
+ * src/data/lab/defaults.js): home collection at ₹100 per booking, a trained phlebotomist
  * carrying an ID card, slots from 6 AM, reports in 24 hours, cash/UPI at
  * collection, a callback in about 30 minutes, a visit of about 10 minutes.
  * NOT claimed here, however well it would rank: NABL accreditation, cold-chain
@@ -69,7 +69,7 @@ const GUIDE_PARENTS = "/blogs/parents-blood-test/salempur";
 export const salempurContent = [
   {
     id: "lab-test-in-salempur",
-    h: "Salempur Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Salempur Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Salempur tehsil mukhyalaya hai, lekin jaanch ke maamle me yahan ka reader hamesha ek qadam door khada hota hai. Chhoti si shikayat par bhi parcha likhwane ke baad sawaal wahi rehta hai — sample kahan dein. Zila mukhyalaya Deoria yahan se kareeb 30 kilometre hai aur Gorakhpur kareeb 75 kilometre; bade diagnostic setup wahin hain. Ek CBC ya thyroid ke liye bhi log subah khaali pet nikalte hain, tempo ya train pakadte hain, sample dete hain, aur report lene doosre din phir jaate hain.",
       "Home sample collection ye poora chakkar khatam kar deta hai. Aap Salempur me apna pata dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — na kiraya, na khaali pet ka safar, na report lene ka doosra din.",
@@ -208,8 +208,8 @@ export const salempurContent = [
     id: "lab-test-price-salempur",
     h: "Salempur Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Is page par har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na visiting charge, na travel charge, na koi hidden fee. Chhote kasbe me iska matlab bade sheher se zyada hai: bahar se daam bhale barabar lagen, asli kharcha ghar par karane me kam padta hai, kyunki aane-jaane ka kiraya dono taraf ka aur report lene ka doosra chakkar bach jaata hai.",
-      "Rate list ise tarah hai: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200. Ye wahi rate hain jo hamare doosre sheheron me hain — kasba hone ki wajah se yahan koi alag daam nahi lagta.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai. Uske upar home sample collection ka sirf ₹100 lagta hai — poori booking par ek hi baar, chahe kitne bhi test hon. Iske alawa na travel charge, na koi hidden fee. Chhote kasbe me iska matlab bade sheher se zyada hai: bahar se daam bhale barabar lagen, asli kharcha ghar par karane me kam padta hai, kyunki aane-jaane ka kiraya dono taraf ka aur report lene ka doosra chakkar bach jaata hai.",
+      "Rate list ise tarah hai: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000. Ye wahi rate hain jo hamare doosre sheheron me hain — kasba hone ki wajah se yahan koi alag daam nahi lagta.",
       "Package me bachat sabse zyada hoti hai. Basic Full Body ₹999 me 45 parameter deta hai — wahi test alag alag karane par kharcha kai guna ho jaata hai. Advanced ₹1,999 me 72 parameter aur Senior Citizen Pack ₹2,999 me 88 parameter deta hai.",
       "Kuch test, jaise Fever Panel (malaria, typhoid aur dengue ek saath), price par nahi balki us waqt ki zaroorat par tay hote hain — unke card par 'Call for price' likha rehta hai. Aise me phone par pooch lijiye; sample dene se pehle price bata diya jaata hai. Payment sample lene ke waqt hi hota hai — cash ya UPI se, PhonePe, Google Pay ya Paytm.",
     ],
@@ -267,8 +267,8 @@ export const salempurContent = [
     h: "सलेमपुर में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "सलेमपुर में खून की जांच के लिए अब देवरिया या गोरखपुर जाने की ज़रूरत नहीं है। सीबीसी, थायरॉइड, शुगर, एचबीए1सी, लिपिड प्रोफाइल, लिवर और किडनी फंक्शन टेस्ट, विटामिन डी, विटामिन बी12, डेंगू और फुल बॉडी चेकअप — ये सारी जांच सैंपल पर होती हैं, और सैंपल आपके घर से लिया जा सकता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है। आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है — कोई विज़िटिंग चार्ज या छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
-      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — पूरी बुकिंग पर एक ही बार, चाहे जितने टेस्ट हों। आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर बस यही ₹100 — कोई और छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए और आप तुरंत नाश्ता कर सकें। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
+      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000 और डेंगू ₹1,000। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
       "सैंपल सलेमपुर कस्बे के साथ भटनी, लार, भटपार रानी, भागलपुर, मझौली राज, रामपुर कारखाना और बरहज तक लिया जाता है। आपका गाँव इस सूची में न हो तो एक बार फ़ोन कर लीजिए — कवर होने पर उसी समय स्लॉट बुक हो जाएगा। पता लिखते समय टोला या पुरवा का नाम और एक लैंडमार्क ज़रूर डालिए।",
       "घर से बाहर रहते हैं और माता-पिता की जांच करवानी है, तो बुकिंग आप कहीं से भी कर सकते हैं — घर का पता, लैंडमार्क और वहाँ मौजूद किसी का चालू मोबाइल नंबर दे दीजिए। पेमेंट सैंपल लेते समय नकद या यूपीआई से होता है, और रिपोर्ट व्हाट्सएप पर आ जाती है।",
       [
@@ -297,13 +297,13 @@ export const salempurContent = [
  * schema text: the JSON-LD has to mirror the readable answer exactly, so the
  * links live outside `a`. See LabFaq.
  *
- * Claims are limited to the confirmed set: free home collection, trained
+ * Claims are limited to the confirmed set: home collection at ₹100 per booking, trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI.
  */
 export const salempurFaqs = [
   {
-    q: "How much does a lab test cost in Salempur, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Salempur is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. Being a small town makes no difference to the rate. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Salempur, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Salempur — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. Being a small town makes no difference to the rate. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do I have to travel from Salempur to Deoria or Gorakhpur for a lab test?",

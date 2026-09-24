@@ -241,7 +241,7 @@
         "Deoria jile me barsaat ke baad paani jaldi nahi utarta. Mohalle ki nichli galiyaan, gaon ke pokhre ke kinare aur kheton se lage tole — inhi jagahon se sabse zyada bukhar ke mareez aate hain, aur aksar ek hi ghar me do-teen log ek saath. Aise me do practical baatein hain jo bahut farak daalti hain.",
         {
           "list": [
-            "Ghar ke jitne logon ko bukhar hai, sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaata hai aur collection tab bhi free hai.",
+            "Ghar ke jitne logon ko bukhar hai, sabki booking ek hi slot me kar dijiye. Ek hi visit me sabka sample ho jaata hai aur collection tab bhi ₹100 hi rehta hai.",
             "Har mareez ka apna test likha hota hai — sab par ek hi panel mat lagaiye. Kis-kis ka kaunsa test hai, ye booking ke waqt saaf bata dijiye.",
             "Mareez chalne-firne layak nahi hai to ye bata dijiye; phlebotomist usi taiyaari ke saath aata hai aur sample bistar par hi le liya jaata hai.",
             "Pata poora likhiye — mohalla ya gaon, post office ya block, aur ek aisa landmark jo shaam ko bhi dikhe. Deoria me deri ka sabse bada karan pata na milna hai.",
@@ -284,7 +284,7 @@
             "Slot subah 6 baje se shuru hote hain. Malaria me bukhar chadhne ke waqt ka sample zyada kaam ka hota hai — ye baat call par bata dijiye.",
             "Mareez ne paani nahi piya ho to nas milne me dikkat hoti hai. Fasting kisi bukhar wale test me nahi lagti, isliye paani pilate rahiye.",
             "Booking ke waqt bata dijiye ki kaun si dawa chal rahi hai, khaas kar antibiotic — culture ke liye ye jaankari zaroori hai.",
-            "Payment sample lene ke waqt, cash ya UPI se, wahi rate jo pehle bataya gaya tha. Home collection ka koi alag visiting charge nahi hai."
+            "Payment sample lene ke waqt, cash ya UPI se, wahi rate jo pehle bataya gaya tha. Home collection ₹100 hai (poori booking ke liye ek baar)."
           ]
         },
         {
@@ -371,7 +371,7 @@
     },
     {
       "question": "Ghar me teen logon ko bukhar hai — sabka test ek hi visit me ho jaayega?",
-      "answer": "Haan, ek hi visit me teenon ka sample liya ja sakta hai aur home collection phir bhi free rehta hai. Booking ke waqt sirf ye bata dijiye ki kitne log hain aur kis-kis ka kaunsa test hai — sab par ek hi panel mat lagwaiye, kyunki har mareez ke bukhar ka din alag ho sakta hai aur uske hisaab se test badal jaata hai. Kisi ko chalne-firne me dikkat hai ya bistar par hai to wo bhi bata dijiye. Har vyakti ki report alag PDF me, 24 ghante ke andar WhatsApp aur email par aa jaati hai."
+      "answer": "Haan, ek hi visit me teenon ka sample liya ja sakta hai aur home collection phir bhi ₹100 hi rehta hai (poori booking ke liye ek baar). Booking ke waqt sirf ye bata dijiye ki kitne log hain aur kis-kis ka kaunsa test hai — sab par ek hi panel mat lagwaiye, kyunki har mareez ke bukhar ka din alag ho sakta hai aur uske hisaab se test badal jaata hai. Kisi ko chalne-firne me dikkat hai ya bistar par hai to wo bhi bata dijiye. Har vyakti ki report alag PDF me, 24 ghante ke andar WhatsApp aur email par aa jaati hai."
     },
     {
       "question": "Blood culture likha hai — report 24 ghante me kyun nahi aati?",
@@ -416,7 +416,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

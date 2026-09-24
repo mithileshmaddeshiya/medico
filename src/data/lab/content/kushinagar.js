@@ -58,7 +58,7 @@
  *      report already in hand.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the five this business confirms: free home collection, a trained
+ * Only the five this business confirms: home collection at ₹100 per booking, a trained
  * phlebotomist with an ID card, slots from 6 AM, reports in 24 hours, cash/UPI
  * on collection. NOT claimed anywhere: NABL accreditation, pathologist
  * verification, cold-chain transport, barcode tracking, sealed single-use
@@ -89,7 +89,7 @@
 export const kushinagarContent = [
   {
     id: "lab-test-in-kushinagar",
-    h: "Kushinagar Me Lab Test — Kasia Se Tamkuhi Raj Tak Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Kushinagar Me Lab Test — Kasia Se Tamkuhi Raj Tak Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Kushinagar jile me jaanch ka asli kharcha test ki fees nahi, us tak pahunchne ka safar hai. Collection centre zyadatar Padrauna me hain — zila aspatal ke aas-paas, Bank Road aur purani bazar ke kareeb — aur jile ka bada hissa wahan se 20 se 45 kilometre door baitha hai. Khadda, Tamkuhi Raj, Sewrahi, Nebua Naurangia ya Fazilnagar se ek CBC ke liye nikalne ka matlab hai subah ki gaadi, khaali pet safar, counter par line, aur report lene ke liye doosre din phir wahi rasta. Ganne ke seson me, jab mill aur khet dono chal rahe hote hain, ye do din ki dihadi ka nuksan hai — aur wo aksar test ke daam se zyada baith jaata hai.",
       "Home sample collection isi rasta kharch ko khatam kar deta hai. Aap apna pata dete hain, apna slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — na kiraya, na khaali pet ka safar, na line, na doosra chakkar, aur na kaam se chhutti.",
@@ -204,8 +204,8 @@ export const kushinagarContent = [
     id: "lab-test-price-kushinagar",
     h: "Kushinagar Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Rate poore jile me ek hi hai. Padrauna me jo daam hai, wahi Khadda, Tamkuhi Raj, Sewrahi aur Nebua Naurangia me hai — doori ke naam par kuch nahi badhta, aur home sample collection bilkul free hai. Na visiting charge, na convenience fee, na baad me judne wala koi amount.",
-      "Blood Sugar ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1000, Vitamin B12 ₹1200 aur Dengue ₹1200. Package me Basic Full Body Checkup ₹999 se, Advanced Full Body ₹1999 se aur Senior Citizen Pack ₹2999 se shuru hota hai. Kuch test — jaise Fever Panel — parche ke hisaab se banaye jaate hain, isliye unka daam call par bataya jaata hai; wo daam booking se pehle bata diya jaata hai, sample lene ke baad nahi.",
+      "Rate poore jile me ek hi hai. Padrauna me jo daam hai, wahi Khadda, Tamkuhi Raj, Sewrahi aur Nebua Naurangia me hai — doori ke naam par kuch nahi badhta, aur home sample collection sirf ₹100 me hota hai, poori booking par ek baar. Iske alawa na convenience fee, na baad me judne wala koi amount.",
+      "Blood Sugar ₹100, CBC ₹300, Thyroid Profile ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1000, Vitamin B12 ₹1000 aur Dengue ₹1000. Package me Basic Full Body Checkup ₹999 se, Advanced Full Body ₹1999 se aur Senior Citizen Pack ₹2999 se shuru hota hai. Kuch test — jaise Fever Panel — parche ke hisaab se banaye jaate hain, isliye unka daam call par bataya jaata hai; wo daam booking se pehle bata diya jaata hai, sample lene ke baad nahi.",
       "Payment sample lene ke waqt hota hai, cash ya UPI se — PhonePe, Google Pay ya Paytm. Advance kisi cheez ka nahi lagta. Booking ke waqt total pooch lena aapka haq hai, aur jo total us waqt bataya jaaye wahi aana chahiye.",
       "Ek baat jo paise se zyada bachati hai: ek hi visit me ghar ke sabhi logon ka sample karwa lijiye. Chaar log alag alag din par karayein to chaar visit hoti hain aur chaar baar taalne ka mauka milta hai; ek slot me ho jaaye to kisi ka test chhootta nahi.",
     ],
@@ -252,7 +252,7 @@ export const kushinagarContent = [
     id: "kushinagar-lab-test-hindi",
     h: "कुशीनगर (पडरौना) में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
-      "कुशीनगर जिले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। आपको कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन पूरी तरह मुफ़्त है; आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
+      "कुशीनगर जिले में खून और पेशाब की सभी सामान्य जाँच घर बैठे हो जाती हैं। आपको कहीं जाना नहीं पड़ता — प्रशिक्षित फ्लेबोटोमिस्ट पहचान पत्र के साथ आपके घर आता है, आपके सामने सैंपल लेता है, और रिपोर्ट 24 घंटे के अंदर व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है। होम सैंपल कलेक्शन का चार्ज ₹100 है, पूरी बुकिंग पर एक ही बार; इसके अलावा आप सिर्फ़ जाँच का वही दाम देते हैं जो कार्ड पर लिखा है।",
       "जिला मुख्यालय पडरौना है और कुशीनगर (कसया) वह तीर्थ स्थल है जहाँ महापरिनिर्वाण मंदिर है — दोनों जगह यही सेवा उपलब्ध है। इसके अलावा हाटा, रामकोला, तमकुहीराज, खड्डा, कप्तानगंज, सेवरही, फ़ाज़िलनगर, दुदही, नेबुआ नौरंगिया और विशुनपुरा जैसे कस्बे और उनसे लगे गाँव भी शामिल हैं। अपने गाँव का नाम सूची में न दिखे तो एक बार फ़ोन कर लीजिए।",
       "कौन सी जाँच कब — यह सबसे ज़रूरी बात है। बुख़ार के पहले 1 से 5 दिन में डेंगू NS1, पाँचवें दिन के बाद डेंगू IgM, और टाइफ़ाइड की विडाल जाँच के लिए कम से कम 5 से 7 दिन का बुख़ार चाहिए। हर बुख़ार में CBC साथ में ज़रूर कराएँ। शुगर, लिपिड और ज़्यादातर फुल बॉडी पैकेज में 10 से 12 घंटे खाली पेट रहना पड़ता है; उस दौरान सादा पानी पीते रहिए।",
       "एक चेतावनी जो इस जिले के लिए सबसे ज़रूरी है: बच्चे को तेज़ बुख़ार के साथ झटके आएँ, बेहोशी हो, गर्दन अकड़ जाए या वह सुस्त पड़ा रहे — तो जाँच बुक मत कीजिए, सीधे नज़दीकी अस्पताल ले जाइए। ऐसे में एक-एक घंटा मायने रखता है और घर पर सैंपल का इंतज़ार ख़तरनाक है।",
@@ -275,8 +275,8 @@ export const kushinagarContent = [
  */
 export const kushinagarFaqs = [
   {
-    q: "How much does a lab test cost in Kushinagar, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile ₹550, HbA1c ₹600, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The rate in far towns such as Khadda, Tamkuhi Raj or Nebua Naurangia is the same as in Padrauna. Payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Kushinagar, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile ₹400, HbA1c ₹500, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The rate in far towns such as Khadda, Tamkuhi Raj or Nebua Naurangia is the same as in Padrauna. Payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do you have a lab or collection centre in Kushinagar or Padrauna?",

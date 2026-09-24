@@ -272,7 +272,7 @@
         "Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Deoria me hamara walk-in counter nahi hai.",
         {
           "list": [
-            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Home sample collection ₹100; trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se — 10-12 ghante fasting ke baad sample, phir naashta.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me.",
             "Payment sample ke waqt, cash ya UPI se."
@@ -322,7 +322,7 @@
     },
     {
       "question": "Deoria me wazan ki jaanch ke test ghar par ho sakte hain?",
-      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection free, slot subah 6 baje se, report 24 ghante ke andar WhatsApp par."
+      "answer": "Haan. Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me sample ghar par liya jaata hai. Home collection ₹100, slot subah 6 baje se, report 24 ghante ke andar WhatsApp par."
     }
   ],
   "relatedLinks": {
@@ -334,7 +334,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/blogs/blood-test/deoria",

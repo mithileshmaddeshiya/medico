@@ -438,7 +438,7 @@
             "Saada paani peete rahiye, fasting me bhi.",
             "Urine sample ke liye container pehle maang lijiye; subah ka pehla peshab dijiye.",
             "Report 24 ghante ke andar phone par PDF me aa jaati hai. Urine culture ho to 48 se 72 ghante lagte hain.",
-            "Payment sample ke waqt cash ya UPI se — home collection ka koi alag charge nahi judta."
+            "Payment sample ke waqt cash ya UPI se — home collection ₹100 per booking hai."
           ]
         },
         [
@@ -562,7 +562,7 @@
     },
     {
       "question": "Varanasi me LFT KFT ka sample ghar se kab tak liya ja sakta hai?",
-      "answer": "Subah 6 baje se slot shuru hote hain, aur fasting wale case me pehla slot hi sabse aasan padta hai — sample ke turant baad naashta ho jaata hai. Poore Varanasi me home collection free hai, aur phlebotomist ID card ke saath aata hai. Payment sample ke waqt cash ya UPI se hota hai. Urine routine bhi saath karana ho to container pehle se de diya jaata hai, kyunki subah ka pehla peshab sabse achha maana jaata hai."
+      "answer": "Subah 6 baje se slot shuru hote hain, aur fasting wale case me pehla slot hi sabse aasan padta hai — sample ke turant baad naashta ho jaata hai. Poore Varanasi me home collection ₹100 hai, aur phlebotomist ID card ke saath aata hai. Payment sample ke waqt cash ya UPI se hota hai. Urine routine bhi saath karana ho to container pehle se de diya jaata hai, kyunki subah ka pehla peshab sabse achha maana jaata hai."
     }
   ],
   "relatedLinks": {
@@ -575,7 +575,7 @@
           {
             "href": "/lab-test/varanasi",
             "label": "Varanasi me lab test — booking aur home collection",
-            "sub": "Free home sample collection, slot subah 6 baje se"
+            "sub": "Home sample collection ₹100, slot subah 6 baje se"
           },
           {
             "href": "/lab-test/varanasi#popular-blood-tests-varanasi",

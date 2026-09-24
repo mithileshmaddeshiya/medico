@@ -114,7 +114,7 @@
       "heading": "Payment Aur Report — Aap Door Hon Tab Bhi Aapke Haath Me",
       "lead": "Kaagaz nahi, PDF. Ghar par kisi ko report lene nahi jaana.",
       "blocks": [
-        "Payment sample lene ke waqt hota hai, cash ya UPI se, usi rate par jo pehle bataya gaya. Ghar par cash rakhne ki dikkat ho to UPI ka raasta chuniye — door se kaise hoga, ye booking call par pooch lijiye. Home collection ka koi alag charge nahi judta.",
+        "Payment sample lene ke waqt hota hai, cash ya UPI se, usi rate par jo pehle bataya gaya. Ghar par cash rakhne ki dikkat ho to UPI ka raasta chuniye — door se kaise hoga, ye booking call par pooch lijiye. Home collection ke ₹100 per booking lagte hain.",
         "Report 24 ghante ke andar WhatsApp aur email par PDF me aati hai. Door rehne walon ke liye yahi sabse kaam ki baat hai, lekin tabhi jab booking ke waqt sahi number aur email diya ho:",
         {
           "list": [
@@ -311,7 +311,7 @@
     },
     {
       "question": "Payment kaun karega — ghar walon ko cash rakhna padega?",
-      "answer": "Payment sample lene ke waqt hota hai, cash ya UPI se, usi rate par jo pehle bataya gaya. Ghar par cash ka intezaam na ho to UPI ka raasta chuniye; door se kaise karna hai, ye booking call par pooch lijiye. Home collection ka koi alag charge nahi hai."
+      "answer": "Payment sample lene ke waqt hota hai, cash ya UPI se, usi rate par jo pehle bataya gaya. Ghar par cash ka intezaam na ho to UPI ka raasta chuniye; door se kaise karna hai, ye booking call par pooch lijiye. Home collection ke ₹100 per booking lagte hain."
     },
     {
       "question": "Maa aur papa dono ka test ek hi visit me ho jaayega?",

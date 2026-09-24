@@ -265,7 +265,7 @@
       "lead": "Khoon aur peshab — dono ek hi visit me.",
       "blocks": [
         "Urine test ke liye Deoria Sadar ki kisi counter par jaane ki zaroorat nahi. Sample Deoria sheher ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak ghar par liya jaata hai. Trained phlebotomist ID card ke saath aata hai, saaf container deta hai, aur khoon ki koi jaanch bhi likhi ho to dono sample ek hi visit me ho jaate hain.",
-        "Home collection free hai, slot subah 6 baje se shuru hote hain, aur routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aati hai — culture me 48 se 72 ghante. Payment sample lene ke waqt cash ya UPI se hota hai.",
+        "Home collection ₹100 hai, slot subah 6 baje se shuru hote hain, aur routine test ki report 24 ghante ke andar WhatsApp aur email par PDF me aati hai — culture me 48 se 72 ghante. Payment sample lene ke waqt cash ya UPI se hota hai.",
         [
           "Hamara Deoria me koi walk-in counter nahi hai; ye ghar se sample lene ki service hai. Aaj ka rate ",
           {
@@ -337,7 +337,7 @@
     },
     {
       "question": "Deoria me urine test ghar par ho sakta hai?",
-      "answer": "Haan. Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak sample ghar par liya jaata hai. Phlebotomist ID card ke saath aata hai aur saaf container deta hai, aur khoon ki jaanch bhi ho to dono sample ek hi visit me ho jaate hain. Home collection free hai, slot subah 6 baje se hain, aur payment sample ke waqt cash ya UPI se hota hai. Hamara Deoria me koi walk-in counter nahi hai."
+      "answer": "Haan. Deoria Sadar ke saath Rudrapur, Barhaj, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni tak sample ghar par liya jaata hai. Phlebotomist ID card ke saath aata hai aur saaf container deta hai, aur khoon ki jaanch bhi ho to dono sample ek hi visit me ho jaate hain. Home collection ₹100 hai, slot subah 6 baje se hain, aur payment sample ke waqt cash ya UPI se hota hai. Hamara Deoria me koi walk-in counter nahi hai."
     }
   ],
   "relatedLinks": {
@@ -349,7 +349,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Rudrapur, Barhaj, Bhatpar Rani aur aas-paas ke ilaake"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

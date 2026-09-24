@@ -31,7 +31,7 @@
         {
           "note": {
             "title": "Har kasbe me yahi baatein",
-            "text": "Home collection free hai; trained phlebotomist ID card ke saath aata hai; slot subah 6 baje se; report 24 ghante ke andar WhatsApp aur email par PDF me; payment sample ke waqt cash ya UPI se. Kasbe ke hisaab se rate nahi badalta. Kisi kasbe me hamara walk-in counter nahi hai.",
+            "text": "Home collection ₹100 hai; trained phlebotomist ID card ke saath aata hai; slot subah 6 baje se; report 24 ghante ke andar WhatsApp aur email par PDF me; payment sample ke waqt cash ya UPI se. Kasbe ke hisaab se rate nahi badalta. Kisi kasbe me hamara walk-in counter nahi hai.",
             "tone": "info"
           }
         },
@@ -292,7 +292,7 @@
     },
     {
       "question": "Pipraich ya Chauri Chaura me home collection ka alag charge lagta hai?",
-      "answer": "Nahi. Home collection free hai aur rate kasbe ke hisaab se nahi badalta. Aap sirf test ka likha hua rate dete hain, sample lene ke waqt cash ya UPI se."
+      "answer": "Home collection ₹100 per booking hai aur rate kasbe ke hisaab se nahi badalta. Aap test ka likha hua rate aur ₹100 collection charge dete hain, sample lene ke waqt cash ya UPI se."
     },
     {
       "question": "Raat ki shift hai — fasting sugar ka sample kab dein?",
@@ -324,7 +324,7 @@
         "links": [
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "label": "Gorakhpur me lab test — booking aur home collection",
             "sub": "Sheher ke mohalle aur jile ke kasbe"
           },
           {

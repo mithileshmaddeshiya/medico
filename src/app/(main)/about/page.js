@@ -29,7 +29,7 @@ import { withRouteSeo } from "@/lib/routeSeo";
  * ── THE RULE THIS PAGE IS WRITTEN UNDER ───────────────────────────────────
  * An About page is where a search engine and a cautious reader both go to
  * decide whether a health service is real. So it may only state what is
- * confirmed — free home collection, a trained phlebotomist with an ID card,
+ * confirmed — home collection at ₹100 per booking, a trained phlebotomist with an ID card,
  * 6 AM slots seven days a week, reports in 24 hours, cash or UPI at
  * collection. No accreditation, no ratings, no patient counts, no partner-lab
  * names. See the warning at the top of src/data/home.js.
@@ -75,7 +75,7 @@ const baseMetadata = {
   openGraph: {
     title: "About MedicoBharat — Lab Test at Home",
     description:
-      "Lab tests and full body checkups with free home sample collection. What MedicoBharat promises, and what it does not claim.",
+      "Lab tests and full body checkups with home sample collection at ₹100. What MedicoBharat promises, and what it does not claim.",
     url: url("/about"),
     siteName: "MedicoBharat",
     type: "website",
@@ -87,8 +87,8 @@ const baseMetadata = {
 const PROMISES = [
   {
     icon: Wallet,
-    title: "Collection ka koi charge nahi",
-    text: "Card par jo price likha hai, sirf wahi. Na visiting charge, na convenience fee.",
+    title: "Home collection sirf ₹100",
+    text: "Card par jo price likha hai, uske upar ek booking ka ₹100 collection charge — bas. Na convenience fee, na hidden amount.",
   },
   {
     icon: BadgeCheck,
@@ -365,7 +365,7 @@ export default async function AboutMedicoBharat() {
             </h2>
 
             <p className="mx-auto mt-3 max-w-2xl text-[13.5px] sm:text-[15px] leading-relaxed text-emerald-50">
-              Free home sample collection, slot subah 6 baje se, aur report 24
+              Home sample collection sirf ₹100 me, slot subah 6 baje se, aur report 24
               ghante me WhatsApp par — sabhi test aur rate list ek hi page par.
             </p>
 

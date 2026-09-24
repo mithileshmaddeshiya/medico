@@ -37,7 +37,7 @@
         [
           "Home collection ne wo hissa hata diya hai. ",
           { "text": "MedicoBharat Salempur me ghar se sample leta hai", "href": "/lab-test/salempur" },
-          " — free home collection, subah 6 baje se slot, aur 24 ghante ke andar WhatsApp aur email par PDF report. Iska matlab ye hai ki ab paisa aur din us cheez me nahi jaate jo aane-jaane me jaate the. Lekin isi wajah se ek nayi galti aam ho gayi hai: log zaroorat se zyada test kara lete hain, ya sahi test galat din par."
+          " — home collection sirf ₹100 me, subah 6 baje se slot, aur 24 ghante ke andar WhatsApp aur email par PDF report. Iska matlab ye hai ki ab paisa aur din us cheez me nahi jaate jo aane-jaane me jaate the. Lekin isi wajah se ek nayi galti aam ho gayi hai: log zaroorat se zyada test kara lete hain, ya sahi test galat din par."
         ],
         "Yahi is guide ka kaam hai. Neeche har aam shikayat ke saamne wo test likha hai jo us waqt sach me kaam ka hota hai — aur wo bhi likha hai jo us waqt karana bekaar hai. Har extra number ka matlab nahi hota; kuch to sirf ghabrahat paida karte hain aur ek aur test ki line laga dete hain.",
         {
@@ -270,7 +270,7 @@
         [
           "Test tay hai to booking seedhi hai — ",
           { "text": "Salempur ka service page", "href": "/lab-test/salempur" },
-          " kholiye, form bhariye, aur lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection free hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+          " kholiye, form bhariye, aur lagbhag 30 minute me confirmation call aa jaayegi. Slot subah 6 baje se milte hain, home collection ₹100 hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
         ],
         [
           "Test tay nahi hai to pehle ye tay kar lijiye ki saalana checkup karana hai ya kisi shikayat ka jawab dhoondhna hai. Pehle ke liye ",
@@ -326,7 +326,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection",
+            "label": "Salempur me lab test — booking aur home collection",
             "sub": "Bhatni, Lar, Bhatpar Rani, Bhagalpur, Majhauli Raj aur Barhaj"
           },
           {

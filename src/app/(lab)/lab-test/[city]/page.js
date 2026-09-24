@@ -70,7 +70,7 @@ export async function generateMetadata({ params }) {
   const ogPath = cityData.ogImage || LAB_OG_IMAGE;
   const ogImage = ogPath.startsWith("http") ? ogPath : `${SITE}${ogPath}`;
   const ogType = ogImage.toLowerCase().endsWith(".png") ? "image/png" : "image/jpeg";
-  const ogAlt = `Lab Test in ${name} with free home sample collection — MedicoBharat`;
+  const ogAlt = `Lab Test in ${name} with home sample collection — MedicoBharat`;
 
   return {
     title,
@@ -295,8 +295,8 @@ const diagnosticLabNode = (city) => {
         // Where the offer is actually bookable. An Offer with no url is a price
         // with nowhere to go; #tests is the anchor on the price grid.
         url: `${id.url}#tests`,
-        // Free home collection is a real part of every offer here, and the one
-        // thing that differentiates the price from a walk-in lab's.
+        // Home collection (₹100 per booking) is a real part of every offer here,
+        // and the one thing that differentiates it from a walk-in lab's.
         availableAtOrFrom: { "@type": "Place", name: `${city.name} — home sample collection` },
         itemOffered: { "@type": "MedicalTest", name: test.name },
       })),

@@ -48,7 +48,7 @@
         [
           "Booking, poori price list, test menu aur aapke ilaake me collection ka time — wo sab service page par hai: ",
           {
-            "text": "Varanasi me lab test aur free home sample collection",
+            "text": "Varanasi me lab test aur home sample collection",
             "href": "/lab-test/varanasi"
           },
           ". Ye guide uske aage ka hissa hai — test chunna aur report samajhna."
@@ -291,7 +291,7 @@
           "list": [
             "Test ya package chuniye, Varanasi ka address landmark ke saath likhiye, subah ka slot select kijiye, confirm kar dijiye.",
             "Trained phlebotomist ID card ke saath aata hai. Poori visit lagbhag 10 minute ki hoti hai.",
-            "Report 24 ghante me PDF me aa jaati hai. Home collection ka koi alag charge nahi hai."
+            "Report 24 ghante me PDF me aa jaati hai. Home collection ₹100 per booking hai."
           ]
         },
         {
@@ -376,7 +376,7 @@
             "Lab kitne saal se chal rahi hai — quality control waqt ke saath hi banta hai.",
             "Report par test ka METHOD likha jaata hai ya nahi (jaise CLIA ya ECLIA). Method chhapna is baat ka sabse saaf sanket hai ki lab ko apne number par bharosa hai.",
             "Quoted price usi method ka hai ya nahi — CLIA aur ECLIA purane ELISA se mehnge padte hain lekin hormone ke liye zyada reliable hain.",
-            "Home collection ka charge sach me nahi hai, ya bill ke aakhir me jud jaayega."
+            "Home collection ka charge kitna hai, aur wo pehle bataya gaya hai ya bill ke aakhir me jud jaayega."
           ]
         },
         "Jo test ₹150 sasta pada lekin dobara sahi lab me karana pade, wo sasta nahi tha. Isi tarah, jo report doctor ke samajh me na aaye kyunki usme method aur range nahi likhi — wo report nahi, ek kagaz hai.",
@@ -485,7 +485,7 @@
           {
             "href": "/lab-test/varanasi",
             "label": "Varanasi me lab test — booking aur home collection",
-            "sub": "Free home sample collection, slot subah 6 baje se"
+            "sub": "Home sample collection ₹100, slot subah 6 baje se"
           },
           {
             "href": "/lab-test/varanasi#lab-test-price-varanasi",

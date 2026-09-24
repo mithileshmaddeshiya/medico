@@ -78,7 +78,7 @@ export function linkTitle(href) {
 
   // /lab-test/<city>
   if (parts[0] === "lab-test" && parts[1]) {
-    return `Lab test and blood test at home in ${titleCase(parts[1])} — free sample collection`;
+    return `Lab test and blood test at home in ${titleCase(parts[1])} — sample collection at ₹100`;
   }
 
   // /blogs/<category>/<city>

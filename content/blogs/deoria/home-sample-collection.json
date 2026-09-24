@@ -8,7 +8,7 @@
     "Ghar Se Blood Sample Collection Deoria",
     "Blood Sample Collection at Home Deoria",
     "Home Collection Lab Deoria",
-    "Free Home Sample Collection Lab Deoria",
+    "Home Sample Collection Lab Deoria",
     "Pathology Lab Home Visit Deoria",
     "Lab Test in Deoria",
     "Blood Test in Deoria",
@@ -420,7 +420,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

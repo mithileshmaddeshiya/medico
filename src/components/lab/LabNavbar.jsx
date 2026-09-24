@@ -66,7 +66,7 @@ export default function LabNavbar() {
                 <div className="max-w-6xl mx-auto pl-3 pr-2 sm:px-5 md:px-8 flex items-center justify-between gap-2 sm:gap-3 h-16 sm:h-20">
 
                     {/* LOGO */}
-                    <Link href="/" className="flex items-center min-w-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with free sample collection">
+                    <Link href="/" className="flex items-center min-w-0" aria-label="MedicoBharat — Home" title="MedicoBharat — lab test at home with sample collection at your door">
                         {/* 320×90 is the artwork's real 3.56:1 ratio, and the file
                             is the trimmed WebP rather than the original PNG.
 

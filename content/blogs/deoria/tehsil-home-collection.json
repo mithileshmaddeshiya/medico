@@ -19,7 +19,7 @@
   "order": 100,
   "takeaways": [
     "Deoria jile ki paanch tehsil — Sadar, Rudrapur, Barhaj, Salempur aur Bhatpar Rani — me service ek hi hai, lekin har taraf ki zaroorat alag hai: kahin nadi aur baadh, kahin Bihar ki seema, kahin Gorakhpur ki OPD.",
-    "Rate ilaake ke hisaab se nahi badalta, aur ghar se sample lene ka koi alag charge nahi judta — Sadar me bhi nahi, Lar ya Bhatpar Rani me bhi nahi.",
+    "Rate ilaake ke hisaab se nahi badalta, aur home collection ka charge har jagah ₹100 hi hai — Sadar me bhi, Lar ya Bhatpar Rani me bhi.",
     "Barhaj ya Rudrapur me \"diagnostic center\" dhoondh rahe hain to ek baat saaf jaan lijiye: blood aur urine ki routine jaanch ghar par ho jaati hai, lekin X-ray, ultrasound aur ECG hamari service nahi hain.",
     "Doctor chahe Deoria me ho, Gorakhpur me, Mau me ya Siwan me — report PDF me phone par aati hai, isliye sample ghar par dijiye aur report wahan bhejiye jahan ilaaj chal raha hai."
   ],
@@ -42,7 +42,7 @@
         {
           "note": {
             "title": "Har jagah wahi paanch baatein",
-            "text": "Deoria jile me jahan bhi sample liya jaata hai, wahan ye paanch baatein ek jaisi hain: home collection free, trained phlebotomist ID card ke saath, slot subah 6 baje se, report 24 ghante ke andar, aur payment sample ke waqt cash ya UPI se. Iske alawa koi daawa hum nahi karte.",
+            "text": "Deoria jile me jahan bhi sample liya jaata hai, wahan ye paanch baatein ek jaisi hain: home collection ₹100, trained phlebotomist ID card ke saath, slot subah 6 baje se, report 24 ghante ke andar, aur payment sample ke waqt cash ya UPI se. Iske alawa koi daawa hum nahi karte.",
             "tone": "info"
           }
         }
@@ -360,7 +360,7 @@
   "faqs": [
     {
       "question": "Rudrapur ya Barhaj me ghar par blood test ka rate Deoria Sadar se alag hai?",
-      "answer": "Nahi. Rate ilaake ke hisaab se nahi badalta, aur ghar se sample lene ka koi alag visiting ya travel charge nahi judta. Har test ka rate Deoria ki price list me likha hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+      "answer": "Nahi. Rate ilaake ke hisaab se nahi badalta, aur home collection har jagah ₹100 hi hai (poori booking ke liye ek baar) — koi alag travel charge nahi judta. Har test ka rate Deoria ki price list me likha hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
     },
     {
       "question": "Barhaj me aapka diagnostic center ya collection counter kahan hai?",
@@ -396,7 +396,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Sadar, Rudrapur, Barhaj, Bhatpar Rani aur Lar"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

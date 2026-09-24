@@ -316,7 +316,7 @@
         "LFT, CBC aur urine ka sample ghar par liya jaata hai — Deoria Sadar, Rudrapur, Barhaj, Salempur, Bhatpar Rani, Gauri Bazar, Baitalpur, Lar aur Bhatni me. Iske liye fasting zaroori nahi. Deoria me hamara walk-in counter nahi hai.",
         {
           "list": [
-            "Home sample collection free; trained phlebotomist ID card ke saath.",
+            "Home sample collection ₹100; trained phlebotomist ID card ke saath.",
             "Slot subah 6 baje se.",
             "Report 24 ghante ke andar WhatsApp aur email par PDF me — follow-up LFT ki tulna aasaan.",
             "Payment sample ke waqt, cash ya UPI se."
@@ -378,7 +378,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           {
             "href": "/blogs/blood-test/deoria",

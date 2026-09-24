@@ -66,7 +66,7 @@
           "list": [
             "Sample lene wale ke paas ID card hoga — maangna aapka haq hai, dikhana uska kaam.",
             "Jo panel parche par likha hai wahi book hua ho. Parche ka photo bhej dena sabse aasan tareeka hai.",
-            "Rate wahi rahe jo pehle bataya gaya tha. Home collection ka koi alag visiting ya travel charge nahi hona chahiye.",
+            "Rate wahi rahe jo pehle bataya gaya tha. Home collection ka charge (humare yahan ₹100 per booking) booking ke waqt hi bataya jaana chahiye — baad me koi visiting ya travel charge nahi judna chahiye.",
             "Report PDF me mile — WhatsApp ya email par. Kaagaz ke liye dobara jaana is sheher me poora aadha din hai."
           ]
         },
@@ -223,7 +223,7 @@
         [
           "Mohalla cover hota hai — ab booking seedhi hai. ",
           { "text": "Gorakhpur ka service page", "href": "/lab-test/gorakhpur" },
-          " kholiye, form bhariye, aur lagbhag 30 minute me confirmation call aa jaayegi. Home collection free hai, slot subah 6 baje se milte hain, aur payment sample lene ke waqt cash ya UPI se hota hai. ",
+          " kholiye, form bhariye, aur lagbhag 30 minute me confirmation call aa jaayegi. Home collection ₹100 hai, slot subah 6 baje se milte hain, aur payment sample lene ke waqt cash ya UPI se hota hai. ",
           { "text": "Saare test aur rate ek jagah", "href": "/" },
           " dekhne hon to home page par poori list hai."
         ],
@@ -281,7 +281,7 @@
         "links": [
           {
             "href": "/lab-test/gorakhpur",
-            "label": "Gorakhpur me lab test — booking aur free home collection",
+            "label": "Gorakhpur me lab test — booking aur home collection",
             "sub": "Sheher ke mohalle aur jile ke kasbe"
           },
           {

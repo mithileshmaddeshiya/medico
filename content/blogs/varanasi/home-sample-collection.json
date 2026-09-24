@@ -1,10 +1,10 @@
 {
   "title": "Ghar Par Blood Test Varanasi — Poori Prakriya",
-  "description": "Varanasi me ghar par blood test kaise hota hai — free home sample collection ka poora tarika, kis ilaake me aati hai, fasting slot aur report ka samay.",
+  "description": "Varanasi me ghar par blood test kaise hota hai — home sample collection ka poora tarika, kis ilaake me aati hai, fasting slot aur report ka samay.",
   "keywords": [
     "Blood Test at Home Varanasi",
     "Lab Test at Home in Varanasi",
-    "Free Home Sample Collection Varanasi",
+    "Home Sample Collection Varanasi",
     "Pathology Home Collection Varanasi",
     "Home Sample Collection in Varanasi",
     "Online Blood Test Booking Varanasi",
@@ -47,7 +47,7 @@
         [
           "Ye guide un pandrah minute ke baare me hai jo aapke darwaze par hote hain. Booking ka form, poora test menu aur rate service page par hai: ",
           {
-            "text": "Varanasi me lab test aur free home sample collection",
+            "text": "Varanasi me lab test aur home sample collection",
             "href": "/lab-test/varanasi"
           },
           ". Aur kaun sa test kab karana chahiye, wo alag guide me hai — ",
@@ -59,8 +59,8 @@
         ],
         {
           "note": {
-            "title": "Home collection ka charge alag se nahi jodta",
-            "text": "Sample ghar par lene ka koi extra paisa nahi lagta. Aap wahi rate dete hain jo test ka hai, aur wo booking ke waqt hi bata diya jaata hai. Payment sample lene ke waqt cash ya UPI se hota hai — pehle advance dene ki zaroorat nahi.",
+            "title": "Home collection ka charge ₹100 per booking",
+            "text": "Sample ghar par lene ke ₹100 per booking lagte hain — ek visit me booking ke saare test ho jaate hain. Uske alawa aap wahi rate dete hain jo test ka hai, aur wo booking ke waqt hi bata diya jaata hai. Payment sample lene ke waqt cash ya UPI se hota hai — pehle advance dene ki zaroorat nahi.",
             "tone": "info"
           }
         }
@@ -147,7 +147,7 @@
         [
           "Ilaakon ki poori list aur slot ka samay service page par hai: ",
           {
-            "text": "poore Varanasi me free home sample collection",
+            "text": "poore Varanasi me home sample collection sirf ₹100 me",
             "href": "/lab-test/varanasi#home-sample-collection-varanasi"
           },
           ". Apna ilaaka list me na dikhe to ",
@@ -432,7 +432,7 @@
   "faqs": [
     {
       "question": "Varanasi me home sample collection ka charge kitna hai?",
-      "answer": "Ghar par sample lene ka alag se koi charge nahi hai. Aap sirf test ka wahi rate dete hain jo booking ke waqt bataya jaata hai, aur payment sample lene ke samay cash ya UPI se hota hai. Rate ki poori list service page par ek hi jagah rakhi hai, taaki number kabhi purana na pade."
+      "answer": "Ghar par sample lene ka charge ₹100 per booking hai — ek visit me booking ke saare test aur ghar ke sabhi log jinka test usi booking me hai, cover ho jaate hain. Iske alawa aap test ka wahi rate dete hain jo booking ke waqt bataya jaata hai, aur payment sample lene ke samay cash ya UPI se hota hai. Rate ki poori list service page par ek hi jagah rakhi hai, taaki number kabhi purana na pade."
     },
     {
       "question": "Chowk aur Godowlia ki tangg galiyon me bhi home collection aati hai?",
@@ -477,7 +477,7 @@
           {
             "href": "/lab-test/varanasi",
             "label": "Varanasi me lab test — booking aur home collection",
-            "sub": "Free home sample collection, slot subah 6 baje se"
+            "sub": "Home sample collection ₹100, slot subah 6 baje se"
           },
           {
             "href": "/lab-test/varanasi#lab-test-price-varanasi",

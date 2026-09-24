@@ -14,7 +14,8 @@
  * no ratings, no patient counts, no partner-lab names, no "24x7". The
  * confirmed set is exactly this, and it is all this file uses:
  *
- *   · free home sample collection, no visiting charge
+ *   · home sample collection at ₹100 per booking (one visit, any number of
+ *     tests or people), no other fee
  *   · a trained phlebotomist who carries an ID card
  *   · home-visit slots from 6 AM, all seven days
  *   · reports within 24 hours, as a PDF on WhatsApp and email
@@ -65,7 +66,7 @@ export const HOME_META = {
   // terms that have to match a query ("lab test", "blood test", "full body
   // checkup", "home sample collection") are all still in it.
   description:
-    "Book Lab Test & Full Body Checkup at home in Varanasi, Gorakhpur, Deoria, Azamgarh & Salempur. Free sample collection & fast reports by MedicoBharat.",
+    "Book Lab Test & Full Body Checkup at home in Varanasi, Gorakhpur, Deoria, Azamgarh & Salempur. Sample collection ₹100 & fast reports by MedicoBharat.",
 
   /* `keywords` is a weak-to-zero ranking signal on its own. The reason to keep
      it honest and specific is that it is the checklist the headings, FAQs and
@@ -86,7 +87,6 @@ export const HOME_META = {
     "blood test at home",
     "blood test near me",
     "home sample collection",
-    "free home sample collection",
     "online lab test booking",
     "pathology lab near me",
     "diagnostic centre near me",
@@ -139,7 +139,7 @@ export const HOME_HERO = {
      keyword rather than on a random word in the middle of it. The visible
      headline is back — HomeHero renders `h1Accent` in emerald. */
   h1Lead: "Lab Test Ghar Baithe —",
-  h1Accent: "Free Home Sample Collection",
+  h1Accent: "Home Sample Collection ₹100",
 
   /* The one line under the h1. It names the region rather than listing six
      towns: this sits above the fold on a phone, and the list would push the
@@ -212,7 +212,7 @@ export const HOME_HERO = {
    means the rule at the top of this file applies to BOTH. No NABL, no
    "certified", no accreditation, no test counts, no "100% accuracy", no
    "India's best/largest", no other lab's name or logo. Only the five things we
-   actually do: free home collection, a trained phlebotomist with an ID card,
+   actually do: home collection at ₹100, a trained phlebotomist with an ID card,
    slots from 6 AM, reports in 24 hours, cash/UPI on collection.
 
    This is not a style note. Where the alt and the picture disagree, THE
@@ -226,21 +226,21 @@ export const HOME_BANNERS = [
     src: "/swipper/slider12.webp",
     alt: "Trusted Lab MedicoBharat — Your Health Our Priority. Accurate tests, trusted results, better health; blood tests, health packages, home collection aur online reports.",
     href: "#book",
-    title: "Book a lab test at home with free sample collection",
+    title: "Book a lab test at home with sample collection at your door",
   },
 
   {
     src: "/swipper/slider23.webp",
     alt: "You need a health test! Because regular health checks help you test, not guess. Sugar, thyroid, kidney, heart, bone, liver, anemia aur overall wellness tests — home sample collection aur online reports.",
     href: "#book",
-    title: "Book a lab test at home with free sample collection",
+    title: "Book a lab test at home with sample collection at your door",
   },
 
   {
     src: "/swipper/slider34.webp",
     alt: "Track your health at the comfort of your home — convenient and hassle-free home sample collection with well trained medics. Care comes home.",
     href: "#book",
-    title: "Book a lab test at home with free sample collection",
+    title: "Book a lab test at home with sample collection at your door",
   },
 ];
 
@@ -321,7 +321,7 @@ export const HOME_HOW_TO = {
      the city pages' own titles. */
   heading: "How to book a lab test at home with MedicoBharat",
   // No `intro`. LabHowTo renders the line only when one is set, and the line
-  // this had listed free collection, the trained phlebotomist and the timings —
+  // this had listed home collection, the trained phlebotomist and the timings —
   // all three of which the five steps below then state again, in order. The
   // heading already says what the block is; a summary of a five-step list that
   // sits directly above the five steps is a sentence the reader pays for twice.
@@ -339,7 +339,7 @@ export const HOME_HOW_TO = {
     {
       icon: "test-tube",
       title: "Home Sample Collection",
-      text: "A trained phlebotomist reaches your address with an ID card and draws the blood sample in front of you. About 10 minutes, and home collection is free.",
+      text: "A trained phlebotomist reaches your address with an ID card and draws the blood sample in front of you. About 10 minutes, and home collection is ₹100 per booking.",
     },
     {
       icon: "microscope",
@@ -373,8 +373,8 @@ export const HOME_WHY = {
   points: [
     {
       icon: "wallet",
-      title: "Collection ka koi charge nahi",
-      text: "Card par jo price likha hai, sirf wahi dena hai — na visiting charge, na convenience fee, na hidden amount.",
+      title: "Home collection sirf ₹100",
+      text: "Card par jo price likha hai, uske upar ek booking ka ₹100 collection charge — bas. Na convenience fee, na hidden amount.",
     },
     {
       icon: "badge-check",
@@ -424,11 +424,11 @@ export const HOME_GUIDES = {
 export const HOME_FAQS = [
   {
     q: "What is MedicoBharat, and which districts of Purvanchal do you serve?",
-    a: `MedicoBharat is an online diagnostic booking service with free home sample collection. We serve ${coverage()}, offering blood tests and full body health checkups — CBC, Thyroid Profile, Diabetes (HbA1c), Lipid Profile, Vitamin D and B12, and Liver and Kidney function tests. The report arrives as a PDF within 24 hours on WhatsApp and email. To book directly, call ${LAB_PHONE}.`,
+    a: `MedicoBharat is an online diagnostic booking service with home sample collection at ₹100. We serve ${coverage()}, offering blood tests and full body health checkups — CBC, Thyroid Profile, Diabetes (HbA1c), Lipid Profile, Vitamin D and B12, and Liver and Kidney function tests. The report arrives as a PDF within 24 hours on WhatsApp and email. To book directly, call ${LAB_PHONE}.`,
   },
   {
-    q: "Is home blood sample collection really free?",
-    a: "Yes, home sample collection is completely free. You pay only the price of the test or health checkup package itself. There is no visiting charge, no hidden fee and no convenience charge. Payment is taken at the time of collection, in cash or by UPI (Google Pay, PhonePe, Paytm).",
+    q: "How much does home blood sample collection cost?",
+    a: "Home sample collection costs ₹100 per booking — one visit, however many tests or family members are in that booking. You pay the price of the test or health checkup package plus that ₹100. There is no other hidden fee and no convenience charge. Payment is taken at the time of collection, in cash or by UPI (Google Pay, PhonePe, Paytm).",
   },
   {
     q: "Do I need a doctor's prescription to book a lab test online?",
@@ -471,7 +471,7 @@ export const HOME_CONTENT = [
     p: [
       "Routine pathology ka lagbhag poora hissa — blood count, sugar, thyroid, liver, kidney, lipid, vitamin aur urine ke test — ek sample par hota hai. Aur wo sample lab me hi dena zaroori nahi hai. MedicoBharat wahi sample aapke ghar se leta hai, usi din lab tak pahunchata hai, aur report seedhe aapke phone par bhejta hai.",
       "Iska sabse bada fayda kisi discount me nahi hai, teen chakkar bachne me hai. Pehla — subah khaali pet lab tak safar karna, jo fasting wale test me sabse mushkil hissa hota hai. Doosra — counter par line. Teesra — report lene ke liye dobara jaana. Bujurg, chhote bachche, pregnancy, operation ke baad recovery aur wo har vyakti jiska din kaam se bandha hai — in sabke liye yahi teen chakkar asli rukawat hote hain.",
-      "Kaam ka tarika seedha hai: aap test chunte hain, hum lagbhag 30 minute me call kar ke slot aur pata confirm karte hain, trained phlebotomist ID card ke saath ghar aata hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me pahunch jaati hai. Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai.",
+      "Kaam ka tarika seedha hai: aap test chunte hain, hum lagbhag 30 minute me call kar ke slot aur pata confirm karte hain, trained phlebotomist ID card ke saath ghar aata hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me pahunch jaati hai. Home sample collection sirf ₹100 me hota hai — aap test ka wahi price dete hain jo card par likha hai, aur uske upar ek booking ka ₹100.",
       [
         "Aap kis sheher me hain uske hisaab se page alag hai, kyunki rate, ilaake aur booking form wahi ke hone chahiye. ",
         { text: "Varanasi me lab test", href: "/lab-test/varanasi" },
@@ -581,8 +581,8 @@ export const HOME_CONTENT = [
     id: "price-aur-payment",
     h: "Lab Test Ka Price Aur Payment",
     p: [
-      "Har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na visiting charge, na convenience fee, na koi hidden amount. Payment sample lene ke waqt hota hai: cash ya UPI (PhonePe, Google Pay, Paytm).",
-      "Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.",
+      "Har card par jo price likha hai, wahi aapko dena hai. Home sample collection ka charge uske upar ₹100 per booking hai — ek visit me jitne bhi test ya log hon. Na convenience fee, na koi hidden amount. Payment sample lene ke waqt hota hai: cash ya UPI (PhonePe, Google Pay, Paytm).",
+      "Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.",
       "Bachat package me sabse zyada hai: Basic Full Body Checkup ₹999 me 45 parameter, Advanced Full Body ₹1,999 me 72 parameter, aur Senior Citizen Pack ₹2,999 me 88 parameter. Wahi test alag-alag karane par kharcha kai guna ho jaata hai — yahi wajah hai ki saal ka routine checkup package me karana samajhdari hai, aur ek shikayat ki jaanch single test me.",
       `Kuch test us waqt ki zaroorat par tay hote hain — jaise Fever Panel — aur unke card par "Call for price" likha rehta hai. ${LAB_PHONE} par pooch lijiye; price sample dene se pehle bata diya jaata hai, baad me nahi.`,
     ],
@@ -606,7 +606,7 @@ export const HOME_CONTENT = [
       "Achhe lab ki pehchaan uske quality control se hoti hai — machines ki niyamit calibration, sahi tarike se store kiye gaye reagent, trained staff, aur consistent turnaround time. Ye sab aap seedha nahi dekh sakte, lekin do cheezein pooch zaroor sakte hain: lab kitne saal se chal raha hai, aur report par test ka method (jaise CLIA ya ECLIA) likha jaata hai ya nahi.",
       "Collection ke waqt khud dhyan dijiye. Nayi needle aapke saamne khule, har test ke liye sahi rang ki vacutainer ho, tube sahi level tak bhare, aur anticoagulant wali tube halke se ulti-seedhi ki jaaye. Kam bhara ya clotted sample hi wo sabse aam wajah hai jiske liye lab dobara sample maangti hai — aur galat tarike se liya gaya sample haemolysis kar deta hai, jisse potassium jhootha badh jaata hai aur bewajah panic hota hai.",
       [
-        "Hamari taraf se jo pakka hai wo yahi hai: collection free, phlebotomist ke paas ID card, slot subah 6 baje se, report 24 ghante me, aur payment sample lete waqt. Isse aage ka koi daawa hum nahi karte — na accreditation ka, na 24x7 khule rehne ka. ",
+        "Hamari taraf se jo pakka hai wo yahi hai: home collection sirf ₹100 me, phlebotomist ke paas ID card, slot subah 6 baje se, report 24 ghante me, aur payment sample lete waqt. Isse aage ka koi daawa hum nahi karte — na accreditation ka, na 24x7 khule rehne ka. ",
         { text: "MedicoBharat ke baare me", href: "/about" },
         " page par yahi baat detail me likhi hai.",
       ],
@@ -626,7 +626,7 @@ export const HOME_CONTENT = [
 export const HOME_CTA = {
   headingLead: "Book a lab test —",
   headingAccent: "sample collected at home",
-  proof: ["Trained phlebotomist", "Free home collection", "Reports in 24 hrs"],
+  proof: ["Trained phlebotomist", "Home collection ₹100", "Reports in 24 hrs"],
 };
 
 /* Same rule as the city pages — see defaultCallBanner in
@@ -639,7 +639,7 @@ export const HOME_CTA = {
    It was "Book Your Health Checkup From Home", which is a sentence nobody
    types into a search box. */
 export const HOME_CALL_BANNER = {
-  heading: "Lab Test at Home — Free Blood Sample Collection",
+  heading: "Lab Test at Home — Blood Sample Collection ₹100",
   buttonText: "Book Now — Call Us",
 };
 

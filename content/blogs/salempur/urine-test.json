@@ -189,7 +189,7 @@
             "Container ko aadha tak bhariye, poora nahi; dhakkan kas kar band kijiye aur apna naam milwa lijiye."
           ]
         },
-        "Trained phlebotomist ID card ke saath ghar aata hai. Home collection ka koi alag charge nahi hai, slot subah 6 baje se shuru hote hain, aur payment sample ke waqt cash ya UPI se hota hai. Khoon ki jaanch bhi likhi ho to dono sample ek hi visit me ho jaate hain."
+        "Trained phlebotomist ID card ke saath ghar aata hai. Home collection ₹100 per booking hai, slot subah 6 baje se shuru hote hain, aur payment sample ke waqt cash ya UPI se hota hai. Khoon ki jaanch bhi likhi ho to dono sample ek hi visit me ho jaate hain."
       ]
     },
     {
@@ -286,7 +286,7 @@
   "faqs": [
     {
       "question": "Salempur me urine test ghar par ho jaata hai?",
-      "answer": "Haan. Urine routine, culture aur microalbumin — teeno ka sample ghar par liya jaata hai. Container sample lene wala saath laata hai, aur khoon ki jaanch bhi likhi ho to dono ek hi visit me ho jaate hain. Home collection ka koi alag charge nahi hai."
+      "answer": "Haan. Urine routine, culture aur microalbumin — teeno ka sample ghar par liya jaata hai. Container sample lene wala saath laata hai, aur khoon ki jaanch bhi likhi ho to dono ek hi visit me ho jaate hain. Home collection ₹100 per booking hai."
     },
     {
       "question": "Urine routine aur urine culture me kya farak hai?",
@@ -322,7 +322,7 @@
         "links": [
           {
             "href": "/lab-test/salempur",
-            "label": "Salempur me lab test — booking aur free home collection"
+            "label": "Salempur me lab test — booking aur home collection"
           },
           {
             "href": "/lab-test/salempur#lab-test-price-salempur",

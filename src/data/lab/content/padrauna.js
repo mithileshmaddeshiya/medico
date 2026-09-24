@@ -45,7 +45,7 @@
  * two lines and LINKS to the district page's section. Keep it that way.
  *
  * ── CLAIMS ───────────────────────────────────────────────────────────────
- * Only the confirmed set: free home collection, a trained phlebotomist with an
+ * Only the confirmed set: home collection at ₹100 per booking, a trained phlebotomist with an
  * ID card, slots from 6 AM, reports within 24 hours, cash/UPI at collection, a
  * confirmation call in about 30 minutes, a visit of about 10 minutes. NOT
  * claimed anywhere, however well it would rank: NABL accreditation,
@@ -95,7 +95,7 @@ const GUIDE_DENGUE = "/blogs/dengue-typhoid-test/deoria";
 export const padraunaContent = [
   {
     id: "lab-test-in-padrauna",
-    h: "Padrauna Me Lab Test — Ghar Baithe Blood Test Booking Aur Free Home Sample Collection",
+    h: "Padrauna Me Lab Test — Ghar Baithe Blood Test Booking Aur Home Sample Collection Sirf ₹100 Me",
     p: [
       "Padrauna Kushinagar jile ka mukhyalaya hai, aur jile me jaanch se judi har cheez yahin hai — zila aspatal, doctor ki clinic, aur bazaar me khule collection counter. Isliye yahan rehne wale reader ki dikkat doori nahi hai. Uski dikkat samay hai. Parcha shaam ko milta hai, test khaali pet ka hota hai, aur agli subah wahi ghanta test ke liye dena padta hai jis ghante me dukaan kholni hai, bachche ko school bhejna hai, ya tehsil aur kacheri ka kaam nipatana hai. Report lene ke liye doosre din phir ek chakkar lagta hai.",
       "Home sample collection ye poora ghanta wapas de deta hai. Aap Padrauna me apna pata aur mohalla dete hain, subah ka slot chunte hain, aur trained phlebotomist ID card ke saath aapke darwaze par aata hai. Sample wahin liya jaata hai, poori visit lagbhag 10 minute ki hoti hai, aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai. Na line, na khaali pet ka safar, na report lene ka doosra chakkar.",
@@ -140,7 +140,7 @@ export const padraunaContent = [
     h: "Padrauna Me Best Diagnostic Centre Kaise Chunein — Paanch Sawaal Jo Poochh Lene Chahiye",
     p: [
       "Hum ye nahi kahenge ki hum Padrauna ke sabse achhe hain. Koi bhi lab ye keh sakti hai aur koi bhi ise jaanch nahi sakta — isliye is jumle ki keemat zero hai. Jo jaanchi ja sakti hai wo ye paanch cheezein hain, aur yahi poochh kar aap kisi bhi lab ko park sakte hain, hamein bhi.",
-      "Pehla: daam pehle bataya jaata hai ya sample lene ke baad? Is page par har test ka price card par likha hai, home collection uske upar free hai, aur poora amount confirmation call par bata diya jaata hai — sui lagne se pehle, uske baad nahi. Doosra: sample lene wala kaun hai aur uske paas pehchan hai? Aane wale phlebotomist ke paas ID card hota hai; use dekh lena aapka haq hai, aur sample aapke saamne liya jaata hai.",
+      "Pehla: daam pehle bataya jaata hai ya sample lene ke baad? Is page par har test ka price card par likha hai, home collection uske upar sirf ₹100 hai, poori booking par ek baar, aur poora amount confirmation call par bata diya jaata hai — sui lagne se pehle, uske baad nahi. Doosra: sample lene wala kaun hai aur uske paas pehchan hai? Aane wale phlebotomist ke paas ID card hota hai; use dekh lena aapka haq hai, aur sample aapke saamne liya jaata hai.",
       "Teesra: report kab tak milegi, saaf shabdon me? Hamara jawab routine test ke liye 24 ghante hai. Culture 48 se 72 ghante lete hain kyunki organism pehle ugana padta hai — jo lab isse jaldi ka vaada kare, wo ya to culture nahi samajh rahi ya aapko sahi nahi bata rahi. Chautha: report par reference range aur test ka poora naam chhapa hai ya sirf ek number? Number bina range ke bekaar hai. Paanchva: jo lab keh rahi hai wo likh kar de rahi hai ya sirf bol rahi hai? WhatsApp par aayi PDF ek record hai; mooh-zubani rate nahi.",
       "Aur ek cheez par bharosa mat kijiye: bade daam par. Mehnga hona quality ka saboot nahi hai, aur sabse sasta hona bhi nahi. Ek hi test do jagah se karaane par report ke number thode alag aa sakte hain — ye dhokha nahi, method ka farq hai. Isliye lab chunne ka sabse achha tarika yahi hai ki ek chuniye aur usi par tike rahiye, taaki aapka doctor purani aur nayi report ko seedha mila sake.",
     ],
@@ -283,8 +283,8 @@ export const padraunaContent = [
     id: "lab-test-price-padrauna",
     h: "Padrauna Me Lab Test Price Aur Rate List — Kaunsa Test Kitne Ka",
     p: [
-      "Is page par har card par jo price likha hai, wahi aapko dena hai. Home sample collection uske upar free hai — na visiting charge, na travel charge, na koi hidden fee. Poora amount confirmation call par bata diya jaata hai, sample lene se pehle.",
-      "Rate list ye rahi: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200. Ye wahi rate hain jo hamare doosre sheheron me hain — Padrauna me na kam lagta hai na zyada.",
+      "Is page par har card par jo price likha hai, wahi test ka daam hai. Uske upar home sample collection ka sirf ₹100 lagta hai — poori booking par ek hi baar, chahe kitne bhi test hon. Iske alawa na travel charge, na koi hidden fee. Poora amount confirmation call par bata diya jaata hai, sample lene se pehle.",
+      "Rate list ye rahi: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000. Ye wahi rate hain jo hamare doosre sheheron me hain — Padrauna me na kam lagta hai na zyada.",
       "Bachat package me sabse zyada hai: Basic Full Body ₹999 me 45 parameter, Advanced Full Body ₹1,999 me 72 parameter, aur Senior Citizen Pack ₹2,999 me 88 parameter. Wahi test alag alag karane par kharcha kai guna ho jaata hai.",
       "Kuch test, jaise Fever Panel (malaria, typhoid aur dengue ek saath), price par nahi balki us waqt ki zaroorat par tay hote hain — unke card par 'Call for price' likha rehta hai. Phone par pooch lijiye; sample dene se pehle daam bata diya jaata hai. Payment sample lene ke waqt hi hota hai — cash ya UPI se, PhonePe, Google Pay ya Paytm.",
     ],
@@ -347,8 +347,8 @@ export const padraunaContent = [
     h: "पड़रौना में लैब टेस्ट — घर से सैंपल कलेक्शन की पूरी जानकारी (हिंदी में)",
     p: [
       "पड़रौना में खून की जांच के लिए अब सुबह का समय निकालने की ज़रूरत नहीं है। सीबीसी, थायरॉइड (टीएसएच), शुगर, एचबीए1सी, लिपिड प्रोफाइल, लिवर और किडनी फंक्शन टेस्ट, विटामिन डी, विटामिन बी12, डेंगू और फुल बॉडी चेकअप — ये सारी जांच सैंपल पर होती हैं, और सैंपल आपके घर से लिया जा सकता है।",
-      "होम सैंपल कलेक्शन बिल्कुल मुफ़्त है। आप सिर्फ़ टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है — कोई विज़िटिंग चार्ज या छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए, आप तुरंत नाश्ता कर लें और दुकान या दफ़्तर अपने समय पर खुले। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
-      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹400, थायरॉइड प्रोफाइल ₹550, एचबीए1सी ₹600, लिवर फंक्शन टेस्ट ₹600, किडनी फंक्शन टेस्ट ₹700, लिपिड प्रोफाइल ₹800, विटामिन डी ₹1,000, विटामिन बी12 ₹1,200 और डेंगू ₹1,200। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
+      "होम सैंपल कलेक्शन ₹100 में होता है — पूरी बुकिंग पर एक ही बार, चाहे जितने टेस्ट हों। आप टेस्ट का वही दाम देते हैं जो कार्ड पर लिखा है, और उसके ऊपर बस यही ₹100 — कोई और छिपा हुआ शुल्क नहीं। सुबह 6 बजे से स्लॉट शुरू हो जाते हैं, ताकि खाली पेट वाली जांच जल्दी हो जाए, आप तुरंत नाश्ता कर लें और दुकान या दफ़्तर अपने समय पर खुले। रिपोर्ट 24 घंटे में व्हाट्सएप और ईमेल पर पीडीएफ में आ जाती है।",
+      "रेट लिस्ट: ब्लड शुगर ₹100, सीबीसी ₹300, थायरॉइड प्रोफाइल ₹400, एचबीए1सी ₹500, लिवर फंक्शन टेस्ट ₹500, किडनी फंक्शन टेस्ट ₹800, लिपिड प्रोफाइल ₹500, विटामिन डी ₹1,000, विटामिन बी12 ₹1,000 और डेंगू ₹1,000। बेसिक फुल बॉडी चेकअप ₹999 में 45 पैरामीटर, एडवांस ₹1,999 में 72 और सीनियर सिटिज़न पैक ₹2,999 में 88 पैरामीटर देता है।",
       "सैंपल पड़रौना के लगभग हर मोहल्ले से लिया जाता है — दुर्गा चौक, सेंट्रल बैंक रोड, स्टेशन रोड, रामकोला रोड, कसिया रोड, तरया सुजान की तरफ़, ज़िला अस्पताल और तहसील के आस-पास का हिस्सा, और शहर से सटे गाँव। पता लिखते समय मोहल्ले के नाम के साथ एक जाना-पहचाना लैंडमार्क ज़रूर डालिए — यहाँ मकान नंबर से ज़्यादा काम लैंडमार्क आता है।",
       "हमारा पड़रौना में कोई वॉक-इन काउंटर नहीं है, और हम यह दावा नहीं करते। यह घर से सैंपल लेने की सेवा है: प्रशिक्षित फ़्लेबोटोमिस्ट आईडी कार्ड के साथ आपके घर आता है, सैंपल आपके सामने लिया जाता है, और पेमेंट उसी समय नकद या यूपीआई से होता है। पूरी विज़िट लगभग 10 मिनट की होती है।",
       [
@@ -390,8 +390,8 @@ export const padraunaContent = [
  */
 export const padraunaFaqs = [
   {
-    q: "How much does a lab test cost in Padrauna, and is home sample collection free?",
-    a: "You pay only the price printed on the test card — home sample collection in Padrauna is completely free, with no visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before anyone comes, and payment is taken at the time of collection, by cash or UPI.",
+    q: "How much does a lab test cost in Padrauna, and what does home sample collection cost?",
+    a: "You pay the price printed on the test card plus ₹100 for home sample collection in Padrauna — charged once per booking, however many tests or family members it covers, with no other visiting charge and no hidden fee. Blood Sugar is ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, and the Basic Full Body Checkup starts at ₹999. The total is confirmed on the call before anyone comes, and payment is taken at the time of collection, by cash or UPI.",
   },
   {
     q: "Do you have a pathology lab or collection centre in Padrauna where I can walk in?",

@@ -137,7 +137,7 @@
             "Typhoid me Widal likha hai, typhoid IgM card likha hai, ya blood culture — culture sabse zyada samay aur kharche wala hai, aur sabse bharosemand bhi.",
             "Fever panel — jismein malaria, typhoid aur dengue ek saath hote hain — us waqt ki zaroorat par tay hota hai, isliye uska rate booking ke waqt phone par bataya jaata hai, sample se pehle.",
             "CBC lagbhag har bukhar me saath likha jaata hai; ise alag se gin lijiye.",
-            "Ghar se sample lene ka koi alag charge nahi judta — Deoria me home collection free hai."
+            "Ghar se sample lene ka ₹100 alag judta hai — Deoria me home collection poori booking ke liye ek baar, chahe kitne bhi test hon."
           ]
         },
         [
@@ -410,7 +410,7 @@
             "Booking ke waqt saare lakshan bataiye, sirf test ka naam nahi — kai baar ek hi sample me doosra zaroori test bhi jud jaata hai aur alag visit bach jaati hai.",
             "Parche ki photo bhejiye. Milte-julte naam wale test me galti isi se rukti hai.",
             "Kaun si dawa chal rahi hai, khaas kar antibiotic, thyroid ki goli ya biotin — ye bata dijiye.",
-            "Slot subah 6 baje se shuru hote hain. Home collection ka koi alag charge nahi hai, aur payment sample lene ke waqt cash ya UPI se hota hai."
+            "Slot subah 6 baje se shuru hote hain. Home collection ₹100 hai (poori booking ke liye ek baar), aur payment sample lene ke waqt cash ya UPI se hota hai."
           ]
         },
         [
@@ -473,7 +473,7 @@
     },
     {
       "question": "Deoria me dengue typhoid test price kitna hai?",
-      "answer": "Ye is par tay hota hai ki parche par kya likha hai — sirf NS1, ya NS1 ke saath IgM aur IgG; Widal, typhoid IgM ya blood culture. Har test ka likha hua rate Deoria ki price list me hai, aur fever panel ka rate booking ke waqt sample se pehle bata diya jaata hai. Ghar se sample lene ka koi alag charge nahi hai."
+      "answer": "Ye is par tay hota hai ki parche par kya likha hai — sirf NS1, ya NS1 ke saath IgM aur IgG; Widal, typhoid IgM ya blood culture. Har test ka likha hua rate Deoria ki price list me hai, aur fever panel ka rate booking ke waqt sample se pehle bata diya jaata hai. Ghar se sample lene ka charge ₹100 hai (poori booking ke liye ek baar)."
     },
     {
       "question": "Sugar check karane ke liye HbA1c karayein ya fasting sugar?",
@@ -530,7 +530,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection"
+            "label": "Deoria me lab test — booking aur home collection (₹100)"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },
           {

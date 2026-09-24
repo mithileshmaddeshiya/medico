@@ -448,12 +448,12 @@ export default async function BlogPage({ params }) {
                   </p>
 
                   <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
-                    Free home collection · slot subah 6 baje se · report 24 ghante me.
+                    Home collection ₹100 · slot subah 6 baje se · report 24 ghante me.
                   </p>
 
                   <Link
                     href={`/lab-test/${labCity.slug}#book`}
-                    title={`Book a lab test in ${labCity.name} — free home sample collection`}
+                    title={`Book a lab test in ${labCity.name} — home sample collection`}
                     className="mt-4 flex w-full items-center justify-center rounded-xl bg-emerald-600 px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-emerald-700"
                   >
                     Test book karein
@@ -526,7 +526,7 @@ export default async function BlogPage({ params }) {
                 </h2>
 
                 <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-emerald-50">
-                  {`Free home sample collection, slot subah 6 baje se, aur report 24 ghante me — poore ${blog.cityName} me.`}
+                  {`Home sample collection sirf ₹100 me, slot subah 6 baje se, aur report 24 ghante me — poore ${blog.cityName} me.`}
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">

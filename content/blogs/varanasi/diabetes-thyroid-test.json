@@ -17,7 +17,7 @@
     "Blood Test in Varanasi",
     "Lab Test in Varanasi",
     "Pathology Lab in Varanasi",
-    "Free Home Sample Collection Varanasi"
+    "Home Sample Collection Varanasi"
   ],
   "publishedAt": "2026-09-04",
   "updatedAt": "2026-09-04",
@@ -201,7 +201,7 @@
           "list": [
             "Panel me kitne test hain — akela TSH, TSH+T3+T4 wala profile, aur FT3+FT4 wala free profile teen alag daam hain.",
             "Method kaunsa hai — hormone ke liye CLIA aur ECLIA purane ELISA se mehnge padte hain lekin unhi ko zyada bharosemand maana jaata hai. Report par method likha hota hai; wahi dekhiye.",
-            "Home collection ka charge jud raha hai ya nahi — humare yahan nahi judta, lekin poochhna har jagah banta hai."
+            "Home collection ka charge kitna jud raha hai — humare yahan ₹100 per booking, lekin poochhna har jagah banta hai."
           ]
         },
         [
@@ -419,7 +419,7 @@
   "faqs": [
     {
       "question": "Varanasi me thyroid test ki price kitni hoti hai?",
-      "answer": "Ye is baat par tay hota hai ki panel me kya hai. Akela TSH, TSH ke saath T3 aur T4 wala thyroid profile, aur FT3-FT4 wala free profile — teenon alag test hain aur teenon ka rate alag hai. Method bhi farq daalta hai: hormone ke liye CLIA aur ECLIA purane ELISA se mehnge padte hain lekin zyada bharosemand maane jaate hain. Home collection ka koi alag charge nahi judta. Rate ka poora range service page par ek hi jagah rakha gaya hai."
+      "answer": "Ye is baat par tay hota hai ki panel me kya hai. Akela TSH, TSH ke saath T3 aur T4 wala thyroid profile, aur FT3-FT4 wala free profile — teenon alag test hain aur teenon ka rate alag hai. Method bhi farq daalta hai: hormone ke liye CLIA aur ECLIA purane ELISA se mehnge padte hain lekin zyada bharosemand maane jaate hain. Home collection ₹100 per booking hai. Rate ka poora range service page par ek hi jagah rakha gaya hai."
     },
     {
       "question": "Sugar test ke liye kitne ghante fasting karni chahiye?",

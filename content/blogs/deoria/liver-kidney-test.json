@@ -391,7 +391,7 @@
             "Fasting aam taur par nahi lagti — slot din me kabhi bhi liya ja sakta hai. Package me ho raha ho to subah 6 baje ka pehla slot lijiye.",
             "Sample se pehle sadharan roop se paani peete rahiye; paani ki kami creatinine aur urea dono par asar daalti hai.",
             "Urine ka sample dena ho to subah ka pehla peshab sabse achha maana jaata hai — ye booking ke waqt bata diya jaata hai.",
-            "Ghar ke kai logon ka test ek hi visit me ho jaata hai, aur collection tab bhi free rehta hai.",
+            "Ghar ke kai logon ka test ek hi visit me ho jaata hai, aur collection tab bhi ₹100 hi rehta hai.",
             "Payment sample lene ke waqt, cash ya UPI se, wahi rate jo pehle bataya gaya tha."
           ]
         },
@@ -529,7 +529,7 @@
     },
     {
       "question": "LFT KFT ka sample Barhaj, Rudrapur ya Bhatpar Rani se bhi ghar se liya jaata hai?",
-      "answer": "Haan. Deoria jile ke kasbon aur gaon se ghar par sample liya jaata hai, aur home collection ka koi alag charge nahi judta. Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Booking me apna address landmark ke saath likhiye — gaon ke pate me landmark hi sabse tez tarika hota hai. Phlebotomist ID card ke saath aata hai, aur payment sample ke waqt cash ya UPI se hota hai."
+      "answer": "Haan. Deoria jile ke kasbon aur gaon se ghar par sample liya jaata hai, aur home collection ₹100 hai (poori booking ke liye ek baar). Slot subah 6 baje se shuru hote hain, jo fasting wale package ke liye sabse aasan padta hai. Booking me apna address landmark ke saath likhiye — gaon ke pate me landmark hi sabse tez tarika hota hai. Phlebotomist ID card ke saath aata hai, aur payment sample ke waqt cash ya UPI se hota hai."
     }
   ],
   "relatedLinks": {
@@ -568,7 +568,7 @@
         "links": [
           {
             "href": "/lab-test/deoria",
-            "label": "Deoria me lab test — booking aur free home collection",
+            "label": "Deoria me lab test — booking aur home collection (₹100)",
             "sub": "Deoria Sadar, Rudrapur, Barhaj, Bhatpar Rani aur aas-paas"
           },
           { "href": "/blogs/blood-test/deoria", "label": "Blood test in Deoria — kahan aur kaise karayein", "sub": "Ghar par sample, online booking, report 24 ghante me" },

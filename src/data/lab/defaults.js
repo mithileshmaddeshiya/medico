@@ -128,12 +128,12 @@ export const defaultHero = (city) => ({
   // below; a raster headline is unindexable, and the same file being the hero
   // on all six city pages meant the single most prominent element on the page
   // was byte-identical across the pages we want ranked for six different towns.
-  h1: `Lab Test in ${city} with Free Home Sample Collection`,
+  h1: `Lab Test in ${city} with Home Sample Collection`,
 
   // The one-line promise under the h1. Short on purpose: it sits above the
   // fold on a phone, where anything longer than two lines pushes the booking
   // form off the screen.
-  h1Sub: `Ghar baithe blood test book kijiye — free home sample collection ${city} me, report 24 ghante me.`,
+  h1Sub: `Ghar baithe blood test book kijiye — home sample collection ₹100 me, ${city} me, report 24 ghante me.`,
 
   // One banner for every city page — the same "Health Checkup, up to 50% off"
   // artwork the home hero uses (HOME_HERO.image in src/data/home.js).
@@ -159,7 +159,7 @@ export const defaultHero = (city) => ({
   // pixels, so the alt carries that wording rather than describing the photo.
   // The city name is spliced in because this alt is the one piece of the hero
   // that is per-city — the h1 above it is screen-reader only as well.
-  imageAlt: `MedicoBharat Lab Test in ${city} — accurate tests, better health. Blood test, advanced technology, safe aur hygienic, free home sample collection.`,
+  imageAlt: `MedicoBharat Lab Test in ${city} — accurate tests, better health. Blood test, advanced technology, safe aur hygienic, home sample collection.`,
   formTitle: "Book Your Sample Collection",
 });
 
@@ -248,7 +248,7 @@ export const defaultHowTo = (city) => ({
     {
       icon: "test-tube",
       title: "Sample Collection",
-      text: `A trained phlebotomist reaches your ${city} address with an ID card and draws the sample in front of you. About 10 minutes, and collection is free.`,
+      text: `A trained phlebotomist reaches your ${city} address with an ID card and draws the sample in front of you. About 10 minutes, and collection is ₹100 per booking.`,
     },
     {
       icon: "microscope",
@@ -275,20 +275,59 @@ export const defaultHowTo = (city) => ({
    last: "Call for price" is the weakest opener. */
 
 export const defaultTests = () => [
-  { id: "sugar",      icon: "gauge",       tint: "amber",   name: "Blood Sugar Test",     sub: "Fasting & PP glucose",                 tags: ["Popular", "Diabetes"], fasting: true,  price: 100,  mrp: 180  },
-  { id: "cbc",        icon: "droplets",    tint: "rose",    name: "CBC Test",             sub: "Complete Blood Count",                 tags: ["Popular"],             fasting: false, price: 400,  mrp: 700  },
-  { id: "thyroid",    icon: "activity",    tint: "violet",  name: "Thyroid Profile",      sub: "T3, T4 and TSH",                       tags: ["Popular"],             fasting: false, price: 550,  mrp: 900  },
-  { id: "hba1c",      icon: "chart-line",  tint: "sky",     name: "HbA1c Test",           sub: "3-month sugar average",                tags: ["Diabetes"],            fasting: false, price: 600,  mrp: 1000 },
-  { id: "lft",        icon: "flask",       tint: "teal",    name: "Liver Function Test",  sub: "Bilirubin, SGOT, SGPT",                tags: ["Organ"],               fasting: false, price: 600,  mrp: 1000 },
-  { id: "kft",        icon: "beaker",      tint: "sky",     name: "Kidney Function Test", sub: "Urea, creatinine & uric acid",         tags: ["Organ"],               fasting: false, price: 700,  mrp: 1150 },
-  { id: "lipid",      icon: "heart-pulse", tint: "rose",    name: "Lipid Profile",        sub: "Cholesterol & triglycerides",          tags: ["Heart"],               fasting: true,  price: 800,  mrp: 1300 },
-  { id: "pkg-basic",  icon: "stethoscope", tint: "emerald", name: "Full Body Checkup",    sub: "Basic — CBC, sugar, lipid, LFT & KFT", tags: ["Packages", "Popular"], fasting: true,  price: 999,  mrp: 1800, params: 45 },
-  { id: "vitd",       icon: "sun",         tint: "amber",   name: "Vitamin D Test",       sub: "25-OH Vitamin D level",                tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 1700 },
-  { id: "vitb12",     icon: "pill",        tint: "violet",  name: "Vitamin B12 Test",     sub: "Serum B12 level",                      tags: ["Vitamins"],            fasting: false, price: 1200, mrp: 2000 },
-  { id: "dengue",     icon: "bug",         tint: "emerald", name: "Dengue Test",          sub: "NS1 antigen, IgG & IgM",               tags: ["Fever"],               fasting: false, price: 1200, mrp: 1900 },
-  { id: "pkg-adv",    icon: "sparkles",    tint: "teal",    name: "Advanced Full Body",   sub: "Basic + thyroid, HbA1c & vitamins",    tags: ["Packages", "Popular"], fasting: true,  price: 1999, mrp: 3600, params: 72 },
-  { id: "pkg-senior", icon: "user-round",  tint: "violet",  name: "Senior Citizen Pack",  sub: "55+ — heart, bones & sugar screening", tags: ["Packages"],            fasting: true,  price: 2999, mrp: 5200, params: 88 },
-  { id: "fever",      icon: "thermometer", tint: "teal",    name: "Fever Panel",          sub: "Malaria, typhoid & dengue",            tags: ["Fever"],               fasting: false, price: null              },
+  { id: "bt",            icon: "droplets",     tint: "rose",    name: "Bleeding Time (BT)",          sub: "Time taken for bleeding to stop",                tags: [],                      fasting: false, price: 50   },
+  { id: "ct",            icon: "droplets",     tint: "violet",  name: "Clotting Time (CT)",          sub: "Time taken for blood to clot",                   tags: [],                      fasting: false, price: 50   },
+  { id: "sugar-f",       icon: "gauge",        tint: "amber",   name: "Blood Sugar (Fasting)",       sub: "Fasting blood glucose",                          tags: ["Diabetes"],            fasting: true,  price: 50   },
+  { id: "sugar-pp",      icon: "gauge",        tint: "sky",     name: "Blood Sugar (PP)",            sub: "Postprandial glucose, 2 hours after a meal",     tags: ["Diabetes"],            fasting: false, price: 50   },
+  { id: "sugar-r",       icon: "gauge",        tint: "teal",    name: "Blood Sugar (Random)",        sub: "Random blood glucose",                           tags: ["Diabetes"],            fasting: false, price: 50   },
+  { id: "sugar",         icon: "gauge",        tint: "amber",   name: "Blood Sugar Test",            sub: "Fasting & PP glucose",                           tags: ["Popular", "Diabetes"], fasting: true,  price: 100,  mrp: 180  },
+  { id: "esr",           icon: "droplets",     tint: "teal",    name: "ESR Test",                    sub: "Erythrocyte Sedimentation Rate",                 tags: ["Fever"],               fasting: false, price: 100  },
+  { id: "widal",         icon: "thermometer",  tint: "amber",   name: "Widal Test",                  sub: "Typhoid antibody screening",                     tags: ["Fever"],               fasting: false, price: 100  },
+  { id: "blood-group",   icon: "droplets",     tint: "rose",    name: "Blood Group & Rh Typing",     sub: "ABO blood group and Rh factor",                  tags: [],                      fasting: false, price: 100  },
+  { id: "urine-rm",      icon: "beaker",       tint: "amber",   name: "Urine Routine & Microscopy",  sub: "Urine R/M — physical, chemical & microscopic",   tags: [],                      fasting: false, price: 100  },
+  { id: "ra-factor",     icon: "activity",     tint: "sky",     name: "RA Factor",                   sub: "Rheumatoid Factor",                              tags: [],                      fasting: false, price: 200  },
+  { id: "mantoux",       icon: "shield-check", tint: "teal",    name: "Mantoux Test",                sub: "Tuberculin Skin Test (TB)",                      tags: [],                      fasting: false, price: 200  },
+  { id: "stool-rm",      icon: "beaker",       tint: "teal",    name: "Stool Routine & Microscopy",  sub: "Stool examination",                              tags: [],                      fasting: false, price: 200  },
+  { id: "sputum",        icon: "flask",        tint: "sky",     name: "Sputum Examination",          sub: "AFB / culture",                                  tags: [],                      fasting: false, price: 200  },
+  { id: "cbc",           icon: "droplets",     tint: "rose",    name: "CBC Test",                    sub: "Complete Blood Count",                           tags: ["Popular"],             fasting: false, price: 300,  mrp: 700  },
+  { id: "hcv",           icon: "shield-check", tint: "rose",    name: "HCV Test",                    sub: "Hepatitis C Virus antibody",                     tags: [],                      fasting: false, price: 300  },
+  { id: "hbsag",         icon: "shield-check", tint: "amber",   name: "HBsAg Test",                  sub: "Hepatitis B Surface Antigen",                    tags: [],                      fasting: false, price: 300  },
+  { id: "typhidot",      icon: "thermometer",  tint: "rose",    name: "Typhidot Test",               sub: "Typhoid IgM / IgG",                              tags: ["Fever"],               fasting: false, price: 300  },
+  { id: "semen",         icon: "flask",        tint: "violet",  name: "Semen Analysis",              sub: "Count, motility & morphology",                   tags: [],                      fasting: false, price: 300  },
+  { id: "hiv",           icon: "shield-check", tint: "violet",  name: "HIV Test",                    sub: "HIV 1 & 2 antibodies",                           tags: [],                      fasting: false, price: 350  },
+  { id: "thyroid",       icon: "activity",     tint: "violet",  name: "Thyroid Profile",             sub: "T3, T4 and TSH",                                 tags: ["Popular"],             fasting: false, price: 400,  mrp: 900  },
+  { id: "crp",           icon: "activity",     tint: "rose",    name: "CRP Test",                    sub: "C-Reactive Protein",                             tags: ["Fever"],               fasting: false, price: 400  },
+  { id: "xray",          icon: "stethoscope",  tint: "sky",     name: "X-Ray",                       sub: "Digital X-Ray",                                  tags: [],                      fasting: false, price: 400  },
+  { id: "amylase",       icon: "flask",        tint: "amber",   name: "Amylase Test",                sub: "Serum amylase — pancreas",                       tags: [],                      fasting: false, price: 400  },
+  { id: "urine-culture", icon: "beaker",       tint: "violet",  name: "Urine Culture & Sensitivity", sub: "Urine infection & the antibiotics that treat it", tags: [],                     fasting: false, price: 400  },
+  { id: "pt-inr",        icon: "clock",        tint: "teal",    name: "PT / INR",                    sub: "Prothrombin Time",                               tags: [],                      fasting: false, price: 400  },
+  { id: "aptt",          icon: "clock",        tint: "violet",  name: "APTT Test",                   sub: "Activated Partial Thromboplastin Time",          tags: [],                      fasting: false, price: 400  },
+  { id: "hba1c",         icon: "chart-line",   tint: "sky",     name: "HbA1c Test",                  sub: "3-month sugar average",                          tags: ["Diabetes"],            fasting: false, price: 500,  mrp: 1000 },
+  { id: "lft",           icon: "flask",        tint: "teal",    name: "Liver Function Test",         sub: "Bilirubin, SGOT, SGPT",                          tags: ["Organ"],               fasting: false, price: 500,  mrp: 1000 },
+  { id: "lipid",         icon: "heart-pulse",  tint: "rose",    name: "Lipid Profile",               sub: "Cholesterol & triglycerides",                    tags: ["Heart"],               fasting: true,  price: 500,  mrp: 1300 },
+  { id: "electrolytes",  icon: "beaker",       tint: "sky",     name: "Serum Electrolytes",          sub: "Sodium, potassium & chloride",                   tags: ["Organ"],               fasting: false, price: 500  },
+  { id: "hormone",       icon: "activity",     tint: "amber",   name: "Hormone Test",                sub: "Single hormone level",                           tags: [],                      fasting: false, price: 500  },
+  { id: "lh",            icon: "activity",     tint: "violet",  name: "LH Test",                     sub: "Luteinizing Hormone",                            tags: [],                      fasting: false, price: 500  },
+  { id: "fsh",           icon: "activity",     tint: "rose",    name: "FSH Test",                    sub: "Follicle-Stimulating Hormone",                   tags: [],                      fasting: false, price: 500  },
+  { id: "iron",          icon: "pill",         tint: "rose",    name: "Iron Profile",                sub: "Serum iron, TIBC & transferrin saturation",      tags: [],                      fasting: false, price: 500  },
+  { id: "lipase",        icon: "flask",        tint: "rose",    name: "Lipase Test",                 sub: "Serum lipase — pancreas",                        tags: [],                      fasting: false, price: 600  },
+  { id: "ck-mb",         icon: "heart-pulse",  tint: "violet",  name: "CK-MB Test",                  sub: "Heart muscle enzyme",                            tags: ["Heart"],               fasting: false, price: 700  },
+  { id: "kft",           icon: "beaker",       tint: "sky",     name: "Kidney Function Test",        sub: "Urea, creatinine & uric acid",                   tags: ["Organ"],               fasting: false, price: 800,  mrp: 1150 },
+  { id: "folic-acid",    icon: "pill",         tint: "amber",   name: "Folic Acid Test",             sub: "Serum folate",                                   tags: ["Vitamins"],            fasting: false, price: 800  },
+  { id: "pkg-basic",     icon: "stethoscope",  tint: "emerald", name: "Full Body Checkup",           sub: "Basic — CBC, sugar, lipid, LFT & KFT",           tags: ["Packages", "Popular"], fasting: true,  price: 999,  mrp: 1800, params: 45 },
+  { id: "vitd",          icon: "sun",          tint: "amber",   name: "Vitamin D Test",              sub: "25-OH Vitamin D level",                          tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 1700 },
+  { id: "vitb12",        icon: "pill",         tint: "violet",  name: "Vitamin B12 Test",            sub: "Serum B12 level",                                tags: ["Vitamins"],            fasting: false, price: 1000, mrp: 2000 },
+  { id: "dengue",        icon: "bug",          tint: "emerald", name: "Dengue Test",                 sub: "NS1 antigen, IgG & IgM",                         tags: ["Fever"],               fasting: false, price: 1000, mrp: 1900 },
+  { id: "ige",           icon: "shield-check", tint: "sky",     name: "Total IgE Test",              sub: "Allergy screening",                              tags: [],                      fasting: false, price: 1000 },
+  { id: "anti-ccp",      icon: "activity",     tint: "teal",    name: "Anti-CCP Test",               sub: "Rheumatoid arthritis antibody",                  tags: [],                      fasting: false, price: 1000 },
+  { id: "ana",           icon: "shield-check", tint: "violet",  name: "ANA Test",                    sub: "Antinuclear Antibodies",                         tags: [],                      fasting: false, price: 1000 },
+  { id: "trop-i",        icon: "heart-pulse",  tint: "rose",    name: "Troponin-I Test",             sub: "Heart attack marker (Trop-I)",                   tags: ["Heart"],               fasting: false, price: 1200 },
+  { id: "hla-b27",       icon: "shield-check", tint: "teal",    name: "HLA-B27 Test",                sub: "Genetic marker for spine arthritis",             tags: [],                      fasting: false, price: 1400 },
+  { id: "amh",           icon: "activity",     tint: "rose",    name: "AMH Test",                    sub: "Anti-Müllerian Hormone",                         tags: [],                      fasting: false, price: 1400 },
+  { id: "procalcitonin", icon: "thermometer",  tint: "violet",  name: "Procalcitonin Test",          sub: "PCT — bacterial infection marker",               tags: ["Fever"],               fasting: false, price: 1400 },
+  { id: "pkg-adv",       icon: "sparkles",     tint: "teal",    name: "Advanced Full Body",          sub: "Basic + thyroid, HbA1c & vitamins",              tags: ["Packages", "Popular"], fasting: true,  price: 1999, mrp: 3600, params: 72 },
+  { id: "pkg-senior",    icon: "user-round",   tint: "violet",  name: "Senior Citizen Pack",         sub: "55+ — heart, bones & sugar screening",           tags: ["Packages"],            fasting: true,  price: 2999, mrp: 5200, params: 88 },
+  { id: "fever",         icon: "thermometer",  tint: "teal",    name: "Fever Panel",                 sub: "Malaria, typhoid & dengue",                      tags: ["Fever"],               fasting: false, price: null              },
 ];
 
 /**
@@ -345,7 +384,7 @@ export const defaultFilters = () => [
    pathologist verification of reports, cold-chain transport, barcode tracking,
    sealed single-use needles. Do not reintroduce any of them — in this file or
    in Firestore — without checking with the partner lab first. What survives is
-   what we know: free home collection, a trained phlebotomist with an ID card,
+   what we know: home collection at ₹100 per booking, a trained phlebotomist with an ID card,
    6 AM slots, reports in 24 hours, cash/UPI on collection. */
 
 export const defaultFaqs = (city, areas = [], aliases = []) => {
@@ -357,10 +396,10 @@ export const defaultFaqs = (city, areas = [], aliases = []) => {
 
   const faqs = [
     {
-      // Snippet-friendly: the first clause answers "is it free / what does it
+      // Snippet-friendly: the first clause answers "what does collection
       // cost", which is what wins the featured snippet.
-      q: `How much does a lab test cost in ${city}, and is home sample collection free?`,
-      a: `You pay only the price printed on the test card — home sample collection in ${city} is completely free, with no visiting charge and no hidden fee. A trained phlebotomist comes to your home, draws the sample in front of you and carries it to the lab.`,
+      q: `How much does a lab test cost in ${city}, and what is the home sample collection charge?`,
+      a: `You pay the price printed on the test card, plus ₹100 for home sample collection in ${city} — one charge per booking, however many tests or family members it covers, and no hidden fee. A trained phlebotomist comes to your home, draws the sample in front of you and carries it to the lab.`,
     },
     {
       q: `Can I have a blood test done at home in ${city}?`,
@@ -395,7 +434,7 @@ export const defaultFaqs = (city, areas = [], aliases = []) => {
   if (alias) {
     faqs.splice(3, 0, {
       q: `Do you carry out lab tests in ${alias}?`,
-      a: `Yes — "${alias}" and "${city}" are two names for the same city, so everything on this page applies. Whether you search for a lab test in ${alias} or in ${city}, you get the same free home sample collection and the same report within 24 hours.`,
+      a: `Yes — "${alias}" and "${city}" are two names for the same city, so everything on this page applies. Whether you search for a lab test in ${alias} or in ${city}, you get the same home sample collection (₹100 per booking) and the same report within 24 hours.`,
     });
   }
 
@@ -409,7 +448,7 @@ export const defaultFaqs = (city, areas = [], aliases = []) => {
 export const defaultCta = (city) => ({
   headingLead: `Book a lab test in ${city} —`,
   headingAccent: "sample collected at home",
-  proof: ["Trained phlebotomist", "Free home collection", "Reports in 24 hrs"],
+  proof: ["Trained phlebotomist", "Home collection ₹100", "Reports in 24 hrs"],
 });
 
 /* ── Long-form SEO copy ───────────────────────────────────────────────────
@@ -446,7 +485,7 @@ export const defaultContent = (city, areas = []) => {
   return [
   {
     id: "lab-test-overview",
-    h: `${city} Me Lab Test — Online Blood Test Booking, Free Home Sample Collection`,
+    h: `${city} Me Lab Test — Online Blood Test Booking, Home Sample Collection`,
     p: [
       `${city} me lab test karana ab lab tak jaane par nirbhar nahi hai. Zyadatar routine pathology — blood count, sugar, thyroid, liver, kidney, lipid, vitamin aur urine ke test — sirf ek sample par hote hain, aur wo sample aapke ghar par liya ja sakta hai. Isse subah khaali pet safar karna, counter par line lagana aur report lene ke liye doosri baar jaana, teenon bach jaate hain.`,
       `Booking ka tarika seedha hai. Apna test ya health package chuniye, subah ka slot lijiye, aur trained phlebotomist ID card ke saath aapke ghar ${city} me aata hai. Sample wahin liya jaata hai aur report 24 ghante ke andar WhatsApp aur email par PDF me aa jaati hai — kagaz lene dobara jaane ki zaroorat nahi.`,
@@ -456,9 +495,9 @@ export const defaultContent = (city, areas = []) => {
 
   {
     id: "home-sample-collection",
-    h: `Poore ${city} Me Free Home Sample Collection`,
+    h: `Poore ${city} Me Home Sample Collection`,
     p: [
-      `Home sample collection free hai — aap sirf test ka wahi price dete hain jo card par likha hai, na koi visiting charge na koi hidden fee. Trained phlebotomist ID card ke saath aata hai; sample dene se pehle use dekh lena aapka haq hai. Poori visit lagbhag 10 minute ki hoti hai, aur payment usi waqt cash ya UPI se hota hai.`,
+      `Home sample collection sirf ₹100 me — aap test ka wahi price dete hain jo card par likha hai, aur uske upar ek booking ka ₹100 collection charge (ek visit me jitne bhi test ya log hon), na koi hidden fee. Trained phlebotomist ID card ke saath aata hai; sample dene se pehle use dekh lena aapka haq hai. Poori visit lagbhag 10 minute ki hoti hai, aur payment usi waqt cash ya UPI se hota hai.`,
       `Subah 6 baje se slot shuru hote hain, kyunki fasting wale test — fasting blood sugar, lipid profile aur zyadatar full body package — 10 se 12 ghante khaali pet maangte hain. Non-fasting test jaise CBC, thyroid profile, dengue NS1, vitamin D ya HbA1c din me kabhi bhi ho sakte hain.`,
       `${city} me hum ${areaText} me sample collect karte hain. Aapka pata is list me naam se nahi hai to booking se pehle ek call kar lijiye — cover hone par usi waqt slot book ho jaayega, aur nahi hone par hum saaf bata denge.`,
       `Pata likhte waqt ek landmark zaroor daaliye aur mobile number chalu rakhiye; late visit ki sabse aam wajah adhoora pata hoti hai. Ghar me ek se zyada log test kara rahe hain to sabki booking ek hi slot me kar dijiye. Koi bujurg hai, bistar par hai, diabetic hai jinki nas patli ho gayi hai, ya operation ke baad recovery kar raha hai — ye booking ke waqt bata dijiye.`,
@@ -494,8 +533,8 @@ export const defaultContent = (city, areas = []) => {
     id: "lab-test-price",
     h: `${city} Me Lab Test Ka Price`,
     p: [
-      `Har card par jo price likha hai, wahi aapko dena hai — home sample collection uske upar free hai, na visiting charge na koi hidden fee. Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se.`,
-      `Aam test ke price: Blood Sugar ₹100, CBC ₹400, Thyroid Profile (T3, T4, TSH) ₹550, HbA1c ₹600, Liver Function Test ₹600, Kidney Function Test ₹700, Lipid Profile ₹800, Vitamin D ₹1,000, Vitamin B12 ₹1,200 aur Dengue (NS1, IgG, IgM) ₹1,200.`,
+      `Har card par jo price likha hai, wahi aapko dena hai — home sample collection ka charge uske upar ₹100 per booking hai, na koi hidden fee. Payment sample lene ke waqt hota hai, cash ya UPI (PhonePe, Google Pay, Paytm) se.`,
+      `Aam test ke price: Blood Sugar ₹100, CBC ₹300, Thyroid Profile (T3, T4, TSH) ₹400, HbA1c ₹500, Liver Function Test ₹500, Kidney Function Test ₹800, Lipid Profile ₹500, Vitamin D ₹1,000, Vitamin B12 ₹1,000 aur Dengue (NS1, IgG, IgM) ₹1,000.`,
       `Bachat package me sabse zyada hai: Basic Full Body Checkup ₹999 me 45 parameter, Advanced Full Body ₹1,999 me 72 parameter, aur Senior Citizen Pack ₹2,999 me 88 parameter. Wahi test alag alag karane par kharcha kai guna ho jaata hai.`,
       `Kuch test, jaise Fever Panel, us waqt ki zaroorat par tay hote hain — unke card par "Call for price" likha rehta hai. Phone par pooch lijiye; sample dene se pehle price bata diya jaata hai.`,
     ],
@@ -602,7 +641,7 @@ export const varanasiFaqs = [
     // on a page that prints the real price beside every package. Quoting the
     // cards is the only version that cannot contradict the price list above it.
     q: "How much does a full body checkup cost in Varanasi?",
-    a: "The Basic Full Body Checkup is ₹999 and covers 45 parameters, the Advanced Full Body is ₹1,999 for 72 parameters, and the Senior Citizen Pack is ₹2,999 for 88 parameters. These are the prices on the cards above — home sample collection is free on top of them, with no visiting charge.",
+    a: "The Basic Full Body Checkup is ₹999 and covers 45 parameters, the Advanced Full Body is ₹1,999 for 72 parameters, and the Senior Citizen Pack is ₹2,999 for 88 parameters. These are the prices on the cards above — home sample collection is ₹100 per booking on top of them, however many tests are in it.",
   },
   {
     // ⚠ "SMS and email" corrected to WhatsApp and email, which is what every
@@ -626,7 +665,7 @@ export const varanasiFaqs = [
   },
   {
     q: "Do you carry out lab tests in Banaras?",
-    a: "Yes — \"Banaras\" and \"Varanasi\" are two names for the same city, so everything on this page applies. Whether you search for a lab test in Banaras or in Varanasi, you get the same free home sample collection, the same rates and the same report within 24 hours.",
+    a: "Yes — \"Banaras\" and \"Varanasi\" are two names for the same city, so everything on this page applies. Whether you search for a lab test in Banaras or in Varanasi, you get the same home sample collection (₹100 per booking), the same rates and the same report within 24 hours.",
   },
 ];
 
@@ -674,7 +713,7 @@ export const varanasiFaqs = [
  * supports it, and it is the same class of unearned claim as the accreditation
  * that had to be removed once already. That city takes its "blood test home
  * collection" phrase instead. Read the warning above defaultFaqs before
- * editing — free home collection, slots from 6 AM, report in 24 hours, cash or
+ * editing — home collection at ₹100, slots from 6 AM, report in 24 hours, cash or
  * UPI, and nothing past that. NEVER "24 ghante khula lab".
  *
  * English, because these phrases are typed in English whatever language the
@@ -694,7 +733,7 @@ export const defaultCallBanner = (city) => ({
    far more SEO weight here than a second copy of the top navigation. */
 
 export const defaultFooter = (city) => ({
-  tagline: `Lab tests & health checkups at home in ${city} — free sample collection by trained phlebotomists & reports in 24 hours.`,
+  tagline: `Lab tests & health checkups at home in ${city} — sample collection at ₹100 by trained phlebotomists & reports in 24 hours.`,
   popularTests: [
     "CBC Test",
     "Full Body Checkup",
@@ -740,7 +779,7 @@ export const defaultFooter = (city) => ({
 export const siteFooter = () => ({
   ...defaultFooter(""),
   tagline:
-    "Lab test aur full body checkup ghar baithe — free home sample collection, trained phlebotomist aur report 24 ghante me, poore Purvanchal me.",
+    "Lab test aur full body checkup ghar baithe — home sample collection sirf ₹100 me, trained phlebotomist aur report 24 ghante me, poore Purvanchal me.",
 });
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
@@ -781,7 +820,7 @@ export const siteFooter = () => ({
  * repeat the same LEAD + TAIL pairing. The leads in use are "Lab Test in X",
  * "Blood Test in X", "Blood Test at Home in X", "Pathology Lab in X" and
  * "Diagnostic Centre in X"; the tails vary with what each page actually argues
- * (free home collection, home sample collection, full body checkup, blood test
+ * (home collection, home sample collection, full body checkup, blood test
  * booking, and so on). Which lead a city takes is not arbitrary — it is the
  * term that city's own copy is written around.
  *
@@ -814,7 +853,7 @@ export const defaultDescription = (city, state, areas = []) => {
       ? `${areas.slice(0, count).join(", ")} samet poore sheher me`
       : `${city} me`;
 
-    return `${city} me ghar baithe lab test — ${where} free home sample collection. CBC, thyroid, sugar aur full body checkup.`;
+    return `${city} me ghar baithe lab test — ${where} home sample collection ₹100 me. CBC, thyroid, sugar aur full body checkup.`;
   };
 
   return (
