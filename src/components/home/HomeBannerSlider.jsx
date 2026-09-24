@@ -138,7 +138,7 @@ export default function HomeBannerSlider({
          wrong trade: it widens the banner to buy height, and the width is
          supposed to stay where it is. Height comes from the ratio now, not
          from eating the page margin. */
-      className="mx-auto max-w-6xl px-4 sm:px-6 py-4 sm:py-6"
+      className="mx-auto max-w-6xl px-4 sm:px-6 pt-3 pb-4 sm:py-6"
     >
       {/* The heading is for screen readers and the document outline only. The
           artwork carries its own words, and a visible title above it would be
