@@ -106,7 +106,7 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
       aria-labelledby={headingId}
       className="bg-white border-t border-slate-100"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-8 sm:pb-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-6 sm:pb-12">
 
         <h2
           id={headingId}
@@ -122,7 +122,7 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
             text; grid-rows animates the height instead of snapping open.
             Answers stay in the DOM when collapsed — never conditionally
             render them, or the visible copy stops matching the JSON-LD. */}
-        <ul className="mt-6 sm:mt-8 space-y-2.5">
+        <ul className="mt-4 sm:mt-8 space-y-2.5">
           {items.map(({ q, a, links = [] }, i) => {
             const isOpen = open === i;
             const btnId = `${uid}-btn-${i}`;

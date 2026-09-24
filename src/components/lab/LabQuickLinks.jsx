@@ -78,7 +78,7 @@ export default function LabQuickLinks({ cities = [], currentSlug = null }) {
       aria-labelledby="quick-links-heading"
       className="border-t border-slate-200/80 bg-slate-50/70"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-8">
         {/* The accent bar is the same one the guide's headings carry (see
             LabContent) — it is what makes this band read as part of the site
             rather than a widget bolted to the bottom of it. */}

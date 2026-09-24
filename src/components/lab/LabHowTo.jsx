@@ -91,7 +91,7 @@ export default function LabHowTo({ data }) {
       aria-labelledby="lab-howto-heading"
       className="hidden md:block border-t border-slate-200/80 bg-white"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-7 sm:py-14">
 
         <div className="max-w-3xl">
           <h2
@@ -113,7 +113,7 @@ export default function LabHowTo({ data }) {
             that. Two columns on a phone would leave four-line paragraphs in a
             160px column, so it stacks below sm. */}
         <ol
-          className={`mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:mt-10 ${
+          className={`mt-6 grid gap-x-10 gap-y-6 sm:mt-8 sm:gap-y-8 sm:grid-cols-2 lg:mt-10 ${
             COLUMNS[steps.length] ?? "lg:grid-cols-4"
           }`}
         >
