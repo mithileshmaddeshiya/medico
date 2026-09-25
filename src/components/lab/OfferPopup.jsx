@@ -149,7 +149,7 @@ export default function OfferPopup({ offer, phone }) {
           type="button"
           onClick={close}
           aria-label="Close offer"
-          className="absolute right-2.5 top-2.5 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-600 ring-1 ring-slate-200 shadow-sm transition hover:bg-white hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+          className="absolute right-2.5 top-2.5 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/90 text-slate-600 ring-1 ring-slate-200 shadow-sm transition hover:bg-white hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
         >
           <X className="h-4 w-4" aria-hidden />
         </button>
