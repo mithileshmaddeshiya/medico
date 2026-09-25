@@ -8,6 +8,7 @@ import {
   Flag,
   History,
   ImageIcon,
+  LayoutDashboard,
   Link2,
   LogOut,
   MapPin,
@@ -56,6 +57,8 @@ const SECTIONS = [
     title: "Work",
     items: [
       { href: "/admin", label: "Dashboard", Icon: BarChart3, exact: true },
+      // The operations CRM — bookings, collections, lab partners, payments.
+      { href: "/crm", label: "Operations CRM", Icon: LayoutDashboard },
       { href: "/admin/leads", label: "Leads", Icon: Flag },
       { href: "/admin/orders", label: "Orders", Icon: Receipt },
       { href: "/admin/carts", label: "Carts", Icon: ShoppingCart },

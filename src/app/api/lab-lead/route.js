@@ -2,6 +2,7 @@ import { priceCart } from "@/lib/labCart";
 import { firebaseConfig } from "@/lib/firebaseConfig";
 import { getTests, recordCodOrder, recordLead } from "@/lib/labStore";
 import { notifyOwnerOnWhatsapp } from "@/lib/notifyWhatsapp";
+import { syncFromWebsite } from "@/lib/crm/sync";
 
 /**
  * Receives a booking from the lab enquiry form.
@@ -117,6 +118,10 @@ export async function POST(request) {
   }
   if (mysql.status === "rejected") {
     console.error("[lab-lead] MySQL did not save the booking", mysql.reason);
+  } else {
+    // Into the CRM: customer, booking, notification. Never throws — and the
+    // CRM's catch-up pass picks up anything this misses (src/lib/crm/sync.js).
+    await syncFromWebsite(mysql.value);
   }
   if (firestore.status === "rejected" && mysql.status === "rejected") {
     return Response.json(

@@ -46,6 +46,14 @@ const sha256 = (value) => createHash("sha256").update(String(value)).digest("hex
    `can()` takes the MINIMUM role, so a check reads as "at least an editor". */
 const RANK = { viewer: 1, editor: 2, owner: 3 };
 
+/**
+ * The roles this panel understands. The CRM adds more (manager, support,
+ * collector, accounts, partner — see src/lib/crm/permissions.js); those have
+ * no rank here, so `can()` refuses them everything and requireUser() sends
+ * them to /crm instead of showing them leads, orders and settings.
+ */
+export const isAdminRole = (role) => Object.hasOwn(RANK, role);
+
 export const can = (user, minimum = "editor") =>
   Boolean(user) && (RANK[user.role] ?? 0) >= (RANK[minimum] ?? 99);
 
@@ -147,7 +155,7 @@ export async function currentUser() {
   if (!token) return null;
 
   const [rows] = await query(
-    `SELECT s.id AS session_id, u.id, u.email, u.name, u.role
+    `SELECT s.id AS session_id, u.id, u.email, u.name, u.role, u.partner_id
      FROM admin_sessions s JOIN admin_users u ON u.id = s.user_id
      WHERE s.token_hash = ?
        AND s.status = 'active'
@@ -165,6 +173,9 @@ export async function currentUser() {
     email: user.email,
     name: user.name,
     role: user.role,
+    // Set only on a lab partner's account; the CRM scopes every query a
+    // partner makes to it (src/lib/crm/guard.js).
+    partnerId: user.partner_id ? Number(user.partner_id) : null,
     sessionId: user.session_id,
   };
 }

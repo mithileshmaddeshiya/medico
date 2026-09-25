@@ -17,6 +17,7 @@ import mysql from "mysql2/promise";
 
 import { ADMIN_SCHEMA, MIGRATIONS } from "./admin/schema";
 import { runMigrations } from "./admin/migrate";
+import { CRM_MIGRATIONS, CRM_SCHEMA } from "./crm/schema";
 import { SCHEMA } from "./dbSchema";
 
 export const dbConfigured = () =>
@@ -58,7 +59,8 @@ const DEAD_CONNECTION = new Set([
 const isRead = (sql) => /^\s*(select|show)\b/i.test(sql);
 
 /**
- * The public site's tables (SCHEMA) and the back office's (ADMIN_SCHEMA), then
+ * The public site's tables (SCHEMA), the back office's (ADMIN_SCHEMA) and the
+ * CRM's (CRM_SCHEMA, src/lib/crm/schema.js), then
  * the ALTERs that a database created before those columns existed still needs.
  *
  * Order matters: the CREATEs run first so a fresh database has every table
@@ -67,8 +69,8 @@ const isRead = (sql) => /^\s*(select|show)\b/i.test(sql);
  */
 function ensureSchema() {
   globalThis.__mbDbSchema ??= (async () => {
-    for (const sql of [...SCHEMA, ...ADMIN_SCHEMA]) await pool().query(sql);
-    const applied = await runMigrations(pool(), MIGRATIONS);
+    for (const sql of [...SCHEMA, ...ADMIN_SCHEMA, ...CRM_SCHEMA]) await pool().query(sql);
+    const applied = await runMigrations(pool(), [...MIGRATIONS, ...CRM_MIGRATIONS]);
     if (applied.length) console.info("[db] migrations applied:", applied.join(", "));
   })().catch((err) => {
     globalThis.__mbDbSchema = undefined; // retry on the next request
