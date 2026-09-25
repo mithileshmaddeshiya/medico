@@ -11,14 +11,16 @@ import { cart } from "./cartStore";
  * so the card never changes height and the thumb is already on the control.
  *
  * `block` stretches it to the card's width (desktop cards); without it, it is a
- * compact pill for the phone rows.
+ * compact pill for the phone rows. `size="lg"` is the taller, squarer
+ * button the test cards use (h-11, rounded-lg).
  */
 
 /* How long "Add to cart" shows its spinner before the stepper takes over. */
 const ADD_DELAY_MS = 450;
 
-export default function AddToCartControl({ test, qty = 0, block = false }) {
+export default function AddToCartControl({ test, qty = 0, block = false, size = "md" }) {
   const width = block ? "w-full" : "min-w-[104px]";
+  const box = size === "lg" ? "h-11 rounded-lg text-[14px]" : "h-9 rounded-full text-[12.5px]";
   const [adding, setAdding] = useState(false);
 
   if (qty === 0) {
@@ -38,7 +40,7 @@ export default function AddToCartControl({ test, qty = 0, block = false }) {
           toast.success(`${test.name} added to cart`, { id: "lab-cart" });
         }}
         aria-label={`Add ${test.name} to cart`}
-        className={`${width} cursor-pointer inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-[0_10px_20px_-10px_rgba(5,150,105,0.95)] active:scale-[0.97] disabled:cursor-wait disabled:opacity-90`}
+        className={`${width} cursor-pointer inline-flex ${box} items-center justify-center gap-1.5 bg-linear-to-r from-emerald-600 to-teal-600 px-4 font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-[0_10px_20px_-10px_rgba(5,150,105,0.95)] active:scale-[0.97] disabled:cursor-wait disabled:opacity-90`}
       >
         {adding ? (
           <>
@@ -62,7 +64,7 @@ export default function AddToCartControl({ test, qty = 0, block = false }) {
     <div
       role="group"
       aria-label={`${test.name} quantity`}
-      className={`${width} inline-flex h-9 items-center justify-between overflow-hidden rounded-full bg-emerald-50 ring-1 ring-emerald-300`}
+      className={`${width} inline-flex ${box} items-center justify-between overflow-hidden bg-emerald-50 ring-1 ring-emerald-300`}
     >
       <button
         type="button"

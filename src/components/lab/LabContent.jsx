@@ -276,21 +276,42 @@ export default function LabContent({ city, sections = [], related = null }) {
             title. The hardcoded "… Ki Poori Jaankari" that used to sit here was
             the weaker of the two anyway: this one carries the terms the page is
             actually trying to rank for. */}
+        {/* PHONE: one compact row — icon tile, then "GUIDE · N MIN READ", the
+            title at a phone size (three lines at most) and one short line
+            under it. The desktop header below is unchanged. Both render the
+            same single <h2>; only the chrome around it differs by width. */}
         <header className="max-w-2xl">
-          <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[10.5px] font-bold uppercase tracking-[0.14em] text-emerald-700 ring-1 ring-emerald-100">
-            <BookOpen className="h-3 w-3" strokeWidth={2.6} />
-            Guide
-          </p>
-          <h2 className="mt-3 text-balance text-xl min-[400px]:text-2xl sm:text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">
-            {lead.h}
-          </h2>
-          <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] sm:text-[13.5px] text-slate-500">
-            <span>Price, home collection, report aur kaunsa test kab karana hai</span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-0.5 text-[11.5px] font-semibold text-slate-600 ring-1 ring-slate-200">
-              <Clock3 className="h-3 w-3" strokeWidth={2.4} />
-              {readMinutes} min read
+          <div className="flex items-start gap-3 sm:block">
+            <span
+              aria-hidden
+              className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-emerald-500 to-teal-600 text-white shadow-[0_8px_18px_-10px_rgba(5,150,105,0.9)] sm:hidden"
+            >
+              <BookOpen className="h-5 w-5" strokeWidth={2.2} />
             </span>
-          </p>
+
+            <div className="min-w-0">
+              <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-emerald-700 sm:hidden">
+                Guide <span className="text-slate-300">·</span>{" "}
+                <span className="text-slate-500">{readMinutes} min read</span>
+              </p>
+              <p className="hidden items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[10.5px] font-bold uppercase tracking-[0.14em] text-emerald-700 ring-1 ring-emerald-100 sm:inline-flex">
+                <BookOpen className="h-3 w-3" strokeWidth={2.6} />
+                Guide
+              </p>
+
+              <h2 className="mt-1 text-pretty text-[17px] font-extrabold leading-snug tracking-tight text-slate-900 line-clamp-3 sm:mt-3 sm:line-clamp-none sm:text-balance sm:text-[28px] sm:leading-tight">
+                {lead.h}
+              </h2>
+
+              <p className="mt-1.5 text-[12.5px] leading-snug text-slate-500 sm:mt-2 sm:flex sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-1 sm:text-[13.5px]">
+                <span>Price, home collection, report aur kaunsa test kab karana hai</span>
+                <span className="hidden items-center gap-1 rounded-full bg-white px-2 py-0.5 text-[11.5px] font-semibold text-slate-600 ring-1 ring-slate-200 sm:inline-flex">
+                  <Clock3 className="h-3 w-3" strokeWidth={2.4} />
+                  {readMinutes} min read
+                </span>
+              </p>
+            </div>
+          </div>
         </header>
 
         <div className="mt-4 grid gap-5 sm:mt-6 sm:gap-6 lg:mt-8 lg:grid-cols-[minmax(0,250px)_1fr] lg:gap-12">
@@ -387,10 +408,13 @@ export default function LabContent({ city, sections = [], related = null }) {
                       : undefined
                 }
                 className={`overflow-hidden transition-[max-height] duration-500 ease-in-out motion-reduce:transition-none ${
-                  // A 176px peek showed one heading and half a sentence, which
-                  // read as broken rather than as a preview. Show a full first
-                  // paragraph instead, so the teaser is worth reading on its own.
-                  expanded ? "max-h-none" : "max-h-72 sm:max-h-80"
+                  // PHONE: fully closed (max-h-0) until "View Guide" is tapped —
+                  // the owner wants no prose on the page there, just the button.
+                  // Clipped, not unmounted: every word and link stays in the
+                  // HTML, so Google indexes the guide exactly as before (content
+                  // behind an expander is indexed in full on mobile-first).
+                  // From sm up: the original teaser — a full first paragraph.
+                  expanded ? "max-h-none" : "max-h-0 sm:max-h-80"
                 }`}
               >
                 {/* One wrapper around all the prose — the box the open height is
@@ -550,7 +574,7 @@ export default function LabContent({ city, sections = [], related = null }) {
               {!expanded && (
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-slate-50 via-slate-50/85 to-transparent"
+                  className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-28 bg-linear-to-t from-slate-50 via-slate-50/85 to-transparent sm:block"
                 />
               )}
             </div>
@@ -569,9 +593,16 @@ export default function LabContent({ city, sections = [], related = null }) {
               onClick={toggle}
               aria-expanded={expanded}
               aria-controls="lab-content"
-              className="group mt-5 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.7)] ring-1 ring-emerald-600/20 transition-all duration-200 hover:bg-emerald-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 active:scale-[0.98] sm:ml-4 sm:inline-flex sm:w-auto sm:py-2.5 sm:text-[12.5px]"
+              className={`group flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_24px_-12px_rgba(5,150,105,0.7)] ring-1 ring-emerald-600/20 transition-all duration-200 hover:bg-emerald-700 hover:shadow-[0_14px_28px_-12px_rgba(5,150,105,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 active:scale-[0.98] sm:mt-5 sm:ml-4 sm:inline-flex sm:w-auto sm:py-2.5 sm:text-[12.5px] ${expanded ? "mt-5" : "mt-1"}`}
             >
-              {expanded ? "Read Less" : `Poora Guide Padhein — ${readMinutes} min`}
+              {expanded ? (
+                "Read Less"
+              ) : (
+                <>
+                  <span className="sm:hidden">View Guide</span>
+                  <span className="hidden sm:inline">Poora Guide Padhein — {readMinutes} min</span>
+                </>
+              )}
               <ChevronDown
                 className={`h-4 w-4 transition-transform duration-300 motion-reduce:transition-none ${expanded ? "rotate-180" : ""}`}
                 strokeWidth={2.6}
