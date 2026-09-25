@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import toast from "react-hot-toast";
 import {
   ArrowLeft,
@@ -12,6 +13,7 @@ import {
   Clock,
   CreditCard,
   Loader2,
+  House,
   Lock,
   MapPin,
   Minus,
@@ -78,6 +80,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [cityName, setCityName] = useState("");
+  const [address, setAddress] = useState("");
   const [method, setMethod] = useState("online");
   const [invalid, setInvalid] = useState("");
 
@@ -85,8 +88,11 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
   const cityRef = useRef(null);
+  const addressRef = useRef(null);
   const panelRef = useRef(null);
   const billRef = useRef(null);
+  // "View price details" opens the full breakdown in a dialog over the drawer.
+  const [priceOpen, setPriceOpen] = useState(false);
 
   const bill = useMemo(() => priceCart(items, tests), [items, tests]);
   const byId = useMemo(() => new Map(tests.map((t) => [t.id, t])), [tests]);
@@ -137,7 +143,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
   const complain = (field, message) => {
     setInvalid(field);
     toast.error(message, { id: "lab-cart-form" });
-    ({ name: nameRef, phone: phoneRef, city: cityRef })[field]?.current?.focus();
+    ({ name: nameRef, phone: phoneRef, city: cityRef, address: addressRef })[field]?.current?.focus();
   };
 
   const finish = (result) => {
@@ -235,12 +241,21 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
     e.preventDefault();
     if (busy) return;
 
-    // Name, mobile and the city the patient types. The address is taken on the
-    // confirmation call.
-    const customer = { name: name.trim(), phone: mobile, city: cityName.trim(), address: "" };
+    // Name, mobile, city and the full address for the home visit. The address
+    // travels with the booking — into the Razorpay order's notes (online) or
+    // the lead (pay at collection) — so the collector has it before the call.
+    const customer = {
+      name: name.trim(),
+      phone: mobile,
+      city: cityName.trim(),
+      address: address.replace(/\s+/g, " ").trim(),
+    };
     if (!customer.city) return complain("city", "Please enter your city.");
     const problem = validateLead(customer);
     if (problem) return complain(problem.field, problem.message);
+    if (customer.address.length < 8) {
+      return complain("address", "Please enter your full address — house, street and landmark.");
+    }
 
     setInvalid("");
     setBusy(true);
@@ -263,7 +278,7 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
       <div
         ref={panelRef}
         tabIndex={-1}
-        className="lab-pop-in absolute inset-x-0 bottom-0 flex h-[92dvh] flex-col overflow-hidden border-slate-200 bg-slate-100 shadow-2xl outline-none sm:inset-y-0 sm:left-auto sm:right-0 sm:h-auto sm:w-110 sm:border-l"
+        className="lab-pop-in absolute inset-x-0 bottom-0 flex h-[92dvh] flex-col overflow-clip border-slate-200 bg-slate-100 shadow-2xl outline-none sm:inset-y-0 sm:left-auto sm:right-0 sm:h-auto sm:w-110 sm:border-l"
       >
         {/* ── HEADER ─────────────────────────────────────────────── */}
         <div className="shrink-0 border-b border-slate-200 bg-white px-4 pb-3 pt-2 sm:px-5 sm:pt-4">
@@ -516,11 +531,13 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     </div>
                     <button
                       type="button"
-                      onClick={() => billRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                      onClick={() => setPriceOpen(true)}
+                      aria-haspopup="dialog"
                       className="mt-1 cursor-pointer text-[11.5px] font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
                     >
                       View price details
                     </button>
+                    {priceOpen && <PriceDetailsDialog bill={bill} onClose={() => setPriceOpen(false)} />}
                   </div>
                   <button
                     type="button"
@@ -540,8 +557,8 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
         {step === 1 && (
           <form onSubmit={submit} noValidate className="flex min-h-0 flex-1 flex-col">
             <div className="flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-4 py-3 sm:px-5">
-              {/* CONTACT — name and mobile only. The team calls this number to
-                  fix the slot and take the address, so nothing else is asked. */}
+              {/* CONTACT — name, mobile, city and the address for the home
+                  visit. The team still calls this number to fix the slot. */}
               <section className="overflow-hidden border border-slate-200 bg-white">
                 <div className="flex items-center gap-2.5 border-b border-slate-200 bg-slate-50 px-4 py-2.5">
                   <span className="flex h-6 w-6 items-center justify-center bg-slate-900 text-[11px] font-semibold text-white">
@@ -651,6 +668,33 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                       />
                     </div>
                   </div>
+
+                  <div>
+                    <label htmlFor={`${uid}-address`} className={labelClass}>
+                      Full address <span className="text-red-500">*</span>
+                    </label>
+                    <div className="relative">
+                      <House
+                        aria-hidden
+                        className="pointer-events-none absolute left-3.5 top-3.5 h-4.5 w-4.5 text-slate-400"
+                        strokeWidth={2}
+                      />
+                      <textarea
+                        id={`${uid}-address`}
+                        ref={addressRef}
+                        value={address}
+                        onChange={(e) => {
+                          setAddress(e.target.value.slice(0, 400));
+                          if (invalid === "address") setInvalid("");
+                        }}
+                        rows={3}
+                        autoComplete="street-address"
+                        autoCapitalize="words"
+                        placeholder="House no., street, area, landmark, PIN code"
+                        className={`${invalid === "address" ? inputBad : inputOk} min-h-[88px] resize-none pl-10 pr-3 pt-2.5 leading-snug`}
+                      />
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -688,7 +732,13 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
                     return (
                       <label
                         key={key}
-                        className={`block cursor-pointer border p-3 transition-colors ${
+                        // `relative`: the sr-only radio inside is absolutely
+                        // positioned. Without a positioned parent here it was
+                        // placed against the whole drawer panel, and focusing it
+                        // ("Pay at home collection") made the browser scroll the
+                        // panel itself — header cut off, a grey gap under the
+                        // footer.
+                        className={`relative block cursor-pointer border p-3 transition-colors ${
                           active
                             ? "border-emerald-600 bg-emerald-50/60"
                             : "border-slate-200 bg-white hover:border-slate-400"
@@ -838,5 +888,130 @@ export default function CartDrawer({ open, onClose, items, tests, city, phone })
         )}
       </div>
     </div>
+  );
+}
+
+/**
+ * The full price breakdown, opened by "View price details" under the total.
+ *
+ * Every line with its quantity and amount (MRP struck through where the test
+ * has one above its price), then the same four figures as the Price details
+ * card — tests, discount, home collection, total. Nothing is computed here:
+ * it reads the `bill` priceCart() already made, so it can never disagree with
+ * the total on the button beside it.
+ *
+ * Portalled to <body>: the drawer panel slides in with a transform, and a
+ * fixed element inside a transformed parent is fixed to that parent, not the
+ * screen. Bottom sheet on a phone, centred card from sm. Closes on ✕, on a
+ * tap outside, and on Escape — which is caught in the capture phase and
+ * stopped, so the same key does not also close the drawer underneath.
+ */
+function PriceDetailsDialog({ bill, onClose }) {
+  const closeRef = useRef(null);
+  // The parent passes a fresh arrow every render; reading it through a ref
+  // keeps the effect below to one run (focus moves to ✕ once, on open).
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== "Escape") return;
+      e.stopPropagation();
+      onCloseRef.current();
+    };
+    window.addEventListener("keydown", onKey, true);
+    closeRef.current?.focus({ preventScroll: true });
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, []);
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-90 flex cursor-pointer items-end justify-center bg-slate-900/50 sm:items-center sm:p-4"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="price-details-title"
+        onClick={(e) => e.stopPropagation()}
+        className="flex max-h-[85dvh] w-full cursor-default flex-col overflow-hidden rounded-t-2xl bg-white shadow-2xl sm:max-w-md sm:rounded-2xl"
+      >
+        <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3.5">
+          <p id="price-details-title" className="text-[16px] font-bold text-slate-900">
+            Price details
+          </p>
+          <button
+            ref={closeRef}
+            type="button"
+            onClick={onClose}
+            aria-label="Close price details"
+            className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-emerald-600"
+          >
+            <X className="h-5 w-5" strokeWidth={2.2} />
+          </button>
+        </div>
+
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          {/* Each test */}
+          <ul className="divide-y divide-slate-100 px-4">
+            {bill.lines.map((line) => (
+              <li key={line.id} className="flex items-start justify-between gap-3 py-3">
+                <div className="min-w-0">
+                  <p className="text-[14px] font-semibold leading-snug text-slate-900">{line.name}</p>
+                  <p className="mt-0.5 text-[12px] text-slate-500">
+                    {inr(line.price)} × {line.qty} {line.qty === 1 ? "person" : "persons"}
+                  </p>
+                </div>
+                <div className="shrink-0 text-right">
+                  <p className="text-[14px] font-semibold tabular-nums text-slate-900">{inr(line.lineTotal)}</p>
+                  {line.lineMrp > line.lineTotal && (
+                    <p className="text-[11.5px] tabular-nums text-slate-400 line-through">{inr(line.lineMrp)}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Totals */}
+          <dl className="mx-4 mb-4 space-y-2.5 rounded-xl bg-slate-50 px-3.5 py-3 text-[13.5px] ring-1 ring-slate-200">
+            <div className="flex justify-between text-slate-700">
+              <dt>
+                Price ({bill.count} {bill.count === 1 ? "test" : "tests"})
+              </dt>
+              <dd className="tabular-nums">{inr(bill.mrpTotal)}</dd>
+            </div>
+            {bill.savings > 0 && (
+              <div className="flex justify-between text-slate-700">
+                <dt>Discount</dt>
+                <dd className="font-semibold tabular-nums text-emerald-600">− {inr(bill.savings)}</dd>
+              </div>
+            )}
+            <div className="flex justify-between text-slate-700">
+              <dt>Home collection charges</dt>
+              <dd className="tabular-nums">{inr(bill.collectionFee)}</dd>
+            </div>
+            <div className="flex justify-between border-t border-slate-200 pt-3 text-[15.5px] font-bold text-slate-900">
+              <dt>Total amount</dt>
+              <dd className="tabular-nums">{inr(bill.total)}</dd>
+            </div>
+          </dl>
+
+          {bill.savings > 0 && (
+            <p className="mx-4 mb-4 flex items-center gap-2 rounded-xl bg-emerald-50 px-3.5 py-2.5 text-[12.5px] font-semibold text-emerald-700">
+              <BadgePercent className="h-4 w-4 shrink-0" strokeWidth={2.3} />
+              You will save {inr(bill.savings)} on this booking
+            </p>
+          )}
+
+          <p className="flex items-center justify-center gap-1.5 px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] text-[11.5px] font-medium text-slate-400">
+            <Lock className="h-3 w-3" strokeWidth={2.4} />
+            Pay online, or cash / UPI at sample collection
+          </p>
+        </div>
+      </div>
+    </div>,
+    document.body
   );
 }

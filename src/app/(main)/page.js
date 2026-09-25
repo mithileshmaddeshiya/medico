@@ -7,6 +7,7 @@ import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
+import LabReviews from "@/components/lab/LabReviews";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHowTo from "@/components/lab/LabHowTo";
 import OfferPopup from "@/components/lab/OfferPopup";
@@ -426,6 +427,10 @@ export default async function HomePage() {
       <LabCallBanner banner={HOME_CALL_BANNER} phone={LAB_PHONE} />
 
       <LabHowTo data={HOME_HOW_TO} />
+
+      {/* Real patient reviews — between the call strip and the FAQ, where
+          someone deciding whether to book looks for them. */}
+      <LabReviews />
 
 
       {/* <HomeGuides data={HOME_GUIDES} posts={guides} /> */}

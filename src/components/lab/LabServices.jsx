@@ -19,7 +19,7 @@ import LabBookingModal from "./LabBookingModal";
 import AddToCartControl from "./cart/AddToCartControl";
 import CartDrawer from "./cart/CartDrawer";
 import { cart, OPEN_CART_HASH, useCartItems } from "./cart/cartStore";
-import { iconFor, tint } from "./testIcons";
+import { iconFor } from "./testIcons";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -36,7 +36,6 @@ const BREAKPOINTS = {
 };
 
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
-const offPct = (price, mrp) => Math.round(((mrp - price) / mrp) * 100);
 
 // What the search box looks through. Tags are included on purpose: "package",
 // "diabetes" or "heart" then work as searches, not only as chips.
@@ -111,7 +110,7 @@ export default function LabServices({
   // theirs may leak into the page's horizontal scroll on small screens.
   return (
     <section id="tests" className="bg-slate-50 border-t border-slate-100 overflow-x-clip">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-2 sm:py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-0 sm:py-8">
 
         {/* HEADING — follows the active chip. The city is appended only when
             there is one: this section also runs on the home page, which serves
@@ -285,7 +284,7 @@ export default function LabServices({
               style={{
                 "--swiper-pagination-color": "#0d9488",
                 "--swiper-pagination-bottom": "0px",
-                padding: "6px 6px 28px",
+                padding: "6px 6px 22px",
               }}
             >
               {visible.map((t) => (
@@ -328,129 +327,105 @@ export default function LabServices({
 }
 
 /**
- * One test or package card.
+ * One test or package card — the pathology-lab catalogue layout.
  *
- *   ┌──────────────────────────────┬─────────┐
- *   │ Name                         │   45    │  ← count corner: parameters for a
- *   │                              │ Params  │    package, the test's icon else
- *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
- *   │ Includes: …                            │
- *   │ 44% OFF · You save ₹80                 │
- *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
- *   │ fasting · home collection · 24h report │
- *   ├────────────────────────────────────────┤
- *   │ ₹999 ₹1,800            [ Add to cart ] │  ← tinted footer
- *   └────────────────────────────────────────┘
+ *   ┌───────────────────────────────┬────────┐
+ *   │ Name, up to two lines         │   80   │  ← count box: parameters for a
+ *   │ ★ Top booked                  │ Params │    package, the icon otherwise
+ *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┴╌╌╌╌╌╌╌╌┤
+ *   │ Includes: …, up to three lines          │
+ *   ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
+ *   │ 🍴 Fasting    🏠 Home       ⏱ Report     │
+ *   │    required      collection    in 24 hrs │
+ *   ├─────────────────────────────────────────┤
+ *   │ ₹999 per test          [ Add to cart ] │  ← tinted footer
+ *   └─────────────────────────────────────────┘
  *
- * ── ONLY WHAT WE CAN STAND BEHIND ────────────────────────────────────────
- * The three facts along the bottom are the test's own `fasting` flag and two
- * of the five confirmed promises (home collection at ₹100, report in 24 hours).
- * Nothing like "recommended for everyone", no invented test counts: a single
- * test with no `params` gets its icon in the corner, never a made-up number.
+ * ── NO GAPS ──────────────────────────────────────────────────────────────
+ * The card takes its own content's height (no h-full). The slider still makes
+ * every slide as tall as the tallest, but the card no longer stretches to
+ * fill it — a short card simply ends sooner, instead of carrying a blank strip
+ * in its middle.
+ *
+ * Only what we can stand behind: no MRP / "% OFF" (owner's decision), no
+ * "recommended for everyone", no member pricing the checkout does not offer.
+ * The facts are the test's own `fasting` flag and two confirmed promises.
  */
 function TestCard({ test: t, qty, onEnquire }) {
-  const save = t.price && t.mrp ? t.mrp - t.price : 0;
+  const isPackage = t.params > 0 || (t.tags ?? []).includes("Packages");
+  const popular = (t.tags ?? []).includes("Popular");
   const Fasting = t.fasting ? Utensils : UtensilsCrossed;
 
   return (
     <article
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_-2px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_-14px_rgba(13,148,136,0.35)] ${
-        qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200/80 hover:ring-teal-200"
+      className={`group flex flex-col overflow-hidden rounded-lg bg-white transition-shadow duration-200 hover:shadow-[0_12px_28px_-16px_rgba(8,145,178,0.45)] ${
+        qty > 0 ? "ring-2 ring-emerald-400" : "ring-1 ring-slate-200 hover:ring-cyan-300"
       }`}
     >
-      {/* ── HEAD: name + count corner ─────────────────────────────────── */}
+      {/* ── HEAD: name + count box ──────────────────────────────────────── */}
       <div className="flex items-stretch">
         <div className="min-w-0 flex-1 px-4 pt-4 pb-3">
-          {/* The "Top" badge is a sibling of the heading, never a child —
-              inside it, the heading's text became "CBC TestTop", which is what
-              a crawler indexed and a screen reader announced. */}
-          <h3 className="text-[15.5px] sm:text-[16.5px] font-bold leading-snug text-slate-900 line-clamp-2">
+          <h3 className="text-[16px] sm:text-[17px] font-bold leading-snug text-slate-900 line-clamp-2">
             {t.name}
           </h3>
-          {(t.tags ?? []).includes("Popular") && (
-            <span
-              aria-hidden
-              className="mt-1.5 inline-flex rounded-md bg-amber-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200"
-            >
-              Top booked
+          {/* A sibling of the heading, never inside it — inside, the heading
+              read "CBC TestTop booked" to crawlers and screen readers. */}
+          {popular && (
+            <span aria-hidden className="mt-1.5 inline-flex items-center gap-1 text-[11.5px] font-semibold text-amber-600">
+              ★ Top booked
             </span>
           )}
         </div>
 
-        <div className="flex w-[84px] shrink-0 flex-col items-center justify-center rounded-bl-2xl bg-linear-to-b from-teal-100/80 via-teal-50 to-white px-2 py-3 text-teal-700">
+        <div className="flex w-[92px] shrink-0 flex-col items-center justify-center rounded-bl-lg bg-linear-to-b from-cyan-100/80 to-cyan-50/30 px-2 py-3 text-cyan-700">
           {t.params > 0 ? (
             <>
-              <span className="text-[26px] font-extrabold leading-none tabular-nums">
-                {t.params}
-              </span>
-              <span className="mt-1 text-[12px] font-semibold leading-none">
-                Parameters
-              </span>
+              <span className="text-[28px] font-bold leading-none tabular-nums">{t.params}</span>
+              <span className="mt-1 text-[13px] font-semibold leading-none">Params</span>
             </>
           ) : (
-            <span
-              className={`flex h-11 w-11 items-center justify-center rounded-2xl ring-1 ${tint(t.tint)}`}
-            >
-              {createElement(iconFor(t.icon), { className: "h-5.5 w-5.5", strokeWidth: 1.8 })}
-            </span>
+            <>
+              {createElement(iconFor(t.icon), { className: "h-7 w-7", strokeWidth: 1.7, "aria-hidden": true })}
+              <span className="mt-1.5 text-[12px] font-semibold leading-none">{isPackage ? "Package" : "Lab test"}</span>
+            </>
           )}
         </div>
       </div>
 
-      {/* ── BODY: what is in it ───────────────────────────────────────── */}
-      <div className="mx-4 flex-1 border-t border-dashed border-slate-200 py-3">
-        <p className="text-[13px] leading-relaxed text-slate-600 line-clamp-3">
-          <span className="font-bold text-slate-800">Includes: </span>
-          {t.sub}
-        </p>
+      {/* ── INCLUDES ───────────────────────────────────────────────────── */}
+      <p className="mx-4 border-t border-dashed border-slate-300 py-3 text-[13.5px] leading-relaxed text-slate-600 line-clamp-3">
+        <span className="font-bold text-slate-900">{isPackage ? "Tests included: " : "Includes: "}</span>
+        {t.sub || "—"}
+      </p>
 
-        {save > 0 && (
-          <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700 ring-1 ring-emerald-100">
-            {offPct(t.price, t.mrp)}% OFF
-            <span className="h-1 w-1 rounded-full bg-emerald-400" aria-hidden />
-            You save {inr(save)}
-          </p>
-        )}
-      </div>
-
-      {/* ── FACTS ─────────────────────────────────────────────────────── */}
-      <ul className="mx-4 grid grid-cols-3 gap-2 border-t border-dashed border-slate-200 py-3 text-[10.5px] sm:text-[11px] leading-tight text-slate-500">
+      {/* ── FACTS ──────────────────────────────────────────────────────── */}
+      <ul className="mx-4 grid grid-cols-3 gap-2 border-t border-dashed border-slate-300 py-3 text-[11.5px] leading-tight text-slate-500">
         <li className="flex items-start gap-1.5">
-          <Fasting className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          <Fasting className="mt-px h-3.5 w-3.5 shrink-0 text-cyan-600" strokeWidth={2} aria-hidden />
           {t.fasting ? "Fasting required" : "No fasting required"}
         </li>
         <li className="flex items-start gap-1.5">
-          <House className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          <House className="mt-px h-3.5 w-3.5 shrink-0 text-cyan-600" strokeWidth={2} aria-hidden />
           Home collection ₹100
         </li>
         <li className="flex items-start gap-1.5">
-          <Clock className="mt-px h-3.5 w-3.5 shrink-0 text-teal-600" strokeWidth={2} />
+          <Clock className="mt-px h-3.5 w-3.5 shrink-0 text-cyan-600" strokeWidth={2} aria-hidden />
           Report in 24 hours
         </li>
       </ul>
 
-      {/* ── FOOTER: price + action ────────────────────────────────────── */}
-      <div className="flex items-center justify-between gap-3 bg-linear-to-r from-teal-50 to-cyan-50/70 px-4 py-3">
+      {/* ── FOOTER: price + action ─────────────────────────────────────── */}
+      <div className="flex items-center justify-between gap-3 bg-cyan-50/70 px-4 py-3.5">
         <div className="min-w-0">
           {t.price ? (
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-[21px] font-extrabold leading-none text-slate-900">
-                {inr(t.price)}
-              </span>
-              {t.mrp && (
-                <span className="text-[12.5px] font-medium text-slate-400 line-through">
-                  {inr(t.mrp)}
-                </span>
-              )}
-            </div>
+            <p className="flex items-baseline gap-1.5">
+              <span className="text-[22px] font-bold leading-none text-slate-900">{inr(t.price)}</span>
+              <span className="text-[12.5px] font-medium text-cyan-700">per {isPackage ? "package" : "test"}</span>
+            </p>
           ) : (
             <>
-              <span className="text-[15px] font-bold leading-none text-teal-700">
-                Call for price
-              </span>
-              <p className="mt-1 text-[10.5px] font-medium text-slate-500">
-                Custom package
-              </p>
+              <span className="text-[16px] font-bold leading-none text-cyan-700">Call for price</span>
+              <p className="mt-1 text-[11px] font-medium text-slate-500">Custom package</p>
             </>
           )}
         </div>
@@ -460,23 +435,23 @@ function TestCard({ test: t, qty, onEnquire }) {
           // the cart does not take it (priceCart refuses it on the server too).
           <span
             aria-disabled="true"
-            className="inline-flex h-9 w-[128px] shrink-0 cursor-not-allowed items-center justify-center rounded-full bg-slate-100 text-[12.5px] font-bold text-slate-500 ring-1 ring-slate-200"
+            className="inline-flex h-11 w-[140px] shrink-0 cursor-not-allowed items-center justify-center rounded-lg bg-slate-100 text-[13px] font-bold text-slate-500 ring-1 ring-slate-200"
           >
             Out of stock
           </span>
         ) : t.price ? (
-          <div className="w-[128px] shrink-0">
-            <AddToCartControl test={t} qty={qty} block />
+          <div className="w-[140px] shrink-0">
+            <AddToCartControl test={t} qty={qty} block size="lg" />
           </div>
         ) : (
           <button
             type="button"
             onClick={onEnquire}
             aria-label={`Enquire about ${t.name}`}
-            className="inline-flex h-9 w-[128px] shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 text-[12.5px] font-bold text-white shadow-[0_6px_14px_-8px_rgba(5,150,105,0.9)] transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 active:scale-[0.97]"
+            className="inline-flex h-11 w-[140px] shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-lg bg-linear-to-r from-emerald-600 to-teal-600 text-[14px] font-bold text-white transition-colors duration-200 hover:from-emerald-700 hover:to-teal-700"
           >
             Enquire
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={2.4} />
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={2.4} />
           </button>
         )}
       </div>

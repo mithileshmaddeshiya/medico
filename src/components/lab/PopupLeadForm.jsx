@@ -233,14 +233,30 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
               />
             </div>
 
-            <div className="relative">
+            {/* ── THE CITY PICKER: OUR LOOK, THE PHONE'S OWN LIST ──────────
+                Browsers style a <select> their own way — some ignore its
+                padding (the text slid under the pin: "S📍lect"), some draw a
+                second bordered white box inside the field when it is focused.
+                So the field you SEE is plain markup — pin, the chosen city (or
+                the placeholder), chevron — and the real <select> is stretched
+                invisibly over the whole box (opacity-0, inset-0). A tap lands
+                on the select, so the phone still opens its native city list,
+                keyboard and screen-reader behaviour are the select's own, and
+                no browser styling of it can ever show. */}
+            <div
+              className={`relative flex h-11 items-center gap-2 rounded-lg border px-3 transition-colors ${
+                invalid === "city"
+                  ? "border-red-400 bg-red-50/50 focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/20"
+                  : "border-slate-200 bg-slate-50 focus-within:border-emerald-500 focus-within:bg-white focus-within:ring-2 focus-within:ring-emerald-500/20"
+              }`}
+            >
               <label htmlFor={`${uid}-city`} className="sr-only">
                 Your city
               </label>
-              <MapPin className={iconClass} strokeWidth={2.2} />
-              {/* `appearance-none` plus our own chevron: the native arrow is
-                  a different shape and colour in every browser, and it was
-                  the one control here that did not match the rest. */}
+              <MapPin aria-hidden className="h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.2} />
+              <span aria-hidden className={`min-w-0 flex-1 truncate text-[13.5px] ${city ? "text-slate-900" : "text-slate-400"}`}>
+                {city || "Select your city / area"}
+              </span>
               <select
                 ref={cityRef}
                 id={`${uid}-city`}
@@ -250,9 +266,7 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
                   if (invalid === "city") setInvalid("");
                 }}
                 aria-invalid={invalid === "city" || undefined}
-                className={`${shell(invalid === "city")} cursor-pointer appearance-none pl-9 pr-9 ${
-                  city ? "" : "text-slate-400"
-                }`}
+                className="absolute inset-0 h-full w-full cursor-pointer appearance-none opacity-0"
               >
                 <option value="">Select your city / area</option>
                 {cities.map((option) => (
@@ -261,11 +275,7 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
                   </option>
                 ))}
               </select>
-              <ChevronDown
-                aria-hidden
-                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
-                strokeWidth={2.4}
-              />
+              <ChevronDown aria-hidden className="pointer-events-none h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.4} />
             </div>
 
             {/* Disabled while in flight — a double tap on a slow connection

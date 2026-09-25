@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay, Keyboard, Pagination } from "swiper/modules";
+import { A11y, Autoplay, Keyboard } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/pagination";
 
 /**
  * The auto-playing banner strip, content from HOME_BANNERS in src/data/home.js.
@@ -133,12 +132,13 @@ export default function HomeBannerSlider({
     <section
       aria-label={heading}
       aria-roledescription={slides.length > 1 ? "carousel" : undefined}
-      /* px-4 on a phone, unchanged. It ran edge-to-edge for one revision to
-         squeeze ~8px more height out of the extra width, and that was the
-         wrong trade: it widens the banner to buy height, and the width is
-         supposed to stay where it is. Height comes from the ratio now, not
-         from eating the page margin. */
-      className="mx-auto max-w-6xl px-4 sm:px-6 pt-3 pb-4 sm:py-6"
+      /* Edge-to-edge on a phone (no side padding, no rounded corners): the
+         owner asked for a bigger banner there, and the extra width is the
+         one way to get more height WITHOUT stretching the artwork past its
+         16:6 ceiling (see the ratio note above). From sm up it sits in the
+         page margin as before. Tight top/bottom padding so it hugs the price
+         cards above it. */
+      className="mx-auto max-w-6xl px-0 sm:px-6 pt-1 pb-3 sm:py-6"
     >
       {/* The heading is for screen readers and the document outline only. The
           artwork carries its own words, and a visible title above it would be
@@ -152,7 +152,7 @@ export default function HomeBannerSlider({
         </BannerFrame>
       ) : (
         <Swiper
-          modules={[Autoplay, Pagination, Keyboard, A11y]}
+          modules={[Autoplay, Keyboard, A11y]}
           onSwiper={setSwiper}
           slidesPerView={1}
           loop
@@ -185,17 +185,15 @@ export default function HomeBannerSlider({
             pauseOnMouseEnter: false,
           }}
           keyboard={{ enabled: true }}
-          pagination={{ clickable: true }}
           a11y={{
             enabled: true,
             prevSlideMessage: "Previous banner",
             nextSlideMessage: "Next banner",
-            paginationBulletMessage: "Go to banner {{index}}",
           }}
-          /* Room under the frame for the dots, which sit outside the artwork
-             rather than on top of it — a bullet over a photograph is invisible
-             on whichever slide happens to be light there. */
-          className="[&_.swiper-wrapper]:items-stretch [&_.swiper-pagination]:static [&_.swiper-pagination]:mt-3 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:w-2 [&_.swiper-pagination-bullet]:bg-emerald-300 [&_.swiper-pagination-bullet-active]:w-5 [&_.swiper-pagination-bullet-active]:rounded-full [&_.swiper-pagination-bullet-active]:bg-emerald-600"
+          /* No dots. They were drawn over the artwork (swiper/css beats the
+             layered Tailwind that tried to move them below it) and the owner
+             asked for them gone; the strip rotates on its own and swipes. */
+          className="[&_.swiper-wrapper]:items-stretch"
         >
           {slides.map((banner) => (
             <SwiperSlide key={banner.src}>
@@ -213,7 +211,7 @@ export default function HomeBannerSlider({
 /** The box every slide shares — see the ratio note at the top of the file. */
 function BannerFrame({ children }) {
   return (
-    <div className="relative w-full aspect-16/6 sm:aspect-16/5 overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-emerald-100 shadow-[0_18px_44px_-30px_rgba(6,78,59,0.55)]">
+    <div className="relative w-full aspect-16/6 sm:aspect-16/5 overflow-hidden sm:rounded-2xl sm:ring-1 sm:ring-emerald-100 sm:shadow-[0_18px_44px_-30px_rgba(6,78,59,0.55)]">
       {children}
     </div>
   );

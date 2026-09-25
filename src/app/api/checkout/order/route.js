@@ -73,8 +73,14 @@ export async function POST(request) {
         name: customer.name,
         phone: customer.phone,
         city: customer.city,
-        address: customer.address || "—",
-        tests: summary,
+        // Razorpay rejects any note value over 256 characters, and the
+        // checkout now collects a full address (up to 400). The full text is
+        // saved with the order in MySQL (recordOnlineOrder below); the note
+        // only has to be enough for the lead built in /verify.
+        address: (customer.address || "—").slice(0, 250),
+        // Same 256-character note limit: a long cart would otherwise stop the
+        // payment from starting. The priced lines themselves are in MySQL.
+        tests: summary.slice(0, 250),
       },
     });
 

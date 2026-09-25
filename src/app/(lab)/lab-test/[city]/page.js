@@ -5,6 +5,7 @@ import LabCallBanner from "@/components/lab/LabCallBanner";
 import LabContent from "@/components/lab/LabContent";
 import LabCta from "@/components/lab/LabCta";
 import LabFaq from "@/components/lab/LabFaq";
+import LabReviews from "@/components/lab/LabReviews";
 import FloatingCallButton from "@/components/lab/FloatingCallButton";
 import LabHero from "@/components/lab/LabHero";
 import LabHowTo from "@/components/lab/LabHowTo";
@@ -473,6 +474,10 @@ export default async function LabCityPage({ params }) {
 
       <LabCallBanner banner={cityData.callBanner} phone={phone} />
       <LabHowTo data={cityData.howTo} />
+
+      {/* Real patient reviews — between the call strip and the FAQ, where
+          someone deciding whether to book looks for them. */}
+      <LabReviews />
 
 
       {/* A safety cap on a runaway city document, not a target — raised from 6
