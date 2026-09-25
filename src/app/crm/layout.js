@@ -29,6 +29,10 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-crm
 export const metadata = {
   title: { default: "MedicoBharat CRM", template: "%s · MedicoBharat CRM" },
   robots: { index: false, follow: false, nocache: true },
+  // Installable on a phone as its own app — see ./manifest.webmanifest/route.js.
+  manifest: "/crm/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "MB CRM", statusBarStyle: "default" },
+  icons: { apple: { url: "/brand/icon-192.png", sizes: "192x192" } },
 };
 
 export const viewport = { themeColor: "#ffffff" };
