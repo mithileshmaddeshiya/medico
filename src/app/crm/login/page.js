@@ -4,6 +4,8 @@ import { Activity, FlaskConical, ShieldCheck, Truck } from "lucide-react";
 
 import { getUser, safeNext } from "@/lib/admin/guard";
 
+import InstallApp from "@/components/crm/InstallApp";
+
 import CrmLoginForm from "./CrmLoginForm";
 
 export const metadata = { title: "Sign in", robots: { index: false, follow: false } };
@@ -73,6 +75,12 @@ export default async function CrmLogin({ searchParams }) {
 
           <div className="mt-7">
             <CrmLoginForm next={target} />
+          </div>
+
+          {/* Install from the sign-in screen too — the first place a new
+              collector or lab lands on their phone. */}
+          <div className="mt-8 lg:hidden">
+            <InstallApp variant="tile" />
           </div>
         </div>
       </main>
