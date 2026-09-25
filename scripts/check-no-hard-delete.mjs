@@ -27,7 +27,16 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
-const ROOTS = ["src/lib/admin", "src/app/admin", "src/app/api/admin"];
+// The operations CRM (/crm) is held to the same promise: bookings, payments,
+// reports and every other record are soft-deleted, never removed.
+const ROOTS = [
+  "src/lib/admin",
+  "src/app/admin",
+  "src/app/api/admin",
+  "src/lib/crm",
+  "src/app/crm",
+  "src/app/api/crm",
+];
 
 /** Exact statements that are permitted, with the reason they are. */
 const ALLOWED = [
@@ -36,6 +45,18 @@ const ALLOWED = [
     match: "DELETE FROM lab_test_categories WHERE test_id = ?",
     file: "src/lib/admin/catalogStore.js",
     why: "a pure join table: which chips a card is currently under, no history",
+  },
+  {
+    // Rewriting a lab partner's cities wholesale on save.
+    match: "DELETE FROM partner_cities WHERE partner_id = ?",
+    file: "src/lib/crm/stores/partners.js",
+    why: "pure join table: which cities a lab serves today, no history of its own",
+  },
+  {
+    // Clearing one lab's price override for one test.
+    match: "DELETE FROM partner_prices WHERE partner_id = ? AND test_id = ?",
+    file: "src/lib/crm/stores/partners.js",
+    why: "one override per (partner, test); clearing it restores the standard price, and the old value is in the activity log",
   },
 ];
 

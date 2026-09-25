@@ -54,12 +54,19 @@ export async function proxy(request) {
   /* ── 1. Admin ──────────────────────────────────────────────────────────── */
   // /lab-report is a staff tool that lives outside /admin (see
   // src/app/lab-report/page.js) and is gated exactly like the panel.
-  if (pathname.startsWith("/admin") || pathname === "/lab-report") {
-    // The sign-in page itself must stay reachable, or this is a loop.
-    if (pathname === "/admin/login") return NextResponse.next();
+  // /crm is the operations CRM (src/app/crm) — same accounts, same session,
+  // same rule: presence of the cookie here, validity on every page and action.
+  const isCrm = pathname === "/crm" || pathname.startsWith("/crm/");
+  if (pathname.startsWith("/admin") || pathname === "/lab-report" || isCrm) {
+    // The sign-in pages themselves must stay reachable, or this is a loop.
+    if (pathname === "/admin/login" || pathname === "/crm/login") {
+      const open = NextResponse.next();
+      open.headers.set("x-robots-tag", "noindex, nofollow, noarchive");
+      return open;
+    }
 
     if (!request.cookies.get(SESSION_COOKIE)) {
-      const login = new URL("/admin/login", request.url);
+      const login = new URL(isCrm ? "/crm/login" : "/admin/login", request.url);
       login.searchParams.set("next", pathname + search);
       return NextResponse.redirect(login);
     }

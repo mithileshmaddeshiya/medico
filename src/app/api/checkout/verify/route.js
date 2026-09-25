@@ -1,6 +1,7 @@
 import { firebaseConfig } from "@/lib/firebaseConfig";
 import { notifyOwnerOnWhatsapp } from "@/lib/notifyWhatsapp";
 import { markOrderPaid } from "@/lib/labStore";
+import { syncFromWebsite } from "@/lib/crm/sync";
 import { fetchOrder, verifyPaymentSignature } from "@/lib/razorpay";
 
 /**
@@ -90,6 +91,9 @@ export async function POST(request) {
     }
     if (mysql.status === "rejected") {
       console.error(`[checkout] payment ${paymentId}: MySQL did not record it`, mysql.reason);
+    } else {
+      // Booking + verified payment into the CRM. Never throws.
+      await syncFromWebsite(mysql.value);
     }
 
     try {

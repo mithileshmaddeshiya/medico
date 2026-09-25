@@ -13,7 +13,7 @@
 import { cache } from "react";
 import { redirect } from "next/navigation";
 
-import { can, currentUser } from "./auth";
+import { can, currentUser, isAdminRole } from "./auth";
 
 /**
  * Where a sign-in may send someone afterwards: a screen inside the panel, or
@@ -25,6 +25,7 @@ import { can, currentUser } from "./auth";
 export function safeNext(next) {
   if (typeof next !== "string") return "/admin";
   if (next.startsWith("/admin") && !next.startsWith("/admin/login")) return next;
+  if (next === "/crm" || next.startsWith("/crm/") || next.startsWith("/crm?")) return next;
   if (next === "/lab-report") return next;
   return "/admin";
 }
@@ -42,6 +43,10 @@ export const getUser = cache(currentUser);
 export async function requireUser(next = "/admin") {
   const user = await getUser();
   if (!user) redirect(`/admin/login?next=${encodeURIComponent(next)}`);
+  // A CRM-only account (lab partner, collector …) signs in through the same
+  // form but has no business in the website admin: every admin page reads
+  // patient data, and requireUser alone checks no role.
+  if (!isAdminRole(user.role)) redirect("/crm");
   return user;
 }
 

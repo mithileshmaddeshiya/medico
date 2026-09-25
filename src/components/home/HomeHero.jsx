@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import LabLeadCard from "@/components/lab/LabLeadCard";
+import { SITE_PHONE, SITE_PHONE_E164 } from "@/lib/site";
 
 /**
  * The home page hero — banner image plus the booking form, the same shape the
@@ -82,8 +83,16 @@ export default function HomeHero({ hero, cityOptions }) {
                 differently-shaped one and this class changes with it.
 
                 `priority` because this is the first image in the hero, which
-                makes it the LCP candidate on phone and desktop alike. */}
-            <div className="relative w-full aspect-11/6 overflow-hidden rounded-xl ring-1 ring-emerald-100 shadow-[0_20px_50px_-30px_rgba(6,78,59,0.55)]">
+                makes it the LCP candidate on phone and desktop alike.
+
+                The whole banner is a `tel:` link — the artwork paints a
+                "Book Now" button with the number on it, so a tap anywhere on
+                the picture dials it. */}
+            <a
+              href={`tel:${SITE_PHONE_E164}`}
+              aria-label={`Call ${SITE_PHONE} to book a health checkup`}
+              className="relative block w-full aspect-11/6 overflow-hidden rounded-xl ring-1 ring-emerald-100 shadow-[0_20px_50px_-30px_rgba(6,78,59,0.55)] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+            >
               <Image
                 src={hero.image}
                 alt={hero.imageAlt}
@@ -92,7 +101,7 @@ export default function HomeHero({ hero, cityOptions }) {
                 sizes="(max-width: 1024px) 100vw, 768px"
                 className="object-cover object-center"
               />
-            </div>
+            </a>
           </div>
 
           {/* ── FORM ──────────────────────────────────────────────────────────
