@@ -233,11 +233,22 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
               />
             </div>
 
-            <div className="relative">
+            {/* The pin sits IN FLOW beside the select, inside a box that wears
+                the field's border, rather than absolutely over a padded select.
+                Several mobile browsers ignore padding-left on a <select>, so
+                the text started under the icon ("S📍lect your city"). With the
+                icon taking its own space, no browser can overlap them. */}
+            <div
+              className={`relative flex h-11 items-center rounded-lg border transition-colors ${
+                invalid === "city"
+                  ? "border-red-400 bg-red-50/50 focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/20"
+                  : "border-slate-200 bg-slate-50 focus-within:border-emerald-500 focus-within:bg-white focus-within:ring-2 focus-within:ring-emerald-500/20"
+              }`}
+            >
               <label htmlFor={`${uid}-city`} className="sr-only">
                 Your city
               </label>
-              <MapPin className={iconClass} strokeWidth={2.2} />
+              <MapPin aria-hidden className="ml-3 h-4 w-4 shrink-0 text-slate-400" strokeWidth={2.2} />
               {/* `appearance-none` plus our own chevron: the native arrow is
                   a different shape and colour in every browser, and it was
                   the one control here that did not match the rest. */}
@@ -250,8 +261,8 @@ export default function PopupLeadForm({ cityOptions, image, imageAlt, onClose })
                   if (invalid === "city") setInvalid("");
                 }}
                 aria-invalid={invalid === "city" || undefined}
-                className={`${shell(invalid === "city")} cursor-pointer appearance-none pl-9 pr-9 ${
-                  city ? "" : "text-slate-400"
+                className={`h-full min-w-0 flex-1 cursor-pointer appearance-none rounded-lg bg-transparent pl-2 pr-9 text-[13.5px] outline-none ${
+                  city ? "text-slate-900" : "text-slate-400"
                 }`}
               >
                 <option value="">Select your city / area</option>
