@@ -163,12 +163,12 @@ export const metadata = {
   // square lockup the Organization schema and the manifest also use, so the
   // mark is identical wherever it appears.
   icons: {
+    // The only tab icon — listing the /brand PNGs here too let browsers pick
+    // those instead, since they choose among every `icon` entry by size.
     icon: [
-      { url: "/favicon/medicofav.icon", sizes: "any" },
-      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/brand/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon/labfaviconimg.png", type: "image/png" },
     ],
-    shortcut: "/favicon/medicofav.ico",
+    shortcut: "/favicon/labfaviconimg.png",
     apple: { url: "/brand/icon-192.png", sizes: "192x192" },
   },
 
