@@ -51,6 +51,7 @@ import {
 } from "lucide-react";
 
 import CommandPalette from "./CommandPalette";
+import InstallApp from "./InstallApp";
 import NotificationBell from "./NotificationBell";
 import Pulse from "./Pulse";
 import { cx } from "./ui";
@@ -171,7 +172,10 @@ export default function Shell({ user, nav, bottomNav, quickActions, signOut, chi
               <span className="block truncate text-[11.5px] text-slate-500">{user.roleLabel}</span>
             </span>
           </Link>
-          <form action={signOut} className="mt-1">
+          <div className="mt-1">
+            <InstallApp variant="link" />
+          </div>
+          <form action={signOut}>
             <button
               type="submit"
               className="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-[12.5px] font-medium text-slate-500 hover:bg-slate-50 hover:text-slate-800"
@@ -233,6 +237,7 @@ export default function Shell({ user, nav, bottomNav, quickActions, signOut, chi
                   )}
                 </div>
               )}
+              <InstallApp variant="bar" />
               <NotificationBell />
               <Link
                 href="/crm/profile"
@@ -335,6 +340,7 @@ export default function Shell({ user, nav, bottomNav, quickActions, signOut, chi
               </div>
             ) : (
               <div className="space-y-4 p-4">
+                <InstallApp variant="tile" />
                 {nav.map((section) => (
                   <div key={section.title ?? "top"}>
                     {section.title && (
