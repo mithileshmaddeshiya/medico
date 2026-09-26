@@ -2,7 +2,51 @@
 
 import { useId, useState } from "react";
 import { linkTitle } from "@/lib/linkTitle";
-import { ChevronDown } from "lucide-react";
+import {
+  Baby,
+  ChevronDown,
+  CircleHelp,
+  Clock,
+  FileText,
+  FlaskConical,
+  HeartPulse,
+  House,
+  IndianRupee,
+  MapPin,
+  Plane,
+  ShieldCheck,
+  Smartphone,
+  Stethoscope,
+  Users,
+  UtensilsCrossed,
+} from "lucide-react";
+
+/* Questions are free text — per city, and editable in /admin — so the icon is
+   picked from the words in the question rather than stored with it. First
+   match wins, so the narrow topics sit above the broad ones: "how much does
+   home collection cost" is a price question, not a home-visit one. */
+const ICON_RULES = [
+  [/gamca|wafid|gulf|pre-departure/i, Plane],
+  [/army|recruit/i, ShieldCheck],
+  [/rt-pcr|pre-operative|dengue|typhoid|arsenic/i, FlaskConical],
+  [/pregnan/i, Baby],
+  [/\bfast|empty stomach/i, UtensilsCrossed],
+  [/cost|price|afford|overcharg|pay|₹/i, IndianRupee],
+  [/report|result/i, FileText],
+  [/fever|cough|seizure|diabetes|thyroid|symptom|pain|swollen/i, HeartPulse],
+  [/elderly|bedridden|family|parents|child/i, Users],
+  [/doctor|prescription|opd|specialist|hospital|treatment/i, Stethoscope],
+  [/home|house|doorstep|phlebotomist|village|flood/i, House],
+  [/book|online|whatsapp/i, Smartphone],
+  [/evening|morning|shift|quick|soon|slot|time/i, Clock],
+  [/travel|centre|center|walk in|locality|district|carry out|cover|this page|\bgo to|done in/i, MapPin],
+  [/safe|hygien|accura|quality|choos|package/i, ShieldCheck],
+];
+
+function iconFor(q) {
+  for (const [re, Icon] of ICON_RULES) if (re.test(q)) return Icon;
+  return CircleHelp;
+}
 
 /**
  * LabFaq
@@ -122,21 +166,28 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
             text; grid-rows animates the height instead of snapping open.
             Answers stay in the DOM when collapsed — never conditionally
             render them, or the visible copy stops matching the JSON-LD. */}
-        <ul className="mt-4 sm:mt-8 space-y-2.5">
+        <ul className="mt-5 sm:mt-8 divide-y divide-slate-100 overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 shadow-[0_18px_40px_-28px_rgba(15,23,42,0.35)]">
           {items.map(({ q, a, links = [] }, i) => {
             const isOpen = open === i;
             const btnId = `${uid}-btn-${i}`;
             const panelId = `${uid}-panel-${i}`;
+            const Icon = iconFor(q);
 
             return (
               <li
                 key={`${i}-${q}`}
-                className={`overflow-hidden rounded-xl bg-white transition-all duration-300 ${
-                  isOpen
-                    ? "ring-1 ring-emerald-300 shadow-[0_10px_26px_-18px_rgba(6,78,59,0.4)]"
-                    : "ring-1 ring-slate-200 hover:ring-emerald-200"
+                className={`relative transition-colors duration-300 ${
+                  isOpen ? "bg-emerald-50/40" : "bg-white hover:bg-slate-50/70"
                 }`}
               >
+                {/* Accent bar marks the open row without shifting its content. */}
+                <span
+                  aria-hidden="true"
+                  className={`absolute inset-y-0 left-0 w-1 bg-emerald-500 transition-opacity duration-300 ${
+                    isOpen ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+
                 {/* h3 keeps the questions in the document outline — headings
                     do more for long-tail queries than the schema does now. */}
                 <h3 className="m-0">
@@ -146,17 +197,37 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
-                    className={`flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left sm:py-3.5 text-[13px] sm:text-[14.5px] font-semibold leading-snug transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-inset ${
-                      isOpen ? "text-emerald-700" : "text-slate-800"
-                    }`}
+                    className="group flex w-full cursor-pointer items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-inset"
                   >
-                    <span>{q}</span>
-                    <ChevronDown
+                    <span
                       aria-hidden="true"
-                      className={`h-4 w-4 sm:h-[18px] sm:w-[18px] shrink-0 transition-transform duration-300 motion-reduce:transition-none ${
-                        isOpen ? "rotate-180 text-emerald-600" : "text-slate-400"
+                      className={`flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl transition-colors duration-300 ${
+                        isOpen
+                          ? "bg-emerald-600 text-white shadow-[0_8px_18px_-8px_rgba(5,150,105,0.7)]"
+                          : "bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100 group-hover:bg-emerald-100"
                       }`}
-                    />
+                    >
+                      <Icon className="h-[18px] w-[18px] sm:h-5 sm:w-5" strokeWidth={1.9} />
+                    </span>
+
+                    <span
+                      className={`flex-1 text-[14px] sm:text-[16px] font-semibold leading-snug transition-colors duration-200 ${
+                        isOpen ? "text-emerald-800" : "text-slate-800"
+                      }`}
+                    >
+                      {q}
+                    </span>
+
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 motion-reduce:transition-none ${
+                        isOpen
+                          ? "rotate-180 bg-emerald-600 text-white"
+                          : "bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-700"
+                      }`}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </span>
                   </button>
                 </h3>
 
@@ -169,20 +240,21 @@ export default function LabFaq({ city, faqs = [], pageUrl, heading, subheading }
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-4 pb-4">
-                      <p className="text-[12px] sm:text-[13px] leading-relaxed text-slate-500">
+                    {/* Indented to the question text, past the icon tile. */}
+                    <div className="pb-5 pl-[64px] pr-5 sm:pl-[84px] sm:pr-16">
+                      <p className="text-[13px] sm:text-[14px] leading-relaxed text-slate-600">
                         {a}
                       </p>
 
                       {links.length > 0 && (
-                        <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[12px] sm:text-[13px]">
+                        <p className="mt-3 flex flex-wrap gap-2 text-[12px] sm:text-[13px]">
                           {links.map(({ href, label }) => (
                             <a
                               key={href}
                               href={href}
                               title={linkTitle(href)}
                               tabIndex={isOpen ? 0 : -1}
-                              className="font-medium text-emerald-700 underline underline-offset-2 decoration-emerald-300 hover:decoration-emerald-600"
+                              className="inline-flex items-center rounded-full bg-white px-3 py-1 font-medium text-emerald-700 ring-1 ring-emerald-200 transition-colors hover:bg-emerald-600 hover:text-white hover:ring-emerald-600"
                             >
                               {label}
                             </a>
